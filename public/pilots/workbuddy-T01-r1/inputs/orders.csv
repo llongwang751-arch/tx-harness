@@ -1,0 +1,9 @@
+order_id,revision,customer_group,status,gross_cents,ordered_at
+O101,1,retail,paid,12000,2026-10-01T09:00:00
+O101,1,retail,paid,12000,2026-10-01T09:00:00
+O101,2,retail,paid,15000,2026-10-01T09:00:00
+O102,1,retail,shipped,8800,2026-10-01T09:15:00
+O103,1,business,cancelled,10000,2026-10-01T10:00:00
+O104,1,business,paid,4500,2026-10-02T08:00:00
+O105,1,retail,pending,6500,2026-10-02T08:10:00
+O106,1,business,shipped,22000,2026-10-02T09:00:00

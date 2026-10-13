@@ -1,0 +1,2 @@
+{"event_id": "visible-message-1", "kind": "assistant_text", "text": "Authentication required. Please use /login command to sign in to your account"}
+{"event_id": "visible-result-1", "kind": "native_result", "subtype": "error_during_execution", "is_error": true, "errors": ["Authentication required. Please use /login command to sign in to your account"], "duration_ms": 365, "num_turns": 2}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "pilot-public-manifest-v1",
+  "files": {
+    "evidence/collection.json": "0e5e18c34c236824fde40571ff1fd8bbb8ea2c952390af5a40672b6c22d40791",
+    "evidence/initial.result.json": "d8bc0d56f732e5ec12c4cfb79b77544f6d036e68a8325de8ce535516b56144ec",
+    "evidence/launch.json": "93ffe32a3bedbee810ff343dfd8d6c76bb641a98e98642a0b4d9b8c949ebb8f1",
+    "evidence/native-stderr-redacted.txt": "8b17e2e16c149e01baeacdd3f855825b2353c76a6b7478fe8245521f0365cdc1",
+    "evidence/native-visible-events.jsonl": "42d3dd58a5d759b3f155630c500cdf1747057662d8dcab7edc6898462c02e050",
+    "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "metadata.json": "2e9b74ccfa96e6c53bc6c1134d8234a8edc31a2a97e9f6317e8bd5a717d6b0ef",
+    "prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42",
+    "provenance.json": "2c89d14fb9e21965599c773fd6960854e9dbe33ee69359c86bc8a43503005d1c",
+    "README.md": "750a3cd0b393a9d52288f8d2eb835f2804c8fa40c0aacafaf1146530a6a71a32",
+    "submitted-prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42",
+    "verification.json": "b054c7009d004234d62264e31790ebb50d7e7bafa37e8e564b033d6e25730a99"
+  }
+}

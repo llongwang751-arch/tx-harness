@@ -1,0 +1,65 @@
+{
+  "run_id": "workbuddy-T01-r1",
+  "product_id": "workbuddy",
+  "case_id": "T01",
+  "stage": "entrypoint_diagnostic_pilot",
+  "formal_sample": false,
+  "surface": "WorkBuddy 5.7.7 installed embedded CLI/headless",
+  "versions": {
+    "node": {
+      "exit_code": 0,
+      "stdout": "v22.22.2"
+    },
+    "cli": {
+      "exit_code": 0,
+      "stdout": "2.156.0"
+    }
+  },
+  "model_requested": null,
+  "model_visible": "auto",
+  "underlying_model": null,
+  "settings_sources_requested": "none",
+  "requested_file_tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep"
+  ],
+  "tool_restriction_verified": false,
+  "permission_mode_requested": "acceptEdits",
+  "mcp_policy_requested": "strict empty MCP",
+  "hooks_disable_requested": true,
+  "skills_disabled_verified": false,
+  "os_sandbox_verified": false,
+  "source_prompt_sha256": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42",
+  "submitted_prompt_sha256": "ed35d3ade44b665d23af1ebb16c6ecf818a609f2ca30df0e637b52abc18e8811",
+  "prompt_adapter_appendix": "将交付文件写入 outputs/，不要修改 inputs/。",
+  "initial_inventory": {
+    "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42"
+  },
+  "started_at": "2026-10-13T12:29:20.707601+00:00",
+  "finished_at": "2026-10-13T12:29:24.660713+00:00",
+  "elapsed_seconds": 3.962392799999975,
+  "process_exit_code": 0,
+  "timed_out": false,
+  "actual_tool_calls": [],
+  "product_deliverables": [],
+  "inputs_unchanged": true,
+  "task_score": null,
+  "failure_scope": "headless authentication before task execution",
+  "attribution": "entrypoint/access condition; Harness task performance unresolved",
+  "confidence": "high for observed authentication error only",
+  "confidence_basis": [
+    "visible-message-1",
+    "visible-result-1"
+  ],
+  "alternative_explanations": [
+    "Desktop login may be separate from embedded CLI login",
+    "Host-provided authentication route may be absent in standalone CLI"
+  ],
+  "private_stdout_sha256": "bd11405faa368160b21d9e82892944efb36467308907ddb795bf3c550002ddae",
+  "redaction": "Only exact reviewed ordinary authentication text and native result fields retained. System, thinking, identifiers, authentication fields and absolute user paths omitted."
+}

@@ -1,0 +1,33 @@
+{
+  "base_currency": "CNY",
+  "rates": {
+    "2026-10-01": {
+      "CNY": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "EUR": {
+        "numerator": 8,
+        "denominator": 1
+      },
+      "USD": {
+        "numerator": 7,
+        "denominator": 1
+      }
+    },
+    "2026-10-02": {
+      "CNY": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "EUR": {
+        "numerator": 799,
+        "denominator": 100
+      },
+      "USD": {
+        "numerator": 701,
+        "denominator": 100
+      }
+    }
+  }
+}

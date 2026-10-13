@@ -1,0 +1,66 @@
+{
+  "publication_schema": "pilot-excerpt-v1",
+  "product_id": "codex",
+  "case_id": "T01",
+  "replicate": 1,
+  "attempt": 1,
+  "track": "pilot",
+  "protocol_state": "draft_before_pilot",
+  "surface": "controlled native Codex CLI; not desktop",
+  "product_version": "codex-cli 0.159.2",
+  "model": "not_disclosed_clean_cli_default",
+  "model_visibility": "unknown",
+  "mode": "exec; no daemon; controlled permissions",
+  "account_tier": "not_disclosed",
+  "region": "not_disclosed",
+  "skill_condition": "host_skill_discovery_skipped; plugins disabled; built-in state not independently verified",
+  "memory_condition": "fresh exec; memories disabled",
+  "permissions": "named profile: root deny/minimal read/workspace write/inputs read/network false; approval never",
+  "environment": {
+    "os": "win32",
+    "python": "3.14.0",
+    "binary_sha256": "52f75c649bebb8001102a1dd129c1ea6d02b0940321e6d7e82ee0526753bd58a"
+  },
+  "network": "disabled_for_task_content",
+  "budget_seconds": 1200,
+  "started_at": "2026-10-13T12:27:06.289528+00:00",
+  "native_ended_at": "2026-10-13T12:28:11.979335+00:00",
+  "native_exit_code": 0,
+  "native_timed_out": false,
+  "status": "infra_error",
+  "original_collector_status": "failed",
+  "original_collector_track": "pilot",
+  "collector_error": null,
+  "infrastructure_change": null,
+  "delivery_adapter_suffix": null,
+  "inputs_unchanged": true,
+  "collected_outputs": [],
+  "objective_score": null,
+  "objective_score_max": 60,
+  "objective_checks_passed": 0,
+  "total_score": null,
+  "eligible_for_formal_comparison": false,
+  "manual_review_status": "not scored",
+  "redaction_reviewed": true,
+  "claims": [
+    {
+      "claim": "attempt01 shell launches were rejected by the configured environment; no task files were produced",
+      "confidence": "high",
+      "basis": "Native committed messages/tool results, stderr, copied artifact hashes, and verification.json",
+      "attribution": "infrastructure"
+    },
+    {
+      "claim": "These observations do not isolate Harness effects from model or built-in Skill effects",
+      "confidence": "high",
+      "basis": "Model identity is not disclosed in the native stream; no matching-model/Skill control was run",
+      "attribution": "unresolved"
+    }
+  ],
+  "limitations": [
+    "Exploratory CLI access pilot; not a preregistered formal run",
+    "No model/Skill/Harness causal identification",
+    "Runtime profile configured and local denied-read errors observed; no full filesystem/network enforcement audit",
+    "Private native logs remain original; public paths are redacted",
+    "Attempt02 collector finalization failed and is explicitly disclosed"
+  ]
+}

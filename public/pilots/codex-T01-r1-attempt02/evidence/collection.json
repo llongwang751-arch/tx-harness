@@ -1,0 +1,30 @@
+{
+  "collected": [
+    {
+      "path": "order_ledger.csv",
+      "source_relative_path": "outputs/order_ledger.csv",
+      "sha256": "a87c6a2ee76184361c69a7385492e75a1b9328b51ac7980000980d91b70ce0a2"
+    },
+    {
+      "path": "aggregate.json",
+      "source_relative_path": "outputs/aggregate.json",
+      "sha256": "d220a6d8057fcf8e04a41bfc065130903a5237ef339d30761cd83e55292e23dd"
+    },
+    {
+      "path": "exceptions.json",
+      "source_relative_path": "outputs/exceptions.json",
+      "sha256": "a0558f104b5d48cb05e7bd4413bd81cb675bc82527f2e8984624adf8f0b141d8"
+    }
+  ],
+  "conflicting_duplicate_deliverables": [],
+  "outputs_modified_after_deadline_excluded": [],
+  "initial_inputs_unchanged": true,
+  "participant_final_inventory": {
+    "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "outputs/aggregate.json": "d220a6d8057fcf8e04a41bfc065130903a5237ef339d30761cd83e55292e23dd",
+    "outputs/exceptions.json": "a0558f104b5d48cb05e7bd4413bd81cb675bc82527f2e8984624adf8f0b141d8",
+    "outputs/order_ledger.csv": "a87c6a2ee76184361c69a7385492e75a1b9328b51ac7980000980d91b70ce0a2",
+    "prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42"
+  }
+}

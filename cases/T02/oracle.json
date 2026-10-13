@@ -1,0 +1,123 @@
+{
+  "_evaluator_note": "仅供评测员。不要发送给产品。",
+  "decisions": [
+    {
+      "claim_id": "Q001",
+      "decision": "approved",
+      "approved_cents": "5000",
+      "reason_code": "CAP",
+      "rule_ids": "FIN2-01"
+    },
+    {
+      "claim_id": "Q002",
+      "decision": "approved",
+      "approved_cents": "7500",
+      "reason_code": "CAP",
+      "rule_ids": "FIN3-01"
+    },
+    {
+      "claim_id": "Q003",
+      "decision": "approved",
+      "approved_cents": "24000",
+      "reason_code": "FULL",
+      "rule_ids": "EXC-01"
+    },
+    {
+      "claim_id": "Q004",
+      "decision": "approved",
+      "approved_cents": "20000",
+      "reason_code": "CAP",
+      "rule_ids": "FIN3-02"
+    },
+    {
+      "claim_id": "Q005",
+      "decision": "rejected",
+      "approved_cents": "0",
+      "reason_code": "NO_RECEIPT",
+      "rule_ids": "FIN3-04"
+    },
+    {
+      "claim_id": "Q006",
+      "decision": "approved",
+      "approved_cents": "120000",
+      "reason_code": "CAP",
+      "rule_ids": "FIN3-03"
+    },
+    {
+      "claim_id": "Q007",
+      "decision": "rejected",
+      "approved_cents": "0",
+      "reason_code": "INVALID_NIGHTS",
+      "rule_ids": "FIN3-03"
+    }
+  ],
+  "summary_amounts": {
+    "claimed_cents": 274900,
+    "approved_cents": 176500,
+    "reduction_cents": 98400
+  },
+  "summary_counts": {
+    "approved_count": 5,
+    "rejected_count": 2
+  },
+  "evidence": {
+    "rules": [
+      {
+        "rule_id": "EXC-01",
+        "path": "05_finance_exception.md",
+        "quote": "2026-09-01及之后提交、employee_group为field且类别为taxi的有收据申请，每笔上限25000分。"
+      },
+      {
+        "rule_id": "FIN2-01",
+        "path": "01_finance_v2.md",
+        "quote": "餐费每笔上限5000分，出租车每笔上限15000分，住宿每晚上限40000分且只允许1至3晚。"
+      },
+      {
+        "rule_id": "FIN3-01",
+        "path": "02_finance_v3.md",
+        "quote": "餐费每笔上限7500分。"
+      },
+      {
+        "rule_id": "FIN3-02",
+        "path": "02_finance_v3.md",
+        "quote": "出租车每笔上限20000分。"
+      },
+      {
+        "rule_id": "FIN3-03",
+        "path": "02_finance_v3.md",
+        "quote": "住宿每晚上限60000分且只允许1至3晚，晚数超出此范围时拒绝。"
+      },
+      {
+        "rule_id": "FIN3-04",
+        "path": "02_finance_v3.md",
+        "quote": "任何类别的申请缺少收据时均拒绝。"
+      }
+    ]
+  },
+  "lower_authority": {
+    "lower_authority_rule_ids": [
+      "FAQ-01",
+      "OPS-01"
+    ]
+  },
+  "scoped_override": {
+    "scoped_override": {
+      "winner": "EXC-01",
+      "overridden_rule": "FIN3-02",
+      "claim_ids": [
+        "Q003"
+      ]
+    }
+  },
+  "version_selection": {
+    "version_selection": {
+      "Q001": "finance_v2",
+      "Q002": "finance_v3",
+      "Q003": "finance_v3",
+      "Q004": "finance_v3",
+      "Q005": "finance_v3",
+      "Q006": "finance_v3",
+      "Q007": "finance_v3"
+    }
+  }
+}

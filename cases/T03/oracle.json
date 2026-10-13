@@ -1,0 +1,68 @@
+{
+  "_evaluator_note": "仅供评测员。expected目录也属于答案，不发给产品。",
+  "catalog": {
+    "currency": "CNY",
+    "campaign": {
+      "reference_time": "2026-10-20 10:00",
+      "notes": "119900 是历史示例值"
+    },
+    "products": [
+      {
+        "id": "P-A",
+        "name": "星云标准版",
+        "price_cents": 129900,
+        "stock": 14
+      },
+      {
+        "id": "P-B",
+        "name": "星云轻量版",
+        "price_cents": 89900,
+        "stock": 5
+      }
+    ]
+  },
+  "contacts": [
+    {
+      "role": "support",
+      "email": "help@example.test",
+      "label": "当前支持"
+    },
+    {
+      "role": "archive",
+      "email": "support@example.test",
+      "label": "历史联系地址"
+    },
+    {
+      "role": "sales",
+      "email": "sales@example.test",
+      "label": "销售联系"
+    }
+  ],
+  "changes": {
+    "changes": [
+      {
+        "path": "announcement.md",
+        "field": "release_time",
+        "old": "2026-10-20 10:00",
+        "new": "2026-10-22 14:30"
+      },
+      {
+        "path": "catalog.json",
+        "field": "products[P-A].price_cents",
+        "old": 119900,
+        "new": 129900
+      },
+      {
+        "path": "contacts.csv",
+        "field": "support.email",
+        "old": "support@example.test",
+        "new": "help@example.test"
+      }
+    ]
+  },
+  "unchanged": {
+    "unchanged_paths": [
+      "protected.txt"
+    ]
+  }
+}

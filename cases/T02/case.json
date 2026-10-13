@@ -1,0 +1,89 @@
+{
+  "id": "T02",
+  "title": "费用规则冲突裁决与证据索引",
+  "description": "读取7笔虚构报销申请及5份政策资料，依据唯一授权合同确定版本、权限与专门例外，输出逐笔批准额和reason_code、金额/笔数汇总、用到规则的原文及文件路径索引、冲突处置。禁止自行添加政策，金额整数分。",
+  "prompt_file": "prompt.md",
+  "input_dir": "inputs",
+  "required_outputs": [
+    "decisions.csv",
+    "summary.json",
+    "evidence_index.json",
+    "conflicts.json"
+  ],
+  "oracle_file": "oracle.json",
+  "checks": [
+    {
+      "id": "T02-C01",
+      "title": "逐笔政策裁决与规则引用",
+      "kind": "csv_rows",
+      "weight": 35,
+      "config": {
+        "path": "decisions.csv",
+        "key_columns": [
+          "claim_id"
+        ],
+        "oracle_key": "decisions"
+      }
+    },
+    {
+      "id": "T02-C02",
+      "title": "申请与核准金额汇总",
+      "kind": "json_fields",
+      "weight": 15,
+      "config": {
+        "path": "summary.json",
+        "oracle_key": "summary_amounts"
+      }
+    },
+    {
+      "id": "T02-C03",
+      "title": "核准/拒绝笔数",
+      "kind": "json_fields",
+      "weight": 10,
+      "config": {
+        "path": "summary.json",
+        "oracle_key": "summary_counts"
+      }
+    },
+    {
+      "id": "T02-C04",
+      "title": "所引用规则的路径与原文证据",
+      "kind": "exact_json",
+      "weight": 20,
+      "config": {
+        "path": "evidence_index.json",
+        "oracle_key": "evidence"
+      }
+    },
+    {
+      "id": "T02-C05",
+      "title": "低权限冲突规则排除",
+      "kind": "json_fields",
+      "weight": 5,
+      "config": {
+        "path": "conflicts.json",
+        "oracle_key": "lower_authority"
+      }
+    },
+    {
+      "id": "T02-C06",
+      "title": "专门例外只应用于符合条件的申请",
+      "kind": "json_fields",
+      "weight": 5,
+      "config": {
+        "path": "conflicts.json",
+        "oracle_key": "scoped_override"
+      }
+    },
+    {
+      "id": "T02-C07",
+      "title": "政策版本按提交日期选择",
+      "kind": "json_fields",
+      "weight": 10,
+      "config": {
+        "path": "conflicts.json",
+        "oracle_key": "version_selection"
+      }
+    }
+  ]
+}

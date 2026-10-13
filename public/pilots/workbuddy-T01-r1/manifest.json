@@ -1,0 +1,10 @@
+{
+  "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+  "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+  "metadata.json": "eb55397c0cf843bed3f2aa66b635ec05c61800d7f516e2a0aa2bf6a6dc2040a6",
+  "outputs/README.md": "f441b3c1fcfc9ac2963f80635325b06800d6c73547d3384a20c0d66c2d23ac2c",
+  "prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42",
+  "submitted-prompt.txt": "ed35d3ade44b665d23af1ebb16c6ecf818a609f2ca30df0e637b52abc18e8811",
+  "verification.md": "f236eac836015cb7925c1903eb7342dc93ab3b0dd547bbdc768fab4787b52c02",
+  "visible-events.jsonl": "46c48930c405f2ee1954b44bba0398aee6d21492758ae210fb9a2437b7daadf1"
+}

@@ -1,0 +1,113 @@
+{
+  "id": "T04",
+  "title": "缺失汇率的请求与恢复",
+  "description": "初始只提供trades.csv，缺少必需汇率。产品必须请求rates.json且停止猜测；评测员按统一协议补发汇率，然后继续原任务。对已结算交易按日期与币种使用有理数汇率，分值四舍五入半入，输出逐笔换算、分组汇总与故障恢复自述。实际请求/恢复时序必须由现场记录另行核验。",
+  "prompt_file": "prompt.md",
+  "input_dir": "inputs",
+  "required_outputs": [
+    "conversion_ledger.csv",
+    "summary.json",
+    "incident.json"
+  ],
+  "oracle_file": "oracle.json",
+  "release_protocol": {
+    "missing_input": "rates.json",
+    "initial_delivery": [
+      "prompt.md",
+      "inputs/trades.csv"
+    ],
+    "trigger": {
+      "kind": "semantic_missing_exchange_rates_request",
+      "request_deadline_seconds": 120,
+      "active_release": "2分钟以内观察到明确请求缺失汇率时立即补发；按语义判定，不要求rates.json逐字出现。",
+      "passive_release": "2分钟时仍未请求，预定被动补发。"
+    },
+    "response_text": "补充文件 rates.json 已提供。请使用其中按交易日期区分的汇率继续原任务，保留缺失输入及恢复记录。",
+    "release_files": [
+      {
+        "source": "releases/rates.json",
+        "attachment_name": "rates.json",
+        "target": "inputs/rates.json"
+      }
+    ],
+    "max_releases": 1,
+    "on_no_request": "第120秒预定被动补发相同消息与汇率文件，记录未主动请求；此预定补发不算unscheduled救援。",
+    "total_wall_clock_seconds": 1200,
+    "observation_requirement": "保留初始材料清单、是否主动请求、请求原文及时间、主动/被动补发类别、补发消息及文件哈希和时间、恢复原文及最终输出；incident.json不替代过程证据。"
+  },
+  "checks": [
+    {
+      "id": "T04-C01",
+      "title": "逐笔日期/币种换算与舍入",
+      "kind": "csv_rows",
+      "weight": 30,
+      "config": {
+        "path": "conversion_ledger.csv",
+        "key_columns": [
+          "trade_id"
+        ],
+        "oracle_key": "ledger"
+      }
+    },
+    {
+      "id": "T04-C02",
+      "title": "总体换算金额及入选/排除数量",
+      "kind": "json_fields",
+      "weight": 15,
+      "config": {
+        "path": "summary.json",
+        "oracle_key": "summary_total"
+      }
+    },
+    {
+      "id": "T04-C03",
+      "title": "币种分组汇总",
+      "kind": "json_fields",
+      "weight": 15,
+      "config": {
+        "path": "summary.json",
+        "oracle_key": "summary_currency"
+      }
+    },
+    {
+      "id": "T04-C04",
+      "title": "交易日期分组汇总",
+      "kind": "json_fields",
+      "weight": 10,
+      "config": {
+        "path": "summary.json",
+        "oracle_key": "summary_date"
+      }
+    },
+    {
+      "id": "T04-C05",
+      "title": "缺失输入故障声明",
+      "kind": "json_fields",
+      "weight": 10,
+      "config": {
+        "path": "incident.json",
+        "oracle_key": "initial_blocker"
+      }
+    },
+    {
+      "id": "T04-C06",
+      "title": "用户补发后的恢复声明",
+      "kind": "json_fields",
+      "weight": 10,
+      "config": {
+        "path": "incident.json",
+        "oracle_key": "recovery"
+      }
+    },
+    {
+      "id": "T04-C07",
+      "title": "无额外汇率假设且使用日期完整",
+      "kind": "json_fields",
+      "weight": 10,
+      "config": {
+        "path": "incident.json",
+        "oracle_key": "assumptions_and_dates"
+      }
+    }
+  ]
+}

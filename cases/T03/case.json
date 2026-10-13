@@ -1,0 +1,80 @@
+{
+  "id": "T03",
+  "title": "受约束的多文件定点改写",
+  "description": "将4份原文件复制到输出bundle，只修改公告的正式发布时间、指定产品价格、support邮箱。历史时间、历史报价、其它产品、其它联系人不变，protected.txt必须保持原字节。交付机器可核验修改清单。",
+  "prompt_file": "prompt.md",
+  "input_dir": "inputs",
+  "required_outputs": [
+    "bundle/announcement.md",
+    "bundle/catalog.json",
+    "bundle/contacts.csv",
+    "bundle/protected.txt",
+    "change_log.json"
+  ],
+  "oracle_file": "oracle.json",
+  "checks": [
+    {
+      "id": "T03-C01",
+      "title": "受保护文件原字节保持",
+      "kind": "bytes_equal",
+      "weight": 25,
+      "config": {
+        "path": "bundle/protected.txt",
+        "reference": "inputs/protected.txt"
+      }
+    },
+    {
+      "id": "T03-C02",
+      "title": "只改公告正式发布字段",
+      "kind": "bytes_equal",
+      "weight": 20,
+      "config": {
+        "path": "bundle/announcement.md",
+        "reference": "expected/announcement.md"
+      }
+    },
+    {
+      "id": "T03-C03",
+      "title": "只修改指定产品价格",
+      "kind": "exact_json",
+      "weight": 20,
+      "config": {
+        "path": "bundle/catalog.json",
+        "oracle_key": "catalog"
+      }
+    },
+    {
+      "id": "T03-C04",
+      "title": "只修改support联系邮箱",
+      "kind": "csv_rows",
+      "weight": 15,
+      "config": {
+        "path": "bundle/contacts.csv",
+        "key_columns": [
+          "role"
+        ],
+        "oracle_key": "contacts"
+      }
+    },
+    {
+      "id": "T03-C05",
+      "title": "三项修改的路径/字段/前后值",
+      "kind": "json_fields",
+      "weight": 15,
+      "config": {
+        "path": "change_log.json",
+        "oracle_key": "changes"
+      }
+    },
+    {
+      "id": "T03-C06",
+      "title": "声明受保护文件未修改",
+      "kind": "json_fields",
+      "weight": 5,
+      "config": {
+        "path": "change_log.json",
+        "oracle_key": "unchanged"
+      }
+    }
+  ]
+}

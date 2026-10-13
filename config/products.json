@@ -1,0 +1,196 @@
+{
+  "verified_on": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "status": "pilot_access_verified_formal_configuration_pending",
+  "products": [
+    {
+      "id": "codex",
+      "name": "Codex",
+      "surface": "desktop_local_project",
+      "official_url": "https://developers.openai.com/learn/codex",
+      "version": null,
+      "model": null,
+      "skills_visibility": "unknown",
+      "notes": [
+        "拟以桌面 Codex 本地项目任务为主入口，正式实验须现场固定客户端和模式。",
+        "官方说明将 App、CLI 和 IDE 扩展列为同一底层 Harness 的不同入口；各入口配置不能视为完全一致。",
+        "当前构建本仓库的 Codex 会话不是独立实验样本；正式实验须使用新的隔离目录和会话。",
+        "官方文档事实不构成任务成绩，版本、模型、技能与工具配置须另行采集。"
+      ],
+      "sources": [
+        {
+          "url": "https://developers.openai.com/learn/codex",
+          "claim": "Codex 官方学习入口",
+          "confidence": "high_for_product_identity"
+        },
+        {
+          "url": "https://developers.openai.com/blog/codex-as-a-platform",
+          "claim": "App、CLI、IDE 扩展与底层 Harness 的关系及 Harness 职责",
+          "confidence": "high_for_official_description"
+        }
+      ],
+      "pending_capture": [
+        "client_version",
+        "execution_mode",
+        "model_and_reasoning_settings",
+        "account_plan_and_quota",
+        "sandbox_and_approval",
+        "instructions_skills_plugins_mcp_memory",
+        "logs_and_artifacts"
+      ],
+      "pilot_surface": "native_cli_controlled",
+      "pilot_version": "0.159.2",
+      "pilot_model": "not_disclosed_clean_cli_default",
+      "pilot_evidence": "public/pilots/codex-T01-r1-attempt02"
+    },
+    {
+      "id": "workbuddy",
+      "name": "WorkBuddy",
+      "surface": "desktop_local_folder",
+      "official_url": "https://www.workbuddy.cn/",
+      "version": "5.7.7",
+      "model": null,
+      "skills_visibility": "unknown",
+      "notes": [
+        "拟以 Windows 桌面工作台为主入口，现场确认版本和任务入口。",
+        "官方产品介绍描述本地文件夹授权、模型切换、MCP 与 Skills 扩展。",
+        "文档存在功能说明不等于该账户已启用，也不等于任务中实际使用。"
+      ],
+      "sources": [
+        {
+          "url": "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Product-Guide",
+          "claim": "腾讯桌面工作台定位及本地文件、模型、MCP、Skills 的官方说明",
+          "confidence": "high_for_official_description"
+        }
+      ],
+      "pending_capture": [
+        "client_version",
+        "task_entry",
+        "selected_model",
+        "skills_mcp_connectors_memory",
+        "folder_authorization",
+        "sandbox_and_permissions",
+        "exportable_trace_scope"
+      ],
+      "pilot_cli_version": "2.156.0",
+      "pilot_result": "embedded CLI authentication required in two settings-source conditions; not desktop task performance",
+      "pilot_evidence": "public/pilots/workbuddy-T01-r1"
+    },
+    {
+      "id": "dsh",
+      "name": "DeepSeek Harness",
+      "surface": "local_web_ui_standard_mode_proposed",
+      "official_url": "https://www.deepseek.com/harness/zh/",
+      "version": "0.2.0-rc.2",
+      "model": null,
+      "skills_visibility": "unknown",
+      "notes": [
+        "用户确认 DSH 为 DeepSeek Harness；官方页面亦采用此名称。",
+        "官方介绍称其为开发者预览版，并列出标准、PTC、极简与创造模式。",
+        "主评测拟采用标准模式；不同 preset 的结果不可混合。",
+        "开发者预览版不是已安装版本号；须固定包版本或 commit 并保存配置。",
+        "已完成本机 headless T01 接入预试；不可直接代替拟定桌面或 Web 主实验入口，正式模型/模式仍未冻结。"
+      ],
+      "sources": [
+        {
+          "url": "https://www.deepseek.com/harness/zh/",
+          "claim": "产品身份、插件组合结构、模式名称与本地 Web UI 启动说明",
+          "confidence": "high_for_official_description"
+        }
+      ],
+      "pending_capture": [
+        "package_version_or_commit",
+        "node_and_os_version",
+        "preset_and_config",
+        "model_provider_id_and_parameters",
+        "plugins_and_skills",
+        "tool_permissions_and_sandbox",
+        "trace_export_and_visibility"
+      ],
+      "pilot_surface": "desktop_bundled_cli_headless",
+      "pilot_requested_model": "deepseek-account/deepseek-flash/high",
+      "pilot_evidence": "public/pilots/dsh-T01-r1"
+    },
+    {
+      "id": "yuanbao",
+      "name": "元宝专家模式",
+      "surface": "desktop_or_web_expert_mode_pending_verification",
+      "official_url": "https://yuanbao.tencent.com/",
+      "version": null,
+      "model": null,
+      "skills_visibility": "unknown",
+      "notes": [
+        "腾讯官方 App Store 发布页版本历史确认专家模式名称；桌面或网页具体入口须现场核验。",
+        "发布记录提及 Hy4 preview 与专家模式的关系，不能据此填写本轮所选模型。",
+        "账号可用性、模式选择路径、模型切换或回退及工具暴露范围未知。",
+        "普通聊天模式不能替代专家模式；受限时须保留实际限制证据。"
+      ],
+      "sources": [
+        {
+          "url": "https://yuanbao.tencent.com/",
+          "claim": "腾讯元宝官方入口",
+          "confidence": "high_for_product_identity"
+        },
+        {
+          "url": "https://apps.apple.com/cn/app/id6480446430",
+          "claim": "腾讯发布页版本历史使用专家模式名称，2.84.0/2.84.1 发布记录关联 Hy4 preview",
+          "confidence": "high_for_published_mode_name_only"
+        }
+      ],
+      "pending_capture": [
+        "client_or_web_entry",
+        "version",
+        "expert_mode_screenshot",
+        "displayed_model_and_fallbacks",
+        "account_plan_and_quota",
+        "file_upload_and_export",
+        "skills_and_tool_visibility",
+        "trace_export_scope"
+      ]
+    },
+    {
+      "id": "doubao",
+      "name": "豆包工作任务模式（公告：豆包办公）",
+      "surface": "desktop_office_task_entry_pending_verification",
+      "official_url": "https://www.doubao.com/about",
+      "version": null,
+      "model": null,
+      "skills_visibility": "unknown",
+      "notes": [
+        "豆包官方 App Store 发布页确认工作任务模式名称及 Office、专业技能和定时任务的官方描述。",
+        "2026-10-13 用户确认公告中的豆包办公指豆包工作任务模式；具体客户端/网页入口仍须现场固定。",
+        "不能将普通聊天、飞书内豆包工作或豆包手机助手直接替代此评测对象。",
+        "桌面具体入口、版本、模型、权限和内置技能可见性均未现场采集。"
+      ],
+      "sources": [
+        {
+          "url": "https://www.doubao.com/about",
+          "claim": "豆包官方入口",
+          "confidence": "high_for_product_identity"
+        },
+        {
+          "url": "https://www.doubao.com/download/desktop",
+          "claim": "豆包官方桌面下载入口，具体办公模式待现场确认",
+          "confidence": "high_for_entry_url_only"
+        },
+        {
+          "url": "https://apps.apple.com/cn/app/id6459478672",
+          "claim": "北京春田知韵官方发布页使用工作任务模式名称并描述 Office 与专业技能",
+          "confidence": "high_for_published_mode_name_only"
+        }
+      ],
+      "pending_capture": [
+        "exact_product_name_and_official_entry",
+        "office_mode_mapping_and_screenshot",
+        "client_version",
+        "displayed_model",
+        "account_plan_and_quota",
+        "skills_visibility_and_state",
+        "computer_and_browser_permissions",
+        "office_exports",
+        "visible_trace_scope"
+      ],
+      "user_confirmed_mode": "工作任务模式"
+    }
+  ]
+}

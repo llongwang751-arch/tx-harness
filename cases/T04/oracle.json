@@ -1,0 +1,129 @@
+{
+  "_evaluator_note": "仅供评测员。故障/恢复自述正确不能替代真实现场证据。",
+  "ledger": [
+    {
+      "trade_id": "F001",
+      "trade_date": "2026-10-01",
+      "currency": "USD",
+      "amount_minor": "10000",
+      "status": "settled",
+      "included": "true",
+      "rate_numerator": "7",
+      "rate_denominator": "1",
+      "cny_cents": "70000"
+    },
+    {
+      "trade_id": "F002",
+      "trade_date": "2026-10-01",
+      "currency": "EUR",
+      "amount_minor": "5000",
+      "status": "settled",
+      "included": "true",
+      "rate_numerator": "8",
+      "rate_denominator": "1",
+      "cny_cents": "40000"
+    },
+    {
+      "trade_id": "F003",
+      "trade_date": "2026-10-01",
+      "currency": "CNY",
+      "amount_minor": "12345",
+      "status": "settled",
+      "included": "true",
+      "rate_numerator": "1",
+      "rate_denominator": "1",
+      "cny_cents": "12345"
+    },
+    {
+      "trade_id": "F004",
+      "trade_date": "2026-10-02",
+      "currency": "USD",
+      "amount_minor": "3350",
+      "status": "settled",
+      "included": "true",
+      "rate_numerator": "701",
+      "rate_denominator": "100",
+      "cny_cents": "23484"
+    },
+    {
+      "trade_id": "F005",
+      "trade_date": "2026-10-02",
+      "currency": "EUR",
+      "amount_minor": "101",
+      "status": "settled",
+      "included": "true",
+      "rate_numerator": "799",
+      "rate_denominator": "100",
+      "cny_cents": "807"
+    },
+    {
+      "trade_id": "F006",
+      "trade_date": "2026-10-02",
+      "currency": "USD",
+      "amount_minor": "1000",
+      "status": "pending",
+      "included": "false",
+      "rate_numerator": "-",
+      "rate_denominator": "-",
+      "cny_cents": "0"
+    }
+  ],
+  "summary_total": {
+    "currency": "CNY",
+    "included_count": 5,
+    "excluded_count": 1,
+    "total_cny_cents": 146636
+  },
+  "summary_currency": {
+    "by_currency": [
+      {
+        "currency": "CNY",
+        "trade_count": 1,
+        "cny_cents": 12345
+      },
+      {
+        "currency": "EUR",
+        "trade_count": 2,
+        "cny_cents": 40807
+      },
+      {
+        "currency": "USD",
+        "trade_count": 2,
+        "cny_cents": 93484
+      }
+    ]
+  },
+  "summary_date": {
+    "by_date": [
+      {
+        "date": "2026-10-01",
+        "trade_count": 3,
+        "cny_cents": 122345
+      },
+      {
+        "date": "2026-10-02",
+        "trade_count": 2,
+        "cny_cents": 24291
+      }
+    ]
+  },
+  "initial_blocker": {
+    "initial_blocker": {
+      "code": "MISSING_REQUIRED_INPUT",
+      "missing_file": "rates.json"
+    }
+  },
+  "recovery": {
+    "recovery": {
+      "input": "rates.json",
+      "method": "provided_by_user"
+    }
+  },
+  "assumptions_and_dates": {
+    "assumptions": [],
+    "used_rate_dates": [
+      "2026-10-01",
+      "2026-10-02"
+    ]
+  }
+}

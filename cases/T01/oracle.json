@@ -1,0 +1,109 @@
+{
+  "_evaluator_note": "仅供评测员。不要发送给产品。",
+  "ledger": [
+    {
+      "order_id": "O101",
+      "customer_group": "retail",
+      "status": "paid",
+      "gross_cents": "15000",
+      "successful_refund_cents": "2000",
+      "net_cents": "13000",
+      "included": "true"
+    },
+    {
+      "order_id": "O102",
+      "customer_group": "retail",
+      "status": "shipped",
+      "gross_cents": "8800",
+      "successful_refund_cents": "2000",
+      "net_cents": "6800",
+      "included": "true"
+    },
+    {
+      "order_id": "O103",
+      "customer_group": "business",
+      "status": "cancelled",
+      "gross_cents": "10000",
+      "successful_refund_cents": "0",
+      "net_cents": "0",
+      "included": "false"
+    },
+    {
+      "order_id": "O104",
+      "customer_group": "business",
+      "status": "paid",
+      "gross_cents": "4500",
+      "successful_refund_cents": "0",
+      "net_cents": "4500",
+      "included": "true"
+    },
+    {
+      "order_id": "O105",
+      "customer_group": "retail",
+      "status": "pending",
+      "gross_cents": "6500",
+      "successful_refund_cents": "0",
+      "net_cents": "0",
+      "included": "false"
+    },
+    {
+      "order_id": "O106",
+      "customer_group": "business",
+      "status": "shipped",
+      "gross_cents": "22000",
+      "successful_refund_cents": "3000",
+      "net_cents": "19000",
+      "included": "true"
+    }
+  ],
+  "aggregate_total": {
+    "total": {
+      "order_count": 4,
+      "gross_cents": 50300,
+      "refund_cents": 7000,
+      "net_cents": 43300
+    }
+  },
+  "aggregate_groups": {
+    "groups": [
+      {
+        "customer_group": "business",
+        "order_count": 2,
+        "gross_cents": 26500,
+        "refund_cents": 3000,
+        "net_cents": 23500
+      },
+      {
+        "customer_group": "retail",
+        "order_count": 2,
+        "gross_cents": 23800,
+        "refund_cents": 4000,
+        "net_cents": 19800
+      }
+    ]
+  },
+  "order_duplicates": {
+    "exact_duplicate_order_rows": 1
+  },
+  "order_superseded": {
+    "superseded_order_rows": 1
+  },
+  "refund_deduplication": {
+    "exact_duplicate_refund_rows": 1,
+    "superseded_refund_rows": 1
+  },
+  "ignored_refunds": {
+    "ignored_non_success_refund_ids": [
+      "R004",
+      "R006"
+    ],
+    "ignored_ineligible_order_refund_ids": [
+      "R008"
+    ]
+  },
+  "orphan_refunds": {
+    "orphan_refund_ids": [
+      "R007"
+    ]
+  }
+}

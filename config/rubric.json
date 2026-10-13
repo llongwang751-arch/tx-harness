@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "objective_weight": 60,
+  "manual_dimensions": [
+    {"id": "delivery", "name": "文件交付与工具落地", "weight": 15},
+    {"id": "process", "name": "执行反馈与恢复", "weight": 10},
+    {"id": "boundary", "name": "约束与权限边界", "weight": 10},
+    {"id": "interaction", "name": "用户操作负担", "weight": 5}
+  ],
+  "grade_scale": [0, 1, 2, 3, 4],
+  "formula": "objective_weight * passed_check_weight / all_check_weight + sum(weight * grade / 4)",
+  "missing_manual_evidence": "null_total_do_not_impute_zero",
+  "confidence_levels": ["high", "medium", "low"],
+  "attribution_labels": ["model", "skill", "harness", "joint", "environment", "unresolved"]
+}

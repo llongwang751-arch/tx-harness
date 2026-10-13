@@ -1,0 +1,9 @@
+[project]
+name = "office-harness-eval"
+version = "0.1.0"
+description = "Evidence-first, offline evaluation kit for five office agent products"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.ruff]
+line-length = 100

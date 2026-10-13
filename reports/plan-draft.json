@@ -1,0 +1,533 @@
+{
+  "protocol_id": "office-harness-v1",
+  "seed": 20261013,
+  "created_at": "2026-10-13T11:57:52+00:00",
+  "evaluation_fingerprint": "3b3fce8e147941c1ed11b3f60ad51e0c490da834f3e305c8260bbd76ed404030",
+  "runs": [
+    {
+      "order": 1,
+      "product_id": "workbuddy",
+      "case_id": "T04",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 2,
+      "product_id": "dsh",
+      "case_id": "T04",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 3,
+      "product_id": "yuanbao",
+      "case_id": "T04",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 4,
+      "product_id": "codex",
+      "case_id": "T04",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 5,
+      "product_id": "doubao",
+      "case_id": "T04",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 6,
+      "product_id": "workbuddy",
+      "case_id": "T03",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 7,
+      "product_id": "dsh",
+      "case_id": "T03",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 8,
+      "product_id": "yuanbao",
+      "case_id": "T03",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 9,
+      "product_id": "codex",
+      "case_id": "T03",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 10,
+      "product_id": "doubao",
+      "case_id": "T03",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 11,
+      "product_id": "dsh",
+      "case_id": "T03",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 12,
+      "product_id": "codex",
+      "case_id": "T03",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 13,
+      "product_id": "doubao",
+      "case_id": "T03",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 14,
+      "product_id": "yuanbao",
+      "case_id": "T03",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 15,
+      "product_id": "workbuddy",
+      "case_id": "T03",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 16,
+      "product_id": "yuanbao",
+      "case_id": "T01",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 17,
+      "product_id": "doubao",
+      "case_id": "T01",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 18,
+      "product_id": "dsh",
+      "case_id": "T01",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 19,
+      "product_id": "workbuddy",
+      "case_id": "T01",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 20,
+      "product_id": "codex",
+      "case_id": "T01",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 21,
+      "product_id": "codex",
+      "case_id": "T01",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 22,
+      "product_id": "yuanbao",
+      "case_id": "T01",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 23,
+      "product_id": "doubao",
+      "case_id": "T01",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 24,
+      "product_id": "dsh",
+      "case_id": "T01",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 25,
+      "product_id": "workbuddy",
+      "case_id": "T01",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 26,
+      "product_id": "codex",
+      "case_id": "T02",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 27,
+      "product_id": "workbuddy",
+      "case_id": "T02",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 28,
+      "product_id": "doubao",
+      "case_id": "T02",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 29,
+      "product_id": "yuanbao",
+      "case_id": "T02",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 30,
+      "product_id": "dsh",
+      "case_id": "T02",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 31,
+      "product_id": "codex",
+      "case_id": "T05",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 32,
+      "product_id": "dsh",
+      "case_id": "T05",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 33,
+      "product_id": "workbuddy",
+      "case_id": "T05",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 34,
+      "product_id": "doubao",
+      "case_id": "T05",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 35,
+      "product_id": "yuanbao",
+      "case_id": "T05",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 36,
+      "product_id": "doubao",
+      "case_id": "T02",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 37,
+      "product_id": "yuanbao",
+      "case_id": "T02",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 38,
+      "product_id": "codex",
+      "case_id": "T02",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 39,
+      "product_id": "dsh",
+      "case_id": "T02",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 40,
+      "product_id": "workbuddy",
+      "case_id": "T02",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 41,
+      "product_id": "doubao",
+      "case_id": "T02",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 42,
+      "product_id": "dsh",
+      "case_id": "T02",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 43,
+      "product_id": "codex",
+      "case_id": "T02",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 44,
+      "product_id": "workbuddy",
+      "case_id": "T02",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 45,
+      "product_id": "yuanbao",
+      "case_id": "T02",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 46,
+      "product_id": "doubao",
+      "case_id": "T04",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 47,
+      "product_id": "dsh",
+      "case_id": "T04",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 48,
+      "product_id": "workbuddy",
+      "case_id": "T04",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 49,
+      "product_id": "codex",
+      "case_id": "T04",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 50,
+      "product_id": "yuanbao",
+      "case_id": "T04",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 51,
+      "product_id": "dsh",
+      "case_id": "T01",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 52,
+      "product_id": "yuanbao",
+      "case_id": "T01",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 53,
+      "product_id": "doubao",
+      "case_id": "T01",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 54,
+      "product_id": "codex",
+      "case_id": "T01",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 55,
+      "product_id": "workbuddy",
+      "case_id": "T01",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 56,
+      "product_id": "dsh",
+      "case_id": "T05",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 57,
+      "product_id": "codex",
+      "case_id": "T05",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 58,
+      "product_id": "doubao",
+      "case_id": "T05",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 59,
+      "product_id": "workbuddy",
+      "case_id": "T05",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 60,
+      "product_id": "yuanbao",
+      "case_id": "T05",
+      "replicate": 3,
+      "track": "product_default"
+    },
+    {
+      "order": 61,
+      "product_id": "yuanbao",
+      "case_id": "T04",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 62,
+      "product_id": "doubao",
+      "case_id": "T04",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 63,
+      "product_id": "dsh",
+      "case_id": "T04",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 64,
+      "product_id": "codex",
+      "case_id": "T04",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 65,
+      "product_id": "workbuddy",
+      "case_id": "T04",
+      "replicate": 1,
+      "track": "product_default"
+    },
+    {
+      "order": 66,
+      "product_id": "workbuddy",
+      "case_id": "T03",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 67,
+      "product_id": "doubao",
+      "case_id": "T03",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 68,
+      "product_id": "yuanbao",
+      "case_id": "T03",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 69,
+      "product_id": "dsh",
+      "case_id": "T03",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 70,
+      "product_id": "codex",
+      "case_id": "T03",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 71,
+      "product_id": "yuanbao",
+      "case_id": "T05",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 72,
+      "product_id": "doubao",
+      "case_id": "T05",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 73,
+      "product_id": "codex",
+      "case_id": "T05",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 74,
+      "product_id": "dsh",
+      "case_id": "T05",
+      "replicate": 2,
+      "track": "product_default"
+    },
+    {
+      "order": 75,
+      "product_id": "workbuddy",
+      "case_id": "T05",
+      "replicate": 2,
+      "track": "product_default"
+    }
+  ]
+}

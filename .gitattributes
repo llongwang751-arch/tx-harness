@@ -1,0 +1,3 @@
+# Preserve fixture and evidence bytes across Windows/Linux checkouts.
+# Manifests and byte-equality checks depend on exact original newlines.
+* -text

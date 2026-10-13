@@ -1,0 +1,41 @@
+{
+  "original_private_files_sha256": {
+    "evaluation_snapshot.json": "f6cb2f6134e15132aa0875c80ee184e3ddeb46f92c7a4d0dcdac9133501914ae",
+    "events.jsonl": "4461991d4f55ba9680e9e20c82e200fafee435133ea095b33f1ab07d4110564a",
+    "evidence/collection.json": "0e5e18c34c236824fde40571ff1fd8bbb8ea2c952390af5a40672b6c22d40791",
+    "evidence/initial.observed.json": "9b8a2d6366ceb5b1d753317cfa35a2d8f6b620249f696aa057a056ff32369e86",
+    "evidence/initial.result.json": "d8bc0d56f732e5ec12c4cfb79b77544f6d036e68a8325de8ce535516b56144ec",
+    "evidence/initial.stderr.txt": "b8fd1acfac2b31045cdfe35dc2425f6e239a5cb9d8026d583acb12e86750af0e",
+    "evidence/initial.stdout.jsonl": "1d6b279fa0192aac669377b03e943f04d1cfd155de8abfcb4dfd8101ceab704a",
+    "evidence/launch.json": "5a6efaad7b1128064e3740f82d7b9397228f6ab6a23034a0130fea0c4634b61c",
+    "manual.json": "ee4bffc6349d9290fc74db8563444449d164f6550c287a1bb695981839b3224c",
+    "meta.json": "10cc527a8ae86ce7404fb6ead9d5d796dff430298444cb0547874e89607a6bc6",
+    "workspace/inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "workspace/inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "workspace/prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42"
+  },
+  "filter": {
+    "allowed_lifecycle_events": [
+      "thread.started",
+      "turn.completed",
+      "turn.failed",
+      "turn.started"
+    ],
+    "allowed_item_types_for_item_completed": [
+      "agent_message",
+      "command_execution",
+      "error",
+      "file_change"
+    ],
+    "excluded": "all other events, uncommitted item.started, hidden reasoning, system/developer prompts, auth/credential values",
+    "path_redaction": "case-insensitive Windows user-home path prefix replaced with <USER_HOME>; task participant paths retained",
+    "kept_events": 6,
+    "excluded_events": [],
+    "native_stdout_original_sha256": "1d6b279fa0192aac669377b03e943f04d1cfd155de8abfcb4dfd8101ceab704a",
+    "observed_json_original_sha256": "9b8a2d6366ceb5b1d753317cfa35a2d8f6b620249f696aa057a056ff32369e86",
+    "stderr_original_sha256": "b8fd1acfac2b31045cdfe35dc2425f6e239a5cb9d8026d583acb12e86750af0e"
+  },
+  "artifact_copy_sha256_verified": true,
+  "reviewed_at": "2026-10-13T12:35:41.640177+00:00",
+  "reviewer": "automated_native_cli_adapter with root review required before publication"
+}

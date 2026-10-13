@@ -1,0 +1,21 @@
+{
+  "schema_version": "pilot-public-manifest-v1",
+  "files": {
+    "evidence/collection.json": "fad9471770f0acc86271f6d8f7832f2958770784ebb291c575ad869808b2f444",
+    "evidence/initial.result.json": "4515308b98871aa692c61d141b21c31d9a2ceeb1a6e67c7febf309880bae3be1",
+    "evidence/launch.json": "3537b93c6b9c01d6bd0d9d91d95909ab7309b4191b8a73cd36c5fe71b5b6e4bf",
+    "evidence/native-stderr-redacted.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/native-visible-events.jsonl": "732f6f9186eab3dee50b17ba4cf361431710bc40678e938a1c96e70163913819",
+    "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "metadata.json": "003f77cbf9f9d0a14524609f7f6b9af7af4b5505c1dee2e43c4066177b4cb7fd",
+    "outputs/aggregate.json": "d220a6d8057fcf8e04a41bfc065130903a5237ef339d30761cd83e55292e23dd",
+    "outputs/exceptions.json": "a0558f104b5d48cb05e7bd4413bd81cb675bc82527f2e8984624adf8f0b141d8",
+    "outputs/order_ledger.csv": "a87c6a2ee76184361c69a7385492e75a1b9328b51ac7980000980d91b70ce0a2",
+    "prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42",
+    "provenance.json": "040ad1f97b917e697ccac681fb0159b51421fd41bf1a192b7f02e94294891238",
+    "README.md": "825a241bf7ec397a553c24cc98b4cece391cf98754fd99d4ee1fb20700605fe9",
+    "submitted-prompt.md": "db79b575610eeed34a719cf29e663077b0ec261d858c5b0b4afd7d9299d85e3f",
+    "verification.json": "1ab7edd5ed77627adbfd37b4333171540b222dd2d48c6001274a6c0d9801d98d"
+  }
+}

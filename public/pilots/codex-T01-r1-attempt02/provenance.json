@@ -1,0 +1,76 @@
+{
+  "original_private_files_sha256": {
+    "evaluation_snapshot.json": "f6cb2f6134e15132aa0875c80ee184e3ddeb46f92c7a4d0dcdac9133501914ae",
+    "events.jsonl": "169692a2d35d0218d38c441552525c793ee5394e991ac9744bf45101e0446ec1",
+    "evidence/collection.json": "fad9471770f0acc86271f6d8f7832f2958770784ebb291c575ad869808b2f444",
+    "evidence/initial.observed.json": "d665f5e6e3f17e2cb8d2e508ee525f06b7b593c256b19eb7a2161e638e918ffa",
+    "evidence/initial.result.json": "4515308b98871aa692c61d141b21c31d9a2ceeb1a6e67c7febf309880bae3be1",
+    "evidence/initial.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/initial.stdout.jsonl": "12f3c7191d4b415c48b47771e6343406e91ea93727aa04cfde0d3b49d2a2ff44",
+    "evidence/launch.json": "ff82661c3eb55d839a3bb8325cf08933effb11f8f261b6ac7571c24048a2672d",
+    "evidence/submitted-prompt.md": "db79b575610eeed34a719cf29e663077b0ec261d858c5b0b4afd7d9299d85e3f",
+    "manual.json": "ee4bffc6349d9290fc74db8563444449d164f6550c287a1bb695981839b3224c",
+    "meta.json": "66b5b0594450582a87d266e10f922029c95eb34e4646a542f7f99fc7435710f9",
+    "workspace/inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "workspace/inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "workspace/outputs/aggregate.json": "d220a6d8057fcf8e04a41bfc065130903a5237ef339d30761cd83e55292e23dd",
+    "workspace/outputs/exceptions.json": "a0558f104b5d48cb05e7bd4413bd81cb675bc82527f2e8984624adf8f0b141d8",
+    "workspace/outputs/order_ledger.csv": "a87c6a2ee76184361c69a7385492e75a1b9328b51ac7980000980d91b70ce0a2",
+    "workspace/prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42"
+  },
+  "filter": {
+    "allowed_lifecycle_events": [
+      "thread.started",
+      "turn.completed",
+      "turn.failed",
+      "turn.started"
+    ],
+    "allowed_item_types_for_item_completed": [
+      "agent_message",
+      "command_execution",
+      "error",
+      "file_change"
+    ],
+    "excluded": "all other events, uncommitted item.started, hidden reasoning, system/developer prompts, auth/credential values",
+    "path_redaction": "case-insensitive Windows user-home path prefix replaced with <USER_HOME>; task participant paths retained",
+    "kept_events": 12,
+    "excluded_events": [
+      {
+        "source_index": 4,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted, unknown, or not on the user-visible whitelist"
+      },
+      {
+        "source_index": 6,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted, unknown, or not on the user-visible whitelist"
+      },
+      {
+        "source_index": 8,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted, unknown, or not on the user-visible whitelist"
+      },
+      {
+        "source_index": 10,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted, unknown, or not on the user-visible whitelist"
+      },
+      {
+        "source_index": 13,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted, unknown, or not on the user-visible whitelist"
+      }
+    ],
+    "native_stdout_original_sha256": "12f3c7191d4b415c48b47771e6343406e91ea93727aa04cfde0d3b49d2a2ff44",
+    "observed_json_original_sha256": "d665f5e6e3f17e2cb8d2e508ee525f06b7b593c256b19eb7a2161e638e918ffa",
+    "stderr_original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "artifact_copy_sha256_verified": true,
+  "reviewed_at": "2026-10-13T12:35:41.721970+00:00",
+  "reviewer": "automated_native_cli_adapter with root review required before publication"
+}

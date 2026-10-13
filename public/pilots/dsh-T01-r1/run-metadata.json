@@ -1,0 +1,77 @@
+{
+  "product": "dsh",
+  "surface": "desktop-bundled CLI",
+  "profile": "headless",
+  "track": "pilot",
+  "case": "T01",
+  "replicate": 1,
+  "installation_version": "0.2.0-rc.2",
+  "requested_provider": "deepseek-account",
+  "requested_model": "deepseek-flash",
+  "requested_reasoning_effort": "high",
+  "started_at": "2026-10-13T12:29:19.737006+00:00",
+  "finished_at": "2026-10-13T12:30:10.947515+00:00",
+  "elapsed_seconds": 51.21,
+  "exit_code": 0,
+  "timed_out": false,
+  "initial_files": {
+    "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "prompt.md": "881f531e5cdad97c5fe41f70c0c8bfe9aa5fe541e06558230d00495e14e82c73"
+  },
+  "final_files": {
+    "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "outputs/aggregate.json": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+    "outputs/exceptions.json": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+    "outputs/order_ledger.csv": "a5f28d53b9275061de7db2c4bf6cbb9306420be2138ffd2446031abd7a230d46",
+    "prompt.md": "881f531e5cdad97c5fe41f70c0c8bfe9aa5fe541e06558230d00495e14e82c73"
+  },
+  "outputs": {
+    "aggregate.json": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+    "exceptions.json": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+    "order_ledger.csv": "a5f28d53b9275061de7db2c4bf6cbb9306420be2138ffd2446031abd7a230d46"
+  },
+  "patch_sha256": "cdbe3253b01c3b9b58ffb300a4489a2c424b8d9d629e230a085e0fdb019ae6b6",
+  "runner_sha256": "b4fb519d8ce1f7fc26180ebb2591a1c301ba23afa85a41894933680b320479a0",
+  "limitations": [
+    "CLI/headless is not the desktop UI surface.",
+    "Workspace-write does not prove confinement of reads, network, or processes.",
+    "Default DSH home/profile preferences other than the explicit overlay may remain active.",
+    "Machine-readable events may be truncated; raw reasoning remains private.",
+    "Account route and advisory model selection are recorded; server-side model identity is not proven."
+  ],
+  "session_id": "session-8833d1c1-adf9-436a-bec0-2526c61c6785",
+  "participant_workspace": "D:/harness-participants/pilot-dsh-T01-r1",
+  "operating_system": "Windows",
+  "sandbox_mode": "workspace-write",
+  "approval_policy": "ask; observed headless escalation has no approval channel",
+  "skills_configuration": "skill-filesystem includeDefaultRoots=false; installed bundled Office Skill directory; watch=false",
+  "observed_skill_calls": [
+    "diagnose-windows-sandbox-acl"
+  ],
+  "task_network_tool": "tool-web disabled; not a network confinement proof",
+  "transmission": "Case prompt plus output-directory-only convention; UTF-8 stdin to native installed CLI; fresh session; inputs unchanged",
+  "manual_interventions": 0,
+  "model_identity_confidence": "Requested/advisory model only; backend identity not independently attested",
+  "raw_event_counts": {
+    "session": 1,
+    "status": 18,
+    "thinking": 8,
+    "text": 6,
+    "tool_call": 15,
+    "tool_result": 15,
+    "final": 1
+  },
+  "public_event_count": 56,
+  "private_source_sha256": {
+    "stdout.raw": "c8bd0fa5edc438a92684cbfb26ede8b91d7ca151f2a8eb4f21c7d9cbf692689e",
+    "stderr.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "received.jsonl": "73206eb9a9c8f32f247a75818297de39e8914adb9405d434fcbf8a7a32f03afe",
+    "run.json": "559e754e48bf933e6c4c3ca624f95afe69a85131616d3077ee76d4402aa17163",
+    "submitted-prompt.md": "881f531e5cdad97c5fe41f70c0c8bfe9aa5fe541e06558230d00495e14e82c73",
+    "dsh-model.patch.yml": "cdbe3253b01c3b9b58ffb300a4489a2c424b8d9d629e230a085e0fdb019ae6b6"
+  },
+  "objective_result": "8/8 passed; objective 60/60; pilot only, no product total or ranking",
+  "publication_review": "Operator examined retained tool calls/results and text. Thinking dropped, Skill instructions omitted, user-home paths anonymized; no credential values were read or included."
+}

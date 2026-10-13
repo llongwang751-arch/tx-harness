@@ -1,0 +1,11 @@
+{
+  "collected": [],
+  "conflicting_duplicate_deliverables": [],
+  "outputs_modified_after_deadline_excluded": [],
+  "initial_inputs_unchanged": true,
+  "participant_final_inventory": {
+    "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42"
+  }
+}

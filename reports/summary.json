@@ -1,0 +1,82 @@
+{
+  "protocol": {
+    "schema_version": 1,
+    "protocol_id": "office-harness-v1",
+    "status": "draft_before_pilot",
+    "product_ids": [
+      "codex",
+      "workbuddy",
+      "dsh",
+      "yuanbao",
+      "doubao"
+    ],
+    "case_ids": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "replicates": 3,
+    "seed": 20261013,
+    "track": "product_default",
+    "wall_clock_seconds": 1200,
+    "max_unscheduled_interventions": 2,
+    "network": "disabled_for_task_content",
+    "skill_condition": "no_user_installed_skills_builtin_status_recorded",
+    "aggregation": "mean_within_case_then_equal_mean_across_cases",
+    "excluded_statuses": [
+      "pending",
+      "infra_error"
+    ],
+    "note": "先进行不进入主统计的预试；确认任务与入口后将status改为preregistered并提交冻结commit。无法统一模型时只比较端到端产品配置。"
+  },
+  "products": [
+    {
+      "product_id": "codex",
+      "eligible": 0,
+      "planned": 15,
+      "collected": 0,
+      "artifact_passed": 0,
+      "mean_score": null,
+      "runtime_configs": 0
+    },
+    {
+      "product_id": "workbuddy",
+      "eligible": 0,
+      "planned": 15,
+      "collected": 0,
+      "artifact_passed": 0,
+      "mean_score": null,
+      "runtime_configs": 0
+    },
+    {
+      "product_id": "dsh",
+      "eligible": 0,
+      "planned": 15,
+      "collected": 0,
+      "artifact_passed": 0,
+      "mean_score": null,
+      "runtime_configs": 0
+    },
+    {
+      "product_id": "yuanbao",
+      "eligible": 0,
+      "planned": 15,
+      "collected": 0,
+      "artifact_passed": 0,
+      "mean_score": null,
+      "runtime_configs": 0
+    },
+    {
+      "product_id": "doubao",
+      "eligible": 0,
+      "planned": 15,
+      "collected": 0,
+      "artifact_passed": 0,
+      "mean_score": null,
+      "runtime_configs": 0
+    }
+  ],
+  "runs": []
+}
