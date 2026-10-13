@@ -1,6 +1,6 @@
 # 既有预试的后验探索性评分审阅
 
-本次后验审阅包含17次已封存现场：Codex、DeepSeek Harness和WorkBuddy各五题，另加元宝专家模式T01与豆包工作任务·本地电脑T01的真实产品侧失败。五产品都已有T01实际episode，但元宝与选定豆包云电脑入口尚未完成全部五题，完整覆盖仍为partial。75次是原仓库草案采用的规模，公告没有要求这个次数；既有预试不追认成正式主实验。
+本次后验审阅包含18次已封存现场、17个已结束产品×任务组合：Codex、DeepSeek Harness和WorkBuddy各五题，另加元宝专家模式T01、豆包工作任务·云电脑T01 r2和本地电脑T01 r1的真实产品侧失败。比较纳入17次，本地额外失败1次保留并单列。元宝与选定豆包云电脑入口尚未完成全部五题，完整覆盖仍为partial。75次是原仓库草案采用的规模，公告没有要求这个次数；既有预试不追认成正式主实验。
 
 评审者：`Operator/agent`。这是同一作者采集、AI agent非盲阅证的后验审阅，无外部第二评审者；输入和输出不作修改。原包的 `total_score: null` 保留，人工等级与派生合计只写在本文件和[对应JSON](exploratory-score-review.json)。评分依据为[既有rubric](../docs/rubric.md)，模型、Skill、权限、SDK/桌面入口未匹配，因果归因全部保留 `unresolved`。
 
@@ -27,8 +27,9 @@
 | [WorkBuddy 原生桌面 T05](../public/pilots/workbuddy-T05-desktop-r1/README.md) `workbuddy-T05-desktop-r1` | 60 | 4（15分） | 未知 | 3（7.5分） | 4（5分） | 87.5 | 10 | 87.5–97.5 |
 | [元宝原生专家预选 T01](../public/pilots/yuanbao-T01-desktop-r1/README.md) `yuanbao-T01-desktop-r1` | 42 | 4（15分） | 未知 | 3（7.5分） | 4（5分） | 69.5 | 10 | 69.5–79.5 |
 | [豆包本地入口 T01·额外产品侧失败](../public/pilots/doubao-T01-desktop-r1/README.md) `doubao-T01-desktop-r1` | 0 | 0（0分） | 1（2.5分） | 未知 | 4（5分） | 7.5 | 10 | 7.5–17.5 |
+| [豆包云电脑入口 T01 r2](../public/pilots/doubao-T01-desktop-r2/README.md) `doubao-T01-desktop-r2` | 60 | 4（15分） | 未知 | 3（7.5分） | 4（5分） | 87.5 | 10 | 87.5–97.5 |
 
-以下均值表只含已经齐五题的前三入口。元宝单题和豆包本地失败不据单题填写五题均值；豆包本地失败已经评分并保留，但入口与后续选定云电脑不同，不混算。选择规则见[探索性分析口径](../docs/exploratory-analysis-plan.md)。
+以下均值表只含已经齐五题的前三入口。元宝与豆包云电脑均只覆盖T01，不据单题填写五题均值；豆包本地失败已经评分并保留，但入口与后续选定云电脑不同，不混算。选择规则见[探索性分析口径](../docs/exploratory-analysis-plan.md)。
 
 五任务各选一次后等权描述。Codex使用T01/T04的attempt02及另外三题attempt01；DSH包含四个SDK覆盖包及较早的T04 SDK会话；WorkBuddy使用桌面五题。选择更清晰现场、重试经历与不同时间都可能影响结果，不是随机独立重复，也没有估计产品总体均值。
 
@@ -45,6 +46,8 @@ DSH T05的台账B001净额为10200，应为8200；汇总gross32555/net28599，�
 WorkBuddy T01缺少操作日志，静态 `followup_prompts=[]` 不能证明全过程零干预，操作维保留未知0–5分。T05保存的主要是终态声明和文件卡片，缺少读写及核验现场，反馈维保留未知0–10分。日志缺失不当作产品失败。
 
 元宝T01的普通回复和三个文件卡在1200秒内已可见，三原件最终实际取回；aggregate和exceptions保存动作超预算，全部原件的截止时字节快照未经证明。因此42/60和交付等级只描述事后实际原件，不能写成严格等预算完成。普通终态自述不补齐执行链，process保留null。豆包本地T01真实失败是额外产品侧失败现场：普通回复明确不能生成文件，空产物按0/60计分，交付0、反馈1；边界未知，操作4表示没有追加解题干预，不代表完成成功。
+
+豆包云电脑T01 r2是独立入口：最终原件8/8、60/60，交付4、边界3、操作4；缺实际读写与校验反馈，process未知，已证项87.5、未知10、算术范围87.5–97.5。首次完成观察1540.504秒，采集停机/客户端重开已经记录，`budget_observation_valid=false`；三原件取回更晚，不能倒推1200秒内完成。云入口与本地r1分别保留，未构成同模型或单因素对照。
 
 ## 逐次理由和复核位置
 
@@ -407,10 +410,33 @@ WorkBuddy T01缺少操作日志，静态 `followup_prompts=[]` 不能证明全�
   替代解释：操作日志不是连续录像或Harness工具流，仍依赖采集覆盖；4级只表示本次至失败终态没有记录到非预定干预，不表示任务成功或未来恢复无需人工。
   证据：[operator-actions.jsonl L10,11,12](../public/pilots/doubao-T01-desktop-r1/operator-actions.jsonl)；私有动作源 private/pilots/doubao-T01-desktop-r1/actions.jsonl L1,2,3（安全投影见JSON）；[visible-events.jsonl L4 ui-6，AX源行589](../public/pilots/doubao-T01-desktop-r1/visible-events.jsonl#L4)；[visible-events.jsonl L4 ui-6，AX源行594](../public/pilots/doubao-T01-desktop-r1/visible-events.jsonl#L4)。归因：`unresolved`。
 
+### 豆包云电脑入口 T01：doubao-T01-desktop-r2
+
+产物60/60，8/8项通过。[封存检查](../public/pilots/doubao-T01-desktop-r2/verification.json)已独立重跑一致。已证项合计87.5，未知10，纯算术范围87.5–97.5。云电脑r2与本地r1额外失败分开；首次完成观察1540.504秒且采集停机，全部原件在预算后取回，不证明截止时完成。
+
+- **文件交付：4（15分）；置信高。** 三份约定文件由原生文件卡和下载实际取得，以原名称及可解析CSV/JSON落地；原件与outputs逐字节对应，无需评测员抄录、转换、重组或修复。完成观察和三次取回均晚于1200秒，本项只评价最终取回，不证明预算内交付。
+  置信依据：三份实际CSV/JSON可解析，manifest、逐文件原件哈希、文件卡/预览及下载收据交叉支持最终交付；置信不扩展到截止时刻。
+  替代解释：文件生成可能由模型、内置Skill或其它内部模块完成；原件可取得不能识别独立Harness贡献。
+  证据：[visible-events.jsonl L4 ui-9, AX 296](../public/pilots/doubao-T01-desktop-r2/visible-events.jsonl#L4)；[visible-events.jsonl L4 ui-9, AX 302](../public/pilots/doubao-T01-desktop-r2/visible-events.jsonl#L4)；[visible-events.jsonl L4 ui-9, AX 308](../public/pilots/doubao-T01-desktop-r2/visible-events.jsonl#L4)；[visible-events.jsonl L5 ui-10, AX 425](../public/pilots/doubao-T01-desktop-r2/visible-events.jsonl#L5)；[visible-events.jsonl L6 ui-12, AX 428](../public/pilots/doubao-T01-desktop-r2/visible-events.jsonl#L6)；[visible-events.jsonl L7 ui-13, AX 432](../public/pilots/doubao-T01-desktop-r2/visible-events.jsonl#L7)；[download-receipts.json artifacts](../public/pilots/doubao-T01-desktop-r2/download-receipts.json)；[metadata.json native_originals、product_deliverables、output_repairs_by_evaluator、retrieval_limitations](../public/pilots/doubao-T01-desktop-r2/metadata.json)。归因：`unresolved`。
+- **执行反馈：未知；置信低。** 恢复后普通回复宣称T01已完成，三文件卡可见；保留现场没有可复核的读写命令、请求/返回、产品自身校验或错误发现与恢复链。采集器停机及客户端重开不当作产品自动恢复，外部8/8检查不补齐执行反馈，保留null。
+  置信依据：只有普通终态、文件卡和最终字节可复核，缺读写及核验的实际执行/反馈记录；因此证据不足以选择过程等级。
+  替代解释：产品可能在不可见阶段成功校验，也可能仅生成正确文件；现有终态不能区分，缺日志不等于过程失败。
+  证据：[visible-events.jsonl L4 ui-9, AX 643](../public/pilots/doubao-T01-desktop-r2/visible-events.jsonl#L4)；[visible-events.jsonl L4 ui-9, AX 656](../public/pilots/doubao-T01-desktop-r2/visible-events.jsonl#L4)；[metadata.json actual_tool_calls、completion_basis、collector_outage、budget_observation_valid、collector_issues](../public/pilots/doubao-T01-desktop-r2/metadata.json)；[verification.json checks、objective_score](../public/pilots/doubao-T01-desktop-r2/verification.json)。归因：`unresolved`。
+- **约束边界：3（7.5分）；置信中。** 最终六行台账保留订单范围、入选/排除状态及约定净额，汇总、分组与异常集合符合任务规则；本地输入源初末快照一致，只支持这些可见业务约束落实。远端输入、OS权限、网络访问和执行中临时修改均未独立验证，给局部可见范围3。
+  置信依据：具体业务字段可由原件和确定性检查复核，本地初末快照支持保留的输入源一致；没有完整远端OS/网络访问记录，3级仅针对本次局部可见约束。
+  替代解释：不可见网络调用、外部文件访问或临时改写可能未被记录；正确内容也可能来自模型/Skill遵循任务，而非Harness权限强制。
+  证据：[order_ledger.csv O101、O102、O103、O104、O105、O106](../public/pilots/doubao-T01-desktop-r2/outputs/order_ledger.csv)；[verification.json checks[id=T01-C01]、checks[id=T01-C02]、checks[id=T01-C03]、checks[id=T01-C07]](../public/pilots/doubao-T01-desktop-r2/verification.json)；[visible-events.jsonl L4 ui-9, AX 654](../public/pilots/doubao-T01-desktop-r2/visible-events.jsonl#L4)；[metadata.json initial_inventory、final_local_inventory、original_inputs_and_prompt_unchanged、remote_filesystem_visibility、os_sandbox_verified、network_absence_independently_verified](../public/pilots/doubao-T01-desktop-r2/metadata.json)。归因：`unresolved`。
+- **用户操作负担：4（5分）；置信中。** 对应公开动作源共13条，只有一次初始任务粘贴和发送；恢复已提交任务、滚动查看、文件预览和下载属于采集动作，未记录追加解题提示、代算或产物修复。停机重开和晚取回的摩擦单列，不据此冒称预算内完成。
+  置信依据：公开operator-actions逐条保留时间、方法、通用标签及源行，13条与对应原始动作的这些字段一致；一次任务粘贴/发送之后只有恢复、观察和下载，证据强于静态空干预字段。
+  替代解释：动作投影不是连续录像或完整工具流，采集外输入通道仍无法排除；4级只指未记录非预定解题干预，不表示操作成本为零或任务及时完成。
+  证据：[operator-actions.jsonl L1–L13（采集动作投影）](../public/pilots/doubao-T01-desktop-r2/operator-actions.jsonl#L1)；[metadata.json unscheduled_prompts、output_repairs_by_evaluator、collector_issues、retrieval_limitations](../public/pilots/doubao-T01-desktop-r2/metadata.json)。归因：`unresolved`。
+
 ## 复核与公开范围
+
+本次修订为revision 3，追加云电脑r2；旧17次的等级、理由和引用原样保留。上一JSON SHA-256为`17ef8ada381809fbb11009fb848347c791aa8f6881d9cc12a83b80ef4390e7f8`，上一Markdown SHA-256为`375a41b6ea2fae7b31f113647c1ad470437f8d8e29a4583ae8ff400469926972`。分析口径文档现含18次现场的后验进度修订；原17版登记见提交[`2a2782535d3e`](https://github.com/llongwang751-arch/tx-harness/blob/2a2782535d3e1a91a3def2007d4e562e10a5f651/docs/exploratory-analysis-plan.md)，历史文档SHA-256为`6edc0f4f77ee082f04420f321674907d1fa7c92cbdd7a30e3a6883fc46b5f525`。上一审阅记录的文档哈希`7c89ba71b4c543f06fe849ad17fb72a815182d2c71142d5ac31b202ae702b4c4`与该历史提交的实际字节不符，本版据文件字节更正来源定位；旧评分和证据不变。当前与历史文档哈希分别记录，不声称预注册。
 
 先核对原包manifest及JSON中的source_sha256，再按locator查看执行事件或文件卡片，重新按原rubric选择等级。产物复核可运行仓库的 `python -B -X utf8 scripts/verify_public_pilots.py`；外部checker通过不能补作产品自行核验。本文仅增加评分说明，不改变任何封存包、检查答案、权重或原始总分。
 
 部分交互判断使用已审阅的private采集事件或操作日志。JSON只公开时间、通用动作标签、方法和控制事件投影，删除参数、账号、隐藏推理和Skill正文。源哈希用于标识版本，不证明记录真实、完整或无外部帮助；公开复核者能按投影复评分，但不能独立验证未公开原日志。界面标签不升级为真实工具调用，审计JSON中的external_actions=[]不升级为无联网的证明。
 
-若需要收窄分数范围，可优先补WorkBuddy T01的完整操作链及T05的真实读写/反馈过程，并对关键结论做条件匹配对照。既有SDK与桌面产品不能视为相同模型对照；有无网络访问、是否临时改写输入、谁阻止了注入，需要系统访问记录或可控消融。元宝专家模式和选定豆包云电脑入口各五题实际覆盖与人工审阅完成前，当前17次审阅只说明五产品都已有T01实际现场，仍为partial，不称完整五题比较。豆包本地额外失败现场不因未来云电脑成绩而删除。
+若需要收窄分数范围，可优先补WorkBuddy T01的完整操作链及T05的真实读写/反馈过程，并对关键结论做条件匹配对照。既有SDK与桌面产品不能视为相同模型对照；有无网络访问、是否临时改写输入、谁阻止了注入，需要系统访问记录或可控消融。元宝专家模式和选定豆包云电脑入口各五题实际覆盖与人工审阅完成前，当前18次审阅对应17个产品×任务组合，只说明五产品都已有T01实际现场，仍为partial，不称完整五题比较。豆包本地额外失败现场不因未来云电脑成绩而删除。

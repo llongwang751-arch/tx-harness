@@ -1,0 +1,22 @@
+{
+  "case-prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42",
+  "download-receipts.json": "dd8f401522c03b4de118dc22c1a6131ea0ca654313b7238f307623e9d53c30b7",
+  "export-source/run_native_office_pilot.py": "3bfc87758ff85486a1f0f108c4e6a54965b44550d9876f0b8c95e85e0d4b2d70",
+  "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+  "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+  "metadata.json": "4c0e9a9a6de41ce376ce5f43b1a8f456a702bc5920c12b4aebde6866c296570a",
+  "native-binary-version.json": "f5a3235f2c35d2f33f4b4cda92ed7ae8a20f425c3d45fec3b5640641b6e0128a",
+  "native-downloads/aggregate.json": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+  "native-downloads/exceptions.json": "2f3ab5605a3659c0301165c344b32ec3077e7237be4d25dcce59d4e0a8f7e11e",
+  "native-downloads/order_ledger.csv": "6f20db60d1842ef55304635f3fbb59d631572d97debe68783cadb98ec50cfa22",
+  "operator-actions.jsonl": "ddc7db29285e743388ae0d9f633c71c63096f7990776e2bbc3746e3040af8298",
+  "outputs/aggregate.json": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+  "outputs/exceptions.json": "2f3ab5605a3659c0301165c344b32ec3077e7237be4d25dcce59d4e0a8f7e11e",
+  "outputs/order_ledger.csv": "6f20db60d1842ef55304635f3fbb59d631572d97debe68783cadb98ec50cfa22",
+  "prepare-source/run_native_office_pilot.py": "6c956869ebd8e5996d604fa1ecbd976b838246c62280975b52cd834a315247d5",
+  "README.md": "7db5a3d788dc6167573593e8d579c38c920a2a9c23e6451ccae2e756c63a3de7",
+  "record-adaptation.json": "dd01f9f828d844679e8dd9977b3e86357ba3e05c05c4c2fc6070bf07b2b50bb8",
+  "submitted-prompt.txt": "db79b575610eeed34a719cf29e663077b0ec261d858c5b0b4afd7d9299d85e3f",
+  "verification.json": "d36c089fcd405555268fcc722204492414a67dd7fcacea33d535222d8d9a8521",
+  "visible-events.jsonl": "8bfff6b85e1944ece17bb5abc0936bccf0ef113daae213063e566229ef8a0fff"
+}

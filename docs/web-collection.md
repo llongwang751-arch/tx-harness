@@ -103,10 +103,12 @@ T04 workspace 初始仍只有 prompt 与 trades；rates 保存在该题 `private
 - 实际 GUI collector 若留在 `private/collector-source/`，须另填 `collector_sources_privacy_reviewed=true` 才公开；源码快照不等于完整模型或工具执行日志。
 - `download-receipts.json`：顶层 `artifacts` 列出**全部**原生取得的文件，含失败与额外文件。每项提供 `receipt_id,native_file,original_filename,origin,sha256,evidence_capture,evidence_line_ranges,outputs`。`native_file` 指向 `native-downloads/` 中留存的原件，目录名只是存储名称，不定义取得方式。
 
-origin 为 `native_download` / `native_export` 时填真实 `downloaded_at`，以原生文件卡与实际下载/导出行动支持。origin 为 **`native_local_file`** 时填真实 `first_existence_observed_at` 和 `native_workspace_relpath="outputs/原名"`，保留文件卡/路径现场；将真实本地文件逐字节复制到 `native-downloads/` 仅是证据存储，公开 `downloaded_at=null`、source_projection 明示未发生下载。不能人工编写输出代替原件。
+采集中断后才首次观察到完成、且观察区间超过1200秒时，须保留真实时刻，并明确`collector_outage=true`、`budget_observation_valid=false`。导出器仅在这两项明确记录或真实超时声明下接受预算后的观察；产物分只描述事后原件，不证明严格预算内完成。未知`timed_out`保持null，不把采集缺口伪造成产品超时或准时完成。
+
+origin 为 `native_download` / `native_export` 时登记实际下载/导出行动与原生文件卡；精确完成时刻可证时填 `downloaded_at`，否则保持 null 并另记首次本地存在观察上界，不能用文件修改时间补成下载完成时刻。origin 为 **`native_local_file`** 时填真实 `first_existence_observed_at` 和 `native_workspace_relpath="outputs/原名"`，保留文件卡/路径现场；将真实本地文件逐字节复制到 `native-downloads/` 仅是证据存储，公开 `downloaded_at=null`、source_projection 明示未发生下载。不能人工编写输出代替原件。
 
 `outputs` 每项为 `logical_path`，普通文件必须与其原件逐字节相同；ZIP 另填原 `zip_member`，归档原件仍完整保留。所有工作区 outputs 都必须有原件来源映射；所有 native-downloads 文件都必须有 receipt，不能挑选正确文件而漏掉失败/额外文件。原路径与实际下载名差异透明记录，不能用逻辑映射悄悄修复产品错名或错目录。
 
 T04 的 `release.json` 填 `mode`、`semantics_reviewed=true`、`same_visible_task=true`、`upload_available_observed_at`、`supplement_sent_observed_at`，分别引用 `upload_capture/upload_line_ranges`、`supplement_capture/supplement_line_ranges`；active 另填 `request_observed_at/request_capture/request_line_ranges`。请求观察时间须对应真实 capture，且在 120 秒内；passive 的远端可用观察不能早于 120 秒。附加记录实际上传开始、排队、接收、消息提交行动与恢复时间，不把可用观察或本地复制伪装成精确服务器时刻。导出保留源 rates/固定文句 SHA、实际远端字节 hash=null、native session ID=null；incident 不能替代这些引用。
 
-导出器只接受审阅的精确 AX 原文，稳定按时间排序，保留每项源 SHA 与原行号；秘密/个人路径/隐藏思考关键字防护只是额外检查，仍须语义审阅。下载签名链接、账户与其他历史、思考/系统/Skill 正文和原始全屏图继续私有。导出同时保存准备时历史 `prepare-source` 和当次 `export-source`；T01 在导出器完成前已准备，快照可能不同，历史字节不追写。独立 checker 只检查原字节 outputs，metadata 分清 E2 可见事实与动态模型/内置 Skill/远端权限未知，正式 eligibility=false，人工分/总分/纯 Harness 分 null。
+导出器只接受审阅的精确 AX 原文，稳定按时间排序，保留每项源 SHA 与原行号；当前版本的公开源hash仅列实际选中的审阅片段，未选或无关会话留私有。秘密/个人路径/隐藏思考关键字防护只是额外检查，仍须语义审阅。下载签名链接、账户与其他历史、思考/系统/Skill 正文和原始全屏图继续私有。导出同时保存准备时历史 `prepare-source` 和当次 `export-source`；T01 在导出器完成前已准备，快照可能不同，历史字节不追写。独立 checker 只检查原字节 outputs，metadata 分清 E2 可见事实与动态模型/内置 Skill/远端权限未知，正式 eligibility=false，人工分/总分/纯 Harness 分 null。

@@ -1,0 +1,39 @@
+{
+  "schema": "native-office-record-adaptation-v1",
+  "adapted_at": "2026-10-13T16:22:08.999201+00:00",
+  "original_records_sha256": {
+    "capture-log.jsonl": "e21f337ea57164ebada8e70f37ed0f22661dae759f91b2bd3dcff7e9b8b66ce8",
+    "execution-end.json": "17f7f9b46f55b3b8b1258cf93885f81714ed0f9deec115f0a5e7df0aa317b92c",
+    "execution-start.json": "0519d4492f380ebd0b78e109256cf1142901cd689a86668de053c5c3bf63ef9f",
+    "native-artifact-receipts.json": "09b461b9cf4b78cde2e96011a8d8da5db1ae56e4188844e3bdeb7eb907bdf119"
+  },
+  "actual_record_times_changed": false,
+  "start_end_and_capture_log_unchanged": true,
+  "record_conversion": "Actual native-artifact-receipts list mapped to generic download-receipts fields; original per-file presence observations retained, exact downloaded_at unknown",
+  "budget_observation_valid": false,
+  "collector_outage": true,
+  "unrelated_restoration_observation_excluded": true,
+  "private_task_identifiers_withheld": true,
+  "registered_version_receipt_storage_copy": {
+    "source_sha256": "f5a3235f2c35d2f33f4b4cda92ed7ae8a20f425c3d45fec3b5640641b6e0128a",
+    "observation_time_retained": true
+  },
+  "source_registered_download_byte_verification": [
+    {
+      "name": "order_ledger.csv",
+      "registered_download_folder_original_present_and_hash_equal": true,
+      "observed_at": "2026-10-13T16:22:55.858410+00:00"
+    },
+    {
+      "name": "aggregate.json",
+      "registered_download_folder_original_present_and_hash_equal": true,
+      "observed_at": "2026-10-13T16:22:55.858761+00:00"
+    },
+    {
+      "name": "exceptions.json",
+      "registered_download_folder_original_present_and_hash_equal": true,
+      "observed_at": "2026-10-13T16:22:55.859003+00:00"
+    }
+  ],
+  "source_download_path_visibility": "Actual Windows registered Downloads folder; private/personal path withheld"
+}

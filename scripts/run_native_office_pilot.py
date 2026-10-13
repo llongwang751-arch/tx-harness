@@ -144,7 +144,11 @@ def export(product, case, attempt=1):
     started = timestamp(start["started_at"])
     completed = timestamp(finish["completion_observed_at"])
     elapsed = (completed - started).total_seconds()
-    if elapsed < 0 or (elapsed > 1200 and not finish.get("timed_out")):
+    late_collector_observation = (elapsed > 1200 and
+                                  finish.get("budget_observation_valid") is False and
+                                  finish.get("collector_outage") is True)
+    if elapsed < 0 or (elapsed > 1200 and not finish.get("timed_out") and
+                       not late_collector_observation):
         raise ValueError("Invalid pilot observation interval or missing timeout declaration")
     captures = [json.loads(line) for line in (private / "capture-log.jsonl").read_text(encoding="utf-8").splitlines() if line]
     by_label = {row["label"]: row for row in captures}
@@ -355,7 +359,9 @@ def export(product, case, attempt=1):
         "attachment_mapping": upload_mapping, "attachment_mapping_complete": {row['logical_path'] for row in upload_mapping} == expected_inputs,
         "started_at": start["started_at"], "start_basis": start.get("start_basis", "Operator timestamp around native submit; precise service receipt unknown"),
         "completion_observed_at": finish["completion_observed_at"], "completion_basis": finish["completion_basis"],
-        "elapsed_to_completion_observation_seconds": elapsed, "timed_out": finish.get("timed_out", False),
+        "elapsed_to_completion_observation_seconds": elapsed, "timed_out": finish.get("timed_out"),
+        "budget_observation_valid": finish.get("budget_observation_valid"),
+        "collector_outage": finish.get("collector_outage"),
         "timeout_seconds": 1200, "timing_basis": "Submit-action/observation to observed completion; service timing unknown; download times reported separately",
         "initial_inventory": initial, "original_inputs_and_prompt_unchanged": True,
         "final_local_inventory": current, "case_prompt_sha256": sha(destination / "case-prompt.md"),
@@ -367,7 +373,9 @@ def export(product, case, attempt=1):
         "prepare_source_sha256": inventory(destination / "prepare-source"), "export_source_sha256": inventory(export_source),
         "collector_source_sha256": inventory(destination / "collector-source") if collector_source.exists() else None,
         "checker_snapshot": {path: sha(ROOT / path) for path in ("harness_eval/core.py", "config/protocol.json", "config/rubric.json", f"cases/{case}/case.json", f"cases/{case}/oracle.json")},
-        "private_capture_sha256": {row["ax"]: sha(safe_path(private, row["ax"])) for row in captures},
+        "private_capture_sha256": {row["ax"]: sha(safe_path(private, row["ax"])) for row in captures
+                                   if row["label"] in selected_lines},
+        "private_capture_hash_scope": "Reviewed selected AX sources only; unrelated/unselected observations remain private",
         "product_deliverables": inventory(destination / "outputs"), "native_originals": inventory(destination / "native-downloads"),
         "native_original_storage_directory": "native-downloads is a storage directory name; actual download/export/local-file origin is recorded per receipt",
         "download_receipts_sha256": sha(destination / "download-receipts.json"), "release": released,
@@ -399,6 +407,8 @@ def export(product, case, attempt=1):
         readme += "\nT04 的 inputs/rates.json 是补发后的末态原件；初始只有 prompt 与 inputs/trades.csv。复现须暂扣 rates，再按 release 的请求/附件可用/消息提交观察时点提供。原可见任务连续不等于已知内部 session ID，incident 自述不替代补发现场。\n"
     if retrieval_limits:
         readme += "\n取得原件的限制：\n\n" + "\n".join("- " + item for item in retrieval_limits) + "\n"
+    if late_collector_observation:
+        readme += "\n完成首次观察发生在1200秒预算之后，记录明确保留 collector_outage=true、budget_observation_valid=false。产物分只描述事后取回的原件，不证明截止时已经完成；没有回填服务时间、倒置观察时刻或把实际完成改成超时。\n"
     (destination / "README.md").write_bytes(readme.encode("utf-8"))
     save(destination / "manifest.json", inventory(destination, exclude=("manifest.json",)))
     print(json.dumps({"exported": name, "attempt": attempt, "execution_status": execution_status,
