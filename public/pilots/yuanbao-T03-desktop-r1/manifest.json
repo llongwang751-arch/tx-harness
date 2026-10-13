@@ -1,0 +1,18 @@
+{
+  "case-prompt.md": "237f743d161bbffe092914ecb6750c6e2e4c9de6c3fad5b3ff39d313aeff42e0",
+  "download-receipts.json": "23d23a55e88beda885069c86b8333ffc813123d1cb3d4d80acdb15baf93d829b",
+  "export-source/run_native_office_pilot.py": "3bfc87758ff85486a1f0f108c4e6a54965b44550d9876f0b8c95e85e0d4b2d70",
+  "inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+  "inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7",
+  "inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+  "inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+  "metadata.json": "82b338191c5f464347d2df0db2eebddefcdf61b1fa89023be0936655d71000f4",
+  "native-binary-version.json": "15c70e1b776e78912d01df3a7b024d1303989603819e44389755d8ebf5461d1a",
+  "operator-actions.jsonl": "873512948d7bb8fb16c33aeb752750973a2bcd6a268d9155ea71d801463ea73c",
+  "prepare-source/run_native_office_pilot.py": "e4e854a211ff10e8bcf951c9ebc7afe9c9b46ad64aae2978db2acf99eb280f73",
+  "README.md": "8972e7583dd614fec344171ba75430045ae3120d7b89cd2620da0a9953fa794e",
+  "record-adaptation.json": "0a332c9c6a1b329a14e08c2bc60fe0104cec3ae1828779d5db666283f8ca9e86",
+  "submitted-prompt.txt": "1bb66d05159e57be72c4b009e19536fb871adb01f656e4ec4f537723a7187a85",
+  "verification.json": "2b37fd9575a1e1685df874fe32a1c820524dc3c8f5128e95726348741b89c2dc",
+  "visible-events.jsonl": "8511ed7ad20c61b9d7170601ea341b3ff4e1c839e35752e8abe46fa7d2b73563"
+}

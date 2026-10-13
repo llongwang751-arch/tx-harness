@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-13T15:32:57.8913274Z",
+  "process_name": "yuanbao.exe",
+  "file_version": "2.84.1.621",
+  "product_version": "2.84.1.621",
+  "signature_status": "Valid",
+  "signer_company": "Tencent Technology (Shenzhen) Company Limited",
+  "binary_sha256": "c02714acd197e6c7926a11f22c2d36ef76c84c12d1ac5c24b898d3f86102796d",
+  "scope": "Installed signed executable metadata read independently; not native About page, not server/backend model version",
+  "personal_binary_path_published": false
+}

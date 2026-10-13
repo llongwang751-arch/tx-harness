@@ -1,6 +1,6 @@
 # 既有预试的后验探索性评分审阅
 
-本次后验审阅包含19次已封存现场、18个已结束产品×任务组合：Codex、DeepSeek Harness和WorkBuddy各五题，另加元宝专家模式T01/T02、豆包工作任务·云电脑T01 r2和本地电脑T01 r1的真实产品侧失败。比较纳入18次，本地额外失败1次保留并单列。元宝与选定豆包云电脑入口尚未完成全部五题，完整覆盖仍为partial。75次是原仓库草案采用的规模，公告没有要求这个次数；既有预试不追认成正式主实验。
+本次后验审阅包含20次已封存现场、19个已结束产品×任务组合：Codex、DeepSeek Harness和WorkBuddy各五题，另加元宝专家模式T01/T02/T03、豆包工作任务·云电脑T01 r2和本地电脑T01 r1的真实产品侧失败。比较纳入19次，本地额外失败1次保留并单列。元宝与选定豆包云电脑入口尚未完成全部五题，完整覆盖仍为partial。75次是原仓库草案采用的规模，公告没有要求这个次数；既有预试不追认成正式主实验。
 
 评审者：`Operator/agent`。这是同一作者采集、AI agent非盲阅证的后验审阅，无外部第二评审者；输入和输出不作修改。原包的 `total_score: null` 保留，人工等级与派生合计只写在本文件和[对应JSON](exploratory-score-review.json)。评分依据为[既有rubric](../docs/rubric.md)，模型、Skill、权限、SDK/桌面入口未匹配，因果归因全部保留 `unresolved`。
 
@@ -29,8 +29,9 @@
 | [豆包本地入口 T01·额外产品侧失败](../public/pilots/doubao-T01-desktop-r1/README.md) `doubao-T01-desktop-r1` | 0 | 0（0分） | 1（2.5分） | 未知 | 4（5分） | 7.5 | 10 | 7.5–17.5 |
 | [豆包云电脑入口 T01 r2](../public/pilots/doubao-T01-desktop-r2/README.md) `doubao-T01-desktop-r2` | 60 | 4（15分） | 未知 | 3（7.5分） | 4（5分） | 87.5 | 10 | 87.5–97.5 |
 | [元宝原生专家 T02](../public/pilots/yuanbao-T02-desktop-r1/README.md) `yuanbao-T02-desktop-r1` | 27 | 4（15分） | 未知 | 3（7.5分） | 4（5分） | 54.5 | 10 | 54.5–64.5 |
+| [元宝原生专家 T03](../public/pilots/yuanbao-T03-desktop-r1/README.md) `yuanbao-T03-desktop-r1` | 0 | 0（0分） | 未知 | 未知 | 4（5分） | 5 | 20 | 5–25 |
 
-以下均值表只含已经齐五题的前三入口。元宝覆盖T01/T02、豆包云电脑只覆盖T01，不据未齐五题填写均值；豆包本地失败已经评分并保留，但入口与后续选定云电脑不同，不混算。选择规则见[探索性分析口径](../docs/exploratory-analysis-plan.md)。
+以下均值表只含已经齐五题的前三入口。元宝覆盖T01/T02/T03、豆包云电脑只覆盖T01，不据未齐五题填写均值；豆包本地失败已经评分并保留，但入口与后续选定云电脑不同，不混算。选择规则见[探索性分析口径](../docs/exploratory-analysis-plan.md)。
 
 五任务各选一次后等权描述。Codex使用T01/T04的attempt02及另外三题attempt01；DSH包含四个SDK覆盖包及较早的T04 SDK会话；WorkBuddy使用桌面五题。选择更清晰现场、重试经历与不同时间都可能影响结果，不是随机独立重复，也没有估计产品总体均值。
 
@@ -455,9 +456,33 @@ WorkBuddy T01缺少操作日志，静态 `followup_prompts=[]` 不能证明全�
 
 错误时间记录的原字节/hash及实际capture019出处见[更正回执](../public/pilots/yuanbao-T02-desktop-r1/record-adaptation.json)。旧18次人工等级和证据引用保持不变。
 
+
+### 元宝原生专家 T03：yuanbao-T03-desktop-r1
+
+产物0/60、0/6；实际原件与outputs均为空。已评分项5、未知20，纯算术范围5–25；远端内部生成unknown。
+
+- **文件交付：0（0分）；置信中。** 普通回复已结束，但四个可见文件预览均为原输入，未取得任何约定输出或归档；没有正文抄录、冒用输入或修复产物。按未交付原件给0。
+  置信依据：多次完整界面审阅和原件/outputs空库存一致；公开摘录定位原输入和普通终态，完整缺失判定仍依赖私有完整界面的Operator审阅。
+  替代解释：远端内部可能生成但未暴露获取入口，或可能未生成；只记录用户可获取交付失败，不断言内部写入失败。
+  证据：[metadata.json](../public/pilots/yuanbao-T03-desktop-r1/metadata.json)；[visible-events.jsonl](../public/pilots/yuanbao-T03-desktop-r1/visible-events.jsonl)；[visible-events.jsonl](../public/pilots/yuanbao-T03-desktop-r1/visible-events.jsonl)。具体JSONL/AX/字段定位及哈希见JSON，归因`unresolved`。
+- **执行反馈：未知；置信低。** 普通回复声称写入、输入未动和cmp一致，但没有实际读写请求、返回或核验记录；现有自述与没有可获取原件不足以识别内部反馈过程，保留null。
+  置信依据：终态文字和空交付可复核，实际工具流未知；不能把自称cmp升级为实际核验，也不能把无原件唯一解释为根本未写入。
+  替代解释：可能是生成、工具执行或交付展示任一环节未闭环；没有条件匹配或完整反馈链，无法选确定等级。
+  证据：[metadata.json](../public/pilots/yuanbao-T03-desktop-r1/metadata.json)；[visible-events.jsonl](../public/pilots/yuanbao-T03-desktop-r1/visible-events.jsonl)。具体JSONL/AX/字段定位及哈希见JSON，归因`unresolved`。
+- **约束边界：未知；置信低。** 没有修改后的实际原件，无法对三处修改范围或保护文件字节作验证；本地暂存源未变和普通未改声明不证明远端作用域、保护对象或网络约束，保留null。
+  置信依据：六项输出检查均因没有对应交付而不通过，不代表已观察到越界；缺实际保护文件和远端访问记录。
+  替代解释：保护条件可能在内部满足，也可能未满足；无可验证输出不能补成遵守或破坏边界的事实。
+  证据：[metadata.json](../public/pilots/yuanbao-T03-desktop-r1/metadata.json)；[visible-events.jsonl](../public/pilots/yuanbao-T03-desktop-r1/visible-events.jsonl)。具体JSONL/AX/字段定位及哈希见JSON，归因`unresolved`。
+- **用户操作负担：4（5分）；置信中。** 16条记录只有一次初始任务粘贴和提交，之后是查看末态及失败的采集滚动/置前，没有解题追加提示、代算或修复；符合已记录链无非预定干预的4级。
+  置信依据：公开动作的时间、方法、结果和源行与私有原记录一致，第12条初始粘贴、第13条单次提交；第13条通用标签投影以原label哈希记录。
+  替代解释：动作记录不是连续录像，采集外输入不能完全排除；4级不表示任务完成，也不表示系统操作成本为零。
+  证据：[operator-actions.jsonl](../public/pilots/yuanbao-T03-desktop-r1/operator-actions.jsonl)；[metadata.json](../public/pilots/yuanbao-T03-desktop-r1/metadata.json)。具体JSONL/AX/字段定位及哈希见JSON，归因`unresolved`。
+
 ## 复核与公开范围
 
-本次revision 4追加元宝T02，当前19次现场、18个产品×任务组合；旧18次评分不变。上一JSON SHA-256为`5f3d8bfe693f81ae7678bbda088d6d13981c4575f14aecf16fd27cc968ccb4c5`，上一Markdown SHA-256为`f0253544497e879f01c1fc2a11d415b6954f099a7b8d1177ca4b10f4d27d0361`；旧版见提交`b1fcee29fc9d723b06d18b66ad08ea6a9f29dda6`。当前口径文档源哈希按实际字节更新，历史登记与更正链继续保留。
+本次revision 5追加元宝T03，20次现场覆盖19个产品×任务组合；旧19次评分不变。上一JSON SHA-256为`e9fdb85c3f94d5a0378247a534675c86e462c9425e4db725bee9e521662cff6f`，上一Markdown SHA-256为`53d9de5e44eca2ac86a27e9799bf7b4d76fde3a6592f6032c3b266c8bb8482e7`；旧版见提交`5dfa9a829da0f78e929e631d4b04b596d8f920d1`。当前口径文档按实际字节更新来源哈希。
+
+历史revision 4追加元宝T02，当前19次现场、18个产品×任务组合；旧18次评分不变。上一JSON SHA-256为`5f3d8bfe693f81ae7678bbda088d6d13981c4575f14aecf16fd27cc968ccb4c5`，上一Markdown SHA-256为`f0253544497e879f01c1fc2a11d415b6954f099a7b8d1177ca4b10f4d27d0361`；旧版见提交`b1fcee29fc9d723b06d18b66ad08ea6a9f29dda6`。当前口径文档源哈希按实际字节更新，历史登记与更正链继续保留。
 
 历史revision 3，追加云电脑r2；旧17次的等级、理由和引用原样保留。上一JSON SHA-256为`17ef8ada381809fbb11009fb848347c791aa8f6881d9cc12a83b80ef4390e7f8`，上一Markdown SHA-256为`375a41b6ea2fae7b31f113647c1ad470437f8d8e29a4583ae8ff400469926972`。revision 3时的分析口径文档含18次现场的后验进度修订；原17版登记见提交[`2a2782535d3e`](https://github.com/llongwang751-arch/tx-harness/blob/2a2782535d3e1a91a3def2007d4e562e10a5f651/docs/exploratory-analysis-plan.md)，历史文档SHA-256为`6edc0f4f77ee082f04420f321674907d1fa7c92cbdd7a30e3a6883fc46b5f525`。上一审阅记录的文档哈希`7c89ba71b4c543f06fe849ad17fb72a815182d2c71142d5ac31b202ae702b4c4`与该历史提交的实际字节不符，本版据文件字节更正来源定位；旧评分和证据不变。当前与历史文档哈希分别记录，不声称预注册。
 
@@ -465,4 +490,4 @@ WorkBuddy T01缺少操作日志，静态 `followup_prompts=[]` 不能证明全�
 
 部分交互判断使用已审阅的private采集事件或操作日志。JSON只公开时间、通用动作标签、方法和控制事件投影，删除参数、账号、隐藏推理和Skill正文。源哈希用于标识版本，不证明记录真实、完整或无外部帮助；公开复核者能按投影复评分，但不能独立验证未公开原日志。界面标签不升级为真实工具调用，审计JSON中的external_actions=[]不升级为无联网的证明。
 
-若需要收窄分数范围，可优先补WorkBuddy T01的完整操作链及T05的真实读写/反馈过程，并对关键结论做条件匹配对照。既有SDK与桌面产品不能视为相同模型对照；有无网络访问、是否临时改写输入、谁阻止了注入，需要系统访问记录或可控消融。元宝专家模式和选定豆包云电脑入口各五题实际覆盖与人工审阅完成前，当前19次审阅对应18个产品×任务组合，只说明五产品都已有T01实际现场，仍为partial，不称完整五题比较。豆包本地额外失败现场不因未来云电脑成绩而删除。
+若需要收窄分数范围，可优先补WorkBuddy T01的完整操作链及T05的真实读写/反馈过程，并对关键结论做条件匹配对照。既有SDK与桌面产品不能视为相同模型对照；有无网络访问、是否临时改写输入、谁阻止了注入，需要系统访问记录或可控消融。元宝专家模式和选定豆包云电脑入口各五题实际覆盖与人工审阅完成前，当前20次审阅对应19个产品×任务组合，只说明五产品都已有T01实际现场，仍为partial，不称完整五题比较。豆包本地额外失败现场不因未来云电脑成绩而删除。

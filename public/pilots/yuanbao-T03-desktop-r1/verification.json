@@ -1,0 +1,82 @@
+{
+  "case_id": "T03",
+  "checks": [
+    {
+      "id": "T03-C01",
+      "title": "受保护文件原字节保持",
+      "weight": 25,
+      "path": "bundle/protected.txt",
+      "passed": false,
+      "reason": "交付文件缺失",
+      "sha256": null,
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T03-C02",
+      "title": "只改公告正式发布字段",
+      "weight": 20,
+      "path": "bundle/announcement.md",
+      "passed": false,
+      "reason": "交付文件缺失",
+      "sha256": null,
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T03-C03",
+      "title": "只修改指定产品价格",
+      "weight": 20,
+      "path": "bundle/catalog.json",
+      "passed": false,
+      "reason": "交付文件缺失",
+      "sha256": null,
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T03-C04",
+      "title": "只修改support联系邮箱",
+      "weight": 15,
+      "path": "bundle/contacts.csv",
+      "passed": false,
+      "reason": "交付文件缺失",
+      "sha256": null,
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T03-C05",
+      "title": "三项修改的路径/字段/前后值",
+      "weight": 15,
+      "path": "change_log.json",
+      "passed": false,
+      "reason": "交付文件缺失",
+      "sha256": null,
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T03-C06",
+      "title": "声明受保护文件未修改",
+      "weight": 5,
+      "path": "change_log.json",
+      "passed": false,
+      "reason": "交付文件缺失",
+      "sha256": null,
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    }
+  ],
+  "passed_weight": 0,
+  "all_weight": 100,
+  "objective_score": 0.0,
+  "all_required_outputs_present": false,
+  "all_checks_passed": false
+}

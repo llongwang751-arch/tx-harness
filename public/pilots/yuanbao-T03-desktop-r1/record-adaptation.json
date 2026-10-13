@@ -1,0 +1,44 @@
+{
+  "schema": "office-pilot-record-adaptation-v1",
+  "review_actor": "Operator/agent",
+  "private_original_records_retained": true,
+  "original_record_hashes": {
+    "execution-start.json": {
+      "sha256": "48afa405b61f2e6c86cf9755fab51a956f8c02d8b39b27fa1c85ddad478c0765",
+      "bytes": 321
+    },
+    "execution-end.json": {
+      "sha256": "dc72deb93a532448a143377b3564e60f836724135f3ea01dc2682f4f6885e1f9",
+      "bytes": 1628
+    },
+    "actions.jsonl": {
+      "sha256": "fe22ede6927fd7a6e8d6e3e7f4d019364e105e3747991e6d07f850c3c03a7eea",
+      "bytes": 4367
+    },
+    "capture-log.jsonl": {
+      "sha256": "dee3c12541f3afd9101fbaa8e3f804391d72ad75b7bee7879da13308b929d89e",
+      "bytes": 4729
+    },
+    "native-artifact-receipts.json": {
+      "sha256": "efe5bc54e140391a4c73e2368e0d40c443db0027cf4e698876a2867bc1732e7b",
+      "bytes": 315
+    }
+  },
+  "field_mappings": {
+    "execution-end.execution_status": "execution-end.status",
+    "execution-end.last_valid_delivery_recheck_at": "execution-end.completion_observed_at",
+    "execution-end.failure_label": "execution-end.product_failure_label"
+  },
+  "semantics": "Original failure status, label and actual observation times are unchanged. The exporter end field represents the final valid delivery review, not successful task completion or exact provider timing.",
+  "ordinary_final_text_first_observed_at": "2026-10-13T17:15:37.911Z",
+  "final_delivery_recheck_at": "2026-10-13T17:17:25.979Z",
+  "provider_completion_time": null,
+  "remote_internal_file_creation": "unknown",
+  "post_recheck_limitation": "A further final-delivery scroll was rejected because user input was detected. Refresh and exposed Raise action then reported the app minimized, so no later valid delivery state is attested.",
+  "operator_label_projection": {
+    "private_source_line": 13,
+    "private_original_label_sha256": "0e09ce4efb281dc2478101e83dd6ebf818049928453dec385597da295f88c69d",
+    "public_label": "submit-third-case-single-native-send",
+    "reason": "Generic operator label projected for publication. Original label is retained in the private source; action time, method and result unchanged."
+  }
+}

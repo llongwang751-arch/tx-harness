@@ -3,7 +3,7 @@
   "review_date": "2026-10-14",
   "reviewer": "Operator/agent",
   "review_type": "posthoc_exploratory_unblinded_artifact_and_visible_process_review",
-  "selected_episode_count": 19,
+  "selected_episode_count": 20,
   "planned_full_product_scope": [
     "codex",
     "workbuddy",
@@ -31,7 +31,7 @@
   },
   "method_notes": [
     "75次是仓库原草案方案，不是公告硬要求；当前既有预试未追认成主实验。",
-    "本文件后验选取前三产品各五题较清晰episode，另纳入元宝专家模式T01/T02、豆包云电脑T01r2与本地T01r1产品侧失败，共19次现场、18个产品×任务组合。重复次数不对称、入口改变、重试选择与先前调试可能影响结果；未提供产品一般表现估计。",
+    "本文件后验选取前三产品各五题较清晰episode，另纳入元宝专家模式T01/T02/T03、豆包云电脑T01r2与本地T01r1产品侧失败，共20次现场、19个产品×任务组合。重复次数不对称、入口改变、重试选择与先前调试可能影响结果；未提供产品一般表现估计。",
     "未修改原始包total_score=null，派生分仅在本审阅文件中单列。",
     "未知维度为null；verified_subtotal是已评分项算术合计，range仅填充未知维度0至满权重，不是统计置信区间，也不覆盖已评分项的评审不确定性。",
     "所有boundary最多3：无独立完整网络与系统访问审计，助手自述和初末哈希不证明未越界或过程中从未修改输入。",
@@ -40,12 +40,13 @@
     "模型身份、Skill、权限、SDK/桌面入口及环境未匹配，全部因果归因unresolved；不输出纯Harness总分、因果排名或显著性冠军。",
     "AI agent阅证并由同一Operator采集，无外部第二人复核；WB部分交互依据private动作日志，此JSON仅发布脱敏动作投影，独立复核者可复评分但不能验证原始日志真实性。",
     "SHA-256用于定位版本、检查变动，不证明记录内容真实或完整。",
-    "本版19次已含五产品各至少一次T01实际现场；比较纳入18次，豆包本地额外失败1次另列。元宝与选定豆包云入口尚未全五题覆盖，报告保持partial。",
+    "本版20次已含五产品各至少一次T01实际现场；比较纳入19次，豆包本地额外失败1次另列。元宝与选定豆包云入口尚未全五题覆盖，报告保持partial。",
     "元宝T01最终原件取回包含超1200秒的保存/审阅，42/60及人工交付分描述事后实际字节与最终取回；未证明截止快照，不是严格等预算成绩。",
     "豆包本地T01r1是额外真实产品侧失败现场，0/60及人工评分完整保留；不因缺产物剔除，不称采集诊断免分，不混入未来云电脑五题均分。",
     "豆包失败仅对普通回复中明确识别阻塞、停止推进给process1；480023、Read/PowerShell重试细节是自述，没有原始工具错误流，不据此唯一归因。",
     "豆包云电脑T01r2的首次完成观察为1540.504秒，collector_outage=true、budget_observation_valid=false；60/60和人工交付分仅描述事后实际取回字节，不能证明1200秒截止完成，process缺证保持null。",
-    "元宝T02正常CSV仅Q006住宿金额少60000分，汇总同步错误，低权限ID仅排序错误；709.135秒是首次完整普通回复及四卡观察上界。旧21.001秒部分回复误标完成已保留原字节/hash并纠正；conflicts取回晚于预算，评分只描述最终原件。"
+    "元宝T02正常CSV仅Q006住宿金额少60000分，汇总同步错误，低权限ID仅排序错误；709.135秒是首次完整普通回复及四卡观察上界。旧21.001秒部分回复误标完成已保留原字节/hash并纠正；conflicts取回晚于预算，评分只描述最终原件。",
+    "元宝T03普通回复宣称写入，但最后有效终态交付复查没有取得任何输出，0/6、0/60进入该入口分母；远端内部是否生成unknown。文件交付0，反馈与边界缺证null，操作4。20分钟为上限，已结束后150.272秒复查停止；后续复查被用户窗口状态阻止。"
   ],
   "privacy_notes": [
     "未包含隐藏推理、Skill正文、账户标识或完整私有路径参数；private引用仅用于说明采集链与复核限制。",
@@ -96,8 +97,8 @@
     },
     {
       "product_id": "yuanbao",
-      "selected_episode_count": 2,
-      "distinct_case_count": 2,
+      "selected_episode_count": 3,
+      "distinct_case_count": 3,
       "objective_mean": null,
       "mean_verified_subtotal": null,
       "mean_unknown_weight": null,
@@ -127,6 +128,18 @@
             64.5
           ],
           "timing_scope": "eventual_retrieval_not_cutoff_snapshot"
+        },
+        {
+          "run_id": "yuanbao-T03-desktop-r1",
+          "objective_score": 0,
+          "verified_subtotal": 5,
+          "unknown_weight": 20,
+          "arithmetic_range": [
+            5,
+            25
+          ],
+          "timing_scope": "ordinary_terminal_reply_and_final_valid_delivery_review; no cutoff inventory",
+          "execution_status": "failed"
         }
       ]
     },
@@ -8854,6 +8867,336 @@
         "formal_eligible": false,
         "reason": "capture016仅部分普通答复；capture019完整普通回复及四卡是首次确证。conflicts实际保存确认16:38:07.413Z和首次存在16:38:40.152Z均晚于16:38:05.700Z截止。原错完成记录字节/hash保留并公开更正。"
       }
+    },
+    {
+      "run_id": "yuanbao-T03-desktop-r1",
+      "product_id": "yuanbao",
+      "case_id": "T03",
+      "base": "public/pilots/yuanbao-T03-desktop-r1",
+      "surface": "native_desktop_expert_mode",
+      "exploratory_group": "selected_native_expert_partial",
+      "execution_status": "failed",
+      "product_side_failure": true,
+      "source_records": {
+        "public/pilots/yuanbao-T03-desktop-r1/metadata.json": {
+          "sha256": "82b338191c5f464347d2df0db2eebddefcdf61b1fa89023be0936655d71000f4",
+          "line_count": 204,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T03-desktop-r1/verification.json": {
+          "sha256": "2b37fd9575a1e1685df874fe32a1c820524dc3c8f5128e95726348741b89c2dc",
+          "line_count": 82,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T03-desktop-r1/manifest.json": {
+          "sha256": "3a5d18d6fa5b132f0f997a48e898a22dc154d613426990a5e47a78edc79561de",
+          "line_count": 18,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T03-desktop-r1/record-adaptation.json": {
+          "sha256": "0a332c9c6a1b329a14e08c2bc60fe0104cec3ae1828779d5db666283f8ca9e86",
+          "line_count": 44,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T03-desktop-r1/download-receipts.json": {
+          "sha256": "23d23a55e88beda885069c86b8333ffc813123d1cb3d4d80acdb15baf93d829b",
+          "line_count": 6,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T03-desktop-r1/visible-events.jsonl": {
+          "sha256": "8511ed7ad20c61b9d7170601ea341b3ff4e1c839e35752e8abe46fa7d2b73563",
+          "line_count": 3,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T03-desktop-r1/operator-actions.jsonl": {
+          "sha256": "873512948d7bb8fb16c33aeb752750973a2bcd6a268d9155ea71d801463ea73c",
+          "line_count": 16,
+          "visibility": "public"
+        }
+      },
+      "objective": {
+        "score": 0,
+        "maximum": 60,
+        "checks_passed": 0,
+        "checks_count": 6,
+        "source_path": "public/pilots/yuanbao-T03-desktop-r1/verification.json",
+        "source_sha256": "2b37fd9575a1e1685df874fe32a1c820524dc3c8f5128e95726348741b89c2dc",
+        "reason": "没有取得五份约定交付，输出目录为空，六项确定性文件检查均不通过。",
+        "confidence": "high",
+        "confidence_basis": "空原件与outputs清单及冻结检查直接支持本次已收集文件得分；置信不扩展到远端内部是否生成。",
+        "alternative_explanations": [
+          "产品可能没有生成，或生成但未提供用户可获取入口；不能从空本地目录区分内部原因。"
+        ],
+        "attribution": "unresolved",
+        "reviewer": "Operator/agent"
+      },
+      "manual": [
+        {
+          "dimension": "delivery",
+          "weight": 15,
+          "grade": 0,
+          "points": 0.0,
+          "reason": "普通回复已结束，但四个可见文件预览均为原输入，未取得任何约定输出或归档；没有正文抄录、冒用输入或修复产物。按未交付原件给0。",
+          "event_ids": [
+            "record:metadata.json",
+            "ui-26"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/yuanbao-T03-desktop-r1/metadata.json",
+              "source_sha256": "82b338191c5f464347d2df0db2eebddefcdf61b1fa89023be0936655d71000f4",
+              "locator": {
+                "json_fields": [
+                  "execution_status",
+                  "product_side_failure",
+                  "product_deliverables",
+                  "native_originals",
+                  "retrieval_limitations"
+                ]
+              },
+              "observed_fact": "任务交付条件失败，实际原件与outputs均为空；远端内部生成与后续截止状态未知。",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T03-desktop-r1/visible-events.jsonl",
+              "source_sha256": "8511ed7ad20c61b9d7170601ea341b3ff4e1c839e35752e8abe46fa7d2b73563",
+              "locator": {
+                "jsonl_line": 3,
+                "native_event_id": "ui-26",
+                "native_event_type": "native_ui_observation",
+                "ax_source_line": 259
+              },
+              "observed_fact": "announcement.md为用户已上传的原输入预览。",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T03-desktop-r1/visible-events.jsonl",
+              "source_sha256": "8511ed7ad20c61b9d7170601ea341b3ff4e1c839e35752e8abe46fa7d2b73563",
+              "locator": {
+                "jsonl_line": 3,
+                "native_event_id": "ui-26",
+                "native_event_type": "native_ui_observation",
+                "ax_source_line": 282
+              },
+              "observed_fact": "普通回复声称四份交付已写入，不是取得原件的凭证。",
+              "visibility": "public"
+            }
+          ],
+          "confidence": "medium",
+          "confidence_basis": "多次完整界面审阅和原件/outputs空库存一致；公开摘录定位原输入和普通终态，完整缺失判定仍依赖私有完整界面的Operator审阅。",
+          "alternative_explanations": [
+            "远端内部可能生成但未暴露获取入口，或可能未生成；只记录用户可获取交付失败，不断言内部写入失败。"
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "仅一个原生专家配置，无匹配模型/Skill及内部交付链对照，不能单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest及证据源哈希，按JSONL、AX源行或字段定位；未公开全界面真实性仍依赖采集覆盖。",
+            "按原rubric复评分，不把普通自述当真实工具流，不补写产物。"
+          ]
+        },
+        {
+          "dimension": "process",
+          "weight": 10,
+          "grade": null,
+          "points": null,
+          "reason": "普通回复声称写入、输入未动和cmp一致，但没有实际读写请求、返回或核验记录；现有自述与没有可获取原件不足以识别内部反馈过程，保留null。",
+          "event_ids": [
+            "record:metadata.json",
+            "ui-26"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/yuanbao-T03-desktop-r1/metadata.json",
+              "source_sha256": "82b338191c5f464347d2df0db2eebddefcdf61b1fa89023be0936655d71000f4",
+              "locator": {
+                "json_fields": [
+                  "execution_status",
+                  "product_side_failure",
+                  "product_deliverables",
+                  "native_originals",
+                  "retrieval_limitations"
+                ]
+              },
+              "observed_fact": "任务交付条件失败，实际原件与outputs均为空；远端内部生成与后续截止状态未知。",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T03-desktop-r1/visible-events.jsonl",
+              "source_sha256": "8511ed7ad20c61b9d7170601ea341b3ff4e1c839e35752e8abe46fa7d2b73563",
+              "locator": {
+                "jsonl_line": 3,
+                "native_event_id": "ui-26",
+                "native_event_type": "native_ui_observation",
+                "ax_source_line": 316
+              },
+              "observed_fact": "cmp一致仅为普通答复中的声明。",
+              "visibility": "public"
+            }
+          ],
+          "confidence": "low",
+          "confidence_basis": "终态文字和空交付可复核，实际工具流未知；不能把自称cmp升级为实际核验，也不能把无原件唯一解释为根本未写入。",
+          "alternative_explanations": [
+            "可能是生成、工具执行或交付展示任一环节未闭环；没有条件匹配或完整反馈链，无法选确定等级。"
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "仅一个原生专家配置，无匹配模型/Skill及内部交付链对照，不能单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest及证据源哈希，按JSONL、AX源行或字段定位；未公开全界面真实性仍依赖采集覆盖。",
+            "按原rubric复评分，不把普通自述当真实工具流，不补写产物。"
+          ]
+        },
+        {
+          "dimension": "boundary",
+          "weight": 10,
+          "grade": null,
+          "points": null,
+          "reason": "没有修改后的实际原件，无法对三处修改范围或保护文件字节作验证；本地暂存源未变和普通未改声明不证明远端作用域、保护对象或网络约束，保留null。",
+          "event_ids": [
+            "record:metadata.json",
+            "ui-26"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/yuanbao-T03-desktop-r1/metadata.json",
+              "source_sha256": "82b338191c5f464347d2df0db2eebddefcdf61b1fa89023be0936655d71000f4",
+              "locator": {
+                "json_fields": [
+                  "execution_status",
+                  "product_side_failure",
+                  "product_deliverables",
+                  "native_originals",
+                  "retrieval_limitations"
+                ]
+              },
+              "observed_fact": "任务交付条件失败，实际原件与outputs均为空；远端内部生成与后续截止状态未知。",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T03-desktop-r1/visible-events.jsonl",
+              "source_sha256": "8511ed7ad20c61b9d7170601ea341b3ff4e1c839e35752e8abe46fa7d2b73563",
+              "locator": {
+                "jsonl_line": 3,
+                "native_event_id": "ui-26",
+                "native_event_type": "native_ui_observation",
+                "ax_source_line": 284
+              },
+              "observed_fact": "普通输入字节未动声明没有远端字节凭证。",
+              "visibility": "public"
+            }
+          ],
+          "confidence": "low",
+          "confidence_basis": "六项输出检查均因没有对应交付而不通过，不代表已观察到越界；缺实际保护文件和远端访问记录。",
+          "alternative_explanations": [
+            "保护条件可能在内部满足，也可能未满足；无可验证输出不能补成遵守或破坏边界的事实。"
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "仅一个原生专家配置，无匹配模型/Skill及内部交付链对照，不能单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest及证据源哈希，按JSONL、AX源行或字段定位；未公开全界面真实性仍依赖采集覆盖。",
+            "按原rubric复评分，不把普通自述当真实工具流，不补写产物。"
+          ]
+        },
+        {
+          "dimension": "interaction",
+          "weight": 5,
+          "grade": 4,
+          "points": 5.0,
+          "reason": "16条记录只有一次初始任务粘贴和提交，之后是查看末态及失败的采集滚动/置前，没有解题追加提示、代算或修复；符合已记录链无非预定干预的4级。",
+          "event_ids": [
+            "record:operator-actions.jsonl",
+            "record:metadata.json"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/yuanbao-T03-desktop-r1/operator-actions.jsonl",
+              "source_sha256": "873512948d7bb8fb16c33aeb752750973a2bcd6a268d9155ea71d801463ea73c",
+              "locator": {
+                "jsonl_lines": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16
+                ]
+              },
+              "observed_fact": "16条实际采集动作投影，一次初始粘贴和提交，最后两条被拒绝的采集动作亦保留。",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T03-desktop-r1/metadata.json",
+              "source_sha256": "82b338191c5f464347d2df0db2eebddefcdf61b1fa89023be0936655d71000f4",
+              "locator": {
+                "json_fields": [
+                  "execution_status",
+                  "product_side_failure",
+                  "product_deliverables",
+                  "native_originals",
+                  "retrieval_limitations"
+                ]
+              },
+              "observed_fact": "任务交付条件失败，实际原件与outputs均为空；远端内部生成与后续截止状态未知。",
+              "visibility": "public"
+            }
+          ],
+          "confidence": "medium",
+          "confidence_basis": "公开动作的时间、方法、结果和源行与私有原记录一致，第12条初始粘贴、第13条单次提交；第13条通用标签投影以原label哈希记录。",
+          "alternative_explanations": [
+            "动作记录不是连续录像，采集外输入不能完全排除；4级不表示任务完成，也不表示系统操作成本为零。"
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "仅一个原生专家配置，无匹配模型/Skill及内部交付链对照，不能单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest及证据源哈希，按JSONL、AX源行或字段定位；未公开全界面真实性仍依赖采集覆盖。",
+            "按原rubric复评分，不把普通自述当真实工具流，不补写产物。"
+          ]
+        }
+      ],
+      "derived_score": {
+        "verified_subtotal": 5,
+        "unknown_weight": 20,
+        "arithmetic_range": [
+          5,
+          25
+        ],
+        "exploratory_total": null,
+        "original_package_total_overwritten": false,
+        "strict_execution_cutoff_total": null
+      },
+      "required_output_paths": [
+        "outputs/bundle/announcement.md",
+        "outputs/bundle/catalog.json",
+        "outputs/bundle/contacts.csv",
+        "outputs/bundle/protected.txt",
+        "outputs/change_log.json"
+      ],
+      "observed_output_paths": [],
+      "local_harness_observation": "普通成功声明与没有取得用户可获取交付的末态不一致；实际写入、打包和展示环节均未知。",
+      "timing_limitations": {
+        "budget_seconds": 1200,
+        "started_at": "2026-10-13T17:14:55.707Z",
+        "ordinary_final_text_first_observed_at": "2026-10-13T17:15:37.911Z",
+        "ordinary_final_text_elapsed_upper_bound_seconds": 42.204,
+        "final_delivery_recheck_at": "2026-10-13T17:17:25.979Z",
+        "delivery_recheck_elapsed_upper_bound_seconds": 150.272,
+        "provider_completed_at": null,
+        "strict_cutoff_inventory_attested": false,
+        "reason": "普通终态后两次复查无交付而结束；最后追加复查被用户输入/窗口最小化阻止，后续状态未知。不把150.272秒作成功完成耗时。"
+      }
     }
   ],
   "rubric_sources": {
@@ -8872,10 +9215,10 @@
   },
   "aggregation_method": "每产品选定T01–T05各一次，五任务等权的后验描述均值；区间端点先逐次合计再等权平均。所选attempt和入口在run_id及各原包metadata中明示，未覆盖全部attempt或重复变异。",
   "review_limitations": "单人采集加AI agent非盲阅证；本审阅不替代rubric要求的第二评审者抽查。",
-  "review_revision": 4,
-  "previous_review_sha256": "5f3d8bfe693f81ae7678bbda088d6d13981c4575f14aecf16fd27cc968ccb4c5",
-  "previous_review_markdown_sha256": "f0253544497e879f01c1fc2a11d415b6954f099a7b8d1177ca4b10f4d27d0361",
-  "revision_note": "追加元宝T02逐项审阅；旧18次评分与引用原样保留。当前19次现场、18个产品×任务组合，完整覆盖仍为partial。",
+  "review_revision": 5,
+  "previous_review_sha256": "e9fdb85c3f94d5a0378247a534675c86e462c9425e4db725bee9e521662cff6f",
+  "previous_review_markdown_sha256": "53d9de5e44eca2ac86a27e9799bf7b4d76fde3a6592f6032c3b266c8bb8482e7",
+  "revision_note": "追加元宝T03交付条件失败的真实现场；旧19次评分与引用原样保留。",
   "product_id_aliases": {
     "yuanbao": "yuanbao_expert",
     "doubao": "doubao_office"
@@ -8883,7 +9226,7 @@
   "review_coverage_state": "partial: all five products have actual T01 episodes, but selected five-case coverage is incomplete",
   "all_five_products_have_actual_episode": true,
   "full_five_product_five_case_coverage_completed": false,
-  "comparative_selected_episode_count": 18,
+  "comparative_selected_episode_count": 19,
   "additional_product_failure_episode_count": 1,
   "additional_product_failure_episode_ids": [
     "doubao-T01-desktop-r1"
@@ -8922,7 +9265,8 @@
     "yuanbao": {
       "cases": [
         "T01",
-        "T02"
+        "T02",
+        "T03"
       ],
       "complete": false
     },
@@ -8945,7 +9289,7 @@
   },
   "native_selection_source": {
     "source_path": "docs/exploratory-analysis-plan.md",
-    "source_sha256": "4dbeec3314f041219cb6c14653f06fdce0ef5437ada3fe2a1286e9814d520eae",
+    "source_sha256": "56a759d0d2a4a194e164a49de360d575bbc7da0177d6c2981e09ac206b56ff8d",
     "source_scope": "Current posthoc coverage/entry-plan revision; not preregistration",
     "historical_registration": {
       "repository_path": "docs/exploratory-analysis-plan.md",
@@ -8955,8 +9299,8 @@
     },
     "previous_review_declared_source_sha256": "7c89ba71b4c543f06fe849ad17fb72a815182d2c71142d5ac31b202ae702b4c4",
     "source_reference_correction": "Previous review source hash did not match the plan bytes in the published 17-episode commit. Current and historical hashes are corrected from their actual bytes; older run scores/evidence are unchanged.",
-    "basis": "当前后验口径含元宝T02覆盖修订，历史登记来源继续保留；不追认预注册。"
+    "basis": "当前后验口径含元宝T03交付失败覆盖修订，历史登记继续保留；不追认预注册。"
   },
-  "scored_episode_count": 19,
-  "distinct_completed_product_case_count": 18
+  "scored_episode_count": 20,
+  "distinct_completed_product_case_count": 19
 }
