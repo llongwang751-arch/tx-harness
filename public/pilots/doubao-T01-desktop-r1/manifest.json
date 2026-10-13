@@ -1,0 +1,16 @@
+{
+  "case-prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42",
+  "download-receipts.json": "8a358869f5630b0567125b24a83f4167a207b0cb22b73ca80657ea0db8499828",
+  "export-source/run_native_office_pilot.py": "d85dd9b7ba355a536377401a336771823d661428dcc3473d6d13348340c58989",
+  "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+  "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+  "metadata.json": "17aefed57120c89ee8fe9bd7a3e30268a536b9f50af4bf5ce9aceccac06318b6",
+  "native-binary-version.json": "f5a3235f2c35d2f33f4b4cda92ed7ae8a20f425c3d45fec3b5640641b6e0128a",
+  "operator-actions.jsonl": "741905ecb3e5978a0d6b6e55ec70667a19405cef000069d8d818752c3f9bf9b9",
+  "prepare-source/run_native_office_pilot.py": "f702063f57fad4059584c34e1af60e4009820f7f6eccb38f5cfa850fd8a23ac0",
+  "README.md": "e3c7d435f1a5aecdf76fa7bc00705568f3063741a1b9310111b0efbcb4665c0d",
+  "record-adaptation.json": "557872fdd3688abb5b1b6deed6a7a47beca4b7c314e8b1002c48fd88c5fcd2fc",
+  "submitted-prompt.txt": "db79b575610eeed34a719cf29e663077b0ec261d858c5b0b4afd7d9299d85e3f",
+  "verification.json": "bb8541b54117f5d1a31f18bc750fecba179b8c6a4e4d7a868a87ca3e746e610e",
+  "visible-events.jsonl": "4825d48ae5c7018c2fbcc89e3764b4b8b2d9a0974487238f131b65f6358d6f20"
+}

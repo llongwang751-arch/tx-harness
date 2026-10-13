@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-10-13T15:34:37.924289+00:00",
+  "original_start_sha256": "3f25b6b60b7e7061b78a0f88ef81b425c302fe8f49626dd5205022e1f7141aa9",
+  "original_end_sha256": "7501f4761c36b4dd7eb78106507881ac5a6ca95dac3d493bbd0489cbe4ac7377",
+  "adapted_start_sha256": "12f1013c17786181b89aa5ebff6f75245d232e01f40291843b12e94517f8f1e0",
+  "end_sha256_unchanged": "7501f4761c36b4dd7eb78106507881ac5a6ca95dac3d493bbd0489cbe4ac7377",
+  "basis": "At audit, native records already contained started_at/completion_observed_at. Only start_basis aliases the original timing_basis; original fields and actual times are unchanged. Original private bytes retained.",
+  "started_at_unchanged": "2026-10-13T14:57:51.394Z",
+  "completion_observed_at_unchanged": "2026-10-13T15:06:10.130Z",
+  "initial_capture_log_sha256_before_preflight_copy": "caffcff5ca078ed04365dd0c3256224f77794e90809a7e934903df77cb1f76bc",
+  "preflight_copied_ax_sha256": "1fbab1665607f6b9fd9dc4782587276250e7a7f73cc16097dd4d5975922d653d",
+  "preflight_source_observed_at": "2026-10-13T14:51:42.712Z",
+  "preflight_source_index": 3,
+  "preflight_public_alias_index": 0,
+  "preflight_alias_reason": "Unique event reference for an earlier real preflight capture; source bytes/time/index preserved in receipt"
+}

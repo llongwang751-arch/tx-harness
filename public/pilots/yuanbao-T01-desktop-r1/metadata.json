@@ -1,0 +1,182 @@
+{
+  "schema": "office-harness-pilot-v1",
+  "run_id": "yuanbao-T01-desktop-r1",
+  "product_id": "yuanbao",
+  "case_id": "T01",
+  "track": "pilot",
+  "formal_eligible": false,
+  "formal_sample": false,
+  "surface": "native_desktop_office_task_via_documented_native_CUA",
+  "visible_conditions": {
+    "mode_visible": "专家模式",
+    "mode_observation_scope": "Initial expert selection preflight and submit configuration; later composer label differs with unknown meaning, no routing fallback inferred",
+    "execution_location_visible": "Native desktop client with uploaded attachments; execution/server filesystem unknown",
+    "version_visible": "About page not captured",
+    "installed_binary_version": "2.84.1.621",
+    "version_evidence_scope": "Independently read installed executable FileVersion/ProductVersion and Valid Tencent signature; binary SHA in native-binary-version.json; not About/service/backend version",
+    "model_visible": "unknown",
+    "model_selector_changed": "expert mode selected in preflight; underlying model identity/routing unknown",
+    "account_tier": "unknown",
+    "permission_visible": "Native input attachments accepted; no independently verified server or OS isolation",
+    "memory_condition": "unknown",
+    "skill_condition": "Active built-in Skills unknown; none manually selected in recorded task actions",
+    "network_control_visible": "Task requests no network; actual network actions unknown",
+    "region": "unknown"
+  },
+  "underlying_model_version": null,
+  "model_visibility": "Visible UI label if captured; dynamic/backend routing unknown, not attested",
+  "active_skills": null,
+  "skills_disabled_verified": false,
+  "actual_tool_calls": null,
+  "os_sandbox_verified": false,
+  "network_absence_independently_verified": false,
+  "remote_filesystem_visibility": "unknown; local staging paths do not attest server paths or permissions",
+  "attachment_mapping": [
+    {
+      "logical_path": "inputs/orders.csv",
+      "actual_attachment_name": "orders.csv",
+      "upload_status": "Accepted attachment filename visible in the same task; initial native picker/screenshot recorded privately",
+      "accepted_observed_at": "2026-10-13T15:06:10.130Z",
+      "actual_server_path": null,
+      "evidence": {
+        "event_id": "ui-6",
+        "capture": "foreground-execution-observation",
+        "line_ranges": [
+          [
+            272,
+            272
+          ]
+        ],
+        "private_ax_sha256": "d49cdba42f4fbc78ddc19bd321d161282ef8f21e2635998a8f6c121f452115cd"
+      }
+    },
+    {
+      "logical_path": "inputs/refunds.csv",
+      "actual_attachment_name": "refunds.csv",
+      "upload_status": "Accepted attachment filename visible in the same task; initial native picker/screenshot recorded privately",
+      "accepted_observed_at": "2026-10-13T15:06:10.130Z",
+      "actual_server_path": null,
+      "evidence": {
+        "event_id": "ui-6",
+        "capture": "foreground-execution-observation",
+        "line_ranges": [
+          [
+            276,
+            276
+          ]
+        ],
+        "private_ax_sha256": "d49cdba42f4fbc78ddc19bd321d161282ef8f21e2635998a8f6c121f452115cd"
+      }
+    }
+  ],
+  "attachment_mapping_complete": true,
+  "started_at": "2026-10-13T14:57:51.394Z",
+  "start_basis": "native send-action pre-receipt; server emission not visible",
+  "completion_observed_at": "2026-10-13T15:06:10.130Z",
+  "completion_basis": "First foreground observation of ordinary final reply saying three files generated and idle send control; native cards separately observed afterwards. Provider finish time is unknown.",
+  "elapsed_to_completion_observation_seconds": 498.736,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "timing_basis": "Submit-action/observation to observed completion; service timing unknown; download times reported separately",
+  "initial_inventory": {
+    "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42"
+  },
+  "original_inputs_and_prompt_unchanged": true,
+  "final_local_inventory": {
+    "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "outputs/aggregate.json": "266e3cc80f5afc2fc81971acc485c7b2434d78c0b6ff81b70ef0008835486554",
+    "outputs/exceptions.json": "2d7e7352653351d8968794bd75ee8286d6ef97299dc661edf26240b94aecf63e",
+    "outputs/order_ledger.csv": "a71819f53f3b35444b6986282cfb9d49a853f1e6c8cc947d2b139c0073b50495",
+    "prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42"
+  },
+  "case_prompt_sha256": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42",
+  "recorded_paste_source_sha256": "db79b575610eeed34a719cf29e663077b0ec261d858c5b0b4afd7d9299d85e3f",
+  "actual_paste_source_sha256": "db79b575610eeed34a719cf29e663077b0ec261d858c5b0b4afd7d9299d85e3f",
+  "actual_paste_source_visibility": "Operator/agent-attested source used in native paste",
+  "actual_wire_bytes_sha256": null,
+  "prompt_adapter_appendix": "将交付文件写入 outputs/，不要修改 inputs/。",
+  "prompt_transport": "Recorded UTF-8 paste source; native UI submit observed; outbound/internal model-request bytes unknown",
+  "prepare_source_sha256": {
+    "run_native_office_pilot.py": "f702063f57fad4059584c34e1af60e4009820f7f6eccb38f5cfa850fd8a23ac0"
+  },
+  "export_source_sha256": {
+    "run_native_office_pilot.py": "f6f26d583832fc0a10cc9394318efc0e88254f3a30db2097edf1a2955fc9310f"
+  },
+  "collector_source_sha256": null,
+  "checker_snapshot": {
+    "harness_eval/core.py": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20",
+    "config/protocol.json": "5e543191e6869f032adb8d1847834abf3430132f5ee33c8e18b520c68f9261e9",
+    "config/rubric.json": "8ce034208b1b56cc6f432bfd681d13edad0036c59ee01a83b4a5c40b3d9c62f0",
+    "cases/T01/case.json": "6dbae444cb341af4ef5dd90c96277495007a972fb51fd967a457ea61466548d3",
+    "cases/T01/oracle.json": "057f1b773febf50e7f3206b349936b4712952418fb177e71caa03f0a6cfb863d"
+  },
+  "private_capture_sha256": {
+    "001-initial-attachments.ax.txt": "ee30336bfe432f00afca44d729d7867b21feabe01e3b278a62e5e7d7abb20543",
+    "002-prompt-pasted.ax.txt": "97c4cde73fd871bcede6b0a2299a97654792fe0a58659cb8285b8e17cc5c3dfc",
+    "003-submitted-observation.ax.txt": "1d06e6471e3e9a951502da1192237a2d854d6765f17edea67e931affca81ecc0",
+    "004-execution-observation.ax.txt": "f421be4aeb64ce2f8b0c4bf06014350af8763c710444655265b79e7d36572c9b",
+    "005-execution-observation-2.ax.txt": "b528a93485b0e5d8192e5c5bcb1278a66d3509911aad3f6f30bf1ce0dde0ea04",
+    "006-foreground-execution-observation.ax.txt": "d49cdba42f4fbc78ddc19bd321d161282ef8f21e2635998a8f6c121f452115cd",
+    "007-native-delivery-cards.ax.txt": "a89d29916f3603a5a103a4ba724eec9c9f4750f0acd706d9ddfe5311fe4f46e2",
+    "008-delivery-cards-visible.ax.txt": "a89d29916f3603a5a103a4ba724eec9c9f4750f0acd706d9ddfe5311fe4f46e2",
+    "009-final-file-cards.ax.txt": "a89d29916f3603a5a103a4ba724eec9c9f4750f0acd706d9ddfe5311fe4f46e2",
+    "010-order-ledger-preview.ax.txt": "95a1c08e6f3da22ad52371c8bfa2d87c820893a3b7282e4ea4a552fdbc0569dc",
+    "011-order-ledger-download-result-ax.ax.txt": "fac489ee4b8504fe98b5d39a259816ace8394b149c6f2ecc5be837c8c0a39cfc",
+    "012-order-ledger-save-target.ax.txt": "5dc2b5d74d56b3c0919df851edf845beb0fa205ed1dfe01b2b713e014aec3d85",
+    "013-order-ledger-confirmed-save-target.ax.txt": "40a8b59598815f043bdeceeb4780ed2897ef6fdaf7d7e3e43e9eb33932161df3",
+    "014-order-ledger-saved-view.ax.txt": "dea4bbd75291825dba2a6c3e2a30c6b400653f139700d4a27437f8731d68f453",
+    "015-delivery-cards-after-scroll.ax.txt": "295ea1812f9b68257fb5c425707fe60f1851de9e2879035456f83aea8afe76a3",
+    "016-aggregate-original-preview.ax.txt": "824f8d2a903a3e11af3e9e7a41b705ba3aa229bb4f150f354b263473e9ebecbd",
+    "017-aggregate-default-save-folder.ax.txt": "6cedff9f1a7f743332997670d16abc1e3e39cabb10a54358c63ab4adbfbf969c",
+    "018-exceptions-delivery-card.ax.txt": "6fd974b7144d7fcce1ce0ea15c659a70796369599b1f61b53a13e8a53b8b24e4",
+    "019-exceptions-original-preview.ax.txt": "b3c72ba8c2fe77029193e9a6479045e2315f07d767e87a2118e67b15284d6247",
+    "020-exceptions-native-save-dialog.ax.txt": "88d2d5ec2e9ca20b2bfec5046ffde0cb55a7b30add864a46b2d4ce3bbf96cfd1",
+    "000-preflight-expert-selected.ax.txt": "1fbab1665607f6b9fd9dc4782587276250e7a7f73cc16097dd4d5975922d653d"
+  },
+  "product_deliverables": {
+    "aggregate.json": "266e3cc80f5afc2fc81971acc485c7b2434d78c0b6ff81b70ef0008835486554",
+    "exceptions.json": "2d7e7352653351d8968794bd75ee8286d6ef97299dc661edf26240b94aecf63e",
+    "order_ledger.csv": "a71819f53f3b35444b6986282cfb9d49a853f1e6c8cc947d2b139c0073b50495"
+  },
+  "native_originals": {
+    "aggregate.json": "266e3cc80f5afc2fc81971acc485c7b2434d78c0b6ff81b70ef0008835486554",
+    "exceptions.json": "2d7e7352653351d8968794bd75ee8286d6ef97299dc661edf26240b94aecf63e",
+    "order_ledger.csv": "a71819f53f3b35444b6986282cfb9d49a853f1e6c8cc947d2b139c0073b50495"
+  },
+  "native_original_storage_directory": "native-downloads is a storage directory name; actual download/export/local-file origin is recorded per receipt",
+  "download_receipts_sha256": "615f83dec8e72af83e7bb87ff4ab4aa5a2f606e4bf5cf6a81c843eee7d985325",
+  "release": null,
+  "output_repairs_by_evaluator": false,
+  "unscheduled_prompts": [],
+  "objective_score": 42.0,
+  "manual_score": null,
+  "total_score": null,
+  "pure_harness_score": null,
+  "evidence_level": "E2; selected visible native UI observations plus native downloaded/exported/local artifact bytes",
+  "public_review_actor": "Operator/agent; no external human audit claimed",
+  "collector_issues": [
+    "Interleaved Doubao preflight delayed first foreground completion observation; observation interval is an upper bound, not service compute time.",
+    "Execution-observation-2 screenshot was obscured by another authorized native window; not published or used as Yuanbao screenshot evidence.",
+    "Post-completion composer mode label differed; initial expert selection is recorded, meaning of reset/routing is unknown.",
+    "Only selected AX labels and operator actions are published; full native collector implementation/hidden backend stream was not captured as a public source snapshot."
+  ],
+  "retrieval_limitations": [
+    "Ordinary final reply and three artifact cards were observed within 1200 seconds, but native originals were obtained and audited later; downloaded bytes are not attested as a snapshot at the execution cutoff.",
+    "Exact native download completion receipts were unavailable. downloaded_at=null; save actions and later local-presence audit observations are separate; file modification times were not used as download times.",
+    "Aggregate and exceptions save actions occurred after the 1200-second execution window. Download/export interaction overhead is retained as collection friction; this exploratory pilot is not a valid formal run at a strict time cutoff."
+  ],
+  "redaction": "Exact operator/agent-reviewed AX slices only; raw screenshots, thinking/planning, hidden system/Skill text, account/history, private paths and signed URLs excluded",
+  "visible_events_order": "Stable chronological received_at; source_line refers to private AX source, not a tool-call sequence",
+  "visible_events_projection_sha256": "79d4adc03dca74143215445bf1505cc27c02a2d016f7896610d71e03e97197ca",
+  "confidence": "High for preserved native-original/output byte equality and deterministic checks; E2 provenance depends on cited actual UI observations; internal causation unresolved",
+  "attribution": "One recorded end-to-end configuration; no isolated Model/Skill/Harness causal score",
+  "limitations": [
+    "Preparation and file hashes do not prove remote input decoding, file paths or server execution.",
+    "Visible labels and replies do not attest backend model, active Skills or full actual tool/network actions.",
+    "All native originals are retained; local storage copies do not imply download, and archive-member mappings are transparent storage operations, not output repair.",
+    "One exploratory pilot, not a formal replicate; no external human audit claimed."
+  ]
+}

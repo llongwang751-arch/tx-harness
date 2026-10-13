@@ -1,7 +1,10 @@
 // Native CUA observation/control receipt helper. Imported only in node_repl.
 // All UI methods are documented native CUA methods; no alternate UI technology.
-export function createCollector(app, evidence, fs) {
-  let index = 0;
+export function createCollector(app, evidence, fs, {initialIndex = 0} = {}) {
+  if (!Number.isSafeInteger(initialIndex) || initialIndex < 0) {
+    throw new RangeError('initialIndex must be a non-negative safe integer');
+  }
+  let index = initialIndex;
   async function record(label, observation) {
     const at = new Date().toISOString();
     const number = String(++index).padStart(3, '0');

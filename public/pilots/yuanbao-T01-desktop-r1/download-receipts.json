@@ -1,0 +1,142 @@
+{
+  "schema": "native-artifact-source-receipts-public-v1",
+  "artifacts": [
+    {
+      "receipt_id": "native-original-1",
+      "origin": "native_download",
+      "original_filename": "order_ledger.csv",
+      "public_native_file": "native-downloads/order_ledger.csv",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T15:27:18.619846+00:00",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T15:15:50.224Z",
+      "save_action_source_line": 10,
+      "private_operator_actions_sha256": "1c1dcaef0f58184bfcd8e86b9332dbf82eac3872509f4338b8c690167839e818",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 334,
+      "sha256": "a71819f53f3b35444b6986282cfb9d49a853f1e6c8cc947d2b139c0073b50495",
+      "evidence": {
+        "event_id": "ui-13",
+        "capture": "order-ledger-confirmed-save-target",
+        "line_ranges": [
+          [
+            69,
+            70
+          ],
+          [
+            77,
+            77
+          ],
+          [
+            482,
+            482
+          ]
+        ],
+        "private_ax_sha256": "40a8b59598815f043bdeceeb4780ed2897ef6fdaf7d7e3e43e9eb33932161df3"
+      },
+      "outputs": [
+        {
+          "logical_path": "order_ledger.csv",
+          "zip_member": null,
+          "bytes": 334,
+          "sha256": "a71819f53f3b35444b6986282cfb9d49a853f1e6c8cc947d2b139c0073b50495"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "native-original-2",
+      "origin": "native_download",
+      "original_filename": "aggregate.json",
+      "public_native_file": "native-downloads/aggregate.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T15:27:18.620521+00:00",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T15:21:51.353Z",
+      "save_action_source_line": 11,
+      "private_operator_actions_sha256": "1c1dcaef0f58184bfcd8e86b9332dbf82eac3872509f4338b8c690167839e818",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 441,
+      "sha256": "266e3cc80f5afc2fc81971acc485c7b2434d78c0b6ff81b70ef0008835486554",
+      "evidence": {
+        "event_id": "ui-17",
+        "capture": "aggregate-default-save-folder",
+        "line_ranges": [
+          [
+            56,
+            57
+          ],
+          [
+            60,
+            60
+          ],
+          [
+            67,
+            67
+          ]
+        ],
+        "private_ax_sha256": "6cedff9f1a7f743332997670d16abc1e3e39cabb10a54358c63ab4adbfbf969c"
+      },
+      "outputs": [
+        {
+          "logical_path": "aggregate.json",
+          "zip_member": null,
+          "bytes": 441,
+          "sha256": "266e3cc80f5afc2fc81971acc485c7b2434d78c0b6ff81b70ef0008835486554"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "native-original-3",
+      "origin": "native_download",
+      "original_filename": "exceptions.json",
+      "public_native_file": "native-downloads/exceptions.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T15:27:18.620840+00:00",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T15:25:02.272Z",
+      "save_action_source_line": 12,
+      "private_operator_actions_sha256": "1c1dcaef0f58184bfcd8e86b9332dbf82eac3872509f4338b8c690167839e818",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 300,
+      "sha256": "2d7e7352653351d8968794bd75ee8286d6ef97299dc661edf26240b94aecf63e",
+      "evidence": {
+        "event_id": "ui-20",
+        "capture": "exceptions-native-save-dialog",
+        "line_ranges": [
+          [
+            60,
+            61
+          ],
+          [
+            64,
+            64
+          ],
+          [
+            71,
+            71
+          ]
+        ],
+        "private_ax_sha256": "88d2d5ec2e9ca20b2bfec5046ffde0cb55a7b30add864a46b2d4ce3bbf96cfd1"
+      },
+      "outputs": [
+        {
+          "logical_path": "exceptions.json",
+          "zip_member": null,
+          "bytes": 300,
+          "sha256": "2d7e7352653351d8968794bd75ee8286d6ef97299dc661edf26240b94aecf63e"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    }
+  ],
+  "private_original_receipts_sha256": "28c4f29887eb6c71363841ee4d96cd2b284c07bd297f3ec29a0e7b0d08da38ef",
+  "basis": "Recorded native UI action/card evidence and retained native download/export/local-file originals; origin is explicit per artifact"
+}

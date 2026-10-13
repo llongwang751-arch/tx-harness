@@ -1,0 +1,16 @@
+{
+  "schema": "installed-app-registration-version-observation-v1",
+  "observed_at": "2026-10-13T15:43:05.672831+00:00",
+  "source_scope": "Windows installed-application registration; read only DisplayName, DisplayVersion, Publisher",
+  "records": [
+    {
+      "DisplayName": "豆包",
+      "DisplayVersion": "1.55.5",
+      "Publisher": "Beijing Chuntian Zhiyun Technology Co., Ltd."
+    }
+  ],
+  "native_gui_about_version": null,
+  "client_binary_version_attested": false,
+  "registered_version_is_not_gui_or_backend_version": true,
+  "external_launcher_version_not_used_as_client_version": true
+}

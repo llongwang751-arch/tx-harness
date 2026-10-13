@@ -1,0 +1,11 @@
+refund_id,revision,order_id,status,amount_cents
+R001,1,O101,pending,2000
+R001,2,O101,success,2000
+R001,2,O101,success,2000
+R002,1,O102,success,800
+R003,1,O102,success,1200
+R004,1,O104,failed,500
+R005,1,O106,success,3000
+R006,1,O106,pending,1000
+R007,1,O999,success,900
+R008,1,O103,success,1000

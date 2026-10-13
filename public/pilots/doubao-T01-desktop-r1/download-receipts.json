@@ -1,0 +1,6 @@
+{
+  "schema": "native-artifact-source-receipts-public-v1",
+  "artifacts": [],
+  "private_original_receipts_sha256": "adc4ddea869abdb5c8fe81b00442afa4e10528cad1f8f49ed0dee6e4d7e227a5",
+  "basis": "Recorded native UI action/card evidence and retained native download/export/local-file originals; origin is explicit per artifact"
+}

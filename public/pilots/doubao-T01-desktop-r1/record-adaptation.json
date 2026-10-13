@@ -1,0 +1,49 @@
+{
+  "schema": "native-office-record-adaptation-v1",
+  "adapted_at": "2026-10-13T15:43:05.650858+00:00",
+  "original_records_sha256": {
+    "capture-log.jsonl": "2ba25471a7671f99d50af01c864f4b39ae15f1725db37bcd762febab680934fc",
+    "execution-end.json": "0297fd2521d5a5f889b2b3ad1cad3a1078c1b8001f79a198bbd7224d4875fb10",
+    "execution-start.json": "3221b0af1ddf6fa315f732bd7fe5b0f658e8dbcca7d2d34ccd6f00af0de23a2a"
+  },
+  "adapted_records_sha256": {
+    "execution-start.json": "ed0434b748919c9abfa21b462ad202150d3de05dfeb22c604928d36be09ecd01",
+    "execution-end.json": "082dc046c85d20b87d2c5050d36f411d03ee243d72339dc8b94acdda9668792c",
+    "capture-log.jsonl": "6e7e59c6216a06667b7c741014f824d1949f421c03b0d51163617187b822ec2a"
+  },
+  "original_fields_retained": true,
+  "actual_record_times_changed": false,
+  "field_aliases": {
+    "execution-start.started_at": "original execution-start.start",
+    "execution-start.start_basis": "original execution-start.timing_basis",
+    "execution-end.completion_observed_at": "original execution-end.completion_first_observed_at; equal to original end"
+  },
+  "completion_time_limitation": "The capture at 2026-10-13T15:22:16.255Z already contains the ordinary final reply. Retained 15:22:36.279Z is an original recorder observation upper bound, not the earliest final-visible timestamp. Neither is an internal product completion time.",
+  "status_semantics": "Recorded status=failed and legacy infra_failure=sandbox_preparation_480023 describe a product-reported failure, not evaluator collection invalidity. Objective score never determines execution status.",
+  "preflight_storage_copies": [
+    {
+      "index": 0,
+      "at": "2026-10-13T15:05:31.808Z",
+      "label": "preflight-project-selected",
+      "ax": "000-preflight-project-selected.ax.txt",
+      "source_original_index": 7,
+      "source_original_capture_label": "participant-project-selected",
+      "source_ax_sha256": "ad16777d0df63b43a224f9c9ab69991d6c45f39095ae8836174f2ca2e5abb0df",
+      "storage_copy_only": true
+    },
+    {
+      "index": 8,
+      "at": "2026-10-13T14:59:51.242Z",
+      "label": "preflight-work-task-selected",
+      "ax": "008-preflight-work-task-selected.ax.txt",
+      "source_original_index": 2,
+      "source_original_capture_label": "work-task-selected",
+      "source_ax_sha256": "315775556a3c3fefa6e20d8dd43c78c6a86bfc23466b7944ceed4649c56dbd77",
+      "storage_copy_only": true
+    }
+  ],
+  "selected_synthetic_folder_exact_match_reviewed": true,
+  "selected_synthetic_folder_source_sha256": "83c698e2343925fefe0525c976e04b5861d1f37767d7a6f2e0912da87764ed54",
+  "selected_folder_path_withheld": true,
+  "project_control_does_not_prove_file_upload_or_successful_tool_access": true
+}
