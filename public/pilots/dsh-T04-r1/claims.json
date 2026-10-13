@@ -1,0 +1,92 @@
+{
+  "scope": "pilot facts only; no formal ranking or pure Harness causal conclusion",
+  "claims": [
+    {
+      "id": "DSH-T04-P01",
+      "judgment": "第 40.345 秒收到明确的缺汇率请求，并声明停止最终换算。",
+      "confidence": "high",
+      "basis": "原生 committed text 原文含明确请求；收集时间减初次发送时间可复算。",
+      "evidence": [
+        "visible-events.jsonl:source_stdout_line=71",
+        "sdk-sent.jsonl:session/prompt id=2"
+      ],
+      "alternative_explanation": "这是 SDK committed 接收时间；不是桌面可见首 token 时间。",
+      "attribution": "observed_product_behavior; causal_unresolved"
+    },
+    {
+      "id": "DSH-T04-P02",
+      "judgment": "补发在第 58.397 秒，同一 session 与 runtime 恢复；两轮完成后正常 shutdown。",
+      "confidence": "high",
+      "basis": "两个 session/prompt 的 sessionId 相同，原生 receipts、completed turn/end 与 running/idle 通知可交叉核验。",
+      "evidence": [
+        "sdk-sent.jsonl",
+        "sdk-control-events.jsonl",
+        "visible-events.jsonl:source_stdout_line=73,117",
+        "run-metadata.json"
+      ],
+      "alternative_explanation": "SDK 入队 receipt 单独不能证明完成；这里另有父会话 turn/end 和 idle。SDK 不替代桌面 UI。",
+      "attribution": "harness_session_continuity_observed; causal_unresolved"
+    },
+    {
+      "id": "DSH-T04-P03",
+      "judgment": "补发前只有 initial incident 文件，没有最终台账或汇总；补发后交付三个原生文件。",
+      "confidence": "high",
+      "basis": "补发前输出目录清单 hash 与实际 write/tool_result 记录、最终原生文件相互支持。",
+      "evidence": [
+        "release.json:outputs_before_release",
+        "visible-events.jsonl",
+        "outputs/"
+      ],
+      "alternative_explanation": "仅证明采集目录在观察时的文件状态；不推断未观察的后台过程。初始 incident 已被产品更新，不提供冒充原始快照的重建文件。",
+      "attribution": "harness_workflow_observed; causal_unresolved"
+    },
+    {
+      "id": "DSH-T04-P04",
+      "judgment": "最终交付通过 7/7 独立确定性检查，目标金额 146636 分。",
+      "confidence": "high",
+      "basis": "对逐字节复制的原生交付按用例和 oracle 检查；公开 SHA-256 可复算。",
+      "evidence": [
+        "deterministic-verification.json",
+        "outputs/",
+        "manifest.json"
+      ],
+      "alternative_explanation": "产物正确不能单独归给 Harness；模型和内置 Skill 的因果贡献没有同条件消融。",
+      "attribution": "model_x_skill_x_harness_unresolved"
+    },
+    {
+      "id": "DSH-T04-P05",
+      "judgment": "三次 pwsh 返回 Windows ACL grantWrite 错误，升级请求因缺审批通道被拒绝。",
+      "confidence": "high",
+      "basis": "真实 tool_call/tool_result 直接给出这些错误；未根据助手自述补造调用。",
+      "evidence": [
+        "visible-events.jsonl:source_stdout_line=21,37,51,59"
+      ],
+      "alternative_explanation": "错误根因可能是本机 ACL、SDK surface 或二者交互；未排除环境，不能泛化 DSH 全部安装。",
+      "attribution": "environment_x_harness; root_cause_unresolved"
+    },
+    {
+      "id": "DSH-T04-P06",
+      "judgment": "一次诊断 Skill 被实际调用，因此本次不是无 Skill 实验。",
+      "confidence": "high",
+      "basis": "原生 skill tool_call 名称与 completed result 状态可查；正文为隐私/指令边界省略。",
+      "evidence": [
+        "visible-events.jsonl:source_stdout_line=44,45",
+        "run-metadata.json:observed_skill_calls"
+      ],
+      "alternative_explanation": "配置排除用户/项目根目录并不等于排除产品内置 Skill；具体贡献尚未消融。",
+      "attribution": "skill_participation_observed; effect_unresolved"
+    },
+    {
+      "id": "DSH-T04-P07",
+      "judgment": "请求至补发有 18.052 秒观察员复核延迟，不能视为立即补发或正式速度样本。",
+      "confidence": "high",
+      "basis": "真实接收时间、语义判断时间、复制 fixture 时间记录齐全。",
+      "evidence": [
+        "release.json",
+        "run-metadata.json:observer_to_release_seconds"
+      ],
+      "alternative_explanation": "总 72.611 秒包含此等待；去除等待也不能因此建立跨产品正式速度排名。",
+      "attribution": "evaluator_adapter"
+    }
+  ]
+}

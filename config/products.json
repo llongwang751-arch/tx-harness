@@ -41,7 +41,13 @@
       "pilot_surface": "native_cli_controlled",
       "pilot_version": "0.159.2",
       "pilot_model": "not_disclosed_clean_cli_default",
-      "pilot_evidence": "public/pilots/codex-T01-r1-attempt02"
+      "pilot_evidence": "public/pilots/codex-T01-r1-attempt02",
+      "additional_pilot_cases": ["T02", "T03", "T04", "T05"],
+      "t04_pilot_model": "gpt-6.1-sol",
+      "t04_pilot_provider": "openai",
+      "t04_pilot_model_visibility": "native_own_session_metadata; not backend attestation; no retrospective T01 inference",
+      "t04_pilot_evidence": "public/pilots/codex-T04-r1-attempt02",
+      "t04_adapter_effect": "kill initial CLI process and resume exact thread; not desktop recovery"
     },
     {
       "id": "workbuddy",
@@ -109,7 +115,10 @@
       ],
       "pilot_surface": "desktop_bundled_cli_headless",
       "pilot_requested_model": "deepseek-account/deepseek-flash/high",
-      "pilot_evidence": "public/pilots/dsh-T01-r1"
+      "pilot_evidence": "public/pilots/dsh-T01-r1",
+      "t04_pilot_surface": "desktop_bundled_cli_sdk",
+      "t04_pilot_evidence": "public/pilots/dsh-T04-r1",
+      "t04_pilot_limitations": "SDK differs from T01 headless; 18.052-second operator release delay; same process/session normal shutdown"
     },
     {
       "id": "yuanbao",

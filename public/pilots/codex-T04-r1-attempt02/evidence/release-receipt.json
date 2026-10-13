@@ -1,0 +1,10 @@
+{
+  "action": "复制协议补发文件至参与者输入目录",
+  "file": "rates.json",
+  "sha256": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+  "at": "2026-10-13T12:49:56.408923+00:00",
+  "mode": "active",
+  "request_event": "E002",
+  "response_text": "补充文件 rates.json 已提供。请使用其中按交易日期区分的汇率继续原任务，保留缺失输入及恢复记录。",
+  "note": "Automated native CLI protocol release; message delivery follows in exact-session resume."
+}

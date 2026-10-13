@@ -1,0 +1,29 @@
+{
+  "schema_version": "pilot-public-manifest-v1",
+  "files": {
+    "evaluation_snapshot.json": "d9ff11e5146e8fd429fd2e185d046269e76149df0236760536d65b2b46e352c0",
+    "evidence/collection.json": "8d6cb320b3ec559b8916390cd00eff603fde1da2f2ca99a93d9cd6c393bbb10a",
+    "evidence/initial.result.json": "dce1320145c060b9fb2ae9f8789924f299b5035de7dc94a79669741b56e32b70",
+    "evidence/initial.stderr-redacted.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/launch.json": "a9e0fd551f79ec5a1b15d8a744b78b98a099d0d1d74e6510fa45b7202118eaeb",
+    "evidence/missing-input-request.json": "0436f8f5de254c7929dd6144df36301c02e51b9b131ff5f3211e64c07fcc6bca",
+    "evidence/native-model-metadata.json": "fd66e60136f8a75d85fc286ed95dce80386cb12aff4b8ca4920724e5435da12a",
+    "evidence/native-visible-events.jsonl": "6b177cf82af460a81d3d06f827d5ce96b6809d92860c71b700c74ce798790b2b",
+    "evidence/release-receipt.json": "0d4cb6529b55a35c1e9b1b29c1d06ced901a6a371422fbb2093adf7320ca4444",
+    "evidence/resume-input.json": "c07749d2f10820a000eb9cc60a2ee7454c9c33d8f01cfb6563b034925aa9c374",
+    "evidence/resume.result.json": "b732ff67f9c02672a974729ea4797ffa457f92be5a9f232a220b9689758b8e83",
+    "evidence/resume.stderr-redacted.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/semantic-review.json": "c939857db997e40985eee9d9ca0f4b871384db6c2857736a14bdf460cf38861c",
+    "inputs/trades.csv": "ab1cf7d7ce65cb0aefd865268d2aad72fc5835c1293719d37f99080dc86005d8",
+    "metadata.json": "989b4b31acab4b877676e8058cfe570536373f8f1b819471b5f2d52ee3b6bee6",
+    "outputs/conversion_ledger.csv": "e38b6287f2ec4b8ce830c43c9d6e8d548f580d1f7a36fa4f3b4e89a42301d3d3",
+    "outputs/incident.json": "dd4daef2f143a0ea375f62fa0d9248a50abe601402360892d88392505ba47371",
+    "outputs/summary.json": "c6fe36b7d260140884d4369d7b0f04a1312607e125a267317399e1a853600d77",
+    "prompt.md": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202",
+    "provenance.json": "711d5cb20a2ef057476d7ccef3d724c89de01363edc950ccdee8e079c7a20f2b",
+    "README.md": "e276208f78bdff2ce35db310f0f3859551e1d3759ef4287b571ab51ee24d3324",
+    "releases/rates.json": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+    "submitted-prompt.md": "c8bfc3dc2df32ed846ff2e50ae1abf73e632fa313b8dc72192e5c4338e5d1c0c",
+    "verification.json": "7205297465a9d14f53c02ff8c3ab3cd3882aee2877afd143ec6770b2020cd7d1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "sha256": {
+    "case-prompt.md": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202",
+    "claims.json": "1c5f1b2fc9107af799b7335ae55813983e08f95d147b11cdda20d69013654f35",
+    "deterministic-verification.json": "34afa0f47a1a1ed63fa667f9a29d7a35110e39188333be0c24f563342b11ab1f",
+    "final-response.md": "6c3d1a238b6faea95fbefc0be49812e426a689df3ce557e77dc365c44acd60d5",
+    "initial-request.md": "58fa75be04ab6064cfc2ff48aba6a41933c6df9de4310579676620eb17e62ffc",
+    "inputs/trades.csv": "ab1cf7d7ce65cb0aefd865268d2aad72fc5835c1293719d37f99080dc86005d8",
+    "outputs/conversion_ledger.csv": "63baae4a370316cc8a8dd6d1b89e8df75b9f152037caf765f0ee9aba58e3c791",
+    "outputs/incident.json": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4",
+    "outputs/summary.json": "17bd74189366259eb131dd9ad58c737f9888b46dc8b91ca176d4a40916c062d8",
+    "prompt.md": "1c69407d1bd8e99eb3ef843ddbc4504b75a814d5562f3431ccb1dfce3edb261b",
+    "README.md": "e90cf7811b206b3bf72648b4d7f78cedd652079d8faced45d579fa9230e078e2",
+    "redaction.md": "92ac28941863fa68422e629452a0d5486d5c938bb719755a542b75f3386819f8",
+    "release.json": "f897cebb14eabe659b7c11446999666f876c5ed324afccc45a772e86033a8fe8",
+    "releases/rates.json": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+    "run-metadata.json": "2834d18b972363ad232af89819d60e32de7c720bd28465a0e6d48dc6229aa16d",
+    "sdk-control-events.jsonl": "c08b57971fb90116a66f2d33082959a38ddcb404140c200f7d9675db5ce8f67e",
+    "sdk-sent.jsonl": "3d6af9137e50d6892145690df36ba16561370a4e9e073ac8ea9c9306c4f2557c",
+    "visible-events.jsonl": "cc3f8f50775521608e8043d3d5bebd3560b68935cccd18f7e34fb8875b04e4a4"
+  },
+  "purpose": "Public pilot package integrity; not proof of authenticity"
+}

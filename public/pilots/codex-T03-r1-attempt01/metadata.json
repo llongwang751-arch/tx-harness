@@ -1,0 +1,91 @@
+{
+  "publication_schema": "pilot-excerpt-v1",
+  "product_id": "codex",
+  "case_id": "T03",
+  "replicate": 1,
+  "attempt": 1,
+  "track": "pilot",
+  "protocol_state": "draft_before_pilot",
+  "surface": "controlled native Codex CLI; not desktop",
+  "product_version": "codex-cli 0.159.2",
+  "model": "not_disclosed_clean_cli_default",
+  "model_visibility": "unknown",
+  "model_evidence": "evidence/native-model-metadata.json",
+  "mode": "exec; no daemon; controlled permissions; prefer MXC",
+  "account_tier": "not_disclosed",
+  "region": "not_disclosed",
+  "skill_condition": "host_skill_discovery_skipped; plugins disabled; built-in state not independently verified",
+  "memory_condition": "fresh exec; memories disabled",
+  "permissions": "named profile: root deny/minimal read/workspace write/inputs read/network false; approval never",
+  "environment": {
+    "os": "win32",
+    "python": "3.14.0",
+    "binary_sha256": "52f75c649bebb8001102a1dd129c1ea6d02b0940321e6d7e82ee0526753bd58a"
+  },
+  "network": "disabled_for_task_content",
+  "budget_seconds": 1200,
+  "started_at": "2026-10-13T12:52:42.759099+00:00",
+  "ended_at": "2026-10-13T12:54:07.648294+00:00",
+  "elapsed_seconds": 84.889195,
+  "native_exit_code": 0,
+  "native_timed_out": false,
+  "status": "completed_pilot",
+  "original_collector_status": "completed",
+  "inputs_unchanged": true,
+  "delivery_adapter_suffix": "将交付文件写入 outputs/，不要修改 inputs/。",
+  "collected_outputs": [
+    {
+      "path": "bundle/announcement.md",
+      "source_relative_path": "outputs/bundle/announcement.md",
+      "sha256": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2"
+    },
+    {
+      "path": "bundle/catalog.json",
+      "source_relative_path": "outputs/bundle/catalog.json",
+      "sha256": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77"
+    },
+    {
+      "path": "bundle/contacts.csv",
+      "source_relative_path": "outputs/bundle/contacts.csv",
+      "sha256": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf"
+    },
+    {
+      "path": "bundle/protected.txt",
+      "source_relative_path": "outputs/bundle/protected.txt",
+      "sha256": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc"
+    },
+    {
+      "path": "change_log.json",
+      "source_relative_path": "outputs/change_log.json",
+      "sha256": "836f69635245e09c1a291cd13b32a8016a0b2305a7b7a2cbb3e516debe696c75"
+    }
+  ],
+  "objective_score": 60.0,
+  "objective_score_max": 60,
+  "objective_checks_passed": 6,
+  "objective_checks_total": 6,
+  "total_score": null,
+  "eligible_for_formal_comparison": false,
+  "manual_review_status": "not scored",
+  "redaction_reviewed": true,
+  "claims": [
+    {
+      "claim": "Native CLI created every required deliverable and every deterministic artifact check passed",
+      "confidence": "high",
+      "basis": "Committed native commands/results, unmodified collected artifact hashes, and independent verifier",
+      "attribution": "unresolved"
+    },
+    {
+      "claim": "This single pilot does not isolate Harness effects from model or built-in Skill effects",
+      "confidence": "high",
+      "basis": "No matching-model/Skill control; no formal replicate series; model cannot be inferred from another task",
+      "attribution": "unresolved"
+    }
+  ],
+  "limitations": [
+    "Pilot only; not in formal 75-slot results",
+    "One attempt, no output hand-fix or success-selective rerun",
+    "Ephemeral CLI default model remains unknown unless this exact own session metadata identifies it",
+    "Declared audit/incident files do not replace native process evidence for behavior claims"
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "schema": "harness-boundary-public-audit-v1",
+  "generated_at": "2026-10-13T13:14:18.786008+00:00",
+  "adapter": "dsh_public_visible_events_v1",
+  "formal_sample_count": 0,
+  "audited_exploratory_episode_count": 2,
+  "pure_harness_score": null,
+  "episodes": [
+    {
+      "episode_id": "dsh-T01-r1",
+      "package": "dsh-T01-r1",
+      "product_id": "dsh",
+      "case_id": "T01",
+      "track": "pilot",
+      "surface": "desktop-bundled CLI",
+      "formal_eligible": false,
+      "pure_harness_score": null,
+      "manifest": {
+        "verified": true,
+        "file_count": 12,
+        "manifest_sha256": "f9b85316257ba4d7f564701bb2dc5d3f8d24a8b6eee3425a77f7540ec8673e89"
+      },
+      "visible_event_count": 56,
+      "metrics": {
+        "final_write_payload_artifact_correspondence": {
+          "observed_write_instances": 3,
+          "comparable_final_instances": 3,
+          "matching_instances": 3,
+          "differing_instances": 0,
+          "unknown_instances": 0,
+          "superseded_instances": 0,
+          "denominator": "Latest completed public write per explicit output target, with one paired result, string content and available final artifact",
+          "interpretation": "Published projection/final snapshot correspondences, not a causal score or proof of executor fidelity",
+          "instances": [
+            {
+              "request": {
+                "public_line": 14,
+                "source_stdout_line": 16,
+                "received_at": "2026-10-13T12:29:31.565018+00:00",
+                "call_id": "call_00_Bpxdq8s2LI4X5kOkLRAX0579"
+              },
+              "artifact": "outputs/order_ledger.csv",
+              "verdict": "match",
+              "reason": "Published UTF-8 request payload equals final artifact bytes",
+              "requested_payload_sha256": "a5f28d53b9275061de7db2c4bf6cbb9306420be2138ffd2446031abd7a230d46",
+              "artifact_sha256": "a5f28d53b9275061de7db2c4bf6cbb9306420be2138ffd2446031abd7a230d46",
+              "attribution": "unresolved",
+              "confidence": "high for the published payload/final bytes comparison",
+              "result": {
+                "public_line": 15,
+                "source_stdout_line": 17,
+                "received_at": "2026-10-13T12:29:31.573002+00:00",
+                "call_id": "call_00_Bpxdq8s2LI4X5kOkLRAX0579"
+              }
+            },
+            {
+              "request": {
+                "public_line": 21,
+                "source_stdout_line": 24,
+                "received_at": "2026-10-13T12:29:34.045360+00:00",
+                "call_id": "call_00_CL4cVnrQZlZTfiRjPtPW5116"
+              },
+              "artifact": "outputs/aggregate.json",
+              "verdict": "match",
+              "reason": "Published UTF-8 request payload equals final artifact bytes",
+              "requested_payload_sha256": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+              "artifact_sha256": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+              "attribution": "unresolved",
+              "confidence": "high for the published payload/final bytes comparison",
+              "result": {
+                "public_line": 22,
+                "source_stdout_line": 25,
+                "received_at": "2026-10-13T12:29:34.053788+00:00",
+                "call_id": "call_00_CL4cVnrQZlZTfiRjPtPW5116"
+              }
+            },
+            {
+              "request": {
+                "public_line": 23,
+                "source_stdout_line": 26,
+                "received_at": "2026-10-13T12:29:34.054013+00:00",
+                "call_id": "call_01_a7m6K2e451ruYCUeqDuZ7051"
+              },
+              "artifact": "outputs/exceptions.json",
+              "verdict": "match",
+              "reason": "Published UTF-8 request payload equals final artifact bytes",
+              "requested_payload_sha256": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+              "artifact_sha256": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+              "attribution": "unresolved",
+              "confidence": "high for the published payload/final bytes comparison",
+              "result": {
+                "public_line": 24,
+                "source_stdout_line": 27,
+                "received_at": "2026-10-13T12:29:34.061637+00:00",
+                "call_id": "call_01_a7m6K2e451ruYCUeqDuZ7051"
+              }
+            }
+          ]
+        },
+        "explicit_error_status_projection": {
+          "observed_failure_text_instances": 3,
+          "paired_failure_instances": 3,
+          "explicit_error_instances": 3,
+          "status_inconsistent_instances": 0,
+          "unknown_instances": 0,
+          "denominator": "Native tool_result text starts Error: and has exactly one preceding request and one result with the same ID",
+          "interpretation": "Error feedback visibility only; no error-root-cause or recovery-policy attribution",
+          "instances": [
+            {
+              "result": {
+                "public_line": 6,
+                "source_stdout_line": 7,
+                "received_at": "2026-10-13T12:29:23.854234+00:00",
+                "call_id": "call_00_ET_Up7m8YG2LdYKV2tkcPKF1441"
+              },
+              "verdict": "explicit_error",
+              "tool": "pwsh",
+              "failure_category": "Windows ACL grant failure",
+              "native_status": "error",
+              "attribution": "unresolved",
+              "request": {
+                "public_line": 5,
+                "source_stdout_line": 6,
+                "received_at": "2026-10-13T12:29:23.817145+00:00",
+                "call_id": "call_00_ET_Up7m8YG2LdYKV2tkcPKF1441"
+              },
+              "confidence": "high for public failure-text/status correspondence only"
+            },
+            {
+              "result": {
+                "public_line": 17,
+                "source_stdout_line": 19,
+                "received_at": "2026-10-13T12:29:31.576720+00:00",
+                "call_id": "call_01_YcyTxs5strAEx3oq8aFB1618"
+              },
+              "verdict": "explicit_error",
+              "tool": "pwsh",
+              "failure_category": "Windows ACL grant failure",
+              "native_status": "error",
+              "attribution": "unresolved",
+              "request": {
+                "public_line": 16,
+                "source_stdout_line": 18,
+                "received_at": "2026-10-13T12:29:31.573146+00:00",
+                "call_id": "call_01_YcyTxs5strAEx3oq8aFB1618"
+              },
+              "confidence": "high for public failure-text/status correspondence only"
+            },
+            {
+              "result": {
+                "public_line": 41,
+                "source_stdout_line": 46,
+                "received_at": "2026-10-13T12:29:46.318074+00:00",
+                "call_id": "call_00_CMdl5wsx7pS9ekF9jzUs8159"
+              },
+              "verdict": "explicit_error",
+              "tool": "pwsh",
+              "failure_category": "approval channel unavailable",
+              "native_status": "error",
+              "attribution": "unresolved",
+              "request": {
+                "public_line": 40,
+                "source_stdout_line": 45,
+                "received_at": "2026-10-13T12:29:46.313200+00:00",
+                "call_id": "call_00_CMdl5wsx7pS9ekF9jzUs8159"
+              },
+              "confidence": "high for public failure-text/status correspondence only"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": "dsh-T04-r1",
+      "package": "dsh-T04-r1",
+      "product_id": "dsh",
+      "case_id": "T04",
+      "track": "pilot",
+      "surface": "desktop-bundled CLI",
+      "formal_eligible": false,
+      "pure_harness_score": null,
+      "manifest": {
+        "verified": true,
+        "file_count": 18,
+        "manifest_sha256": "7044eaa2c86018f954d4dcb0c800653a93b6f9dba65b93264201be2b2b93fc80"
+      },
+      "visible_event_count": 81,
+      "metrics": {
+        "final_write_payload_artifact_correspondence": {
+          "observed_write_instances": 4,
+          "comparable_final_instances": 3,
+          "matching_instances": 3,
+          "differing_instances": 0,
+          "unknown_instances": 0,
+          "superseded_instances": 1,
+          "denominator": "Latest completed public write per explicit output target, with one paired result, string content and available final artifact",
+          "interpretation": "Published projection/final snapshot correspondences, not a causal score or proof of executor fidelity",
+          "instances": [
+            {
+              "request": {
+                "public_line": 23,
+                "source_stdout_line": 42,
+                "received_at": "2026-10-13T12:50:09.715253+00:00",
+                "call_id": "call_00_xgTvFsM0xTae53WL5Kkk0777"
+              },
+              "artifact": "outputs/incident.json",
+              "verdict": "superseded",
+              "reason": "A later completed write targets the same final file",
+              "requested_payload_sha256": null,
+              "artifact_sha256": null,
+              "attribution": "unresolved",
+              "confidence": null,
+              "result": {
+                "public_line": 24,
+                "source_stdout_line": 43,
+                "received_at": "2026-10-13T12:50:09.725136+00:00",
+                "call_id": "call_00_xgTvFsM0xTae53WL5Kkk0777"
+              }
+            },
+            {
+              "request": {
+                "public_line": 59,
+                "source_stdout_line": 92,
+                "received_at": "2026-10-13T12:51:02.846629+00:00",
+                "call_id": "call_00_vaP6lNIsnGoyFHFgAoE60356"
+              },
+              "artifact": "outputs/conversion_ledger.csv",
+              "verdict": "match",
+              "reason": "Published UTF-8 request payload equals final artifact bytes",
+              "requested_payload_sha256": "63baae4a370316cc8a8dd6d1b89e8df75b9f152037caf765f0ee9aba58e3c791",
+              "artifact_sha256": "63baae4a370316cc8a8dd6d1b89e8df75b9f152037caf765f0ee9aba58e3c791",
+              "attribution": "unresolved",
+              "confidence": "high for the published payload/final bytes comparison",
+              "result": {
+                "public_line": 60,
+                "source_stdout_line": 93,
+                "received_at": "2026-10-13T12:51:02.854042+00:00",
+                "call_id": "call_00_vaP6lNIsnGoyFHFgAoE60356"
+              }
+            },
+            {
+              "request": {
+                "public_line": 61,
+                "source_stdout_line": 94,
+                "received_at": "2026-10-13T12:51:02.854115+00:00",
+                "call_id": "call_01_C0Y5xDHFZ9W1Vu3GMM2k7759"
+              },
+              "artifact": "outputs/incident.json",
+              "verdict": "match",
+              "reason": "Published UTF-8 request payload equals final artifact bytes",
+              "requested_payload_sha256": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4",
+              "artifact_sha256": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4",
+              "attribution": "unresolved",
+              "confidence": "high for the published payload/final bytes comparison",
+              "result": {
+                "public_line": 62,
+                "source_stdout_line": 95,
+                "received_at": "2026-10-13T12:51:02.863195+00:00",
+                "call_id": "call_01_C0Y5xDHFZ9W1Vu3GMM2k7759"
+              }
+            },
+            {
+              "request": {
+                "public_line": 66,
+                "source_stdout_line": 100,
+                "received_at": "2026-10-13T12:51:04.201426+00:00",
+                "call_id": "call_00_ET_Fg8hHaTBvU26kQ1MQ1Wt1138"
+              },
+              "artifact": "outputs/summary.json",
+              "verdict": "match",
+              "reason": "Published UTF-8 request payload equals final artifact bytes",
+              "requested_payload_sha256": "17bd74189366259eb131dd9ad58c737f9888b46dc8b91ca176d4a40916c062d8",
+              "artifact_sha256": "17bd74189366259eb131dd9ad58c737f9888b46dc8b91ca176d4a40916c062d8",
+              "attribution": "unresolved",
+              "confidence": "high for the published payload/final bytes comparison",
+              "result": {
+                "public_line": 67,
+                "source_stdout_line": 101,
+                "received_at": "2026-10-13T12:51:04.206961+00:00",
+                "call_id": "call_00_ET_Fg8hHaTBvU26kQ1MQ1Wt1138"
+              }
+            }
+          ]
+        },
+        "explicit_error_status_projection": {
+          "observed_failure_text_instances": 4,
+          "paired_failure_instances": 4,
+          "explicit_error_instances": 4,
+          "status_inconsistent_instances": 0,
+          "unknown_instances": 0,
+          "denominator": "Native tool_result text starts Error: and has exactly one preceding request and one result with the same ID",
+          "interpretation": "Error feedback visibility only; no error-root-cause or recovery-policy attribution",
+          "instances": [
+            {
+              "result": {
+                "public_line": 5,
+                "source_stdout_line": 21,
+                "received_at": "2026-10-13T12:49:59.146160+00:00",
+                "call_id": "call_00_ET_J3yWZRhZROHdlvOBpsO10024"
+              },
+              "verdict": "explicit_error",
+              "tool": "pwsh",
+              "failure_category": "Windows ACL grant failure",
+              "native_status": "error",
+              "attribution": "unresolved",
+              "request": {
+                "public_line": 4,
+                "source_stdout_line": 20,
+                "received_at": "2026-10-13T12:49:59.134193+00:00",
+                "call_id": "call_00_ET_J3yWZRhZROHdlvOBpsO10024"
+              },
+              "confidence": "high for public failure-text/status correspondence only"
+            },
+            {
+              "result": {
+                "public_line": 19,
+                "source_stdout_line": 37,
+                "received_at": "2026-10-13T12:50:07.674039+00:00",
+                "call_id": "call_00_8hx5to3GtvXEDxYhg0JI2215"
+              },
+              "verdict": "explicit_error",
+              "tool": "pwsh",
+              "failure_category": "Windows ACL grant failure",
+              "native_status": "error",
+              "attribution": "unresolved",
+              "request": {
+                "public_line": 18,
+                "source_stdout_line": 36,
+                "received_at": "2026-10-13T12:50:07.669472+00:00",
+                "call_id": "call_00_8hx5to3GtvXEDxYhg0JI2215"
+              },
+              "confidence": "high for public failure-text/status correspondence only"
+            },
+            {
+              "result": {
+                "public_line": 31,
+                "source_stdout_line": 51,
+                "received_at": "2026-10-13T12:50:18.423889+00:00",
+                "call_id": "call_00_TvWXuh8jk74FJtLEYP3V1188"
+              },
+              "verdict": "explicit_error",
+              "tool": "pwsh",
+              "failure_category": "Windows ACL grant failure",
+              "native_status": "error",
+              "attribution": "unresolved",
+              "request": {
+                "public_line": 30,
+                "source_stdout_line": 50,
+                "received_at": "2026-10-13T12:50:18.419889+00:00",
+                "call_id": "call_00_TvWXuh8jk74FJtLEYP3V1188"
+              },
+              "confidence": "high for public failure-text/status correspondence only"
+            },
+            {
+              "result": {
+                "public_line": 36,
+                "source_stdout_line": 59,
+                "received_at": "2026-10-13T12:50:29.608793+00:00",
+                "call_id": "call_00_f6ZmmwJa3dwwHIl1z45O6538"
+              },
+              "verdict": "explicit_error",
+              "tool": "pwsh",
+              "failure_category": "approval channel unavailable",
+              "native_status": "error",
+              "attribution": "unresolved",
+              "request": {
+                "public_line": 35,
+                "source_stdout_line": 56,
+                "received_at": "2026-10-13T12:50:29.604588+00:00",
+                "call_id": "call_00_f6ZmmwJa3dwwHIl1z45O6538"
+              },
+              "confidence": "high for public failure-text/status correspondence only"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "excluded_packages": [],
+  "outside_adapter_scope": [
+    "codex",
+    "workbuddy",
+    "yuanbao",
+    "doubao"
+  ],
+  "limitations": [
+    "Exploratory operation instances; each package is one episode, not one independent replicate per tool call.",
+    "Checks compare published request projections with final artifact snapshots; they do not independently attest actual executor arguments.",
+    "A differing snapshot may reflect truncation, later writes or mapping; it is not automatically a Harness failure.",
+    "Model selection, Skill content, routing, tool implementation and environment are not matched across products.",
+    "Error text/status correspondence does not identify the component that caused the error or chose a recovery path.",
+    "Missing fields, inaccessible artifacts and unseen links remain unknown, never zero scores.",
+    "Hash integrity is not authenticity; only already-redacted public evidence is read."
+  ],
+  "auditor_sha256": "4084034bb4ed4e92f83a7e2b12056c112b40876eb699fa23e64e1a3f888ee8f4"
+}

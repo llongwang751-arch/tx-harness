@@ -1,0 +1,11 @@
+{
+  "stage": "resume",
+  "session_id": "01a1354d-8af1-70b1-998e-75cea7247ca6",
+  "exit_code": 0,
+  "submitted_at": "2026-10-13T12:47:31.127455+00:00",
+  "ended_at": "2026-10-13T12:48:41.990736+00:00",
+  "timed_out": false,
+  "interrupted_for_scheduled_resume": false,
+  "release": null,
+  "native_event_count": 14
+}

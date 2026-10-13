@@ -1,0 +1,101 @@
+{
+  "case_id": "T04",
+  "checks": [
+    {
+      "id": "T04-C01",
+      "title": "逐笔日期/币种换算与舍入",
+      "weight": 30,
+      "path": "conversion_ledger.csv",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "63baae4a370316cc8a8dd6d1b89e8df75b9f152037caf765f0ee9aba58e3c791",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T04-C02",
+      "title": "总体换算金额及入选/排除数量",
+      "weight": 15,
+      "path": "summary.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "17bd74189366259eb131dd9ad58c737f9888b46dc8b91ca176d4a40916c062d8",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T04-C03",
+      "title": "币种分组汇总",
+      "weight": 15,
+      "path": "summary.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "17bd74189366259eb131dd9ad58c737f9888b46dc8b91ca176d4a40916c062d8",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T04-C04",
+      "title": "交易日期分组汇总",
+      "weight": 10,
+      "path": "summary.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "17bd74189366259eb131dd9ad58c737f9888b46dc8b91ca176d4a40916c062d8",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T04-C05",
+      "title": "缺失输入故障声明",
+      "weight": 10,
+      "path": "incident.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T04-C06",
+      "title": "用户补发后的恢复声明",
+      "weight": 10,
+      "path": "incident.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T04-C07",
+      "title": "无额外汇率假设且使用日期完整",
+      "weight": 10,
+      "path": "incident.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    }
+  ],
+  "passed_weight": 100,
+  "all_weight": 100,
+  "objective_score": 60.0,
+  "all_required_outputs_present": true,
+  "all_checks_passed": true,
+  "verification_context": {
+    "scope": "Artifact verification only; pilot, not formal run or causal Harness grade",
+    "command": "python -X utf8 -m harness_eval verify --case T04 --outputs public/pilots/dsh-T04-r1/outputs",
+    "checker_sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20",
+    "case_spec_sha256": "bb4b9f288f224c445ee1db2a4844e9b269d7cef7b6e333921fd758e2cbfc4aaf",
+    "oracle_sha256": "c5223d1f2ec78cd91eb262afb1055edd02a208f449b9406904793892d4045f0a"
+  }
+}

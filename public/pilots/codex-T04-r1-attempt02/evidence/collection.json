@@ -1,0 +1,30 @@
+{
+  "collected": [
+    {
+      "path": "conversion_ledger.csv",
+      "source_relative_path": "outputs/conversion_ledger.csv",
+      "sha256": "e38b6287f2ec4b8ce830c43c9d6e8d548f580d1f7a36fa4f3b4e89a42301d3d3"
+    },
+    {
+      "path": "summary.json",
+      "source_relative_path": "outputs/summary.json",
+      "sha256": "c6fe36b7d260140884d4369d7b0f04a1312607e125a267317399e1a853600d77"
+    },
+    {
+      "path": "incident.json",
+      "source_relative_path": "outputs/incident.json",
+      "sha256": "dd4daef2f143a0ea375f62fa0d9248a50abe601402360892d88392505ba47371"
+    }
+  ],
+  "conflicting_duplicate_deliverables": [],
+  "outputs_modified_after_deadline_excluded": [],
+  "initial_inputs_unchanged": true,
+  "participant_final_inventory": {
+    "inputs/rates.json": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+    "inputs/trades.csv": "ab1cf7d7ce65cb0aefd865268d2aad72fc5835c1293719d37f99080dc86005d8",
+    "outputs/conversion_ledger.csv": "e38b6287f2ec4b8ce830c43c9d6e8d548f580d1f7a36fa4f3b4e89a42301d3d3",
+    "outputs/incident.json": "dd4daef2f143a0ea375f62fa0d9248a50abe601402360892d88392505ba47371",
+    "outputs/summary.json": "c6fe36b7d260140884d4369d7b0f04a1312607e125a267317399e1a853600d77",
+    "prompt.md": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202"
+  }
+}

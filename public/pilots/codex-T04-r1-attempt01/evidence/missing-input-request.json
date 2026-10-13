@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-13T12:47:30.563239+00:00",
+  "elapsed_seconds": 14.056837200000018,
+  "event": {
+    "type": "item.completed",
+    "item": {
+      "id": "item_1",
+      "type": "agent_message",
+      "text": "我会先检查必需文件；若缺少汇率文件，会停止换算并请求补充。"
+    }
+  }
+}

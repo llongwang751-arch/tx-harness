@@ -1,0 +1,44 @@
+{
+  "collected": [
+    {
+      "path": "bundle/announcement.md",
+      "source_relative_path": "outputs/bundle/announcement.md",
+      "sha256": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2"
+    },
+    {
+      "path": "bundle/catalog.json",
+      "source_relative_path": "outputs/bundle/catalog.json",
+      "sha256": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77"
+    },
+    {
+      "path": "bundle/contacts.csv",
+      "source_relative_path": "outputs/bundle/contacts.csv",
+      "sha256": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf"
+    },
+    {
+      "path": "bundle/protected.txt",
+      "source_relative_path": "outputs/bundle/protected.txt",
+      "sha256": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc"
+    },
+    {
+      "path": "change_log.json",
+      "source_relative_path": "outputs/change_log.json",
+      "sha256": "836f69635245e09c1a291cd13b32a8016a0b2305a7b7a2cbb3e516debe696c75"
+    }
+  ],
+  "conflicting_duplicate_deliverables": [],
+  "outputs_modified_after_deadline_excluded": [],
+  "initial_inputs_unchanged": true,
+  "participant_final_inventory": {
+    "inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+    "inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7",
+    "inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+    "inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "outputs/bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+    "outputs/bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+    "outputs/bundle/contacts.csv": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+    "outputs/bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "outputs/change_log.json": "836f69635245e09c1a291cd13b32a8016a0b2305a7b7a2cbb3e516debe696c75",
+    "prompt.md": "237f743d161bbffe092914ecb6750c6e2e4c9de6c3fad5b3ff39d313aeff42e0"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "product": "dsh",
+  "surface": "desktop-bundled CLI",
+  "profile": "sdk",
+  "track": "pilot",
+  "case": "T04",
+  "replicate": 1,
+  "installation_version": "0.2.0-rc.2",
+  "requested_provider": "deepseek-account",
+  "requested_model": "deepseek-flash",
+  "requested_reasoning_effort": "high",
+  "timeout_seconds": 1200,
+  "release_deadline_seconds": 120,
+  "manual_interventions": 0,
+  "session_id": "pilot-dsh-T04-964678a5-1298-4f88-abe4-68ba84c829ef",
+  "sandbox": "workspace-write",
+  "task_network_tool": "disabled",
+  "skills": "user/project roots disabled; product bundled Office skills retained",
+  "initial_files": {
+    "inputs/trades.csv": "ab1cf7d7ce65cb0aefd865268d2aad72fc5835c1293719d37f99080dc86005d8",
+    "prompt.md": "1c69407d1bd8e99eb3ef843ddbc4504b75a814d5562f3431ccb1dfce3edb261b"
+  },
+  "final_files": {
+    "inputs/rates.json": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+    "inputs/trades.csv": "ab1cf7d7ce65cb0aefd865268d2aad72fc5835c1293719d37f99080dc86005d8",
+    "outputs/conversion_ledger.csv": "63baae4a370316cc8a8dd6d1b89e8df75b9f152037caf765f0ee9aba58e3c791",
+    "outputs/incident.json": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4",
+    "outputs/summary.json": "17bd74189366259eb131dd9ad58c737f9888b46dc8b91ca176d4a40916c062d8",
+    "prompt.md": "1c69407d1bd8e99eb3ef843ddbc4504b75a814d5562f3431ccb1dfce3edb261b"
+  },
+  "outputs": {
+    "conversion_ledger.csv": "63baae4a370316cc8a8dd6d1b89e8df75b9f152037caf765f0ee9aba58e3c791",
+    "incident.json": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4",
+    "summary.json": "17bd74189366259eb131dd9ad58c737f9888b46dc8b91ca176d4a40916c062d8"
+  },
+  "patch_sha256": "1bd6b59916c83fb79dd9dabb0cefda6f7c53262c43dd20abeb28e5678579bacb",
+  "runner_sha256": "0b2899b87a456df40cb72fd5130667ceec73e00354e4d85f05939d8224fbcb34",
+  "runtime_started_at": "2026-10-13T12:49:56.516482+00:00",
+  "started_at": "2026-10-13T12:49:57.834632+00:00",
+  "finished_at": "2026-10-13T12:51:10.446104+00:00",
+  "runtime_finished_at": "2026-10-13T12:51:10.475447+00:00",
+  "elapsed_seconds": 72.611,
+  "exit_code": 0,
+  "timed_out": false,
+  "state": "completed_observed_interval",
+  "initialize_result": {
+    "serverInfo": {
+      "name": "deepseek-harness-sdk-runtime",
+      "version": "0.0.1"
+    }
+  },
+  "initial_prompt_receipt": {
+    "messageId": "fc5c9c82-72cb-4590-a0e1-2a454b759edf"
+  },
+  "supplement_prompt_receipt": {
+    "messageId": "6430763e-a3f8-45b2-8d06-42cae9cf5e42"
+  },
+  "parent_turn_ends": [
+    {
+      "received_at": "2026-10-13T12:50:38.179885+00:00",
+      "source_stdout_line": 73,
+      "reason": {
+        "kind": "completed"
+      }
+    },
+    {
+      "received_at": "2026-10-13T12:51:10.445887+00:00",
+      "source_stdout_line": 117,
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  ],
+  "shutdown_result": {},
+  "participant_workspace": "<participant_workspace>",
+  "operating_system": "Windows",
+  "request_seconds_after_submission": 40.345,
+  "observer_to_release_seconds": 18.052,
+  "release_protocol_deviation": "18.052-second operator semantic-review delay after committed request; active release remained within 120 seconds. Do not treat this pilot as zero-delay or formal timing data.",
+  "adapter_forced_termination": false,
+  "original_trades_unchanged": true,
+  "observed_skill_calls": [
+    "diagnose-windows-sandbox-acl"
+  ],
+  "parent_visible_event_counts": {
+    "status": 30,
+    "text": 13,
+    "tool_call": 19,
+    "tool_result": 19
+  },
+  "full_sdk_wire_private": true,
+  "sdk_control_receipt_semantics": "messageId proves durable enqueue, not turn completion; completion observed separately from same-parent turn/end plus idle",
+  "private_source_sha256": {
+    "stdout.raw": "533412f9092516dfe655f88fc9911f2a086e62d1c4d5eea554af4f2208f6a982",
+    "stderr.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "received.jsonl": "efeb489b2c035c65619fb4b30f485a2ce42480149e18f69b55151dfd82b0cff9",
+    "sent.jsonl": "332bfbaaf1056876f0b324186874f0db275b052c7876d4f15b7f41e0fdbfd3d3",
+    "run.json": "4f15620c6b3ab9b7be615924adf27066b78bdc69adbc7a9d9270064a6721447e",
+    "release.json": "f897cebb14eabe659b7c11446999666f876c5ed324afccc45a772e86033a8fe8",
+    "release-decision.json": "2c00b0f5fe74144c7cad31a4b8e5af86618f0eaba39fc2ee19b21b08df9fa25d",
+    "submitted-prompt.md": "1c69407d1bd8e99eb3ef843ddbc4504b75a814d5562f3431ccb1dfce3edb261b",
+    "one-run.patch.yml": "1bd6b59916c83fb79dd9dabb0cefda6f7c53262c43dd20abeb28e5678579bacb"
+  },
+  "objective_result": "7/7 passed; objective 60/60; no formal product total or ranking",
+  "limitations": [
+    "SDK profile differs from T01 headless and desktop GUI.",
+    "Default home/profile composition may have preferences beyond explicit controls.",
+    "Workspace-write does not establish read/network/process confinement.",
+    "Requested model identity is not backend attestation.",
+    "SDK events include hidden context privately; public projection deliberately excludes it.",
+    "Operator active-release delay is part of measured elapsed time."
+  ],
+  "schema": "office-harness-pilot-v1",
+  "product_id": "dsh",
+  "case_id": "T04",
+  "evidence_type": "actual_product_pilot",
+  "formal_eligible": false,
+  "case_prompt_sha256": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202",
+  "actual_transmission_sha256": "1c69407d1bd8e99eb3ef843ddbc4504b75a814d5562f3431ccb1dfce3edb261b",
+  "input_delivery": "initial inputs/trades.csv only; releases/rates.json copied into participant inputs at the recorded release time"
+}

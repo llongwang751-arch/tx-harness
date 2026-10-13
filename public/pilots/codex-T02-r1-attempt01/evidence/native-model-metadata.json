@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-10-13T13:03:47.887921+00:00",
+  "session_id": "01a13552-8578-79b1-ad50-43afba894063",
+  "source_scope": "Searched only this pilot thread UUID for persisted native session metadata; no matching metadata found; no other session contents read.",
+  "metadata_whitelist": [
+    "model",
+    "model_provider",
+    "source",
+    "originator",
+    "cli_version"
+  ],
+  "source_files": [],
+  "allowlisted_records": [],
+  "observed_model_ids": [],
+  "visibility": "unknown",
+  "interpretation": "This run used ephemeral mode and no matching persisted native model metadata was found. The actual model identifier cannot be confirmed from this receipt.",
+  "hidden_reasoning_or_system_prompts_exported": false,
+  "confidence": "low",
+  "confidence_basis": "source_files, allowlisted_records, and observed_model_ids are all empty. No native model/provider/version field was recovered for this exact thread; model identity remains unknown."
+}

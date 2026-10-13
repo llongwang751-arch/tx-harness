@@ -1,0 +1,52 @@
+{
+  "observed_at": "2026-10-13T12:54:52.465696+00:00",
+  "session_id": "01a1354f-9ed2-7b01-aa44-a0a0fdc96be7",
+  "source_scope": "Only native session whose filename includes the exact UUID emitted by this test; no other session contents read.",
+  "metadata_whitelist": [
+    "model",
+    "model_provider",
+    "source",
+    "originator",
+    "cli_version"
+  ],
+  "source_files": [
+    {
+      "basename": "rollout-2026-10-13T20-49-32-01a1354f-9ed2-7b01-aa44-a0a0fdc96be7.jsonl",
+      "sha256": "bffc0077ca6175d4a5b23981de3ce51b32a136e2b8e184ab9b5a0361c9e6b5d0"
+    }
+  ],
+  "allowlisted_records": [
+    {
+      "record_type": "session_meta",
+      "line_number": 1,
+      "fields": {
+        "model_provider": "openai",
+        "source": "exec",
+        "originator": "codex_exec",
+        "cli_version": "0.159.2"
+      }
+    },
+    {
+      "record_type": "turn_context",
+      "line_number": 8,
+      "fields": {
+        "model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "record_type": "turn_context",
+      "line_number": 36,
+      "fields": {
+        "model": "gpt-6.1-sol"
+      }
+    }
+  ],
+  "observed_model_ids": [
+    "gpt-6.1-sol"
+  ],
+  "visibility": "native_own_session_metadata",
+  "interpretation": "Model identifier recorded by the native CLI session configuration, not independently audited server weights.",
+  "hidden_reasoning_or_system_prompts_exported": false,
+  "confidence": "high",
+  "confidence_basis": "Both initial and resumed turn_context records identify gpt-6.1-sol; matching exact session UUID and CLI version identify source."
+}

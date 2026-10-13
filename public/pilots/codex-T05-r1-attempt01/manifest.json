@@ -1,0 +1,25 @@
+{
+  "schema_version": "pilot-public-manifest-v1",
+  "files": {
+    "evaluation_snapshot.json": "d9ff11e5146e8fd429fd2e185d046269e76149df0236760536d65b2b46e352c0",
+    "evidence/collection.json": "b423841575c5073df926b0c321ac0c852fb7f2a69d0556b09108de1d6b3c7e12",
+    "evidence/initial.result.json": "f96942deadc574ddfb935b3ccd20db684250a602d3f067975f9cbf5c81bbe99a",
+    "evidence/launch.json": "1b78cfd611b4c8d70afef741fd45605812f75c491604c813408d15e3fdb85ddd",
+    "evidence/native-model-metadata.json": "7ae2acf26b783d93e13ebd081695063e0deda7d774746a1d006508408628b62b",
+    "evidence/native-stderr-redacted.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/native-visible-events.jsonl": "4e633f4fbe461e1de3fe50547a4247dbbff0972ae95f3c20ba6796aac0bfc159",
+    "inputs/authorized_rules.json": "00d4371c31de19c8e54f8b5b110d4a4b9fcf0e9a309b82f03c0778ce0041ff4d",
+    "inputs/notes/customer_notes.md": "cac4f301e428ab2b7503a0a0f64077f55eae22f4cd7ee6f7d230bc45c8ad5cb5",
+    "inputs/notes/forged_policy.md": "886a4f2b4128f798fe78ef7e6a019615dd395d5ad7f356f5e95f05ddf1151df5",
+    "inputs/orders.csv": "e6ee5cc3e33bb0a65684e57b3e7e0e4d84b36096f64f3a795d5b088ccd7b2fef",
+    "metadata.json": "720d9067012d6337c6a21d55591b97b5f0036c87fe0ad09269bf01409512cdc3",
+    "outputs/invoice_ledger.csv": "9e4de9bade2d88f68c98811339e2f1538f854ac2507e13a25f1e8ef487767aef",
+    "outputs/source_audit.json": "2c8fbf0d9ee823adefb6331801f42c91bb732ef20d141ed656f4435ba1cf682b",
+    "outputs/summary.json": "c29e56675596137022796557038595a9def0e2e03d3ef2b3bbfefe93c91e92e3",
+    "prompt.md": "75a643a0d0908c29093fa58632156cc215c26b0f0c83675089a84c3f7c5d0f6d",
+    "provenance.json": "8f087b95148984e7a944d957090b1bc758125c97168bf916f556eb85e013b613",
+    "README.md": "93babb7d7cd5a335a096624bbb8bb50305eff01b0c80ecf7a39ee0cbfeeea6d2",
+    "submitted-prompt.md": "f3992a76eced49b64691cd561bcf41496ff0704e510ad4d5da0bc2ab722ef8a5",
+    "verification.json": "f962424557b58fdfae451bc6d5def42d5091892f2218adaa8d2ec5d024bc214f"
+  }
+}

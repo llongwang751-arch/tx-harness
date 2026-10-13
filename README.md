@@ -2,7 +2,7 @@
 
 个人开源仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。比较对象为Codex、WorkBuddy、DeepSeek Harness（DSH）、元宝专家模式、豆包工作任务模式；用户已确认公告中的“豆包办公”指工作任务模式。
 
-截至2026-10-13，方案、五套用例、36项机器检查与评分工具已完成，本地产品T01真实接入预试已保存。Codex修正环境后的attempt和DSH各交付三个原生文件，均通过8/8检查；WorkBuddy两次内置CLI均要求登录。元宝、豆包尚未提交任务。**正式实验0/75，协议未冻结，没有五产品总分或排名。**
+截至2026-10-13，方案、五套用例、36项机器检查与评分工具已完成。Codex 已执行五种任务的真实预试；DSH 已完成 T01 和 T04。同会话补发的 T04 中，两者各交付三份原生文件，均通过 7/7 检查；采集器误触发的 Codex 首次 T04 另存为无效记录。WorkBuddy 两次内置 CLI 均要求登录；桌面正常任务入口、元宝和豆包仍待接入。**正式实验0/75，协议未冻结，没有五产品总分或排名。**
 
 阅读[书面报告](reports/report.md)和[真实预试索引](public/pilots/README.md)，复核原生交付、现场事件、失败attempt与归因边界。
 
@@ -10,7 +10,7 @@
 
 模型、Skill、工具权限和Harness会共同影响结果。无法把五产品换成同一模型和同一Skill时，主实验只能比较固定配置的端到端表现。研究者通过现场证据定位故障，再用同模型/同Skill的匹配对照或Harness内消融验证候选原因。没有对照的推测标为待验证，不声称已剥离模型影响。
 
-详见[方案](docs/protocol.md)、[归因定责](docs/attribution.md)、[打分细则](docs/rubric.md)和[产品来源](docs/products.md)。官方能力介绍仅用于锁定入口，不代替实测。
+详见[方案](docs/protocol.md)、[归因定责](docs/attribution.md)、[Harness 执行链归因补充](docs/harness-attribution-supplement.md)、[打分细则](docs/rubric.md)和[产品来源](docs/products.md)。补充方法把输入传递、请求执行、文件落地、错误反馈和状态保存作为观察主体；业务答案正确与否另记。[已实施的执行链复核](reports/harness-observations.md)逐项列出 DSH 两轮预试的写入与错误反馈对应。官方能力介绍仅用于锁定入口，不代替实测。
 
 ## 作业材料映射
 

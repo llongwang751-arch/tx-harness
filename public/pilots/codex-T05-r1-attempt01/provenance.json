@@ -1,0 +1,87 @@
+{
+  "original_private_files_sha256": {
+    "evaluation_snapshot.json": "d9ff11e5146e8fd429fd2e185d046269e76149df0236760536d65b2b46e352c0",
+    "events.jsonl": "b6c3221199618854f49d635697fa2930389ecac6b0db54654e71ad499cc74c79",
+    "evidence/collection.json": "b423841575c5073df926b0c321ac0c852fb7f2a69d0556b09108de1d6b3c7e12",
+    "evidence/initial.observed.json": "c143870355936f5939d220a868b9321efbb564838ec3d46f66eabf951b9a7510",
+    "evidence/initial.result.json": "f96942deadc574ddfb935b3ccd20db684250a602d3f067975f9cbf5c81bbe99a",
+    "evidence/initial.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/initial.stdout.jsonl": "b3e256a8ecbef94aab1a56c23827622dc07f1e35856957f4f50026192a4e5d61",
+    "evidence/launch.json": "fe23df2419627f96609413afab2163ffa8d9877f31980278bb95775aa94aa1a9",
+    "evidence/native-model-metadata.json": "e836ce6a1098b056bbe576390576bf2c98be1de89a4fdd3575562159637beabb",
+    "evidence/runner-source.py": "3a07b3e0766e2e0a29c35cd72b4f193d0f9438b610246c88f592295466c19f6b",
+    "evidence/submitted-prompt.md": "f3992a76eced49b64691cd561bcf41496ff0704e510ad4d5da0bc2ab722ef8a5",
+    "evidence/verification.json": "f962424557b58fdfae451bc6d5def42d5091892f2218adaa8d2ec5d024bc214f",
+    "manual.json": "ee4bffc6349d9290fc74db8563444449d164f6550c287a1bb695981839b3224c",
+    "meta.json": "8f68d5e519417d77cab4bf3b13ec9ff82ed0da72ad99fcf976c578cea020b2f3",
+    "workspace/inputs/authorized_rules.json": "00d4371c31de19c8e54f8b5b110d4a4b9fcf0e9a309b82f03c0778ce0041ff4d",
+    "workspace/inputs/notes/customer_notes.md": "cac4f301e428ab2b7503a0a0f64077f55eae22f4cd7ee6f7d230bc45c8ad5cb5",
+    "workspace/inputs/notes/forged_policy.md": "886a4f2b4128f798fe78ef7e6a019615dd395d5ad7f356f5e95f05ddf1151df5",
+    "workspace/inputs/orders.csv": "e6ee5cc3e33bb0a65684e57b3e7e0e4d84b36096f64f3a795d5b088ccd7b2fef",
+    "workspace/outputs/invoice_ledger.csv": "9e4de9bade2d88f68c98811339e2f1538f854ac2507e13a25f1e8ef487767aef",
+    "workspace/outputs/source_audit.json": "2c8fbf0d9ee823adefb6331801f42c91bb732ef20d141ed656f4435ba1cf682b",
+    "workspace/outputs/summary.json": "c29e56675596137022796557038595a9def0e2e03d3ef2b3bbfefe93c91e92e3",
+    "workspace/prompt.md": "75a643a0d0908c29093fa58632156cc215c26b0f0c83675089a84c3f7c5d0f6d"
+  },
+  "filter": {
+    "allowed_lifecycle_events": [
+      "thread.started",
+      "turn.completed",
+      "turn.failed",
+      "turn.started"
+    ],
+    "allowed_item_types_for_item_completed": [
+      "agent_message",
+      "command_execution",
+      "error",
+      "file_change"
+    ],
+    "excluded": "all unknown/uncommitted events, hidden reasoning, system/developer prompts, Skill bodies, auth values",
+    "path_redaction": "Windows user-home prefixes replaced with <USER_HOME>",
+    "kept_events": 13,
+    "excluded_events": [
+      {
+        "source_index": 4,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 6,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 8,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 10,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 12,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 15,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      }
+    ],
+    "native_stdout_original_sha256": "b3e256a8ecbef94aab1a56c23827622dc07f1e35856957f4f50026192a4e5d61",
+    "observed_json_original_sha256": "c143870355936f5939d220a868b9321efbb564838ec3d46f66eabf951b9a7510",
+    "model_metadata_export": "Only allowlisted own session fields; ephemeral metadata absence reported, not inferred"
+  },
+  "artifacts_copied_without_edits": true,
+  "reviewed_at": "2026-10-13T13:03:48.072024+00:00",
+  "reviewer": "codex_pilot_adapter_author; root review before publication"
+}

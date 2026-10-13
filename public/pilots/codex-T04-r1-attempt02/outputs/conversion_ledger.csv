@@ -1,0 +1,7 @@
+"trade_id","trade_date","currency","amount_minor","status","included","rate_numerator","rate_denominator","cny_cents"
+"F001","2026-10-01","USD","10000","settled","true","7","1","70000"
+"F002","2026-10-01","EUR","5000","settled","true","8","1","40000"
+"F003","2026-10-01","CNY","12345","settled","true","1","1","12345"
+"F004","2026-10-02","USD","3350","settled","true","701","100","23484"
+"F005","2026-10-02","EUR","101","settled","true","799","100","807"
+"F006","2026-10-02","USD","1000","pending","false","-","-","0"

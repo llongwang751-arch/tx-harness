@@ -1,0 +1,16 @@
+{
+  "stage": "initial",
+  "session_id": "01a1354d-8af1-70b1-998e-75cea7247ca6",
+  "exit_code": 1,
+  "submitted_at": "2026-10-13T12:47:16.537230+00:00",
+  "ended_at": "2026-10-13T12:47:31.087391+00:00",
+  "timed_out": false,
+  "interrupted_for_scheduled_resume": true,
+  "release": {
+    "mode": "active",
+    "file_available_at": "2026-10-13T12:47:30.654979+00:00",
+    "request_event": "E002",
+    "file_sha256": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b"
+  },
+  "native_event_count": 4
+}

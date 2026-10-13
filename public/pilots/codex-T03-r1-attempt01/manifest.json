@@ -1,0 +1,27 @@
+{
+  "schema_version": "pilot-public-manifest-v1",
+  "files": {
+    "evaluation_snapshot.json": "d9ff11e5146e8fd429fd2e185d046269e76149df0236760536d65b2b46e352c0",
+    "evidence/collection.json": "55645d435323baf7c98febc6fd6f8760dbca15c653492e7b349cb4bed7f41a99",
+    "evidence/initial.result.json": "c3773afd86bede4b867d5cb37dd116325cb50cd5c52aee878bee2ff16bc2d548",
+    "evidence/launch.json": "9938ab5e9f2ae60e0fef906648f5aa778961eed6dfd5734d12a0ae566708e06e",
+    "evidence/native-model-metadata.json": "7efb1f3f1b51091489e22d798298eb0bd1aff44d4ab65d35e0bd39cf932b530e",
+    "evidence/native-stderr-redacted.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/native-visible-events.jsonl": "8c07167d1294fb349360ddea73cac80aa71780b59a1709895d5e12687203d167",
+    "inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+    "inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7",
+    "inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+    "inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "metadata.json": "5930f9aad48fc64d0287928035ea545b3aa7076879e7d6388a8573ebfdbcd88a",
+    "outputs/bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+    "outputs/bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+    "outputs/bundle/contacts.csv": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+    "outputs/bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "outputs/change_log.json": "836f69635245e09c1a291cd13b32a8016a0b2305a7b7a2cbb3e516debe696c75",
+    "prompt.md": "237f743d161bbffe092914ecb6750c6e2e4c9de6c3fad5b3ff39d313aeff42e0",
+    "provenance.json": "924ebd4360d3dfdb3e1b288065723c0469e9e5ab22f7593730179109ea05df7c",
+    "README.md": "670de5b66e553a6386cf97f830745771f149b0e7172a0a541d8530abe096b2e5",
+    "submitted-prompt.md": "1bb66d05159e57be72c4b009e19536fb871adb01f656e4ec4f537723a7187a85",
+    "verification.json": "f6464f769ca29cbb3f81215279edbf437a7c79239f0dd79f0da1a5552aea6c62"
+  }
+}

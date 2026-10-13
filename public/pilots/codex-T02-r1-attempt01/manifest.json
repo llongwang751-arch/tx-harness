@@ -1,0 +1,29 @@
+{
+  "schema_version": "pilot-public-manifest-v1",
+  "files": {
+    "evaluation_snapshot.json": "d9ff11e5146e8fd429fd2e185d046269e76149df0236760536d65b2b46e352c0",
+    "evidence/collection.json": "f60e5663694f30804ba60cfa622ba51659aaa5cf62bfdf7c49e66572c4f64acd",
+    "evidence/initial.result.json": "bd9f9103eb24cfd26c5cce4a4c42135b5164742725620cc2583308fc9d64c2c1",
+    "evidence/launch.json": "fba143ca11fe08447062bef9c0e6563e060f549fca87816f48b5979930c168df",
+    "evidence/native-model-metadata.json": "24b398c2e940b541754d577c4f66b826cacf344806366eec8e71931d493c972a",
+    "evidence/native-stderr-redacted.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/native-visible-events.jsonl": "cb74c62ce733d5b0f03cee8e4a2a743df6a3280e874f957f3f494631924974fe",
+    "inputs/00_evaluation_contract.md": "2f1d7899ceebcc471f1d1d769da0923c9f99370caa899fafe8ac1bbd4e1d071b",
+    "inputs/01_finance_v2.md": "7d154bba07e3edc7bdc197da40b4e6f62b0b2fcf1a59e4b88690d60f9ed48f83",
+    "inputs/02_finance_v3.md": "f00b55f806270765f0a17ad26c89fbce20bfe8b2f866bf0b616efe1bbd57043e",
+    "inputs/03_operations_guide.md": "d3643eeda58a1662336e847eef2792f2b43fcd63e200b65b110e56d7b94cd36d",
+    "inputs/04_faq.md": "7e2612709f2b1a3cad43416cb97cf3a1efa79dabccb5b0d49e0cdad0d2f42e4a",
+    "inputs/05_finance_exception.md": "17c194b95fdd5913fcf7f1514d3bcd02e2ff0f19fc9facf4488b2de29ffb6e20",
+    "inputs/claims.csv": "c58b7839ff69122e28e94a6c505f9e1b038c1edaaa5962574314480b2e4d6da8",
+    "metadata.json": "0717a34c22f694a06f90ec9178e8d8634b17d19f60c6db54340f55aabb9af10b",
+    "outputs/conflicts.json": "5cfd243840bb28fc49e661a73bb145ec7f16fff664b66cad8ddde856c3ccc4a4",
+    "outputs/decisions.csv": "d2a7f0595a85da41758dbf8a5832241fcec4693b872f0302a7b2a73cf3fcf12f",
+    "outputs/evidence_index.json": "5eda0d547080febef5f684f24de838c9b955fafb3c1773b99e746185796cdd0a",
+    "outputs/summary.json": "60460cc8dc391a5258698f541264945003add7bb684c15fcaa593e9aefcf3553",
+    "prompt.md": "dfc66b38e8b907c296dbba7d1340b7c6f919707c0f4fc94daa0d2752be71f552",
+    "provenance.json": "5057c1b8e97a4452545c592227bc711d4ce08e271d7dee26423847281155b7cc",
+    "README.md": "f403adce18bee4ebfebd0e1619311f01d83d320a72ed84e991e6615aca2364e9",
+    "submitted-prompt.md": "28ca8c81efe7d0d71d85593ba5639f38795b5b686ccbf6fe93fcc0f6e6c5e07c",
+    "verification.json": "34311e8a577e16d1dc3e8423aa0c0ffde9da51e251f2bc9eefb81c5b1ded52fe"
+  }
+}

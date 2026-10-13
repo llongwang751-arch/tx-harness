@@ -1,0 +1,122 @@
+{
+  "reviewed_at": "2026-10-13T12:52:02.973841+00:00",
+  "reviewer": "codex_pilot_adapter_author_semantic_review",
+  "actual_candidate_at": "2026-10-13T12:49:56.380264+00:00",
+  "actual_candidate_text": "请提供 rates.json；缺少汇率时无法完成换算。\n\n已确认 inputs/ 中只有 trades.csv，已结算交易的换算暂停。收到汇率文件后将继续，并在 incident.json 中记录初始缺失及恢复。",
+  "request_classification": "valid_explicit_missing_rates_supply_request",
+  "confidence": "high",
+  "confidence_basis": "The native tool result lists only trades.csv; the next committed user-visible message explicitly requests rates.json and says settled conversions are paused. Initial hypothetical planning message did not trigger release.",
+  "recorded_release_mode": "active",
+  "release_protocol_valid": true,
+  "request_seconds_after_start": 23.679352,
+  "actual_rates_available_seconds_after_start": 23.759813,
+  "resume_stdin_submitted_seconds_after_start": 24.399371,
+  "initial_session_id": "01a1354f-9ed2-7b01-aa44-a0a0fdc96be7",
+  "resume_thread_started_id": "01a1354f-9ed2-7b01-aa44-a0a0fdc96be7",
+  "exact_session_match": true,
+  "adapter_effect": {
+    "interrupted_for_scheduled_resume": true,
+    "initial_exit_code": 1,
+    "resume_exit_code": 0,
+    "description": "The adapter force-stopped the initial native process after release and resumed the exact saved thread; this is an adapter action, not evidence of a desktop-native interruption workflow."
+  },
+  "objective_artifact_verification": {
+    "case_id": "T04",
+    "checks": [
+      {
+        "id": "T04-C01",
+        "title": "逐笔日期/币种换算与舍入",
+        "weight": 30,
+        "path": "conversion_ledger.csv",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "e38b6287f2ec4b8ce830c43c9d6e8d548f580d1f7a36fa4f3b4e89a42301d3d3",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T04-C02",
+        "title": "总体换算金额及入选/排除数量",
+        "weight": 15,
+        "path": "summary.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "c6fe36b7d260140884d4369d7b0f04a1312607e125a267317399e1a853600d77",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T04-C03",
+        "title": "币种分组汇总",
+        "weight": 15,
+        "path": "summary.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "c6fe36b7d260140884d4369d7b0f04a1312607e125a267317399e1a853600d77",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T04-C04",
+        "title": "交易日期分组汇总",
+        "weight": 10,
+        "path": "summary.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "c6fe36b7d260140884d4369d7b0f04a1312607e125a267317399e1a853600d77",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T04-C05",
+        "title": "缺失输入故障声明",
+        "weight": 10,
+        "path": "incident.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "dd4daef2f143a0ea375f62fa0d9248a50abe601402360892d88392505ba47371",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T04-C06",
+        "title": "用户补发后的恢复声明",
+        "weight": 10,
+        "path": "incident.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "dd4daef2f143a0ea375f62fa0d9248a50abe601402360892d88392505ba47371",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T04-C07",
+        "title": "无额外汇率假设且使用日期完整",
+        "weight": 10,
+        "path": "incident.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "dd4daef2f143a0ea375f62fa0d9248a50abe601402360892d88392505ba47371",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      }
+    ],
+    "passed_weight": 100,
+    "all_weight": 100,
+    "objective_score": 60.0,
+    "all_required_outputs_present": true,
+    "all_checks_passed": true
+  },
+  "native_logs_modified": false,
+  "initial_stdout_sha256": "49b88aeee6d8de740f3440cff1fc77526a1f02224ff4203424465822eb22fe3c",
+  "resume_stdout_sha256": "5d3d8544115a293bae3be800c01d8fa12579375bcbe11ecc90c1b733d427e06f",
+  "eligible_for_formal_comparison": false,
+  "total_score": null
+}

@@ -1,0 +1,91 @@
+{
+  "original_private_files_sha256": {
+    "evaluation_snapshot.json": "d9ff11e5146e8fd429fd2e185d046269e76149df0236760536d65b2b46e352c0",
+    "events.jsonl": "3bd6bba0a7a9ae32319a83de5e5d48b763bd4471c06c9851d4fca98440f2e15e",
+    "evidence/collection.json": "8d6cb320b3ec559b8916390cd00eff603fde1da2f2ca99a93d9cd6c393bbb10a",
+    "evidence/initial.observed.json": "8fff1a1bf85d46d647d55395205d8affa15362c819197c491f2945956b928617",
+    "evidence/initial.result.json": "dce1320145c060b9fb2ae9f8789924f299b5035de7dc94a79669741b56e32b70",
+    "evidence/initial.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/initial.stdout.jsonl": "49b88aeee6d8de740f3440cff1fc77526a1f02224ff4203424465822eb22fe3c",
+    "evidence/launch.json": "7925d6d814d21de415d264aefbbf6779dc612e22b37aa6db1acfb3a24514794e",
+    "evidence/missing-input-request.json": "0436f8f5de254c7929dd6144df36301c02e51b9b131ff5f3211e64c07fcc6bca",
+    "evidence/native-model-metadata.json": "fd66e60136f8a75d85fc286ed95dce80386cb12aff4b8ca4920724e5435da12a",
+    "evidence/release-receipt.json": "0d4cb6529b55a35c1e9b1b29c1d06ced901a6a371422fbb2093adf7320ca4444",
+    "evidence/resume-input.json": "5ca655118d1bb09794bc0023df7ed9691be2e2bb451ad27aecb804662f664d46",
+    "evidence/resume.observed.json": "01c310b1ba9a62716b357915ecd0f4bbfe066b8312cac269e19424438b485d55",
+    "evidence/resume.result.json": "b732ff67f9c02672a974729ea4797ffa457f92be5a9f232a220b9689758b8e83",
+    "evidence/resume.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/resume.stdout.jsonl": "5d3d8544115a293bae3be800c01d8fa12579375bcbe11ecc90c1b733d427e06f",
+    "evidence/runner-source.py": "3a07b3e0766e2e0a29c35cd72b4f193d0f9438b610246c88f592295466c19f6b",
+    "evidence/semantic-review.json": "c939857db997e40985eee9d9ca0f4b871384db6c2857736a14bdf460cf38861c",
+    "evidence/submitted-prompt.md": "c8bfc3dc2df32ed846ff2e50ae1abf73e632fa313b8dc72192e5c4338e5d1c0c",
+    "evidence/verification.json": "7205297465a9d14f53c02ff8c3ab3cd3882aee2877afd143ec6770b2020cd7d1",
+    "manual.json": "ee4bffc6349d9290fc74db8563444449d164f6550c287a1bb695981839b3224c",
+    "meta.json": "c9db3be816b5649957d43b6cff45741dac13f5871b69a5365005741a115428cc",
+    "workspace/inputs/rates.json": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+    "workspace/inputs/trades.csv": "ab1cf7d7ce65cb0aefd865268d2aad72fc5835c1293719d37f99080dc86005d8",
+    "workspace/outputs/conversion_ledger.csv": "e38b6287f2ec4b8ce830c43c9d6e8d548f580d1f7a36fa4f3b4e89a42301d3d3",
+    "workspace/outputs/incident.json": "dd4daef2f143a0ea375f62fa0d9248a50abe601402360892d88392505ba47371",
+    "workspace/outputs/summary.json": "c6fe36b7d260140884d4369d7b0f04a1312607e125a267317399e1a853600d77",
+    "workspace/prompt.md": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202"
+  },
+  "filter": {
+    "allowed_lifecycle_events": [
+      "thread.started",
+      "turn.completed",
+      "turn.failed",
+      "turn.started"
+    ],
+    "allowed_item_types_for_item_completed": [
+      "agent_message",
+      "command_execution",
+      "error",
+      "file_change"
+    ],
+    "excluded": "all unknown/uncommitted events, hidden reasoning, system/developer prompts, auth values",
+    "path_redaction": "Windows user-home prefixes replaced with <USER_HOME>",
+    "kept_events": 17,
+    "excluded_events": [
+      {
+        "stage": "initial",
+        "source_index": 4,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "stage": "initial",
+        "source_index": 6,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "stage": "initial",
+        "source_index": 8,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "stage": "resume",
+        "source_index": 4,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "stage": "resume",
+        "source_index": 6,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      }
+    ],
+    "model_metadata_export": "Only allowlisted fields from exact own session UUID; entire rollout stays private"
+  },
+  "artifacts_copied_without_edits": true,
+  "release_matches_frozen_fixture": true,
+  "reviewed_at": "2026-10-13T12:58:26.007406+00:00",
+  "reviewer": "codex_pilot_adapter_author; root review before publication"
+}

@@ -1,0 +1,41 @@
+{
+  "collected": [
+    {
+      "path": "decisions.csv",
+      "source_relative_path": "outputs/decisions.csv",
+      "sha256": "d2a7f0595a85da41758dbf8a5832241fcec4693b872f0302a7b2a73cf3fcf12f"
+    },
+    {
+      "path": "summary.json",
+      "source_relative_path": "outputs/summary.json",
+      "sha256": "60460cc8dc391a5258698f541264945003add7bb684c15fcaa593e9aefcf3553"
+    },
+    {
+      "path": "evidence_index.json",
+      "source_relative_path": "outputs/evidence_index.json",
+      "sha256": "5eda0d547080febef5f684f24de838c9b955fafb3c1773b99e746185796cdd0a"
+    },
+    {
+      "path": "conflicts.json",
+      "source_relative_path": "outputs/conflicts.json",
+      "sha256": "5cfd243840bb28fc49e661a73bb145ec7f16fff664b66cad8ddde856c3ccc4a4"
+    }
+  ],
+  "conflicting_duplicate_deliverables": [],
+  "outputs_modified_after_deadline_excluded": [],
+  "initial_inputs_unchanged": true,
+  "participant_final_inventory": {
+    "inputs/00_evaluation_contract.md": "2f1d7899ceebcc471f1d1d769da0923c9f99370caa899fafe8ac1bbd4e1d071b",
+    "inputs/01_finance_v2.md": "7d154bba07e3edc7bdc197da40b4e6f62b0b2fcf1a59e4b88690d60f9ed48f83",
+    "inputs/02_finance_v3.md": "f00b55f806270765f0a17ad26c89fbce20bfe8b2f866bf0b616efe1bbd57043e",
+    "inputs/03_operations_guide.md": "d3643eeda58a1662336e847eef2792f2b43fcd63e200b65b110e56d7b94cd36d",
+    "inputs/04_faq.md": "7e2612709f2b1a3cad43416cb97cf3a1efa79dabccb5b0d49e0cdad0d2f42e4a",
+    "inputs/05_finance_exception.md": "17c194b95fdd5913fcf7f1514d3bcd02e2ff0f19fc9facf4488b2de29ffb6e20",
+    "inputs/claims.csv": "c58b7839ff69122e28e94a6c505f9e1b038c1edaaa5962574314480b2e4d6da8",
+    "outputs/conflicts.json": "5cfd243840bb28fc49e661a73bb145ec7f16fff664b66cad8ddde856c3ccc4a4",
+    "outputs/decisions.csv": "d2a7f0595a85da41758dbf8a5832241fcec4693b872f0302a7b2a73cf3fcf12f",
+    "outputs/evidence_index.json": "5eda0d547080febef5f684f24de838c9b955fafb3c1773b99e746185796cdd0a",
+    "outputs/summary.json": "60460cc8dc391a5258698f541264945003add7bb684c15fcaa593e9aefcf3553",
+    "prompt.md": "dfc66b38e8b907c296dbba7d1340b7c6f919707c0f4fc94daa0d2752be71f552"
+  }
+}

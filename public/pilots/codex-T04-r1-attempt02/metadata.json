@@ -1,0 +1,103 @@
+{
+  "publication_schema": "pilot-excerpt-v1",
+  "product_id": "codex",
+  "case_id": "T04",
+  "replicate": 1,
+  "attempt": 2,
+  "track": "pilot",
+  "protocol_state": "draft_before_pilot",
+  "surface": "controlled native Codex CLI; not desktop",
+  "product_version": "codex-cli 0.159.2",
+  "model": "gpt-6.1-sol",
+  "model_visibility": "native_own_session_metadata",
+  "provider": "openai",
+  "model_at_launch_receipt": "not_disclosed_clean_cli_default",
+  "model_evidence": "evidence/native-model-metadata.json",
+  "mode": "exec; no daemon; controlled permissions; prefer MXC",
+  "skill_condition": "host_skill_discovery_skipped; plugins disabled; built-in state not independently verified",
+  "memory_condition": "fresh exec; memories disabled",
+  "permissions": "named profile: root deny/minimal read/workspace write/inputs read/network false; approval never",
+  "environment": {
+    "os": "win32",
+    "python": "3.14.0",
+    "binary_sha256": "52f75c649bebb8001102a1dd129c1ea6d02b0940321e6d7e82ee0526753bd58a"
+  },
+  "network": "disabled_for_task_content",
+  "budget_seconds": 1200,
+  "started_at": "2026-10-13T12:49:32.700912+00:00",
+  "ended_at": "2026-10-13T12:50:42.925090+00:00",
+  "elapsed_seconds": 70.224178,
+  "native_collector_status": "completed",
+  "status": "completed_pilot_valid_explicit_request",
+  "release_protocol_valid": true,
+  "release_mode_recorded": "active",
+  "active_request_semantic_classification": "valid_explicit_missing_rates_supply_request",
+  "actual_candidate_text": "请提供 rates.json；缺少汇率时无法完成换算。\n\n已确认 inputs/ 中只有 trades.csv，已结算交易的换算暂停。收到汇率文件后将继续，并在 incident.json 中记录初始缺失及恢复。",
+  "request_or_candidate_seconds_after_start": 23.679352,
+  "actual_rates_available_seconds_after_start": 23.759813,
+  "actual_resume_stdin_seconds_after_start": 24.399371,
+  "released_file": {
+    "initially_absent": true,
+    "published_path": "releases/rates.json",
+    "delivered_target": "inputs/rates.json",
+    "sha256": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+    "actual_available_at": "2026-10-13T12:49:56.460725+00:00"
+  },
+  "initial_session_id": "01a1354f-9ed2-7b01-aa44-a0a0fdc96be7",
+  "resumed_thread_started_id": "01a1354f-9ed2-7b01-aa44-a0a0fdc96be7",
+  "exact_session_match": true,
+  "adapter_effect": {
+    "interrupted_for_scheduled_resume": true,
+    "initial_exit_code": 1,
+    "resume_exit_code": 0,
+    "description": "Adapter kill plus exact-session CLI resume; this is not desktop-native recovery evidence"
+  },
+  "inputs_unchanged": true,
+  "delivery_adapter_suffix": "将交付文件写入 outputs/，不要修改 inputs/。",
+  "collected_outputs": [
+    {
+      "path": "conversion_ledger.csv",
+      "source_relative_path": "outputs/conversion_ledger.csv",
+      "sha256": "e38b6287f2ec4b8ce830c43c9d6e8d548f580d1f7a36fa4f3b4e89a42301d3d3"
+    },
+    {
+      "path": "summary.json",
+      "source_relative_path": "outputs/summary.json",
+      "sha256": "c6fe36b7d260140884d4369d7b0f04a1312607e125a267317399e1a853600d77"
+    },
+    {
+      "path": "incident.json",
+      "source_relative_path": "outputs/incident.json",
+      "sha256": "dd4daef2f143a0ea375f62fa0d9248a50abe601402360892d88392505ba47371"
+    }
+  ],
+  "objective_score": 60.0,
+  "objective_score_max": 60,
+  "objective_checks_passed": 7,
+  "objective_checks_total": 7,
+  "total_score": null,
+  "eligible_for_formal_comparison": false,
+  "manual_review_status": "semantic protocol review only; no manual dimension score",
+  "redaction_reviewed": true,
+  "claims": [
+    {
+      "claim": "Three native artifact files pass all seven deterministic checks",
+      "confidence": "high",
+      "basis": "Original artifact hashes and independent verification.json",
+      "attribution": "unresolved"
+    },
+    {
+      "claim": "An explicit rates.json supply request followed the native tool result that only trades.csv existed",
+      "confidence": "high",
+      "basis": "Committed native messages/tool results and semantic-review.json",
+      "attribution": "unresolved"
+    }
+  ],
+  "limitations": [
+    "Pilot only; not in formal 75-slot results",
+    "Model and built-in Skill effects have no matched control",
+    "Kill/resume belongs to the adapter; native desktop interruption behavior untested",
+    "Artifact incident.json is self-report and does not establish request/recovery behavior",
+    "Attempt01 invalid early active release is retained, not counted as a valid recovery sample"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "original_private_files_sha256": {
+    "evaluation_snapshot.json": "d9ff11e5146e8fd429fd2e185d046269e76149df0236760536d65b2b46e352c0",
+    "events.jsonl": "f5d89775b74026fa16dba71b2a3f0855cfbdc074de2710b9780ffcebb404e926",
+    "evidence/collection.json": "f60e5663694f30804ba60cfa622ba51659aaa5cf62bfdf7c49e66572c4f64acd",
+    "evidence/initial.observed.json": "151005b06e74512fe1f5d0a773701ec33ecd7b7e7c0328e25187eb33fb053a9e",
+    "evidence/initial.result.json": "bd9f9103eb24cfd26c5cce4a4c42135b5164742725620cc2583308fc9d64c2c1",
+    "evidence/initial.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/initial.stdout.jsonl": "93d9e66da7d2d8421d6820ff74119c4bf09814ed5b37e9f81016e407d50e454a",
+    "evidence/launch.json": "47eefff180a3074d2f152e186058595e9de7fa21c5659ecce5b58241f514f752",
+    "evidence/native-model-metadata.json": "e3f3240c9d844e8edc874f8c472300741c67d9f109496528c754283a1fb5dff2",
+    "evidence/runner-source.py": "3a07b3e0766e2e0a29c35cd72b4f193d0f9438b610246c88f592295466c19f6b",
+    "evidence/submitted-prompt.md": "28ca8c81efe7d0d71d85593ba5639f38795b5b686ccbf6fe93fcc0f6e6c5e07c",
+    "evidence/verification.json": "34311e8a577e16d1dc3e8423aa0c0ffde9da51e251f2bc9eefb81c5b1ded52fe",
+    "manual.json": "ee4bffc6349d9290fc74db8563444449d164f6550c287a1bb695981839b3224c",
+    "meta.json": "e229672243e4345952896761d3efd48b39836a5da22a06c1cb8c45759df7640f",
+    "workspace/inputs/00_evaluation_contract.md": "2f1d7899ceebcc471f1d1d769da0923c9f99370caa899fafe8ac1bbd4e1d071b",
+    "workspace/inputs/01_finance_v2.md": "7d154bba07e3edc7bdc197da40b4e6f62b0b2fcf1a59e4b88690d60f9ed48f83",
+    "workspace/inputs/02_finance_v3.md": "f00b55f806270765f0a17ad26c89fbce20bfe8b2f866bf0b616efe1bbd57043e",
+    "workspace/inputs/03_operations_guide.md": "d3643eeda58a1662336e847eef2792f2b43fcd63e200b65b110e56d7b94cd36d",
+    "workspace/inputs/04_faq.md": "7e2612709f2b1a3cad43416cb97cf3a1efa79dabccb5b0d49e0cdad0d2f42e4a",
+    "workspace/inputs/05_finance_exception.md": "17c194b95fdd5913fcf7f1514d3bcd02e2ff0f19fc9facf4488b2de29ffb6e20",
+    "workspace/inputs/claims.csv": "c58b7839ff69122e28e94a6c505f9e1b038c1edaaa5962574314480b2e4d6da8",
+    "workspace/outputs/conflicts.json": "5cfd243840bb28fc49e661a73bb145ec7f16fff664b66cad8ddde856c3ccc4a4",
+    "workspace/outputs/decisions.csv": "d2a7f0595a85da41758dbf8a5832241fcec4693b872f0302a7b2a73cf3fcf12f",
+    "workspace/outputs/evidence_index.json": "5eda0d547080febef5f684f24de838c9b955fafb3c1773b99e746185796cdd0a",
+    "workspace/outputs/summary.json": "60460cc8dc391a5258698f541264945003add7bb684c15fcaa593e9aefcf3553",
+    "workspace/prompt.md": "dfc66b38e8b907c296dbba7d1340b7c6f919707c0f4fc94daa0d2752be71f552"
+  },
+  "filter": {
+    "allowed_lifecycle_events": [
+      "thread.started",
+      "turn.completed",
+      "turn.failed",
+      "turn.started"
+    ],
+    "allowed_item_types_for_item_completed": [
+      "agent_message",
+      "command_execution",
+      "error",
+      "file_change"
+    ],
+    "excluded": "all unknown/uncommitted events, hidden reasoning, system/developer prompts, Skill bodies, auth values",
+    "path_redaction": "Windows user-home prefixes replaced with <USER_HOME>",
+    "kept_events": 14,
+    "excluded_events": [
+      {
+        "source_index": 4,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 6,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 8,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 10,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 13,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 15,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 17,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      }
+    ],
+    "native_stdout_original_sha256": "93d9e66da7d2d8421d6820ff74119c4bf09814ed5b37e9f81016e407d50e454a",
+    "observed_json_original_sha256": "151005b06e74512fe1f5d0a773701ec33ecd7b7e7c0328e25187eb33fb053a9e",
+    "model_metadata_export": "Only allowlisted own session fields; ephemeral metadata absence reported, not inferred"
+  },
+  "artifacts_copied_without_edits": true,
+  "reviewed_at": "2026-10-13T13:03:47.939070+00:00",
+  "reviewer": "codex_pilot_adapter_author; root review before publication"
+}

@@ -45,7 +45,7 @@ $wbCli = 'E:\workbuddy\resources\app.asar.unpacked\cli\bin\codebuddy'
 
 启动元数据只显示 `model=auto`，无法据此认定底层模型。其 `tools` 字段列出包括 Bash / Skill / WebSearch 在内的完整列表，与请求子集不一致；缺少调用时无法证明限制的有效执行。原始流包含启动信息，必须经过人工脱敏与隐藏内容过滤后才能公开。以上预试不计入正式样本，不给产品打零分，也不纳入竞品排名。
 
-后续可使用桌面正常任务入口完成同一输入预试，或通过 CLI 自身正常 `/login` 流程完成登录；不应手工提取桌面认证值、伪造回答或注入完成事件。
+后续优先使用桌面正常任务入口完成同一输入预试。当前捆绑包不具备可直接使用的交互 `/login` 入口，详见下节；不应手工提取桌面认证值、伪造回答或注入完成事件。
 
 来源：[官方 CLI 参考](https://www.codebuddy.cn/docs/cli/cli-reference)、[官方无头模式](https://www.codebuddy.ai/docs/zh/cli/headless)、[官方 v2.143.0 发布说明](https://www.codebuddy.ai/docs/cli/release-notes/v2.143.0)。发布说明明确介绍 WorkBuddy 精简构建 `codebuddy-lite-wb`。网页索引可读，直接抓取页面本次超时；安装版本以本机证据为准。
 
@@ -58,3 +58,27 @@ $wbCli = 'E:\workbuddy\resources\app.asar.unpacked\cli\bin\codebuddy'
 `%USERPROFILE%\.workbuddy\wbipc\endpoint.json` 存在，包含 named-pipe 端点与认证 ticket；只确认存在，未输出值。已安装的 `resources\plugins\workbuddy-builtin\skills\library\workbuddy_ipc\__init__.py` 是标准库 IPC 客户端，公开 `connect`、`get_pipe`、`invoke` 原语，用于技能的宿主能力请求。未连接或调用，因其并非已核验的普通会话执行入口。存在 ticket 不能证明模型服务已经登录可用。
 
 `resources\wb-guest-sdk\wb.js` 的 guest bridge 存在 `sendPrompt`、`runPrompt`、`requests` 等会话方法，但它依赖桌面 renderer 的 `window.__wbInvoke` 通道；仅凭方法名称不能从外部直接调用，也没有在本次核对中控制 UI。
+
+## 用户需要的最小正常登录操作
+
+2026-10-13 再次只读核对后，应使用 WorkBuddy 桌面端登录，不要求用户导出 Cookie、token 或 API key，也不要求为了登录购买额度。内置 CLI 的认证错误不能说明桌面账号已退出登录。
+
+本机已安装客户端，用户可在 PowerShell 中运行以下命令打开它，也可点击现有 WorkBuddy 快捷方式：
+
+```powershell
+& 'E:\workbuddy\WorkBuddy.exe'
+```
+
+若客户端已经显示账户头像且可新建任务，保持该状态即可；无需重新登录。若显示登录按钮，点击后浏览器会打开 WorkBuddy 官方登录页。在页面弹窗勾选服务协议与隐私政策，用自己的微信扫码完成登录；也支持手机号、邮箱和 SSO。页面显示登录成功后，返回客户端，停在空白的新任务界面。以上流程来自 [WorkBuddy 官方 Windows 登录说明](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide#登录)，是账号认证步骤，不是账单或订阅操作。
+
+用户需要完成的只有其本人账号的正常扫码/验证码/SSO 认证，并让桌面新任务界面可用。后续任务输入、证据采集和产物核验由评测者完成；实际自动控制仍须单独验证，不以“用户已登录”代替已完成采集。
+
+### 为什么不提供当前内置 CLI 的 `/login` 命令
+
+[通用 CodeBuddy 官方快速入门](https://www.codebuddy.ai/docs/cli/quickstart)描述了交互 CLI 启动后选择登录渠道并打开浏览器，[slash commands 文档](https://www.codebuddy.ai/docs/cli/slash-commands)列出 `/login`。这是通用 CodeBuddy Code 文档，不能直接当作当前 WorkBuddy 精简捆绑包的可用入口。
+
+只读安装证据显示：当前 `bin/codebuddy` 在未指定非交互参数时加载 `dist/codebuddy.js`，而本机包只有 `dist/codebuddy-headless.js` 与 `dist/codebuddy-lite-wb.mjs`，没有 `dist/codebuddy.js`。`dist/web-ui/index.html` 也不存在。因此“直接运行内置 CLI，再输入 `/login`”不是本机已验证的可执行步骤。前述预试错误中的 `/login` 仅是普通认证错误文案，不证明相应界面存在。
+
+headless 安装源码具有 `/api/v1/auth/account/login` 与认证管理器代码，但没有核验它是当前桌面宿主正在提供的普通会话接口，也没有发现官方文档支持将现有桌面登录无值导出地迁入这个独立入口。单凭源码存在方法不能视为已可调用的宿主服务。没有读取或复制运行中进程认证值，没有调用该接口，也没有启动替代登录服务器。
+
+如果后续改用单独安装的完整 CodeBuddy Code 完成 CLI 登录，产品入口、认证路线与设置都已改变；应作为另一个明确配置的受控实验，不能把它的结果直接替代 WorkBuddy 桌面成绩。

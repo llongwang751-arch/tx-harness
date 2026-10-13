@@ -1,0 +1,8 @@
+{"received_at": "2026-10-13T12:49:57.834481+00:00", "source_stdout_line": 1, "frame": {"jsonrpc": "2.0", "id": 1, "result": {"serverInfo": {"name": "deepseek-harness-sdk-runtime", "version": "0.0.1"}}}}
+{"received_at": "2026-10-13T12:49:57.846177+00:00", "source_stdout_line": 6, "frame": {"jsonrpc": "2.0", "method": "session.status", "params": {"sessionId": "pilot-dsh-T04-964678a5-1298-4f88-abe4-68ba84c829ef", "status": "running"}}}
+{"received_at": "2026-10-13T12:49:57.848897+00:00", "source_stdout_line": 9, "frame": {"jsonrpc": "2.0", "id": 2, "result": {"messageId": "fc5c9c82-72cb-4590-a0e1-2a454b759edf"}}}
+{"received_at": "2026-10-13T12:50:38.180376+00:00", "source_stdout_line": 74, "frame": {"jsonrpc": "2.0", "method": "session.status", "params": {"sessionId": "pilot-dsh-T04-964678a5-1298-4f88-abe4-68ba84c829ef", "status": "idle"}}}
+{"received_at": "2026-10-13T12:50:56.232308+00:00", "source_stdout_line": 76, "frame": {"jsonrpc": "2.0", "method": "session.status", "params": {"sessionId": "pilot-dsh-T04-964678a5-1298-4f88-abe4-68ba84c829ef", "status": "running"}}}
+{"received_at": "2026-10-13T12:50:56.233476+00:00", "source_stdout_line": 79, "frame": {"jsonrpc": "2.0", "id": 3, "result": {"messageId": "6430763e-a3f8-45b2-8d06-42cae9cf5e42"}}}
+{"received_at": "2026-10-13T12:51:10.446075+00:00", "source_stdout_line": 118, "frame": {"jsonrpc": "2.0", "method": "session.status", "params": {"sessionId": "pilot-dsh-T04-964678a5-1298-4f88-abe4-68ba84c829ef", "status": "idle"}}}
+{"received_at": "2026-10-13T12:51:10.450536+00:00", "source_stdout_line": 119, "frame": {"jsonrpc": "2.0", "id": 4, "result": {}}}

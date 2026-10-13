@@ -1,6 +1,6 @@
-"""Run an independent, bounded Codex CLI pilot; default is a no-write dry run.
+"""Run an independent, bounded Codex CLI task; default is a no-write pilot plan.
 
-This is an adapter for a controlled CLI pilot, not the Codex desktop surface and
+This is an adapter for a controlled CLI entrypoint, not the Codex desktop surface and
 not a model/Skill/Harness causal comparison. It never uses the evaluator's agent
 as the tested product. Only --execute starts a real native Codex process.
 
@@ -155,10 +155,17 @@ def request_candidate(event):
     if item.get("type") != "agent_message":
         return None
     value = item.get("text", "")
-    rates = re.search(r"rates\.json|汇率|exchange\s+rates?", value, re.I)
-    asks = re.search(r"请.*(?:提供|补充|上传)|需要.*(?:提供|补充)|缺少|缺失|未提供|不存在|"
-                     r"missing|please.+(?:provide|supply|upload)|need.+(?:rates|file)", value, re.I)
-    return value if rates and asks else None
+    # Deliberately narrow: a future/hypothetical plan is not an input request.
+    # When meaning is uncertain, do not actively release; the 120-second
+    # passive release remains available and the full message is retained.
+    uncertain = re.search(r"若|如果|可能|会请求|请求补充|将请求|会请|将请|如缺|如未|"
+                          r"推荐|示例|例如|\b(?:if|would|will request|will ask)\b", value, re.I)
+    if uncertain:
+        return None
+    asks = re.search(r"(?:^|[。！？!?；;：:\n])\s*(?:[-*>]\s*)?"
+                     r"(?:请(?:提供|补充|上传)\s*[`\"“]?\s*(?:rates\.json|汇率(?:文件|表|数据)?)|"
+                     r"please\s+(?:provide|supply|upload)\s+(?:the\s+)?[`\"]?rates\.json)", value, re.I)
+    return value if asks else None
 
 
 def stop_tree(proc):
@@ -294,6 +301,8 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--case", choices=CASES, required=True)
     parser.add_argument("--replicate", type=int, choices=(1, 2, 3), default=1)
+    parser.add_argument("--track", choices=("pilot", "product_default"), default="pilot",
+                        help="Formal product_default requires a preregistered protocol before execution")
     parser.add_argument("--attempt", type=int, choices=range(1, 100), default=1,
                         help="Pilot infrastructure attempt; all earlier attempts remain preserved")
     parser.add_argument("--runs-dir", type=Path, default=ROOT / "private/codex-pilot")
@@ -309,8 +318,9 @@ def main(argv=None):
     # Attempt number belongs to the storage path, not the evaluator's closed
     # track vocabulary. The early attempt02 naming error is preserved in its
     # original private package; this fixes future collections without rerunning.
-    track = "pilot"
-    run_id = f"pilot-codex-{options.case}-r{options.replicate}"
+    track = options.track
+    run_id = f"{track}-codex-{options.case}-r{options.replicate}"
+    protocol = read_json(ROOT / "config/protocol.json")
     attempt_parent = Path() if options.attempt == 1 else Path(f"attempt{options.attempt:02d}")
     runs_dir = options.runs_dir.resolve() / attempt_parent
     run = runs_dir / run_id
@@ -320,7 +330,8 @@ def main(argv=None):
     args = command(executable, workspace, options.model, persist_session=options.case == "T04")
     plan = {"execute": options.execute, "run": str(run), "participant_workspace": str(workspace),
             "case": options.case, "attempt": options.attempt,
-            "surface": "controlled native Codex CLI pilot", "budget_seconds": 1200,
+            "surface": "controlled native Codex CLI", "track": track,
+            "protocol_status": protocol["status"], "budget_seconds": 1200,
             "command": public_command(args), "prompt": "exact case prompt plus uniform delivery suffix through stdin",
             "initial_files": ["prompt.md", "inputs/**", "empty outputs/"],
             "delivery_adapter_suffix": DELIVERY_SUFFIX,
@@ -336,6 +347,8 @@ def main(argv=None):
     if not options.execute:
         print(json.dumps(plan, ensure_ascii=False, indent=2))
         return 0
+    if track == "product_default" and protocol["status"] != "preregistered":
+        raise ValueError("Formal execution requires protocol.status=preregistered; no run was created.")
     if run.exists() or workspace.exists():
         raise ValueError("Run or participant workspace already exists; cannot overwrite or rerun selectively.")
     version = subprocess.run([str(executable), "--version"], capture_output=True, text=True,
@@ -417,7 +430,7 @@ def main(argv=None):
     timed_out = any(result["timed_out"] for result in results) or time.monotonic() > deadline
     delivered = len(collected["collected"]) == len(case["required_outputs"])
     status_name = "timeout" if timed_out else "completed" if delivered and original_unchanged and results[-1]["exit_code"] == 0 else "failed"
-    finish = append_event(run, "finish", f"Native CLI pilot ended: {status_name}; required-file presence does not assert correctness.",
+    finish = append_event(run, "finish", f"Native CLI {track} run ended: {status_name}; required-file presence does not assert correctness.",
                           ["evidence/collection.json"], now())
     command_finalize(argparse.Namespace(run=run, status=status_name, at=finish["at"],
                                         note="Native CLI execution and unmodified deliverables captured; awaiting correctness, semantic, privacy and manual review."))

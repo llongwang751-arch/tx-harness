@@ -1,0 +1,83 @@
+{
+  "original_private_files_sha256": {
+    "evaluation_snapshot.json": "d9ff11e5146e8fd429fd2e185d046269e76149df0236760536d65b2b46e352c0",
+    "events.jsonl": "ff0fee81dee7cafb31f8eb384a6392e8d0ef07f1fd27238b78081e147cc45a4d",
+    "evidence/collection.json": "55645d435323baf7c98febc6fd6f8760dbca15c653492e7b349cb4bed7f41a99",
+    "evidence/initial.observed.json": "a429de29065a6b6584d88417f78fbd4848fc000689df5fc7cd52e976d1ac5e0e",
+    "evidence/initial.result.json": "c3773afd86bede4b867d5cb37dd116325cb50cd5c52aee878bee2ff16bc2d548",
+    "evidence/initial.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/initial.stdout.jsonl": "3fb10f3b0e506e829cb0b04299eb44c025673b05a08f17977ab5865b4e207a38",
+    "evidence/launch.json": "1342b0079de101fe4226c3c59b8730586c9842654c0eaf426d8426e9615ff237",
+    "evidence/native-model-metadata.json": "5776a8c340edf2d32469509eb5a01e888e7b09886b7697c9d8941d6704729714",
+    "evidence/runner-source.py": "3a07b3e0766e2e0a29c35cd72b4f193d0f9438b610246c88f592295466c19f6b",
+    "evidence/submitted-prompt.md": "1bb66d05159e57be72c4b009e19536fb871adb01f656e4ec4f537723a7187a85",
+    "evidence/verification.json": "f6464f769ca29cbb3f81215279edbf437a7c79239f0dd79f0da1a5552aea6c62",
+    "manual.json": "ee4bffc6349d9290fc74db8563444449d164f6550c287a1bb695981839b3224c",
+    "meta.json": "1333f24a9fde6d79b5dfeeb09bca7bd573fa75ec9bd2be8b6e24455e073d0700",
+    "workspace/inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+    "workspace/inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7",
+    "workspace/inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+    "workspace/inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "workspace/outputs/bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+    "workspace/outputs/bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+    "workspace/outputs/bundle/contacts.csv": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+    "workspace/outputs/bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "workspace/outputs/change_log.json": "836f69635245e09c1a291cd13b32a8016a0b2305a7b7a2cbb3e516debe696c75",
+    "workspace/prompt.md": "237f743d161bbffe092914ecb6750c6e2e4c9de6c3fad5b3ff39d313aeff42e0"
+  },
+  "filter": {
+    "allowed_lifecycle_events": [
+      "thread.started",
+      "turn.completed",
+      "turn.failed",
+      "turn.started"
+    ],
+    "allowed_item_types_for_item_completed": [
+      "agent_message",
+      "command_execution",
+      "error",
+      "file_change"
+    ],
+    "excluded": "all unknown/uncommitted events, hidden reasoning, system/developer prompts, Skill bodies, auth values",
+    "path_redaction": "Windows user-home prefixes replaced with <USER_HOME>",
+    "kept_events": 12,
+    "excluded_events": [
+      {
+        "source_index": 4,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 6,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 8,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 10,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      },
+      {
+        "source_index": 13,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "reason": "uncommitted/unknown/not on user-visible whitelist"
+      }
+    ],
+    "native_stdout_original_sha256": "3fb10f3b0e506e829cb0b04299eb44c025673b05a08f17977ab5865b4e207a38",
+    "observed_json_original_sha256": "a429de29065a6b6584d88417f78fbd4848fc000689df5fc7cd52e976d1ac5e0e",
+    "model_metadata_export": "Only allowlisted own session fields; ephemeral metadata absence reported, not inferred"
+  },
+  "artifacts_copied_without_edits": true,
+  "reviewed_at": "2026-10-13T13:03:48.008731+00:00",
+  "reviewer": "codex_pilot_adapter_author; root review before publication"
+}

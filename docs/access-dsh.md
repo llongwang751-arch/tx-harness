@@ -102,6 +102,27 @@ Web 入口是 `dsh web --no-open`（默认 `127.0.0.1:3080`），桌面 Host 默
 
 原始 stdout、收集时间戳、实际提交文本、单次配置覆盖和运行元数据保存在 gitignored 的 `private/pilots/dsh-T01-r1/`；raw stdout 含 reasoning，因此不直接公开。公开证据须删除 reasoning 和私有系统内容，并另存转换说明。事件流存在字段截断限制，不能宣称完整观察到所有后台操作。
 
+## 真实 T04 同会话 SDK 预试
+
+2026-10-13 使用 `scripts/run_dsh_multiturn_pilot.py --execute` 执行 SDK stdio 的两轮任务。一次 `initialize` 固定 `deepseek-account / deepseek-flash / high` 和独立 cwd；两次 `session/prompt` 使用同一新 session，第二轮 completed `turn/end` 与 `idle` 后才调用 `shutdown`。没有 kill/resume 首轮，协议收据仅证明入队，任务完成另以原生生命周期通知核验。[rc.2 SDK profile](https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/bundle/sdk-app/README.md)、[SDK 方法与通知](https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/sdk/protocol/src/types.ts)
+
+| 阶段 | 实际现场（北京时间） |
+| --- | --- |
+| 初始任务 | 20:49:57.835，只提供 `trades.csv`；实际提示词附统一约定“将交付文件写入 outputs/，不要修改 inputs/。” |
+| 明确主动请求 | 20:50:38.179，第 40.345 秒；原文“请提供 rates.json；缺少汇率时无法完成换算。” |
+| 主动补发 | 20:50:56.231，第 58.397 秒；原 fixture SHA-256 `7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b`；统一恢复消息 |
+| 补发前产物 | 只有尚未恢复的 `incident.json`，没有最终台账或汇总 |
+| 恢复完成 | 20:51:10.446；总用时 72.611 秒；正常 shutdown，exit 0；无超时或强制终止 |
+| 客观检查 | 三个原生文件、7/7 检查通过，客观部分 60/60；最终金额 146636 分；仅作为预试事实 |
+
+操作人语义复核造成请求与补发间隔 18.052 秒，虽在 120 秒内完成主动补发，仍偏离“立即补发”的理想时序，因此不把这次预试用作正式速度比较。初始 `trades.csv` 的执行前后哈希相同，没有人工改写产物。
+
+SDK 现场出现三次 `pwsh` Windows ACL 错误和一次升级审批通道缺失。产品仍通过文件工具先记录初始阻塞，明确停止最终换算、等待汇率，随后读取补发文件并交付正确结果。这支持该环境下“请求缺失输入并在同会话恢复”的可见事实；仍不能单独归因计算正确，也不能泛化 ACL 问题。
+
+公开材料在 `public/pilots/dsh-T04-r1/`：初始输入与补发 fixture 分开保存，实际 SDK 控制帧、收据和 running/idle 通知、81 个父会话可见事件、原生文件、7/7 检查结果与脱敏说明齐备。全量 SDK wire 中的隐藏上下文与 reasoning 留在私有目录，公开投射不含这些内容。T04 使用 SDK profile，与 T01 的 headless profile 分开标记，不混入正式 75 次统计。
+
+后续若启动正式 DSH CLI 实验，应在冻结条件中为五个用例统一选择 SDK profile，固定账户路线、模型/effort、Sandbox 与内置 Skill 条件；不要在同一产品均分中混合 headless 与 SDK。当前仅完成接入预试，还没有据此启动正式轮次。
+
 ## 对评测的影响
 
 headless、sdk 与桌面由不同 profile composition 启动。若评测对象定义为桌面产品，CLI 得分不能直接替代桌面得分；如采用 headless，应在报告中明确 surface、profile、内置 Skill 和模型配置，所有轮次保持一致。本次预试支持单一用例的可见行为及产物事实，还不支持五产品排名或纯 Harness 的因果优劣结论。`workspace-write` 不限制所有读取、网络和进程，脚本没有实现外部 OS 级完全隔离；这个限制必须随结果披露。

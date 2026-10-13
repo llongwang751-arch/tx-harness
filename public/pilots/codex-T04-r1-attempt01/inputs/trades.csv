@@ -1,0 +1,7 @@
+trade_id,trade_date,currency,amount_minor,status
+F001,2026-10-01,USD,10000,settled
+F002,2026-10-01,EUR,5000,settled
+F003,2026-10-01,CNY,12345,settled
+F004,2026-10-02,USD,3350,settled
+F005,2026-10-02,EUR,101,settled
+F006,2026-10-02,USD,1000,pending
