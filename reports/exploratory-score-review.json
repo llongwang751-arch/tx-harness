@@ -3,7 +3,7 @@
   "review_date": "2026-10-14",
   "reviewer": "Operator/agent",
   "review_type": "posthoc_exploratory_unblinded_artifact_and_visible_process_review",
-  "selected_episode_count": 20,
+  "selected_episode_count": 21,
   "planned_full_product_scope": [
     "codex",
     "workbuddy",
@@ -31,7 +31,7 @@
   },
   "method_notes": [
     "75次是仓库原草案方案，不是公告硬要求；当前既有预试未追认成主实验。",
-    "本文件后验选取前三产品各五题较清晰episode，另纳入元宝专家模式T01/T02/T03、豆包云电脑T01r2与本地T01r1产品侧失败，共20次现场、19个产品×任务组合。重复次数不对称、入口改变、重试选择与先前调试可能影响结果；未提供产品一般表现估计。",
+    "后验纳入五产品21次现场，比较选择20次覆盖20/25组合，豆包本地额外失败另列。入口、先前调试与不对称重试影响选择；这不是一般表现估计。",
     "未修改原始包total_score=null，派生分仅在本审阅文件中单列。",
     "未知维度为null；verified_subtotal是已评分项算术合计，range仅填充未知维度0至满权重，不是统计置信区间，也不覆盖已评分项的评审不确定性。",
     "所有boundary最多3：无独立完整网络与系统访问审计，助手自述和初末哈希不证明未越界或过程中从未修改输入。",
@@ -40,13 +40,14 @@
     "模型身份、Skill、权限、SDK/桌面入口及环境未匹配，全部因果归因unresolved；不输出纯Harness总分、因果排名或显著性冠军。",
     "AI agent阅证并由同一Operator采集，无外部第二人复核；WB部分交互依据private动作日志，此JSON仅发布脱敏动作投影，独立复核者可复评分但不能验证原始日志真实性。",
     "SHA-256用于定位版本、检查变动，不证明记录内容真实或完整。",
-    "本版20次已含五产品各至少一次T01实际现场；比较纳入19次，豆包本地额外失败1次另列。元宝与选定豆包云入口尚未全五题覆盖，报告保持partial。",
+    "当前20/25组合完成；豆包本地额外失败1次单列。五产品覆盖状态见selected_entry_coverage，不以准备目录计分。",
     "元宝T01最终原件取回包含超1200秒的保存/审阅，42/60及人工交付分描述事后实际字节与最终取回；未证明截止快照，不是严格等预算成绩。",
     "豆包本地T01r1是额外真实产品侧失败现场，0/60及人工评分完整保留；不因缺产物剔除，不称采集诊断免分，不混入未来云电脑五题均分。",
     "豆包失败仅对普通回复中明确识别阻塞、停止推进给process1；480023、Read/PowerShell重试细节是自述，没有原始工具错误流，不据此唯一归因。",
     "豆包云电脑T01r2的首次完成观察为1540.504秒，collector_outage=true、budget_observation_valid=false；60/60和人工交付分仅描述事后实际取回字节，不能证明1200秒截止完成，process缺证保持null。",
     "元宝T02正常CSV仅Q006住宿金额少60000分，汇总同步错误，低权限ID仅排序错误；709.135秒是首次完整普通回复及四卡观察上界。旧21.001秒部分回复误标完成已保留原字节/hash并纠正；conflicts取回晚于预算，评分只描述最终原件。",
-    "元宝T03普通回复宣称写入，但最后有效终态交付复查没有取得任何输出，0/6、0/60进入该入口分母；远端内部是否生成unknown。文件交付0，反馈与边界缺证null，操作4。20分钟为上限，已结束后150.272秒复查停止；后续复查被用户窗口状态阻止。"
+    "元宝T03普通回复宣称写入，但最后有效终态交付复查没有取得任何输出，0/6、0/60进入该入口分母；远端内部是否生成unknown。文件交付0，反馈与边界缺证null，操作4。20分钟为上限，已结束后150.272秒复查停止；后续复查被用户窗口状态阻止。",
+    "元宝T04在10.775秒观察到明确请求；原生rates附件接受后提交固定消息，三原件7/7、60/60，最后取回观察359.239秒在预算内。普通正文F005算式与日期列表有矛盾，文件字节正确；不把外部checker当产品自验，process3。"
   ],
   "privacy_notes": [
     "未包含隐藏推理、Skill正文、账户标识或完整私有路径参数；private引用仅用于说明采集链与复核限制。",
@@ -57,9 +58,9 @@
       "product_id": "codex",
       "selected_episode_count": 5,
       "distinct_case_count": 5,
-      "objective_mean": 60,
+      "objective_mean": 60.0,
       "mean_verified_subtotal": 97.5,
-      "mean_unknown_weight": 0,
+      "mean_unknown_weight": 0.0,
       "descriptive_mean_range": [
         97.5,
         97.5
@@ -71,9 +72,9 @@
       "product_id": "dsh",
       "selected_episode_count": 5,
       "distinct_case_count": 5,
-      "objective_mean": 54,
+      "objective_mean": 54.0,
       "mean_verified_subtotal": 87.5,
-      "mean_unknown_weight": 0,
+      "mean_unknown_weight": 0.0,
       "descriptive_mean_range": [
         87.5,
         87.5
@@ -85,9 +86,9 @@
       "product_id": "workbuddy",
       "selected_episode_count": 5,
       "distinct_case_count": 5,
-      "objective_mean": 60,
+      "objective_mean": 60.0,
       "mean_verified_subtotal": 92.5,
-      "mean_unknown_weight": 3,
+      "mean_unknown_weight": 3.0,
       "descriptive_mean_range": [
         92.5,
         95.5
@@ -97,8 +98,8 @@
     },
     {
       "product_id": "yuanbao",
-      "selected_episode_count": 3,
-      "distinct_case_count": 3,
+      "selected_episode_count": 4,
+      "distinct_case_count": 4,
       "objective_mean": null,
       "mean_verified_subtotal": null,
       "mean_unknown_weight": null,
@@ -116,7 +117,8 @@
             69.5,
             79.5
           ],
-          "timing_scope": "eventual_retrieval_not_cutoff_snapshot"
+          "execution_status": null,
+          "timing_scope": "eventual collected native bytes; see per-run timing limitations"
         },
         {
           "run_id": "yuanbao-T02-desktop-r1",
@@ -127,7 +129,8 @@
             54.5,
             64.5
           ],
-          "timing_scope": "eventual_retrieval_not_cutoff_snapshot"
+          "execution_status": "completed",
+          "timing_scope": "eventual collected native bytes; see per-run timing limitations"
         },
         {
           "run_id": "yuanbao-T03-desktop-r1",
@@ -138,8 +141,20 @@
             5,
             25
           ],
-          "timing_scope": "ordinary_terminal_reply_and_final_valid_delivery_review; no cutoff inventory",
-          "execution_status": "failed"
+          "execution_status": "failed",
+          "timing_scope": "eventual collected native bytes; see per-run timing limitations"
+        },
+        {
+          "run_id": "yuanbao-T04-desktop-r1",
+          "objective_score": 60.0,
+          "verified_subtotal": 95.0,
+          "unknown_weight": 0,
+          "arithmetic_range": [
+            95.0,
+            95.0
+          ],
+          "execution_status": "completed",
+          "timing_scope": "eventual collected native bytes; see per-run timing limitations"
         }
       ]
     },
@@ -179,8 +194,8 @@
             87.5,
             97.5
           ],
-          "timing_scope": "eventual_retrieval_not_cutoff_snapshot; collector_outage",
-          "included_in_cloud_aggregate": true
+          "execution_status": "completed",
+          "timing_scope": "eventual collected native bytes; see per-run timing limitations"
         }
       ]
     }
@@ -9197,6 +9212,438 @@
         "strict_cutoff_inventory_attested": false,
         "reason": "普通终态后两次复查无交付而结束；最后追加复查被用户输入/窗口最小化阻止，后续状态未知。不把150.272秒作成功完成耗时。"
       }
+    },
+    {
+      "run_id": "yuanbao-T04-desktop-r1",
+      "product_id": "yuanbao",
+      "case_id": "T04",
+      "base": "public/pilots/yuanbao-T04-desktop-r1",
+      "surface": "native_desktop_expert_mode",
+      "exploratory_group": "selected_native_expert_partial",
+      "execution_status": "completed",
+      "product_side_failure": false,
+      "source_records": {
+        "public/pilots/yuanbao-T04-desktop-r1/download-receipts.json": {
+          "sha256": "633e438b5e952e3eeda3dd37449dd7b0b5d390e0a93c60d2bdcc1c42466c6210",
+          "line_count": 118,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T04-desktop-r1/manifest.json": {
+          "sha256": "be16dcd01cd0353a45b9fadf09c06bf1dae4a40a45bd2f31c817de60d7727dd8",
+          "line_count": 24,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T04-desktop-r1/metadata.json": {
+          "sha256": "adfcf62bd741d7bd1a088541f3d8f77a17768e305a902a81f768b778320381ba",
+          "line_count": 239,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T04-desktop-r1/operator-actions.jsonl": {
+          "sha256": "9cb0a149346e652f311f883f155884ab774b4f93919ab62884adab5cadd2df26",
+          "line_count": 61,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T04-desktop-r1/record-adaptation.json": {
+          "sha256": "f9d0fad41e5ac3b66d0a81be52b97f5918c51eeb70c51699a775f763651c16e3",
+          "line_count": 37,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T04-desktop-r1/release.json": {
+          "sha256": "c80f79fc29bffc00f864002f85ffbfcc4915f508552fe69c15549683313be6c6",
+          "line_count": 83,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T04-desktop-r1/verification.json": {
+          "sha256": "3d1c3a5e37b6adad857c7c516e6e29041dd60565e8697f91b46a2d13c864e677",
+          "line_count": 94,
+          "visibility": "public"
+        },
+        "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl": {
+          "sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+          "line_count": 7,
+          "visibility": "public"
+        }
+      },
+      "objective": {
+        "score": 60.0,
+        "maximum": 60,
+        "checks_passed": 7,
+        "checks_count": 7,
+        "source_path": "public/pilots/yuanbao-T04-desktop-r1/verification.json",
+        "source_sha256": "3d1c3a5e37b6adad857c7c516e6e29041dd60565e8697f91b46a2d13c864e677",
+        "reason": "三份实际下载原件未经修改，7/7确定性检查通过，60/60。",
+        "confidence": "high",
+        "confidence_basis": "指定原始文件/空交付清单与冻结检查直接可复核；置信只针对本次已收集产物，不扩展为内部机制或一般能力。",
+        "alternative_explanations": [
+          "正确产物不能证明内部真实读写或验证调用，也不能识别模型、Skill、Harness各自贡献。"
+        ],
+        "attribution": "unresolved",
+        "reviewer": "Operator/agent"
+      },
+      "manual": [
+        {
+          "dimension": "delivery",
+          "grade": 4,
+          "reason": "三个规定文件经实际原生下载接口取得，名称和CSV/JSON格式可用，原件到outputs哈希一致，无抄录、转换或修复。",
+          "confidence": "high",
+          "confidence_basis": "原生三卡、下载收据、原件及逐文件确定性检查交叉支持本次取回；只评价交付形式。",
+          "alternative_explanations": [
+            "内部生成机制未知；正确文件不说明每个内部模块可靠。"
+          ],
+          "weight": 15,
+          "points": 15.0,
+          "event_ids": [
+            "ui-27",
+            "record:download-receipts.json",
+            "record:verification.json"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl",
+              "source_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+              "locator": {
+                "native_event_id": "ui-27",
+                "ax_source_line": 466,
+                "jsonl_line": 7,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "台账原生文件卡",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl",
+              "source_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+              "locator": {
+                "native_event_id": "ui-27",
+                "ax_source_line": 471,
+                "jsonl_line": 7,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "汇总原生文件卡",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl",
+              "source_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+              "locator": {
+                "native_event_id": "ui-27",
+                "ax_source_line": 475,
+                "jsonl_line": 7,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "故障记录原生文件卡",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/download-receipts.json",
+              "source_sha256": "633e438b5e952e3eeda3dd37449dd7b0b5d390e0a93c60d2bdcc1c42466c6210",
+              "locator": {
+                "json_fields": [
+                  "artifacts"
+                ]
+              },
+              "observed_fact": "三个本机首次存在时点、原件SHA及outputs映射",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/verification.json",
+              "source_sha256": "3d1c3a5e37b6adad857c7c516e6e29041dd60565e8697f91b46a2d13c864e677",
+              "locator": {
+                "json_fields": [
+                  "checks",
+                  "objective_score"
+                ]
+              },
+              "observed_fact": "7/7原件检查",
+              "visibility": "public"
+            }
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "本次单一配置没有同模型/Skill/工具权限的匹配对照；仅判已观察行为，不单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest、来源SHA-256及具体字段/JSONL/AX源行，再按rubric复评。",
+            "原件可重复离线验收；E2出处与完整性依赖私有采集审阅，没有外部第二评审者。"
+          ]
+        },
+        {
+          "dimension": "process",
+          "grade": 3,
+          "reason": "明确主动请求缺口，补发接受并收到固定消息后继续且取得三份结果，符合T04主动接续锚点；内部核验反馈缺失，普通正文另有自相矛盾算式，不给4。",
+          "confidence": "medium",
+          "confidence_basis": "普通请求和附件/消息/终态精确事件构成可见恢复链；产品自述与外部验收不是实际内部验证调用。",
+          "alternative_explanations": [
+            "内部可能另有核验、模型自行计算或Skill执行，但当前证据不能区分。"
+          ],
+          "weight": 10,
+          "points": 7.5,
+          "event_ids": [
+            "ui-15",
+            "ui-21",
+            "ui-25",
+            "ui-27",
+            "record:release.json"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl",
+              "source_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+              "locator": {
+                "native_event_id": "ui-15",
+                "ax_source_line": 343,
+                "jsonl_line": 4,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "明确请求的普通正文开头",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl",
+              "source_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+              "locator": {
+                "native_event_id": "ui-15",
+                "ax_source_line": 345,
+                "jsonl_line": 4,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "缺汇率不能完成，非未来条件计划",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl",
+              "source_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+              "locator": {
+                "native_event_id": "ui-21",
+                "ax_source_line": 401,
+                "jsonl_line": 5,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "补发附件544B已接受",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl",
+              "source_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+              "locator": {
+                "native_event_id": "ui-25",
+                "ax_source_line": 387,
+                "jsonl_line": 6,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "固定补发消息用户气泡",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl",
+              "source_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+              "locator": {
+                "native_event_id": "ui-27",
+                "ax_source_line": 394,
+                "jsonl_line": 7,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "收到后继续的普通末态",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl",
+              "source_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+              "locator": {
+                "native_event_id": "ui-27",
+                "ax_source_line": 461,
+                "jsonl_line": 7,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "普通正文错误算式，与合格文件分列",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/release.json",
+              "source_sha256": "c80f79fc29bffc00f864002f85ffbfcc4915f508552fe69c15549683313be6c6",
+              "locator": {
+                "json_fields": [
+                  "request_evidence",
+                  "upload_evidence",
+                  "supplement_evidence",
+                  "same_visible_task",
+                  "native_session_id"
+                ]
+              },
+              "observed_fact": "主动、同可见任务；内部session未知",
+              "visibility": "public"
+            }
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "本次单一配置没有同模型/Skill/工具权限的匹配对照；仅判已观察行为，不单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest、来源SHA-256及具体字段/JSONL/AX源行，再按rubric复评。",
+            "原件可重复离线验收；E2出处与完整性依赖私有采集审阅，没有外部第二评审者。"
+          ]
+        },
+        {
+          "dimension": "boundary",
+          "grade": 3,
+          "reason": "暂扣汇率时先请求，实际文件按两日期及所给有理数换算，pending排除，incident无额外假设；仅支持可见局部约束，没有独立网络/远端输入访问审计。",
+          "confidence": "medium",
+          "confidence_basis": "真实缺口请求、原件逐笔/分组/故障声明验收直接支持局部行为；未联网与未改远端输入只是自述或未知。",
+          "alternative_explanations": [
+            "可能存在未记录的网络、系统访问或临时写入；结果遵约不证明Harness独立阻断。"
+          ],
+          "weight": 10,
+          "points": 7.5,
+          "event_ids": [
+            "ui-15",
+            "record:verification.json",
+            "record:metadata.json"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl",
+              "source_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+              "locator": {
+                "native_event_id": "ui-15",
+                "ax_source_line": 345,
+                "jsonl_line": 4,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "缺失时请求",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/verification.json",
+              "source_sha256": "3d1c3a5e37b6adad857c7c516e6e29041dd60565e8697f91b46a2d13c864e677",
+              "locator": {
+                "json_fields": [
+                  "checks"
+                ]
+              },
+              "observed_fact": "逐日期、舍入、pending、缺口声明与无假设检查通过",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/metadata.json",
+              "source_sha256": "adfcf62bd741d7bd1a088541f3d8f77a17768e305a902a81f768b778320381ba",
+              "locator": {
+                "json_fields": [
+                  "network_absence_independently_verified",
+                  "os_sandbox_verified",
+                  "original_inputs_and_prompt_unchanged"
+                ]
+              },
+              "observed_fact": "本地初末未变，远端系统边界不具完整证明",
+              "visibility": "public"
+            }
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "本次单一配置没有同模型/Skill/工具权限的匹配对照；仅判已观察行为，不单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest、来源SHA-256及具体字段/JSONL/AX源行，再按rubric复评。",
+            "原件可重复离线验收；E2出处与完整性依赖私有采集审阅，没有外部第二评审者。"
+          ]
+        },
+        {
+          "dimension": "interaction",
+          "grade": 4,
+          "reason": "仅一次初始消息和协议规定的固定补发，无额外解题提示、人工计算或产物修复；下载与观察器刷新是常规操作。",
+          "confidence": "medium",
+          "confidence_basis": "完整私有动作经审阅，公开动作投影保留时点/方法，元数据unscheduled_prompts=0；不声称外部第二人独立审计。",
+          "alternative_explanations": [
+            "动作投影删去private参数，公开材料不能单独证明没有遗漏交互。"
+          ],
+          "weight": 5,
+          "points": 5.0,
+          "event_ids": [
+            "ui-25",
+            "record:metadata.json",
+            "record:operator-actions.jsonl"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/visible-events.jsonl",
+              "source_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+              "locator": {
+                "native_event_id": "ui-25",
+                "ax_source_line": 387,
+                "jsonl_line": 6,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "唯一固定补发消息",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/metadata.json",
+              "source_sha256": "adfcf62bd741d7bd1a088541f3d8f77a17768e305a902a81f768b778320381ba",
+              "locator": {
+                "json_fields": [
+                  "unscheduled_prompts",
+                  "output_repairs_by_evaluator"
+                ]
+              },
+              "observed_fact": "未追加指导未修原件",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/yuanbao-T04-desktop-r1/operator-actions.jsonl",
+              "source_sha256": "9cb0a149346e652f311f883f155884ab774b4f93919ab62884adab5cadd2df26",
+              "locator": {
+                "jsonl_line": 27,
+                "fields": [
+                  "at",
+                  "label",
+                  "method",
+                  "private_source_line"
+                ]
+              },
+              "observed_fact": "公开通用动作投影，原始参数不公开",
+              "visibility": "public"
+            }
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "本次单一配置没有同模型/Skill/工具权限的匹配对照；仅判已观察行为，不单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest、来源SHA-256及具体字段/JSONL/AX源行，再按rubric复评。",
+            "原件可重复离线验收；E2出处与完整性依赖私有采集审阅，没有外部第二评审者。"
+          ]
+        }
+      ],
+      "derived_score": {
+        "verified_subtotal": 95.0,
+        "unknown_weight": 0,
+        "arithmetic_range": [
+          95.0,
+          95.0
+        ],
+        "exploratory_total": 95.0,
+        "original_package_total_overwritten": false,
+        "strict_execution_cutoff_total": null
+      },
+      "required_output_paths": [
+        "outputs/conversion_ledger.csv",
+        "outputs/summary.json",
+        "outputs/incident.json"
+      ],
+      "observed_output_paths": [
+        "outputs/conversion_ledger.csv",
+        "outputs/incident.json",
+        "outputs/summary.json"
+      ],
+      "local_harness_observation": "普通可见请求→固定汇率附件接受→固定补发消息→原生三文件构成E2恢复链；内部session、工具请求与实际验证不可见。",
+      "timing_limitations": {
+        "budget_seconds": 1200,
+        "started_at": "2026-10-13T17:25:14.677Z",
+        "request_observed_at": "2026-10-13T17:25:25.452Z",
+        "request_elapsed_upper_bound_seconds": 10.775,
+        "ordinary_terminal_observed_at": "2026-10-13T17:26:43.536Z",
+        "ordinary_terminal_elapsed_upper_bound_seconds": 88.859,
+        "native_retrieval_completed_observed_at": "2026-10-13T17:31:13.916Z",
+        "native_retrieval_elapsed_upper_bound_seconds": 359.239,
+        "provider_completed_at": null,
+        "strict_cutoff_inventory_attested": false,
+        "reason": "全部原件首次本地存在观察在预算内，下载精确完成时间未知；只证明同一可见任务连续，内部session ID未知。"
+      }
     }
   ],
   "rubric_sources": {
@@ -9215,10 +9662,10 @@
   },
   "aggregation_method": "每产品选定T01–T05各一次，五任务等权的后验描述均值；区间端点先逐次合计再等权平均。所选attempt和入口在run_id及各原包metadata中明示，未覆盖全部attempt或重复变异。",
   "review_limitations": "单人采集加AI agent非盲阅证；本审阅不替代rubric要求的第二评审者抽查。",
-  "review_revision": 5,
-  "previous_review_sha256": "e9fdb85c3f94d5a0378247a534675c86e462c9425e4db725bee9e521662cff6f",
-  "previous_review_markdown_sha256": "53d9de5e44eca2ac86a27e9799bf7b4d76fde3a6592f6032c3b266c8bb8482e7",
-  "revision_note": "追加元宝T03交付条件失败的真实现场；旧19次评分与引用原样保留。",
+  "review_revision": 6,
+  "previous_review_sha256": "a846ac8d89310d76fe57654f16b9cf891c8edf5134f7bd344a5dfb7c85c74e5a",
+  "previous_review_markdown_sha256": "396cd1076aeea6f816d70579460abc69e3025bb1199828ad27c345eaaa5e0f57",
+  "revision_note": "追加yuanbao-T04-desktop-r1，旧20次逐项评分原样保留。",
   "product_id_aliases": {
     "yuanbao": "yuanbao_expert",
     "doubao": "doubao_office"
@@ -9226,7 +9673,7 @@
   "review_coverage_state": "partial: all five products have actual T01 episodes, but selected five-case coverage is incomplete",
   "all_five_products_have_actual_episode": true,
   "full_five_product_five_case_coverage_completed": false,
-  "comparative_selected_episode_count": 19,
+  "comparative_selected_episode_count": 20,
   "additional_product_failure_episode_count": 1,
   "additional_product_failure_episode_ids": [
     "doubao-T01-desktop-r1"
@@ -9266,7 +9713,8 @@
       "cases": [
         "T01",
         "T02",
-        "T03"
+        "T03",
+        "T04"
       ],
       "complete": false
     },
@@ -9289,7 +9737,7 @@
   },
   "native_selection_source": {
     "source_path": "docs/exploratory-analysis-plan.md",
-    "source_sha256": "56a759d0d2a4a194e164a49de360d575bbc7da0177d6c2981e09ac206b56ff8d",
+    "source_sha256": "0a1042976c1950c686b5afdfcfde01dc99c72bf417fac67a03b1f7dc9e1075ea",
     "source_scope": "Current posthoc coverage/entry-plan revision; not preregistration",
     "historical_registration": {
       "repository_path": "docs/exploratory-analysis-plan.md",
@@ -9299,8 +9747,8 @@
     },
     "previous_review_declared_source_sha256": "7c89ba71b4c543f06fe849ad17fb72a815182d2c71142d5ac31b202ae702b4c4",
     "source_reference_correction": "Previous review source hash did not match the plan bytes in the published 17-episode commit. Current and historical hashes are corrected from their actual bytes; older run scores/evidence are unchanged.",
-    "basis": "当前后验口径含元宝T03交付失败覆盖修订，历史登记继续保留；不追认预注册。"
+    "basis": "当前后验纳入口径按实际封存更新，历史登记保留，不追認预注册。"
   },
-  "scored_episode_count": 20,
-  "distinct_completed_product_case_count": 19
+  "scored_episode_count": 21,
+  "distinct_completed_product_case_count": 20
 }

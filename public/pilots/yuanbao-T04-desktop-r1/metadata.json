@@ -1,0 +1,239 @@
+{
+  "schema": "office-harness-pilot-v1",
+  "run_id": "yuanbao-T04-desktop-r1",
+  "product_id": "yuanbao",
+  "case_id": "T04",
+  "attempt": 1,
+  "track": "pilot",
+  "formal_eligible": false,
+  "formal_sample": false,
+  "execution_status": "completed",
+  "execution_status_basis": "Recorded execution-end.status; never inferred from objective checks",
+  "product_side_failure": false,
+  "product_failure_label": null,
+  "failure_label_semantics": null,
+  "surface": "native_desktop_office_task_via_documented_native_CUA",
+  "visible_conditions": {
+    "mode_visible": "专家模式",
+    "mode_observation_scope": "Native visible mode label before exact prompt submission",
+    "execution_location_visible": "remote internal workspace unknown",
+    "version_visible": "unknown",
+    "installed_binary_version": "unknown",
+    "version_evidence_scope": "unknown",
+    "model_visible": "unknown",
+    "model_selector_changed": false,
+    "account_tier": "unknown",
+    "permission_visible": "unknown",
+    "memory_condition": "new visible conversation; account-level memory unknown",
+    "skill_condition": "unknown; hidden Skill text not inspected",
+    "network_control_visible": "unknown",
+    "region": "unknown"
+  },
+  "underlying_model_version": null,
+  "model_visibility": "Visible UI label if captured; dynamic/backend routing unknown, not attested",
+  "active_skills": null,
+  "skills_disabled_verified": false,
+  "actual_tool_calls": null,
+  "os_sandbox_verified": false,
+  "network_absence_independently_verified": false,
+  "remote_filesystem_visibility": "unknown; local staging paths do not attest server paths or permissions",
+  "attachment_mapping": [
+    {
+      "logical_path": "inputs/trades.csv",
+      "actual_attachment_name": "trades.csv",
+      "upload_status": "accepted",
+      "accepted_observed_at": "2026-10-13T17:24:34.912Z",
+      "actual_server_path": null,
+      "evidence": {
+        "event_id": "ui-9",
+        "capture": "t04-trades-accepted",
+        "line_ranges": [
+          [
+            281,
+            283
+          ]
+        ],
+        "private_ax_sha256": "45b850141143b817dd05b8336c13a4ebc69eec18f702117773a1a7c81e9c5da3"
+      }
+    }
+  ],
+  "attachment_mapping_complete": true,
+  "started_at": "2026-10-13T17:25:14.677Z",
+  "start_basis": "Operator timestamp around native submit; precise service receipt unknown",
+  "completion_observed_at": "2026-10-13T17:26:43.536Z",
+  "completion_basis": "Ordinary response ended with three native output cards and idle send control. All three corresponding native originals were subsequently obtained through the actual download interfaces and preserved unchanged before the deadline.",
+  "elapsed_to_completion_observation_seconds": 88.859,
+  "timed_out": false,
+  "budget_observation_valid": true,
+  "collector_outage": false,
+  "timeout_seconds": 1200,
+  "timing_basis": "Submit-action/observation to observed completion; service timing unknown; download times reported separately",
+  "initial_inventory": {
+    "inputs/trades.csv": "ab1cf7d7ce65cb0aefd865268d2aad72fc5835c1293719d37f99080dc86005d8",
+    "prompt.md": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202"
+  },
+  "original_inputs_and_prompt_unchanged": true,
+  "final_local_inventory": {
+    "inputs/rates.json": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+    "inputs/trades.csv": "ab1cf7d7ce65cb0aefd865268d2aad72fc5835c1293719d37f99080dc86005d8",
+    "outputs/conversion_ledger.csv": "303e6149f3f4c710f9af7fc981bd166a536886bc7647f637a1ea562633e6d0ee",
+    "outputs/incident.json": "02b5927361de90c15820593a5bca48ea05d5dd9314ae03e0da0a4b80e3ded6f0",
+    "outputs/summary.json": "a854bf227acfea04ea2f194fd1369565f1f671b8f8b4a8743f3f9d478a45978d",
+    "prompt.md": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202"
+  },
+  "case_prompt_sha256": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202",
+  "recorded_paste_source_sha256": "c8bfc3dc2df32ed846ff2e50ae1abf73e632fa313b8dc72192e5c4338e5d1c0c",
+  "actual_paste_source_sha256": "c8bfc3dc2df32ed846ff2e50ae1abf73e632fa313b8dc72192e5c4338e5d1c0c",
+  "actual_paste_source_visibility": "Operator/agent-attested source used in native paste",
+  "actual_wire_bytes_sha256": null,
+  "prompt_adapter_appendix": "将交付文件写入 outputs/，不要修改 inputs/。",
+  "prompt_transport": "Recorded UTF-8 paste source; native UI submit observed; outbound/internal model-request bytes unknown",
+  "prepare_source_sha256": {
+    "run_native_office_pilot.py": "e4e854a211ff10e8bcf951c9ebc7afe9c9b46ad64aae2978db2acf99eb280f73"
+  },
+  "export_source_sha256": {
+    "run_native_office_pilot.py": "3bfc87758ff85486a1f0f108c4e6a54965b44550d9876f0b8c95e85e0d4b2d70"
+  },
+  "collector_source_sha256": {
+    "workbuddy_desktop_collector.mjs": "a72cdf89fff4e7592249e90f21f7acee2a5b40eb15c781d3bcd3a7307e664b91"
+  },
+  "checker_snapshot": {
+    "harness_eval/core.py": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20",
+    "config/protocol.json": "5e543191e6869f032adb8d1847834abf3430132f5ee33c8e18b520c68f9261e9",
+    "config/rubric.json": "8ce034208b1b56cc6f432bfd681d13edad0036c59ee01a83b4a5c40b3d9c62f0",
+    "cases/T04/case.json": "bb4b9f288f224c445ee1db2a4844e9b269d7cef7b6e333921fd758e2cbfc4aaf",
+    "cases/T04/oracle.json": "c5223d1f2ec78cd91eb262afb1055edd02a208f449b9406904793892d4045f0a"
+  },
+  "private_capture_sha256": {
+    "evidence/009-t04-trades-accepted.ax.txt": "45b850141143b817dd05b8336c13a4ebc69eec18f702117773a1a7c81e9c5da3",
+    "evidence/011-t04-prompt-focus-check.ax.txt": "11dda06c95ec1fc35f63072738d0cadb0954ce9d5a4df31919c447eba611cbf9",
+    "evidence/014-t04-execution-confirmed.ax.txt": "76df643424e5002dcd2ca9e7d8c3a9e5a657e9ba7d1dbc2b3dc6d0ff03916eff",
+    "evidence/015-t04-request-watch-01.ax.txt": "31c0c517634da3817dcf52a70f47fbaeb008c2b8ff05df8849a58ec337fdc376",
+    "evidence/021-t04-rates-upload-accepted.ax.txt": "ccbc60fae9bc94f985587b643cb1d7bfd1dfbeed14010d2d7f94f88c65b23ec4",
+    "evidence/025-t04-supplement-sent-confirmed.ax.txt": "cd46fb1c0f55cf8430de08627c97eedb2a33a10b5dd57af55f7e3bfeea31e6de",
+    "evidence/027-t04-ordinary-reply-terminal.ax.txt": "e2e973108835956ed9733af7ddb208fd6283a1238414418ac8ff95ac01043469"
+  },
+  "private_capture_hash_scope": "Reviewed selected AX sources only; unrelated/unselected observations remain private",
+  "product_deliverables": {
+    "conversion_ledger.csv": "303e6149f3f4c710f9af7fc981bd166a536886bc7647f637a1ea562633e6d0ee",
+    "incident.json": "02b5927361de90c15820593a5bca48ea05d5dd9314ae03e0da0a4b80e3ded6f0",
+    "summary.json": "a854bf227acfea04ea2f194fd1369565f1f671b8f8b4a8743f3f9d478a45978d"
+  },
+  "native_originals": {
+    "conversion_ledger.csv": "303e6149f3f4c710f9af7fc981bd166a536886bc7647f637a1ea562633e6d0ee",
+    "incident.json": "02b5927361de90c15820593a5bca48ea05d5dd9314ae03e0da0a4b80e3ded6f0",
+    "summary.json": "a854bf227acfea04ea2f194fd1369565f1f671b8f8b4a8743f3f9d478a45978d"
+  },
+  "native_original_storage_directory": "native-downloads is a storage directory name; actual download/export/local-file origin is recorded per receipt",
+  "download_receipts_sha256": "633e438b5e952e3eeda3dd37449dd7b0b5d390e0a93c60d2bdcc1c42466c6210",
+  "release": {
+    "mode": "active",
+    "semantics_reviewed": true,
+    "request_observed_at": "2026-10-13T17:25:25.452Z",
+    "request_evidence": {
+      "event_id": "ui-15",
+      "capture": "t04-request-watch-01",
+      "line_ranges": [
+        [
+          343,
+          343
+        ],
+        [
+          344,
+          344
+        ],
+        [
+          345,
+          345
+        ]
+      ],
+      "private_ax_sha256": "31c0c517634da3817dcf52a70f47fbaeb008c2b8ff05df8849a58ec337fdc376"
+    },
+    "upload_available_observed_at": "2026-10-13T17:25:57.473Z",
+    "upload_evidence": {
+      "event_id": "ui-21",
+      "capture": "t04-rates-upload-accepted",
+      "line_ranges": [
+        [
+          399,
+          399
+        ],
+        [
+          400,
+          400
+        ],
+        [
+          401,
+          401
+        ]
+      ],
+      "private_ax_sha256": "ccbc60fae9bc94f985587b643cb1d7bfd1dfbeed14010d2d7f94f88c65b23ec4"
+    },
+    "supplement_sent_observed_at": "2026-10-13T17:26:21.642Z",
+    "supplement_evidence": {
+      "event_id": "ui-25",
+      "capture": "t04-supplement-sent-confirmed",
+      "line_ranges": [
+        [
+          383,
+          383
+        ],
+        [
+          384,
+          384
+        ],
+        [
+          385,
+          385
+        ],
+        [
+          386,
+          386
+        ],
+        [
+          387,
+          387
+        ]
+      ],
+      "private_ax_sha256": "cd46fb1c0f55cf8430de08627c97eedb2a33a10b5dd57af55f7e3bfeea31e6de"
+    },
+    "source_file_sha256": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+    "actual_remote_bytes_sha256": null,
+    "actual_remote_bytes_visibility": "unknown; local upload source and accepted UI attachment observed",
+    "response_text": "补充文件 rates.json 已提供。请使用其中按交易日期区分的汇率继续原任务，保留缺失输入及恢复记录。",
+    "response_text_sha256": "2de25b498cc2c51468d3aea1934da4174695074b81bff9b197d1848928710c10",
+    "same_visible_task": true,
+    "native_session_id": null,
+    "observer_delay_seconds": 32.021,
+    "message_after_file_observation_seconds": 24.169,
+    "local_file_copy_is_remote_availability_proof": false,
+    "private_original_release_record_sha256": "00936fb969c93528e670c8ebaf025505e4dd3725a56837611a6ab651ab43af94"
+  },
+  "output_repairs_by_evaluator": false,
+  "unscheduled_prompts": 0,
+  "objective_score": 60.0,
+  "manual_score": null,
+  "total_score": null,
+  "pure_harness_score": null,
+  "evidence_level": "E2; selected visible native UI observations plus native downloaded/exported/local artifact bytes",
+  "public_review_actor": "Operator/agent; no external human audit claimed",
+  "collector_issues": [
+    "Native screenshots reject multiple regions in the Windows file picker; actual picker state was preserved with documented AX-only observations.",
+    "Offscreen card clicks were rejected before action; subsequent fresh visible observations located the cards.",
+    "One user-input-detected click refusal was resolved by fresh documented window state observation; same task and restored-size window were confirmed."
+  ],
+  "retrieval_limitations": [
+    "Exact native download completion times are unavailable; save actions and first local existence observations are recorded separately."
+  ],
+  "redaction": "Exact operator/agent-reviewed AX slices only; raw screenshots, thinking/planning, hidden system/Skill text, account/history, private paths and signed URLs excluded",
+  "visible_events_order": "Stable chronological received_at; source_line refers to private AX source, not a tool-call sequence",
+  "visible_events_projection_sha256": "de04f2fd3ffba325497352ff47a9cfae11155c040d93b4292192b0a807fb5fab",
+  "confidence": "High for preserved native-original/output byte equality and deterministic checks; E2 provenance depends on cited actual UI observations; internal causation unresolved",
+  "attribution": "One recorded end-to-end configuration; no isolated Model/Skill/Harness causal score",
+  "limitations": [
+    "Preparation and file hashes do not prove remote input decoding, file paths or server execution.",
+    "Visible labels and replies do not attest backend model, active Skills or full actual tool/network actions.",
+    "All native originals are retained; local storage copies do not imply download, and archive-member mappings are transparent storage operations, not output repair.",
+    "One exploratory pilot, not a formal replicate; no external human audit claimed."
+  ]
+}

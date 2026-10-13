@@ -1,0 +1,37 @@
+{
+  "schema": "native-record-adaptation-v1",
+  "run_id": "yuanbao-T04-desktop-r1",
+  "changes": [
+    {
+      "field": "capture-log AX/screenshot path references",
+      "reason": "collector evidence stored under evidence/; exporter-compatible root mapping prefixes paths only; no observation time, source byte or label changed",
+      "source_private_record": "evidence/capture-log.jsonl",
+      "source_sha256": "54bc407374fdce426f319c5c394297b188b8f9dee6d2a64edb642fb1c9d0a0c0",
+      "mapped_sha256": "9776b660d34839ff51648becc609e97f5519b7b85f5b578c276418816e7cb1d8",
+      "records": 65
+    },
+    {
+      "field": "public-review exact ordinary reply selections",
+      "reason": "root independently reviewed task fragments and native outputs; added AX source lines 461–464 and 496 to preserve ordinary narrative contradictions separately from passing original artifacts",
+      "source_private_record": "public-review-before-root-narrative-audit.json",
+      "source_sha256": "3eba15e32a2bc3666edf913f7153f80aa6628f736cc8fae0ce7121cd150b6742",
+      "output_repairs": false
+    },
+    {
+      "field": "initial accepted trades attachment evidence reference",
+      "reason": "accepted observation timestamp was17:24:34.912 but reference pointed to a later execution-confirmed bubble; now references actual earlier accepted capture9 AX281–283, timestamps unchanged",
+      "source_private_record": "public-review-before-root-input-reference.json",
+      "source_sha256": "d0a27358507b18d6ba15f8e39cac9cc2a7055d0ccba218f50239dc8dbf02960c"
+    },
+    {
+      "field": "public operator action projection",
+      "reason": "Preserves61 actual times, methods and generic labels; args/results withheld for private UI/path content",
+      "source_private_record": "operator-actions-private.jsonl",
+      "source_sha256": "300a2c4a36695ba6bc183c3deec2c1c18b83110d76139b54c4af531f651bfbb1",
+      "records": 61
+    }
+  ],
+  "private_full_state_public": false,
+  "product_bytes_changed": false,
+  "interpretation": "F005 actual amount is 101*799/100=806.99 rounded to807; ordinary final reply wrongly writes807.99→808 but also says807. Date list ordinary text contains a stray2026-02 then corrects it. Native files contain807 and correct two dates. These text inconsistencies do not fail file objective checks."
+}

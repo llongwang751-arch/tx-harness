@@ -1,0 +1,83 @@
+{
+  "mode": "active",
+  "semantics_reviewed": true,
+  "request_observed_at": "2026-10-13T17:25:25.452Z",
+  "request_evidence": {
+    "event_id": "ui-15",
+    "capture": "t04-request-watch-01",
+    "line_ranges": [
+      [
+        343,
+        343
+      ],
+      [
+        344,
+        344
+      ],
+      [
+        345,
+        345
+      ]
+    ],
+    "private_ax_sha256": "31c0c517634da3817dcf52a70f47fbaeb008c2b8ff05df8849a58ec337fdc376"
+  },
+  "upload_available_observed_at": "2026-10-13T17:25:57.473Z",
+  "upload_evidence": {
+    "event_id": "ui-21",
+    "capture": "t04-rates-upload-accepted",
+    "line_ranges": [
+      [
+        399,
+        399
+      ],
+      [
+        400,
+        400
+      ],
+      [
+        401,
+        401
+      ]
+    ],
+    "private_ax_sha256": "ccbc60fae9bc94f985587b643cb1d7bfd1dfbeed14010d2d7f94f88c65b23ec4"
+  },
+  "supplement_sent_observed_at": "2026-10-13T17:26:21.642Z",
+  "supplement_evidence": {
+    "event_id": "ui-25",
+    "capture": "t04-supplement-sent-confirmed",
+    "line_ranges": [
+      [
+        383,
+        383
+      ],
+      [
+        384,
+        384
+      ],
+      [
+        385,
+        385
+      ],
+      [
+        386,
+        386
+      ],
+      [
+        387,
+        387
+      ]
+    ],
+    "private_ax_sha256": "cd46fb1c0f55cf8430de08627c97eedb2a33a10b5dd57af55f7e3bfeea31e6de"
+  },
+  "source_file_sha256": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+  "actual_remote_bytes_sha256": null,
+  "actual_remote_bytes_visibility": "unknown; local upload source and accepted UI attachment observed",
+  "response_text": "补充文件 rates.json 已提供。请使用其中按交易日期区分的汇率继续原任务，保留缺失输入及恢复记录。",
+  "response_text_sha256": "2de25b498cc2c51468d3aea1934da4174695074b81bff9b197d1848928710c10",
+  "same_visible_task": true,
+  "native_session_id": null,
+  "observer_delay_seconds": 32.021,
+  "message_after_file_observation_seconds": 24.169,
+  "local_file_copy_is_remote_availability_proof": false,
+  "private_original_release_record_sha256": "00936fb969c93528e670c8ebaf025505e4dd3725a56837611a6ab651ab43af94"
+}
