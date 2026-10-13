@@ -1,0 +1,24 @@
+{
+  "schema": "private-capture-log-relative-path-adaptation-v1",
+  "source": "evidence/capture-log.jsonl",
+  "source_sha256": "5c0a3ac41f942f792d5e755199b6100411c59a7b2735bf69b5db008ac127acfe",
+  "normalized": "capture-log.jsonl",
+  "normalized_sha256": "29b49788471ae4f5471548a60a19c46243e69643d40301e860f9af0e3803a3fd",
+  "changes": "Prefix AX/screenshot paths with evidence/ and add matching ax_file aliases; preserve the original raw collector log unchanged.",
+  "raw_collector_source": "collector-source/workbuddy_desktop_collector.mjs",
+  "raw_collector_source_sha256": "a72cdf89fff4e7592249e90f21f7acee2a5b40eb15c781d3bcd3a7307e664b91",
+  "source_script_sha256": "a72cdf89fff4e7592249e90f21f7acee2a5b40eb15c781d3bcd3a7307e664b91",
+  "root_review": {
+    "source_private_record": "public-review-before-root-first-terminal.json",
+    "source_sha256": "965224657b2e2fe675b8b0f027a19c552883e9b03237fdace640edaaf7598973",
+    "reason": "Independently audited all selected ordinary task snippets and native originals. Added capture14 same exact ordinary reply/card/idle lines as15 to expose actual earliest terminal observation at17:41:16.103; no times or product bytes changed.",
+    "source_action_record_sha256": "d40e4da52cdbac9d02bed161ff3dd26fbf44dcad48c25c72ecf911f7d7dca15e",
+    "operator_projection_records": 49,
+    "projection_only_fields": [
+      "at",
+      "label",
+      "method"
+    ],
+    "product_bytes_changed": false
+  }
+}

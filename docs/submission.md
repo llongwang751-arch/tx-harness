@@ -1,16 +1,22 @@
-# 提交前检查
+# 提交与复核
 
-提交内容必须含个人公开GitHub仓库链接和基于实际记录的书面报告。本地方案与报告框架尚不能替代五产品评测结果。
+本次按公告允许的任务复现与过程追溯路径交付。五产品各五题的当前实际覆盖见[报告](../reports/report.md)和[后验评分](../reports/exploratory-score-review.json)；准备目录不算已测试。原75次确认性实验是作者提出的后续草案，不是公告规定的提交次数，不追认本次预试。
 
-1. 将产品入口、模式、模型和版本锁定，完成pilot；公告“豆包办公”的指代确认后再冻结。
-2. 协议改为preregistered，提交冻结commit，生成75个实验位。源码、检查权重、任务及答案的变更开启新批次，不修改原批次的判定条件。
-3. 采集75个有效槽位；保留失败、不支持及外部环境故障原记录。每项人工评分引用现场，缺证据不填写总分。
-4. 完成公开材料的人工审查并export至public/runs。Git忽略本地runs与private；在副本所在的commit再次运行score/report确认哈希一致。
-5. 完成书面报告，把每条得分理由和归因主张链接至公开证据；补充姓名、入口、采集日期、复核者及局限。
-6. 运行 `python -m harness_eval audit` 与 `python -m unittest discover -s tests -v`，确保报告统计与逐次记录一致。
-7. 在个人GitHub账号创建公开仓库，上传项目、MIT许可证和经过审查的public目录；确认游客可以访问代码、报告和证据。不上传.env、账号令牌、私有聊天或未审查原始录制。
-8. 把真实仓库链接填入README、报告和周报；不要用占位URL提交。
+1. 提交个人公开仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)，使用分支`codex/evaluation`并记录实际提交commit。
+2. 阅读[分析口径](exploratory-analysis-plan.md)、[五套用例](../cases)、[打分细则](rubric.md)和[证据索引](../public/pilots/README.md)。报告逐题结果须与原件、检查和人工理由对应。
+3. 按索引复核指定原件及manifest；评分JSON每项保留来源SHA-256、定位、置信依据、替代解释和归因。失败、诊断、重试与协议偏离全部保留。
+4. 分开报告端到端正确性与Harness执行边界。模型、Skill、权限未匹配时不发布纯Harness因果排名；E2界面标签不补成内部工具调用。
+5. 明确单人非盲审阅、不同入口和计时精度、采集中断、预算后取回与缺证项。未知为null，范围是算术展开，不是统计置信区间。
 
-本工具的export只复制本地文件；本项目已另行发布到个人公开仓库 [llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。该发布包括方法、代码与经过审查的预试，仍不能代替五产品正式结果。大录像可采用Git LFS或稳定公开附件，记录URL、SHA-256及定位时间；如果外置证据，当前工具要求本地复核副本仍放到原evidence路径，再验证封存。不能只给需登录才能访问的临时链接。
+公开包只含经精确审阅的任务片段、原件和来源收据。账号、其他会话、私有路径、签名URL、隐藏推理及Skill正文不公开。哈希支持定位和改动检查，不能独立证明来源真实性。避免需要登录才能访问的临时证据链接。
 
-每周六更新个人邮件周报的“本周项目进展、本周难点突破、下周计划”。第一份可准备于2026-10-17（周六），下周为2026-10-24；公告未说明收件人、发送时间或最终截止日期。仓库保存草稿与发送日期记录，邮件发送和自动提醒须由用户明确提出。
+```powershell
+python -X utf8 -m harness_eval audit
+python -X utf8 scripts/verify_public_pilots.py
+python -X utf8 scripts/audit_harness_observations.py
+python -X utf8 -m unittest discover -s tests -v
+```
+
+若另做75次确认性实验，应先统一条件、冻结新的预注册commit，再执行随机计划；它属于另一个研究批次，不修改当前封存包或给既有现场倒填预注册状态。
+
+周六周报应含本周进展、难点突破、下周计划。当前保存[2026-10-17邮件草稿](../reports/weekly-2026-10-17-draft.md)，用户暂不处理邮件发送；没有发送邮件或建立自动任务。
