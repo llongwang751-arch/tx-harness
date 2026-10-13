@@ -54,6 +54,13 @@ def main():
             if (result["objective_score"] != prior["objective_score"] or
                     result["all_checks_passed"] != prior["all_checks_passed"]):
                 raise ValueError(f"Artifact result changed: {folder.name}")
+            fields = ("id", "weight", "path", "passed", "sha256")
+            current_checks = [{key: check.get(key) for key in fields}
+                              for check in result["checks"]]
+            recorded_checks = [{key: check.get(key) for key in fields}
+                               for check in prior.get("checks", [])]
+            if current_checks != recorded_checks:
+                raise ValueError(f"Per-check result changed: {folder.name}")
             passed = sum(check["passed"] for check in result["checks"])
             print(f"{folder.name}: manifest OK; {case_id} {passed}/{len(result['checks'])}; "
                   f"artifact score {result['objective_score']}/60; pilot only")

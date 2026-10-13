@@ -1,0 +1,49 @@
+{
+  "schema": "sdk-transmission-receipt-v1",
+  "source": "actual outbound session/prompt JSON-RPC frames; each has exactly one text contentBlock",
+  "source_private_sent_sha256": "e9bf053bab34ef7d0e7476cba2a8fe343d7d6972e56afc35c0c920c1d63a471c",
+  "published_sdk_sent_sha256": "cdb1ab488526cd2c6298c49ffe629332dacc3f845e653fa26174fc8557257054",
+  "hash_scope": "decoded contentBlocks[0].text UTF-8 bytes; not the JSON-RPC envelope",
+  "transmissions": [
+    {
+      "phase": "initial",
+      "request_id": 2,
+      "sent_at": "2026-10-13T13:20:05.711643+00:00",
+      "session_id": "pilot-dsh-sdk-T03-2d4b880f-82ed-4989-818d-825a16e33500",
+      "text_block_count": 1,
+      "encoding": "UTF-8",
+      "file": "prompt.md",
+      "content_sha256": "bb6d8f0bdd7d03a54f30958b448b467a60ac5331ef66887d8319af87109a16be",
+      "content_crlf_count": 0,
+      "content_lf_count": 28,
+      "content_utf8_bytes": 1814
+    }
+  ],
+  "recorded_prompt_file": "prompt-recorded-file.md",
+  "recorded_prompt_file_sha256": "a103ab92221b5a119fcc009fddbbfd7454d115601b32b314b37912e24b366208",
+  "recorded_prompt_crlf_count": 28,
+  "correction": {
+    "corrected_at": "2026-10-13T13:38:11.805432+00:00",
+    "previously_mislabeled_actual_transmission_sha256": "a103ab92221b5a119fcc009fddbbfd7454d115601b32b314b37912e24b366208",
+    "previous_manifest_sha256": "9adcc5f43d6e8098e0a554d7412bf54e65eb8f8bce8780362a06bf0e1c77423d",
+    "reason": "Initial export mislabeled the Windows CRLF disk-record hash as actual transmitted text. SDK content was LF; actual UTF-8 bytes reconstructed directly from sent frames. Prior recorded bytes retained without changing native artifacts or visible events.",
+    "prior_export_scope": "prior local uncommitted SDK export"
+  },
+  "native_outputs_sha256_unchanged": {
+    "bundle/.probe": "25be323556dad377abb57fe7ec8c4b99a6527f488dda28d0c9b686528659c909",
+    "bundle/_probe_bom.txt": "1220caf912196af70b1b0625cd99989bbb360bf911a109927854227ddbe76e86",
+    "bundle/_probe_bom_mid.txt": "d2256da5822d877e7575f284631c384b1a8283f59c5e8eedc05b1faf36b3d14d",
+    "bundle/_probe_cr_mid.txt": "16fda59e65d5fce2054f135184cae5c2aa72a42e4dec3281b11500d9d5966d19",
+    "bundle/_probe_crlf.txt": "911169ddaaf146aff539f58c26c489af3b892dff0fe283c1c264c65ae5aa59a2",
+    "bundle/_probe_lf.txt": "911169ddaaf146aff539f58c26c489af3b892dff0fe283c1c264c65ae5aa59a2",
+    "bundle/_probe_lf_nonl.txt": "7e18f737311b2dc3b2f269dd78396b0351f14fb66efa879f768cb23181883c78",
+    "bundle/_probe_true_crlf.txt": "09834d488008f5f1ef589a2d7cedc52425bee9dd23b2212e4c1d673c5cbb54e4",
+    "bundle/_probe_true_lf.txt": "09834d488008f5f1ef589a2d7cedc52425bee9dd23b2212e4c1d673c5cbb54e4",
+    "bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+    "bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+    "bundle/contacts.csv": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+    "bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "change_log.json": "7e81f1343f537c4b848b59a5d443033a8f9cd235834f6e7fde7606476c4f0adf"
+  },
+  "visible_events_sha256_unchanged": "9b30075bcab0712022bba2d973db4259ff3c32f08fdb2cbc2c5014f6d4293af2"
+}

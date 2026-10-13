@@ -1,0 +1,21 @@
+{
+  "case-prompt.md": "dfc66b38e8b907c296dbba7d1340b7c6f919707c0f4fc94daa0d2752be71f552",
+  "metadata.json": "6c3cebf8a5c85a054c3f10dd2c7c394f2656c92b79148204fc0021171cc79726",
+  "README.md": "38f9d759cf1c26a3964174ccd5fa0caf1a859e4d295e4626dc7f76faef94a0ba",
+  "submitted-prompt.txt": "28ca8c81efe7d0d71d85593ba5639f38795b5b686ccbf6fe93fcc0f6e6c5e07c",
+  "verification.json": "da030722c30586bee1f98cbc7093e97ee3bf99717a76883028f64c4265cc78b5",
+  "visible-events.jsonl": "7c0f7f891d425a7ffa2969bb36c5108d74b1df8c20b9feaba10ab090d61cf0c3",
+  "collector-source/run_workbuddy_desktop_pilot.py": "0f94100d7664cf0171f4dfccc1c0429b428cca9833e22e7af13662ea54c348e0",
+  "collector-source/workbuddy_desktop_collector.mjs": "2286d1918860d95591f9f4f09bd6c67b5937121aba225cef326844139503ebc8",
+  "inputs/00_evaluation_contract.md": "2f1d7899ceebcc471f1d1d769da0923c9f99370caa899fafe8ac1bbd4e1d071b",
+  "inputs/01_finance_v2.md": "7d154bba07e3edc7bdc197da40b4e6f62b0b2fcf1a59e4b88690d60f9ed48f83",
+  "inputs/02_finance_v3.md": "f00b55f806270765f0a17ad26c89fbce20bfe8b2f866bf0b616efe1bbd57043e",
+  "inputs/03_operations_guide.md": "d3643eeda58a1662336e847eef2792f2b43fcd63e200b65b110e56d7b94cd36d",
+  "inputs/04_faq.md": "7e2612709f2b1a3cad43416cb97cf3a1efa79dabccb5b0d49e0cdad0d2f42e4a",
+  "inputs/05_finance_exception.md": "17c194b95fdd5913fcf7f1514d3bcd02e2ff0f19fc9facf4488b2de29ffb6e20",
+  "inputs/claims.csv": "c58b7839ff69122e28e94a6c505f9e1b038c1edaaa5962574314480b2e4d6da8",
+  "outputs/conflicts.json": "73f1779136b25333052cab27ae1ecef9d835e9f8ab6d12561753dc280b949b9f",
+  "outputs/decisions.csv": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de",
+  "outputs/evidence_index.json": "e174a58b06b0319a05c258feb146b1f697248a5433bb8fe8ee8b7648c0d02f90",
+  "outputs/summary.json": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0"
+}

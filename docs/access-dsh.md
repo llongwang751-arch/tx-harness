@@ -1,6 +1,6 @@
 # DeepSeek Harness 接入核验
 
-核验日期：2026-10-13。本文记录接入条件、官方接口和一次真实 T01 接入预试。预试不计入正式产品排名。
+核验日期：2026-10-13。本文记录接入条件、官方接口、headless T01与五任务SDK预试。预试不计入正式产品排名。
 
 ## 本机已确认的状态
 
@@ -100,7 +100,7 @@ Web 入口是 `dsh web --no-open`（默认 `127.0.0.1:3080`），桌面 Host 默
 - `aggregate.json`：`670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e`
 - `exceptions.json`：`4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106`
 
-原始 stdout、收集时间戳、实际提交文本、单次配置覆盖和运行元数据保存在 gitignored 的 `private/pilots/dsh-T01-r1/`；raw stdout 含 reasoning，因此不直接公开。公开证据须删除 reasoning 和私有系统内容，并另存转换说明。事件流存在字段截断限制，不能宣称完整观察到所有后台操作。
+原始stdout、接收时间戳、提示词记录文件、单次配置覆盖和运行元数据保存在gitignored的`private/pilots/dsh-T01-r1/`；raw stdout含reasoning，因此不直接公开。headless的prompt.md是Windows CRLF磁盘记录，未独立捕获出站stdin字节，实际发送文本哈希保持未知。公开证据省略reasoning和私有系统内容，另存转换说明；事件流也有截断限制，不能宣称完整观察所有后台操作。
 
 ## 真实 T04 同会话 SDK 预试
 
@@ -123,6 +123,14 @@ SDK 现场出现三次 `pwsh` Windows ACL 错误和一次升级审批通道缺�
 
 后续若启动正式 DSH CLI 实验，应在冻结条件中为五个用例统一选择 SDK profile，固定账户路线、模型/effort、Sandbox 与内置 Skill 条件；不要在同一产品均分中混合 headless 与 SDK。当前仅完成接入预试，还没有据此启动正式轮次。
 
+## 五任务SDK覆盖预检
+
+使用新适配器`run_dsh_sdk_pilot.py --case T01..T05 --execute`，补做T01/T02/T03/T05，同账户四任务并发峰值4。SDK T01、T02、T03分别通过8/8、7/7、6/6；T05为6/8，产物30/60，真实金额错误保留；加上先前T04构成五任务覆盖。T03规定文件之外还有九个产品探针，全部原字节公开，不把机器满分等同无缺陷交付。
+
+新任务区间从session/prompt发送开始，排除启动和initialize；并发等待不用于速度排名。模型仅为requested-not-attested，诊断Skill仍可用，home/profile默认组合未完全排除。代码快照与真实收据见各包adapter-source，详细条件、失败和责任范围见[覆盖报告](../reports/dsh-sdk-coverage.md)。
+
+SDK提示词实际发送内容已由真实出站文本块重建。Windows磁盘记录的CRLF哈希曾被误标为发送哈希，现保留原记录与纠错收据，实际LF内容分开保存；原生outputs与可见事件未改变。文本块UTF-8哈希不等于整个JSON-RPC封包哈希。
+
 ## 对评测的影响
 
-headless、sdk 与桌面由不同 profile composition 启动。若评测对象定义为桌面产品，CLI 得分不能直接替代桌面得分；如采用 headless，应在报告中明确 surface、profile、内置 Skill 和模型配置，所有轮次保持一致。本次预试支持单一用例的可见行为及产物事实，还不支持五产品排名或纯 Harness 的因果优劣结论。`workspace-write` 不限制所有读取、网络和进程，脚本没有实现外部 OS 级完全隔离；这个限制必须随结果披露。
+headless、sdk与桌面由不同profile composition启动。若对象定义为桌面产品，CLI不能直接替代桌面得分；正式方案必须明确并固定surface、profile、Skill和模型配置。本次预试支持已执行用例的可见行为及产物事实，不支持五产品排名或纯Harness因果优劣。`workspace-write`不限制所有读取、网络和进程，脚本没有实现外部OS完全隔离；此限制随结果披露。

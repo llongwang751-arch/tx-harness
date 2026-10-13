@@ -2,7 +2,7 @@
 
 本包是 2026-10-13 的一次真实 DSH T01 接入预试，不进入正式 75 次样本的分母，也不构成桌面 UI 表现或纯 Harness 因果结论。
 
-`outputs/`、`inputs/` 与实际提交的 `prompt.md` 均逐字节复制。文件 SHA-256 与执行收集的元数据一致。公开元数据中的私有源文件摘要用于关联原始记录，摘要本身不能证明现场真实性。原始文件留在 gitignored 的 private/pilots/dsh-T01-r1；没有公开 raw stdout。
+`outputs/`、`inputs/` 与提示词磁盘记录 `prompt.md` 均逐字节复制；`prompt.md` 含 CRLF。此前误称它为实际提交文本，现明确它不能证明精确出站 stdin 字节：没有独立的 outbound stdin 捕获，实际发送字节 SHA-256 为 unknown/null，不推断 LF，也不以当前代码回填。文件 SHA-256 与执行收集的元数据一致。公开元数据中的私有源文件摘要用于关联原始记录，摘要本身不能证明现场真实性。原始文件留在 gitignored 的 private/pilots/dsh-T01-r1；没有公开 raw stdout。
 
 过滤规则：
 

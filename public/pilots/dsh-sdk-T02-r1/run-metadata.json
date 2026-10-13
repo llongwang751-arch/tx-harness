@@ -1,0 +1,150 @@
+{
+  "product": "dsh",
+  "surface": "desktop-bundled CLI",
+  "profile": "sdk",
+  "track": "pilot",
+  "case": "T02",
+  "replicate": 1,
+  "installation_version": "0.2.0-rc.2",
+  "requested_provider": "deepseek-account",
+  "requested_model": "deepseek-flash",
+  "requested_reasoning_effort": "high",
+  "timeout_seconds": 1200,
+  "release_deadline_seconds": null,
+  "manual_interventions": 0,
+  "concurrency": {
+    "group": "sdk-coverage-20261013",
+    "maximum": 4,
+    "same_product_account": true,
+    "timing_limitation": "May include shared account/service/CPU contention; not a single-task speed comparison"
+  },
+  "initial_files": {
+    "inputs/00_evaluation_contract.md": "2f1d7899ceebcc471f1d1d769da0923c9f99370caa899fafe8ac1bbd4e1d071b",
+    "inputs/01_finance_v2.md": "7d154bba07e3edc7bdc197da40b4e6f62b0b2fcf1a59e4b88690d60f9ed48f83",
+    "inputs/02_finance_v3.md": "f00b55f806270765f0a17ad26c89fbce20bfe8b2f866bf0b616efe1bbd57043e",
+    "inputs/03_operations_guide.md": "d3643eeda58a1662336e847eef2792f2b43fcd63e200b65b110e56d7b94cd36d",
+    "inputs/04_faq.md": "7e2612709f2b1a3cad43416cb97cf3a1efa79dabccb5b0d49e0cdad0d2f42e4a",
+    "inputs/05_finance_exception.md": "17c194b95fdd5913fcf7f1514d3bcd02e2ff0f19fc9facf4488b2de29ffb6e20",
+    "inputs/claims.csv": "c58b7839ff69122e28e94a6c505f9e1b038c1edaaa5962574314480b2e4d6da8",
+    "prompt.md": "4d1b97e111a964f09dc26e856eb8be26296de06a291b841fe37daf779ce965e0"
+  },
+  "patch_sha256": "1bd6b59916c83fb79dd9dabb0cefda6f7c53262c43dd20abeb28e5678579bacb",
+  "runner_sha256": "02bd67a75ae7c319ca2ee4f04dc0c2f6b20349b0d5ab590b3300bc7a46fe1cc8",
+  "adapter_dependency_sha256": {
+    "run_dsh_sdk_pilot.py": "02bd67a75ae7c319ca2ee4f04dc0c2f6b20349b0d5ab590b3300bc7a46fe1cc8",
+    "run_dsh_multiturn_pilot.py": "0b2899b87a456df40cb72fd5130667ceec73e00354e4d85f05939d8224fbcb34",
+    "run_dsh_pilot.py": "b4fb519d8ce1f7fc26180ebb2591a1c301ba23afa85a41894933680b320479a0"
+  },
+  "session_id": "pilot-dsh-sdk-T02-b3c962d7-af2f-44ce-a1da-8222f142f930",
+  "sandbox": "workspace-write",
+  "task_network_tool": "disabled",
+  "skills": "user/project roots disabled; product bundled Office skills retained",
+  "runtime_started_at": "2026-10-13T13:20:03.516529+00:00",
+  "state": "completed_observed_interval",
+  "initialize_result": {
+    "serverInfo": {
+      "name": "deepseek-harness-sdk-runtime",
+      "version": "0.0.1"
+    }
+  },
+  "started_at": "2026-10-13T13:20:05.711332+00:00",
+  "initial_prompt_receipt": {
+    "messageId": "d5b0d87f-fd45-46d4-aa0a-8235501ddc5e"
+  },
+  "timed_out": false,
+  "finished_at": "2026-10-13T13:20:38.865717+00:00",
+  "elapsed_seconds": 33.154,
+  "parent_turn_ends": [
+    {
+      "received_at": "2026-10-13T13:20:38.864608+00:00",
+      "source_stdout_line": 93,
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  ],
+  "final_files": {
+    "inputs/00_evaluation_contract.md": "2f1d7899ceebcc471f1d1d769da0923c9f99370caa899fafe8ac1bbd4e1d071b",
+    "inputs/01_finance_v2.md": "7d154bba07e3edc7bdc197da40b4e6f62b0b2fcf1a59e4b88690d60f9ed48f83",
+    "inputs/02_finance_v3.md": "f00b55f806270765f0a17ad26c89fbce20bfe8b2f866bf0b616efe1bbd57043e",
+    "inputs/03_operations_guide.md": "d3643eeda58a1662336e847eef2792f2b43fcd63e200b65b110e56d7b94cd36d",
+    "inputs/04_faq.md": "7e2612709f2b1a3cad43416cb97cf3a1efa79dabccb5b0d49e0cdad0d2f42e4a",
+    "inputs/05_finance_exception.md": "17c194b95fdd5913fcf7f1514d3bcd02e2ff0f19fc9facf4488b2de29ffb6e20",
+    "inputs/claims.csv": "c58b7839ff69122e28e94a6c505f9e1b038c1edaaa5962574314480b2e4d6da8",
+    "outputs/conflicts.json": "a46add5c549db7843a039920904f05d81512b260e6bc65bff44b14bb672c39cb",
+    "outputs/decisions.csv": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de",
+    "outputs/evidence_index.json": "21093d0ace44a24d0c3a1d5a04510e1821a1d917d9cd1d863762f34385f236eb",
+    "outputs/summary.json": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0",
+    "prompt.md": "4d1b97e111a964f09dc26e856eb8be26296de06a291b841fe37daf779ce965e0"
+  },
+  "outputs": {
+    "conflicts.json": "a46add5c549db7843a039920904f05d81512b260e6bc65bff44b14bb672c39cb",
+    "decisions.csv": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de",
+    "evidence_index.json": "21093d0ace44a24d0c3a1d5a04510e1821a1d917d9cd1d863762f34385f236eb",
+    "summary.json": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0"
+  },
+  "shutdown_sent_at": "2026-10-13T13:20:38.869542+00:00",
+  "shutdown_result": {},
+  "exit_code": 0,
+  "runtime_finished_at": "2026-10-13T13:20:38.897482+00:00",
+  "schema": "office-harness-pilot-v1",
+  "product_id": "dsh",
+  "case_id": "T02",
+  "evidence_type": "actual_product_pilot",
+  "formal_eligible": false,
+  "eligible_for_formal_comparison": false,
+  "total_score": null,
+  "participant_workspace": "<participant_workspace>",
+  "operating_system": "Windows",
+  "adapter_forced_termination": false,
+  "case_prompt_sha256": "dfc66b38e8b907c296dbba7d1340b7c6f919707c0f4fc94daa0d2752be71f552",
+  "actual_transmission_sha256": "fc1e3010c1e1f9127a15384211c0005336f21c4ec9e12581d75d947a51d2d60a",
+  "input_delivery": "canonical inputs copied before the single native SDK prompt; no supplementary release",
+  "original_inputs_unchanged": true,
+  "extra_native_outputs": [],
+  "model_visibility": "requested-not-attested",
+  "model_identity_note": "deepseek-account / deepseek-flash / high requested explicitly; initialize receipt accepts setup, not backend model attestation",
+  "observed_skill_calls": [
+    "diagnose-windows-sandbox-acl"
+  ],
+  "parent_visible_event_counts": {
+    "status": 20,
+    "text": 9,
+    "tool_call": 20,
+    "tool_result": 20
+  },
+  "raw_wire_private": true,
+  "public_projection_scope": "same-parent committed text, tool calls/results, lifecycle and SDK receipts; child-session events excluded",
+  "sdk_control_receipt_semantics": "messageId means durable enqueue; completion separately observed by same-parent turn/end and idle",
+  "private_source_sha256": {
+    "adapter-source/run_dsh_multiturn_pilot.py": "0b2899b87a456df40cb72fd5130667ceec73e00354e4d85f05939d8224fbcb34",
+    "adapter-source/run_dsh_pilot.py": "b4fb519d8ce1f7fc26180ebb2591a1c301ba23afa85a41894933680b320479a0",
+    "adapter-source/run_dsh_sdk_pilot.py": "02bd67a75ae7c319ca2ee4f04dc0c2f6b20349b0d5ab590b3300bc7a46fe1cc8",
+    "objective-checks.json": "0dfb719207c7b1a11f5efbf31ee0ae0b10b80cae9633fe00547d11f8db79d9a6",
+    "one-run.patch.yml": "1bd6b59916c83fb79dd9dabb0cefda6f7c53262c43dd20abeb28e5678579bacb",
+    "received.jsonl": "5f5b6bbfb90d3f5c8c20564225e1c7e30513eb691f2253d9515eea45f379e5d0",
+    "run.json": "c166e72e5e1294f38a6158aa692ecfca8f7ec374cdf791b9207b9c54b7123cbe",
+    "sent.jsonl": "523967b8c23a3d39f372dda8e0cad1232ae160b875dc64acd883e610fcb9d15f",
+    "stderr.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.raw": "e13f811539dc3c05620cec122235ca84ec0af81b58df442e0ff6f22467ac5ed6",
+    "submitted-prompt.md": "4d1b97e111a964f09dc26e856eb8be26296de06a291b841fe37daf779ce965e0",
+    "visible-parent-events.jsonl": "973271124bb654ea4c8c97008db643eaa80fc6fe85ae3c027c34c7a95d936697"
+  },
+  "objective_result": "7/7 passed; objective 60.0/60; pilot only",
+  "limitations": [
+    "Single non-formal attempt, no retries or selection of best results.",
+    "Four concurrent pilots used the same product account; elapsed time is not single-task speed data.",
+    "Requested model is not independently attested.",
+    "Workspace-write and disabled web tool do not prove read/network/process confinement.",
+    "Default home/profile preferences beyond the explicit overlay may remain.",
+    "Product Office and embedded diagnostic Skills remain available; not a no-Skill treatment.",
+    "Public projection excludes hidden context and child sessions; visible parent subagent call/result remain.",
+    "Deterministic checks do not assign delivery-quality or causal Harness scores."
+  ],
+  "actual_transmission_file": "prompt.md",
+  "recorded_prompt_file": "prompt-recorded-file.md",
+  "recorded_prompt_file_sha256": "4d1b97e111a964f09dc26e856eb8be26296de06a291b841fe37daf779ce965e0",
+  "prompt_hash_semantics": "actual_transmission hashes decoded SDK contentBlocks[0].text UTF-8 bytes; recorded disk file contains CRLF; whole JSON-RPC envelope is a different scope",
+  "file_inventory_scope": "initial_files/final_files refer to original native workspace disk files; their prompt.md is preserved as the recorded prompt file",
+  "transmission_correction_receipt": "transmission-receipt.json"
+}

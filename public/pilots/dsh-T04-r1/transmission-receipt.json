@@ -1,0 +1,51 @@
+{
+  "schema": "sdk-transmission-receipt-v1",
+  "source": "actual outbound session/prompt JSON-RPC frames; each has exactly one text contentBlock",
+  "source_private_sent_sha256": "332bfbaaf1056876f0b324186874f0db275b052c7876d4f15b7f41e0fdbfd3d3",
+  "published_sdk_sent_sha256": "3d6af9137e50d6892145690df36ba16561370a4e9e073ac8ea9c9306c4f2557c",
+  "hash_scope": "decoded contentBlocks[0].text UTF-8 bytes; not the JSON-RPC envelope",
+  "transmissions": [
+    {
+      "phase": "initial",
+      "request_id": 2,
+      "sent_at": "2026-10-13T12:49:57.834632+00:00",
+      "session_id": "pilot-dsh-T04-964678a5-1298-4f88-abe4-68ba84c829ef",
+      "text_block_count": 1,
+      "encoding": "UTF-8",
+      "file": "wire-prompt.md",
+      "content_sha256": "04c9639dbe78fc3159cf7b6ac44dc4ec25a82aba704382ff86fa376bef1fb7d9",
+      "content_crlf_count": 0,
+      "content_lf_count": 34,
+      "content_utf8_bytes": 2535
+    },
+    {
+      "phase": "supplementary",
+      "request_id": 3,
+      "sent_at": "2026-10-13T12:50:56.231580+00:00",
+      "session_id": "pilot-dsh-T04-964678a5-1298-4f88-abe4-68ba84c829ef",
+      "text_block_count": 1,
+      "encoding": "UTF-8",
+      "file": "wire-supplement-prompt.md",
+      "content_sha256": "2de25b498cc2c51468d3aea1934da4174695074b81bff9b197d1848928710c10",
+      "content_crlf_count": 0,
+      "content_lf_count": 0,
+      "content_utf8_bytes": 135
+    }
+  ],
+  "recorded_prompt_file": "prompt.md",
+  "recorded_prompt_file_sha256": "1c69407d1bd8e99eb3ef843ddbc4504b75a814d5562f3431ccb1dfce3edb261b",
+  "recorded_prompt_crlf_count": 34,
+  "correction": {
+    "corrected_at": "2026-10-13T13:38:11.805432+00:00",
+    "previously_mislabeled_actual_transmission_sha256": "1c69407d1bd8e99eb3ef843ddbc4504b75a814d5562f3431ccb1dfce3edb261b",
+    "previous_manifest_sha256": "7044eaa2c86018f954d4dcb0c800653a93b6f9dba65b93264201be2b2b93fc80",
+    "reason": "Initial export mislabeled the Windows CRLF disk-record hash as actual transmitted text. SDK content was LF; actual UTF-8 bytes reconstructed directly from sent frames. Prior recorded bytes retained without changing native artifacts or visible events.",
+    "prior_export_scope": "published T04 package"
+  },
+  "native_outputs_sha256_unchanged": {
+    "conversion_ledger.csv": "63baae4a370316cc8a8dd6d1b89e8df75b9f152037caf765f0ee9aba58e3c791",
+    "incident.json": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4",
+    "summary.json": "17bd74189366259eb131dd9ad58c737f9888b46dc8b91ca176d4a40916c062d8"
+  },
+  "visible_events_sha256_unchanged": "cc3f8f50775521608e8043d3d5bebd3560b68935cccd18f7e34fb8875b04e4a4"
+}

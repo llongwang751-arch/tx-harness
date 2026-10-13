@@ -1,0 +1,14 @@
+{
+  "metadata.json": "6193aea8ffd8b39621a83891686359b550f22f7c016dabd085b5138100fae50c",
+  "prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42",
+  "README.md": "c28e915a5cacbe17977c07f6f9990f24879af500524dcd51c155a18a32b6efe8",
+  "submitted-prompt.txt": "ed35d3ade44b665d23af1ebb16c6ecf818a609f2ca30df0e637b52abc18e8811",
+  "verification.json": "ec65c0fe831ba1a85870bac9d18c7c2ac12133232afd20fc92df61239aa8b7c6",
+  "verification.md": "4a4bc9f457c0dbf31d56e3953b9529df935134f51fe939b02193b701dee7661c",
+  "visible-events.jsonl": "d908f1a1db73f1ea07c8c3b46afff72781b4a7c2bb52138df23daa7761095bbc",
+  "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+  "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+  "outputs/aggregate.json": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+  "outputs/exceptions.json": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+  "outputs/order_ledger.csv": "5f1df7a95ab297a6118571ca0d34a90701d018bbc4fe6ecbbbba9d7e769da302"
+}

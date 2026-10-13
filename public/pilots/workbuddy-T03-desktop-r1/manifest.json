@@ -1,0 +1,19 @@
+{
+  "case-prompt.md": "237f743d161bbffe092914ecb6750c6e2e4c9de6c3fad5b3ff39d313aeff42e0",
+  "metadata.json": "84f2dbcecfad44f5ac04e42eb8c4c69f20ebb4cdf533480d77aa05fb8b478712",
+  "README.md": "8705126cbd69052f92bedb3f3a562b1093ebbc781e1eeec0c7083eaa0ffafbba",
+  "submitted-prompt.txt": "1bb66d05159e57be72c4b009e19536fb871adb01f656e4ec4f537723a7187a85",
+  "verification.json": "d3a86cf4ab15f4e77ba40307b1b023edf38c1ed24e3b9b5df897f3fc8c0e98d5",
+  "visible-events.jsonl": "cca750f651eb26e5d0c297f9e1be108bcfe13f41a1e2fc6af15a6f0f84696bcc",
+  "collector-source/run_workbuddy_desktop_pilot.py": "0f94100d7664cf0171f4dfccc1c0429b428cca9833e22e7af13662ea54c348e0",
+  "collector-source/workbuddy_desktop_collector.mjs": "2286d1918860d95591f9f4f09bd6c67b5937121aba225cef326844139503ebc8",
+  "inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+  "inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7",
+  "inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+  "inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+  "outputs/change_log.json": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a",
+  "outputs/bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+  "outputs/bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+  "outputs/bundle/contacts.csv": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+  "outputs/bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc"
+}

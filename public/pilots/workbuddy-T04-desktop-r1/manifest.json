@@ -1,0 +1,17 @@
+{
+  "case-prompt.md": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202",
+  "metadata.json": "12220b38bce1d64f6bf70ba3c70deba51c9bcbdc4ba813ca52d07961f17518b0",
+  "README.md": "470cd98987426841dd8afd69698c996029cd11680c249794439d24f5bb291809",
+  "release.json": "2b7cae88ae74a39bf694656f76f62111dbeaeb0c63262571a71ede96dbd5d1b8",
+  "submitted-prompt.txt": "c8bfc3dc2df32ed846ff2e50ae1abf73e632fa313b8dc72192e5c4338e5d1c0c",
+  "supplement-prompt.txt": "2de25b498cc2c51468d3aea1934da4174695074b81bff9b197d1848928710c10",
+  "verification.json": "41a3dcb8ea5635df861392dd31d5fb657e45b17bcc804a7f70647b10e85dec91",
+  "visible-events.jsonl": "3bc90c097632ec102a0be5b26d0916985ae3fd309cd494b64e42f8ce19696a49",
+  "collector-source/run_workbuddy_desktop_pilot.py": "0f94100d7664cf0171f4dfccc1c0429b428cca9833e22e7af13662ea54c348e0",
+  "collector-source/workbuddy_desktop_collector.mjs": "2286d1918860d95591f9f4f09bd6c67b5937121aba225cef326844139503ebc8",
+  "inputs/rates.json": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+  "inputs/trades.csv": "ab1cf7d7ce65cb0aefd865268d2aad72fc5835c1293719d37f99080dc86005d8",
+  "outputs/conversion_ledger.csv": "303e6149f3f4c710f9af7fc981bd166a536886bc7647f637a1ea562633e6d0ee",
+  "outputs/incident.json": "dd4daef2f143a0ea375f62fa0d9248a50abe601402360892d88392505ba47371",
+  "outputs/summary.json": "c6fe36b7d260140884d4369d7b0f04a1312607e125a267317399e1a853600d77"
+}

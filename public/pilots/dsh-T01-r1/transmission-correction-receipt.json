@@ -1,0 +1,23 @@
+{
+  "schema": "prompt-record-correction-v1",
+  "corrected_at": "2026-10-13T13:47:31.507581+00:00",
+  "previous_manifest_sha256": "f9b85316257ba4d7f564701bb2dc5d3f8d24a8b6eee3425a77f7540ec8673e89",
+  "previous_mislabel": {
+    "README": "[实际提交文本](prompt.md)",
+    "redaction": "outputs、inputs 与实际提交的 prompt.md 均逐字节复制",
+    "metadata_transmission": "Case prompt plus output-directory-only convention; UTF-8 stdin to native installed CLI; fresh session; inputs unchanged"
+  },
+  "corrected_semantics": "prompt.md is a CRLF disk record only. Exact outbound stdin bytes not captured; hash unknown/null. No actual LF bytes inferred.",
+  "recorded_prompt_file": "prompt.md",
+  "recorded_prompt_sha256": "881f531e5cdad97c5fe41f70c0c8bfe9aa5fe541e06558230d00495e14e82c73",
+  "recorded_prompt_crlf_count": 32,
+  "actual_stdin_capture_available": false,
+  "actual_stdin_bytes_sha256": null,
+  "native_outputs_sha256_unchanged": {
+    "aggregate.json": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+    "exceptions.json": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+    "order_ledger.csv": "a5f28d53b9275061de7db2c4bf6cbb9306420be2138ffd2446031abd7a230d46"
+  },
+  "visible_events_sha256_unchanged": "463ba22903f5517fbc9884fdf54963756e08d577063165f397066de24c6877d2",
+  "correction_scope": "README/redaction/metadata clarification plus this receipt; no native artifact/event/prompt byte changes, no new product execution, no formal promotion"
+}

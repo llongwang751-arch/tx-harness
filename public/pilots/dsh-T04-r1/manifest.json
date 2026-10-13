@@ -1,5 +1,5 @@
 {
-  "sha256": {
+  "files": {
     "case-prompt.md": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202",
     "claims.json": "1c5f1b2fc9107af799b7335ae55813983e08f95d147b11cdda20d69013654f35",
     "deterministic-verification.json": "34afa0f47a1a1ed63fa667f9a29d7a35110e39188333be0c24f563342b11ab1f",
@@ -10,14 +10,16 @@
     "outputs/incident.json": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4",
     "outputs/summary.json": "17bd74189366259eb131dd9ad58c737f9888b46dc8b91ca176d4a40916c062d8",
     "prompt.md": "1c69407d1bd8e99eb3ef843ddbc4504b75a814d5562f3431ccb1dfce3edb261b",
-    "README.md": "e90cf7811b206b3bf72648b4d7f78cedd652079d8faced45d579fa9230e078e2",
-    "redaction.md": "92ac28941863fa68422e629452a0d5486d5c938bb719755a542b75f3386819f8",
+    "README.md": "51a646b559b20e3c373f8c7d7268d82be3914cd1529ab50ca14e8ed9061e2e4b",
+    "redaction.md": "d2436bac68be047cb534c1a2086eaa1ae97f6890fb2983363f1d9c13462e81bd",
     "release.json": "f897cebb14eabe659b7c11446999666f876c5ed324afccc45a772e86033a8fe8",
     "releases/rates.json": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
-    "run-metadata.json": "2834d18b972363ad232af89819d60e32de7c720bd28465a0e6d48dc6229aa16d",
+    "run-metadata.json": "a12f4b8b8b9598ddb3629c08c711357f3e620254e683c41b380f2e3715dc2b59",
     "sdk-control-events.jsonl": "c08b57971fb90116a66f2d33082959a38ddcb404140c200f7d9675db5ce8f67e",
     "sdk-sent.jsonl": "3d6af9137e50d6892145690df36ba16561370a4e9e073ac8ea9c9306c4f2557c",
-    "visible-events.jsonl": "cc3f8f50775521608e8043d3d5bebd3560b68935cccd18f7e34fb8875b04e4a4"
-  },
-  "purpose": "Public pilot package integrity; not proof of authenticity"
+    "transmission-receipt.json": "39e9dd310eb9fd95f083d7b585897a2f86a244190b300e256cfcf48c7b851112",
+    "visible-events.jsonl": "cc3f8f50775521608e8043d3d5bebd3560b68935cccd18f7e34fb8875b04e4a4",
+    "wire-prompt.md": "04c9639dbe78fc3159cf7b6ac44dc4ec25a82aba704382ff86fa376bef1fb7d9",
+    "wire-supplement-prompt.md": "2de25b498cc2c51468d3aea1934da4174695074b81bff9b197d1848928710c10"
+  }
 }

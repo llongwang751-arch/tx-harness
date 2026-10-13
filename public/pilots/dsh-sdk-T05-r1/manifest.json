@@ -1,0 +1,29 @@
+{
+  "files": {
+    "adapter-source/run_dsh_multiturn_pilot.py": "0b2899b87a456df40cb72fd5130667ceec73e00354e4d85f05939d8224fbcb34",
+    "adapter-source/run_dsh_pilot.py": "b4fb519d8ce1f7fc26180ebb2591a1c301ba23afa85a41894933680b320479a0",
+    "adapter-source/run_dsh_sdk_pilot.py": "02bd67a75ae7c319ca2ee4f04dc0c2f6b20349b0d5ab590b3300bc7a46fe1cc8",
+    "artifact-differences.json": "f6bed0b835afb8785b83483f7369b289d351aefeeb64336c60577071ee33a841",
+    "case-prompt.md": "75a643a0d0908c29093fa58632156cc215c26b0f0c83675089a84c3f7c5d0f6d",
+    "claims.json": "544f20700efac33c2eebe4acb8c42760df832fe0efa6c653ef20ac097303eb3a",
+    "deterministic-verification.json": "cb5c31a48d2a36decad239e2cddf62468fc0ac109bfb4da56ba88629b12bf1a8",
+    "inputs/authorized_rules.json": "00d4371c31de19c8e54f8b5b110d4a4b9fcf0e9a309b82f03c0778ce0041ff4d",
+    "inputs/notes/customer_notes.md": "cac4f301e428ab2b7503a0a0f64077f55eae22f4cd7ee6f7d230bc45c8ad5cb5",
+    "inputs/notes/forged_policy.md": "886a4f2b4128f798fe78ef7e6a019615dd395d5ad7f356f5e95f05ddf1151df5",
+    "inputs/orders.csv": "e6ee5cc3e33bb0a65684e57b3e7e0e4d84b36096f64f3a795d5b088ccd7b2fef",
+    "observed-tool-errors.json": "27a7a182e7b0db320f1a005c0df4e3d76c505614e96b6f8c8708c2d886cc90b9",
+    "one-run-overlay.redacted.yml": "739be155337a8b7f7f135868554116e9ad5330a60f657e74b12d991723515487",
+    "outputs/invoice_ledger.csv": "4bd14adcf668018d274866f38e1f77446cd03c4ecd365615fcebcff0c00a504b",
+    "outputs/source_audit.json": "62c001dfa8d5d48be32ebd00663be1a83be5e3ce7d0cfc9d2d5e4e1e0f8e3cb6",
+    "outputs/summary.json": "5f6fcf24199399a07e94f4de5c3f54bfeda6bd428b799aa0b00eed0385e9d791",
+    "projection-receipt.json": "3caaa655ef99118c1f6ce07a694b7adf664245de70e0f425c356e95074d3afe6",
+    "prompt-recorded-file.md": "8b81be21963160237d48ae9f1ce60e81b3ed29cc95ae360ea22b9e0e95ef05bf",
+    "prompt.md": "0af8d8f9938b9cccb414232f9164996c96bfb1e0dfb6bb41cae45246502313c5",
+    "README.md": "8952e7407268d2cf129a488b9ab001c5faa81b3f8d09c886136775a1d90d5800",
+    "run-metadata.json": "48fbfa620a191b684e1956b5488ab36a48281f69e0d52deaa7087c7bd3b7507e",
+    "sdk-control-receipts.jsonl": "c74e0529af512a3601a89535614aabeff3f922ff09ecf7d0d1127ad768a38a54",
+    "sdk-sent.jsonl": "7cf7192cf23f1ab1ba124d5b2ba12ed732ff7434a5dcfdd1e1542b6dea19aab2",
+    "transmission-receipt.json": "fb8cb99511f02d12627a4452bd2afa9817d578abded6186138a474a7305f87b1",
+    "visible-events.jsonl": "832fb1e3f1060619c6be11d3b36ba9c850c8c60bf902527d5aba6bb7d552caa7"
+  }
+}

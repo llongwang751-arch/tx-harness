@@ -1,0 +1,38 @@
+{
+  "schema": "sdk-transmission-receipt-v1",
+  "source": "actual outbound session/prompt JSON-RPC frames; each has exactly one text contentBlock",
+  "source_private_sent_sha256": "d4c45e979c90edc0b0d058e6550f2b44b88757b7814f0eae2bc8282c285ef310",
+  "published_sdk_sent_sha256": "7cf7192cf23f1ab1ba124d5b2ba12ed732ff7434a5dcfdd1e1542b6dea19aab2",
+  "hash_scope": "decoded contentBlocks[0].text UTF-8 bytes; not the JSON-RPC envelope",
+  "transmissions": [
+    {
+      "phase": "initial",
+      "request_id": 2,
+      "sent_at": "2026-10-13T13:20:05.711526+00:00",
+      "session_id": "pilot-dsh-sdk-T05-a9f0262d-80cc-4ab6-8fa4-b72480b15989",
+      "text_block_count": 1,
+      "encoding": "UTF-8",
+      "file": "prompt.md",
+      "content_sha256": "0af8d8f9938b9cccb414232f9164996c96bfb1e0dfb6bb41cae45246502313c5",
+      "content_crlf_count": 0,
+      "content_lf_count": 29,
+      "content_utf8_bytes": 2662
+    }
+  ],
+  "recorded_prompt_file": "prompt-recorded-file.md",
+  "recorded_prompt_file_sha256": "8b81be21963160237d48ae9f1ce60e81b3ed29cc95ae360ea22b9e0e95ef05bf",
+  "recorded_prompt_crlf_count": 29,
+  "correction": {
+    "corrected_at": "2026-10-13T13:38:11.805432+00:00",
+    "previously_mislabeled_actual_transmission_sha256": "8b81be21963160237d48ae9f1ce60e81b3ed29cc95ae360ea22b9e0e95ef05bf",
+    "previous_manifest_sha256": "03e47c1b243eeeb29a1751a2e6d04bb1f91bcfa9f52dd94118421f1dfdefaf58",
+    "reason": "Initial export mislabeled the Windows CRLF disk-record hash as actual transmitted text. SDK content was LF; actual UTF-8 bytes reconstructed directly from sent frames. Prior recorded bytes retained without changing native artifacts or visible events.",
+    "prior_export_scope": "prior local uncommitted SDK export"
+  },
+  "native_outputs_sha256_unchanged": {
+    "invoice_ledger.csv": "4bd14adcf668018d274866f38e1f77446cd03c4ecd365615fcebcff0c00a504b",
+    "source_audit.json": "62c001dfa8d5d48be32ebd00663be1a83be5e3ce7d0cfc9d2d5e4e1e0f8e3cb6",
+    "summary.json": "5f6fcf24199399a07e94f4de5c3f54bfeda6bd428b799aa0b00eed0385e9d791"
+  },
+  "visible_events_sha256_unchanged": "832fb1e3f1060619c6be11d3b36ba9c850c8c60bf902527d5aba6bb7d552caa7"
+}

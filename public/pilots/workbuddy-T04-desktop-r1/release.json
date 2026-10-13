@@ -1,0 +1,25 @@
+{
+  "mode": "active",
+  "file_available_at": "2026-10-13T13:49:49.638015+00:00",
+  "file_sha256": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+  "source_file_sha256": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+  "seconds_since_initial_prompt": 30.560015,
+  "observed_request": {
+    "request_text": "请提供 rates.json；缺少汇率时无法完成换算。",
+    "first_observed_at": "2026-10-13T13:49:36.238Z",
+    "capture_label": "missing-input-observation-1",
+    "seconds_since_initial_prompt": 17.16,
+    "request_emission_time": null,
+    "evidence_basis": "Explicit visible user-facing blockquote in native task; not internal planning"
+  },
+  "response_text": "补充文件 rates.json 已提供。请使用其中按交易日期区分的汇率继续原任务，保留缺失输入及恢复记录。",
+  "response_text_sha256": "2de25b498cc2c51468d3aea1934da4174695074b81bff9b197d1848928710c10",
+  "outputs_before_release": {},
+  "observer_delay": "Product request emission time unknown; first observed time and file availability recorded separately",
+  "response_submit_observed_at": "2026-10-13T13:50:16.687Z",
+  "file_available_to_response_submit_seconds": 27.049,
+  "first_observed_request_to_file_available_seconds": 13.4,
+  "same_visible_task_continued": true,
+  "native_session_id": null,
+  "continuity_basis": "No new task action between initial prompt and supplement; unchanged native task title, one action log"
+}

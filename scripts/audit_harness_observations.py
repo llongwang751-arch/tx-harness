@@ -18,6 +18,7 @@ LIMITATIONS = [
     "Exploratory operation instances; each package is one episode, not one independent replicate per tool call.",
     "Checks compare published request projections with final artifact snapshots; they do not independently attest actual executor arguments.",
     "A differing snapshot may reflect truncation, later writes or mapping; it is not automatically a Harness failure.",
+    "Later explicit write/edit calls exclude a write from final-byte comparison; shell, subagent and unseen mutations are not reconstructed.",
     "Model selection, Skill content, routing, tool implementation and environment are not matched across products.",
     "Error text/status correspondence does not identify the component that caused the error or chose a recovery path.",
     "Missing fields, inaccessible artifacts and unseen links remain unknown, never zero scores.",
@@ -77,14 +78,13 @@ def reference(row, number):
 
 
 def output_relative(target):
-    """Use the last explicit outputs/ segment; never search other directories."""
+    """Accept an explicit relative outputs/ path, without guessed prefixes."""
     if not isinstance(target, str):
         return None
     parts = target.replace("\\", "/").split("/")
-    indexes = [i for i, part in enumerate(parts) if part == "outputs"]
-    if not indexes:
+    if not parts or parts[0].casefold() != "outputs":
         return None
-    rest = parts[indexes[-1] + 1:]
+    rest = parts[1:]
     if not rest or any(part in ("", ".", "..") for part in rest):
         return None
     return "/".join(rest)
@@ -105,24 +105,17 @@ def audit_episode(package, public_root):
             raise ValueError("Unexpected non-public event type; review package before audit")
         rows.append((number, row))
     calls, results = defaultdict(list), defaultdict(list)
-    writes = []
+    writes, mutations = [], []
     for number, row in rows:
         event = row["event"]
         if event.get("type") == "tool_call":
             calls[event.get("callId")].append((number, row))
             if event.get("tool") == "write":
                 writes.append((number, row))
+            if event.get("tool") in ("write", "edit"):
+                mutations.append((number, row))
         elif event.get("type") == "tool_result":
             results[event.get("callId")].append((number, row))
-    last_completed_write = {}
-    for number, row in writes:
-        event = row["event"]
-        matches = results.get(event.get("callId"), [])
-        parameters = event.get("input", {})
-        parameters = parameters if isinstance(parameters, dict) else {}
-        relative = output_relative(parameters.get("file_path"))
-        if relative and len(matches) == 1 and matches[0][1]["event"].get("status") == "completed":
-            last_completed_write[relative] = number
     write_observations = []
     for number, row in writes:
         event = row["event"]
@@ -139,15 +132,48 @@ def audit_episode(package, public_root):
         else:
             result_number, result_row = matching_results[0]
             item["result"] = reference(result_row, result_number)
+            later_mutations = []
+            for mutation_number, mutation_row in mutations:
+                mutation = mutation_row["event"]
+                mutation_input = mutation.get("input", {})
+                mutation_relative = (output_relative(mutation_input.get("file_path"))
+                                     if isinstance(mutation_input, dict) else None)
+                # Conservatively treat case aliases as the same target for
+                # this Windows evidence adapter; do not rewrite artifact paths.
+                if relative is None or mutation_relative is None or mutation_relative.casefold() != relative.casefold():
+                    continue
+                if mutation_number == number:
+                    continue
+                mutation_id = mutation.get("callId")
+                mutation_results = results.get(mutation_id, [])
+                paired = (isinstance(mutation_id, str) and bool(mutation_id)
+                          and len(calls.get(mutation_id, [])) == 1 and len(mutation_results) == 1
+                          and mutation_results[0][0] > mutation_number)
+                # Only a uniquely paired operation that finished before this
+                # write began can be excluded as non-overlapping.
+                if mutation_number < number and paired and mutation_results[0][0] < number:
+                    continue
+                observation = {"tool": mutation.get("tool"), "request": reference(mutation_row, mutation_number),
+                               "state": "uncertain"}
+                if paired:
+                    observation["result"] = reference(mutation_results[0][1], mutation_results[0][0])
+                    observation["native_status"] = mutation_results[0][1]["event"].get("status")
+                    if mutation_number > result_number and observation["native_status"] == "completed":
+                        observation["state"] = "completed_after_write"
+                later_mutations.append(observation)
+            if later_mutations:
+                item["later_mutations"] = later_mutations
             if result_number <= number:
                 item["reason"] = "Result precedes request in published stream"
             elif result_row["event"].get("status") != "completed":
                 item["reason"] = "No completed write result; error handling is audited separately"
             elif relative is None:
                 item["reason"] = "No explicit outputs/ target; no filename guessing or directory search"
-            elif last_completed_write.get(relative) != number:
+            elif any(mutation["state"] == "uncertain" for mutation in later_mutations):
+                item["reason"] = "A later or overlapping write/edit may have changed this target; final bytes cannot be assigned to this write"
+            elif later_mutations:
                 item["verdict"] = "superseded"
-                item["reason"] = "A later completed write targets the same final file"
+                item["reason"] = "A later uniquely paired completed write/edit targets the same file; intermediate bytes are unavailable"
             elif not isinstance(parameters.get("content"), str):
                 item["reason"] = "Public string payload missing"
             else:
@@ -208,7 +234,7 @@ def audit_episode(package, public_root):
                 "comparable_final_instances": write_counts["match"] + write_counts["different"],
                 "matching_instances": write_counts["match"], "differing_instances": write_counts["different"],
                 "unknown_instances": write_counts["unknown"], "superseded_instances": write_counts["superseded"],
-                "denominator": "Latest completed public write per explicit output target, with one paired result, string content and available final artifact",
+                "denominator": "Completed public write to an explicit output target, with unique request/result, string content and final artifact, and no later or overlapping visible write/edit to that target",
                 "interpretation": "Published projection/final snapshot correspondences, not a causal score or proof of executor fidelity",
                 "instances": write_observations,
             },
@@ -231,7 +257,7 @@ def render_markdown(report, destination, public_root):
              "此表由已脱敏的真实公开证据独立生成。没有读取private原始流、修改产品产物或追认正式实验。"
              "这些是操作实例的对应检查；每个公开包只是一轮episode，工具调用数量不是独立重复数。"
              "不提供纯Harness分或五产品排名。", "",
-             "| Episode | 写入公开载荷与最终文件匹配 | 可比写入分母 | 未知/被覆盖 | 真实错误文本对应error状态 | 可配对错误分母 |", 
+             "| Episode | 写入公开载荷与最终文件匹配 | 可比写入分母 | 未知/被覆盖 | 真实错误文本对应error状态 | 可配对错误分母 |",
              "|---|---:|---:|---:|---:|---:|"]
     for episode in report["episodes"]:
         w = episode["metrics"]["final_write_payload_artifact_correspondence"]
@@ -243,9 +269,11 @@ def render_markdown(report, destination, public_root):
                      f"{w['comparable_final_instances']} | {w['unknown_instances']}/{w['superseded_instances']} | "
                      f"{e['explicit_error_instances']} | {e['paired_failure_instances']} |")
     lines += ["", f"已审计 {len(report['episodes'])} 个探索性episode；没有把多条工具调用合并成更多独立样本。", "",
-              "写入分母：每个明确outputs目标的最后一次完成写入，公开内容为字符串、请求/结果唯一对应、最终文件存在。"
-              "按UTF-8编码公开请求内容，与最终文件原字节逐项计算SHA256。若早期写入被后续覆盖，单列superseded；"
-              "缺字段、目标无法对应或缺文件记unknown。数值仅描述公开投射与最终快照是否一致。", "",
+              "写入分母：明确outputs目标的完成write，公开内容为字符串、请求/结果唯一对应、最终文件存在，"
+              "且没有同目标的后续或重叠write/edit。按UTF-8编码公开请求内容，与最终文件原字节逐项计算SHA256。"
+              "写入后有唯一配对且完成的write/edit，单列superseded并引用后续操作；后续/重叠操作失败、未完成或配对不明确，"
+              "记unknown，不把工具报错当作未修改文件的证明。缺字段、目标无法对应或缺文件也记unknown。"
+              "未重建shell、子会话或不可见修改，数值仅描述公开投射与最终快照是否一致，不证明最后一次实际写入。", "",
               "错误反馈分母：原生工具结果文本以Error:开头，且能用同一请求ID唯一对应先前实际请求。"
               "检查独立的status字段是否为error。无真实错误文本的成功调用不进入该分母；无法配对仍记unknown。", "",
               "置信高只针对可复核的字节一致或字段对应事实。差异不能自动归为Harness错误；日志截断、后续修改、"

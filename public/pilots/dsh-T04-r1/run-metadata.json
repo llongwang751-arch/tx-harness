@@ -116,6 +116,14 @@
   "evidence_type": "actual_product_pilot",
   "formal_eligible": false,
   "case_prompt_sha256": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202",
-  "actual_transmission_sha256": "1c69407d1bd8e99eb3ef843ddbc4504b75a814d5562f3431ccb1dfce3edb261b",
-  "input_delivery": "initial inputs/trades.csv only; releases/rates.json copied into participant inputs at the recorded release time"
+  "actual_transmission_sha256": "04c9639dbe78fc3159cf7b6ac44dc4ec25a82aba704382ff86fa376bef1fb7d9",
+  "input_delivery": "initial inputs/trades.csv only; releases/rates.json copied into participant inputs at the recorded release time",
+  "actual_transmission_file": "wire-prompt.md",
+  "recorded_prompt_file": "prompt.md",
+  "recorded_prompt_file_sha256": "1c69407d1bd8e99eb3ef843ddbc4504b75a814d5562f3431ccb1dfce3edb261b",
+  "prompt_hash_semantics": "actual_transmission hashes decoded SDK contentBlocks[0].text UTF-8 bytes; recorded disk file contains CRLF; whole JSON-RPC envelope is a different scope",
+  "file_inventory_scope": "initial_files/final_files refer to original native workspace disk files; their prompt.md is preserved as the recorded prompt file",
+  "transmission_correction_receipt": "transmission-receipt.json",
+  "actual_supplement_transmission_sha256": "2de25b498cc2c51468d3aea1934da4174695074b81bff9b197d1848928710c10",
+  "actual_supplement_transmission_file": "wire-supplement-prompt.md"
 }

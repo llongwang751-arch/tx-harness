@@ -1,0 +1,82 @@
+{
+  "case_id": "T03",
+  "checks": [
+    {
+      "id": "T03-C01",
+      "title": "受保护文件原字节保持",
+      "weight": 25,
+      "path": "bundle/protected.txt",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T03-C02",
+      "title": "只改公告正式发布字段",
+      "weight": 20,
+      "path": "bundle/announcement.md",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T03-C03",
+      "title": "只修改指定产品价格",
+      "weight": 20,
+      "path": "bundle/catalog.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T03-C04",
+      "title": "只修改support联系邮箱",
+      "weight": 15,
+      "path": "bundle/contacts.csv",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T03-C05",
+      "title": "三项修改的路径/字段/前后值",
+      "weight": 15,
+      "path": "change_log.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T03-C06",
+      "title": "声明受保护文件未修改",
+      "weight": 5,
+      "path": "change_log.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    }
+  ],
+  "passed_weight": 100,
+  "all_weight": 100,
+  "objective_score": 60.0,
+  "all_required_outputs_present": true,
+  "all_checks_passed": true
+}

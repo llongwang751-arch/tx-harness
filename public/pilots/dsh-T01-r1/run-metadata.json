@@ -51,7 +51,7 @@
     "diagnose-windows-sandbox-acl"
   ],
   "task_network_tool": "tool-web disabled; not a network confinement proof",
-  "transmission": "Case prompt plus output-directory-only convention; UTF-8 stdin to native installed CLI; fresh session; inputs unchanged",
+  "transmission": "prompt.md is the byte-preserved Windows CRLF disk record. Native adapter intended UTF-8 stdin; outbound stdin bytes were not independently captured, so their exact hash remains unknown. No LF reconstruction is asserted.",
   "manual_interventions": 0,
   "model_identity_confidence": "Requested/advisory model only; backend identity not independently attested",
   "raw_event_counts": {
@@ -73,5 +73,12 @@
     "dsh-model.patch.yml": "cdbe3253b01c3b9b58ffb300a4489a2c424b8d9d629e230a085e0fdb019ae6b6"
   },
   "objective_result": "8/8 passed; objective 60/60; pilot only, no product total or ranking",
-  "publication_review": "Operator examined retained tool calls/results and text. Thinking dropped, Skill instructions omitted, user-home paths anonymized; no credential values were read or included."
+  "publication_review": "Operator examined retained tool calls/results and text. Thinking dropped, Skill instructions omitted, user-home paths anonymized; no credential values were read or included.",
+  "recorded_prompt_file": "prompt.md",
+  "recorded_prompt_file_sha256": "881f531e5cdad97c5fe41f70c0c8bfe9aa5fe541e06558230d00495e14e82c73",
+  "recorded_prompt_file_line_endings": "CRLF",
+  "actual_stdin_bytes_sha256": null,
+  "actual_stdin_bytes_visibility": "unknown",
+  "actual_stdin_capture_available": false,
+  "transmission_correction_receipt": "transmission-correction-receipt.json"
 }

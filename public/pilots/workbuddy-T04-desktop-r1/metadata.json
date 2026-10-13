@@ -1,0 +1,127 @@
+{
+  "run_id": "workbuddy-T04-desktop-r1",
+  "product_id": "workbuddy",
+  "case_id": "T04",
+  "track": "pilot",
+  "formal_eligible": false,
+  "formal_sample": false,
+  "surface": "WorkBuddy 5.7.7 native desktop new task via documented CUA",
+  "visible_conditions": {
+    "version": "5.7.7",
+    "model": "Deepseek-V4.1-Flash",
+    "permission": "允许完全访问",
+    "account_edition": "free",
+    "scenario": "日常办公",
+    "configuration_basis": "Native labels; free edition seen privately, no backend model attestation"
+  },
+  "underlying_model_version": null,
+  "active_skills": null,
+  "explicit_user_skill_selected": false,
+  "skills_disabled_verified": false,
+  "os_sandbox_verified": false,
+  "network_absence_independently_verified": false,
+  "actual_tool_calls": null,
+  "started_at": "2026-10-13T13:49:19.078Z",
+  "completion_observed_at": "2026-10-13T13:51:15.437Z",
+  "elapsed_to_completion_observation_seconds": 116.359,
+  "timed_out": false,
+  "timing_basis": "Send-action pre-receipt to first observed completed UI; service finish time unknown; observer interval is an upper bound",
+  "initial_inventory": {
+    "inputs/trades.csv": "ab1cf7d7ce65cb0aefd865268d2aad72fc5835c1293719d37f99080dc86005d8",
+    "prompt.md": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202"
+  },
+  "final_inventory": {
+    ".workbuddy/memory/2026-10-13.md": "0c0cd877e10dcb949bd99e36d51de2f76e962dece972501b7bf09e92b34a3a8b",
+    "inputs/rates.json": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+    "inputs/trades.csv": "ab1cf7d7ce65cb0aefd865268d2aad72fc5835c1293719d37f99080dc86005d8",
+    "outputs/conversion_ledger.csv": "303e6149f3f4c710f9af7fc981bd166a536886bc7647f637a1ea562633e6d0ee",
+    "outputs/incident.json": "dd4daef2f143a0ea375f62fa0d9248a50abe601402360892d88392505ba47371",
+    "outputs/summary.json": "c6fe36b7d260140884d4369d7b0f04a1312607e125a267317399e1a853600d77",
+    "prompt.md": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202"
+  },
+  "original_inputs_and_prompt_unchanged": true,
+  "case_prompt_sha256": "f72254c2e571e87a6125b78bc1fbc7b130847fd6742e3a1528ce37718d347202",
+  "actual_paste_source_sha256": "c8bfc3dc2df32ed846ff2e50ae1abf73e632fa313b8dc72192e5c4338e5d1c0c",
+  "prompt_adapter_appendix": "将交付文件写入 outputs/，不要修改 inputs/。",
+  "prompt_transport": "Actual file bytes decoded UTF-8 and native CUA pasted; internal model-request bytes unknown",
+  "source_snapshot_sha256": {
+    "run_workbuddy_desktop_pilot.py": "0f94100d7664cf0171f4dfccc1c0429b428cca9833e22e7af13662ea54c348e0",
+    "workbuddy_desktop_collector.mjs": "2286d1918860d95591f9f4f09bd6c67b5937121aba225cef326844139503ebc8"
+  },
+  "product_deliverables": {
+    "conversion_ledger.csv": "303e6149f3f4c710f9af7fc981bd166a536886bc7647f637a1ea562633e6d0ee",
+    "incident.json": "dd4daef2f143a0ea375f62fa0d9248a50abe601402360892d88392505ba47371",
+    "summary.json": "c6fe36b7d260140884d4369d7b0f04a1312607e125a267317399e1a853600d77"
+  },
+  "release": {
+    "mode": "active",
+    "file_available_at": "2026-10-13T13:49:49.638015+00:00",
+    "file_sha256": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+    "source_file_sha256": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+    "seconds_since_initial_prompt": 30.560015,
+    "observed_request": {
+      "request_text": "请提供 rates.json；缺少汇率时无法完成换算。",
+      "first_observed_at": "2026-10-13T13:49:36.238Z",
+      "capture_label": "missing-input-observation-1",
+      "seconds_since_initial_prompt": 17.16,
+      "request_emission_time": null,
+      "evidence_basis": "Explicit visible user-facing blockquote in native task; not internal planning"
+    },
+    "response_text": "补充文件 rates.json 已提供。请使用其中按交易日期区分的汇率继续原任务，保留缺失输入及恢复记录。",
+    "response_text_sha256": "2de25b498cc2c51468d3aea1934da4174695074b81bff9b197d1848928710c10",
+    "outputs_before_release": {},
+    "observer_delay": "Product request emission time unknown; first observed time and file availability recorded separately",
+    "response_submit_observed_at": "2026-10-13T13:50:16.687Z",
+    "file_available_to_response_submit_seconds": 27.049,
+    "first_observed_request_to_file_available_seconds": 13.4,
+    "same_visible_task_continued": true,
+    "native_session_id": null,
+    "continuity_basis": "No new task action between initial prompt and supplement; unchanged native task title, one action log"
+  },
+  "objective_score": 60.0,
+  "total_score": null,
+  "manual_score": null,
+  "pure_harness_score": null,
+  "output_repairs_by_evaluator": false,
+  "unscheduled_prompts": [],
+  "completion_basis": "First resumed screenshot and AX showed final ordinary reply, three artifact cards, completed footer and disabled send",
+  "confidence": "High for byte-preserved artifacts/independent criteria and explicitly visible labels; internal execution/attribution unresolved",
+  "attribution": "Recorded end-to-end configuration only; no pure Harness causal conclusion",
+  "collector_issues": [
+    "Windows native folder picker emits multiple screenshot regions; single image unavailable. AX can lag screenshots. One active protocol release; semantic request first observed at 17.160 seconds, actual file availability delay 13.400 seconds; response-submission delay recorded in release.json. First resumed completion observation includes observer interval; exact service finish unknown."
+  ],
+  "redaction": "Operator/agent-reviewed exact AX line slices only; all thought/planning sections, account URL/ID, private sidebars, raw screenshots/system context omitted",
+  "private_capture_sha256": {
+    "001-new-task.ax.txt": "20f73adeb119419b4a25ad8f93d2821ebc8c505de1b854051f37bae9eb20648a",
+    "002-new-task-ready.ax.txt": "0a03d5173942b894af3a0372763061b3a022a72f15858dae6febf2dde568538c",
+    "003-workspace-menu.ax.txt": "0a03d5173942b894af3a0372763061b3a022a72f15858dae6febf2dde568538c",
+    "004-workspace-selected.ax.txt": "6edeb2cd3183fb60a354949382ab8bd9233dc912cc291a7ba93b3dc89f6dda2c",
+    "005-prompt-ready.ax.txt": "6f9be7dc90b482471ddbe33493047eeea2245c6f54cdab2bd0a1507d9cb549fc",
+    "006-missing-input-observation-1.ax.txt": "df60df0d8494a462981e15488b987fa1cffb436674c1c66c795a4bfe3f14d8f8",
+    "007-release-file-available.ax.txt": "4f12899bc1c36f1f902d81080a5ea22587d4207a8f9b404735f0d46d446bc40e",
+    "008-supplement-ready.ax.txt": "179fadad40c0e16911bb101fd87b997ce523e5f08b59be8416797b6a6eea0ef0",
+    "009-recovery-progress-1.ax.txt": "afc7b82b9632baf75d4dcf86ca13c7135dadb62fc93b7005a805c124cce0e85e",
+    "010-final-answer-review.ax.txt": "ddc147494160645b336939b911d5290f8e08f2dd7ea1fd1e1582ebafc60bb42c",
+    "011-recovery-answer-review.ax.txt": "8c0dcd675fc50610590fbf029ebbfede531d1a95356c113e67e15c75d1caadaa",
+    "012-recovery-header-review.ax.txt": "ad587b73a17731db3d407bc193c5258a2f1d872e4045bc57b2551155c0f80589",
+    "013-recovery-header-stable.ax.txt": "a0affc03ba6bba689ab872c7905b5f1553db7c6c467fe58863838c532e76d1c8"
+  },
+  "limitations": [
+    "One exploratory attempt; not an independent replicate per tool or artifact.",
+    "Model selector label does not attest backend deployment.",
+    "Active builtin/user Skills and full tool arguments are unknown.",
+    "Visible artifact/incident declarations do not prove network isolation or internal recovery responsibility."
+  ],
+  "public_review_actor": "Operator/agent; no external human audit claimed",
+  "visible_events_order": "Stable chronological order by received_at; source_line is a private AX line number, not a tool-call sequence",
+  "visible_events_projection_sha256": "3bc90c097632ec102a0be5b26d0916985ae3fd309cd494b64e42f8ce19696a49",
+  "public_description_correction": {
+    "corrected_at": "2026-10-13T13:57:45.880096+00:00",
+    "reason": "Clarify agent/operator review and chronological derived UI projection; native evidence unchanged",
+    "prior_metadata_sha256": "c3d312d49f1d727fb783a9ac9d0eab8c64a48812137dbe65345d1a90e47ebacb",
+    "prior_manifest_sha256": "39bdd0859389f7375e21a5abd5b986bacf304f296f5bfe377815870c7b6ab138",
+    "prior_visible_events_sha256": "1b57039588103a53a288d425f50045cba105b6b739259bbd3dc7fda45adcb76d",
+    "events_object_content_unchanged": true,
+    "source_snapshots_and_native_outputs_unchanged": true
+  }
+}

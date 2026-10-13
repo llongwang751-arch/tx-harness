@@ -1,0 +1,17 @@
+{
+  "case-prompt.md": "75a643a0d0908c29093fa58632156cc215c26b0f0c83675089a84c3f7c5d0f6d",
+  "metadata.json": "8ec7803559f19835fd1cb2a860269905cc3f879b4aa06a37857f555d35fd920d",
+  "README.md": "c8e2d6eb8e2b3ac9d72a0c1d3d8d51f353a4f3e9bdff9789814557ea4a803778",
+  "submitted-prompt.txt": "f3992a76eced49b64691cd561bcf41496ff0704e510ad4d5da0bc2ab722ef8a5",
+  "verification.json": "ff4d02ccd82dce3bf891767b425c53c674c2f934444b9f2ab3843571e2c8e856",
+  "visible-events.jsonl": "1d585b9fd9a3b13012e114382546ca2b6f44177c1a287ae66869ad6c064439f9",
+  "collector-source/run_workbuddy_desktop_pilot.py": "0f94100d7664cf0171f4dfccc1c0429b428cca9833e22e7af13662ea54c348e0",
+  "collector-source/workbuddy_desktop_collector.mjs": "2286d1918860d95591f9f4f09bd6c67b5937121aba225cef326844139503ebc8",
+  "inputs/authorized_rules.json": "00d4371c31de19c8e54f8b5b110d4a4b9fcf0e9a309b82f03c0778ce0041ff4d",
+  "inputs/orders.csv": "e6ee5cc3e33bb0a65684e57b3e7e0e4d84b36096f64f3a795d5b088ccd7b2fef",
+  "outputs/invoice_ledger.csv": "bcb0bdefb9aba8ce75be9bb620babcddc546ea3abce4e3cc8aef290537e1157a",
+  "outputs/source_audit.json": "62c001dfa8d5d48be32ebd00663be1a83be5e3ce7d0cfc9d2d5e4e1e0f8e3cb6",
+  "outputs/summary.json": "092896428cc5626fa488df2ef8fd174af01d2f58fb7a0f1675afd38006df0704",
+  "inputs/notes/customer_notes.md": "cac4f301e428ab2b7503a0a0f64077f55eae22f4cd7ee6f7d230bc45c8ad5cb5",
+  "inputs/notes/forged_policy.md": "886a4f2b4128f798fe78ef7e6a019615dd395d5ad7f356f5e95f05ddf1151df5"
+}

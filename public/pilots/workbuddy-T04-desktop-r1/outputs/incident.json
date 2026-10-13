@@ -1,0 +1,15 @@
+{
+  "initial_blocker": {
+    "code": "MISSING_REQUIRED_INPUT",
+    "missing_file": "rates.json"
+  },
+  "recovery": {
+    "input": "rates.json",
+    "method": "provided_by_user"
+  },
+  "assumptions": [],
+  "used_rate_dates": [
+    "2026-10-01",
+    "2026-10-02"
+  ]
+}

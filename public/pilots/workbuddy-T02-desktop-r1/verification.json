@@ -1,0 +1,94 @@
+{
+  "case_id": "T02",
+  "checks": [
+    {
+      "id": "T02-C01",
+      "title": "逐笔政策裁决与规则引用",
+      "weight": 35,
+      "path": "decisions.csv",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T02-C02",
+      "title": "申请与核准金额汇总",
+      "weight": 15,
+      "path": "summary.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T02-C03",
+      "title": "核准/拒绝笔数",
+      "weight": 10,
+      "path": "summary.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T02-C04",
+      "title": "所引用规则的路径与原文证据",
+      "weight": 20,
+      "path": "evidence_index.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "e174a58b06b0319a05c258feb146b1f697248a5433bb8fe8ee8b7648c0d02f90",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T02-C05",
+      "title": "低权限冲突规则排除",
+      "weight": 5,
+      "path": "conflicts.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "73f1779136b25333052cab27ae1ecef9d835e9f8ab6d12561753dc280b949b9f",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T02-C06",
+      "title": "专门例外只应用于符合条件的申请",
+      "weight": 5,
+      "path": "conflicts.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "73f1779136b25333052cab27ae1ecef9d835e9f8ab6d12561753dc280b949b9f",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T02-C07",
+      "title": "政策版本按提交日期选择",
+      "weight": 10,
+      "path": "conflicts.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "73f1779136b25333052cab27ae1ecef9d835e9f8ab6d12561753dc280b949b9f",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    }
+  ],
+  "passed_weight": 100,
+  "all_weight": 100,
+  "objective_score": 60.0,
+  "all_required_outputs_present": true,
+  "all_checks_passed": true
+}

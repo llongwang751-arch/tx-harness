@@ -1,0 +1,21 @@
+[
+  {
+    "artifact": "invoice_ledger.csv",
+    "order_id": "B001",
+    "field": "net_cents",
+    "actual": "10200",
+    "expected": "8200"
+  },
+  {
+    "artifact": "summary.json",
+    "field": "gross_cents",
+    "actual": 32555,
+    "expected": 22555
+  },
+  {
+    "artifact": "summary.json",
+    "field": "net_cents",
+    "actual": 28599,
+    "expected": 18599
+  }
+]

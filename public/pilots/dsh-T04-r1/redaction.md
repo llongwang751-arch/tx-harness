@@ -2,7 +2,7 @@
 
 这是一次真实 SDK T04 多轮接入预试，不进入正式 75 次实验分母。
 
-初始 inputs/ 仅含 trades.csv，rates.json 单列在 releases/。提示词是实际 UTF-8 提交文本，附统一交付目录约定。原生最终 outputs/、初始 trades 和实际补发 rates 均逐字节复制，文件 SHA-256 与私有执行元数据相符。初始 incident 被产品后续更新；其初始写入内容与补发前输出清单 hash 保留在真实事件及 release.json 中，没有把重建文本冒充原生快照文件。
+初始 inputs/ 仅含 trades.csv，rates.json 单列在 releases/。`prompt.md` 保留 Windows CRLF 磁盘记录；`wire-prompt.md` 与 `wire-supplement-prompt.md` 是从真实 SDK 发送帧得到的 UTF-8 内容原字节。此前误将记录文件 hash 标为实际发送内容 hash，现已纠正并在 transmission-receipt.json 保留旧值和纠正说明。原生最终 outputs/、初始 trades 和实际补发 rates 均逐字节复制，文件 SHA-256 与私有执行元数据相符。初始 incident 被产品后续更新；其初始写入内容与补发前输出清单 hash 保留在真实事件及 release.json 中，没有把重建文本冒充原生快照文件。
 
 SDK 全量 wire 包含隐藏系统上下文和 reasoning，保留在 gitignored 的 private/pilots/dsh-T04-r1；未公开 raw stdout。公开投射只取该父 session 的 committed assistant/message 的 text 块、真实 tool/call、append tool/result、turn/step 状态。其余内容（包括 reasoning、assistant attempts/streams、system/runtime context、非所选 session 的记录）均不公开。一个诊断 Skill 正文被省略，只留调用、完成状态及原始正文 hash；用户主目录（含 Windows 8.3 短名）统一为 C:/Users/<user>；参与者绝对工作区路径替换为 <participant_workspace>，临时 Skill 资源路径替换为 <product_skill_temp>。公开控制帧和文本因此是经过声明转换的投射，不再逐字节等于私有原始帧。
 

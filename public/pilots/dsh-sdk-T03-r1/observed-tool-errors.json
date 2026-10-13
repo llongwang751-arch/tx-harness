@@ -1,0 +1,44 @@
+[
+  {
+    "source_stdout_line": 37,
+    "callId": "call_00_p0avZAWpPocII0Wq6Gly8641",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 49,
+    "callId": "call_00_neMG26FEhm5MvNXvVCTZ4356",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 61,
+    "callId": "call_00_kq0yuAG0COn4ooqSEVD91534",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 75,
+    "callId": "call_00_FU89z1fyHO1BZ1hn37S92859",
+    "tool": "pwsh",
+    "result": "Error: sandbox escalation to \"danger-full-access\" requires approval, but no approval channel is available"
+  },
+  {
+    "source_stdout_line": 103,
+    "callId": "call_00_Nbe2XI4VVFGleRqSHXFy3773",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 207,
+    "callId": "call_00_TrU8SPaqIp1PaIlQR3il9252",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 215,
+    "callId": "call_00_olAYLU6r19fuydjKoI5d6039",
+    "tool": "pwsh",
+    "result": "Error: sandbox escalation to \"danger-full-access\" requires approval, but no approval channel is available"
+  }
+]

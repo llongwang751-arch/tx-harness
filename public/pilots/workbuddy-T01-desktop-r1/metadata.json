@@ -1,0 +1,91 @@
+{
+  "run_id": "workbuddy-T01-desktop-r1",
+  "product_id": "workbuddy",
+  "case_id": "T01",
+  "track": "pilot",
+  "stage": "native_desktop_task_pilot",
+  "formal_sample": false,
+  "formal_eligible": false,
+  "surface": "WorkBuddy 5.7.7 native desktop new task via documented native CUA",
+  "version_visible": "5.7.7",
+  "model_visible": "Deepseek-V4.1-Flash",
+  "model_selector_changed": false,
+  "underlying_model_version": null,
+  "account_edition": "free",
+  "permission_visible": "允许完全访问",
+  "permission_changed": false,
+  "explicit_user_skill_selected": false,
+  "active_skills": null,
+  "skills_disabled_verified": false,
+  "mcp_hooks_state": null,
+  "requested_no_network": true,
+  "network_absence_independently_verified": false,
+  "os_sandbox_verified": false,
+  "workspace_scope": "Fresh external participant directory; prompt, two CSV inputs, initially empty outputs; no oracle",
+  "started_at": "2026-10-13T13:22:16.065Z",
+  "completion_observed_at": "2026-10-13T13:23:15.560Z",
+  "elapsed_to_completion_observation_seconds": 59.495,
+  "timing_basis": "Collector timestamp immediately before native send action to first captured visible completion; service finish time and CPU/tool timing unknown",
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "followup_prompts": [],
+  "source_prompt_sha256": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42",
+  "submitted_prompt_sha256": "ed35d3ade44b665d23af1ebb16c6ecf818a609f2ca30df0e637b52abc18e8811",
+  "prompt_adapter_appendix": "将交付文件写入 outputs/，不要修改 inputs/。",
+  "prompt_transport": "CUA native paste text followed by native send; editor AX normalizes visual whitespace, exact internal model-request bytes unavailable",
+  "initial_inventory": {
+    "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42"
+  },
+  "inputs_unchanged": true,
+  "product_deliverables": {
+    "order_ledger.csv": {
+      "sha256": "5f1df7a95ab297a6118571ca0d34a90701d018bbc4fe6ecbbbba9d7e769da302",
+      "bytes": 323
+    },
+    "aggregate.json": {
+      "sha256": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+      "bytes": 442
+    },
+    "exceptions.json": {
+      "sha256": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+      "bytes": 273
+    }
+  },
+  "output_repairs_by_evaluator": false,
+  "objective_score": 60.0,
+  "manual_score": null,
+  "total_score": null,
+  "pure_harness_score": null,
+  "actual_tool_calls": null,
+  "visible_operation_labels": [
+    "修改、运行校验：order_ledger.csv",
+    "Validate outputs with BOM handling",
+    "正在执行命令"
+  ],
+  "collector_preflight_issues": [
+    "Folder-dialog AX elements were unavailable in cached native state; screenshot exposed multiple regions. Documented screenshot with caught exception preserved the displayed regions, then native coordinate confirmation selected the verified isolated directory. All before task submission."
+  ],
+  "confidence": "high for published original-file correctness and observed UI labels; limited for internal execution and model/Skill/Harness attribution",
+  "attribution": "End-to-end result under recorded configuration; no isolated Harness causal score",
+  "redaction": "Exact operator/agent-reviewed AX-label whitelist only. Account URL/snapshot, identity, other projects/history, raw screenshots, all planning/derivation text, system prompts and authentication fields omitted. Raw observations remain private; no native tool stream was extracted.",
+  "checker_snapshot": {
+    "harness_eval/core.py": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20",
+    "cases/T01/case.json": "6dbae444cb341af4ef5dd90c96277495007a972fb51fd967a457ea61466548d3",
+    "cases/T01/oracle.json": "057f1b773febf50e7f3206b349936b4712952418fb177e71caa03f0a6cfb863d",
+    "scripts/export_workbuddy_desktop_pilot.py": "f5fbebf7279b8e7939fc873932a0e32c970a0ba705ea42326fb5c19bce148b49"
+  },
+  "public_review_actor": "Operator/agent; no external human audit claimed",
+  "visible_events_order": "Stable chronological order by received_at; source_line is a private AX line number, not a tool-call sequence",
+  "visible_events_projection_sha256": "d908f1a1db73f1ea07c8c3b46afff72781b4a7c2bb52138df23daa7761095bbc",
+  "public_description_correction": {
+    "corrected_at": "2026-10-13T13:57:45.841353+00:00",
+    "reason": "Clarify agent/operator review and chronological derived UI projection; native evidence unchanged",
+    "prior_metadata_sha256": "602f796580643fddd2664780b003f41123c9f415c8a8ee1ba5f41c5fc61ec143",
+    "prior_manifest_sha256": "731f39b4a76c540832ad9db5287107b2ffca752f15c04dffb63b7f13975fdae3",
+    "prior_visible_events_sha256": "d908f1a1db73f1ea07c8c3b46afff72781b4a7c2bb52138df23daa7761095bbc",
+    "events_object_content_unchanged": true,
+    "source_snapshots_and_native_outputs_unchanged": true
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "case_id": "T01",
+  "checks": [
+    {
+      "id": "T01-C01",
+      "title": "全订单逐单台账及排除状态",
+      "weight": 30,
+      "path": "order_ledger.csv",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "5f1df7a95ab297a6118571ca0d34a90701d018bbc4fe6ecbbbba9d7e769da302",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T01-C02",
+      "title": "总体入选订单与金额统计",
+      "weight": 20,
+      "path": "aggregate.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T01-C03",
+      "title": "按客户组统计",
+      "weight": 15,
+      "path": "aggregate.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T01-C04",
+      "title": "订单完全重复行识别",
+      "weight": 5,
+      "path": "exceptions.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T01-C05",
+      "title": "订单过时版本识别",
+      "weight": 5,
+      "path": "exceptions.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T01-C06",
+      "title": "退款去重与最新版识别",
+      "weight": 5,
+      "path": "exceptions.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T01-C07",
+      "title": "无效状态及不合格订单退款排除",
+      "weight": 10,
+      "path": "exceptions.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    },
+    {
+      "id": "T01-C08",
+      "title": "孤儿退款识别",
+      "weight": 10,
+      "path": "exceptions.json",
+      "passed": true,
+      "reason": "满足预注册判定",
+      "sha256": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
+      "confidence": "high",
+      "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+      "attribution": "unresolved"
+    }
+  ],
+  "passed_weight": 100,
+  "all_weight": 100,
+  "objective_score": 60.0,
+  "all_required_outputs_present": true,
+  "all_checks_passed": true
+}

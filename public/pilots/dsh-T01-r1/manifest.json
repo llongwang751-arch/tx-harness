@@ -1,5 +1,5 @@
 {
-  "sha256": {
+  "files": {
     "deterministic-verification.json": "a5cd85471b394b133147538f18e70feb403855bb253b6b13dc58084bee1a7736",
     "final-response.md": "291615727ec1ddf7af55f8b7e63c54a13ff89f7e9f868dcf0f451f44b5667e16",
     "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
@@ -8,10 +8,10 @@
     "outputs/exceptions.json": "4622bb1726a8bad6603a7757fe8f72f88f1baa95aacdfbd4c0668f78c4086106",
     "outputs/order_ledger.csv": "a5f28d53b9275061de7db2c4bf6cbb9306420be2138ffd2446031abd7a230d46",
     "prompt.md": "881f531e5cdad97c5fe41f70c0c8bfe9aa5fe541e06558230d00495e14e82c73",
-    "README.md": "0eff624f28627a1ee7abe17bfb40572116786ac720398ddecd998437be0c6371",
-    "redaction.md": "bdbe17d472b8df89d58c5f65cdb04b7285cdf9e608caea4f264a5acb106500eb",
-    "run-metadata.json": "510a7adaf03ec92cd1a059574fd2abeecabfe5ad3f709faf8ac77ed0736c376c",
+    "README.md": "dd54f78184e3b2e226d5a8a4f4d518d65050fd043ed214da68b3e2ff1b124fce",
+    "redaction.md": "6ce30bce54312a89046545ca73582685fdc835132fe37965f950db4dbae77709",
+    "run-metadata.json": "1cb52add447af58f8d79b505649a8c5f14ccfb3b7905068d0b732bfb921669d0",
+    "transmission-correction-receipt.json": "7a5f8642023ed5802e5d1d2bb0882b19884d47c5b916c0161f6e04b3d2d4e311",
     "visible-events.jsonl": "463ba22903f5517fbc9884fdf54963756e08d577063165f397066de24c6877d2"
-  },
-  "purpose": "Integrity of this public pilot package, not proof of authenticity"
+  }
 }

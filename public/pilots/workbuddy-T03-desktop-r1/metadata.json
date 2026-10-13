@@ -1,0 +1,110 @@
+{
+  "run_id": "workbuddy-T03-desktop-r1",
+  "product_id": "workbuddy",
+  "case_id": "T03",
+  "track": "pilot",
+  "formal_eligible": false,
+  "formal_sample": false,
+  "surface": "WorkBuddy 5.7.7 native desktop new task via documented CUA",
+  "visible_conditions": {
+    "version": "5.7.7",
+    "model": "Deepseek-V4.1-Flash",
+    "permission": "允许完全访问",
+    "account_edition": "free",
+    "scenario": "日常办公",
+    "configuration_basis": "Native labels; free edition seen in private account URL omitted publicly"
+  },
+  "underlying_model_version": null,
+  "active_skills": null,
+  "explicit_user_skill_selected": false,
+  "skills_disabled_verified": false,
+  "os_sandbox_verified": false,
+  "network_absence_independently_verified": false,
+  "actual_tool_calls": null,
+  "started_at": "2026-10-13T13:46:18.027Z",
+  "completion_observed_at": "2026-10-13T13:47:22.274Z",
+  "elapsed_to_completion_observation_seconds": 64.247,
+  "timed_out": false,
+  "timing_basis": "Send-action pre-receipt to first observed completed UI; service finish time unknown; observer interval is an upper bound",
+  "initial_inventory": {
+    "inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+    "inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7",
+    "inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+    "inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "prompt.md": "237f743d161bbffe092914ecb6750c6e2e4c9de6c3fad5b3ff39d313aeff42e0"
+  },
+  "final_inventory": {
+    ".workbuddy/memory/2026-10-13.md": "5336c1fd30f4ac5a2089b2746607a088596cb90846f292ec6e3b7d37acd4dcd2",
+    "inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+    "inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7",
+    "inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+    "inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "outputs/bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+    "outputs/bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+    "outputs/bundle/contacts.csv": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+    "outputs/bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "outputs/change_log.json": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a",
+    "prompt.md": "237f743d161bbffe092914ecb6750c6e2e4c9de6c3fad5b3ff39d313aeff42e0"
+  },
+  "original_inputs_and_prompt_unchanged": true,
+  "case_prompt_sha256": "237f743d161bbffe092914ecb6750c6e2e4c9de6c3fad5b3ff39d313aeff42e0",
+  "actual_paste_source_sha256": "1bb66d05159e57be72c4b009e19536fb871adb01f656e4ec4f537723a7187a85",
+  "prompt_adapter_appendix": "将交付文件写入 outputs/，不要修改 inputs/。",
+  "prompt_transport": "Actual file bytes decoded UTF-8 and native CUA pasted; internal model-request bytes unknown",
+  "source_snapshot_sha256": {
+    "run_workbuddy_desktop_pilot.py": "0f94100d7664cf0171f4dfccc1c0429b428cca9833e22e7af13662ea54c348e0",
+    "workbuddy_desktop_collector.mjs": "2286d1918860d95591f9f4f09bd6c67b5937121aba225cef326844139503ebc8"
+  },
+  "product_deliverables": {
+    "bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+    "bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+    "bundle/contacts.csv": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+    "bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "change_log.json": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a"
+  },
+  "release": null,
+  "objective_score": 60.0,
+  "total_score": null,
+  "manual_score": null,
+  "pure_harness_score": null,
+  "output_repairs_by_evaluator": false,
+  "unscheduled_prompts": [],
+  "completion_basis": "First AX and screenshot showed completed footer, five artifact cards and disabled send",
+  "confidence": "High for byte-preserved artifacts/independent criteria and explicitly visible labels; internal execution/attribution unresolved",
+  "attribution": "Recorded end-to-end configuration only; no pure Harness causal conclusion",
+  "collector_issues": [
+    "Unrelated foreground windows temporarily obscured screenshots; restored WorkBuddy through native Raise before later observations. Those screenshots remain private and are not product defects. AX can lag screenshot; actual first completed observation used as timing upper bound. Folder-picker multiple screenshot regions were emitted by CUA but single-image return unsupported. No task retry or rescue prompt."
+  ],
+  "redaction": "Operator/agent-reviewed exact AX line slices only; all thought/planning sections, account URL/ID, private sidebars, raw screenshots/system context omitted",
+  "private_capture_sha256": {
+    "001-new-task.ax.txt": "895ed0b798b095117389b043537cd6916464d4b872ae3ad159f0a7b5a7048a77",
+    "002-workspace-menu.ax.txt": "5be494436ac492f777300bea88149ab68755360b150e33741a1830048f211528",
+    "003-raised-workspace-menu.ax.txt": "f63f3074abeaf3eca7e7c385c162af963fb15c4dd71b8477100756e43f72586d",
+    "004-workspace-menu-open.ax.txt": "f63f3074abeaf3eca7e7c385c162af963fb15c4dd71b8477100756e43f72586d",
+    "005-workspace-selected.ax.txt": "ef6817b74ebed494fd6f057eefbb120acc9a87b61a8d35c0d6cb65283de412fc",
+    "006-prompt-ready.ax.txt": "1b3067b44ec1e7796958bb149e112abacd117bbe353d2d351d0c156c99d7c233",
+    "007-progress-1.ax.txt": "53ceac441c6fbe1567e21c50b4bfbf7dcae295365cb2ee954250472a20b47fad",
+    "008-progress-2.ax.txt": "0dd57ce2536b611db23e43d94e10bc82d1160962b5644c54b4593f5a2ba51b7d",
+    "009-progress-3.ax.txt": "fdb4688441d51b3e8907b156d44e2b594fec746e4eb639a0e74113716ec8f102",
+    "010-final-answer-review.ax.txt": "687669115c0a4ff974e6afe487a455cee905ce589e939a68cf2f530ab9fe45e8",
+    "011-final-answer-stable.ax.txt": "9ebe45a4a778b259ecc41841b64fe8354006073afcf2ff1f5da6c735fe09fe50"
+  },
+  "limitations": [
+    "One exploratory attempt; not an independent replicate per tool or artifact.",
+    "Model selector label does not attest backend deployment.",
+    "Active builtin/user Skills and full tool arguments are unknown.",
+    "Visible artifact/incident declarations do not prove network isolation or internal recovery responsibility."
+  ],
+  "public_review_actor": "Operator/agent; no external human audit claimed",
+  "visible_events_order": "Stable chronological order by received_at; source_line is a private AX line number, not a tool-call sequence",
+  "visible_events_projection_sha256": "cca750f651eb26e5d0c297f9e1be108bcfe13f41a1e2fc6af15a6f0f84696bcc",
+  "public_description_correction": {
+    "corrected_at": "2026-10-13T13:57:45.865444+00:00",
+    "reason": "Clarify agent/operator review and chronological derived UI projection; native evidence unchanged",
+    "prior_metadata_sha256": "c9b7fcf265b9c1c5307dfc1f29308d66a26b1f4e4801d86cfe5ef0b6ea46649d",
+    "prior_manifest_sha256": "cd90fd0d96cea3eaf563c049e3b43ede4f0187eddd0de30361658fbccd8c313b",
+    "prior_visible_events_sha256": "058cb61d611750a625d60063641ed4d4d3401b20c5620098b6005cba30dc94de",
+    "events_object_content_unchanged": true,
+    "source_snapshots_and_native_outputs_unchanged": true
+  }
+}
