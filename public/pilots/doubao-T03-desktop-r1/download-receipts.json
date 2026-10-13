@@ -1,0 +1,192 @@
+{
+  "schema": "native-artifact-source-receipts-public-v1",
+  "artifacts": [
+    {
+      "receipt_id": "db-t03-native-announcement-md",
+      "origin": "native_download",
+      "original_filename": "announcement.md",
+      "public_native_file": "native-downloads/announcement.md",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:25:35.943Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:21:58.359Z",
+      "save_action_source_line": 24,
+      "private_operator_actions_sha256": "efb9b755af3bc3f6bcad85361a42cd3773dcfe7c68ccdcad46dc59b659b46953",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 226,
+      "sha256": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+      "evidence": {
+        "event_id": "ui-33",
+        "capture": "db-t03-native-output-card-row",
+        "line_ranges": [
+          [
+            342,
+            347
+          ]
+        ],
+        "private_ax_sha256": "b849dc1c3993d83ea36badb06e04232d54b788b7a8a83fffbd2c1f855cdffc4c"
+      },
+      "outputs": [
+        {
+          "logical_path": "bundle/announcement.md",
+          "zip_member": null,
+          "bytes": 226,
+          "sha256": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "db-t03-native-catalog-json",
+      "origin": "native_download",
+      "original_filename": "catalog.json",
+      "public_native_file": "native-downloads/catalog.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:29:16.261Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:28:18.335Z",
+      "save_action_source_line": 45,
+      "private_operator_actions_sha256": "efb9b755af3bc3f6bcad85361a42cd3773dcfe7c68ccdcad46dc59b659b46953",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 370,
+      "sha256": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+      "evidence": {
+        "event_id": "ui-56",
+        "capture": "db-t03-catalog-download-preview-ready",
+        "line_ranges": [
+          [
+            461,
+            465
+          ]
+        ],
+        "private_ax_sha256": "934337786cd1b11899f33de02eaa1c718259f157b8e0d7effc28786517db503c"
+      },
+      "outputs": [
+        {
+          "logical_path": "bundle/catalog.json",
+          "zip_member": null,
+          "bytes": 370,
+          "sha256": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "db-t03-native-contacts-csv",
+      "origin": "native_download",
+      "original_filename": "contacts.csv",
+      "public_native_file": "native-downloads/contacts.csv",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:29:16.266Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:28:31.188Z",
+      "save_action_source_line": 47,
+      "private_operator_actions_sha256": "efb9b755af3bc3f6bcad85361a42cd3773dcfe7c68ccdcad46dc59b659b46953",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 142,
+      "sha256": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+      "evidence": {
+        "event_id": "ui-59",
+        "capture": "db-t03-contacts-download-preview-ready",
+        "line_ranges": [
+          [
+            469,
+            471
+          ]
+        ],
+        "private_ax_sha256": "29405f255417b7108b0abe92d55ec3e5832db93bef56c970aa04197e772babfc"
+      },
+      "outputs": [
+        {
+          "logical_path": "bundle/contacts.csv",
+          "zip_member": null,
+          "bytes": 142,
+          "sha256": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "db-t03-native-protected-txt",
+      "origin": "native_download",
+      "original_filename": "protected.txt",
+      "public_native_file": "native-downloads/protected.txt",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:29:16.270Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:28:45.571Z",
+      "save_action_source_line": 49,
+      "private_operator_actions_sha256": "efb9b755af3bc3f6bcad85361a42cd3773dcfe7c68ccdcad46dc59b659b46953",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 167,
+      "sha256": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+      "evidence": {
+        "event_id": "ui-62",
+        "capture": "db-t03-protected-download-preview-ready",
+        "line_ranges": [
+          [
+            471,
+            473
+          ]
+        ],
+        "private_ax_sha256": "ec02013d6a469a451c284b02bf6eb35c1c3570bacff0ee08d122bb8ccfebf305"
+      },
+      "outputs": [
+        {
+          "logical_path": "bundle/protected.txt",
+          "zip_member": null,
+          "bytes": 167,
+          "sha256": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "db-t03-native-change_log-json",
+      "origin": "native_download",
+      "original_filename": "change_log.json",
+      "public_native_file": "native-downloads/change_log.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:29:16.274Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:28:56.798Z",
+      "save_action_source_line": 51,
+      "private_operator_actions_sha256": "efb9b755af3bc3f6bcad85361a42cd3773dcfe7c68ccdcad46dc59b659b46953",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 477,
+      "sha256": "7e81f1343f537c4b848b59a5d443033a8f9cd235834f6e7fde7606476c4f0adf",
+      "evidence": {
+        "event_id": "ui-65",
+        "capture": "db-t03-changelog-download-preview-ready",
+        "line_ranges": [
+          [
+            473,
+            477
+          ]
+        ],
+        "private_ax_sha256": "bf326243782018fdfbf8957341c39a9614b5df22d4000fcdf939f0e52c353b47"
+      },
+      "outputs": [
+        {
+          "logical_path": "change_log.json",
+          "zip_member": null,
+          "bytes": 477,
+          "sha256": "7e81f1343f537c4b848b59a5d443033a8f9cd235834f6e7fde7606476c4f0adf"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    }
+  ],
+  "private_original_receipts_sha256": "af9487ab34ad450964f53663e1d4801f90974deb3bb05298cd08b1c0ce1e6f4b",
+  "basis": "Recorded native UI action/card evidence and retained native download/export/local-file originals; origin is explicit per artifact"
+}

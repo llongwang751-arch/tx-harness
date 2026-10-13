@@ -1,0 +1,616 @@
+{
+  "schema": "native-record-preservation-mapping-v1",
+  "record_rewriting_performed": false,
+  "source_capture_log_sha256": "3a966d96016f5953aebed5082a009b1d3a51f2f2ce86aa8c2d6cb5dafab52289",
+  "source_operator_actions_sha256": "efb9b755af3bc3f6bcad85361a42cd3773dcfe7c68ccdcad46dc59b659b46953",
+  "source_presence_confirmation_sha256": "6e3acbb25fd3c891ed38dda77e9e9ea266cc0b9c6cbe1a10c540c7b0e0f70767",
+  "collector_source_sha256": {
+    "operator-native-wrapper-snapshot.mjs": "a2afe20b41b39725520048b2993577231872c550459a68808b4f1294936f7d12",
+    "workbuddy_desktop_collector.mjs": "a72cdf89fff4e7592249e90f21f7acee2a5b40eb15c781d3bcd3a7307e664b91"
+  },
+  "mapping": [
+    {
+      "index": 2,
+      "capture": "db-t03-initial-main-window",
+      "raw_ax": "002-db-t03-initial-main-window.ax.txt",
+      "raw_ax_sha256": "ce37bb1e5237d450819c7acc452d926fb125a4c58c33aff38e739f508b303e9b",
+      "public_selection": false
+    },
+    {
+      "index": 3,
+      "capture": "db-t03-main-window-fresh-recovery",
+      "raw_ax": "003-db-t03-main-window-fresh-recovery.ax.txt",
+      "raw_ax_sha256": "b359a55737a593488a5507bd0ab38a23f6942fa2ae2b132d52e2136a679c7c36",
+      "public_selection": false
+    },
+    {
+      "index": 4,
+      "capture": "db-t03-maximized-main",
+      "raw_ax": "004-db-t03-maximized-main.ax.txt",
+      "raw_ax_sha256": "b359a55737a593488a5507bd0ab38a23f6942fa2ae2b132d52e2136a679c7c36",
+      "public_selection": false
+    },
+    {
+      "index": 5,
+      "capture": "db-t03-new-work-task-opened",
+      "raw_ax": "005-db-t03-new-work-task-opened.ax.txt",
+      "raw_ax_sha256": "e3af08fe54565ffe1dbf66a97f138144bb00e5e8e6b2d12116a280b9bf2e94b8",
+      "public_selection": false
+    },
+    {
+      "index": 6,
+      "capture": "private-unselected-ui-6",
+      "raw_ax": "private-unselected-source-6",
+      "raw_ax_sha256": "c8d5f1bc1879bfdddfc27ae847359c7a1ad82bfbcf35a777af4adbf5aba6e696",
+      "public_selection": false
+    },
+    {
+      "index": 7,
+      "capture": "db-t03-fresh-navigation-ax",
+      "raw_ax": "007-db-t03-fresh-navigation-ax.ax.txt",
+      "raw_ax_sha256": "c8d5f1bc1879bfdddfc27ae847359c7a1ad82bfbcf35a777af4adbf5aba6e696",
+      "public_selection": false
+    },
+    {
+      "index": 8,
+      "capture": "db-t03-sidebar-restored",
+      "raw_ax": "008-db-t03-sidebar-restored.ax.txt",
+      "raw_ax_sha256": "c8d5f1bc1879bfdddfc27ae847359c7a1ad82bfbcf35a777af4adbf5aba6e696",
+      "public_selection": false
+    },
+    {
+      "index": 9,
+      "capture": "db-t03-sidebar-coordinate-result",
+      "raw_ax": "009-db-t03-sidebar-coordinate-result.ax.txt",
+      "raw_ax_sha256": "765e20dee9fa7bc85f607b005d4cfb9da9888c92450afce8a2a5104c2342e383",
+      "public_selection": false
+    },
+    {
+      "index": 10,
+      "capture": "db-t03-new-visible-work-task-result",
+      "raw_ax": "010-db-t03-new-visible-work-task-result.ax.txt",
+      "raw_ax_sha256": "765e20dee9fa7bc85f607b005d4cfb9da9888c92450afce8a2a5104c2342e383",
+      "public_selection": false
+    },
+    {
+      "index": 11,
+      "capture": "private-unselected-ui-11",
+      "raw_ax": "private-unselected-source-11",
+      "raw_ax_sha256": "80da804cce3919264e325232a7cfab5b6748dc79f40153dbbb3efc4071193c21",
+      "public_selection": false
+    },
+    {
+      "index": 12,
+      "capture": "db-t03-computer-menu-open",
+      "raw_ax": "012-db-t03-computer-menu-open.ax.txt",
+      "raw_ax_sha256": "b74c3a424e7fe5223626741143797ef2e17fc6b62741cd5ca5f439a5a024826a",
+      "public_selection": false
+    },
+    {
+      "index": 13,
+      "capture": "db-t03-cloud-mode-menu-ax",
+      "raw_ax": "013-db-t03-cloud-mode-menu-ax.ax.txt",
+      "raw_ax_sha256": "8ed18b4b4490632fe410071e63185dc1d88170950d7b1a583234cad5446ab6d5",
+      "public_selection": false
+    },
+    {
+      "index": 14,
+      "capture": "db-t03-cloud-selected",
+      "raw_ax": "014-db-t03-cloud-selected.ax.txt",
+      "raw_ax_sha256": "8ed18b4b4490632fe410071e63185dc1d88170950d7b1a583234cad5446ab6d5",
+      "public_selection": false
+    },
+    {
+      "index": 15,
+      "capture": "db-t03-cloud-attachment-preflight",
+      "raw_ax": "015-db-t03-cloud-attachment-preflight.ax.txt",
+      "raw_ax_sha256": "45ff051cea92d37427f168891056146b19c388c09af38ef0c25979afda24ef5c",
+      "public_selection": false
+    },
+    {
+      "index": 16,
+      "capture": "db-t03-upload-menu-result",
+      "raw_ax": "016-db-t03-upload-menu-result.ax.txt",
+      "raw_ax_sha256": "f7143168b2eedd1bf989cf637c482cfccf3dcf0e95ab2e0460634baae51fa78a",
+      "public_selection": false
+    },
+    {
+      "index": 17,
+      "capture": "db-t03-upload-menu-confirmed",
+      "raw_ax": "017-db-t03-upload-menu-confirmed.ax.txt",
+      "raw_ax_sha256": "2218dcf8d882267ecd04b47a79999fab507fcef9c6a045885297a0538fd0e74c",
+      "public_selection": false
+    },
+    {
+      "index": 18,
+      "capture": "db-t03-native-picker-first",
+      "raw_ax": "018-db-t03-native-picker-first.ax.txt",
+      "raw_ax_sha256": "190543a414e844b46d90c9d49a58ce63604755912eff88b93bac0a14f3c02043",
+      "public_selection": false
+    },
+    {
+      "index": 19,
+      "capture": "db-t03-native-picker-ready-ax",
+      "raw_ax": "019-db-t03-native-picker-ready-ax.ax.txt",
+      "raw_ax_sha256": "a70c269a0af4a9d9e91bc91c7be2a468282542c938de7c9c0fdd0c096049e8c9",
+      "public_selection": false
+    },
+    {
+      "index": 20,
+      "capture": "db-t03-picker-directory-confirmed",
+      "raw_ax": "020-db-t03-picker-directory-confirmed.ax.txt",
+      "raw_ax_sha256": "f07821f5576ab650eaefc97122c849457ef55a04c458e3d85db71e10b4105f68",
+      "public_selection": false
+    },
+    {
+      "index": 21,
+      "capture": "db-t03-canonical-input-directory-opened",
+      "raw_ax": "021-db-t03-canonical-input-directory-opened.ax.txt",
+      "raw_ax_sha256": "7108653cded0979d9196ea9a4f05b07fe661d07b458c167549d7699d94cc715d",
+      "public_selection": false
+    },
+    {
+      "index": 22,
+      "capture": "db-t03-four-filenames-before-upload",
+      "raw_ax": "022-db-t03-four-filenames-before-upload.ax.txt",
+      "raw_ax_sha256": "3a67fb521657ecf1d77f81d59287edcf912bb114918cda9f71647d60717a9e8e",
+      "public_selection": false
+    },
+    {
+      "index": 23,
+      "capture": "db-t03-upload-four-originals-returned",
+      "raw_ax": "023-db-t03-upload-four-originals-returned.ax.txt",
+      "raw_ax_sha256": "190543a414e844b46d90c9d49a58ce63604755912eff88b93bac0a14f3c02043",
+      "public_selection": false
+    },
+    {
+      "index": 24,
+      "capture": "db-t03-four-original-attachments-accepted",
+      "raw_ax": "024-db-t03-four-original-attachments-accepted.ax.txt",
+      "raw_ax_sha256": "709f90a1ca0f05b7f04cd9d172427930351aa4e6aa70cbd9efcb999e9e337e4b",
+      "public_selection": true
+    },
+    {
+      "index": 25,
+      "capture": "db-t03-canonical-composer-paste-result",
+      "raw_ax": "025-db-t03-canonical-composer-paste-result.ax.txt",
+      "raw_ax_sha256": "870c980f4fc691409f5f7def724d5b63774863f5e7f66b2c815800b444c383c8",
+      "public_selection": false
+    },
+    {
+      "index": 26,
+      "capture": "db-t03-canonical-composer-ready",
+      "raw_ax": "026-db-t03-canonical-composer-ready.ax.txt",
+      "raw_ax_sha256": "6044494c4ed00b492efe7a7021f2e00a490137945a5ddc9f7dc790ab12239fcf",
+      "public_selection": true
+    },
+    {
+      "index": 27,
+      "capture": "db-t03-first-submission-observation",
+      "raw_ax": "027-db-t03-first-submission-observation.ax.txt",
+      "raw_ax_sha256": "6044494c4ed00b492efe7a7021f2e00a490137945a5ddc9f7dc790ab12239fcf",
+      "public_selection": false
+    },
+    {
+      "index": 28,
+      "capture": "db-t03-submitted-cloud-task-confirmed",
+      "raw_ax": "028-db-t03-submitted-cloud-task-confirmed.ax.txt",
+      "raw_ax_sha256": "20802119ce27af6b0f83b688a53bfa378d4032e65b54a3fb074b3f50e61d75fd",
+      "public_selection": false
+    },
+    {
+      "index": 29,
+      "capture": "db-t03-execution-progress-01",
+      "raw_ax": "029-db-t03-execution-progress-01.ax.txt",
+      "raw_ax_sha256": "9236fbcf5acf8b04addc153d68b6fd672ff990c56eb14bed0b75f476a928bd95",
+      "public_selection": false
+    },
+    {
+      "index": 30,
+      "capture": "db-t03-execution-progress-02",
+      "raw_ax": "030-db-t03-execution-progress-02.ax.txt",
+      "raw_ax_sha256": "b6997e489c04098404d8b0447f7d4fd5103900f0090cdd701ae2eae43e696d24",
+      "public_selection": false
+    },
+    {
+      "index": 31,
+      "capture": "db-t03-execution-progress-03",
+      "raw_ax": "031-db-t03-execution-progress-03.ax.txt",
+      "raw_ax_sha256": "f59ad2226d708c793bac4f9f9369aa3e000f1c49f52547d4ce341fdd1c2fb403",
+      "public_selection": true
+    },
+    {
+      "index": 32,
+      "capture": "db-t03-execution-progress-04",
+      "raw_ax": "032-db-t03-execution-progress-04.ax.txt",
+      "raw_ax_sha256": "b849dc1c3993d83ea36badb06e04232d54b788b7a8a83fffbd2c1f855cdffc4c",
+      "public_selection": true
+    },
+    {
+      "index": 33,
+      "capture": "db-t03-native-output-card-row",
+      "raw_ax": "033-db-t03-native-output-card-row.ax.txt",
+      "raw_ax_sha256": "b849dc1c3993d83ea36badb06e04232d54b788b7a8a83fffbd2c1f855cdffc4c",
+      "public_selection": true
+    },
+    {
+      "index": 34,
+      "capture": "db-t03-announcement-download-action-result",
+      "raw_ax": "034-db-t03-announcement-download-action-result.ax.txt",
+      "raw_ax_sha256": "84aa8832dd906d8ed4dcd170dcd6dd64370f0f107b2754a654f565b58c651d0c",
+      "public_selection": false
+    },
+    {
+      "index": 35,
+      "capture": "db-t03-announcement-native-download-toast",
+      "raw_ax": "035-db-t03-announcement-native-download-toast.ax.txt",
+      "raw_ax_sha256": "f5aadc84ce15db3bc4232b5a78548198c01657c6f6ee26cf50629d5fcbec3db9",
+      "public_selection": false
+    },
+    {
+      "index": 36,
+      "capture": "db-t03-download-toast-fresh-preflight",
+      "raw_ax": "036-db-t03-download-toast-fresh-preflight.ax.txt",
+      "raw_ax_sha256": "530ec77e474f10aa6feed6dc26aa4696fb16b21da922e907e0fd1c783e54c9e0",
+      "public_selection": false
+    },
+    {
+      "index": 37,
+      "capture": "db-t03-temporary-typora-update-dialog",
+      "raw_ax": "037-db-t03-temporary-typora-update-dialog.ax.txt",
+      "raw_ax_sha256": "590c6a0542b4b552bdb73d1adbdd8499016502ea472a61c8641cb97af9a04050",
+      "public_selection": false
+    },
+    {
+      "index": 38,
+      "capture": "db-t03-update-dialog-close-preflight",
+      "raw_ax": "038-db-t03-update-dialog-close-preflight.ax.txt",
+      "raw_ax_sha256": "590c6a0542b4b552bdb73d1adbdd8499016502ea472a61c8641cb97af9a04050",
+      "public_selection": false
+    },
+    {
+      "index": 39,
+      "capture": "db-t03-announcement-typora-local-view",
+      "raw_ax": "039-db-t03-announcement-typora-local-view.ax.txt",
+      "raw_ax_sha256": "77761984d8f22abd6f8d8470d6d499a37c09b83281c99f4ad8cbaf397a3de31e",
+      "public_selection": false
+    },
+    {
+      "index": 40,
+      "capture": "db-t03-typora-file-menu-ax",
+      "raw_ax": "040-db-t03-typora-file-menu-ax.ax.txt",
+      "raw_ax_sha256": "72888d2f18dec574e8831ee4eff9a78de2ca7e4493f684b8ee5bf52732a72d8e",
+      "public_selection": false
+    },
+    {
+      "index": 41,
+      "capture": "db-t03-explorer-home-attestation",
+      "raw_ax": "041-db-t03-explorer-home-attestation.ax.txt",
+      "raw_ax_sha256": "8e0998ce037307ef6dfcf7f6de20806a4fba273f9e8a5260ef7e7e6f7283be1f",
+      "public_selection": false
+    },
+    {
+      "index": 42,
+      "capture": "db-t03-explorer-downloads-attestation",
+      "raw_ax": "042-db-t03-explorer-downloads-attestation.ax.txt",
+      "raw_ax_sha256": "33cb0b7ddec509580d4c6a6d7ff57c2ee132df3eaf3b17273c55ca42c1ae6cee",
+      "public_selection": false
+    },
+    {
+      "index": 43,
+      "capture": "db-t03-explorer-real-downloads-folder",
+      "raw_ax": "043-db-t03-explorer-real-downloads-folder.ax.txt",
+      "raw_ax_sha256": "0c53a6cff1bb5db3bbd4d8f2a71e054e1961fe154a52dbc642a5a2fa2beac689",
+      "public_selection": false
+    },
+    {
+      "index": 44,
+      "capture": "db-t03-real-download-directory-address",
+      "raw_ax": "044-db-t03-real-download-directory-address.ax.txt",
+      "raw_ax_sha256": "238855180eb8355afc34992963fc20a392e6c9e020a8e41be3ca58409e0ddb73",
+      "public_selection": false
+    },
+    {
+      "index": 45,
+      "capture": "db-t03-real-download-directory-address-confirmed",
+      "raw_ax": "045-db-t03-real-download-directory-address-confirmed.ax.txt",
+      "raw_ax_sha256": "31cf4a6b7785a2e4fde7462a20c772c360596f72228ba2f001ca7cadfa37b998",
+      "public_selection": false
+    },
+    {
+      "index": 46,
+      "capture": "db-t03-explorer-download-file-preflight-ax",
+      "raw_ax": "046-db-t03-explorer-download-file-preflight-ax.ax.txt",
+      "raw_ax_sha256": "52131b5cb018fdcc523b60a97f37c8f58c34464211a375567227ceb541f06f7c",
+      "public_selection": false
+    },
+    {
+      "index": 47,
+      "capture": "db-t03-announcement-file-properties",
+      "raw_ax": "047-db-t03-announcement-file-properties.ax.txt",
+      "raw_ax_sha256": "75d90172d0663759ebdea4c9eb2945db951952b7ccc7e32dbfbfe67a71328c2e",
+      "public_selection": false
+    },
+    {
+      "index": 48,
+      "capture": "db-t03-announcement-properties-dialog-ready",
+      "raw_ax": "048-db-t03-announcement-properties-dialog-ready.ax.txt",
+      "raw_ax_sha256": "75d90172d0663759ebdea4c9eb2945db951952b7ccc7e32dbfbfe67a71328c2e",
+      "public_selection": false
+    },
+    {
+      "index": 49,
+      "capture": "db-t03-announcement-real-file-properties-attested",
+      "raw_ax": "049-db-t03-announcement-real-file-properties-attested.ax.txt",
+      "raw_ax_sha256": "e469989f0803b9d87b0178733513e8ad5e1dd3abd8c0c5bc19bdfc0096513869",
+      "public_selection": false
+    },
+    {
+      "index": 51,
+      "capture": "db-t03-card-downloads-fresh",
+      "raw_ax": "051-db-t03-card-downloads-fresh.ax.txt",
+      "raw_ax_sha256": "cffd1877a87325ad35bf6671e82a17bb1f8f31fff9991f792754adaa3576dcde",
+      "public_selection": false
+    },
+    {
+      "index": 52,
+      "capture": "db-t03-completed-main-raised",
+      "raw_ax": "052-db-t03-completed-main-raised.ax.txt",
+      "raw_ax_sha256": "7c871bff556969fd3be643424226e9696ff20d8fb8cd462efb445a20b6045d12",
+      "public_selection": false
+    },
+    {
+      "index": 53,
+      "capture": "db-t03-download-task-maximized",
+      "raw_ax": "053-db-t03-download-task-maximized.ax.txt",
+      "raw_ax_sha256": "7c871bff556969fd3be643424226e9696ff20d8fb8cd462efb445a20b6045d12",
+      "public_selection": false
+    },
+    {
+      "index": 54,
+      "capture": "db-t03-generated-files-position-confirmed",
+      "raw_ax": "054-db-t03-generated-files-position-confirmed.ax.txt",
+      "raw_ax_sha256": "4e154a6c146988444b9237063ce60c389f7e4cc3f73bdec7000b34b654076104",
+      "public_selection": false
+    },
+    {
+      "index": 55,
+      "capture": "db-t03-original-catalog-preview-open",
+      "raw_ax": "055-db-t03-original-catalog-preview-open.ax.txt",
+      "raw_ax_sha256": "2af00bb107f3e1bdd7781f81ae72b35e4a24e5f596d1acf799b0264dc0860b08",
+      "public_selection": false
+    },
+    {
+      "index": 56,
+      "capture": "db-t03-catalog-download-preview-ready",
+      "raw_ax": "056-db-t03-catalog-download-preview-ready.ax.txt",
+      "raw_ax_sha256": "934337786cd1b11899f33de02eaa1c718259f157b8e0d7effc28786517db503c",
+      "public_selection": true
+    },
+    {
+      "index": 57,
+      "capture": "db-t03-catalog-native-download-action",
+      "raw_ax": "057-db-t03-catalog-native-download-action.ax.txt",
+      "raw_ax_sha256": "934337786cd1b11899f33de02eaa1c718259f157b8e0d7effc28786517db503c",
+      "public_selection": false
+    },
+    {
+      "index": 58,
+      "capture": "db-t03-catalog-new-download-toast",
+      "raw_ax": "058-db-t03-catalog-new-download-toast.ax.txt",
+      "raw_ax_sha256": "45d2016bac2e43340fde7dd218a2df4234fd1e9a2ab237f34a693cd5be636ed3",
+      "public_selection": true
+    },
+    {
+      "index": 59,
+      "capture": "db-t03-contacts-download-preview-ready",
+      "raw_ax": "059-db-t03-contacts-download-preview-ready.ax.txt",
+      "raw_ax_sha256": "29405f255417b7108b0abe92d55ec3e5832db93bef56c970aa04197e772babfc",
+      "public_selection": true
+    },
+    {
+      "index": 60,
+      "capture": "db-t03-contacts-native-download-action",
+      "raw_ax": "060-db-t03-contacts-native-download-action.ax.txt",
+      "raw_ax_sha256": "169f06207d38bdd5575c4e3d0d06e0f8d334e9a644c212f047772a1e11674017",
+      "public_selection": false
+    },
+    {
+      "index": 61,
+      "capture": "db-t03-contacts-new-download-toast",
+      "raw_ax": "061-db-t03-contacts-new-download-toast.ax.txt",
+      "raw_ax_sha256": "b861836ad71bfc67b8376a01de11675ca6a4420769159d0a9723c9da257013b9",
+      "public_selection": true
+    },
+    {
+      "index": 62,
+      "capture": "db-t03-protected-download-preview-ready",
+      "raw_ax": "062-db-t03-protected-download-preview-ready.ax.txt",
+      "raw_ax_sha256": "ec02013d6a469a451c284b02bf6eb35c1c3570bacff0ee08d122bb8ccfebf305",
+      "public_selection": true
+    },
+    {
+      "index": 63,
+      "capture": "db-t03-protected-native-download-action",
+      "raw_ax": "063-db-t03-protected-native-download-action.ax.txt",
+      "raw_ax_sha256": "ec02013d6a469a451c284b02bf6eb35c1c3570bacff0ee08d122bb8ccfebf305",
+      "public_selection": false
+    },
+    {
+      "index": 64,
+      "capture": "db-t03-protected-new-download-toast",
+      "raw_ax": "064-db-t03-protected-new-download-toast.ax.txt",
+      "raw_ax_sha256": "e02eff62c3b8d1064250435c0214fe1798e32f43a0466ad993cc0d479d036d19",
+      "public_selection": true
+    },
+    {
+      "index": 65,
+      "capture": "db-t03-changelog-download-preview-ready",
+      "raw_ax": "065-db-t03-changelog-download-preview-ready.ax.txt",
+      "raw_ax_sha256": "bf326243782018fdfbf8957341c39a9614b5df22d4000fcdf939f0e52c353b47",
+      "public_selection": true
+    },
+    {
+      "index": 66,
+      "capture": "db-t03-changelog-native-download-action",
+      "raw_ax": "066-db-t03-changelog-native-download-action.ax.txt",
+      "raw_ax_sha256": "bf326243782018fdfbf8957341c39a9614b5df22d4000fcdf939f0e52c353b47",
+      "public_selection": false
+    },
+    {
+      "index": 67,
+      "capture": "db-t03-changelog-new-download-toast",
+      "raw_ax": "067-db-t03-changelog-new-download-toast.ax.txt",
+      "raw_ax_sha256": "30c4619cf2ee5901f65e9d4100acd35b50ecef5a0b100f79048930151b5a5092",
+      "public_selection": true
+    },
+    {
+      "index": 68,
+      "capture": "db-t03-downloads-explorer-recovery-before-raise",
+      "raw_ax": "068-db-t03-downloads-explorer-recovery-before-raise.ax.txt",
+      "raw_ax_sha256": "5dca84df9dcf87509053fff860b9a41174a6ff262ffbeedc65b4a2148c8818cf",
+      "public_selection": false
+    },
+    {
+      "index": 69,
+      "capture": "db-t03-all-new-downloads-explorer-attested",
+      "raw_ax": "069-db-t03-all-new-downloads-explorer-attested.ax.txt",
+      "raw_ax_sha256": "1a40a10fabf0ab000e00908cd76b9692cae3e9eb6ba1fcab0d8de99f7e71ee0d",
+      "public_selection": false
+    },
+    {
+      "index": 70,
+      "capture": "db-t03-close-temporary-explorer-preflight",
+      "raw_ax": "070-db-t03-close-temporary-explorer-preflight.ax.txt",
+      "raw_ax_sha256": "1a40a10fabf0ab000e00908cd76b9692cae3e9eb6ba1fcab0d8de99f7e71ee0d",
+      "public_selection": false
+    },
+    {
+      "index": 71,
+      "capture": "db-t03-native-taskview-preflight",
+      "raw_ax": "071-db-t03-native-taskview-preflight.ax.txt",
+      "raw_ax_sha256": "30c4619cf2ee5901f65e9d4100acd35b50ecef5a0b100f79048930151b5a5092",
+      "public_selection": false
+    },
+    {
+      "index": 72,
+      "capture": "db-t03-native-taskview-visible",
+      "raw_ax": "072-db-t03-native-taskview-visible.ax.txt",
+      "raw_ax_sha256": "17625669a5a62c0d3712baea44a4c53bc811faf2bd75017c7637b7bc2145ea7a",
+      "public_selection": false
+    },
+    {
+      "index": 73,
+      "capture": "db-t03-taskview-full-recovery",
+      "raw_ax": "073-db-t03-taskview-full-recovery.ax.txt",
+      "raw_ax_sha256": "17625669a5a62c0d3712baea44a4c53bc811faf2bd75017c7637b7bc2145ea7a",
+      "public_selection": false
+    },
+    {
+      "index": 74,
+      "capture": "db-t03-empty-temporary-typora-preflight",
+      "raw_ax": "074-db-t03-empty-temporary-typora-preflight.ax.txt",
+      "raw_ax_sha256": "d11201bb2b470317342592480d8312b9ccebbf9e12aaea39c51c47112c4f0829",
+      "public_selection": false
+    },
+    {
+      "index": 75,
+      "capture": "db-t03-switcher-recovery-preflight",
+      "raw_ax": "075-db-t03-switcher-recovery-preflight.ax.txt",
+      "raw_ax_sha256": "86db9451cd7277a21b9852881a3d7786c6f9bd224ff2822f8d781e8ce0a2bc43",
+      "public_selection": false
+    },
+    {
+      "index": 76,
+      "capture": "db-t03-native-switcher-result",
+      "raw_ax": "076-db-t03-native-switcher-result.ax.txt",
+      "raw_ax_sha256": "86db9451cd7277a21b9852881a3d7786c6f9bd224ff2822f8d781e8ce0a2bc43",
+      "public_selection": false
+    },
+    {
+      "index": 77,
+      "capture": "db-t03-reverse-switcher-preflight",
+      "raw_ax": "077-db-t03-reverse-switcher-preflight.ax.txt",
+      "raw_ax_sha256": "86db9451cd7277a21b9852881a3d7786c6f9bd224ff2822f8d781e8ce0a2bc43",
+      "public_selection": false
+    },
+    {
+      "index": 78,
+      "capture": "db-t03-original-preview-reopen-preflight",
+      "raw_ax": "078-db-t03-original-preview-reopen-preflight.ax.txt",
+      "raw_ax_sha256": "95f31667b5af4648fb51a377426fa6ab03c0fdc15942b90a21fe96a9f369b262",
+      "public_selection": false
+    },
+    {
+      "index": 79,
+      "capture": "db-t03-preview-reopen-explorer-bound",
+      "raw_ax": "079-db-t03-preview-reopen-explorer-bound.ax.txt",
+      "raw_ax_sha256": "c42e045862d672b85fd26b23da5bfa1404088fe1a1fbb1bdc5bcfbf385fc12b7",
+      "public_selection": false
+    },
+    {
+      "index": 80,
+      "capture": "db-t03-attested-file-address-confirmed",
+      "raw_ax": "080-db-t03-attested-file-address-confirmed.ax.txt",
+      "raw_ax_sha256": "61278e12f01fcd1ccc94afd49c5b18609eaf6b4ffe2021baad7abc518dc325a9",
+      "public_selection": false
+    },
+    {
+      "index": 81,
+      "capture": "db-t03-preview-reopen-explorer-result-ax",
+      "raw_ax": "081-db-t03-preview-reopen-explorer-result-ax.ax.txt",
+      "raw_ax_sha256": "5f32dc9745d910342eae712e664905d08c820d1d26dcb1d2a524ec3b76cda841",
+      "public_selection": false
+    },
+    {
+      "index": 82,
+      "capture": "db-t03-typora-exit-menu-preflight",
+      "raw_ax": "082-db-t03-typora-exit-menu-preflight.ax.txt",
+      "raw_ax_sha256": "8fcbf79d46bee154960c13a9cf3ab82409261abcab0fde628bb4b54493c6bab7",
+      "public_selection": false
+    },
+    {
+      "index": 83,
+      "capture": "db-t03-typora-file-menu-exit-observed-ax",
+      "raw_ax": "083-db-t03-typora-file-menu-exit-observed-ax.ax.txt",
+      "raw_ax_sha256": "b54c1e3838c4c0adf094e9b8bfccc26fbf720cf07034cf5ce2f39fd73753e7b3",
+      "public_selection": false
+    },
+    {
+      "index": 84,
+      "capture": "db-t03-empty-exit-window-close-preflight",
+      "raw_ax": "084-db-t03-empty-exit-window-close-preflight.ax.txt",
+      "raw_ax_sha256": "b54c1e3838c4c0adf094e9b8bfccc26fbf720cf07034cf5ce2f39fd73753e7b3",
+      "public_selection": false
+    },
+    {
+      "index": 85,
+      "capture": "db-t03-final-main-recovery-preflight",
+      "raw_ax": "085-db-t03-final-main-recovery-preflight.ax.txt",
+      "raw_ax_sha256": "7528899084ed9929e7aec3f7742ed827ef05f4ff36fe1b42da28cef1cbb8e46c",
+      "public_selection": false
+    },
+    {
+      "index": 86,
+      "capture": "db-t03-close-checkpoint-main-retained",
+      "raw_ax": "086-db-t03-close-checkpoint-main-retained.ax.txt",
+      "raw_ax_sha256": "95f9bf8094d37bb4bc0ca1db8dd9b58be346fa50a5c37714fe0e2e4ed6b9d115",
+      "public_selection": true
+    }
+  ],
+  "scope": "Raw captures/action log preserved. Public action projection keeps actual at/label/method only and removes arguments/results/errors. Exact reviewed ordinary AX slices are selected separately. No complete action-stream attestation claimed.",
+  "limitations": [
+    "Failed screenshot/record attempts do not have successful capture entries; no synthetic replacement captures created.",
+    "Flat downloaded originals retain native bytes; evaluator logical directory mapping is disclosed."
+  ],
+  "public_projection_note": {
+    "unselected_private_source_labels_generalized": [
+      6,
+      11
+    ],
+    "reason": "Two unselected collection labels incidentally matched the supplemental credential-pattern guard. Only published source descriptors use numeric aliases; exact raw capture/action sources and original adaptation remain private unchanged. No guard weakened.",
+    "original_adaptation_sha256": "c40b5f05ac9685f816bf3821d68488d5088a76ad2790fe9902ced6298c96f5d9",
+    "raw_ax_bytes_and_hashes_unchanged": true,
+    "selected_ui_evidence_unchanged": true
+  }
+}
