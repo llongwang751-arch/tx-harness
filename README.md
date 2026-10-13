@@ -2,9 +2,9 @@
 
 个人开源仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。比较对象为Codex、WorkBuddy、DeepSeek Harness（DSH）、元宝专家模式、豆包工作任务模式；用户已确认公告中的“豆包办公”指工作任务模式。
 
-截至2026-10-14，方案、五套用例、36项机器检查与评分工具已完成。Codex、DSH和WorkBuddy正常桌面均已执行五任务预试。DSH SDK的T05通过6/8，产物30/60，失败原件完整保留；WorkBuddy五任务规定产物检查均通过，T04有真实请求与同一可见任务补发记录。两次WorkBuddy CLI登录错误、Codex首次T04误触发另存。共23个公开证据包：元宝原生专家模式T01为7/8、42/60；豆包云电脑T01独立重试为8/8、60/60，较早本地入口的沙盒失败0/8、0/60仍保留。元宝下载和豆包云任务的预算观察限制明确列出。两款后续各四题尚未完成覆盖，元宝T02正在运行，未计成绩。浏览器插件与系统资源不足属于采集限制，未算成产品失败。
+截至2026-10-14，方案、五套用例、36项机器检查与评分工具已完成。Codex、DSH和WorkBuddy正常桌面均已执行五任务预试。DSH SDK的T05通过6/8，产物30/60，失败原件完整保留；WorkBuddy五任务规定产物检查均通过，T04有真实请求与同一可见任务补发记录。两次WorkBuddy CLI登录错误、Codex首次T04误触发另存。共24个公开证据包：元宝原生专家模式T01为7/8、42/60；豆包云电脑T01独立重试为8/8、60/60，较早本地入口的沙盒失败0/8、0/60仍保留。元宝下载和豆包云任务的预算观察限制明确列出。元宝T02原生四原件已封存4/7、27/60；元宝余三题、豆包余四题尚未完成覆盖。浏览器插件与系统资源不足属于采集限制，未算成产品失败。
 
-本次交付采用[探索性分析口径](docs/exploratory-analysis-plan.md)，按实际任务复现和执行链追溯开展五产品比较。原先75次确认性实验为作者草案，公告没有规定这个次数；未实施的正式主实验成绩保持空，不追认既有预试。[后验评分审阅](reports/exploratory-score-review.md)已覆盖18次实际现场、五款产品，人工项缺证保留未知范围；已完成17/25个产品×任务组合，完整覆盖尚未完成。
+本次交付采用[探索性分析口径](docs/exploratory-analysis-plan.md)，按实际任务复现和执行链追溯开展五产品比较。原先75次确认性实验为作者草案，公告没有规定这个次数；未实施的正式主实验成绩保持空，不追认既有预试。[后验评分审阅](reports/exploratory-score-review.md)已覆盖19次实际现场、五款产品，人工项缺证保留未知范围；已完成18/25个产品×任务组合，完整覆盖尚未完成。
 
 阅读[书面报告](reports/report.md)和[真实预试索引](public/pilots/README.md)，复核原生交付、现场事件、失败attempt与归因边界。
 
@@ -20,8 +20,8 @@
 |---|---|---|
 | 评测方案 | docs/protocol.md、config/protocol.json、docs/exploratory-analysis-plan.md | 确认性草案未实施；本次按探索性口径复现和追溯 |
 | 用例：任务、输入、完成条件 | cases/T01至T05，prompt.md、inputs、case.json | 已设计；可离线核验 |
-| 表现现场 | public/pilots真实接入记录；正式封存后export至public/runs | 23个证据包；17/25个已结束的产品×任务组合，另有重试/诊断；正式0/75 |
-| 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 18次逐项审阅；缺证项与完整覆盖缺口明确 |
+| 表现现场 | public/pilots真实接入记录；正式封存后export至public/runs | 24个证据包；18/25个已结束的产品×任务组合，另有重试/诊断；正式0/75 |
+| 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 19次逐项审阅；缺证项与完整覆盖缺口明确 |
 | 书面竞品报告 | reports/report.md、逐次公开证据与复核命令 | 真实预试报告；正式对照尚未完成 |
 | 每周六个人周报邮件 | reports/weekly-template.md、reports/weekly-2026-10-17-draft.md | 仅本地模板/草稿；未发送 |
 | 个人开源GitHub链接 | https://github.com/llongwang751-arch/tx-harness，MIT | 公开方案、代码、真实预试与报告 |

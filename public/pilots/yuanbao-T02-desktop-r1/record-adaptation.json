@@ -1,0 +1,101 @@
+{
+  "schema": "office-pilot-record-correction-v1",
+  "review_actor": "Operator/agent",
+  "private_original_records_retained": true,
+  "original_record_hashes": {
+    "execution-start.json": {
+      "sha256": "c29603e3f7ceb430b9efaf95e21bc89c9576c59482e03e000b770270c0e46148",
+      "bytes": 225
+    },
+    "execution-end.json": {
+      "sha256": "fc268c02fa576b7fb53b77e803b0b54d6d14db4bdb759438a51821bf1fadb1d0",
+      "bytes": 380
+    },
+    "capture-log.jsonl": {
+      "sha256": "0e9b4cdbf93918aaeaf20ab288c1ba4ced9043c50034aa1c07f217a5e2abb84f",
+      "bytes": 10053
+    },
+    "native-artifact-receipts.json": {
+      "sha256": "a7e5bcd3b8cce1d40c00b6cd6bc799ec212616892e127962f3e0f52a29921afb",
+      "bytes": 1235
+    },
+    "actions.jsonl": {
+      "sha256": "9d9cd7a3c38e9560710877dbf659cc80afeb1b3835036d5b3ee414333bbb99af",
+      "bytes": 8801
+    }
+  },
+  "correction": {
+    "field": "execution-end.completion_observed_at",
+    "original_recorded_value": "2026-10-13T16:18:26.701Z",
+    "original_label_limitation": "Capture016 shows partial ordinary reply/self-claim, not four deliverable file cards or a complete final reply.",
+    "corrected_observation_value": "2026-10-13T16:29:54.835Z",
+    "observation_elapsed_seconds": 709.135,
+    "source_capture": {
+      "event_id": "ui-19",
+      "capture_index": 19
+    },
+    "private_ax_sha256": "d55a03a9669d76d4dd9cd800aa043276d4981993accbaf8b3afda95a1a1493e3",
+    "ordinary_reply_source_line_ranges": [
+      [
+        294,
+        315
+      ]
+    ],
+    "four_native_file_card_source_lines": [
+      318,
+      323,
+      327,
+      331
+    ],
+    "earlier_partial_source_capture": "confirmed-submitted-task",
+    "earlier_private_ax_sha256": "1c0996bbd0a787f06b0ed7a2999607a1d52f431e1c281ac042064af382b679fb",
+    "earlier_partial_source_line_ranges": [
+      [
+        293,
+        312
+      ]
+    ],
+    "provider_completion_timestamp": null,
+    "strict_cutoff_bytes_attested": false
+  },
+  "artifact_receipt_basis": "Original native-artifact receipt per-file presence_observed_at values are retained as upper bounds, not exact native completion timestamps; file modification times are not substituted.",
+  "capture_label_disambiguation": {
+    "reason": "Repeated private save-picker observation labels made exporter lookup ambiguous; unique index suffixes only, original AX bytes, capture indices and times unchanged.",
+    "original_capture_log_sha256": "0e9b4cdbf93918aaeaf20ab288c1ba4ced9043c50034aa1c07f217a5e2abb84f",
+    "changes": [
+      {
+        "index": 37,
+        "original_label": "summary-json-save-picker",
+        "corrected_label": "summary-json-save-picker-capture-37",
+        "at": "2026-10-13T16:34:46.416Z",
+        "ax": "037-summary-json-save-picker.ax.txt"
+      },
+      {
+        "index": 40,
+        "original_label": "summary-json-save-picker",
+        "corrected_label": "summary-json-save-picker-capture-40",
+        "at": "2026-10-13T16:35:20.199Z",
+        "ax": "040-summary-json-save-picker.ax.txt"
+      },
+      {
+        "index": 58,
+        "original_label": "conflicts-json-save-picker",
+        "corrected_label": "conflicts-json-save-picker-capture-58",
+        "at": "2026-10-13T16:37:34.923Z",
+        "ax": "058-conflicts-json-save-picker.ax.txt"
+      },
+      {
+        "index": 60,
+        "original_label": "conflicts-json-save-picker",
+        "corrected_label": "conflicts-json-save-picker-capture-60",
+        "at": "2026-10-13T16:38:03.745Z",
+        "ax": "060-conflicts-json-save-picker.ax.txt"
+      }
+    ]
+  },
+  "public_reference_projection": {
+    "reason": "Use the preserved public event ID and capture index for the completion source; the private original label is retained in the metadata backup and the reviewed event phase.",
+    "private_before_projection_sha256": "8fd4629c90969fda52a3f4dbdd1410a1e92d692fd8b01bea96401a5d3c5ca3a5",
+    "source_observations_changed": false
+  }
+}

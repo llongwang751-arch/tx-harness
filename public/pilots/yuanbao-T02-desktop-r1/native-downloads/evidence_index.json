@@ -1,0 +1,34 @@
+{
+ "rules": [
+  {
+   "rule_id": "EXC-01",
+   "path": "05_finance_exception.md",
+   "quote": "2026-09-01及之后提交、employee_group为field且类别为taxi的有收据申请，每笔上限25000分。"
+  },
+  {
+   "rule_id": "FIN2-01",
+   "path": "01_finance_v2.md",
+   "quote": "餐费每笔上限5000分，出租车每笔上限15000分，住宿每晚上限40000分且只允许1至3晚。"
+  },
+  {
+   "rule_id": "FIN3-01",
+   "path": "02_finance_v3.md",
+   "quote": "餐费每笔上限7500分。"
+  },
+  {
+   "rule_id": "FIN3-02",
+   "path": "02_finance_v3.md",
+   "quote": "出租车每笔上限20000分。"
+  },
+  {
+   "rule_id": "FIN3-03",
+   "path": "02_finance_v3.md",
+   "quote": "住宿每晚上限60000分且只允许1至3晚，晚数超出此范围时拒绝。"
+  },
+  {
+   "rule_id": "FIN3-04",
+   "path": "02_finance_v3.md",
+   "quote": "任何类别的申请缺少收据时均拒绝。"
+  }
+ ]
+}

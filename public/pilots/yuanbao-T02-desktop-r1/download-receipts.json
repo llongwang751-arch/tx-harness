@@ -1,0 +1,155 @@
+{
+  "schema": "native-artifact-source-receipts-public-v1",
+  "artifacts": [
+    {
+      "receipt_id": "yuanbao-T02-native-decisions.csv",
+      "origin": "native_download",
+      "original_filename": "decisions.csv",
+      "public_native_file": "native-downloads/decisions.csv",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T16:32:43.229Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T16:32:33.661Z",
+      "save_action_source_line": 20,
+      "private_operator_actions_sha256": "9d9cd7a3c38e9560710877dbf659cc80afeb1b3835036d5b3ee414333bbb99af",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 294,
+      "sha256": "f4512898d1450f073fa7c8df13d599e7a0503fc1d07bb74218ffcbb9c25bd74d",
+      "evidence": {
+        "event_id": "ui-19",
+        "capture": "expert-task-foreground-result-check",
+        "line_ranges": [
+          [
+            318,
+            318
+          ]
+        ],
+        "private_ax_sha256": "d55a03a9669d76d4dd9cd800aa043276d4981993accbaf8b3afda95a1a1493e3"
+      },
+      "outputs": [
+        {
+          "logical_path": "decisions.csv",
+          "zip_member": null,
+          "bytes": 294,
+          "sha256": "f4512898d1450f073fa7c8df13d599e7a0503fc1d07bb74218ffcbb9c25bd74d"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "yuanbao-T02-native-summary.json",
+      "origin": "native_download",
+      "original_filename": "summary.json",
+      "public_native_file": "native-downloads/summary.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T16:35:47.320Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T16:35:26.373Z",
+      "save_action_source_line": 30,
+      "private_operator_actions_sha256": "9d9cd7a3c38e9560710877dbf659cc80afeb1b3835036d5b3ee414333bbb99af",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 127,
+      "sha256": "5f4f467bc47a7ab88291b84ea149955e503e02310b7be7cec1492538f9a73313",
+      "evidence": {
+        "event_id": "ui-19",
+        "capture": "expert-task-foreground-result-check",
+        "line_ranges": [
+          [
+            323,
+            323
+          ]
+        ],
+        "private_ax_sha256": "d55a03a9669d76d4dd9cd800aa043276d4981993accbaf8b3afda95a1a1493e3"
+      },
+      "outputs": [
+        {
+          "logical_path": "summary.json",
+          "zip_member": null,
+          "bytes": 127,
+          "sha256": "5f4f467bc47a7ab88291b84ea149955e503e02310b7be7cec1492538f9a73313"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "yuanbao-T02-native-evidence_index.json",
+      "origin": "native_download",
+      "original_filename": "evidence_index.json",
+      "public_native_file": "native-downloads/evidence_index.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T16:36:41.704Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T16:36:28.007Z",
+      "save_action_source_line": 39,
+      "private_operator_actions_sha256": "9d9cd7a3c38e9560710877dbf659cc80afeb1b3835036d5b3ee414333bbb99af",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 912,
+      "sha256": "b7450426e2e8df8c9e2ddfcc4fa60723dca5662404e308c461e8d0e5b4c88312",
+      "evidence": {
+        "event_id": "ui-19",
+        "capture": "expert-task-foreground-result-check",
+        "line_ranges": [
+          [
+            327,
+            327
+          ]
+        ],
+        "private_ax_sha256": "d55a03a9669d76d4dd9cd800aa043276d4981993accbaf8b3afda95a1a1493e3"
+      },
+      "outputs": [
+        {
+          "logical_path": "evidence_index.json",
+          "zip_member": null,
+          "bytes": 912,
+          "sha256": "b7450426e2e8df8c9e2ddfcc4fa60723dca5662404e308c461e8d0e5b4c88312"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "yuanbao-T02-native-conflicts.json",
+      "origin": "native_download",
+      "original_filename": "conflicts.json",
+      "public_native_file": "native-downloads/conflicts.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T16:38:40.152Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T16:38:07.413Z",
+      "save_action_source_line": 48,
+      "private_operator_actions_sha256": "9d9cd7a3c38e9560710877dbf659cc80afeb1b3835036d5b3ee414333bbb99af",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 366,
+      "sha256": "85404c70a5fe7cdc9e7c8315753ec05504a5eae3cad407f99b8ab87d9368c6e0",
+      "evidence": {
+        "event_id": "ui-19",
+        "capture": "expert-task-foreground-result-check",
+        "line_ranges": [
+          [
+            331,
+            331
+          ]
+        ],
+        "private_ax_sha256": "d55a03a9669d76d4dd9cd800aa043276d4981993accbaf8b3afda95a1a1493e3"
+      },
+      "outputs": [
+        {
+          "logical_path": "conflicts.json",
+          "zip_member": null,
+          "bytes": 366,
+          "sha256": "85404c70a5fe7cdc9e7c8315753ec05504a5eae3cad407f99b8ab87d9368c6e0"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    }
+  ],
+  "private_original_receipts_sha256": "a0cdef05ba80eca16c4763bf6288ed794df2729f173f5d8e4dcc5ba98c92f0c3",
+  "basis": "Recorded native UI action/card evidence and retained native download/export/local-file originals; origin is explicit per artifact"
+}

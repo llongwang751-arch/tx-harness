@@ -1,0 +1,22 @@
+{
+ "lower_authority_rule_ids": [
+  "OPS-01",
+  "FAQ-01"
+ ],
+ "scoped_override": {
+  "winner": "EXC-01",
+  "overridden_rule": "FIN3-02",
+  "claim_ids": [
+   "Q003"
+  ]
+ },
+ "version_selection": {
+  "Q001": "finance_v2",
+  "Q002": "finance_v3",
+  "Q003": "finance_v3",
+  "Q004": "finance_v3",
+  "Q005": "finance_v3",
+  "Q006": "finance_v3",
+  "Q007": "finance_v3"
+ }
+}
