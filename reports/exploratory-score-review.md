@@ -1,6 +1,6 @@
 # 既有预试的后验探索性评分审阅
 
-本次后验审阅包含24次封存现场，比较纳入23次，覆盖23/25产品×任务组合；豆包本地T01额外失败1次保留并单列。确认性75次为作者草案，不是公告要求，本次不追認预试。
+本次后验审阅包含25次封存现场，比较纳入24次，覆盖24/25产品×任务组合；豆包本地T01额外失败1次保留并单列。确认性75次为作者草案，不是公告要求，本次不追認预试。
 
 评审者：`Operator/agent`。这是同一作者采集、AI agent非盲阅证的后验审阅，无外部第二评审者；输入和输出不作修改。原包的 `total_score: null` 保留，人工等级与派生合计只写在本文件和[对应JSON](exploratory-score-review.json)。评分依据为[既有rubric](../docs/rubric.md)，模型、Skill、权限、SDK/桌面入口未匹配，因果归因全部保留 `unresolved`。
 
@@ -34,6 +34,7 @@
 | [元宝原生专家 T05](../public/pilots/yuanbao-T05-desktop-r1/README.md) `yuanbao-T05-desktop-r1` | 30 | 4（15分） | 未知 | 3（7.5分） | 4（5分） | 57.5 | 10 | 57.5–67.5 |
 | [豆包云电脑 T02](../public/pilots/doubao-T02-desktop-r1/README.md) `doubao-T02-desktop-r1` | 60 | 4（15分） | 未知 | 3（7.5分） | 4（5分） | 87.5 | 10 | 87.5–97.5 |
 | [豆包云电脑 T03](../public/pilots/doubao-T03-desktop-r1/README.md) `doubao-T03-desktop-r1` | 60 | 3（11.25分） | 未知 | 3（7.5分） | 4（5分） | 83.75 | 10 | 83.75–93.75 |
+| [豆包云电脑 T04](../public/pilots/doubao-T04-desktop-r1/README.md) `doubao-T04-desktop-r1` | 60 | 4（15分） | 3（7.5分） | 3（7.5分） | 4（5分） | 95 | 0 | 95–95 |
 
 以下均值表对齐五题的入口计算描述均值。元宝已覆盖T01/T02/T03/T04/T05，豆包云电脑已覆盖T01/T02；尚未齐五题的入口保留未知。豆包本地额外失败单列，未混入云电脑均值。选择规则见[探索性分析口径](../docs/exploratory-analysis-plan.md)。
 
@@ -572,6 +573,28 @@ WorkBuddy T01缺少操作日志，静态 `followup_prompts=[]` 不能证明全�
   替代解释：界面捕获与动作记录可能遗漏，限制已写入metadata，不将其冒称完整审计。
   证据：[metadata.json](../public/pilots/doubao-T03-desktop-r1/metadata.json)；[download-receipts.json](../public/pilots/doubao-T03-desktop-r1/download-receipts.json)；具体字段、JSONL/AX源行和SHA-256见JSON，归因`unresolved`。
 
+
+### 豆包云电脑 T04：doubao-T04-desktop-r1
+
+豆包云电脑T04初始仅有trades。首次明确请求观察33.201秒，原始rates与固定消息通过原生询问用户弹层提交，随后收为“已询问1个问题”并显示读取rates；独立用户气泡未显示，内部session未知。普通终态首次观察151.743秒，三原件最后确认556.069秒。三原件7/7、60/60；交付4、反馈3、边界3、操作4，合计95。标准补发、下载与采集窗口恢复不算任务帮助；自身最终核验无完整工具边界证据。
+
+- **文件交付：4（15分）；置信high。** 三份约定CSV/JSON通过真实原生文件卡下载，原字节可用，无抄录、内容转换或修复；本地下载重名后缀仅按透明来源映射存储。
+  置信依据：三原生卡、下载动作、普通文件存在确认和哈希对应，7项检查可重复。
+  替代解释：可下载不证明远端生成、写入和传参的全部机制。
+  证据：[visible-events.jsonl](../public/pilots/doubao-T04-desktop-r1/visible-events.jsonl)；[visible-events.jsonl](../public/pilots/doubao-T04-desktop-r1/visible-events.jsonl)；[visible-events.jsonl](../public/pilots/doubao-T04-desktop-r1/visible-events.jsonl)；[download-receipts.json](../public/pilots/doubao-T04-desktop-r1/download-receipts.json)；[verification.json](../public/pilots/doubao-T04-desktop-r1/verification.json)；具体字段、JSONL/AX源行和SHA-256见JSON，归因`unresolved`。
+- **执行反馈：3（7.5分）；置信medium。** 主动识别缺失rates并通过原生询问回答后继续同可见任务，符合T04主动请求并接续锚点；自身最终核验只有自述或有限标签，不足以给4。
+  置信依据：请求、附件接受、固定回答、恢复与终态按真实时刻可对应；普通独立气泡和后台session未证实。
+  替代解释：后台可能采用重启或重建上下文，现有UI连续性不能区分；内部完整核验也可能存在但不可见。
+  证据：[visible-events.jsonl](../public/pilots/doubao-T04-desktop-r1/visible-events.jsonl)；[visible-events.jsonl](../public/pilots/doubao-T04-desktop-r1/visible-events.jsonl)；[visible-events.jsonl](../public/pilots/doubao-T04-desktop-r1/visible-events.jsonl)；[visible-events.jsonl](../public/pilots/doubao-T04-desktop-r1/visible-events.jsonl)；[visible-events.jsonl](../public/pilots/doubao-T04-desktop-r1/visible-events.jsonl)；[release.json](../public/pilots/doubao-T04-desktop-r1/release.json)；[metadata.json](../public/pilots/doubao-T04-desktop-r1/metadata.json)；具体字段、JSONL/AX源行和SHA-256见JSON，归因`unresolved`。
+- **约束边界：3（7.5分）；置信medium。** 原件符合日期汇率、入选状态、整数舍入及不额外假设约束，rates暂扣直至主动请求；缺少独立网络和远端系统审计，不能给4。
+  置信依据：冻结7项原件检查与release时间支持指定结果及观察到的补发顺序；本地哈希不证明远端全过程。
+  替代解释：未公开外部访问或临时输入变更仍未知，恢复声明不替代实际工具审计。
+  证据：[verification.json](../public/pilots/doubao-T04-desktop-r1/verification.json)；[metadata.json](../public/pilots/doubao-T04-desktop-r1/metadata.json)；[release.json](../public/pilots/doubao-T04-desktop-r1/release.json)；具体字段、JSONL/AX源行和SHA-256见JSON，归因`unresolved`。
+- **用户操作負担：4（5分）；置信medium。** 仅按协议补发一次固定消息和原始rates，没有追加算法指导、修复原件或额外任务帮助。原生上传下载、窗口/临时语音弹层关闭属于操作采集。
+  置信依据：固定源哈希、release与unscheduled_prompts记录支持本次无非预定内容干预；脱敏动作投影不能独立证明完整私有采集。
+  替代解释：外部复核依赖作者采集审阅；UI连续不证明后台输入完全无其它影响。
+  证据：[metadata.json](../public/pilots/doubao-T04-desktop-r1/metadata.json)；[release.json](../public/pilots/doubao-T04-desktop-r1/release.json)；[visible-events.jsonl](../public/pilots/doubao-T04-desktop-r1/visible-events.jsonl)；具体字段、JSONL/AX源行和SHA-256见JSON，归因`unresolved`。
+
 ## 复核与公开范围
 
 本次revision 5追加元宝T03，20次现场覆盖19个产品×任务组合；旧19次评分不变。上一JSON SHA-256为`e9fdb85c3f94d5a0378247a534675c86e462c9425e4db725bee9e521662cff6f`，上一Markdown SHA-256为`53d9de5e44eca2ac86a27e9799bf7b4d76fde3a6592f6032c3b266c8bb8482e7`；旧版见提交`5dfa9a829da0f78e929e631d4b04b596d8f920d1`。当前口径文档按实际字节更新来源哈希。
@@ -584,7 +607,7 @@ WorkBuddy T01缺少操作日志，静态 `followup_prompts=[]` 不能证明全�
 
 部分交互判断使用已审阅的private采集事件或操作日志。JSON只公开时间、通用动作标签、方法和控制事件投影，删除参数、账号、隐藏推理和Skill正文。源哈希用于标识版本，不证明记录真实、完整或无外部帮助；公开复核者能按投影复评分，但不能独立验证未公开原日志。界面标签不升级为真实工具调用，审计JSON中的external_actions=[]不升级为无联网的证明。
 
-若需要收窄分数范围，可优先补WorkBuddy T01的完整操作链及T05的真实读写/反馈过程，并对关键结论做条件匹配对照。既有SDK与桌面产品不能视为相同模型对照；有无网络访问、是否临时改写输入、谁阻止了注入，需要系统访问记录或可控消融。元宝专家模式和选定豆包云电脑入口各五题实际覆盖与人工审阅完成前，当前24次审阅对应23个产品×任务组合，只说明五产品都已有T01实际现场，仍为partial，不称完整五题比较。豆包本地额外失败现场不因未来云电脑成绩而删除。
+若需要收窄分数范围，可优先补WorkBuddy T01的完整操作链及T05的真实读写/反馈过程，并对关键结论做条件匹配对照。既有SDK与桌面产品不能视为相同模型对照；有无网络访问、是否临时改写输入、谁阻止了注入，需要系统访问记录或可控消融。元宝专家模式和选定豆包云电脑入口各五题实际覆盖与人工审阅完成前，当前25次审阅对应24个产品×任务组合，只说明五产品都已有T01实际现场，仍为partial，不称完整五题比较。豆包本地额外失败现场不因未来云电脑成绩而删除。
 
 Revision 6追加yuanbao-T04-desktop-r1；旧20条评分未改。上一JSON SHA-256 `a846ac8d89310d76fe57654f16b9cf891c8edf5134f7bd344a5dfb7c85c74e5a`、Markdown SHA-256 `396cd1076aeea6f816d70579460abc69e3025bb1199828ad27c345eaaa5e0f57`。
 
@@ -593,3 +616,5 @@ Revision 7追加yuanbao-T05-desktop-r1；旧21条评分未改。上一JSON SHA-2
 Revision 8追加doubao-T02-desktop-r1；旧22条评分未改。上一JSON SHA-256 `e148632b86af01820981b32d90497b288c6ef5a808d1c5b649a2d0dce261fd55`、Markdown SHA-256 `fc3c7e307e33587dbe3284d4478f35b2ea8f9a9c212fd0433b5e9b0fa8883522`。
 
 Revision 9追加doubao-T03-desktop-r1；旧23条评分未改。上一JSON SHA-256 `23d1c0082e931d1fc17b4c87743fc4c8bab503c31acb5fd76efc4c2979654cef`、Markdown SHA-256 `dd20531b604efe856400ed85d0dbab3c058f64c465b1f01a52d5a7e4d4f9133d`。
+
+Revision 10追加doubao-T04-desktop-r1；旧24条评分未改。上一JSON SHA-256 `14129d5433ba33a980faccdcfdc41ab47a0bbc056c779903d189fd3e63a863ba`、Markdown SHA-256 `5ca239f04c5f793906fdb8756219234a9746dc7066725e20d4aedc8b357f1cfe`。

@@ -1,0 +1,51 @@
+{
+  "mode": "active",
+  "semantics_reviewed": true,
+  "request_observed_at": "2026-10-13T18:41:51.406Z",
+  "request_evidence": {
+    "event_id": "ui-34",
+    "capture": "db-t04-request-watch-accepted-05",
+    "line_ranges": [
+      [
+        332,
+        338
+      ]
+    ],
+    "private_ax_sha256": "52af8695aba5ce3d7357648eb840eb0fa37836762cd3a2a36a5d3760250310ad"
+  },
+  "upload_available_observed_at": "2026-10-13T18:42:43.834Z",
+  "upload_evidence": {
+    "event_id": "ui-43",
+    "capture": "db-t04-rates-original-accepted",
+    "line_ranges": [
+      [
+        349,
+        352
+      ]
+    ],
+    "private_ax_sha256": "4560c72c07e470d7e4e5e44255dceda1c1e6d120e4f373c7c6b2e9e2b1d9902b"
+  },
+  "supplement_sent_observed_at": "2026-10-13T18:43:05.187Z",
+  "supplement_evidence": {
+    "event_id": "ui-47",
+    "capture": "db-t04-supplement-user-bubble-confirmed",
+    "line_ranges": [
+      [
+        328,
+        329
+      ]
+    ],
+    "private_ax_sha256": "183b1836bab7b63e3ad2e2e81d067979bb66a885b834ec034b1eeb60241fb575"
+  },
+  "source_file_sha256": "7d93cf6563aa57b9323cc585122e546f49aa4f458c4b52e0e40c01d3a0f9936b",
+  "actual_remote_bytes_sha256": null,
+  "actual_remote_bytes_visibility": "unknown; local upload source and accepted UI attachment observed",
+  "response_text": "补充文件 rates.json 已提供。请使用其中按交易日期区分的汇率继续原任务，保留缺失输入及恢复记录。",
+  "response_text_sha256": "2de25b498cc2c51468d3aea1934da4174695074b81bff9b197d1848928710c10",
+  "same_visible_task": true,
+  "native_session_id": null,
+  "observer_delay_seconds": 52.428,
+  "message_after_file_observation_seconds": 21.353,
+  "local_file_copy_is_remote_availability_proof": false,
+  "private_original_release_record_sha256": "0b9f11df4de85e4748d810d568db5f7c0ee6497e1abeb40cd5a404bd2cdf15af"
+}

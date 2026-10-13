@@ -1,0 +1,809 @@
+{
+  "schema": "native-record-preservation-mapping-v1",
+  "record_rewriting_performed": true,
+  "raw_capture_log_rewritten": false,
+  "raw_operator_actions_rewritten": false,
+  "raw_ax_and_images_rewritten": false,
+  "source_capture_log_sha256": "9cd2d6b1dca8f97ae3a546550808541f3571122242db830c499ff2b13c6cd2d4",
+  "source_operator_actions_sha256": "86244a4009a02e852ad7ea2f4a356430d519ccbfe99c512e5f4a5a4c123f4824",
+  "source_presence_confirmation_sha256": "e9e116dc7f9d123acc39afa7a7a354986a8e19b532a15a593ecf7f512ca5dc44",
+  "source_native_artifact_receipts_sha256": "d4ac62db869adad882e91d10a69b919ed5b7f7e5cb72c31ce2a57933cf048664",
+  "collector_source_sha256": {
+    "doubao_native_wrappers.mjs": "97f9b00f097f41851b845e3465183ea27baca43c832e5c63a2e05164ec11f3c5",
+    "workbuddy_desktop_collector.mjs": "a72cdf89fff4e7592249e90f21f7acee2a5b40eb15c781d3bcd3a7307e664b91"
+  },
+  "mapping": [
+    {
+      "index": 1,
+      "capture": "db-t04-main-preflight",
+      "raw_ax": "001-db-t04-main-preflight.ax.txt",
+      "raw_ax_sha256": "9391cd59365963ca7a536b57fcb7a871673f89946d55f33cfd26e44ad3b42003",
+      "public_selection": false
+    },
+    {
+      "index": 2,
+      "capture": "db-t04-main-fresh-recovery",
+      "raw_ax": "002-db-t04-main-fresh-recovery.ax.txt",
+      "raw_ax_sha256": "9391cd59365963ca7a536b57fcb7a871673f89946d55f33cfd26e44ad3b42003",
+      "public_selection": false
+    },
+    {
+      "index": 3,
+      "capture": "db-t04-main-raised",
+      "raw_ax": "003-db-t04-main-raised.ax.txt",
+      "raw_ax_sha256": "a3e1b0acb70dc59cf5e963938b2bb70957ad29e4536e4c79d173c9447f19cf84",
+      "public_selection": false
+    },
+    {
+      "index": 4,
+      "capture": "db-t04-main-maximized",
+      "raw_ax": "004-db-t04-main-maximized.ax.txt",
+      "raw_ax_sha256": "a3e1b0acb70dc59cf5e963938b2bb70957ad29e4536e4c79d173c9447f19cf84",
+      "public_selection": false
+    },
+    {
+      "index": 5,
+      "capture": "db-t04-maximized-fresh",
+      "raw_ax": "005-db-t04-maximized-fresh.ax.txt",
+      "raw_ax_sha256": "f1493bec228bc7bf651d380cb8d47662a131624d50b73af11ab3d4ae403f4289",
+      "public_selection": false
+    },
+    {
+      "index": 6,
+      "capture": "db-t04-sidebar-restored",
+      "raw_ax": "006-db-t04-sidebar-restored.ax.txt",
+      "raw_ax_sha256": "f1493bec228bc7bf651d380cb8d47662a131624d50b73af11ab3d4ae403f4289",
+      "public_selection": false
+    },
+    {
+      "index": 7,
+      "capture": "db-t04-sidebar-fresh",
+      "raw_ax": "007-db-t04-sidebar-fresh.ax.txt",
+      "raw_ax_sha256": "bfef8dbd1a1848e7e98e11109b25b6768aa44fddb5cbdb15d217e1a9435ba97c",
+      "public_selection": false
+    },
+    {
+      "index": 8,
+      "capture": "db-t04-work-task-home",
+      "raw_ax": "008-db-t04-work-task-home.ax.txt",
+      "raw_ax_sha256": "bfef8dbd1a1848e7e98e11109b25b6768aa44fddb5cbdb15d217e1a9435ba97c",
+      "public_selection": false
+    },
+    {
+      "index": 9,
+      "capture": "db-t04-new-home-fresh",
+      "raw_ax": "009-db-t04-new-home-fresh.ax.txt",
+      "raw_ax_sha256": "112cf66c7d2254d8bb32421709ebf146ee1609f9dcd86f9edcb48990aadfaf45",
+      "public_selection": false
+    },
+    {
+      "index": 10,
+      "capture": "db-t04-computer-menu",
+      "raw_ax": "010-db-t04-computer-menu.ax.txt",
+      "raw_ax_sha256": "375092a6567d800d27e2b11e68158f844b0ed5127fb211ef91b5b51d9153ab7b",
+      "public_selection": false
+    },
+    {
+      "index": 11,
+      "capture": "db-t04-computer-menu-visible",
+      "raw_ax": "011-db-t04-computer-menu-visible.ax.txt",
+      "raw_ax_sha256": "d03ba43c0db37d84c21be25406822d970d85b885154190c4ba2b85626ee88d9d",
+      "public_selection": false
+    },
+    {
+      "index": 12,
+      "capture": "db-t04-cloud-selected-result",
+      "raw_ax": "012-db-t04-cloud-selected-result.ax.txt",
+      "raw_ax_sha256": "d03ba43c0db37d84c21be25406822d970d85b885154190c4ba2b85626ee88d9d",
+      "public_selection": false
+    },
+    {
+      "index": 13,
+      "capture": "db-t04-upload-preflight",
+      "raw_ax": "013-db-t04-upload-preflight.ax.txt",
+      "raw_ax_sha256": "b7c6170604b660d82448b3f5767cf4426cc75a5c5059c69662aef35bcf626f67",
+      "public_selection": false
+    },
+    {
+      "index": 14,
+      "capture": "db-t04-attachment-menu-result",
+      "raw_ax": "014-db-t04-attachment-menu-result.ax.txt",
+      "raw_ax_sha256": "b7c6170604b660d82448b3f5767cf4426cc75a5c5059c69662aef35bcf626f67",
+      "public_selection": false
+    },
+    {
+      "index": 15,
+      "capture": "db-t04-attachment-menu-visible",
+      "raw_ax": "015-db-t04-attachment-menu-visible.ax.txt",
+      "raw_ax_sha256": "0e164cbfe86ee8c941eb099be1ef0cfa4ad97b2071cfc3b2115a95c44e4ac429",
+      "public_selection": false
+    },
+    {
+      "index": 16,
+      "capture": "db-t04-picker-first",
+      "raw_ax": "016-db-t04-picker-first.ax.txt",
+      "raw_ax_sha256": "ecf809f9f7033589a2799071d55dae041dfa1d5c3c1d87d1df31f9e727552780",
+      "public_selection": false
+    },
+    {
+      "index": 17,
+      "capture": "db-t04-picker-ready",
+      "raw_ax": "017-db-t04-picker-ready.ax.txt",
+      "raw_ax_sha256": "ecf809f9f7033589a2799071d55dae041dfa1d5c3c1d87d1df31f9e727552780",
+      "public_selection": false
+    },
+    {
+      "index": 18,
+      "capture": "db-t04-original-trades-path-confirmed",
+      "raw_ax": "018-db-t04-original-trades-path-confirmed.ax.txt",
+      "raw_ax_sha256": "5df464960fc9ad651387e848b2ddbc8b9bf25456178c063c96507e706d16ccba",
+      "public_selection": false
+    },
+    {
+      "index": 19,
+      "capture": "db-t04-trades-upload-returned",
+      "raw_ax": "019-db-t04-trades-upload-returned.ax.txt",
+      "raw_ax_sha256": "971d12cd9aa7fe8d426be8e5704ab6b8ab29e8151616713ce4ca3a2227598d20",
+      "public_selection": false
+    },
+    {
+      "index": 20,
+      "capture": "db-t04-trades-accepted",
+      "raw_ax": "020-db-t04-trades-accepted.ax.txt",
+      "raw_ax_sha256": "4c41a11605604107939fa4aa86fdba76760b12be140988f785c1a15665086bc1",
+      "public_selection": true
+    },
+    {
+      "index": 21,
+      "capture": "db-t04-composer-fresh-recovery",
+      "raw_ax": "021-db-t04-composer-fresh-recovery.ax.txt",
+      "raw_ax_sha256": "dfc97c1cc249487d9a07ed68e90d096e8a6e7b9f0cf046fd00707a9d2cf3b772",
+      "public_selection": false
+    },
+    {
+      "index": 22,
+      "capture": "db-t04-canonical-composer-ready",
+      "raw_ax": "022-db-t04-canonical-composer-ready.ax.txt",
+      "raw_ax_sha256": "4694b6d633c9bca6c3bbc31b74f30f322eaa2e688d63d05c565b740495d147f1",
+      "public_selection": false
+    },
+    {
+      "index": 23,
+      "capture": "db-t04-canonical-composer-fresh",
+      "raw_ax": "023-db-t04-canonical-composer-fresh.ax.txt",
+      "raw_ax_sha256": "06960c828adf130cfdaf2ec3b4fcf90674521e87182c6a7b4b9434a250264efc",
+      "public_selection": true
+    },
+    {
+      "index": 24,
+      "capture": "db-t04-initial-submit-observation",
+      "raw_ax": "024-db-t04-initial-submit-observation.ax.txt",
+      "raw_ax_sha256": "06960c828adf130cfdaf2ec3b4fcf90674521e87182c6a7b4b9434a250264efc",
+      "public_selection": false
+    },
+    {
+      "index": 25,
+      "capture": "db-t04-request-watch-01",
+      "raw_ax": "025-db-t04-request-watch-01.ax.txt",
+      "raw_ax_sha256": "06960c828adf130cfdaf2ec3b4fcf90674521e87182c6a7b4b9434a250264efc",
+      "public_selection": true
+    },
+    {
+      "index": 26,
+      "capture": "db-t04-request-watch-02",
+      "raw_ax": "026-db-t04-request-watch-02.ax.txt",
+      "raw_ax_sha256": "06960c828adf130cfdaf2ec3b4fcf90674521e87182c6a7b4b9434a250264efc",
+      "public_selection": true
+    },
+    {
+      "index": 27,
+      "capture": "db-t04-unsubmitted-recovery-ax",
+      "raw_ax": "027-db-t04-unsubmitted-recovery-ax.ax.txt",
+      "raw_ax_sha256": "06960c828adf130cfdaf2ec3b4fcf90674521e87182c6a7b4b9434a250264efc",
+      "public_selection": false
+    },
+    {
+      "index": 28,
+      "capture": "db-t04-unsubmitted-composer-recovery",
+      "raw_ax": "028-db-t04-unsubmitted-composer-recovery.ax.txt",
+      "raw_ax_sha256": "06960c828adf130cfdaf2ec3b4fcf90674521e87182c6a7b4b9434a250264efc",
+      "public_selection": true
+    },
+    {
+      "index": 29,
+      "capture": "db-t04-visible-submit-result",
+      "raw_ax": "029-db-t04-visible-submit-result.ax.txt",
+      "raw_ax_sha256": "06960c828adf130cfdaf2ec3b4fcf90674521e87182c6a7b4b9434a250264efc",
+      "public_selection": false
+    },
+    {
+      "index": 30,
+      "capture": "db-t04-request-watch-accepted-01",
+      "raw_ax": "030-db-t04-request-watch-accepted-01.ax.txt",
+      "raw_ax_sha256": "d822a4aab19ce93fc18888972d437c6a1f0bf4bc1893a98ecd1c564c7d277960",
+      "public_selection": true
+    },
+    {
+      "index": 31,
+      "capture": "db-t04-request-watch-accepted-02",
+      "raw_ax": "031-db-t04-request-watch-accepted-02.ax.txt",
+      "raw_ax_sha256": "15ea3fb98333e32194d8f32ea6ab8db6938f9e3836d5c76ae4f756fc59872cfb",
+      "public_selection": false
+    },
+    {
+      "index": 32,
+      "capture": "db-t04-request-watch-accepted-03",
+      "raw_ax": "032-db-t04-request-watch-accepted-03.ax.txt",
+      "raw_ax_sha256": "6e13ebaf5792a68229159728bf9f0b2a6d15755c8810824e97cc0600275bb1fa",
+      "public_selection": false
+    },
+    {
+      "index": 33,
+      "capture": "db-t04-request-watch-accepted-04",
+      "raw_ax": "033-db-t04-request-watch-accepted-04.ax.txt",
+      "raw_ax_sha256": "4e2670ca4481c87b2850526a3b978782c158e71148f0b523ac6655531d251483",
+      "public_selection": false
+    },
+    {
+      "index": 34,
+      "capture": "db-t04-request-watch-accepted-05",
+      "raw_ax": "034-db-t04-request-watch-accepted-05.ax.txt",
+      "raw_ax_sha256": "52af8695aba5ce3d7357648eb840eb0fa37836762cd3a2a36a5d3760250310ad",
+      "public_selection": true
+    },
+    {
+      "index": 35,
+      "capture": "db-t04-request-upload-expanded",
+      "raw_ax": "035-db-t04-request-upload-expanded.ax.txt",
+      "raw_ax_sha256": "5fe1cb4b74e446981a50a343bf9ac8bfa2d6255ca6aecead04e50f0b5ba8911a",
+      "public_selection": false
+    },
+    {
+      "index": 36,
+      "capture": "db-t04-request-upload-fresh",
+      "raw_ax": "036-db-t04-request-upload-fresh.ax.txt",
+      "raw_ax_sha256": "9eae3c7d7a9c7cbdab0da38a919c4cabf432c17c80d14d3dfba88caa585c3062",
+      "public_selection": false
+    },
+    {
+      "index": 37,
+      "capture": "db-t04-release-menu-result",
+      "raw_ax": "037-db-t04-release-menu-result.ax.txt",
+      "raw_ax_sha256": "de419e4ca22d932072ef383c376ac80bb7141823dd629783281bd82a7e84192a",
+      "public_selection": false
+    },
+    {
+      "index": 38,
+      "capture": "db-t04-release-menu-visible",
+      "raw_ax": "038-db-t04-release-menu-visible.ax.txt",
+      "raw_ax_sha256": "71f01a23fd2b69cf8969894b5bc3793d9d36b92f9d2746b280278a40e4031ec6",
+      "public_selection": false
+    },
+    {
+      "index": 39,
+      "capture": "db-t04-release-picker-first",
+      "raw_ax": "039-db-t04-release-picker-first.ax.txt",
+      "raw_ax_sha256": "a9c0bdde627aaea6343d27422b9bb2cdd609bcd02bb80bd364d79a01500e3159",
+      "public_selection": false
+    },
+    {
+      "index": 40,
+      "capture": "db-t04-release-picker-ready",
+      "raw_ax": "040-db-t04-release-picker-ready.ax.txt",
+      "raw_ax_sha256": "022895af5b198e6fddb75ce4c15bef5e1b37b3f90372b70108954dfc2f743af2",
+      "public_selection": false
+    },
+    {
+      "index": 41,
+      "capture": "db-t04-release-original-path-confirmed",
+      "raw_ax": "041-db-t04-release-original-path-confirmed.ax.txt",
+      "raw_ax_sha256": "3316176e3180cafa6b8cb486593bdd2ab73e88d9ceed5178aa0b41d7bdee8304",
+      "public_selection": false
+    },
+    {
+      "index": 42,
+      "capture": "db-t04-rates-upload-returned",
+      "raw_ax": "042-db-t04-rates-upload-returned.ax.txt",
+      "raw_ax_sha256": "1f272670d708500f943cb19047bc351614248deff2917f002e5e7ebdcb6ee7ca",
+      "public_selection": false
+    },
+    {
+      "index": 43,
+      "capture": "db-t04-rates-original-accepted",
+      "raw_ax": "043-db-t04-rates-original-accepted.ax.txt",
+      "raw_ax_sha256": "4560c72c07e470d7e4e5e44255dceda1c1e6d120e4f373c7c6b2e9e2b1d9902b",
+      "public_selection": true
+    },
+    {
+      "index": 44,
+      "capture": "db-t04-fixed-supplement-paste-result",
+      "raw_ax": "044-db-t04-fixed-supplement-paste-result.ax.txt",
+      "raw_ax_sha256": "c7824943bb08703dbe8eae8557610820e3a2ecf959a2b1697c4da7e52c3d04a7",
+      "public_selection": false
+    },
+    {
+      "index": 45,
+      "capture": "db-t04-fixed-supplement-ready",
+      "raw_ax": "045-db-t04-fixed-supplement-ready.ax.txt",
+      "raw_ax_sha256": "b75229f105a67a1c108e1a391013a684caa88df11fc8cdfe92f09d0fdd95d2cb",
+      "public_selection": true
+    },
+    {
+      "index": 46,
+      "capture": "db-t04-supplement-submit-result",
+      "raw_ax": "046-db-t04-supplement-submit-result.ax.txt",
+      "raw_ax_sha256": "800f42ee29a5358f2505ff37bc697f98cbb5658c66b1d9ecaa11bb6a67d7b293",
+      "public_selection": false
+    },
+    {
+      "index": 47,
+      "capture": "db-t04-supplement-user-bubble-confirmed",
+      "raw_ax": "047-db-t04-supplement-user-bubble-confirmed.ax.txt",
+      "raw_ax_sha256": "183b1836bab7b63e3ad2e2e81d067979bb66a885b834ec034b1eeb60241fb575",
+      "public_selection": true
+    },
+    {
+      "index": 48,
+      "capture": "db-t04-recovery-progress-01",
+      "raw_ax": "048-db-t04-recovery-progress-01.ax.txt",
+      "raw_ax_sha256": "1b25132eae2a548f59c0eba319d404fb93c1074db652e58b233fb98fb23060b4",
+      "public_selection": true
+    },
+    {
+      "index": 49,
+      "capture": "db-t04-recovery-progress-02",
+      "raw_ax": "049-db-t04-recovery-progress-02.ax.txt",
+      "raw_ax_sha256": "a0876d27c7be7dcd19d9ec74786c88cd06f1ae5f6a56064bf85982729106495a",
+      "public_selection": false
+    },
+    {
+      "index": 50,
+      "capture": "db-t04-recovery-progress-03",
+      "raw_ax": "050-db-t04-recovery-progress-03.ax.txt",
+      "raw_ax_sha256": "8ab24f2f653a4ac44c129034fddfb4d12d591166a75b6cf8311f98065b44860a",
+      "public_selection": false
+    },
+    {
+      "index": 51,
+      "capture": "db-t04-execution-progress-04",
+      "raw_ax": "051-db-t04-execution-progress-04.ax.txt",
+      "raw_ax_sha256": "3c1e09c52b27aa22356818d23e7a2feed743e66ebceb2aa0b044d1d7f7b6e9b2",
+      "public_selection": false
+    },
+    {
+      "index": 52,
+      "capture": "db-t04-terminal-preflight",
+      "raw_ax": "052-db-t04-terminal-preflight.ax.txt",
+      "raw_ax_sha256": "e188d7f9ef6c3232c9c243d66dab249d4aa280ba76557cf3a261cc13cb216891",
+      "public_selection": true
+    },
+    {
+      "index": 53,
+      "capture": "db-t04-explorer-home-fresh",
+      "raw_ax": "053-db-t04-explorer-home-fresh.ax.txt",
+      "raw_ax_sha256": "55e9897137035c8a996c2726fee0575f7d0e9924d74b450deef1d153ef23d365",
+      "public_selection": false
+    },
+    {
+      "index": 54,
+      "capture": "db-t04-downloads-address-focus-confirmed",
+      "raw_ax": "054-db-t04-downloads-address-focus-confirmed.ax.txt",
+      "raw_ax_sha256": "fb2b2d552c058ee11bde6b243f2d88772d26adc4f9f3e1434c732f6d6b9d6d0b",
+      "public_selection": false
+    },
+    {
+      "index": 55,
+      "capture": "db-t04-downloads-folder-address-typed",
+      "raw_ax": "055-db-t04-downloads-folder-address-typed.ax.txt",
+      "raw_ax_sha256": "c7e13417477f39bd03a2125ee25fa6aa60fee13f6f3f70f94ecf1ed781878a00",
+      "public_selection": false
+    },
+    {
+      "index": 56,
+      "capture": "db-t04-downloads-folder-address-result",
+      "raw_ax": "056-db-t04-downloads-folder-address-result.ax.txt",
+      "raw_ax_sha256": "c7e13417477f39bd03a2125ee25fa6aa60fee13f6f3f70f94ecf1ed781878a00",
+      "public_selection": false
+    },
+    {
+      "index": 57,
+      "capture": "db-t04-explorer-downloads-fresh-state",
+      "raw_ax": "057-db-t04-explorer-downloads-fresh-state.ax.txt",
+      "raw_ax_sha256": "c7e13417477f39bd03a2125ee25fa6aa60fee13f6f3f70f94ecf1ed781878a00",
+      "public_selection": false
+    },
+    {
+      "index": 58,
+      "capture": "db-t04-explorer-before-focus",
+      "raw_ax": "058-db-t04-explorer-before-focus.ax.txt",
+      "raw_ax_sha256": "c7e13417477f39bd03a2125ee25fa6aa60fee13f6f3f70f94ecf1ed781878a00",
+      "public_selection": false
+    },
+    {
+      "index": 59,
+      "capture": "db-t04-normal-download-item-result",
+      "raw_ax": "059-db-t04-normal-download-item-result.ax.txt",
+      "raw_ax_sha256": "f8d739ac538e10ffceaef9d325fe7622fb0495c6af2ec361c77663c02bda4543",
+      "public_selection": false
+    },
+    {
+      "index": 60,
+      "capture": "db-t04-downloads-baseline-fresh",
+      "raw_ax": "060-db-t04-downloads-baseline-fresh.ax.txt",
+      "raw_ax_sha256": "6155cca3b3594e3b99f02d7f6a781029804a1e725e8faa4c28425ed3a0cb2bbb",
+      "public_selection": false
+    },
+    {
+      "index": 61,
+      "capture": "db-t04-downloads-real-address-initial",
+      "raw_ax": "061-db-t04-downloads-real-address-initial.ax.txt",
+      "raw_ax_sha256": "858d6922bc5800711f7e24a67b58110d9fb20862defcd07a24842c1a1df1eb75",
+      "public_selection": false
+    },
+    {
+      "index": 62,
+      "capture": "db-t04-downloads-real-directory-attested",
+      "raw_ax": "062-db-t04-downloads-real-directory-attested.ax.txt",
+      "raw_ax_sha256": "858d6922bc5800711f7e24a67b58110d9fb20862defcd07a24842c1a1df1eb75",
+      "public_selection": false
+    },
+    {
+      "index": 63,
+      "capture": "db-t04-terminal-card-fresh",
+      "raw_ax": "063-db-t04-terminal-card-fresh.ax.txt",
+      "raw_ax_sha256": "e188d7f9ef6c3232c9c243d66dab249d4aa280ba76557cf3a261cc13cb216891",
+      "public_selection": false
+    },
+    {
+      "index": 64,
+      "capture": "db-t04-downloads-rebound-main",
+      "raw_ax": "064-db-t04-downloads-rebound-main.ax.txt",
+      "raw_ax_sha256": "e188d7f9ef6c3232c9c243d66dab249d4aa280ba76557cf3a261cc13cb216891",
+      "public_selection": false
+    },
+    {
+      "index": 65,
+      "capture": "db-t04-native-card-download-preflight",
+      "raw_ax": "065-db-t04-native-card-download-preflight.ax.txt",
+      "raw_ax_sha256": "29a13ebbb8e5c2dcc89974d5992bb4d21281ef54ef6543c18b3cbb939abe35ed",
+      "public_selection": false
+    },
+    {
+      "index": 66,
+      "capture": "db-t04-current-size-ax",
+      "raw_ax": "066-db-t04-current-size-ax.ax.txt",
+      "raw_ax_sha256": "29a13ebbb8e5c2dcc89974d5992bb4d21281ef54ef6543c18b3cbb939abe35ed",
+      "public_selection": false
+    },
+    {
+      "index": 67,
+      "capture": "db-t04-download-window-maximize-result",
+      "raw_ax": "067-db-t04-download-window-maximize-result.ax.txt",
+      "raw_ax_sha256": "29a13ebbb8e5c2dcc89974d5992bb4d21281ef54ef6543c18b3cbb939abe35ed",
+      "public_selection": false
+    },
+    {
+      "index": 68,
+      "capture": "db-t04-native-download-maximized-fresh",
+      "raw_ax": "068-db-t04-native-download-maximized-fresh.ax.txt",
+      "raw_ax_sha256": "3e555d4015c5ab2b3175ab21d4512ef1a5cdbf15e0b31fefcb60e81c864711e3",
+      "public_selection": false
+    },
+    {
+      "index": 69,
+      "capture": "db-t04-output-cards-full-ax",
+      "raw_ax": "069-db-t04-output-cards-full-ax.ax.txt",
+      "raw_ax_sha256": "3e555d4015c5ab2b3175ab21d4512ef1a5cdbf15e0b31fefcb60e81c864711e3",
+      "public_selection": false
+    },
+    {
+      "index": 70,
+      "capture": "db-t04-voice-dialog-dismiss-result",
+      "raw_ax": "070-db-t04-voice-dialog-dismiss-result.ax.txt",
+      "raw_ax_sha256": "3e555d4015c5ab2b3175ab21d4512ef1a5cdbf15e0b31fefcb60e81c864711e3",
+      "public_selection": false
+    },
+    {
+      "index": 71,
+      "capture": "db-t04-voice-layer-fresh",
+      "raw_ax": "071-db-t04-voice-layer-fresh.ax.txt",
+      "raw_ax_sha256": "3e555d4015c5ab2b3175ab21d4512ef1a5cdbf15e0b31fefcb60e81c864711e3",
+      "public_selection": false
+    },
+    {
+      "index": 72,
+      "capture": "db-t04-incidental-call-cancel-result",
+      "raw_ax": "072-db-t04-incidental-call-cancel-result.ax.txt",
+      "raw_ax_sha256": "3e555d4015c5ab2b3175ab21d4512ef1a5cdbf15e0b31fefcb60e81c864711e3",
+      "public_selection": false
+    },
+    {
+      "index": 73,
+      "capture": "db-t04-download-cards-after-call-cancel",
+      "raw_ax": "073-db-t04-download-cards-after-call-cancel.ax.txt",
+      "raw_ax_sha256": "3e555d4015c5ab2b3175ab21d4512ef1a5cdbf15e0b31fefcb60e81c864711e3",
+      "public_selection": false
+    },
+    {
+      "index": 74,
+      "capture": "db-t04-incidental-voice-end-result",
+      "raw_ax": "074-db-t04-incidental-voice-end-result.ax.txt",
+      "raw_ax_sha256": "606f36481ec2fe4373d46599d94eaf8bf3161b6552c813c3574e398264cff7dd",
+      "public_selection": false
+    },
+    {
+      "index": 75,
+      "capture": "db-t04-output-card-previews-ready",
+      "raw_ax": "075-db-t04-output-card-previews-ready.ax.txt",
+      "raw_ax_sha256": "b9fb05b87b088a721eef0206f5ee5ba175be2d6ea9f2a384f84488d4b65d1e84",
+      "public_selection": false
+    },
+    {
+      "index": 76,
+      "capture": "db-t04-original-card-indices-fresh",
+      "raw_ax": "076-db-t04-original-card-indices-fresh.ax.txt",
+      "raw_ax_sha256": "b9fb05b87b088a721eef0206f5ee5ba175be2d6ea9f2a384f84488d4b65d1e84",
+      "public_selection": false
+    },
+    {
+      "index": 77,
+      "capture": "db-t04-small-window-scroll-output-result",
+      "raw_ax": "077-db-t04-small-window-scroll-output-result.ax.txt",
+      "raw_ax_sha256": "b9fb05b87b088a721eef0206f5ee5ba175be2d6ea9f2a384f84488d4b65d1e84",
+      "public_selection": false
+    },
+    {
+      "index": 78,
+      "capture": "db-t04-small-native-cards-fresh",
+      "raw_ax": "078-db-t04-small-native-cards-fresh.ax.txt",
+      "raw_ax_sha256": "b9fb05b87b088a721eef0206f5ee5ba175be2d6ea9f2a384f84488d4b65d1e84",
+      "public_selection": false
+    },
+    {
+      "index": 79,
+      "capture": "db-t04-conversion-card-scroll-result",
+      "raw_ax": "079-db-t04-conversion-card-scroll-result.ax.txt",
+      "raw_ax_sha256": "b9fb05b87b088a721eef0206f5ee5ba175be2d6ea9f2a384f84488d4b65d1e84",
+      "public_selection": false
+    },
+    {
+      "index": 80,
+      "capture": "db-t04-conversion-native-card-visible",
+      "raw_ax": "080-db-t04-conversion-native-card-visible.ax.txt",
+      "raw_ax_sha256": "efb42f0a69feecd2eab7dfdb0fed1a11191beee0b81fd5256fa390440f284acf",
+      "public_selection": true
+    },
+    {
+      "index": 81,
+      "capture": "db-t04-conversion-download-click-result",
+      "raw_ax": "081-db-t04-conversion-download-click-result.ax.txt",
+      "raw_ax_sha256": "efb42f0a69feecd2eab7dfdb0fed1a11191beee0b81fd5256fa390440f284acf",
+      "public_selection": false
+    },
+    {
+      "index": 82,
+      "capture": "db-t04-conversion-download-toast",
+      "raw_ax": "082-db-t04-conversion-download-toast.ax.txt",
+      "raw_ax_sha256": "f436947ec22bdff52700ef4162dd2d6c09df32eaa8b86d65ca3dd999022a0a4d",
+      "public_selection": false
+    },
+    {
+      "index": 83,
+      "capture": "db-t04-summary-preview-open-result",
+      "raw_ax": "083-db-t04-summary-preview-open-result.ax.txt",
+      "raw_ax_sha256": "407bcff5ff642faf976d03f1bfbb0392b13612c5c1b94471f446ac60f3004797",
+      "public_selection": false
+    },
+    {
+      "index": 84,
+      "capture": "db-t04-summary-native-preview-ready",
+      "raw_ax": "084-db-t04-summary-native-preview-ready.ax.txt",
+      "raw_ax_sha256": "a3d692bdc96bfe6ac8d6a6e8e677c9849e82d755864680b63c848f9038edecb1",
+      "public_selection": true
+    },
+    {
+      "index": 85,
+      "capture": "db-t04-summary-download-click-result",
+      "raw_ax": "085-db-t04-summary-download-click-result.ax.txt",
+      "raw_ax_sha256": "a3d692bdc96bfe6ac8d6a6e8e677c9849e82d755864680b63c848f9038edecb1",
+      "public_selection": false
+    },
+    {
+      "index": 86,
+      "capture": "db-t04-summary-download-toast",
+      "raw_ax": "086-db-t04-summary-download-toast.ax.txt",
+      "raw_ax_sha256": "eaa4c35ed2035f4ba1f2bce349bfcba209367b8251e66abbfa0e6d3ffd87d277",
+      "public_selection": false
+    },
+    {
+      "index": 87,
+      "capture": "db-t04-summary-preview-close-result",
+      "raw_ax": "087-db-t04-summary-preview-close-result.ax.txt",
+      "raw_ax_sha256": "eaa4c35ed2035f4ba1f2bce349bfcba209367b8251e66abbfa0e6d3ffd87d277",
+      "public_selection": false
+    },
+    {
+      "index": 88,
+      "capture": "db-t04-incident-card-position-fresh",
+      "raw_ax": "088-db-t04-incident-card-position-fresh.ax.txt",
+      "raw_ax_sha256": "6df882e8b1a0685e833df0350062286d5459b7a0169316eec91429d6fc5f9687",
+      "public_selection": false
+    },
+    {
+      "index": 89,
+      "capture": "db-t04-incident-scroll-result",
+      "raw_ax": "089-db-t04-incident-scroll-result.ax.txt",
+      "raw_ax_sha256": "a47edf6c06c8a04db863d84578c15a425d80b3aba2ad0408b4723536e4b56eff",
+      "public_selection": false
+    },
+    {
+      "index": 90,
+      "capture": "db-t04-incident-native-card-visible",
+      "raw_ax": "090-db-t04-incident-native-card-visible.ax.txt",
+      "raw_ax_sha256": "6df882e8b1a0685e833df0350062286d5459b7a0169316eec91429d6fc5f9687",
+      "public_selection": false
+    },
+    {
+      "index": 91,
+      "capture": "db-t04-incident-preview-open-result",
+      "raw_ax": "091-db-t04-incident-preview-open-result.ax.txt",
+      "raw_ax_sha256": "6df882e8b1a0685e833df0350062286d5459b7a0169316eec91429d6fc5f9687",
+      "public_selection": false
+    },
+    {
+      "index": 92,
+      "capture": "db-t04-incident-native-preview-ready",
+      "raw_ax": "092-db-t04-incident-native-preview-ready.ax.txt",
+      "raw_ax_sha256": "14b3a2a59432cdf3b6a0914511d66e8489b5dfb729e4f0805d4a7728e540a28d",
+      "public_selection": true
+    },
+    {
+      "index": 93,
+      "capture": "db-t04-incident-download-click-result",
+      "raw_ax": "093-db-t04-incident-download-click-result.ax.txt",
+      "raw_ax_sha256": "14b3a2a59432cdf3b6a0914511d66e8489b5dfb729e4f0805d4a7728e540a28d",
+      "public_selection": false
+    },
+    {
+      "index": 94,
+      "capture": "db-t04-incident-download-toast",
+      "raw_ax": "094-db-t04-incident-download-toast.ax.txt",
+      "raw_ax_sha256": "dd61c327cc6af5dc878fb6e956205eb3c537da0364e3b8af4a321db12077f924",
+      "public_selection": false
+    },
+    {
+      "index": 95,
+      "capture": "db-t04-incident-preview-close-result",
+      "raw_ax": "095-db-t04-incident-preview-close-result.ax.txt",
+      "raw_ax_sha256": "858824a3c3f566f332494d13670c526d18f8478b97dd5a1d2b4e7e79f6653762",
+      "public_selection": false
+    },
+    {
+      "index": 96,
+      "capture": "db-t04-downloaded-files-fresh-explorer",
+      "raw_ax": "096-db-t04-downloaded-files-fresh-explorer.ax.txt",
+      "raw_ax_sha256": "858d6922bc5800711f7e24a67b58110d9fb20862defcd07a24842c1a1df1eb75",
+      "public_selection": false
+    },
+    {
+      "index": 97,
+      "capture": "db-t04-explorer-downloads-raised",
+      "raw_ax": "097-db-t04-explorer-downloads-raised.ax.txt",
+      "raw_ax_sha256": "baf27fea22c0d94dc0d3d6a6460fc23ae1f4f5069e7ee4218cb0d0b81cfc7f25",
+      "public_selection": false
+    },
+    {
+      "index": 98,
+      "capture": "db-t04-explorer-downloads-file-list",
+      "raw_ax": "098-db-t04-explorer-downloads-file-list.ax.txt",
+      "raw_ax_sha256": "baf27fea22c0d94dc0d3d6a6460fc23ae1f4f5069e7ee4218cb0d0b81cfc7f25",
+      "public_selection": false
+    },
+    {
+      "index": 99,
+      "capture": "db-t04-explorer-downloads-refresh-result",
+      "raw_ax": "099-db-t04-explorer-downloads-refresh-result.ax.txt",
+      "raw_ax_sha256": "baf27fea22c0d94dc0d3d6a6460fc23ae1f4f5069e7ee4218cb0d0b81cfc7f25",
+      "public_selection": false
+    },
+    {
+      "index": 100,
+      "capture": "db-t04-three-native-downloads-present",
+      "raw_ax": "100-db-t04-three-native-downloads-present.ax.txt",
+      "raw_ax_sha256": "baf27fea22c0d94dc0d3d6a6460fc23ae1f4f5069e7ee4218cb0d0b81cfc7f25",
+      "public_selection": false
+    },
+    {
+      "index": 101,
+      "capture": "db-t04-conversion-file-selected",
+      "raw_ax": "101-db-t04-conversion-file-selected.ax.txt",
+      "raw_ax_sha256": "baf27fea22c0d94dc0d3d6a6460fc23ae1f4f5069e7ee4218cb0d0b81cfc7f25",
+      "public_selection": false
+    },
+    {
+      "index": 102,
+      "capture": "db-t04-conversion-file-selection-fresh",
+      "raw_ax": "102-db-t04-conversion-file-selection-fresh.ax.txt",
+      "raw_ax_sha256": "5bb094f27aaa6f6ea35f6652ef2b18b1f90bea60be80edddc6dc74da0ddc7dee",
+      "public_selection": false
+    },
+    {
+      "index": 103,
+      "capture": "db-t04-conversion-properties-first",
+      "raw_ax": "103-db-t04-conversion-properties-first.ax.txt",
+      "raw_ax_sha256": "5bb094f27aaa6f6ea35f6652ef2b18b1f90bea60be80edddc6dc74da0ddc7dee",
+      "public_selection": false
+    },
+    {
+      "index": 104,
+      "capture": "db-t04-conversion-real-properties-attested",
+      "raw_ax": "104-db-t04-conversion-real-properties-attested.ax.txt",
+      "raw_ax_sha256": "5bb094f27aaa6f6ea35f6652ef2b18b1f90bea60be80edddc6dc74da0ddc7dee",
+      "public_selection": false
+    },
+    {
+      "index": 105,
+      "capture": "db-t04-conversion-properties-dialog-fresh",
+      "raw_ax": "105-db-t04-conversion-properties-dialog-fresh.ax.txt",
+      "raw_ax_sha256": "5bb094f27aaa6f6ea35f6652ef2b18b1f90bea60be80edddc6dc74da0ddc7dee",
+      "public_selection": false
+    },
+    {
+      "index": 106,
+      "capture": "db-t04-conversion-property-modal-ax",
+      "raw_ax": "106-db-t04-conversion-property-modal-ax.ax.txt",
+      "raw_ax_sha256": "5bb094f27aaa6f6ea35f6652ef2b18b1f90bea60be80edddc6dc74da0ddc7dee",
+      "public_selection": false
+    },
+    {
+      "index": 107,
+      "capture": "db-t04-conversion-exact-path-properties",
+      "raw_ax": "107-db-t04-conversion-exact-path-properties.ax.txt",
+      "raw_ax_sha256": "0ee4d41598f254f237183a028135552cf51ee30d4065f02294dbdad568750d26",
+      "public_selection": false
+    },
+    {
+      "index": 108,
+      "capture": "db-t04-close-temporary-explorer-preflight",
+      "raw_ax": "108-db-t04-close-temporary-explorer-preflight.ax.txt",
+      "raw_ax_sha256": "5bb094f27aaa6f6ea35f6652ef2b18b1f90bea60be80edddc6dc74da0ddc7dee",
+      "public_selection": false
+    },
+    {
+      "index": 109,
+      "capture": "db-t04-explorer-close-button-fresh-ax",
+      "raw_ax": "109-db-t04-explorer-close-button-fresh-ax.ax.txt",
+      "raw_ax_sha256": "5bb094f27aaa6f6ea35f6652ef2b18b1f90bea60be80edddc6dc74da0ddc7dee",
+      "public_selection": false
+    },
+    {
+      "index": 110,
+      "capture": "db-t04-close-checkpoint-main-retained",
+      "raw_ax": "110-db-t04-close-checkpoint-main-retained.ax.txt",
+      "raw_ax_sha256": "a12a392fe4a4fc1371cd1bb41d0720365bb2b968e8bc649290faddac0181a83f",
+      "public_selection": true
+    }
+  ],
+  "metadata_corrections": [
+    {
+      "file": "execution-start.json",
+      "original_saved_as": "execution-start-unaccepted-attempt.json",
+      "original_sha256": "7eb856a4493676092729478de5fe25d869a104087f3280c94fae50f9ad67b5c5",
+      "final_sha256": "e075bc1339c2f2bafa640aed443da153649e8d3acfec18538d0c1e7f3ba8a0aa",
+      "basis": "Initial AX click did not submit; repeated fresh observations showed unchanged full composer and no execution. Corrected to later confirmed native visible submit pre-action."
+    },
+    {
+      "file": "independent-verification.json",
+      "original_saved_as": "independent-verification-before-retrieval.json",
+      "original_sha256": "268d1fd1c5f9cbb0b7db1783cd27b24c8246daf18bcd0c2af84d4c14a510fe01",
+      "final_sha256": "10a6a69c1b0348d41690effc4a89fa54f65c951acf3c8fc8b2774b938020e75d",
+      "basis": "Premature offline evaluation preceded download retrieval; repeated once after exact originals were available. No product retry or file repair."
+    }
+  ],
+  "scope": "Raw capture/action streams and original download bytes preserved. Public action projection retains actual at/label/method, removes arguments/results/errors. Metadata correction backups retained; selected ordinary AX ranges separately reviewed.",
+  "limitations": [
+    "Some failed native screenshot attempts exist only in tool transcripts and have no successful capture entry; no synthetic captures created.",
+    "The helper source is an exact copy; wrapper source snapshots the imported wrapper used later. Equivalent early inline wrappers and every REPL cell are not claimed to be a complete program-source archive.",
+    "No complete native action stream or remote wire-byte attestation claimed."
+  ]
+}

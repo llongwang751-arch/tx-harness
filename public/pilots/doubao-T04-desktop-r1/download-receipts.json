@@ -1,0 +1,126 @@
+{
+  "schema": "native-artifact-source-receipts-public-v1",
+  "artifacts": [
+    {
+      "receipt_id": "db-t04-native-conversion_ledger-csv",
+      "origin": "native_download",
+      "original_filename": "conversion_ledger.csv",
+      "public_native_file": "native-downloads/conversion_ledger.csv",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:50:34.270Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:47:45.376Z",
+      "save_action_source_line": 48,
+      "private_operator_actions_sha256": "86244a4009a02e852ad7ea2f4a356430d519ccbfe99c512e5f4a5a4c123f4824",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 399,
+      "sha256": "303e6149f3f4c710f9af7fc981bd166a536886bc7647f637a1ea562633e6d0ee",
+      "evidence": {
+        "event_id": "ui-80",
+        "capture": "db-t04-conversion-native-card-visible",
+        "line_ranges": [
+          [
+            339,
+            343
+          ]
+        ],
+        "private_ax_sha256": "efb42f0a69feecd2eab7dfdb0fed1a11191beee0b81fd5256fa390440f284acf"
+      },
+      "outputs": [
+        {
+          "logical_path": "conversion_ledger.csv",
+          "zip_member": null,
+          "bytes": 399,
+          "sha256": "303e6149f3f4c710f9af7fc981bd166a536886bc7647f637a1ea562633e6d0ee"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "db-t04-native-summary-json",
+      "origin": "native_download",
+      "original_filename": "summary (1).json",
+      "public_native_file": "native-downloads/summary.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:50:34.273Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:48:01.320Z",
+      "save_action_source_line": 50,
+      "private_operator_actions_sha256": "86244a4009a02e852ad7ea2f4a356430d519ccbfe99c512e5f4a5a4c123f4824",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 582,
+      "sha256": "a854bf227acfea04ea2f194fd1369565f1f671b8f8b4a8743f3f9d478a45978d",
+      "evidence": {
+        "event_id": "ui-84",
+        "capture": "db-t04-summary-native-preview-ready",
+        "line_ranges": [
+          [
+            421,
+            423
+          ],
+          [
+            438,
+            438
+          ]
+        ],
+        "private_ax_sha256": "a3d692bdc96bfe6ac8d6a6e8e677c9849e82d755864680b63c848f9038edecb1"
+      },
+      "outputs": [
+        {
+          "logical_path": "summary.json",
+          "zip_member": null,
+          "bytes": 582,
+          "sha256": "a854bf227acfea04ea2f194fd1369565f1f671b8f8b4a8743f3f9d478a45978d"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "db-t04-native-incident-json",
+      "origin": "native_download",
+      "original_filename": "incident.json",
+      "public_native_file": "native-downloads/incident.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:50:34.274Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:48:35.065Z",
+      "save_action_source_line": 54,
+      "private_operator_actions_sha256": "86244a4009a02e852ad7ea2f4a356430d519ccbfe99c512e5f4a5a4c123f4824",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 266,
+      "sha256": "02b5927361de90c15820593a5bca48ea05d5dd9314ae03e0da0a4b80e3ded6f0",
+      "evidence": {
+        "event_id": "ui-92",
+        "capture": "db-t04-incident-native-preview-ready",
+        "line_ranges": [
+          [
+            421,
+            423
+          ],
+          [
+            438,
+            438
+          ]
+        ],
+        "private_ax_sha256": "14b3a2a59432cdf3b6a0914511d66e8489b5dfb729e4f0805d4a7728e540a28d"
+      },
+      "outputs": [
+        {
+          "logical_path": "incident.json",
+          "zip_member": null,
+          "bytes": 266,
+          "sha256": "02b5927361de90c15820593a5bca48ea05d5dd9314ae03e0da0a4b80e3ded6f0"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    }
+  ],
+  "private_original_receipts_sha256": "031808f5115ba6e103060aedd49934ff5652f117a48f64c1e3c3fa38c255f15e",
+  "basis": "Recorded native UI action/card evidence and retained native download/export/local-file originals; origin is explicit per artifact"
+}

@@ -1,0 +1,35 @@
+{
+  "currency": "CNY",
+  "included_count": 5,
+  "excluded_count": 1,
+  "total_cny_cents": 146636,
+  "by_currency": [
+    {
+      "currency": "CNY",
+      "trade_count": 1,
+      "cny_cents": 12345
+    },
+    {
+      "currency": "EUR",
+      "trade_count": 2,
+      "cny_cents": 40807
+    },
+    {
+      "currency": "USD",
+      "trade_count": 2,
+      "cny_cents": 93484
+    }
+  ],
+  "by_date": [
+    {
+      "date": "2026-10-01",
+      "trade_count": 3,
+      "cny_cents": 122345
+    },
+    {
+      "date": "2026-10-02",
+      "trade_count": 2,
+      "cny_cents": 24291
+    }
+  ]
+}
