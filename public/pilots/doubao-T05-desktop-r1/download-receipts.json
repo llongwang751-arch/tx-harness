@@ -1,0 +1,126 @@
+{
+  "schema": "native-artifact-source-receipts-public-v1",
+  "artifacts": [
+    {
+      "receipt_id": "doubao-T05-native-1",
+      "origin": "native_download",
+      "original_filename": "invoice_ledger.csv",
+      "public_native_file": "native-downloads/invoice_ledger.csv",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T19:12:46.037Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T19:09:27.654Z",
+      "save_action_source_line": 58,
+      "private_operator_actions_sha256": "ee6911749b1354ad723ebb9de7ab908742ef3ae02544bd57de3f47fa1d795c85",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 504,
+      "sha256": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682",
+      "evidence": {
+        "event_id": "ui-79",
+        "capture": "db-t05-invoice-preview-download-ax",
+        "line_ranges": [
+          [
+            478,
+            481
+          ]
+        ],
+        "private_ax_sha256": "7a880b26bd84e4266147a63208306e993ae99e4578985e13d097e0d27a9442d0"
+      },
+      "outputs": [
+        {
+          "logical_path": "invoice_ledger.csv",
+          "zip_member": null,
+          "bytes": 504,
+          "sha256": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "doubao-T05-native-2",
+      "origin": "native_download",
+      "original_filename": "summary (2).json",
+      "public_native_file": "native-downloads/summary (2).json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T19:12:46.046Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T19:09:53.968Z",
+      "save_action_source_line": 61,
+      "private_operator_actions_sha256": "ee6911749b1354ad723ebb9de7ab908742ef3ae02544bd57de3f47fa1d795c85",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 286,
+      "sha256": "092896428cc5626fa488df2ef8fd174af01d2f58fb7a0f1675afd38006df0704",
+      "evidence": {
+        "event_id": "ui-85",
+        "capture": "db-t05-summary-preview-ready",
+        "line_ranges": [
+          [
+            464,
+            466
+          ],
+          [
+            481,
+            481
+          ]
+        ],
+        "private_ax_sha256": "6c97c4a70255951c08e4a981107f2f99346491a32e963379f211fac3fe863b3b"
+      },
+      "outputs": [
+        {
+          "logical_path": "summary.json",
+          "zip_member": null,
+          "bytes": 286,
+          "sha256": "092896428cc5626fa488df2ef8fd174af01d2f58fb7a0f1675afd38006df0704"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "doubao-T05-native-3",
+      "origin": "native_download",
+      "original_filename": "source_audit.json",
+      "public_native_file": "native-downloads/source_audit.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T19:12:46.054Z",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T19:10:22.367Z",
+      "save_action_source_line": 64,
+      "private_operator_actions_sha256": "ee6911749b1354ad723ebb9de7ab908742ef3ae02544bd57de3f47fa1d795c85",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 375,
+      "sha256": "61160b5378268941a39988a9a7e54b62973761e50ceb17b08e60a891ab1039f9",
+      "evidence": {
+        "event_id": "ui-91",
+        "capture": "db-t05-source-preview-ready",
+        "line_ranges": [
+          [
+            464,
+            466
+          ],
+          [
+            481,
+            481
+          ]
+        ],
+        "private_ax_sha256": "320fbbd0dd59b9839401b68c122f35b7e78f6f32cf432eccb8a6dd97eb1f9acb"
+      },
+      "outputs": [
+        {
+          "logical_path": "source_audit.json",
+          "zip_member": null,
+          "bytes": 375,
+          "sha256": "61160b5378268941a39988a9a7e54b62973761e50ceb17b08e60a891ab1039f9"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    }
+  ],
+  "private_original_receipts_sha256": "b12bf394fe158349bcce14be6497ecc717701c97059ea1e196138e630dfd4ae8",
+  "basis": "Recorded native UI action/card evidence and retained native download/export/local-file originals; origin is explicit per artifact"
+}

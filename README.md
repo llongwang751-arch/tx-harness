@@ -2,11 +2,11 @@
 
 个人开源仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。比较对象为Codex、WorkBuddy、DeepSeek Harness（DSH）、元宝专家模式、豆包工作任务模式；用户已确认公告中的“豆包办公”指工作任务模式。
 
-截至2026-10-14，方案、五套用例、36项机器检查和评分工具已完成。共30个公开证据包、25次逐项评分现场，完成24/25产品×任务组合。元宝封存T01/T02/T03/T04/T05，豆包选定云入口封存T01/T02/T03/T04；所有真实错误、交付失败、重试和预算观察限制均保留。
+截至2026-10-14，方案、五套用例、36项机器检查和评分工具已完成。共31个公开证据包、26次逐项评分现场，完成25/25产品×任务组合。元宝封存T01/T02/T03/T04/T05，豆包选定云入口封存T01/T02/T03/T04/T05；所有真实错误、交付失败、重试和预算观察限制均保留。
 
 本次采用[探索性分析口径](docs/exploratory-analysis-plan.md)，开展实际任务复现与执行链追溯。[后验评分审阅](reports/exploratory-score-review.md)逐项列出证据、理由、置信和缺证范围。原75次确认性实验仍为作者未实施草案，不追认预试；模型、Skill和权限未匹配，因果归因保持未识别。
 
-阅读[书面报告](reports/report.md)和[真实预试索引](public/pilots/README.md)，复核原生交付、现场事件、失败attempt与归因边界。
+阅读[书面报告](reports/report.md)和[现场证据索引](public/pilots/README.md)，复核原生交付、现场事件、失败attempt与归因边界。
 
 ## 归因原则
 
@@ -20,9 +20,9 @@
 |---|---|---|
 | 评测方案 | docs/protocol.md、config/protocol.json、docs/exploratory-analysis-plan.md | 确认性草案未实施；本次按探索性口径复现和追溯 |
 | 用例：任务、输入、完成条件 | cases/T01至T05，prompt.md、inputs、case.json | 已设计；可离线核验 |
-| 表现现场 | public/pilots真实接入记录 | 30个包；24/25完成组合，额外失败/诊断保留；正式0/75 |
-| 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 25次逐项审阅；缺证项保留null及范围 |
-| 书面竞品报告 | reports/report.md、逐次公开证据与复核命令 | 真实预试报告；正式对照尚未完成 |
+| 表现现场 | public/pilots真实接入记录 | 31个包；25/25组合完成，失败、诊断和预算局限保留 |
+| 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 26次逐项审阅；缺证项保留null及范围 |
+| 书面竞品报告 | reports/report.md、逐次公开证据与复核命令 | 五产品五题完整复现；分数、差异及归因限制已列 |
 | 每周六个人周报邮件 | reports/weekly-template.md、reports/weekly-2026-10-17-draft.md | 仅本地模板/草稿；未发送 |
 | 个人开源GitHub链接 | https://github.com/llongwang751-arch/tx-harness，MIT | 公开方案、代码、真实预试与报告 |
 
@@ -36,13 +36,13 @@ python -m unittest discover -s tests -v
 python -m harness_eval --help
 ```
 
-正式实验之前，先预试并锁定版本/模型/技能条件、冻结协议。每次 `prepare` 只复制参与者可见的prompt和inputs；oracle和评分程序留在评测员目录。把workspace复制/挂载到隔离的产品目录，不让任何参评产品读这个评测仓库。
+下面保留工具使用方法。若继续开展确认性实验，先锁定版本/模型/技能条件并冻结协议；当前五题比较已经按探索性口径完成。每次 `prepare` 只复制参与者可见的prompt和inputs；oracle和评分程序留在评测员目录。把workspace复制/挂载到隔离的产品目录，不让任何参评产品读这个评测仓库。
 
 ```powershell
 python -m harness_eval prepare --product codex --case T01 --replicate 1 --track pilot
 ```
 
-按[现场操作单](docs/collection.md)采集后，填写人工判断、封存、评分。主实验安排五产品×五任务×三次，共75个实验位。工具生成顺序、验收与汇总；scripts提供三款本地原生CLI的预试适配器，默认dry-run，显式--execute才执行，不能代替五产品实际操作或自动登录。
+按[现场操作单](docs/collection.md)采集后，填写人工判断、封存、评分。原确认性草案安排五产品×五任务×三次，共75个实验位；公告没有要求这组重复，本次交付不据此追加实验。工具生成顺序、验收与汇总；scripts提供三款本地原生CLI的预试适配器，默认dry-run，显式--execute才执行，不能代替五产品实际操作或自动登录。
 
 ## 目录
 
@@ -52,7 +52,7 @@ docs/           方法、归因、采集、评分与提交说明
 cases/          五套任务、原始输入、仅供评测员使用的答案
 harness_eval/   标准库CLI：准备、记录、核验、封存、打分、汇总
 tests/          验收判定与证据门槛的回归测试
-reports/        真实预试报告、周报与正式成绩草案
+reports/        完整探索性报告、逐项评分、周报与确认性草案
 runs/           本地采集包（Git忽略）
 public/runs/    经审查导出的公开证据包（可提交）
 private/        私有原始记录（Git忽略）

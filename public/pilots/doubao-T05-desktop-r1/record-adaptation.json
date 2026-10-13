@@ -1,0 +1,1312 @@
+{
+  "schema": "native-record-preservation-mapping-v1",
+  "record_rewriting_performed": false,
+  "raw_capture_log_rewritten": false,
+  "raw_operator_actions_rewritten": false,
+  "raw_ax_and_images_rewritten": false,
+  "source_capture_log_sha256": "9f30db028e7a222cbb8919e5a1fedf8fc186ca8c648e89d4d4fd91f3af00f252",
+  "source_operator_actions_sha256": "ee6911749b1354ad723ebb9de7ab908742ef3ae02544bd57de3f47fa1d795c85",
+  "source_native_artifact_receipts_sha256": "ea2d15045e28f3601f821b41669d1340ca21a46ce3ce6adb60773b569895042b",
+  "collector_source_sha256": {
+    "doubao_native_wrappers.mjs": "96b164a3f1bd3933fd007a74b0b50ea693ce6a1ee86aaafc0ada9db9c4688c86",
+    "workbuddy_desktop_collector.mjs": "a72cdf89fff4e7592249e90f21f7acee2a5b40eb15c781d3bcd3a7307e664b91"
+  },
+  "mapping": [
+    {
+      "index": 1,
+      "capture": "db-t05-initial",
+      "raw_ax": "001-db-t05-initial.ax.txt",
+      "raw_ax_sha256": "6fc64a8bd15af5cd30dc6188ee7b76fdce9737559fb43e534cb750f1e23c3b33",
+      "public_selection": false
+    },
+    {
+      "index": 2,
+      "capture": "db-t05-new-work-retry-context",
+      "raw_ax": "002-db-t05-new-work-retry-context.ax.txt",
+      "raw_ax_sha256": "6fc64a8bd15af5cd30dc6188ee7b76fdce9737559fb43e534cb750f1e23c3b33",
+      "public_selection": false
+    },
+    {
+      "index": 3,
+      "capture": "db-t05-new-work-open",
+      "raw_ax": "003-db-t05-new-work-open.ax.txt",
+      "raw_ax_sha256": "6fc64a8bd15af5cd30dc6188ee7b76fdce9737559fb43e534cb750f1e23c3b33",
+      "public_selection": false
+    },
+    {
+      "index": 4,
+      "capture": "db-t05-maximized-ax",
+      "raw_ax": "004-db-t05-maximized-ax.ax.txt",
+      "raw_ax_sha256": "5bd63ee91151f0d3ff90ee423f38123720842703f0e277a1a27164776cb77cac",
+      "public_selection": false
+    },
+    {
+      "index": 5,
+      "capture": "db-t05-sidebar-ax",
+      "raw_ax": "005-db-t05-sidebar-ax.ax.txt",
+      "raw_ax_sha256": "5bd63ee91151f0d3ff90ee423f38123720842703f0e277a1a27164776cb77cac",
+      "public_selection": false
+    },
+    {
+      "index": 6,
+      "capture": "db-t05-sidebar-state",
+      "raw_ax": "006-db-t05-sidebar-state.ax.txt",
+      "raw_ax_sha256": "0d9c731c12492c20d1e489f4f4fdb119406a9bcd82401a56f63237a62e5d2d3a",
+      "public_selection": false
+    },
+    {
+      "index": 7,
+      "capture": "db-t05-work-composer",
+      "raw_ax": "007-db-t05-work-composer.ax.txt",
+      "raw_ax_sha256": "0d9c731c12492c20d1e489f4f4fdb119406a9bcd82401a56f63237a62e5d2d3a",
+      "public_selection": false
+    },
+    {
+      "index": 8,
+      "capture": "db-t05-restored-visible",
+      "raw_ax": "008-db-t05-restored-visible.ax.txt",
+      "raw_ax_sha256": "dd8856a26e225be30f517061f56f74e564998d852fd65e3bf74f2b8cfa79c692",
+      "public_selection": false
+    },
+    {
+      "index": 9,
+      "capture": "db-t05-home-ready",
+      "raw_ax": "009-db-t05-home-ready.ax.txt",
+      "raw_ax_sha256": "8f416ccd0e90395f4b46d8740b3f865561ea9e7e2a24218d91e494041d38971e",
+      "public_selection": false
+    },
+    {
+      "index": 10,
+      "capture": "db-t05-work-home-visible",
+      "raw_ax": "010-db-t05-work-home-visible.ax.txt",
+      "raw_ax_sha256": "8f416ccd0e90395f4b46d8740b3f865561ea9e7e2a24218d91e494041d38971e",
+      "public_selection": false
+    },
+    {
+      "index": 11,
+      "capture": "db-t05-mode-menu",
+      "raw_ax": "011-db-t05-mode-menu.ax.txt",
+      "raw_ax_sha256": "d4831c310511651c313d10a0f32338bf85930ed7e704875d638b5cb852642a52",
+      "public_selection": false
+    },
+    {
+      "index": 12,
+      "capture": "db-t05-mode-fresh-visible",
+      "raw_ax": "012-db-t05-mode-fresh-visible.ax.txt",
+      "raw_ax_sha256": "8c5cc33815dceaab5ee20810390f5730e0cfc784d3f9736634bfe81128170ddd",
+      "public_selection": false
+    },
+    {
+      "index": 13,
+      "capture": "db-t05-mode-dismissed-visible",
+      "raw_ax": "013-db-t05-mode-dismissed-visible.ax.txt",
+      "raw_ax_sha256": "8c5cc33815dceaab5ee20810390f5730e0cfc784d3f9736634bfe81128170ddd",
+      "public_selection": false
+    },
+    {
+      "index": 14,
+      "capture": "db-t05-overlay-closed",
+      "raw_ax": "014-db-t05-overlay-closed.ax.txt",
+      "raw_ax_sha256": "d75635d88cea7f34cdbb5f1bf4ddf94f7a6e058b4b932763e680624e747dd372",
+      "public_selection": false
+    },
+    {
+      "index": 15,
+      "capture": "db-t05-rebound-visible",
+      "raw_ax": "015-db-t05-rebound-visible.ax.txt",
+      "raw_ax_sha256": "8f579e149acde065bf42c2899bfc0b788108cb9e59b43659cb7d84846aefaf76",
+      "public_selection": false
+    },
+    {
+      "index": 16,
+      "capture": "db-t05-mode-native-menu",
+      "raw_ax": "016-db-t05-mode-native-menu.ax.txt",
+      "raw_ax_sha256": "8f579e149acde065bf42c2899bfc0b788108cb9e59b43659cb7d84846aefaf76",
+      "public_selection": false
+    },
+    {
+      "index": 17,
+      "capture": "db-t05-mode-menu-ready",
+      "raw_ax": "017-db-t05-mode-menu-ready.ax.txt",
+      "raw_ax_sha256": "d35418c44ea401b1957f4fc0bd55aea56cf4a87a99b25ab81dc41041822d01d6",
+      "public_selection": true
+    },
+    {
+      "index": 18,
+      "capture": "db-t05-cloud-selected",
+      "raw_ax": "018-db-t05-cloud-selected.ax.txt",
+      "raw_ax_sha256": "d35418c44ea401b1957f4fc0bd55aea56cf4a87a99b25ab81dc41041822d01d6",
+      "public_selection": false
+    },
+    {
+      "index": 19,
+      "capture": "db-t05-cloud-mode-ready",
+      "raw_ax": "019-db-t05-cloud-mode-ready.ax.txt",
+      "raw_ax_sha256": "7852f29cb547addedd76f3673c7de6381da05ad93a835969cc05cb2cb1923ec0",
+      "public_selection": false
+    },
+    {
+      "index": 20,
+      "capture": "db-t05-attach-menu-first",
+      "raw_ax": "020-db-t05-attach-menu-first.ax.txt",
+      "raw_ax_sha256": "57ebf5c152e68f7a504be19bb7130aba78d09e5cd1ba52f7878c5cc3358818a7",
+      "public_selection": false
+    },
+    {
+      "index": 21,
+      "capture": "db-t05-attachment-menu-ready",
+      "raw_ax": "021-db-t05-attachment-menu-ready.ax.txt",
+      "raw_ax_sha256": "b52a3a096cdb1bfa43020d7844a8663a56cada55da530b6774abcbb1ff8b69f7",
+      "public_selection": false
+    },
+    {
+      "index": 22,
+      "capture": "db-t05-upload-menu-ax",
+      "raw_ax": "022-db-t05-upload-menu-ax.ax.txt",
+      "raw_ax_sha256": "b52a3a096cdb1bfa43020d7844a8663a56cada55da530b6774abcbb1ff8b69f7",
+      "public_selection": false
+    },
+    {
+      "index": 23,
+      "capture": "db-t05-upload-scroll-preflight",
+      "raw_ax": "023-db-t05-upload-scroll-preflight.ax.txt",
+      "raw_ax_sha256": "b52a3a096cdb1bfa43020d7844a8663a56cada55da530b6774abcbb1ff8b69f7",
+      "public_selection": false
+    },
+    {
+      "index": 24,
+      "capture": "db-t05-upload-scroll-result",
+      "raw_ax": "024-db-t05-upload-scroll-result.ax.txt",
+      "raw_ax_sha256": "b52a3a096cdb1bfa43020d7844a8663a56cada55da530b6774abcbb1ff8b69f7",
+      "public_selection": false
+    },
+    {
+      "index": 25,
+      "capture": "db-t05-upload-top-visible",
+      "raw_ax": "025-db-t05-upload-top-visible.ax.txt",
+      "raw_ax_sha256": "b52a3a096cdb1bfa43020d7844a8663a56cada55da530b6774abcbb1ff8b69f7",
+      "public_selection": false
+    },
+    {
+      "index": 26,
+      "capture": "db-t05-system-menu-first",
+      "raw_ax": "026-db-t05-system-menu-first.ax.txt",
+      "raw_ax_sha256": "b5fc55b10c723abd868ea9ee6a1e0ea3b7d1441c0bd0a024505da3a26cbf4847",
+      "public_selection": false
+    },
+    {
+      "index": 27,
+      "capture": "db-t05-system-menu-ready",
+      "raw_ax": "027-db-t05-system-menu-ready.ax.txt",
+      "raw_ax_sha256": "db73cb2d4e8840b827687c0141d16208ca82f9b583243d69a7a3803d688b390d",
+      "public_selection": false
+    },
+    {
+      "index": 28,
+      "capture": "db-t05-maximize-first",
+      "raw_ax": "028-db-t05-maximize-first.ax.txt",
+      "raw_ax_sha256": "41a9103a599811f90abc3e43080dff7343351628790a9b8d634077ef9fe9e565",
+      "public_selection": false
+    },
+    {
+      "index": 29,
+      "capture": "db-t05-enlarged-ready-ax-only",
+      "raw_ax": "029-db-t05-enlarged-ready-ax-only.ax.txt",
+      "raw_ax_sha256": "134c5b59bada3129c88bd3fae497ceb66c1bd2a16e40ccba112c456e8104a4ce",
+      "public_selection": false
+    },
+    {
+      "index": 30,
+      "capture": "db-t05-upload-enlarged-ax",
+      "raw_ax": "030-db-t05-upload-enlarged-ax.ax.txt",
+      "raw_ax_sha256": "134c5b59bada3129c88bd3fae497ceb66c1bd2a16e40ccba112c456e8104a4ce",
+      "public_selection": false
+    },
+    {
+      "index": 31,
+      "capture": "db-t05-attachment-enlarged-first",
+      "raw_ax": "031-db-t05-attachment-enlarged-first.ax.txt",
+      "raw_ax_sha256": "134c5b59bada3129c88bd3fae497ceb66c1bd2a16e40ccba112c456e8104a4ce",
+      "public_selection": false
+    },
+    {
+      "index": 32,
+      "capture": "db-t05-attachment-full-menu-ready",
+      "raw_ax": "032-db-t05-attachment-full-menu-ready.ax.txt",
+      "raw_ax_sha256": "ae5c3854e7f9a1edb83f7f3009d463905ebb8e9e366ffcdaa84f7c8a46fcfb01",
+      "public_selection": false
+    },
+    {
+      "index": 33,
+      "capture": "db-t05-filepicker-first",
+      "raw_ax": "033-db-t05-filepicker-first.ax.txt",
+      "raw_ax_sha256": "3039b607e982a9e338b136f5251610f7c500057af5c524edc9527851977e31e3",
+      "public_selection": false
+    },
+    {
+      "index": 34,
+      "capture": "db-t05-filepicker-ready",
+      "raw_ax": "034-db-t05-filepicker-ready.ax.txt",
+      "raw_ax_sha256": "da9fa388aba521a427d99c1caf1d1fe184275cc67c18f673608e45439575de03",
+      "public_selection": false
+    },
+    {
+      "index": 35,
+      "capture": "db-t05-picker-directory-first",
+      "raw_ax": "035-db-t05-picker-directory-first.ax.txt",
+      "raw_ax_sha256": "12124f80d603a01f5208d3e617ac09fbc55cf8cd17fe9b54b1cf76396dc98544",
+      "public_selection": false
+    },
+    {
+      "index": 36,
+      "capture": "db-t05-picker-directory-ready",
+      "raw_ax": "036-db-t05-picker-directory-ready.ax.txt",
+      "raw_ax_sha256": "12124f80d603a01f5208d3e617ac09fbc55cf8cd17fe9b54b1cf76396dc98544",
+      "public_selection": false
+    },
+    {
+      "index": 37,
+      "capture": "db-t05-picker-four-name-first",
+      "raw_ax": "037-db-t05-picker-four-name-first.ax.txt",
+      "raw_ax_sha256": "08ba2aa175c62cb72b84f4a22d72a0fd6e3ebaad53b2c84b01615cd2aa6caf06",
+      "public_selection": false
+    },
+    {
+      "index": 38,
+      "capture": "db-t05-picker-four-originals-confirmed",
+      "raw_ax": "038-db-t05-picker-four-originals-confirmed.ax.txt",
+      "raw_ax_sha256": "08ba2aa175c62cb72b84f4a22d72a0fd6e3ebaad53b2c84b01615cd2aa6caf06",
+      "public_selection": false
+    },
+    {
+      "index": 39,
+      "capture": "db-t05-upload-returned",
+      "raw_ax": "039-db-t05-upload-returned.ax.txt",
+      "raw_ax_sha256": "0cbc09f9a4ecd251c9c63aa8a90285353a128e659b8fe2f5825fb98c53dc239b",
+      "public_selection": false
+    },
+    {
+      "index": 40,
+      "capture": "db-t05-four-attachments-accepted",
+      "raw_ax": "040-db-t05-four-attachments-accepted.ax.txt",
+      "raw_ax_sha256": "c325dc50f83d32ef0023c4840ad4cbe9997cccb394a006fbd12d6b1774527a32",
+      "public_selection": true
+    },
+    {
+      "index": 41,
+      "capture": "db-t05-composer-paste-first",
+      "raw_ax": "041-db-t05-composer-paste-first.ax.txt",
+      "raw_ax_sha256": "f43d7c43d1ee35532577ec1158f2da3d38641a1bf394d14a5fcc2078e635faa6",
+      "public_selection": false
+    },
+    {
+      "index": 42,
+      "capture": "db-t05-canonical-composer-ready",
+      "raw_ax": "042-db-t05-canonical-composer-ready.ax.txt",
+      "raw_ax_sha256": "03473b23d1c630ba65c7fb7b525f22730d077f19973d6939eb42b679e2ea00e5",
+      "public_selection": false
+    },
+    {
+      "index": 43,
+      "capture": "db-t05-canonical-composer-fresh-ax-only",
+      "raw_ax": "043-db-t05-canonical-composer-fresh-ax-only.ax.txt",
+      "raw_ax_sha256": "03473b23d1c630ba65c7fb7b525f22730d077f19973d6939eb42b679e2ea00e5",
+      "public_selection": true
+    },
+    {
+      "index": 44,
+      "capture": "db-t05-submit-first",
+      "raw_ax": "044-db-t05-submit-first.ax.txt",
+      "raw_ax_sha256": "03473b23d1c630ba65c7fb7b525f22730d077f19973d6939eb42b679e2ea00e5",
+      "public_selection": false
+    },
+    {
+      "index": 45,
+      "capture": "db-t05-submission-confirmation",
+      "raw_ax": "045-db-t05-submission-confirmation.ax.txt",
+      "raw_ax_sha256": "a6ecd9450bd763dfa6f419e814fcf78088d68c4e26ddddc3c8f97d115ce3d579",
+      "public_selection": false
+    },
+    {
+      "index": 46,
+      "capture": "db-t05-submitted-user-task",
+      "raw_ax": "046-db-t05-submitted-user-task.ax.txt",
+      "raw_ax_sha256": "05d973da7252b7d5ca5de1582337b5d9c8811670cec10601a9e52b0ca1de11a7",
+      "public_selection": true
+    },
+    {
+      "index": 47,
+      "capture": "db-t05-progress-01",
+      "raw_ax": "047-db-t05-progress-01.ax.txt",
+      "raw_ax_sha256": "561b8224dc5ced848e6d7e20ac9a64e68585071109d112dacf80375f6d34809b",
+      "public_selection": false
+    },
+    {
+      "index": 48,
+      "capture": "db-t05-progress-02",
+      "raw_ax": "048-db-t05-progress-02.ax.txt",
+      "raw_ax_sha256": "63a6430419de3e05d0473b16f13142e86a90f12d5cb170a9ac621e1417cef8d0",
+      "public_selection": false
+    },
+    {
+      "index": 49,
+      "capture": "db-t05-new-explorer-home",
+      "raw_ax": "049-db-t05-new-explorer-home.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 50,
+      "capture": "db-t05-explorer-downloads-geometry-ax-only",
+      "raw_ax": "050-db-t05-explorer-downloads-geometry-ax-only.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 51,
+      "capture": "db-t05-downloads-folder-first",
+      "raw_ax": "051-db-t05-downloads-folder-first.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 52,
+      "capture": "db-t05-downloads-baseline-visible",
+      "raw_ax": "052-db-t05-downloads-baseline-visible.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 53,
+      "capture": "db-t05-downloads-address-first",
+      "raw_ax": "053-db-t05-downloads-address-first.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 54,
+      "capture": "db-t05-downloads-address-ready",
+      "raw_ax": "054-db-t05-downloads-address-ready.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 55,
+      "capture": "db-t05-downloads-address-typed-first",
+      "raw_ax": "055-db-t05-downloads-address-typed-first.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 56,
+      "capture": "db-t05-downloads-address-field-confirmed",
+      "raw_ax": "056-db-t05-downloads-address-field-confirmed.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 57,
+      "capture": "db-t05-downloads-address-paste-first",
+      "raw_ax": "057-db-t05-downloads-address-paste-first.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 58,
+      "capture": "db-t05-downloads-address-paste-ready-ax-only",
+      "raw_ax": "058-db-t05-downloads-address-paste-ready-ax-only.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 59,
+      "capture": "db-t05-explorer-raised-first",
+      "raw_ax": "059-db-t05-explorer-raised-first.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 60,
+      "capture": "db-t05-explorer-raised-ready",
+      "raw_ax": "060-db-t05-explorer-raised-ready.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 61,
+      "capture": "db-t05-explorer-address-raised-first",
+      "raw_ax": "061-db-t05-explorer-address-raised-first.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 62,
+      "capture": "db-t05-explorer-raised-address-ready",
+      "raw_ax": "062-db-t05-explorer-raised-address-ready.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 63,
+      "capture": "db-t05-explorer-raised-address-type-first",
+      "raw_ax": "063-db-t05-explorer-raised-address-type-first.ax.txt",
+      "raw_ax_sha256": "d8d657b145afd59071ea464c43a34081269ab0bd1a06cb4dd7b1b1d14e3109fb",
+      "public_selection": false
+    },
+    {
+      "index": 64,
+      "capture": "db-t05-terminal-observed",
+      "raw_ax": "064-db-t05-terminal-observed.ax.txt",
+      "raw_ax_sha256": "ca1048ed0869fe956886ee33dc6f64271681c229c5426097a51574dc0abcfb53",
+      "public_selection": true
+    },
+    {
+      "index": 65,
+      "capture": "db-t05-download-main-restored",
+      "raw_ax": "065-db-t05-download-main-restored.ax.txt",
+      "raw_ax_sha256": "ab4d0dd5afd89765f1bc61404edc78d75d1ab4bfaf7a8bb4b18a88cc2039b364",
+      "public_selection": false
+    },
+    {
+      "index": 66,
+      "capture": "db-t05-output-card-scroll-first",
+      "raw_ax": "066-db-t05-output-card-scroll-first.ax.txt",
+      "raw_ax_sha256": "ab4d0dd5afd89765f1bc61404edc78d75d1ab4bfaf7a8bb4b18a88cc2039b364",
+      "public_selection": false
+    },
+    {
+      "index": 67,
+      "capture": "db-t05-output-cards-visible",
+      "raw_ax": "067-db-t05-output-cards-visible.ax.txt",
+      "raw_ax_sha256": "5af14c971197a681fe2fd77a1a06abe8f08d17da4ff1ec5d24733f4cfee2af72",
+      "public_selection": false
+    },
+    {
+      "index": 68,
+      "capture": "db-t05-cards-up-again-first",
+      "raw_ax": "068-db-t05-cards-up-again-first.ax.txt",
+      "raw_ax_sha256": "5af14c971197a681fe2fd77a1a06abe8f08d17da4ff1ec5d24733f4cfee2af72",
+      "public_selection": false
+    },
+    {
+      "index": 69,
+      "capture": "db-t05-output-three-cards-preflight",
+      "raw_ax": "069-db-t05-output-three-cards-preflight.ax.txt",
+      "raw_ax_sha256": "5af14c971197a681fe2fd77a1a06abe8f08d17da4ff1ec5d24733f4cfee2af72",
+      "public_selection": false
+    },
+    {
+      "index": 70,
+      "capture": "db-t05-cards-batch-first",
+      "raw_ax": "070-db-t05-cards-batch-first.ax.txt",
+      "raw_ax_sha256": "5af14c971197a681fe2fd77a1a06abe8f08d17da4ff1ec5d24733f4cfee2af72",
+      "public_selection": false
+    },
+    {
+      "index": 71,
+      "capture": "db-t05-output-card-area-ready",
+      "raw_ax": "071-db-t05-output-card-area-ready.ax.txt",
+      "raw_ax_sha256": "00f3cb54770a6c462981640251add06934035983b6c2e6279657cf5add852d05",
+      "public_selection": false
+    },
+    {
+      "index": 72,
+      "capture": "db-t05-card-area-down-first",
+      "raw_ax": "072-db-t05-card-area-down-first.ax.txt",
+      "raw_ax_sha256": "00f3cb54770a6c462981640251add06934035983b6c2e6279657cf5add852d05",
+      "public_selection": false
+    },
+    {
+      "index": 73,
+      "capture": "db-t05-output-card-location-ready",
+      "raw_ax": "073-db-t05-output-card-location-ready.ax.txt",
+      "raw_ax_sha256": "5af14c971197a681fe2fd77a1a06abe8f08d17da4ff1ec5d24733f4cfee2af72",
+      "public_selection": false
+    },
+    {
+      "index": 74,
+      "capture": "db-t05-cards-small-up-first",
+      "raw_ax": "074-db-t05-cards-small-up-first.ax.txt",
+      "raw_ax_sha256": "5af14c971197a681fe2fd77a1a06abe8f08d17da4ff1ec5d24733f4cfee2af72",
+      "public_selection": false
+    },
+    {
+      "index": 75,
+      "capture": "db-t05-output-three-cards-ready",
+      "raw_ax": "075-db-t05-output-three-cards-ready.ax.txt",
+      "raw_ax_sha256": "5af14c971197a681fe2fd77a1a06abe8f08d17da4ff1ec5d24733f4cfee2af72",
+      "public_selection": false
+    },
+    {
+      "index": 76,
+      "capture": "db-t05-invoice-card-open-first",
+      "raw_ax": "076-db-t05-invoice-card-open-first.ax.txt",
+      "raw_ax_sha256": "25a70a3b2a5310417f344f4852f20aaf0e83002e5e1ac7c6b5c64cd9f056564d",
+      "public_selection": false
+    },
+    {
+      "index": 77,
+      "capture": "db-t05-invoice-download-control-ready",
+      "raw_ax": "077-db-t05-invoice-download-control-ready.ax.txt",
+      "raw_ax_sha256": "d248ab5a06a3034aef5f605818ee0030dbe5757597a5655baa6d164e09ce49d6",
+      "public_selection": false
+    },
+    {
+      "index": 78,
+      "capture": "db-t05-invoice-preview-ready",
+      "raw_ax": "078-db-t05-invoice-preview-ready.ax.txt",
+      "raw_ax_sha256": "7a880b26bd84e4266147a63208306e993ae99e4578985e13d097e0d27a9442d0",
+      "public_selection": false
+    },
+    {
+      "index": 79,
+      "capture": "db-t05-invoice-preview-download-ax",
+      "raw_ax": "079-db-t05-invoice-preview-download-ax.ax.txt",
+      "raw_ax_sha256": "7a880b26bd84e4266147a63208306e993ae99e4578985e13d097e0d27a9442d0",
+      "public_selection": true
+    },
+    {
+      "index": 80,
+      "capture": "db-t05-invoice-download-first",
+      "raw_ax": "080-db-t05-invoice-download-first.ax.txt",
+      "raw_ax_sha256": "7a880b26bd84e4266147a63208306e993ae99e4578985e13d097e0d27a9442d0",
+      "public_selection": false
+    },
+    {
+      "index": 81,
+      "capture": "db-t05-invoice-download-receipt",
+      "raw_ax": "081-db-t05-invoice-download-receipt.ax.txt",
+      "raw_ax_sha256": "6d78f54162bdf9a96047b8f942d07086c4ae1e72bc3fd1dd564979a55bb1f0fd",
+      "public_selection": false
+    },
+    {
+      "index": 82,
+      "capture": "db-t05-invoice-preview-close-first",
+      "raw_ax": "082-db-t05-invoice-preview-close-first.ax.txt",
+      "raw_ax_sha256": "6d78f54162bdf9a96047b8f942d07086c4ae1e72bc3fd1dd564979a55bb1f0fd",
+      "public_selection": false
+    },
+    {
+      "index": 83,
+      "capture": "db-t05-summary-card-ready",
+      "raw_ax": "083-db-t05-summary-card-ready.ax.txt",
+      "raw_ax_sha256": "9c5c24d2b4bb69b47761585761904874a1f83a6298c33c0a89aefbffa284870f",
+      "public_selection": false
+    },
+    {
+      "index": 84,
+      "capture": "db-t05-summary-card-open-first",
+      "raw_ax": "084-db-t05-summary-card-open-first.ax.txt",
+      "raw_ax_sha256": "9c5c24d2b4bb69b47761585761904874a1f83a6298c33c0a89aefbffa284870f",
+      "public_selection": false
+    },
+    {
+      "index": 85,
+      "capture": "db-t05-summary-preview-ready",
+      "raw_ax": "085-db-t05-summary-preview-ready.ax.txt",
+      "raw_ax_sha256": "6c97c4a70255951c08e4a981107f2f99346491a32e963379f211fac3fe863b3b",
+      "public_selection": true
+    },
+    {
+      "index": 86,
+      "capture": "db-t05-summary-download-first",
+      "raw_ax": "086-db-t05-summary-download-first.ax.txt",
+      "raw_ax_sha256": "6c97c4a70255951c08e4a981107f2f99346491a32e963379f211fac3fe863b3b",
+      "public_selection": false
+    },
+    {
+      "index": 87,
+      "capture": "db-t05-summary-download-receipt",
+      "raw_ax": "087-db-t05-summary-download-receipt.ax.txt",
+      "raw_ax_sha256": "a340746069f757e9744a2217b87e91f3ed00c045fd3f1d3181f95af18631f403",
+      "public_selection": false
+    },
+    {
+      "index": 88,
+      "capture": "db-t05-close-summary-first",
+      "raw_ax": "088-db-t05-close-summary-first.ax.txt",
+      "raw_ax_sha256": "9ca764ec72a1234c3df6ce0336e9463875698d82ea987a60db32aa61e45fb666",
+      "public_selection": false
+    },
+    {
+      "index": 89,
+      "capture": "db-t05-source-card-ready",
+      "raw_ax": "089-db-t05-source-card-ready.ax.txt",
+      "raw_ax_sha256": "220efd7b585c7306802579453449ae889764f682a53baf58683c68817171befa",
+      "public_selection": false
+    },
+    {
+      "index": 90,
+      "capture": "db-t05-source-card-open-first",
+      "raw_ax": "090-db-t05-source-card-open-first.ax.txt",
+      "raw_ax_sha256": "220efd7b585c7306802579453449ae889764f682a53baf58683c68817171befa",
+      "public_selection": false
+    },
+    {
+      "index": 91,
+      "capture": "db-t05-source-preview-ready",
+      "raw_ax": "091-db-t05-source-preview-ready.ax.txt",
+      "raw_ax_sha256": "320fbbd0dd59b9839401b68c122f35b7e78f6f32cf432eccb8a6dd97eb1f9acb",
+      "public_selection": true
+    },
+    {
+      "index": 92,
+      "capture": "db-t05-source-download-first",
+      "raw_ax": "092-db-t05-source-download-first.ax.txt",
+      "raw_ax_sha256": "320fbbd0dd59b9839401b68c122f35b7e78f6f32cf432eccb8a6dd97eb1f9acb",
+      "public_selection": false
+    },
+    {
+      "index": 93,
+      "capture": "db-t05-source-download-receipt",
+      "raw_ax": "093-db-t05-source-download-receipt.ax.txt",
+      "raw_ax_sha256": "dfe3a58118d21faefaa7c5d3c88529765c532577ae0ac29d3cdc227701d3c017",
+      "public_selection": false
+    },
+    {
+      "index": 94,
+      "capture": "db-t05-close-source-first",
+      "raw_ax": "094-db-t05-close-source-first.ax.txt",
+      "raw_ax_sha256": "c5d27bb1719e2ad9ad606231e3f6fcbc25ad2932e4c445527c83f50079c54608",
+      "public_selection": false
+    },
+    {
+      "index": 95,
+      "capture": "db-t05-download-toast-view-ready",
+      "raw_ax": "095-db-t05-download-toast-view-ready.ax.txt",
+      "raw_ax_sha256": "24ace9e68687f9327c638e21a81049fed636ff48e6bd77c9fbe2978a6afa75a0",
+      "public_selection": false
+    },
+    {
+      "index": 96,
+      "capture": "db-t05-view-latest-download-first",
+      "raw_ax": "096-db-t05-view-latest-download-first.ax.txt",
+      "raw_ax_sha256": "24ace9e68687f9327c638e21a81049fed636ff48e6bd77c9fbe2978a6afa75a0",
+      "public_selection": false
+    },
+    {
+      "index": 97,
+      "capture": "db-t05-latest-visible-toast-context",
+      "raw_ax": "097-db-t05-latest-visible-toast-context.ax.txt",
+      "raw_ax_sha256": "40495f9c8e4f945966b6af94b19f46e87152108266691ef7bb2b8c024ebe31b4",
+      "public_selection": false
+    },
+    {
+      "index": 98,
+      "capture": "db-t05-visible-toast-open-first",
+      "raw_ax": "098-db-t05-visible-toast-open-first.ax.txt",
+      "raw_ax_sha256": "2a60c7ad0e6173bd6bdc12c8a5a7e254ca9aa97886b34f16045160a5331c4d0d",
+      "public_selection": false
+    },
+    {
+      "index": 99,
+      "capture": "db-t05-download-editor-incidental",
+      "raw_ax": "099-db-t05-download-editor-incidental.ax.txt",
+      "raw_ax_sha256": "0d77816214eff08591eb1d79d4da006d062f2ff2cc4e6cd7d58c354eb8af7a55",
+      "public_selection": false
+    },
+    {
+      "index": 100,
+      "capture": "db-t05-download-editor-reveal-first",
+      "raw_ax": "100-db-t05-download-editor-reveal-first.ax.txt",
+      "raw_ax_sha256": "b61eaa6aada60032390d42cd48318689dc78907193a17006a6674010dd0789d8",
+      "public_selection": false
+    },
+    {
+      "index": 101,
+      "capture": "db-t05-three-downloads-present",
+      "raw_ax": "101-db-t05-three-downloads-present.ax.txt",
+      "raw_ax_sha256": "8bb87874643ca0ac03771852231e11dcd1fc6af782073e0f0239df4175eb2f7c",
+      "public_selection": false
+    },
+    {
+      "index": 102,
+      "capture": "db-t05-summary-properties-first",
+      "raw_ax": "102-db-t05-summary-properties-first.ax.txt",
+      "raw_ax_sha256": "8bb87874643ca0ac03771852231e11dcd1fc6af782073e0f0239df4175eb2f7c",
+      "public_selection": false
+    },
+    {
+      "index": 103,
+      "capture": "db-t05-summary-download-properties-attested",
+      "raw_ax": "103-db-t05-summary-download-properties-attested.ax.txt",
+      "raw_ax_sha256": "8bb87874643ca0ac03771852231e11dcd1fc6af782073e0f0239df4175eb2f7c",
+      "public_selection": false
+    },
+    {
+      "index": 104,
+      "capture": "db-t05-summary-real-properties-ready",
+      "raw_ax": "104-db-t05-summary-real-properties-ready.ax.txt",
+      "raw_ax_sha256": "8bb87874643ca0ac03771852231e11dcd1fc6af782073e0f0239df4175eb2f7c",
+      "public_selection": false
+    },
+    {
+      "index": 105,
+      "capture": "db-t05-summary-exact-path-properties",
+      "raw_ax": "105-db-t05-summary-exact-path-properties.ax.txt",
+      "raw_ax_sha256": "c49d95b2fffc5081c98e99df74fc10237ed9354d3614731a13e511485b98ccf3",
+      "public_selection": false
+    },
+    {
+      "index": 106,
+      "capture": "db-t05-close-download-explorer-preflight",
+      "raw_ax": "106-db-t05-close-download-explorer-preflight.ax.txt",
+      "raw_ax_sha256": "8bb87874643ca0ac03771852231e11dcd1fc6af782073e0f0239df4175eb2f7c",
+      "public_selection": false
+    },
+    {
+      "index": 107,
+      "capture": "db-t05-close-home-explorer-preflight",
+      "raw_ax": "107-db-t05-close-home-explorer-preflight.ax.txt",
+      "raw_ax_sha256": "c10dd41cf7be754d503ca1130577e11109848c3105e52427705baf9531edd9b0",
+      "public_selection": false
+    },
+    {
+      "index": 108,
+      "capture": "db-t05-close-incidental-editor-preflight",
+      "raw_ax": "108-db-t05-close-incidental-editor-preflight.ax.txt",
+      "raw_ax_sha256": "ba1ec7b28b1f155e76f153b76c38a0889c58f41b88495244da7eb92e23018356",
+      "public_selection": false
+    },
+    {
+      "index": 109,
+      "capture": "db-t05-close-main-preflight",
+      "raw_ax": "109-db-t05-close-main-preflight.ax.txt",
+      "raw_ax_sha256": "12f3cf3e4925187bb5261e9fc7c7fb024959cf6759f025716887b684d6545575",
+      "public_selection": false
+    }
+  ],
+  "action_projection_mapping": [
+    {
+      "source_line": 1,
+      "public_line": 1,
+      "at": "2026-10-13T18:59:35.545Z",
+      "label": "db-t05-new-work",
+      "method": "click"
+    },
+    {
+      "source_line": 2,
+      "public_line": 2,
+      "at": "2026-10-13T18:59:46.405Z",
+      "label": "db-t05-new-work-shortcut",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 3,
+      "public_line": 3,
+      "at": "2026-10-13T18:59:51.954Z",
+      "label": "db-t05-maximize",
+      "method": "click"
+    },
+    {
+      "source_line": 4,
+      "public_line": 4,
+      "at": "2026-10-13T19:00:00.173Z",
+      "label": "db-t05-show-sidebar",
+      "method": "click"
+    },
+    {
+      "source_line": 5,
+      "public_line": 5,
+      "at": "2026-10-13T19:00:11.575Z",
+      "label": "db-t05-new-work-visible-entry",
+      "method": "click"
+    },
+    {
+      "source_line": 6,
+      "public_line": 6,
+      "at": "2026-10-13T19:00:16.913Z",
+      "label": "db-t05-restore-window",
+      "method": "click"
+    },
+    {
+      "source_line": 7,
+      "public_line": 7,
+      "at": "2026-10-13T19:00:26.826Z",
+      "label": "db-t05-hide-sidebar",
+      "method": "click"
+    },
+    {
+      "source_line": 8,
+      "public_line": 8,
+      "at": "2026-10-13T19:00:31.217Z",
+      "label": "db-t05-open-mode",
+      "method": "click"
+    },
+    {
+      "source_line": 9,
+      "public_line": 9,
+      "at": "2026-10-13T19:00:41.546Z",
+      "label": "db-t05-dismiss-unrelated-menu",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 10,
+      "public_line": 10,
+      "at": "2026-10-13T19:00:47.142Z",
+      "label": "db-t05-close-overlay",
+      "method": "click"
+    },
+    {
+      "source_line": 11,
+      "public_line": 11,
+      "at": "2026-10-13T19:01:11.726Z",
+      "label": "db-t05-mode-native-click",
+      "method": "click"
+    },
+    {
+      "source_line": 12,
+      "public_line": 12,
+      "at": "2026-10-13T19:01:20.528Z",
+      "label": "db-t05-select-cloud",
+      "method": "click"
+    },
+    {
+      "source_line": 13,
+      "public_line": 13,
+      "at": "2026-10-13T19:01:38.118Z",
+      "label": "db-t05-attach-menu-click",
+      "method": "click"
+    },
+    {
+      "source_line": 14,
+      "public_line": 14,
+      "at": "2026-10-13T19:01:51.018Z",
+      "label": "db-t05-upload-menu-select",
+      "method": "click"
+    },
+    {
+      "source_line": 15,
+      "public_line": 15,
+      "at": "2026-10-13T19:01:56.343Z",
+      "label": "db-t05-upload-scroll-up",
+      "method": "scroll"
+    },
+    {
+      "source_line": 16,
+      "public_line": 16,
+      "at": "2026-10-13T19:02:05.946Z",
+      "label": "db-t05-dismiss-attach-for-layout",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 17,
+      "public_line": 17,
+      "at": "2026-10-13T19:02:06.001Z",
+      "label": "db-t05-window-system-menu",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 18,
+      "public_line": 18,
+      "at": "2026-10-13T19:02:14.843Z",
+      "label": "db-t05-maximize-current",
+      "method": "click"
+    },
+    {
+      "source_line": 19,
+      "public_line": 19,
+      "at": "2026-10-13T19:02:37.285Z",
+      "label": "db-t05-attachment-enlarged-open",
+      "method": "click"
+    },
+    {
+      "source_line": 20,
+      "public_line": 20,
+      "at": "2026-10-13T19:02:47.202Z",
+      "label": "db-t05-open-filepicker",
+      "method": "click"
+    },
+    {
+      "source_line": 21,
+      "public_line": 21,
+      "at": "2026-10-13T19:03:00.098Z",
+      "label": "db-t05-picker-focus-name",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 22,
+      "public_line": 22,
+      "at": "2026-10-13T19:03:00.172Z",
+      "label": "db-t05-picker-clear-name",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 23,
+      "public_line": 23,
+      "at": "2026-10-13T19:03:00.227Z",
+      "label": "db-t05-picker-original-input-directory",
+      "method": "typeText"
+    },
+    {
+      "source_line": 24,
+      "public_line": 24,
+      "at": "2026-10-13T19:03:00.286Z",
+      "label": "db-t05-picker-enter-directory",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 25,
+      "public_line": 25,
+      "at": "2026-10-13T19:03:08.405Z",
+      "label": "db-t05-picker-four-name-focus",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 26,
+      "public_line": 26,
+      "at": "2026-10-13T19:03:08.461Z",
+      "label": "db-t05-picker-four-name-clear",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 27,
+      "public_line": 27,
+      "at": "2026-10-13T19:03:08.518Z",
+      "label": "db-t05-picker-four-original-names",
+      "method": "typeText"
+    },
+    {
+      "source_line": 28,
+      "public_line": 28,
+      "at": "2026-10-13T19:03:15.651Z",
+      "label": "db-t05-upload-four-originals",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 29,
+      "public_line": 29,
+      "at": "2026-10-13T19:03:31.197Z",
+      "label": "db-t05-focus-composer",
+      "method": "click"
+    },
+    {
+      "source_line": 30,
+      "public_line": 30,
+      "at": "2026-10-13T19:03:31.278Z",
+      "label": "db-t05-paste-canonical-prompt",
+      "method": "paste"
+    },
+    {
+      "source_line": 31,
+      "public_line": 31,
+      "at": "2026-10-13T19:03:50.295Z",
+      "label": "db-t05-initial-submit",
+      "method": "click"
+    },
+    {
+      "source_line": 32,
+      "public_line": 32,
+      "at": "2026-10-13T19:05:15.866Z",
+      "label": "db-t05-open-download-explorer",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 33,
+      "public_line": 33,
+      "at": "2026-10-13T19:05:30.549Z",
+      "label": "db-t05-explorer-downloads-nav",
+      "method": "click"
+    },
+    {
+      "source_line": 34,
+      "public_line": 34,
+      "at": "2026-10-13T19:05:48.989Z",
+      "label": "db-t05-explorer-address-focus",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 35,
+      "public_line": 35,
+      "at": "2026-10-13T19:05:49.164Z",
+      "label": "db-t05-explorer-downloads-native-namespace",
+      "method": "typeText"
+    },
+    {
+      "source_line": 36,
+      "public_line": 36,
+      "at": "2026-10-13T19:05:49.220Z",
+      "label": "db-t05-explorer-downloads-enter",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 37,
+      "public_line": 37,
+      "at": "2026-10-13T19:05:55.090Z",
+      "label": "db-t05-downloads-actual-address-focus",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 38,
+      "public_line": 38,
+      "at": "2026-10-13T19:06:14.239Z",
+      "label": "db-t05-downloads-address-clear",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 39,
+      "public_line": 39,
+      "at": "2026-10-13T19:06:14.323Z",
+      "label": "db-t05-downloads-address-type-confirmed",
+      "method": "typeText"
+    },
+    {
+      "source_line": 40,
+      "public_line": 40,
+      "at": "2026-10-13T19:06:27.271Z",
+      "label": "db-t05-downloads-address-paste",
+      "method": "paste"
+    },
+    {
+      "source_line": 41,
+      "public_line": 41,
+      "at": "2026-10-13T19:06:38.159Z",
+      "label": "db-t05-explorer-raise",
+      "method": "performSecondaryAction"
+    },
+    {
+      "source_line": 42,
+      "public_line": 42,
+      "at": "2026-10-13T19:06:44.652Z",
+      "label": "db-t05-explorer-address-raised-focus",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 43,
+      "public_line": 43,
+      "at": "2026-10-13T19:06:50.574Z",
+      "label": "db-t05-explorer-raised-address-clear",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 44,
+      "public_line": 44,
+      "at": "2026-10-13T19:06:50.615Z",
+      "label": "db-t05-explorer-raised-downloads-namespace",
+      "method": "typeText"
+    },
+    {
+      "source_line": 45,
+      "public_line": 45,
+      "at": "2026-10-13T19:07:06.656Z",
+      "label": "db-t05-restore-for-download",
+      "method": "click"
+    },
+    {
+      "source_line": 46,
+      "public_line": 46,
+      "at": "2026-10-13T19:07:17.603Z",
+      "label": "db-t05-main-raise-download",
+      "method": "performSecondaryAction"
+    },
+    {
+      "source_line": 47,
+      "public_line": 47,
+      "at": "2026-10-13T19:07:18.636Z",
+      "label": "db-t05-main-native-restore",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 48,
+      "public_line": 48,
+      "at": "2026-10-13T19:07:27.473Z",
+      "label": "db-t05-official-launch-restore",
+      "method": "computer.launch_app"
+    },
+    {
+      "source_line": 49,
+      "public_line": 49,
+      "at": "2026-10-13T19:07:59.590Z",
+      "label": "db-t05-scroll-to-output-cards",
+      "method": "scroll"
+    },
+    {
+      "source_line": 50,
+      "public_line": 50,
+      "at": "2026-10-13T19:08:07.762Z",
+      "label": "db-t05-scroll-cards-up-again",
+      "method": "scroll"
+    },
+    {
+      "source_line": 51,
+      "public_line": 51,
+      "at": "2026-10-13T19:08:18.191Z",
+      "label": "db-t05-scroll-cards-batch-a",
+      "method": "scroll"
+    },
+    {
+      "source_line": 52,
+      "public_line": 52,
+      "at": "2026-10-13T19:08:18.235Z",
+      "label": "db-t05-scroll-cards-batch-b",
+      "method": "scroll"
+    },
+    {
+      "source_line": 53,
+      "public_line": 53,
+      "at": "2026-10-13T19:08:18.266Z",
+      "label": "db-t05-scroll-cards-batch-c",
+      "method": "scroll"
+    },
+    {
+      "source_line": 54,
+      "public_line": 54,
+      "at": "2026-10-13T19:08:31.223Z",
+      "label": "db-t05-card-area-down-a",
+      "method": "scroll"
+    },
+    {
+      "source_line": 55,
+      "public_line": 55,
+      "at": "2026-10-13T19:08:31.271Z",
+      "label": "db-t05-card-area-down-b",
+      "method": "scroll"
+    },
+    {
+      "source_line": 56,
+      "public_line": 56,
+      "at": "2026-10-13T19:08:45.747Z",
+      "label": "db-t05-cards-small-up",
+      "method": "scroll"
+    },
+    {
+      "source_line": 57,
+      "public_line": 57,
+      "at": "2026-10-13T19:09:02.839Z",
+      "label": "db-t05-invoice-card-open",
+      "method": "click"
+    },
+    {
+      "source_line": 58,
+      "public_line": 58,
+      "at": "2026-10-13T19:09:27.654Z",
+      "label": "db-t05-invoice-native-download",
+      "method": "click"
+    },
+    {
+      "source_line": 59,
+      "public_line": 59,
+      "at": "2026-10-13T19:09:33.502Z",
+      "label": "db-t05-close-invoice-preview",
+      "method": "click"
+    },
+    {
+      "source_line": 60,
+      "public_line": 60,
+      "at": "2026-10-13T19:09:43.481Z",
+      "label": "db-t05-summary-card-open",
+      "method": "click"
+    },
+    {
+      "source_line": 61,
+      "public_line": 61,
+      "at": "2026-10-13T19:09:53.968Z",
+      "label": "db-t05-summary-native-download",
+      "method": "click"
+    },
+    {
+      "source_line": 62,
+      "public_line": 62,
+      "at": "2026-10-13T19:10:01.205Z",
+      "label": "db-t05-close-summary-preview",
+      "method": "click"
+    },
+    {
+      "source_line": 63,
+      "public_line": 63,
+      "at": "2026-10-13T19:10:06.472Z",
+      "label": "db-t05-source-card-open",
+      "method": "click"
+    },
+    {
+      "source_line": 64,
+      "public_line": 64,
+      "at": "2026-10-13T19:10:22.367Z",
+      "label": "db-t05-source-native-download",
+      "method": "click"
+    },
+    {
+      "source_line": 65,
+      "public_line": 65,
+      "at": "2026-10-13T19:10:27.909Z",
+      "label": "db-t05-close-source-preview",
+      "method": "click"
+    },
+    {
+      "source_line": 66,
+      "public_line": 66,
+      "at": "2026-10-13T19:10:42.012Z",
+      "label": "db-t05-view-latest-download-in-explorer",
+      "method": "click"
+    },
+    {
+      "source_line": 67,
+      "public_line": 67,
+      "at": "2026-10-13T19:10:56.965Z",
+      "label": "db-t05-visible-toast-open-download-folder",
+      "method": "click"
+    },
+    {
+      "source_line": 68,
+      "public_line": 68,
+      "at": "2026-10-13T19:11:44.838Z",
+      "label": "db-t05-download-editor-reveal-chord",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 69,
+      "public_line": 69,
+      "at": "2026-10-13T19:11:44.903Z",
+      "label": "db-t05-download-editor-reveal-file",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 70,
+      "public_line": 70,
+      "at": "2026-10-13T19:12:07.452Z",
+      "label": "db-t05-summary-file-properties",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 71,
+      "public_line": 71,
+      "at": "2026-10-13T19:12:46.061Z",
+      "label": "db-t05-close-summary-properties",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 72,
+      "public_line": 72,
+      "at": "2026-10-13T19:13:18.266Z",
+      "label": "db-t05-close-download-explorer",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 73,
+      "public_line": 73,
+      "at": "2026-10-13T19:13:48.345Z",
+      "label": "db-t05-close-home-explorer",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 74,
+      "public_line": 74,
+      "at": "2026-10-13T19:14:02.572Z",
+      "label": "db-t05-close-incidental-editor",
+      "method": "pressKey"
+    },
+    {
+      "source_line": 75,
+      "public_line": 75,
+      "at": "2026-10-13T19:14:13.552Z",
+      "label": "db-t05-close-main-native-button",
+      "method": "click"
+    }
+  ],
+  "metadata_corrections": [],
+  "scope": "Raw sources remain unchanged. New exact-line public review and stripped action projection remove private arguments, results and errors. Native original bytes remain unchanged.",
+  "limitations": [
+    "Some failed screenshot captures emitted images but have no successful raw capture entry; no synthetic capture created.",
+    "Early collector-only calls and subsequent imported wrapper are reflected in the retained source snapshots; no complete REPL program-source archive or remote action trace is claimed."
+  ]
+}

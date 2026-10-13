@@ -1,6 +1,6 @@
 # 真实预试索引
 
-2026-10-13至14（Asia/Shanghai）在独立参与者目录通过产品原生CLI、SDK和正常桌面入口执行或恢复观察，保留全部失败与修正尝试。当前30个公开包、25次后验评分，已完成24/25个产品×任务组合。所有目录均为pilot、产品侧失败或入口诊断，不能追认为正式75个样本。后验评分另见[探索性审阅](../../reports/exploratory-score-review.md)，完整覆盖及纯Harness因果排名的限制见[分析口径](../../docs/exploratory-analysis-plan.md)。
+2026-10-13至14（Asia/Shanghai）在独立参与者目录通过产品原生CLI、SDK和正常桌面入口执行或恢复观察，保留全部失败与修正尝试。当前31个公开包、26次后验评分，已完成25/25个产品×任务组合。所有目录均为pilot、产品侧失败或入口诊断，不能追认为正式75个样本。后验评分另见[探索性审阅](../../reports/exploratory-score-review.md)，完整覆盖及纯Harness因果排名的限制见[分析口径](../../docs/exploratory-analysis-plan.md)。
 
 | 记录 | 结果 | 证据 |
 |---|---|---|
@@ -32,6 +32,7 @@
 | 豆包云电脑 T02 | 云电脑，4下载原件7/7、60/60；规则裁决、金额、版本和引用全通过，内部反馈未知 | [包](doubao-T02-desktop-r1/README.md) |
 | 豆包云电脑 T03 | 云电脑，5平铺下载原件6/6、60/60；保护字节一致，bundle需逻辑重组，交付3级 | [包](doubao-T03-desktop-r1/README.md) |
 | 豆包云电脑 T04 | 云电脑，主动请求rates、原生询问回答后续接；3下载原件7/7、60/60，内部核验未知 | [包](doubao-T04-desktop-r1/README.md) |
+| 豆包云电脑 T05 | 云电脑，3原生下载8/8、60/60；最终范围/服务费/金额正确，来源审计为声明 | [包](doubao-T05-desktop-r1/README.md) |
 | 豆包工作任务·本地电脑 T01 desktop r1 | 产品回复沙盒准备480023，未生成文件；0/8，产物0/60；产品侧failed，不作采集无效剔除 | [包](doubao-T01-desktop-r1/README.md) |
 | 豆包工作任务·云电脑 T01 desktop r2 | 三原件8/8、60/60；采集中断后1540.504秒首次观察完成，预算有效性为false，非精确服务耗时；本地失败仍另列 | [包](doubao-T01-desktop-r2/README.md) |
 
