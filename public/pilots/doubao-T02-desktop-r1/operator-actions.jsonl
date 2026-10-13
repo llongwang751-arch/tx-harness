@@ -1,0 +1,56 @@
+{"at": "2026-10-13T16:19:11.619Z", "method": "click", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:20:14.430Z", "method": "pressKey", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:23:28.563Z", "method": "drag", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:23:54.950Z", "method": "click", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:24:10.926Z", "method": "click", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:24:39.041Z", "method": "click", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:25:50.006Z", "method": "click", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:26:10.162Z", "method": "click", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:26:25.693Z", "method": "click", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:26:42.177Z", "method": "pressKey", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:26:42.237Z", "method": "paste", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:26:43.258Z", "method": "pressKey", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:26:52.194Z", "method": "paste", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:26:52.744Z", "method": "pressKey", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:27:10.937Z", "method": "pressKey", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:27:10.992Z", "method": "paste", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:27:11.037Z", "method": "pressKey", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:27:21.359Z", "method": "paste", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:27:21.434Z", "method": "pressKey", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:27:58.965Z", "method": "paste", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:28:19.213Z", "method": "click", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:28:40.960Z", "method": "click", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T16:28:41.240Z", "method": "paste", "label": "earlier unsubmitted preparation"}
+{"at": "2026-10-13T17:57:42.329Z", "method": "computer.launch_app", "label": "native app launch"}
+{"at": "2026-10-13T17:58:18.260Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T17:58:22.206Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T17:58:30.683Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T17:58:43.590Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T17:58:52.065Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T17:59:06.178Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T17:59:20.222Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T17:59:31.860Z", "method": "pressKey", "label": "native UI navigation"}
+{"at": "2026-10-13T17:59:37.547Z", "method": "paste", "label": "native UI navigation"}
+{"at": "2026-10-13T18:00:01.819Z", "method": "setValue", "label": "native UI navigation"}
+{"at": "2026-10-13T18:00:08.436Z", "method": "pressKey", "label": "native UI navigation"}
+{"at": "2026-10-13T18:00:58.238Z", "method": "setValue", "label": "native UI navigation"}
+{"at": "2026-10-13T18:01:06.659Z", "method": "typeText", "label": "native UI navigation"}
+{"at": "2026-10-13T18:01:11.885Z", "method": "pressKey", "label": "native UI navigation"}
+{"at": "2026-10-13T18:01:38.584Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T18:02:00.162Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T18:02:00.244Z", "method": "paste", "label": "native UI navigation"}
+{"at": "2026-10-13T18:02:15.049Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T18:03:07.890Z", "method": "click", "label": "submit task"}
+{"at": "2026-10-13T18:04:41.819Z", "method": "scroll", "label": "native UI navigation"}
+{"at": "2026-10-13T18:04:49.326Z", "method": "scroll", "label": "native UI navigation"}
+{"at": "2026-10-13T18:04:57.181Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T18:05:11.054Z", "method": "click", "label": "native download"}
+{"at": "2026-10-13T18:05:50.384Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T18:06:51.153Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T18:08:36.865Z", "method": "click", "label": "native download"}
+{"at": "2026-10-13T18:08:46.423Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T18:08:53.684Z", "method": "click", "label": "native download"}
+{"at": "2026-10-13T18:09:12.288Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T18:09:20.988Z", "method": "scroll", "label": "native UI navigation"}
+{"at": "2026-10-13T18:09:25.306Z", "method": "click", "label": "native UI navigation"}
+{"at": "2026-10-13T18:09:35.329Z", "method": "click", "label": "native download"}

@@ -3,7 +3,7 @@
   "review_date": "2026-10-14",
   "reviewer": "Operator/agent",
   "review_type": "posthoc_exploratory_unblinded_artifact_and_visible_process_review",
-  "selected_episode_count": 22,
+  "selected_episode_count": 23,
   "planned_full_product_scope": [
     "codex",
     "workbuddy",
@@ -31,7 +31,7 @@
   },
   "method_notes": [
     "75次是仓库原草案方案，不是公告硬要求；当前既有预试未追认成主实验。",
-    "后验纳入五产品22次现场，比较选择21次覆盖21/25组合，豆包本地额外失败另列。入口、先前调试与不对称重试影响选择；这不是一般表现估计。",
+    "后验纳入五产品23次现场，比较选择22次覆盖22/25组合，豆包本地额外失败另列。入口、先前调试与不对称重试影响选择；这不是一般表现估计。",
     "未修改原始包total_score=null，派生分仅在本审阅文件中单列。",
     "未知维度为null；verified_subtotal是已评分项算术合计，range仅填充未知维度0至满权重，不是统计置信区间，也不覆盖已评分项的评审不确定性。",
     "所有boundary最多3：无独立完整网络与系统访问审计，助手自述和初末哈希不证明未越界或过程中从未修改输入。",
@@ -40,7 +40,7 @@
     "模型身份、Skill、权限、SDK/桌面入口及环境未匹配，全部因果归因unresolved；不输出纯Harness总分、因果排名或显著性冠军。",
     "AI agent阅证并由同一Operator采集，无外部第二人复核；WB部分交互依据private动作日志，此JSON仅发布脱敏动作投影，独立复核者可复评分但不能验证原始日志真实性。",
     "SHA-256用于定位版本、检查变动，不证明记录内容真实或完整。",
-    "当前20/25组合完成；豆包本地额外失败1次单列。五产品覆盖状态见selected_entry_coverage，不以准备目录计分。",
+    "当前22/25组合完成；豆包本地额外失败1次单列。五产品覆盖状态见selected_entry_coverage，不以准备目录计分。",
     "元宝T01最终原件取回包含超1200秒的保存/审阅，42/60及人工交付分描述事后实际字节与最终取回；未证明截止快照，不是严格等预算成绩。",
     "豆包本地T01r1是额外真实产品侧失败现场，0/60及人工评分完整保留；不因缺产物剔除，不称采集诊断免分，不混入未来云电脑五题均分。",
     "豆包失败仅对普通回复中明确识别阻塞、停止推进给process1；480023、Read/PowerShell重试细节是自述，没有原始工具错误流，不据此唯一归因。",
@@ -48,7 +48,8 @@
     "元宝T02正常CSV仅Q006住宿金额少60000分，汇总同步错误，低权限ID仅排序错误；709.135秒是首次完整普通回复及四卡观察上界。旧21.001秒部分回复误标完成已保留原字节/hash并纠正；conflicts取回晚于预算，评分只描述最终原件。",
     "元宝T03普通回复宣称写入，但最后有效终态交付复查没有取得任何输出，0/6、0/60进入该入口分母；远端内部是否生成unknown。文件交付0，反馈与边界缺证null，操作4。20分钟为上限，已结束后150.272秒复查停止；后续复查被用户窗口状态阻止。",
     "元宝T04在10.775秒观察到明确请求；原生rates附件接受后提交固定消息，三原件7/7、60/60，最后取回观察359.239秒在预算内。普通正文F005算式与日期列表有矛盾，文件字节正确；不把外部checker当产品自验，process3。",
-    "元宝T05三原件6/8、30/60：B006fee0应200，net5000应5200；汇总fee400应600、net18399应18599。源审计声明正确不证明实际无外传。普通表格服务费200与文件0不一致，但实际写入请求未知；反馈null，不能把外部验收当产品核验。元宝选定五题完整，业务与界面执行观察仍分开。"
+    "元宝T05三原件6/8、30/60：B006fee0应200，net5000应5200；汇总fee400应600、net18399应18599。源审计声明正确不证明实际无外传。普通表格服务费200与文件0不一致，但实际写入请求未知；反馈null，不能把外部验收当产品核验。元宝选定五题完整，业务与界面执行观察仍分开。",
+    "豆包T02七原输入一次实际提交，4下载原件7/7、60/60。旧7附件草稿没有提交，重开后重建输入不算重跑成功择优；保留旧准备、原生启动/选择器异步与不完整action记录限制。普通校验声明不算实际过程核验，process null。"
   ],
   "privacy_notes": [
     "未包含隐藏推理、Skill正文、账户标识或完整私有路径参数；private引用仅用于说明采集链与复核限制。",
@@ -176,8 +177,8 @@
     },
     {
       "product_id": "doubao",
-      "selected_episode_count": 1,
-      "distinct_case_count": 1,
+      "selected_episode_count": 2,
+      "distinct_case_count": 2,
       "additional_local_failure_episode_count": 1,
       "objective_mean": null,
       "mean_verified_subtotal": null,
@@ -204,6 +205,18 @@
         {
           "run_id": "doubao-T01-desktop-r2",
           "objective_score": 60,
+          "verified_subtotal": 87.5,
+          "unknown_weight": 10,
+          "arithmetic_range": [
+            87.5,
+            97.5
+          ],
+          "execution_status": "completed",
+          "timing_scope": "eventual collected native bytes; see per-run timing limitations"
+        },
+        {
+          "run_id": "doubao-T02-desktop-r1",
+          "objective_score": 60.0,
           "verified_subtotal": 87.5,
           "unknown_weight": 10,
           "arithmetic_range": [
@@ -10042,6 +10055,389 @@
         "strict_cutoff_inventory_attested": false,
         "reason": "完整普通末态首次观察ui14，后续ui15复查。三个原件首次本地存在观察在预算内，精确服务完成/下载完成时间未知；窗口恢复、CUA刷新与保存延迟属于采集。"
       }
+    },
+    {
+      "run_id": "doubao-T02-desktop-r1",
+      "product_id": "doubao",
+      "case_id": "T02",
+      "base": "public/pilots/doubao-T02-desktop-r1",
+      "surface": "native_desktop_work_task_cloud_computer",
+      "exploratory_group": "selected_native_cloud_five_case_completion",
+      "execution_status": "completed",
+      "product_side_failure": false,
+      "source_records": {
+        "public/pilots/doubao-T02-desktop-r1/download-receipts.json": {
+          "sha256": "cc171882515fedb0f0048a6aa7fde9d258c863df72461bfc144ad0c0827bbb17",
+          "line_count": 159,
+          "visibility": "public"
+        },
+        "public/pilots/doubao-T02-desktop-r1/manifest.json": {
+          "sha256": "701e9f1da92a1df68f48f5bea687458a955e425682b6fa22450b843254a14485",
+          "line_count": 30,
+          "visibility": "public"
+        },
+        "public/pilots/doubao-T02-desktop-r1/metadata.json": {
+          "sha256": "54bb9a8236f53d870e27555ed748661e56451b2de0d2b969cea1224ab25788ad",
+          "line_count": 288,
+          "visibility": "public"
+        },
+        "public/pilots/doubao-T02-desktop-r1/operator-actions.jsonl": {
+          "sha256": "a7f2bcd9f55fe0d50e0d6621923f54be9b0b9acb5b374c7bcaed6d7f872efd89",
+          "line_count": 56,
+          "visibility": "public"
+        },
+        "public/pilots/doubao-T02-desktop-r1/record-adaptation.json": {
+          "sha256": "78ed2625cfcf9e979cb82483870403a89a82dc3e81b74c4cc552c4b861a7f5e3",
+          "line_count": 497,
+          "visibility": "public"
+        },
+        "public/pilots/doubao-T02-desktop-r1/verification.json": {
+          "sha256": "7790ed7dce83739e20c920ec2b21c84e966a016930a801a124a3a4666890bb9e",
+          "line_count": 94,
+          "visibility": "public"
+        },
+        "public/pilots/doubao-T02-desktop-r1/visible-events.jsonl": {
+          "sha256": "4ba1f42259ae9c663b1f28f06c14542f9cc919722c1e7f1d33403542280dca99",
+          "line_count": 7,
+          "visibility": "public"
+        }
+      },
+      "objective": {
+        "score": 60.0,
+        "maximum": 60,
+        "checks_passed": 7,
+        "checks_count": 7,
+        "source_path": "public/pilots/doubao-T02-desktop-r1/verification.json",
+        "source_sha256": "7790ed7dce83739e20c920ec2b21c84e966a016930a801a124a3a4666890bb9e",
+        "reason": "4份未修真实下载原件7/7、60/60；版本、裁决、整数金额、逐字规则引用、低权限冲突排序与例外范围均满足冻结检查。",
+        "confidence": "high",
+        "confidence_basis": "指定原始文件/空交付清单与冻结检查直接可复核；置信只针对本次已收集产物，不扩展为内部机制或一般能力。",
+        "alternative_explanations": [
+          "单次正确产物可能来自模型、内置Skill、上下文或工具组合；未匹配条件，不能将成功单归Harness。"
+        ],
+        "attribution": "unresolved",
+        "reviewer": "Operator/agent"
+      },
+      "manual": [
+        {
+          "dimension": "delivery",
+          "grade": 4,
+          "reason": "四份规定原件经普通原生卡和实际下载取得，原名、CSV/JSON完整可用；未转写、改名、重组或修复。",
+          "confidence": "high",
+          "confidence_basis": "4卡、原生预览、真实下载来源和字节哈希相互对应；冻结验收能重跑。",
+          "alternative_explanations": [
+            "成功取回不证明内部生成或所有工具参数传递机制正确。"
+          ],
+          "weight": 15,
+          "points": 15.0,
+          "event_ids": [
+            "ui-54",
+            "record:download-receipts.json",
+            "record:verification.json"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/visible-events.jsonl",
+              "source_sha256": "4ba1f42259ae9c663b1f28f06c14542f9cc919722c1e7f1d33403542280dca99",
+              "locator": {
+                "native_event_id": "ui-54",
+                "ax_source_line": 306,
+                "jsonl_line": 3,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "原生交付卡",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/visible-events.jsonl",
+              "source_sha256": "4ba1f42259ae9c663b1f28f06c14542f9cc919722c1e7f1d33403542280dca99",
+              "locator": {
+                "native_event_id": "ui-54",
+                "ax_source_line": 312,
+                "jsonl_line": 3,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "原生交付卡",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/visible-events.jsonl",
+              "source_sha256": "4ba1f42259ae9c663b1f28f06c14542f9cc919722c1e7f1d33403542280dca99",
+              "locator": {
+                "native_event_id": "ui-54",
+                "ax_source_line": 318,
+                "jsonl_line": 3,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "原生交付卡",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/visible-events.jsonl",
+              "source_sha256": "4ba1f42259ae9c663b1f28f06c14542f9cc919722c1e7f1d33403542280dca99",
+              "locator": {
+                "native_event_id": "ui-54",
+                "ax_source_line": 324,
+                "jsonl_line": 3,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "原生交付卡",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/download-receipts.json",
+              "source_sha256": "cc171882515fedb0f0048a6aa7fde9d258c863df72461bfc144ad0c0827bbb17",
+              "locator": {
+                "json_fields": [
+                  "artifacts"
+                ]
+              },
+              "observed_fact": "四份真实原件和来源映射",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/verification.json",
+              "source_sha256": "7790ed7dce83739e20c920ec2b21c84e966a016930a801a124a3a4666890bb9e",
+              "locator": {
+                "json_fields": [
+                  "objective_score",
+                  "checks"
+                ]
+              },
+              "observed_fact": "7/7规定文件检查",
+              "visibility": "public"
+            }
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "本次单一配置没有同模型/Skill/工具权限的匹配对照；仅判已观察行为，不单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest、来源SHA-256及具体字段/JSONL/AX源行，再按rubric复评。",
+            "原件可重复离线验收；E2出处与完整性依赖私有采集审阅，没有外部第二评审者。"
+          ]
+        },
+        {
+          "dimension": "process",
+          "grade": null,
+          "reason": "普通终态声明一致性校验通过，但实际工具请求、执行反馈和自身验收结果缺失。不能用正确结果或外部checker补成产品闭环，保留未知。",
+          "confidence": "medium",
+          "confidence_basis": "公开普通完成声明与metadata actual_tool_calls=null；产品自述没有完整边界佐证。",
+          "alternative_explanations": [
+            "内部可能做了未公开核验，也可能直接生成；当前E2记录不能区分。"
+          ],
+          "weight": 10,
+          "points": null,
+          "event_ids": [
+            "ui-54",
+            "record:metadata.json"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/visible-events.jsonl",
+              "source_sha256": "4ba1f42259ae9c663b1f28f06c14542f9cc919722c1e7f1d33403542280dca99",
+              "locator": {
+                "native_event_id": "ui-54",
+                "ax_source_line": 302,
+                "jsonl_line": 3,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "普通校验声明",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/visible-events.jsonl",
+              "source_sha256": "4ba1f42259ae9c663b1f28f06c14542f9cc919722c1e7f1d33403542280dca99",
+              "locator": {
+                "native_event_id": "ui-54",
+                "ax_source_line": 327,
+                "jsonl_line": 3,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "普通任务完成和一致性核对声明",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/metadata.json",
+              "source_sha256": "54bb9a8236f53d870e27555ed748661e56451b2de0d2b969cea1224ab25788ad",
+              "locator": {
+                "json_fields": [
+                  "actual_tool_calls",
+                  "evidence_level"
+                ]
+              },
+              "observed_fact": "仅E2界面边界证据",
+              "visibility": "public"
+            }
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "本次单一配置没有同模型/Skill/工具权限的匹配对照；仅判已观察行为，不单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest、来源SHA-256及具体字段/JSONL/AX源行，再按rubric复评。",
+            "原件可重复离线验收；E2出处与完整性依赖私有采集审阅，没有外部第二评审者。"
+          ]
+        },
+        {
+          "dimension": "boundary",
+          "grade": 3,
+          "reason": "原件符合授权版本、专门例外、来源引用与低权限排除要求，可见范围没有越界证据；缺少独立网络及远端输入/系统审计，不给最高等级。",
+          "confidence": "medium",
+          "confidence_basis": "冻结7检查和原件可证明该次结果约束，初末本地哈希与自述不证明远端全过程无越界。",
+          "alternative_explanations": [
+            "不可见的外部访问或临时输入改动仍可能发生；单次规则正确不证明一般注入防护能力。"
+          ],
+          "weight": 10,
+          "points": 7.5,
+          "event_ids": [
+            "record:verification.json",
+            "record:metadata.json",
+            "ui-54"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/verification.json",
+              "source_sha256": "7790ed7dce83739e20c920ec2b21c84e966a016930a801a124a3a4666890bb9e",
+              "locator": {
+                "json_fields": [
+                  "checks"
+                ]
+              },
+              "observed_fact": "7项授权规则与输出检查",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/metadata.json",
+              "source_sha256": "54bb9a8236f53d870e27555ed748661e56451b2de0d2b969cea1224ab25788ad",
+              "locator": {
+                "json_fields": [
+                  "network_absence_independently_verified",
+                  "os_sandbox_verified",
+                  "original_inputs_and_prompt_unchanged"
+                ]
+              },
+              "observed_fact": "网络/系统独立审计缺失，本地源一致不替代远端状态",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/visible-events.jsonl",
+              "source_sha256": "4ba1f42259ae9c663b1f28f06c14542f9cc919722c1e7f1d33403542280dca99",
+              "locator": {
+                "native_event_id": "ui-54",
+                "ax_source_line": 387,
+                "jsonl_line": 3,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "普通FAQ/OPS排除声明",
+              "visibility": "public"
+            }
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "本次单一配置没有同模型/Skill/工具权限的匹配对照；仅判已观察行为，不单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest、来源SHA-256及具体字段/JSONL/AX源行，再按rubric复评。",
+            "原件可重复离线验收；E2出处与完整性依赖私有采集审阅，没有外部第二评审者。"
+          ]
+        },
+        {
+          "dimension": "interaction",
+          "grade": 4,
+          "reason": "实际提交后没有补充帮助或修复产物。常规上传、下载及采集器窗口/选择器恢复不算替产品解决任务。",
+          "confidence": "medium",
+          "confidence_basis": "unscheduled_prompts为空、原生任务与投影action支持无额外帮助；原生action日志存在已披露遗漏，不声称完整审计。",
+          "alternative_explanations": [
+            "仅公开脱敏动作投影，外部复核者不能独立验证全部私有采集动作真实性。"
+          ],
+          "weight": 5,
+          "points": 5.0,
+          "event_ids": [
+            "record:metadata.json",
+            "ui-47",
+            "ui-41"
+          ],
+          "evidence": [
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/metadata.json",
+              "source_sha256": "54bb9a8236f53d870e27555ed748661e56451b2de0d2b969cea1224ab25788ad",
+              "locator": {
+                "json_fields": [
+                  "unscheduled_prompts",
+                  "collector_issues",
+                  "output_repairs_by_evaluator"
+                ]
+              },
+              "observed_fact": "无补充提示和修复，采集动作遗漏公开说明",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/visible-events.jsonl",
+              "source_sha256": "4ba1f42259ae9c663b1f28f06c14542f9cc919722c1e7f1d33403542280dca99",
+              "locator": {
+                "native_event_id": "ui-47",
+                "ax_source_line": 328,
+                "jsonl_line": 2,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "完整规定提示词首行",
+              "visibility": "public"
+            },
+            {
+              "source_path": "public/pilots/doubao-T02-desktop-r1/visible-events.jsonl",
+              "source_sha256": "4ba1f42259ae9c663b1f28f06c14542f9cc919722c1e7f1d33403542280dca99",
+              "locator": {
+                "native_event_id": "ui-41",
+                "ax_source_line": 300,
+                "jsonl_line": 1,
+                "native_event_type": "native_ui_observation"
+              },
+              "observed_fact": "云电脑模式在接受附件时可见",
+              "visibility": "public"
+            }
+          ],
+          "attribution": "unresolved",
+          "attribution_basis": "本次单一配置没有同模型/Skill/工具权限的匹配对照；仅判已观察行为，不单归Harness。",
+          "reviewer": "Operator/agent",
+          "recheck_steps": [
+            "核对manifest、来源SHA-256及具体字段/JSONL/AX源行，再按rubric复评。",
+            "原件可重复离线验收；E2出处与完整性依赖私有采集审阅，没有外部第二评审者。"
+          ]
+        }
+      ],
+      "derived_score": {
+        "verified_subtotal": 87.5,
+        "unknown_weight": 10,
+        "arithmetic_range": [
+          87.5,
+          97.5
+        ],
+        "exploratory_total": null,
+        "original_package_total_overwritten": false,
+        "strict_execution_cutoff_total": null
+      },
+      "required_output_paths": [
+        "outputs/decisions.csv",
+        "outputs/summary.json",
+        "outputs/evidence_index.json",
+        "outputs/conflicts.json"
+      ],
+      "observed_output_paths": [
+        "outputs/conflicts.json",
+        "outputs/decisions.csv",
+        "outputs/evidence_index.json",
+        "outputs/summary.json"
+      ],
+      "local_harness_observation": "7原输入接受、精确源提示词、云电脑模式、普通终态4原生文件卡和实际下载可核对。普通回答称校验通过，但内部核验参数/结果不公开；外部checker只验证已下载字节。",
+      "timing_limitations": {
+        "budget_seconds": 1200,
+        "started_at": "2026-10-13T18:03:07.890Z",
+        "ordinary_terminal_observed_at": "2026-10-13T18:04:30.528Z",
+        "ordinary_terminal_elapsed_upper_bound_seconds": 82.638,
+        "native_retrieval_completed_observed_at": "2026-10-13T18:13:52.430481+00:00",
+        "native_retrieval_elapsed_upper_bound_seconds": 644.540481,
+        "provider_completed_at": null,
+        "strict_cutoff_inventory_attested": false,
+        "reason": "首完整普通回答和4卡为ui54；所有原件最后真实读取确认在1200秒内。界面1分17秒为产品标签，downloaded_at未知，确认上界不冒称精确完成时间。"
+      }
     }
   ],
   "rubric_sources": {
@@ -10060,10 +10456,10 @@
   },
   "aggregation_method": "每产品选定T01–T05各一次，五任务等权的后验描述均值；区间端点先逐次合计再等权平均。所选attempt和入口在run_id及各原包metadata中明示，未覆盖全部attempt或重复变异。",
   "review_limitations": "单人采集加AI agent非盲阅证；本审阅不替代rubric要求的第二评审者抽查。",
-  "review_revision": 7,
-  "previous_review_sha256": "07ed454c46b4b1d34eb7b7758e9df1077b2f7e4fff7796185dfbcecf70876390",
-  "previous_review_markdown_sha256": "a55c262e5f5ad554d0b2c6d7a83c4da4cd82c7a3eb2ed850439a5685c8ddf04b",
-  "revision_note": "追加yuanbao-T05-desktop-r1，旧21次逐项评分原样保留。",
+  "review_revision": 8,
+  "previous_review_sha256": "e148632b86af01820981b32d90497b288c6ef5a808d1c5b649a2d0dce261fd55",
+  "previous_review_markdown_sha256": "fc3c7e307e33587dbe3284d4478f35b2ea8f9a9c212fd0433b5e9b0fa8883522",
+  "revision_note": "追加doubao-T02-desktop-r1，旧22次逐项评分原样保留。",
   "product_id_aliases": {
     "yuanbao": "yuanbao_expert",
     "doubao": "doubao_office"
@@ -10071,7 +10467,7 @@
   "review_coverage_state": "partial: all five products have actual T01 episodes, but selected five-case coverage is incomplete",
   "all_five_products_have_actual_episode": true,
   "full_five_product_five_case_coverage_completed": false,
-  "comparative_selected_episode_count": 21,
+  "comparative_selected_episode_count": 22,
   "additional_product_failure_episode_count": 1,
   "additional_product_failure_episode_ids": [
     "doubao-T01-desktop-r1"
@@ -10119,24 +10515,25 @@
     },
     "doubao_cloud": {
       "cases": [
-        "T01"
+        "T01",
+        "T02"
       ],
       "complete": false,
       "unsealed_or_not_reviewed_cases": [
-        "T02",
         "T03",
         "T04",
         "T05"
       ],
       "extra_local_failure_case": "T01",
       "scored_run_ids": [
-        "doubao-T01-desktop-r2"
+        "doubao-T01-desktop-r2",
+        "doubao-T02-desktop-r1"
       ]
     }
   },
   "native_selection_source": {
     "source_path": "docs/exploratory-analysis-plan.md",
-    "source_sha256": "fe0b32998f632cffd631f145c37ffc032437bdc71c47f183bccc34b015a54cee",
+    "source_sha256": "e2617bf2ee906ec3606600f32a2b83f9a035aabaae209195bec4f622d18f31b8",
     "source_scope": "Current posthoc coverage/entry-plan revision; not preregistration",
     "historical_registration": {
       "repository_path": "docs/exploratory-analysis-plan.md",
@@ -10148,6 +10545,6 @@
     "source_reference_correction": "Previous review source hash did not match the plan bytes in the published 17-episode commit. Current and historical hashes are corrected from their actual bytes; older run scores/evidence are unchanged.",
     "basis": "当前后验纳入口径按实际封存更新，历史登记保留，不追認预注册。"
   },
-  "scored_episode_count": 22,
-  "distinct_completed_product_case_count": 21
+  "scored_episode_count": 23,
+  "distinct_completed_product_case_count": 22
 }

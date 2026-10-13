@@ -1,0 +1,4 @@
+// Actual function bodies used in persistent native CUA session; globals injected by operator.
+async function dbObserve(label){try{return await col.observe(label);}catch(error){await fs.appendFile(dbPrivate+'/collection-errors.jsonl',JSON.stringify({at:new Date().toISOString(),label,error:String(error.message)})+'\n');var result=await col.observe(label+'-ax-only',false);nodeRepl.write(result.state);return result;}}
+
+async function dbNativeAct(label,method,...args){var at=new Date().toISOString();try{await db[method](...args);await fs.appendFile(dbPrivate+'/actions.jsonl',JSON.stringify({at,label,method,args,result:'returned'})+'\n');}catch(error){await fs.appendFile(dbPrivate+'/actions.jsonl',JSON.stringify({at,label,method,args,result:'error',error:String(error.message)})+'\n');throw error;}}

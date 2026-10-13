@@ -1,0 +1,159 @@
+{
+  "schema": "native-artifact-source-receipts-public-v1",
+  "artifacts": [
+    {
+      "receipt_id": "db-t02-native-decisions-csv",
+      "origin": "native_download",
+      "original_filename": "decisions.csv",
+      "public_native_file": "native-downloads/decisions.csv",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:13:52.430031+00:00",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:05:11.054Z",
+      "save_action_source_line": 47,
+      "private_operator_actions_sha256": "a23005181bec5a160afa9180bed5e92d67fe45c03228a2f3861394129f5f0853",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 287,
+      "sha256": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de",
+      "evidence": {
+        "event_id": "ui-58",
+        "capture": "db-t02-original-decisions-preview-ready",
+        "line_ranges": [
+          [
+            302,
+            303
+          ],
+          [
+            462,
+            464
+          ]
+        ],
+        "private_ax_sha256": "b80454767c8a269c9b8816a8ffa91d033e8ff862d669b864e13df2d8cd333812"
+      },
+      "outputs": [
+        {
+          "logical_path": "decisions.csv",
+          "zip_member": null,
+          "bytes": 287,
+          "sha256": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "db-t02-native-summary-json",
+      "origin": "native_download",
+      "original_filename": "summary.json",
+      "public_native_file": "native-downloads/summary.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:13:52.430230+00:00",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:08:36.865Z",
+      "save_action_source_line": 50,
+      "private_operator_actions_sha256": "a23005181bec5a160afa9180bed5e92d67fe45c03228a2f3861394129f5f0853",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 132,
+      "sha256": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0",
+      "evidence": {
+        "event_id": "ui-66",
+        "capture": "db-t02-original-summary-preview-ready",
+        "line_ranges": [
+          [
+            465,
+            470
+          ]
+        ],
+        "private_ax_sha256": "58744c659c2ea2bcb5dd11c42c99d99929e939e6fd4d75bda85346ef0ce6f7a9"
+      },
+      "outputs": [
+        {
+          "logical_path": "summary.json",
+          "zip_member": null,
+          "bytes": 132,
+          "sha256": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "db-t02-native-evidence_index-json",
+      "origin": "native_download",
+      "original_filename": "evidence_index.json",
+      "public_native_file": "native-downloads/evidence_index.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:13:52.430359+00:00",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:08:53.684Z",
+      "save_action_source_line": 52,
+      "private_operator_actions_sha256": "a23005181bec5a160afa9180bed5e92d67fe45c03228a2f3861394129f5f0853",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 993,
+      "sha256": "21093d0ace44a24d0c3a1d5a04510e1821a1d917d9cd1d863762f34385f236eb",
+      "evidence": {
+        "event_id": "ui-69",
+        "capture": "db-t02-original-evidence-preview-ready",
+        "line_ranges": [
+          [
+            469,
+            474
+          ]
+        ],
+        "private_ax_sha256": "51683430f1051a82492ccefbbd69351f28c78091191fcce964fbbac617b1ccc4"
+      },
+      "outputs": [
+        {
+          "logical_path": "evidence_index.json",
+          "zip_member": null,
+          "bytes": 993,
+          "sha256": "21093d0ace44a24d0c3a1d5a04510e1821a1d917d9cd1d863762f34385f236eb"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    },
+    {
+      "receipt_id": "db-t02-native-conflicts-json",
+      "origin": "native_download",
+      "original_filename": "conflicts.json",
+      "public_native_file": "native-downloads/conflicts.json",
+      "downloaded_at": null,
+      "download_available_observed_at": "2026-10-13T18:13:52.430481+00:00",
+      "download_time_visibility": "No exact native completion receipt; later local-presence observation is an upper bound",
+      "save_action_at": "2026-10-13T18:09:35.329Z",
+      "save_action_source_line": 56,
+      "private_operator_actions_sha256": "a23005181bec5a160afa9180bed5e92d67fe45c03228a2f3861394129f5f0853",
+      "first_existence_observed_at": null,
+      "native_workspace_relpath": null,
+      "source_projection": "Original native download/export saved without content changes",
+      "bytes": 402,
+      "sha256": "a46add5c549db7843a039920904f05d81512b260e6bc65bff44b14bb672c39cb",
+      "evidence": {
+        "event_id": "ui-74",
+        "capture": "db-t02-original-conflicts-preview-ready",
+        "line_ranges": [
+          [
+            463,
+            468
+          ]
+        ],
+        "private_ax_sha256": "f244658e44d93e5cf8d199d557001f30d8bda89e740e4087b72a1236af9296eb"
+      },
+      "outputs": [
+        {
+          "logical_path": "conflicts.json",
+          "zip_member": null,
+          "bytes": 402,
+          "sha256": "a46add5c549db7843a039920904f05d81512b260e6bc65bff44b14bb672c39cb"
+        }
+      ],
+      "remote_url_visibility": "not_published; signed/internal links remain private"
+    }
+  ],
+  "private_original_receipts_sha256": "5e3d6b9a6a89051bcbe6658072afa5c91dbaad413bd79aaaf163638ee721c9a6",
+  "basis": "Recorded native UI action/card evidence and retained native download/export/local-file originals; origin is explicit per artifact"
+}

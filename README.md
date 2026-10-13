@@ -2,7 +2,7 @@
 
 个人开源仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。比较对象为Codex、WorkBuddy、DeepSeek Harness（DSH）、元宝专家模式、豆包工作任务模式；用户已确认公告中的“豆包办公”指工作任务模式。
 
-截至2026-10-14，方案、五套用例、36项机器检查和评分工具已完成。共27个公开证据包、22次逐项评分现场，完成21/25产品×任务组合。元宝封存T01/T02/T03/T04/T05，豆包选定云入口封存T01；所有真实错误、交付失败、重试和预算观察限制均保留。
+截至2026-10-14，方案、五套用例、36项机器检查和评分工具已完成。共28个公开证据包、23次逐项评分现场，完成22/25产品×任务组合。元宝封存T01/T02/T03/T04/T05，豆包选定云入口封存T01/T02；所有真实错误、交付失败、重试和预算观察限制均保留。
 
 本次采用[探索性分析口径](docs/exploratory-analysis-plan.md)，开展实际任务复现与执行链追溯。[后验评分审阅](reports/exploratory-score-review.md)逐项列出证据、理由、置信和缺证范围。原75次确认性实验仍为作者未实施草案，不追认预试；模型、Skill和权限未匹配，因果归因保持未识别。
 
@@ -20,8 +20,8 @@
 |---|---|---|
 | 评测方案 | docs/protocol.md、config/protocol.json、docs/exploratory-analysis-plan.md | 确认性草案未实施；本次按探索性口径复现和追溯 |
 | 用例：任务、输入、完成条件 | cases/T01至T05，prompt.md、inputs、case.json | 已设计；可离线核验 |
-| 表现现场 | public/pilots真实接入记录 | 27个包；21/25完成组合，额外失败/诊断保留；正式0/75 |
-| 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 22次逐项审阅；缺证项保留null及范围 |
+| 表现现场 | public/pilots真实接入记录 | 28个包；22/25完成组合，额外失败/诊断保留；正式0/75 |
+| 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 23次逐项审阅；缺证项保留null及范围 |
 | 书面竞品报告 | reports/report.md、逐次公开证据与复核命令 | 真实预试报告；正式对照尚未完成 |
 | 每周六个人周报邮件 | reports/weekly-template.md、reports/weekly-2026-10-17-draft.md | 仅本地模板/草稿；未发送 |
 | 个人开源GitHub链接 | https://github.com/llongwang751-arch/tx-harness，MIT | 公开方案、代码、真实预试与报告 |

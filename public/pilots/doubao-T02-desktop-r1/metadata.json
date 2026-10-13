@@ -1,0 +1,288 @@
+{
+  "schema": "office-harness-pilot-v1",
+  "run_id": "doubao-T02-desktop-r1",
+  "product_id": "doubao",
+  "case_id": "T02",
+  "attempt": 1,
+  "track": "pilot",
+  "formal_eligible": false,
+  "formal_sample": false,
+  "execution_status": "completed",
+  "execution_status_basis": "Recorded execution-end.status; never inferred from objective checks",
+  "product_side_failure": false,
+  "product_failure_label": null,
+  "failure_label_semantics": null,
+  "surface": "native_desktop_office_task_via_documented_native_CUA",
+  "visible_conditions": {
+    "mode_visible": "工作任务·云电脑",
+    "mode_observation_scope": "Accepted-attachment preflight, actual composer preflight, submitted task and ordinary final native UI observations; original earlier unsubmitted draft is not an execution",
+    "execution_location_visible": "云电脑（界面标签；远端内部环境未独立检查）",
+    "version_visible": "unknown",
+    "installed_binary_version": "unknown",
+    "version_evidence_scope": "No application About/version observation during this case",
+    "model_visible": "自动 低",
+    "model_selector_changed": false,
+    "account_tier": "体验套餐（界面标签；额度未独立检查）",
+    "permission_visible": "unknown",
+    "memory_condition": "unknown",
+    "skill_condition": "Operator did not explicitly select a skill; actual built-in execution configuration unknown",
+    "network_control_visible": "unknown; canonical task requests no network access",
+    "region": "unknown"
+  },
+  "underlying_model_version": null,
+  "model_visibility": "Visible UI label if captured; dynamic/backend routing unknown, not attested",
+  "active_skills": null,
+  "skills_disabled_verified": false,
+  "actual_tool_calls": null,
+  "os_sandbox_verified": false,
+  "network_absence_independently_verified": false,
+  "remote_filesystem_visibility": "unknown; local staging paths do not attest server paths or permissions",
+  "attachment_mapping": [
+    {
+      "logical_path": "inputs/00_evaluation_contract.md",
+      "actual_attachment_name": "00_evaluation_contract.md",
+      "upload_status": "accepted",
+      "accepted_observed_at": "2026-10-13T18:01:16.986Z",
+      "actual_server_path": null,
+      "evidence": {
+        "event_id": "ui-41",
+        "capture": "db-t02-seven-raw-attachments-accepted",
+        "line_ranges": [
+          [
+            252,
+            255
+          ]
+        ],
+        "private_ax_sha256": "c05abb3f3f12c407107c869a4b092cbdb080c3ee8a5e5a313f3d51fdb8384f38"
+      }
+    },
+    {
+      "logical_path": "inputs/01_finance_v2.md",
+      "actual_attachment_name": "01_finance_v2.md",
+      "upload_status": "accepted",
+      "accepted_observed_at": "2026-10-13T18:01:16.986Z",
+      "actual_server_path": null,
+      "evidence": {
+        "event_id": "ui-41",
+        "capture": "db-t02-seven-raw-attachments-accepted",
+        "line_ranges": [
+          [
+            258,
+            261
+          ]
+        ],
+        "private_ax_sha256": "c05abb3f3f12c407107c869a4b092cbdb080c3ee8a5e5a313f3d51fdb8384f38"
+      }
+    },
+    {
+      "logical_path": "inputs/02_finance_v3.md",
+      "actual_attachment_name": "02_finance_v3.md",
+      "upload_status": "accepted",
+      "accepted_observed_at": "2026-10-13T18:01:16.986Z",
+      "actual_server_path": null,
+      "evidence": {
+        "event_id": "ui-41",
+        "capture": "db-t02-seven-raw-attachments-accepted",
+        "line_ranges": [
+          [
+            264,
+            267
+          ]
+        ],
+        "private_ax_sha256": "c05abb3f3f12c407107c869a4b092cbdb080c3ee8a5e5a313f3d51fdb8384f38"
+      }
+    },
+    {
+      "logical_path": "inputs/03_operations_guide.md",
+      "actual_attachment_name": "03_operations_guide.md",
+      "upload_status": "accepted",
+      "accepted_observed_at": "2026-10-13T18:01:16.986Z",
+      "actual_server_path": null,
+      "evidence": {
+        "event_id": "ui-41",
+        "capture": "db-t02-seven-raw-attachments-accepted",
+        "line_ranges": [
+          [
+            270,
+            273
+          ]
+        ],
+        "private_ax_sha256": "c05abb3f3f12c407107c869a4b092cbdb080c3ee8a5e5a313f3d51fdb8384f38"
+      }
+    },
+    {
+      "logical_path": "inputs/04_faq.md",
+      "actual_attachment_name": "04_faq.md",
+      "upload_status": "accepted",
+      "accepted_observed_at": "2026-10-13T18:01:16.986Z",
+      "actual_server_path": null,
+      "evidence": {
+        "event_id": "ui-41",
+        "capture": "db-t02-seven-raw-attachments-accepted",
+        "line_ranges": [
+          [
+            276,
+            279
+          ]
+        ],
+        "private_ax_sha256": "c05abb3f3f12c407107c869a4b092cbdb080c3ee8a5e5a313f3d51fdb8384f38"
+      }
+    },
+    {
+      "logical_path": "inputs/05_finance_exception.md",
+      "actual_attachment_name": "05_finance_exception.md",
+      "upload_status": "accepted",
+      "accepted_observed_at": "2026-10-13T18:01:16.986Z",
+      "actual_server_path": null,
+      "evidence": {
+        "event_id": "ui-41",
+        "capture": "db-t02-seven-raw-attachments-accepted",
+        "line_ranges": [
+          [
+            282,
+            285
+          ]
+        ],
+        "private_ax_sha256": "c05abb3f3f12c407107c869a4b092cbdb080c3ee8a5e5a313f3d51fdb8384f38"
+      }
+    },
+    {
+      "logical_path": "inputs/claims.csv",
+      "actual_attachment_name": "claims.csv",
+      "upload_status": "accepted",
+      "accepted_observed_at": "2026-10-13T18:01:16.986Z",
+      "actual_server_path": null,
+      "evidence": {
+        "event_id": "ui-41",
+        "capture": "db-t02-seven-raw-attachments-accepted",
+        "line_ranges": [
+          [
+            288,
+            291
+          ]
+        ],
+        "private_ax_sha256": "c05abb3f3f12c407107c869a4b092cbdb080c3ee8a5e5a313f3d51fdb8384f38"
+      }
+    }
+  ],
+  "attachment_mapping_complete": true,
+  "started_at": "2026-10-13T18:03:07.890Z",
+  "start_basis": "Native submit-button action pre-receipt; exact canonical nonempty composer lines and seven accepted attachments verified before action, fresh submitted task observed afterward; precise service receipt unknown",
+  "completion_observed_at": "2026-10-13T18:04:30.528Z",
+  "completion_basis": "First native AX/screenshot observation of ordinary final reply declaring task completed, all four native output cards and idle composer; independent acceptance separate",
+  "elapsed_to_completion_observation_seconds": 82.638,
+  "timed_out": false,
+  "budget_observation_valid": true,
+  "collector_outage": false,
+  "timeout_seconds": 1200,
+  "timing_basis": "Submit-action/observation to observed completion; service timing unknown; download times reported separately",
+  "initial_inventory": {
+    "inputs/00_evaluation_contract.md": "2f1d7899ceebcc471f1d1d769da0923c9f99370caa899fafe8ac1bbd4e1d071b",
+    "inputs/01_finance_v2.md": "7d154bba07e3edc7bdc197da40b4e6f62b0b2fcf1a59e4b88690d60f9ed48f83",
+    "inputs/02_finance_v3.md": "f00b55f806270765f0a17ad26c89fbce20bfe8b2f866bf0b616efe1bbd57043e",
+    "inputs/03_operations_guide.md": "d3643eeda58a1662336e847eef2792f2b43fcd63e200b65b110e56d7b94cd36d",
+    "inputs/04_faq.md": "7e2612709f2b1a3cad43416cb97cf3a1efa79dabccb5b0d49e0cdad0d2f42e4a",
+    "inputs/05_finance_exception.md": "17c194b95fdd5913fcf7f1514d3bcd02e2ff0f19fc9facf4488b2de29ffb6e20",
+    "inputs/claims.csv": "c58b7839ff69122e28e94a6c505f9e1b038c1edaaa5962574314480b2e4d6da8",
+    "prompt.md": "dfc66b38e8b907c296dbba7d1340b7c6f919707c0f4fc94daa0d2752be71f552"
+  },
+  "original_inputs_and_prompt_unchanged": true,
+  "final_local_inventory": {
+    "inputs/00_evaluation_contract.md": "2f1d7899ceebcc471f1d1d769da0923c9f99370caa899fafe8ac1bbd4e1d071b",
+    "inputs/01_finance_v2.md": "7d154bba07e3edc7bdc197da40b4e6f62b0b2fcf1a59e4b88690d60f9ed48f83",
+    "inputs/02_finance_v3.md": "f00b55f806270765f0a17ad26c89fbce20bfe8b2f866bf0b616efe1bbd57043e",
+    "inputs/03_operations_guide.md": "d3643eeda58a1662336e847eef2792f2b43fcd63e200b65b110e56d7b94cd36d",
+    "inputs/04_faq.md": "7e2612709f2b1a3cad43416cb97cf3a1efa79dabccb5b0d49e0cdad0d2f42e4a",
+    "inputs/05_finance_exception.md": "17c194b95fdd5913fcf7f1514d3bcd02e2ff0f19fc9facf4488b2de29ffb6e20",
+    "inputs/claims.csv": "c58b7839ff69122e28e94a6c505f9e1b038c1edaaa5962574314480b2e4d6da8",
+    "outputs/conflicts.json": "a46add5c549db7843a039920904f05d81512b260e6bc65bff44b14bb672c39cb",
+    "outputs/decisions.csv": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de",
+    "outputs/evidence_index.json": "21093d0ace44a24d0c3a1d5a04510e1821a1d917d9cd1d863762f34385f236eb",
+    "outputs/summary.json": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0",
+    "prompt.md": "dfc66b38e8b907c296dbba7d1340b7c6f919707c0f4fc94daa0d2752be71f552"
+  },
+  "case_prompt_sha256": "dfc66b38e8b907c296dbba7d1340b7c6f919707c0f4fc94daa0d2752be71f552",
+  "recorded_paste_source_sha256": "28ca8c81efe7d0d71d85593ba5639f38795b5b686ccbf6fe93fcc0f6e6c5e07c",
+  "actual_paste_source_sha256": "28ca8c81efe7d0d71d85593ba5639f38795b5b686ccbf6fe93fcc0f6e6c5e07c",
+  "actual_paste_source_visibility": "Operator/agent-attested source used in native paste",
+  "actual_wire_bytes_sha256": null,
+  "prompt_adapter_appendix": "将交付文件写入 outputs/，不要修改 inputs/。",
+  "prompt_transport": "Recorded UTF-8 paste source; native UI submit observed; outbound/internal model-request bytes unknown",
+  "prepare_source_sha256": {
+    "run_native_office_pilot.py": "e4e854a211ff10e8bcf951c9ebc7afe9c9b46ad64aae2978db2acf99eb280f73"
+  },
+  "export_source_sha256": {
+    "run_native_office_pilot.py": "3bfc87758ff85486a1f0f108c4e6a54965b44550d9876f0b8c95e85e0d4b2d70"
+  },
+  "collector_source_sha256": {
+    "doubao_native_wrappers.mjs": "62b8759be61ee95374b32e46320f597c3190a80de2a31875b97fc23a19b6c44d",
+    "workbuddy_desktop_collector.mjs": "a72cdf89fff4e7592249e90f21f7acee2a5b40eb15c781d3bcd3a7307e664b91"
+  },
+  "checker_snapshot": {
+    "harness_eval/core.py": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20",
+    "config/protocol.json": "5e543191e6869f032adb8d1847834abf3430132f5ee33c8e18b520c68f9261e9",
+    "config/rubric.json": "8ce034208b1b56cc6f432bfd681d13edad0036c59ee01a83b4a5c40b3d9c62f0",
+    "cases/T02/case.json": "248e0ec491115a4c3ef696923f7ca2fc3e51b8153e88ed07fd574e833672c52b",
+    "cases/T02/oracle.json": "cdca87a9546a466037c44526cef1ce0bf79e98ddaed935c2935837e8a5b688ba"
+  },
+  "private_capture_sha256": {
+    "041-db-t02-seven-raw-attachments-accepted.ax.txt": "c05abb3f3f12c407107c869a4b092cbdb080c3ee8a5e5a313f3d51fdb8384f38",
+    "047-db-t02-canonical-seven-attachments-ready.ax.txt": "181e7e0e45e95147291d00cfc50278f06ceddc3ab2f89a116fafe5b99a8df767",
+    "054-db-t02-execution-progress-05.ax.txt": "d58e2162e85dd6f006f948bae35242c04624a04c2c0d91068ab17f54c0776fe9",
+    "058-db-t02-original-decisions-preview-ready.ax.txt": "b80454767c8a269c9b8816a8ffa91d033e8ff862d669b864e13df2d8cd333812",
+    "066-db-t02-original-summary-preview-ready.ax.txt": "58744c659c2ea2bcb5dd11c42c99d99929e939e6fd4d75bda85346ef0ce6f7a9",
+    "069-db-t02-original-evidence-preview-ready.ax.txt": "51683430f1051a82492ccefbbd69351f28c78091191fcce964fbbac617b1ccc4",
+    "074-db-t02-original-conflicts-preview-ready.ax.txt": "f244658e44d93e5cf8d199d557001f30d8bda89e740e4087b72a1236af9296eb"
+  },
+  "private_capture_hash_scope": "Reviewed selected AX sources only; unrelated/unselected observations remain private",
+  "product_deliverables": {
+    "conflicts.json": "a46add5c549db7843a039920904f05d81512b260e6bc65bff44b14bb672c39cb",
+    "decisions.csv": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de",
+    "evidence_index.json": "21093d0ace44a24d0c3a1d5a04510e1821a1d917d9cd1d863762f34385f236eb",
+    "summary.json": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0"
+  },
+  "native_originals": {
+    "conflicts.json": "a46add5c549db7843a039920904f05d81512b260e6bc65bff44b14bb672c39cb",
+    "decisions.csv": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de",
+    "evidence_index.json": "21093d0ace44a24d0c3a1d5a04510e1821a1d917d9cd1d863762f34385f236eb",
+    "summary.json": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0"
+  },
+  "native_original_storage_directory": "native-downloads is a storage directory name; actual download/export/local-file origin is recorded per receipt",
+  "download_receipts_sha256": "cc171882515fedb0f0048a6aa7fde9d258c863df72461bfc144ad0c0827bbb17",
+  "release": null,
+  "output_repairs_by_evaluator": false,
+  "unscheduled_prompts": [],
+  "objective_score": 60.0,
+  "manual_score": null,
+  "total_score": null,
+  "pure_harness_score": null,
+  "evidence_level": "E2; selected visible native UI observations plus native downloaded/exported/local artifact bytes",
+  "public_review_actor": "Operator/agent; no external human audit claimed",
+  "collector_issues": [
+    "Earlier cloud draft had seven attachments but no submitted prompt. Its original preparation observations and the later missing-window checkpoint remain private. A new native cloud work task was then prepared and submitted exactly once.",
+    "Official registered-app launch reported no targetable window, while the subsequent fresh native inventory exposed the real main window.",
+    "Several native Windows picker observations returned multiple screenshot regions unsupported by the collector image writer; errors and AX-only fallback observations are retained.",
+    "Native UI changes were asynchronous after paste or opening a card. Later fresh composer and preview observations confirmed actual content before submission or download.",
+    "Two early picker setValue cache errors and the close of the temporary local CSV-view window were not timestamped in actions.jsonl. No complete native-action audit is claimed. The later setValue cache failure is logged.",
+    "A final inventory attempt used an unavailable computer.listWindows method, without UI action. The documented getState inventory and final main-window observation were then saved.",
+    "Some capture labels mention a save dialog; the actual observations show direct default downloads and no SaveAs picker. Downloaded originals and provenance reflect the observed direct-download behavior."
+  ],
+  "retrieval_limitations": [
+    "Published evidence consists of reviewed ordinary task, mode, accepted attachment, final-response and generated-preview AX slices; full raw UI records remain private.",
+    "The ordinary final claim that validation passed is product text; acceptance is established separately by the frozen offline evaluator.",
+    "Native files downloaded directly to the actual Windows downloads directory. Precise completion receipts are unavailable; download click times and later file-presence observations are recorded separately.",
+    "Backend model identity, active built-in capabilities, request bytes, remote internal state and complete execution action stream are unknown.",
+    "Final task observation was 82.638 seconds after the submit action pre-receipt. Native UI elapsed label was 1 minute 17 seconds; neither is a precise backend-duration attestation."
+  ],
+  "redaction": "Exact operator/agent-reviewed AX slices only; raw screenshots, thinking/planning, hidden system/Skill text, account/history, private paths and signed URLs excluded",
+  "visible_events_order": "Stable chronological received_at; source_line refers to private AX source, not a tool-call sequence",
+  "visible_events_projection_sha256": "4ba1f42259ae9c663b1f28f06c14542f9cc919722c1e7f1d33403542280dca99",
+  "confidence": "High for preserved native-original/output byte equality and deterministic checks; E2 provenance depends on cited actual UI observations; internal causation unresolved",
+  "attribution": "One recorded end-to-end configuration; no isolated Model/Skill/Harness causal score",
+  "limitations": [
+    "Preparation and file hashes do not prove remote input decoding, file paths or server execution.",
+    "Visible labels and replies do not attest backend model, active Skills or full actual tool/network actions.",
+    "All native originals are retained; local storage copies do not imply download, and archive-member mappings are transparent storage operations, not output repair.",
+    "One exploratory pilot, not a formal replicate; no external human audit claimed."
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "schema": "native-record-preservation-mapping-v1",
+  "record_rewriting_performed": false,
+  "earlier_unsubmitted_capture_indexes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "new_task_capture_initial_index": 22,
+  "source_capture_log_sha256": "6e891dcf61a21443ba2e734e967c3672866b2a460b3c30ca051fa7be22941523",
+  "source_operator_actions_sha256": "a23005181bec5a160afa9180bed5e92d67fe45c03228a2f3861394129f5f0853",
+  "source_presence_confirmation_sha256": "781330bac93dd7c3bf486ea1c92fb5d00b52a06851faa2c0ef819dd815d5edb2",
+  "collector_source_sha256": {
+    "doubao_native_wrappers.mjs": "62b8759be61ee95374b32e46320f597c3190a80de2a31875b97fc23a19b6c44d",
+    "workbuddy_desktop_collector.mjs": "a72cdf89fff4e7592249e90f21f7acee2a5b40eb15c781d3bcd3a7307e664b91"
+  },
+  "mapping": [
+    {
+      "index": 23,
+      "capture": "db-t02-launched-main-window",
+      "raw_ax": "023-db-t02-launched-main-window.ax.txt",
+      "raw_ax_sha256": "2111dac711b4e09db29afa70804bbd81fd12aa6025ec6bc0c9850a2c9da9fa98",
+      "public_selection": false
+    },
+    {
+      "index": 24,
+      "capture": "db-t02-new-unsubmitted-work-task",
+      "raw_ax": "024-db-t02-new-unsubmitted-work-task.ax.txt",
+      "raw_ax_sha256": "2111dac711b4e09db29afa70804bbd81fd12aa6025ec6bc0c9850a2c9da9fa98",
+      "public_selection": false
+    },
+    {
+      "index": 25,
+      "capture": "db-t02-computer-mode-menu",
+      "raw_ax": "025-db-t02-computer-mode-menu.ax.txt",
+      "raw_ax_sha256": "2841213f097162648ace634ddcdf2abc7e77999431e1be6e5eb5d0d18d9965b8",
+      "public_selection": false
+    },
+    {
+      "index": 26,
+      "capture": "db-t02-computer-mode-menu-visible",
+      "raw_ax": "026-db-t02-computer-mode-menu-visible.ax.txt",
+      "raw_ax_sha256": "0f1b9862bc3a38860995576ca6f95dc80466ad008309ac34c701d5804e43fbca",
+      "public_selection": false
+    },
+    {
+      "index": 27,
+      "capture": "db-t02-cloud-mode-selected",
+      "raw_ax": "027-db-t02-cloud-mode-selected.ax.txt",
+      "raw_ax_sha256": "0f1b9862bc3a38860995576ca6f95dc80466ad008309ac34c701d5804e43fbca",
+      "public_selection": false
+    },
+    {
+      "index": 28,
+      "capture": "db-t02-cloud-upload-preflight",
+      "raw_ax": "028-db-t02-cloud-upload-preflight.ax.txt",
+      "raw_ax_sha256": "feb514069e5dd7c3a2f6bc914a4891061fe46ba6bfb9c95da8caec9816e385ae",
+      "public_selection": false
+    },
+    {
+      "index": 29,
+      "capture": "db-t02-attachment-menu-opening",
+      "raw_ax": "029-db-t02-attachment-menu-opening.ax.txt",
+      "raw_ax_sha256": "ba35e44f818a30976f984a4658c64eccc0a4cb2899d5a96260b02e1287fc2691",
+      "public_selection": false
+    },
+    {
+      "index": 30,
+      "capture": "db-t02-attachment-menu-visible",
+      "raw_ax": "030-db-t02-attachment-menu-visible.ax.txt",
+      "raw_ax_sha256": "e5925d7fffffcdd6e048250cae80a6e9247ddd125f8568f4409b976a235b90d6",
+      "public_selection": false
+    },
+    {
+      "index": 31,
+      "capture": "db-t02-native-file-picker-ready-ax-only",
+      "raw_ax": "031-db-t02-native-file-picker-ready-ax-only.ax.txt",
+      "raw_ax_sha256": "50479722f3b862996ebaf05a29251feda7a52db7c36ef8a5744b6e033853bf19",
+      "public_selection": false
+    },
+    {
+      "index": 32,
+      "capture": "db-t02-file-picker-directory-fresh-check-ax-only",
+      "raw_ax": "032-db-t02-file-picker-directory-fresh-check-ax-only.ax.txt",
+      "raw_ax_sha256": "a2c7aae7d6a7d33e6d4bc4d22f5f175aab172b2b15c0d2861efa20b1ec1cc0b7",
+      "public_selection": false
+    },
+    {
+      "index": 33,
+      "capture": "db-t02-file-picker-name-shortcut-check-ax-only",
+      "raw_ax": "033-db-t02-file-picker-name-shortcut-check-ax-only.ax.txt",
+      "raw_ax_sha256": "e8d0b1c77cf7d23912a6b4b30f398e8be978d00cf418b1368bbca46b45a8b0e5",
+      "public_selection": false
+    },
+    {
+      "index": 34,
+      "capture": "db-t02-native-picker-directory-before-open-ax-only",
+      "raw_ax": "034-db-t02-native-picker-directory-before-open-ax-only.ax.txt",
+      "raw_ax_sha256": "e8d0b1c77cf7d23912a6b4b30f398e8be978d00cf418b1368bbca46b45a8b0e5",
+      "public_selection": false
+    },
+    {
+      "index": 35,
+      "capture": "db-t02-native-picker-directory-paste-confirmed-ax-only",
+      "raw_ax": "035-db-t02-native-picker-directory-paste-confirmed-ax-only.ax.txt",
+      "raw_ax_sha256": "e8d0b1c77cf7d23912a6b4b30f398e8be978d00cf418b1368bbca46b45a8b0e5",
+      "public_selection": false
+    },
+    {
+      "index": 36,
+      "capture": "db-t02-file-picker-native-directory-value-ax-only",
+      "raw_ax": "036-db-t02-file-picker-native-directory-value-ax-only.ax.txt",
+      "raw_ax_sha256": "bf404b0df219f2226ee03ed25903ad9b3ffb4fb4c38fed31d49b9dc2e5efbb4f",
+      "public_selection": false
+    },
+    {
+      "index": 37,
+      "capture": "db-t02-canonical-input-directory-opened-ax-only",
+      "raw_ax": "037-db-t02-canonical-input-directory-opened-ax-only.ax.txt",
+      "raw_ax_sha256": "d46dc52bd6f7eb6c44943853c297d5e8a9bec7c2bad00b0f3a39f420e68f65e7",
+      "public_selection": false
+    },
+    {
+      "index": 38,
+      "capture": "db-t02-file-picker-fresh-name-index",
+      "raw_ax": "038-db-t02-file-picker-fresh-name-index.ax.txt",
+      "raw_ax_sha256": "d46dc52bd6f7eb6c44943853c297d5e8a9bec7c2bad00b0f3a39f420e68f65e7",
+      "public_selection": false
+    },
+    {
+      "index": 39,
+      "capture": "db-t02-seven-filenames-typed-check",
+      "raw_ax": "039-db-t02-seven-filenames-typed-check.ax.txt",
+      "raw_ax_sha256": "c5a1fe30c8effee2955dd4fa0d4f0a16b3b3ecf1f247cd81dce7c93e9962d5fd",
+      "public_selection": false
+    },
+    {
+      "index": 40,
+      "capture": "db-t02-seven-raw-upload-returned",
+      "raw_ax": "040-db-t02-seven-raw-upload-returned.ax.txt",
+      "raw_ax_sha256": "6b0cebfcc9bce86976dcaf3f9728206e44a99d776ba930da901f6ec699a3a03a",
+      "public_selection": false
+    },
+    {
+      "index": 41,
+      "capture": "db-t02-seven-raw-attachments-accepted",
+      "raw_ax": "041-db-t02-seven-raw-attachments-accepted.ax.txt",
+      "raw_ax_sha256": "c05abb3f3f12c407107c869a4b092cbdb080c3ee8a5e5a313f3d51fdb8384f38",
+      "public_selection": true
+    },
+    {
+      "index": 42,
+      "capture": "db-t02-full-composer-preflight",
+      "raw_ax": "042-db-t02-full-composer-preflight.ax.txt",
+      "raw_ax_sha256": "c05abb3f3f12c407107c869a4b092cbdb080c3ee8a5e5a313f3d51fdb8384f38",
+      "public_selection": false
+    },
+    {
+      "index": 43,
+      "capture": "db-t02-maximized-composer-visible",
+      "raw_ax": "043-db-t02-maximized-composer-visible.ax.txt",
+      "raw_ax_sha256": "19d99a9a2d864faa3aeed85ff162faf47ebe8e9e8e24d56ad5c7f88c7c3c34bf",
+      "public_selection": false
+    },
+    {
+      "index": 44,
+      "capture": "db-t02-canonical-composer-paste-check",
+      "raw_ax": "044-db-t02-canonical-composer-paste-check.ax.txt",
+      "raw_ax_sha256": "156bccdf3ae5116919b0cfd03c33e9e9af6e767d5b75a2718edeca21ce9e074d",
+      "public_selection": false
+    },
+    {
+      "index": 45,
+      "capture": "db-t02-canonical-input-coordinate-preflight",
+      "raw_ax": "045-db-t02-canonical-input-coordinate-preflight.ax.txt",
+      "raw_ax_sha256": "181e7e0e45e95147291d00cfc50278f06ceddc3ab2f89a116fafe5b99a8df767",
+      "public_selection": false
+    },
+    {
+      "index": 46,
+      "capture": "db-t02-composer-focus-confirmation",
+      "raw_ax": "046-db-t02-composer-focus-confirmation.ax.txt",
+      "raw_ax_sha256": "181e7e0e45e95147291d00cfc50278f06ceddc3ab2f89a116fafe5b99a8df767",
+      "public_selection": false
+    },
+    {
+      "index": 47,
+      "capture": "db-t02-canonical-seven-attachments-ready",
+      "raw_ax": "047-db-t02-canonical-seven-attachments-ready.ax.txt",
+      "raw_ax_sha256": "181e7e0e45e95147291d00cfc50278f06ceddc3ab2f89a116fafe5b99a8df767",
+      "public_selection": true
+    },
+    {
+      "index": 48,
+      "capture": "db-t02-first-submission-observation",
+      "raw_ax": "048-db-t02-first-submission-observation.ax.txt",
+      "raw_ax_sha256": "181e7e0e45e95147291d00cfc50278f06ceddc3ab2f89a116fafe5b99a8df767",
+      "public_selection": false
+    },
+    {
+      "index": 49,
+      "capture": "db-t02-submission-start-confirmed",
+      "raw_ax": "049-db-t02-submission-start-confirmed.ax.txt",
+      "raw_ax_sha256": "37823dabbe6bd49f1c35671a4ae98ca5382de6b73bab9d384f5ec92c8ec67ac2",
+      "public_selection": false
+    },
+    {
+      "index": 50,
+      "capture": "db-t02-first-cloud-execution-progress",
+      "raw_ax": "050-db-t02-first-cloud-execution-progress.ax.txt",
+      "raw_ax_sha256": "685e74435b192f2dc10513f007a11cf2e4930f29c1ead85f3b0f842defc1e14b",
+      "public_selection": false
+    },
+    {
+      "index": 51,
+      "capture": "db-t02-execution-progress-02",
+      "raw_ax": "051-db-t02-execution-progress-02.ax.txt",
+      "raw_ax_sha256": "9e37d3c2b0c4f47df46eac606e4bcaeecadbf921739cfaebb7cb9228b4223dbb",
+      "public_selection": false
+    },
+    {
+      "index": 52,
+      "capture": "db-t02-execution-progress-03",
+      "raw_ax": "052-db-t02-execution-progress-03.ax.txt",
+      "raw_ax_sha256": "52e277172b4d6f7fa8565e4dfe6f4603d135c045a15a4d586db9985e23c0a4e6",
+      "public_selection": false
+    },
+    {
+      "index": 53,
+      "capture": "db-t02-execution-progress-04",
+      "raw_ax": "053-db-t02-execution-progress-04.ax.txt",
+      "raw_ax_sha256": "23b8804d6016591937e4dc5530bea2d6adfd4bebaaa8f04bb9e26b19abfd57ea",
+      "public_selection": false
+    },
+    {
+      "index": 54,
+      "capture": "db-t02-execution-progress-05",
+      "raw_ax": "054-db-t02-execution-progress-05.ax.txt",
+      "raw_ax_sha256": "d58e2162e85dd6f006f948bae35242c04624a04c2c0d91068ab17f54c0776fe9",
+      "public_selection": true
+    },
+    {
+      "index": 55,
+      "capture": "db-t02-native-deliverable-cards-visible",
+      "raw_ax": "055-db-t02-native-deliverable-cards-visible.ax.txt",
+      "raw_ax_sha256": "d58e2162e85dd6f006f948bae35242c04624a04c2c0d91068ab17f54c0776fe9",
+      "public_selection": false
+    },
+    {
+      "index": 56,
+      "capture": "db-t02-native-card-row-pre-download",
+      "raw_ax": "056-db-t02-native-card-row-pre-download.ax.txt",
+      "raw_ax_sha256": "d58e2162e85dd6f006f948bae35242c04624a04c2c0d91068ab17f54c0776fe9",
+      "public_selection": false
+    },
+    {
+      "index": 57,
+      "capture": "db-t02-original-decisions-preview",
+      "raw_ax": "057-db-t02-original-decisions-preview.ax.txt",
+      "raw_ax_sha256": "5525d75ac8c3ea12a37d0551cff9a532db535994d61b1d16561ec74c3e496a1f",
+      "public_selection": false
+    },
+    {
+      "index": 58,
+      "capture": "db-t02-original-decisions-preview-ready",
+      "raw_ax": "058-db-t02-original-decisions-preview-ready.ax.txt",
+      "raw_ax_sha256": "b80454767c8a269c9b8816a8ffa91d033e8ff862d669b864e13df2d8cd333812",
+      "public_selection": true
+    },
+    {
+      "index": 59,
+      "capture": "db-t02-original-decisions-save-dialog",
+      "raw_ax": "059-db-t02-original-decisions-save-dialog.ax.txt",
+      "raw_ax_sha256": "ba9a2274d353e5deae0e82b0a5168b27a5894816d883fea044fc63cd1f2ab9a9",
+      "public_selection": false
+    },
+    {
+      "index": 60,
+      "capture": "db-t02-decisions-save-dialog-ready",
+      "raw_ax": "060-db-t02-decisions-save-dialog-ready.ax.txt",
+      "raw_ax_sha256": "8d5f7766688780f02b215b59cbd45e4f9d97a97c5733d7c5e8ee29f44ff11ca9",
+      "public_selection": false
+    },
+    {
+      "index": 61,
+      "capture": "db-t02-decisions-native-download-toast",
+      "raw_ax": "061-db-t02-decisions-native-download-toast.ax.txt",
+      "raw_ax_sha256": "8d5f7766688780f02b215b59cbd45e4f9d97a97c5733d7c5e8ee29f44ff11ca9",
+      "public_selection": false
+    },
+    {
+      "index": 62,
+      "capture": "db-t02-native-download-view-preflight",
+      "raw_ax": "062-db-t02-native-download-view-preflight.ax.txt",
+      "raw_ax_sha256": "8d5f7766688780f02b215b59cbd45e4f9d97a97c5733d7c5e8ee29f44ff11ca9",
+      "public_selection": false
+    },
+    {
+      "index": 63,
+      "capture": "db-t02-decisions-downloaded-window",
+      "raw_ax": "063-db-t02-decisions-downloaded-window.ax.txt",
+      "raw_ax_sha256": "ee1831f73ecce885d67be1d7f95a1fc247b99eb2bb17cc4c68778b35207fc7be",
+      "public_selection": false
+    },
+    {
+      "index": 64,
+      "capture": "db-t02-original-summary-card-preflight",
+      "raw_ax": "064-db-t02-original-summary-card-preflight.ax.txt",
+      "raw_ax_sha256": "560a0bd23ff01c816e68349a8a75b0781356fc7f764f915e31783df966197132",
+      "public_selection": false
+    },
+    {
+      "index": 65,
+      "capture": "db-t02-original-summary-preview",
+      "raw_ax": "065-db-t02-original-summary-preview.ax.txt",
+      "raw_ax_sha256": "560a0bd23ff01c816e68349a8a75b0781356fc7f764f915e31783df966197132",
+      "public_selection": false
+    },
+    {
+      "index": 66,
+      "capture": "db-t02-original-summary-preview-ready",
+      "raw_ax": "066-db-t02-original-summary-preview-ready.ax.txt",
+      "raw_ax_sha256": "58744c659c2ea2bcb5dd11c42c99d99929e939e6fd4d75bda85346ef0ce6f7a9",
+      "public_selection": true
+    },
+    {
+      "index": 67,
+      "capture": "db-t02-summary-download-action-result",
+      "raw_ax": "067-db-t02-summary-download-action-result.ax.txt",
+      "raw_ax_sha256": "58744c659c2ea2bcb5dd11c42c99d99929e939e6fd4d75bda85346ef0ce6f7a9",
+      "public_selection": false
+    },
+    {
+      "index": 68,
+      "capture": "db-t02-original-evidence-preview",
+      "raw_ax": "068-db-t02-original-evidence-preview.ax.txt",
+      "raw_ax_sha256": "0914edfb099953b1f491396c8a944d2d6287660ac4108697ba02178a5bbcd39d",
+      "public_selection": false
+    },
+    {
+      "index": 69,
+      "capture": "db-t02-original-evidence-preview-ready",
+      "raw_ax": "069-db-t02-original-evidence-preview-ready.ax.txt",
+      "raw_ax_sha256": "51683430f1051a82492ccefbbd69351f28c78091191fcce964fbbac617b1ccc4",
+      "public_selection": true
+    },
+    {
+      "index": 70,
+      "capture": "db-t02-evidence-download-action-result",
+      "raw_ax": "070-db-t02-evidence-download-action-result.ax.txt",
+      "raw_ax_sha256": "51683430f1051a82492ccefbbd69351f28c78091191fcce964fbbac617b1ccc4",
+      "public_selection": false
+    },
+    {
+      "index": 71,
+      "capture": "db-t02-final-bottom-for-conflicts",
+      "raw_ax": "071-db-t02-final-bottom-for-conflicts.ax.txt",
+      "raw_ax_sha256": "bb22473a9925f74d191606cd6eceba8c0b2f5d455a7886d4d19125bc27cb7cca",
+      "public_selection": false
+    },
+    {
+      "index": 72,
+      "capture": "db-t02-conflicts-card-visible",
+      "raw_ax": "072-db-t02-conflicts-card-visible.ax.txt",
+      "raw_ax_sha256": "9a1935fb1c5bb78f32d6ae8b0bd6e2a3159125b2c112b3a3e999e7b43a6ee9de",
+      "public_selection": false
+    },
+    {
+      "index": 73,
+      "capture": "db-t02-original-conflicts-preview",
+      "raw_ax": "073-db-t02-original-conflicts-preview.ax.txt",
+      "raw_ax_sha256": "9a1935fb1c5bb78f32d6ae8b0bd6e2a3159125b2c112b3a3e999e7b43a6ee9de",
+      "public_selection": false
+    },
+    {
+      "index": 74,
+      "capture": "db-t02-original-conflicts-preview-ready",
+      "raw_ax": "074-db-t02-original-conflicts-preview-ready.ax.txt",
+      "raw_ax_sha256": "f244658e44d93e5cf8d199d557001f30d8bda89e740e4087b72a1236af9296eb",
+      "public_selection": true
+    },
+    {
+      "index": 75,
+      "capture": "db-t02-conflicts-download-action-result",
+      "raw_ax": "075-db-t02-conflicts-download-action-result.ax.txt",
+      "raw_ax_sha256": "f244658e44d93e5cf8d199d557001f30d8bda89e740e4087b72a1236af9296eb",
+      "public_selection": false
+    },
+    {
+      "index": 76,
+      "capture": "db-t02-close-checkpoint-main-retained",
+      "raw_ax": "076-db-t02-close-checkpoint-main-retained.ax.txt",
+      "raw_ax_sha256": "209b7b41899c3f105103467ed07f31653b8b600b87613443eecf41ee4c56df1c",
+      "public_selection": false
+    }
+  ],
+  "earlier_private_capture_hashes": [
+    {
+      "index": 1,
+      "raw_ax_sha256": "3f97aa757e1ec09646484175de83f263bff8aa430087b14656d35d1ae872b9d8"
+    },
+    {
+      "index": 2,
+      "raw_ax_sha256": "3f97aa757e1ec09646484175de83f263bff8aa430087b14656d35d1ae872b9d8"
+    },
+    {
+      "index": 3,
+      "raw_ax_sha256": "e283076524299853a2cb65bbe6ec0686a2860a3d578d32f093053fa2e8df8899"
+    },
+    {
+      "index": 4,
+      "raw_ax_sha256": "e283076524299853a2cb65bbe6ec0686a2860a3d578d32f093053fa2e8df8899"
+    },
+    {
+      "index": 5,
+      "raw_ax_sha256": "487a1f2fc8dc7011181654404f179c71e00b10ece12297ea6d93d3cc92571b45"
+    },
+    {
+      "index": 6,
+      "raw_ax_sha256": "487a1f2fc8dc7011181654404f179c71e00b10ece12297ea6d93d3cc92571b45"
+    },
+    {
+      "index": 7,
+      "raw_ax_sha256": "b3754cee75282706eedd8bdd2bf40dfb82307f80bb7761a0f95e79152374b45d"
+    },
+    {
+      "index": 8,
+      "raw_ax_sha256": "fdb1f824815903b5aac2c789731fd5f3a1e117f631ab4c7445ab9073ad054bce"
+    },
+    {
+      "index": 9,
+      "raw_ax_sha256": "a422fd2086bae8ee9a4f5c074644237e8a267556fa8b5b8015a3440b121e6b28"
+    },
+    {
+      "index": 10,
+      "raw_ax_sha256": "a422fd2086bae8ee9a4f5c074644237e8a267556fa8b5b8015a3440b121e6b28"
+    },
+    {
+      "index": 11,
+      "raw_ax_sha256": "c12b45a5ffbb49eb113f0ef6e60a7cfbb2e2c52b41ceb265523951739e1bb5a9"
+    },
+    {
+      "index": 12,
+      "raw_ax_sha256": "fb48235a4f4c4b07f13fc7de71af637aa034226e80e90c93944e2e8d336ea9b6"
+    },
+    {
+      "index": 13,
+      "raw_ax_sha256": "d8166d29c5f5a06cbb2dd725b12193d7eaf04db6d0ac57a36e608f69450e1c37"
+    },
+    {
+      "index": 14,
+      "raw_ax_sha256": "d8166d29c5f5a06cbb2dd725b12193d7eaf04db6d0ac57a36e608f69450e1c37"
+    },
+    {
+      "index": 15,
+      "raw_ax_sha256": "86dc8513a435c31c7f5d6d7f53188532814563d452f43e10584c0e88f335ca67"
+    },
+    {
+      "index": 16,
+      "raw_ax_sha256": "825fa7507a23b96c78f0b6fa6e7a35095a5dc79b47975c56901b979b186da0c3"
+    },
+    {
+      "index": 17,
+      "raw_ax_sha256": "26af80d552f97757ecc8f983c19380b672c0cd270cd13ae4d017dfcbf5680517"
+    },
+    {
+      "index": 18,
+      "raw_ax_sha256": "26af80d552f97757ecc8f983c19380b672c0cd270cd13ae4d017dfcbf5680517"
+    },
+    {
+      "index": 19,
+      "raw_ax_sha256": "26af80d552f97757ecc8f983c19380b672c0cd270cd13ae4d017dfcbf5680517"
+    },
+    {
+      "index": 20,
+      "raw_ax_sha256": "26af80d552f97757ecc8f983c19380b672c0cd270cd13ae4d017dfcbf5680517"
+    }
+  ],
+  "scope": "Original capture log and action log appended without overwriting; reviewed exact AX ranges select ordinary public evidence. Inventory checkpoints are separate JSON files."
+}
