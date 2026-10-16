@@ -31,7 +31,7 @@ def run(s,execute=False):
     if not p.exists():prepare(s)
     if (p/'execution-start.json').exists() or (p/'run-started.json').exists():raise ValueError('Refuse result-based rerun')
     save(p/'run-started.json',{'at':now(),'registration_commit':registration['commit'],'slot':s})
-    for source in (Path(__file__),ROOT/'scripts/run_codex_pilot.py',ROOT/'scripts/run_dsh_sdk_pilot.py',ROOT/'scripts/run_dsh_multiturn_pilot.py',ROOT/'scripts/run_dsh_pilot.py'):
+    for source in (Path(__file__),ROOT/'scripts/run_codex_pilot.py',ROOT/'scripts/run_dsh_sdk_pilot.py',ROOT/'scripts/run_dsh_multiturn_pilot.py',ROOT/'scripts/run_dsh_pilot.py',ROOT/'scripts/filter_contract_native.py'):
         shutil.copyfile(source,p/'prepare-source'/source.name)
     prompt=(p/'submitted-prompt.txt').read_text(encoding='utf-8');budget=read(BASE/'protocol.json')['timeout_seconds']
     if spec['product_id']=='codex':
