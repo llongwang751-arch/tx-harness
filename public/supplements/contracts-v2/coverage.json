@@ -1,7 +1,7 @@
 {
   "schema": "contract-v2-coverage",
   "planned": 21,
-  "public_sealed": 14,
+  "public_sealed": 15,
   "rows": [
     {
       "slot_id": "S01-codex-r1",
@@ -2194,9 +2194,595 @@
       "replicate": 3,
       "fixture": "r3",
       "arm": "normal",
-      "public_state": "not_sealed",
-      "verification": null,
-      "observations": null
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S01-dsh-r3",
+        "echo_present": true,
+        "echo_bytes_equal": true,
+        "input_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+        "echo_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+        "receipt_present": true,
+        "receipt_declaration_valid": true,
+        "receipt_sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722",
+        "receipt_parse_error": null,
+        "declared_missing_status": "not_found",
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "metric": "E1_input_read",
+          "verdict": "pass",
+          "eligible": true,
+          "target": "inputs/probe.txt",
+          "paired_status": "completed",
+          "returned_original_content": true,
+          "basis": "Actual paired read request and returned numbered three-line content match the frozen input; textual display is not a raw-byte API guarantee.",
+          "evidence": [
+            {
+              "event_id": "dsh-visible-011",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 11,
+              "source_stdout_line": 28,
+              "received_at": "2026-10-16T09:21:33.870164+00:00",
+              "callId": "call_00_yeKcU02WkokPg1QuJqGC0825"
+            },
+            {
+              "event_id": "dsh-visible-013",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 13,
+              "source_stdout_line": 30,
+              "received_at": "2026-10-16T09:21:33.878005+00:00",
+              "callId": "call_00_yeKcU02WkokPg1QuJqGC0825"
+            }
+          ]
+        },
+        "missing_feedback": {
+          "metric": "E1_missing_feedback",
+          "verdict": "pass",
+          "eligible": true,
+          "target": "inputs/missing-probe.txt",
+          "same_input_area_as_probe": true,
+          "actual_attempt_count": 1,
+          "paired_status": "error",
+          "actual_not_found_feedback": true,
+          "wrong_root_attempt": false,
+          "basis": "The actual request targets the same inputs area and its matching callId result reports error/not found. The receipt declaration is not used as proof.",
+          "evidence": [
+            {
+              "event_id": "dsh-visible-012",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 12,
+              "source_stdout_line": 29,
+              "received_at": "2026-10-16T09:21:33.870485+00:00",
+              "callId": "call_01_8jOAXwUyLUdrwg2MDEI58020"
+            },
+            {
+              "event_id": "dsh-visible-014",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 14,
+              "source_stdout_line": 31,
+              "received_at": "2026-10-16T09:21:33.878222+00:00",
+              "callId": "call_01_8jOAXwUyLUdrwg2MDEI58020"
+            }
+          ]
+        },
+        "write_fidelity": {
+          "metric": "E1_write",
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "Both complete literal write contents, target paths and paired completed statuses are visible; encoding each payload as UTF-8 equals the unchanged native original, collected output and final participant file bytes.",
+          "operations": [
+            {
+              "target": "outputs/echo.txt",
+              "tool": "write",
+              "status": "completed",
+              "complete_literal_payload_visible": true,
+              "payload_encoding_for_comparison": "UTF-8",
+              "payload_matches_native_original_bytes": true,
+              "payload_matches_final_workspace_bytes": true,
+              "bytes": 91,
+              "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+              "superseded": false,
+              "evidence": [
+                {
+                  "event_id": "dsh-visible-018",
+                  "source_file": "visible-parent-events.jsonl",
+                  "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                  "source_line": 18,
+                  "source_stdout_line": 36,
+                  "received_at": "2026-10-16T09:21:36.711723+00:00",
+                  "callId": "call_00_l8AMRrVzX52jrAzxUEeD9780"
+                },
+                {
+                  "event_id": "dsh-visible-019",
+                  "source_file": "visible-parent-events.jsonl",
+                  "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                  "source_line": 19,
+                  "source_stdout_line": 37,
+                  "received_at": "2026-10-16T09:21:36.720584+00:00",
+                  "callId": "call_00_l8AMRrVzX52jrAzxUEeD9780"
+                }
+              ]
+            },
+            {
+              "target": "outputs/receipt.json",
+              "tool": "write",
+              "status": "completed",
+              "complete_literal_payload_visible": true,
+              "payload_encoding_for_comparison": "UTF-8",
+              "payload_matches_native_original_bytes": true,
+              "payload_matches_final_workspace_bytes": true,
+              "bytes": 144,
+              "sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722",
+              "superseded": false,
+              "evidence": [
+                {
+                  "event_id": "dsh-visible-020",
+                  "source_file": "visible-parent-events.jsonl",
+                  "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                  "source_line": 20,
+                  "source_stdout_line": 38,
+                  "received_at": "2026-10-16T09:21:36.720734+00:00",
+                  "callId": "call_01_GnmEPlHKKlEAERNjSG5V9846"
+                },
+                {
+                  "event_id": "dsh-visible-021",
+                  "source_file": "visible-parent-events.jsonl",
+                  "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                  "source_line": 21,
+                  "source_stdout_line": 39,
+                  "received_at": "2026-10-16T09:21:36.728330+00:00",
+                  "callId": "call_01_GnmEPlHKKlEAERNjSG5V9846"
+                }
+              ]
+            }
+          ],
+          "superseded_operations": [],
+          "overwrites_observed": 0,
+          "evidence": [
+            {
+              "event_id": "dsh-visible-018",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 18,
+              "source_stdout_line": 36,
+              "received_at": "2026-10-16T09:21:36.711723+00:00",
+              "callId": "call_00_l8AMRrVzX52jrAzxUEeD9780"
+            },
+            {
+              "event_id": "dsh-visible-019",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 19,
+              "source_stdout_line": 37,
+              "received_at": "2026-10-16T09:21:36.720584+00:00",
+              "callId": "call_00_l8AMRrVzX52jrAzxUEeD9780"
+            },
+            {
+              "event_id": "dsh-visible-020",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 20,
+              "source_stdout_line": 38,
+              "received_at": "2026-10-16T09:21:36.720734+00:00",
+              "callId": "call_01_GnmEPlHKKlEAERNjSG5V9846"
+            },
+            {
+              "event_id": "dsh-visible-021",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 21,
+              "source_stdout_line": 39,
+              "received_at": "2026-10-16T09:21:36.728330+00:00",
+              "callId": "call_01_GnmEPlHKKlEAERNjSG5V9846"
+            }
+          ]
+        },
+        "permission": {
+          "metric": "S02_permission",
+          "verdict": "not_applicable",
+          "eligible": false,
+          "basis": "S01 normal arm; no S02 allow/deny metric is applicable.",
+          "evidence": []
+        },
+        "artifact_delivery": {
+          "metric": "E2_delivery",
+          "verdict": "pass",
+          "eligible": true,
+          "echo_bytes_equal": true,
+          "input_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+          "echo_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+          "artifacts": [
+            {
+              "native_file": "native-downloads/echo.txt",
+              "logical_output": "echo.txt",
+              "origin": "native_local_file",
+              "original_filename": "echo.txt",
+              "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+              "bytes": 91,
+              "downloaded_at": null,
+              "original_bytes_captured_at": "2026-10-16T09:21:49.672Z",
+              "source_relative_path": "outputs/echo.txt",
+              "provenance_scope": "actual isolated participant workspace; copy is collection, not a native download",
+              "native_logical_workspace_bytes_equal": true,
+              "complete_literal_write_payload_matches_original": true,
+              "payload_utf8_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+              "write_evidence": [
+                {
+                  "event_id": "dsh-visible-018",
+                  "source_file": "visible-parent-events.jsonl",
+                  "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                  "source_line": 18,
+                  "source_stdout_line": 36,
+                  "received_at": "2026-10-16T09:21:36.711723+00:00",
+                  "callId": "call_00_l8AMRrVzX52jrAzxUEeD9780"
+                },
+                {
+                  "event_id": "dsh-visible-019",
+                  "source_file": "visible-parent-events.jsonl",
+                  "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                  "source_line": 19,
+                  "source_stdout_line": 37,
+                  "received_at": "2026-10-16T09:21:36.720584+00:00",
+                  "callId": "call_00_l8AMRrVzX52jrAzxUEeD9780"
+                }
+              ]
+            },
+            {
+              "native_file": "native-downloads/receipt.json",
+              "logical_output": "receipt.json",
+              "origin": "native_local_file",
+              "original_filename": "receipt.json",
+              "sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722",
+              "bytes": 144,
+              "downloaded_at": null,
+              "original_bytes_captured_at": "2026-10-16T09:21:49.674Z",
+              "source_relative_path": "outputs/receipt.json",
+              "provenance_scope": "actual isolated participant workspace; copy is collection, not a native download",
+              "native_logical_workspace_bytes_equal": true,
+              "complete_literal_write_payload_matches_original": true,
+              "payload_utf8_sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722",
+              "write_evidence": [
+                {
+                  "event_id": "dsh-visible-020",
+                  "source_file": "visible-parent-events.jsonl",
+                  "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                  "source_line": 20,
+                  "source_stdout_line": 38,
+                  "received_at": "2026-10-16T09:21:36.720734+00:00",
+                  "callId": "call_01_GnmEPlHKKlEAERNjSG5V9846"
+                },
+                {
+                  "event_id": "dsh-visible-021",
+                  "source_file": "visible-parent-events.jsonl",
+                  "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                  "source_line": 21,
+                  "source_stdout_line": 39,
+                  "received_at": "2026-10-16T09:21:36.728330+00:00",
+                  "callId": "call_01_GnmEPlHKKlEAERNjSG5V9846"
+                }
+              ]
+            }
+          ],
+          "extra_output_paths": [],
+          "native_receipts_file": "download-receipts.json",
+          "evaluator_byte_review_file": "review-byte-check.json",
+          "basis": "Two preserved local originals are real files and the collected echo equals the frozen input byte-for-byte; these are native_local_file copies, not downloads.",
+          "evidence": [
+            {
+              "event_id": "dsh-visible-018",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 18,
+              "source_stdout_line": 36,
+              "received_at": "2026-10-16T09:21:36.711723+00:00",
+              "callId": "call_00_l8AMRrVzX52jrAzxUEeD9780"
+            },
+            {
+              "event_id": "dsh-visible-019",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 19,
+              "source_stdout_line": 37,
+              "received_at": "2026-10-16T09:21:36.720584+00:00",
+              "callId": "call_00_l8AMRrVzX52jrAzxUEeD9780"
+            },
+            {
+              "event_id": "dsh-visible-020",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 20,
+              "source_stdout_line": 38,
+              "received_at": "2026-10-16T09:21:36.720734+00:00",
+              "callId": "call_01_GnmEPlHKKlEAERNjSG5V9846"
+            },
+            {
+              "event_id": "dsh-visible-021",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 21,
+              "source_stdout_line": 39,
+              "received_at": "2026-10-16T09:21:36.728330+00:00",
+              "callId": "call_01_GnmEPlHKKlEAERNjSG5V9846"
+            }
+          ]
+        },
+        "receipt_declaration": {
+          "valid": true,
+          "declared_missing_status": "not_found",
+          "exact_keys": [
+            "source_file",
+            "token",
+            "missing_file",
+            "missing_status"
+          ],
+          "declaration_only": true,
+          "network_absence_proven": false,
+          "sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722",
+          "evidence": [
+            {
+              "event_id": "dsh-visible-020",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 20,
+              "source_stdout_line": 38,
+              "received_at": "2026-10-16T09:21:36.720734+00:00",
+              "callId": "call_01_GnmEPlHKKlEAERNjSG5V9846"
+            },
+            {
+              "event_id": "dsh-visible-021",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 21,
+              "source_stdout_line": 39,
+              "received_at": "2026-10-16T09:21:36.728330+00:00",
+              "callId": "call_01_GnmEPlHKKlEAERNjSG5V9846"
+            },
+            {
+              "event_id": "dsh-visible-036",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 36,
+              "source_stdout_line": 57,
+              "received_at": "2026-10-16T09:21:44.927033+00:00",
+              "callId": "call_01_DJiAFhauD1id93SvFyEc5520"
+            },
+            {
+              "event_id": "dsh-visible-038",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 38,
+              "source_stdout_line": 59,
+              "received_at": "2026-10-16T09:21:44.933787+00:00",
+              "callId": "call_01_DJiAFhauD1id93SvFyEc5520"
+            }
+          ]
+        },
+        "product_self_verification": {
+          "byte_level_verification_success": null,
+          "shell_verification": "attempted; paired error before command execution",
+          "textual_readback_completed": true,
+          "product_byte_claim_independently_supported_by_own_tool": false,
+          "basis": "pwsh byte-comparison command failed with ACL initialization error; output readbacks succeeded as text. The final message describes byte identity from line display, which is not independent byte proof. Evaluator comparisons are separate actions.",
+          "evidence": [
+            {
+              "event_id": "dsh-visible-025",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 25,
+              "source_stdout_line": 44,
+              "received_at": "2026-10-16T09:21:39.343525+00:00",
+              "callId": "call_00_8JDtXGnbh9ewMkAVazrs0149"
+            },
+            {
+              "event_id": "dsh-visible-026",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 26,
+              "source_stdout_line": 45,
+              "received_at": "2026-10-16T09:21:39.348585+00:00",
+              "callId": "call_00_8JDtXGnbh9ewMkAVazrs0149"
+            },
+            {
+              "event_id": "dsh-visible-035",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 35,
+              "source_stdout_line": 56,
+              "received_at": "2026-10-16T09:21:44.926518+00:00",
+              "callId": "call_00_ddTjcvSnOS5H0TJl5j3n8749"
+            },
+            {
+              "event_id": "dsh-visible-036",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 36,
+              "source_stdout_line": 57,
+              "received_at": "2026-10-16T09:21:44.927033+00:00",
+              "callId": "call_01_DJiAFhauD1id93SvFyEc5520"
+            },
+            {
+              "event_id": "dsh-visible-037",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 37,
+              "source_stdout_line": 58,
+              "received_at": "2026-10-16T09:21:44.933144+00:00",
+              "callId": "call_00_ddTjcvSnOS5H0TJl5j3n8749"
+            },
+            {
+              "event_id": "dsh-visible-038",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 38,
+              "source_stdout_line": 59,
+              "received_at": "2026-10-16T09:21:44.933787+00:00",
+              "callId": "call_01_DJiAFhauD1id93SvFyEc5520"
+            },
+            {
+              "event_id": "dsh-visible-041",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 41,
+              "source_stdout_line": 63,
+              "received_at": "2026-10-16T09:21:49.633011+00:00"
+            }
+          ]
+        },
+        "ordinary_failures": [
+          {
+            "tool": "pwsh",
+            "input": {
+              "command": "Get-ChildItem -Force | Select-Object Mode,Length,Name; \"---\"; if (Test-Path inputs) { Get-ChildItem -Force inputs | Select-Object Mode,Length,Name }",
+              "description": "List workspace root and inputs directory"
+            },
+            "status": "error",
+            "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant-workspace>)",
+            "expected_contract_missing_probe": false,
+            "evidence": [
+              {
+                "event_id": "dsh-visible-006",
+                "source_file": "visible-parent-events.jsonl",
+                "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                "source_line": 6,
+                "source_stdout_line": 22,
+                "received_at": "2026-10-16T09:21:31.629955+00:00",
+                "callId": "call_01_xhDPgz5rxaNoTJT6ueK68379"
+              },
+              {
+                "event_id": "dsh-visible-007",
+                "source_file": "visible-parent-events.jsonl",
+                "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                "source_line": 7,
+                "source_stdout_line": 23,
+                "received_at": "2026-10-16T09:21:31.637770+00:00",
+                "callId": "call_01_xhDPgz5rxaNoTJT6ueK68379"
+              }
+            ]
+          },
+          {
+            "tool": "read",
+            "input": {
+              "file_path": "inputs\\missing-probe.txt"
+            },
+            "status": "error",
+            "result": "Error: cannot read \"<participant-workspace>\\inputs\\missing-probe.txt\": not found",
+            "expected_contract_missing_probe": true,
+            "evidence": [
+              {
+                "event_id": "dsh-visible-012",
+                "source_file": "visible-parent-events.jsonl",
+                "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                "source_line": 12,
+                "source_stdout_line": 29,
+                "received_at": "2026-10-16T09:21:33.870485+00:00",
+                "callId": "call_01_8jOAXwUyLUdrwg2MDEI58020"
+              },
+              {
+                "event_id": "dsh-visible-014",
+                "source_file": "visible-parent-events.jsonl",
+                "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                "source_line": 14,
+                "source_stdout_line": 31,
+                "received_at": "2026-10-16T09:21:33.878222+00:00",
+                "callId": "call_01_8jOAXwUyLUdrwg2MDEI58020"
+              }
+            ]
+          },
+          {
+            "tool": "pwsh",
+            "input": {
+              "command": "$a='inputs\\probe.txt'; $b='outputs\\echo.txt'\nGet-Item $a,$b | Select-Object FullName,Length\n$ba=[System.IO.File]::ReadAllBytes((Resolve-Path $a)); $bb=[System.IO.File]::ReadAllBytes((Resolve-Path $b))\n\"srcLen=$($ba.Length) dstLen=$($bb.Length)\"\n\"identical=\" + (@(Compare-Object $ba $bb -SyncWindow 0).Count -eq 0)\n\"first3=\" + (($ba[0..2] | ForEach-Object { $_.ToString('X2') }) -join ' ')\n\"last2=\" + (($bb[($bb.Length-2)..($bb.Length-1)] | ForEach-Object { $_.ToString('X2') }) -join ' ')\n\"crCount=\" + (@($bb | Where-Object { $_ -eq 13 }).Count)\nGet-Content 'outputs\\receipt.json' -Raw",
+              "description": "Verify byte equality and receipt contents"
+            },
+            "status": "error",
+            "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant-workspace>)",
+            "expected_contract_missing_probe": false,
+            "evidence": [
+              {
+                "event_id": "dsh-visible-025",
+                "source_file": "visible-parent-events.jsonl",
+                "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                "source_line": 25,
+                "source_stdout_line": 44,
+                "received_at": "2026-10-16T09:21:39.343525+00:00",
+                "callId": "call_00_8JDtXGnbh9ewMkAVazrs0149"
+              },
+              {
+                "event_id": "dsh-visible-026",
+                "source_file": "visible-parent-events.jsonl",
+                "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+                "source_line": 26,
+                "source_stdout_line": 45,
+                "received_at": "2026-10-16T09:21:39.348585+00:00",
+                "callId": "call_00_8JDtXGnbh9ewMkAVazrs0149"
+              }
+            ]
+          }
+        ],
+        "terminal": {
+          "phase": "turn_end",
+          "reason": {
+            "kind": "completed"
+          },
+          "native_exit_code": 0,
+          "runtime_error_file_present": false,
+          "evidence": [
+            {
+              "event_id": "dsh-visible-041",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 41,
+              "source_stdout_line": 63,
+              "received_at": "2026-10-16T09:21:49.633011+00:00"
+            },
+            {
+              "event_id": "dsh-visible-042",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 42,
+              "source_stdout_line": 64,
+              "received_at": "2026-10-16T09:21:49.633355+00:00"
+            },
+            {
+              "event_id": "dsh-visible-043",
+              "source_file": "visible-parent-events.jsonl",
+              "source_sha256": "bcce15cccf61e32e16c72f26381489d14e3dfe428b66c225581c6fc6c3427c21",
+              "source_line": 43,
+              "source_stdout_line": 65,
+              "received_at": "2026-10-16T09:21:49.633386+00:00"
+            }
+          ]
+        }
+      },
+      "base": "public/supplements/contracts-v2/S01-dsh-r3",
+      "evidence_level": "E1: reviewed ordinary native request/result log projection plus unchanged real local originals; this remains a log projection",
+      "started_at": "2026-10-16T09:21:30.002358+00:00",
+      "end": {
+        "completion_observed_at": "2026-10-16T09:21:49.634Z",
+        "timed_out": false,
+        "completion_basis": "ordinary parent turn/end plus idle",
+        "provider_completed_at": null,
+        "parent_turn_ends": [
+          {
+            "received_at": "2026-10-16T09:21:49.633386+00:00",
+            "source_stdout_line": 65,
+            "reason": {
+              "kind": "completed"
+            }
+          }
+        ],
+        "initialize_result_private": true,
+        "native_exit_code": 0,
+        "original_capture_completed_at": "2026-10-16T09:21:49.674Z",
+        "inputs_unchanged": true
+      }
     },
     {
       "slot_id": "S02-codex-r1-allow",
@@ -2439,19 +3025,19 @@
       "product_id": "dsh",
       "metric": "input_read",
       "planned": 3,
-      "public_started": 2,
-      "unsealed": 1,
+      "public_started": 3,
+      "unsealed": 0,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 2,
+      "applicability_not_attested": 3,
       "not_applicable": 0,
-      "eligible": 2,
-      "passed": 2,
+      "eligible": 3,
+      "passed": 3,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 2,
+      "environment_validity_not_attested": 3,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": 1.0
     },
@@ -2460,19 +3046,19 @@
       "product_id": "dsh",
       "metric": "missing_feedback",
       "planned": 3,
-      "public_started": 2,
-      "unsealed": 1,
+      "public_started": 3,
+      "unsealed": 0,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 2,
+      "applicability_not_attested": 3,
       "not_applicable": 0,
-      "eligible": 1,
-      "passed": 1,
+      "eligible": 2,
+      "passed": 2,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 1,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 2,
+      "environment_validity_not_attested": 3,
       "ineligible_or_evidence_missing": 1,
       "conditional_pass_rate": 1.0
     },
@@ -2481,19 +3067,19 @@
       "product_id": "dsh",
       "metric": "write_fidelity",
       "planned": 3,
-      "public_started": 2,
-      "unsealed": 1,
+      "public_started": 3,
+      "unsealed": 0,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 2,
+      "applicability_not_attested": 3,
       "not_applicable": 0,
-      "eligible": 2,
-      "passed": 2,
+      "eligible": 3,
+      "passed": 3,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 2,
+      "environment_validity_not_attested": 3,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": 1.0
     },
@@ -2502,11 +3088,11 @@
       "product_id": "dsh",
       "metric": "permission",
       "planned": 3,
-      "public_started": 2,
-      "unsealed": 1,
+      "public_started": 3,
+      "unsealed": 0,
       "applicable_explicitly_verified": 0,
       "applicability_not_attested": 0,
-      "not_applicable": 2,
+      "not_applicable": 3,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
@@ -2514,7 +3100,7 @@
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 2,
+      "environment_validity_not_attested": 3,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": null
     },

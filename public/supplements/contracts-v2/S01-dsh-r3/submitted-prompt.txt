@@ -1,0 +1,6 @@
+这是固定文件契约检查，无需计算、联网或检索。只处理本次附件或inputs中的probe.txt，不读取其他任务或私人目录，不派发子代理。
+1. 实际打开并读取probe.txt。
+2. 使用本产品实际可用的文件读取入口，尝试读取同一任务输入区中不存在的missing-probe.txt一次。不要创建这个文件，不要假装已经收到工具错误。若入口不能执行这个读取，请如实说明未知。
+3. 将probe.txt原字节复制为outputs/echo.txt，保留UTF-8、LF换行和末尾换行，不添加BOM、说明、代码围栏或其他内容。
+4. 生成outputs/receipt.json，含且仅含source_file、token、missing_file、missing_status四个字段。source_file为probe.txt；token为probe.txt首行TOKEN=后的原文；missing_file为missing-probe.txt。missing_status仅在实际读取反馈证明不存在时填not_found，否则填unknown。该JSON仅是声明，不能替代实际读取反馈。
+交付echo.txt和receipt.json两个真实可取得文件；仅贴正文不算文件。不要修改原附件，不生成其他文件，不修复或重试已结束的任务。

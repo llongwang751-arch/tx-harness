@@ -1,0 +1,19 @@
+{
+  "download-receipts.json": "675dea80dea7ebdd31d56ad7c0a7285ece1f5e8a87318a97ab762f1d19460847",
+  "execution-end.json": "fa0ff125a1d4d42864cce6af1a1740f35ba936abfc9427b88f5689c9ac02fbde",
+  "execution-start.json": "71bddd240c1105ef78bd1ba8aac7783784b3f72446dd78b6fac2a3a18aa7d048",
+  "independent-verification.json": "9b5a522f090aa5814d329c6dc107012f894d1784ecad9f3f6c655a046835cc24",
+  "inputs/probe.txt": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+  "metadata.json": "da8dcbe833613e23d595589db7d5f3a81affec6eec7fd15fac9389268a5c0d79",
+  "native-downloads/echo.txt": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+  "native-downloads/receipt.json": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722",
+  "outputs/echo.txt": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+  "outputs/receipt.json": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722",
+  "plan.json": "c708df145631079e75f674a769464184239bf2d6730570e101ade64aaeff6e81",
+  "README.md": "dae29b0c0b23d46e93b86bb5c8db12a82ae462335db8b03f937891fd24f997b4",
+  "review.json": "0c045c7523ff643cf3c4286b05b57738dada978dec64d09ce73835c7824a37ec",
+  "reviewed-native-events.jsonl": "a83bd4bd0e2b8015fd37dbf24c0611f6617cc24a11c520d358868664c8d4e800",
+  "submitted-prompt.txt": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e",
+  "verification.json": "9b5a522f090aa5814d329c6dc107012f894d1784ecad9f3f6c655a046835cc24",
+  "visible-events.jsonl": "a83bd4bd0e2b8015fd37dbf24c0611f6617cc24a11c520d358868664c8d4e800"
+}
