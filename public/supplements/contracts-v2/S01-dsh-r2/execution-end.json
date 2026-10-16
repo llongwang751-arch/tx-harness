@@ -1,0 +1,19 @@
+{
+  "completion_observed_at": "2026-10-16T09:14:20.666Z",
+  "timed_out": false,
+  "completion_basis": "ordinary parent turn/end plus idle",
+  "provider_completed_at": null,
+  "parent_turn_ends": [
+    {
+      "received_at": "2026-10-16T09:14:20.665511+00:00",
+      "source_stdout_line": 77,
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  ],
+  "initialize_result_private": true,
+  "native_exit_code": 0,
+  "original_capture_completed_at": "2026-10-16T09:14:20.701Z",
+  "inputs_unchanged": true
+}

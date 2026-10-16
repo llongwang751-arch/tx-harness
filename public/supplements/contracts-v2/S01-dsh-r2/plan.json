@@ -1,0 +1,29 @@
+{
+  "schema": "contract-v2-preparation",
+  "slot": {
+    "slot_id": "S01-dsh-r2",
+    "card": "S01",
+    "product_id": "dsh",
+    "replicate": 2,
+    "fixture": "r2",
+    "arm": "normal"
+  },
+  "prepared_at": "2026-10-16T09:13:39.166Z",
+  "registration_sha256": "d7ba2f1b3d92a0cc9b7bc2511cfcfed0739dfacf148bd8146c87fd00bb6f50d9",
+  "fixture_sha256": {
+    "probe.txt": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+    "prompt.txt": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e"
+  },
+  "initial_workspace": {
+    "inputs/probe.txt": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+    "prompt.md": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e"
+  },
+  "model_execution_started": false,
+  "missing_file_absent_locally": true,
+  "redaction": {
+    "removed_fields": [
+      "workspace"
+    ],
+    "original_private_plan_sha256": "566c18c0242fcc3960525ca5a466133a216377faf3ec85c2bc92fcd95e12cc7f"
+  }
+}
