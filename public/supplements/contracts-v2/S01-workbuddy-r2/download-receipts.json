@@ -1,0 +1,77 @@
+{
+  "artifacts": [
+    {
+      "native_file": "native-downloads/echo.txt",
+      "logical_output": "echo.txt",
+      "origin": "native_local_file",
+      "original_filename": "echo.txt",
+      "sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+      "bytes": 91,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T08:19:40.150Z",
+      "native_save_action_at": null,
+      "native_save_action": null,
+      "native_evidence": {
+        "workspace_selection_capture": "workspace-bound-fresh",
+        "workspace_selection_ax": "015-workspace-bound-fresh.ax.txt",
+        "workspace_selection_lines": [
+          108,
+          109
+        ],
+        "original_path_evidence": "Private 013-folder-path-confirmed.ax.txt location proof; public workspace-bound-fresh selection identifies this experiment directory.",
+        "capture": "r2-progress-2",
+        "ax": "021-r2-progress-2.ax.txt",
+        "line_ranges": [
+          [
+            115,
+            121
+          ]
+        ],
+        "ordinary_output_reference": "023-final-layout-fresh.ax.txt lines 143-144 refer to outputs/",
+        "basis": "Files read unchanged only from outputs/ in the native-selected authorized r2 workspace; no native Download or operator Save action"
+      },
+      "logical_output_mapping": "outputs/echo.txt",
+      "source_relative_path": "outputs/echo.txt",
+      "source_absolute_path_visibility": "Original absolute workspace source and raw native location proof retained in the private original receipt."
+    },
+    {
+      "native_file": "native-downloads/receipt.json",
+      "logical_output": "receipt.json",
+      "origin": "native_local_file",
+      "original_filename": "receipt.json",
+      "sha256": "c9a4c0f3f6c51328a7b10f16257323db6d7cbe9a96218064a75ef87cf66fcb61",
+      "bytes": 144,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T08:19:40.154Z",
+      "native_save_action_at": null,
+      "native_save_action": null,
+      "native_evidence": {
+        "workspace_selection_capture": "workspace-bound-fresh",
+        "workspace_selection_ax": "015-workspace-bound-fresh.ax.txt",
+        "workspace_selection_lines": [
+          108,
+          109
+        ],
+        "original_path_evidence": "Private 013-folder-path-confirmed.ax.txt location proof; public workspace-bound-fresh selection identifies this experiment directory.",
+        "capture": "r2-progress-2",
+        "ax": "021-r2-progress-2.ax.txt",
+        "line_ranges": [
+          [
+            115,
+            121
+          ]
+        ],
+        "ordinary_output_reference": "023-final-layout-fresh.ax.txt lines 143-144 refer to outputs/",
+        "basis": "Files read unchanged only from outputs/ in the native-selected authorized r2 workspace; no native Download or operator Save action"
+      },
+      "logical_output_mapping": "outputs/receipt.json",
+      "source_relative_path": "outputs/receipt.json",
+      "source_absolute_path_visibility": "Original absolute workspace source and raw native location proof retained in the private original receipt."
+    }
+  ],
+  "root_publication_projection": {
+    "at": "2026-10-16T08:24:39.116Z",
+    "original_private_record_sha256": "07b6d8f2501244317c15d854db08accb9c4f69a32c4256630222a6f28e896a62",
+    "basis": "native_file now points to already retained unchanged evidence original, not the absolute participant source. Absolute source text kept private; original bytes and timestamps unchanged."
+  }
+}

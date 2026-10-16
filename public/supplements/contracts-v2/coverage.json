@@ -1,7 +1,7 @@
 {
   "schema": "contract-v2-coverage",
   "planned": 21,
-  "public_sealed": 7,
+  "public_sealed": 8,
   "rows": [
     {
       "slot_id": "S01-codex-r1",
@@ -762,9 +762,79 @@
       "replicate": 2,
       "fixture": "r2",
       "arm": "normal",
-      "public_state": "not_sealed",
-      "verification": null,
-      "observations": null
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S01-workbuddy-r2",
+        "echo_present": true,
+        "echo_bytes_equal": true,
+        "input_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+        "echo_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+        "receipt_present": true,
+        "receipt_declaration_valid": true,
+        "receipt_sha256": "c9a4c0f3f6c51328a7b10f16257323db6d7cbe9a96218064a75ef87cf66fcb61",
+        "receipt_parse_error": null,
+        "declared_missing_status": "not_found",
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "Ordinary final states successful input read and shows the correct token; actual request parameters and returned contents are not independently visible. E2 echo original bytes independently equal the input.",
+          "evidence": [
+            "025-final-start-fresh.ax.txt lines 93-96: ordinary final declaration",
+            "independent-verification.json: echo_bytes_equal true"
+          ]
+        },
+        "missing_feedback": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "Ordinary final quotes File does not exist and declares one attempt; no independent native read request/result pair with error status is visible. Receipt not_found is a declaration.",
+          "evidence": [
+            "025-final-start-fresh.ax.txt lines 99-106: ordinary final declaration",
+            "outputs/receipt.json: missing_status not_found; declaration only"
+          ]
+        },
+        "write_fidelity": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "Complete literal write payload and actual target parameters are unavailable. Separate E2 acceptance confirms delivered echo bytes exactly equal the original input.",
+          "evidence": [
+            "025-final-start-fresh.ax.txt lines 109-120: ordinary final declaration",
+            "023-final-layout-fresh.ax.txt lines 152-158: authentic file cards",
+            "download-receipts.json",
+            "independent-verification.json"
+          ]
+        },
+        "permission": {
+          "verdict": "not_applicable",
+          "eligible": false,
+          "basis": "S01 normal arm, not the paired S02 permission experiment. Visible 允许完全访问 label does not establish sandbox enforcement.",
+          "evidence": [
+            "015-workspace-bound-fresh.ax.txt line 109: visible permission label only"
+          ]
+        }
+      },
+      "base": "public/supplements/contracts-v2/S01-workbuddy-r2",
+      "evidence_level": "E2 ordinary native UI plus unchanged native_local_file originals; internal operations and backend unverified",
+      "started_at": "2026-10-16T08:18:03.571Z",
+      "end": {
+        "completion_observed_at": "2026-10-16T08:19:06.536Z",
+        "completion_basis": "r2-progress-2 ordinary final answer, two authentic native file cards (echo.txt 91 B, receipt.json 144 B), final toolbar and disabled Send; Stop absent",
+        "timed_out": false,
+        "provider_completed_at": null,
+        "original_capture_completed_at": "2026-10-16T08:19:40.158Z",
+        "collector_outage": false,
+        "budget_observation_valid": true,
+        "elapsed_to_completion_observation_seconds": 62.965,
+        "limitations": [
+          "Owned folder dialog multi-region screenshots rejected single-image API during preparation only; raw official displayed regions remain in tool transcript and AX/error receipts retained.",
+          "Actual read/write parameters and tool return status not independently visible.",
+          "Provider completion timestamp unknown; ordinary completion observation and byte capture times distinct."
+        ]
+      }
     },
     {
       "slot_id": "S01-workbuddy-r3",
@@ -1168,20 +1238,20 @@
       "product_id": "workbuddy",
       "metric": "input_read",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 1,
+      "applicability_not_attested": 2,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 1,
+      "unknown_verdict": 2,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
-      "ineligible_or_evidence_missing": 1,
+      "environment_validity_not_attested": 2,
+      "ineligible_or_evidence_missing": 2,
       "conditional_pass_rate": null
     },
     {
@@ -1189,20 +1259,20 @@
       "product_id": "workbuddy",
       "metric": "missing_feedback",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 1,
+      "applicability_not_attested": 2,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 1,
+      "unknown_verdict": 2,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
-      "ineligible_or_evidence_missing": 1,
+      "environment_validity_not_attested": 2,
+      "ineligible_or_evidence_missing": 2,
       "conditional_pass_rate": null
     },
     {
@@ -1210,20 +1280,20 @@
       "product_id": "workbuddy",
       "metric": "write_fidelity",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 1,
+      "applicability_not_attested": 2,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 1,
+      "unknown_verdict": 2,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
-      "ineligible_or_evidence_missing": 1,
+      "environment_validity_not_attested": 2,
+      "ineligible_or_evidence_missing": 2,
       "conditional_pass_rate": null
     },
     {
@@ -1231,11 +1301,11 @@
       "product_id": "workbuddy",
       "metric": "permission",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
       "applicability_not_attested": 0,
-      "not_applicable": 1,
+      "not_applicable": 2,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
@@ -1243,7 +1313,7 @@
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
+      "environment_validity_not_attested": 2,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": null
     },

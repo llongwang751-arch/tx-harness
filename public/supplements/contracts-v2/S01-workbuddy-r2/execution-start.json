@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-10-16T08:18:03.571Z",
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "start_basis": "operator native action timestamp; precise service receipt unknown",
+  "surface": "WorkBuddy native desktop new task",
+  "visible_model": "Deepseek-V4.1-Flash",
+  "visible_mode": "办公",
+  "visible_version": "V5.8.2",
+  "visible_permission": "允许完全访问",
+  "input_transport": "native_workspace_inputs",
+  "workspace_name": "contract-v2-S01-workbuddy-r2",
+  "time_budget_seconds": 1200
+}

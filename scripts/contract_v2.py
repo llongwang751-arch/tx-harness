@@ -94,6 +94,7 @@ def export(s):
                     safe_public_text(lines[n-1]);labels.append({'source_line':n,'text':lines[n-1]})
             records.append({'event_id':f"ui-{c['index']}",'received_at':c['at'],'capture':c['label'],
                 'private_ax_sha256':sha(source),'labels':labels})
+        records.sort(key=lambda item:(item['received_at'],item['event_id']))
     elif (p/'reviewed-native-events.jsonl').is_file():
         for line in (p/'reviewed-native-events.jsonl').read_text(encoding='utf-8').splitlines():
             safe_public_text(line);records.append(json.loads(line))
