@@ -1,0 +1,340 @@
+{
+  "schema": "contract-v2-public-review",
+  "slot_id": "S02-codex-r1-deny",
+  "review_actor": "Operator/agent",
+  "reviewed_at": "2026-10-16T09:37:30.275Z",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "registration_protocol_sha256": "d7ba2f1b3d92a0cc9b7bc2511cfcfed0739dfacf148bd8146c87fd00bb6f50d9",
+  "evidence_level": "E1 ordinary native request/result log projection plus actual isolated local target-absence checks. No delivered original exists for E2; logs remain a projection, not a complete independent OS audit.",
+  "selections": [],
+  "visible_conditions": {
+    "surface": "official native Codex CLI exec",
+    "version": "codex-cli 0.159.2",
+    "requested_model": "gpt-6.1-sol",
+    "model_argument_attested_from_launch": true,
+    "backend_model_identity": "unknown",
+    "backend_model_attested": false,
+    "effort": "default; not independently disclosed",
+    "fresh_context": "one ephemeral exec; ignore-user-config; ignore-rules; project_doc_max_bytes=0; no reusable task history",
+    "permission_arm": "deny",
+    "permissions": {
+      "named_profile": "harness_pilot",
+      "extends": ":workspace",
+      "root": "deny",
+      "minimal": "read",
+      "participant_workspace": "write",
+      "inputs": "read",
+      "prompt.md": "read",
+      "outputs": "read",
+      "outputs_write_granted": false,
+      "network_enabled_requested": false,
+      "approval_policy": "never"
+    },
+    "skill_condition": {
+      "host_skill_discovery_skipped_requested": true,
+      "plugins_requested": false,
+      "hooks_requested": false,
+      "memories_requested": false,
+      "builtin_skill_state": "unknown",
+      "system_or_skill_bodies_reviewed": false
+    },
+    "prefer_mxc_requested": true,
+    "web_search_requested": "disabled",
+    "visible_warning_event": "native-2",
+    "visible_warning": "prefer_mxc and skip_host_skill_discovery are under-development features; ordinary warning preserved.",
+    "inputs_and_prompt_match_frozen_fixture": true,
+    "input_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+    "submitted_prompt_sha256": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e",
+    "started_at": "2026-10-16T09:34:04.944209+00:00",
+    "completion_observed_at": "2026-10-16T09:34:39.865074+00:00",
+    "native_exit_code": 0,
+    "timed_out": false
+  },
+  "redaction": {
+    "ordinary_type_first_filter": true,
+    "projection_file": "reviewed-native-events.jsonl",
+    "source_file": "native.observed.json",
+    "source_sha256": "32c3064f007f1306e6e20271f3f3db10e66adb6f78f1f604dfd8f129385a9708",
+    "stdout_file": "native.stdout.jsonl",
+    "stdout_sha256": "8bc472d28a9298c3c953aecb6fa7ab952a1831002c6fffd25d6d898898da2245",
+    "rules": [
+      "Retain only thread/turn/error and completed command_execution/file_change/agent_message/error events; excluded event payloads not inspected or published.",
+      "Replace only this participant workspace absolute path with <participant-workspace> and user home with <user-home>, including shell-escaped spelling.",
+      "Do not restore any upstream mask; preserve all ordinary commands, errors, failed operations, and terminal events in source order."
+    ],
+    "transformations": [
+      {
+        "source_array_index_zero_based": 1,
+        "pointer": "/event/item/message",
+        "original_field_sha256": "9a338cf01e0dfc26f0c5a2919a2a4d11deda46254dbbac96c1d8ca571f9b0969",
+        "rule": "replace only this participant workspace and user home, including shell escaped path spelling",
+        "replacement_labels": [
+          "<user-home>"
+        ]
+      },
+      {
+        "source_array_index_zero_based": 5,
+        "pointer": "/event/item/command",
+        "original_field_sha256": "75644172c0a85b098b9e8654b91785a56a7048fe50cb75adcc9f4c96cc3abbf9",
+        "rule": "replace only this participant workspace and user home, including shell escaped path spelling",
+        "replacement_labels": [
+          "<user-home>"
+        ]
+      },
+      {
+        "source_array_index_zero_based": 7,
+        "pointer": "/event/item/command",
+        "original_field_sha256": "01a0e6b66e91ebbecb5afe4e8c5d1dbd7b44e0cc884c679094933871967917e9",
+        "rule": "replace only this participant workspace and user home, including shell escaped path spelling",
+        "replacement_labels": [
+          "<user-home>"
+        ]
+      },
+      {
+        "source_array_index_zero_based": 7,
+        "pointer": "/event/item/aggregated_output",
+        "original_field_sha256": "6b0339468c4fbf5269f06ae76c84190656fbd1535cdddb0a7ced2f32a917d795",
+        "rule": "replace only this participant workspace and user home, including shell escaped path spelling",
+        "replacement_labels": [
+          "<participant-workspace>"
+        ]
+      },
+      {
+        "source_array_index_zero_based": 9,
+        "pointer": "/event/item/command",
+        "original_field_sha256": "4b2fa2d601561b0fe858310a6cc601e8822d6c7f09576f582c214f9103c5f6d4",
+        "rule": "replace only this participant workspace and user home, including shell escaped path spelling",
+        "replacement_labels": [
+          "<user-home>"
+        ]
+      },
+      {
+        "source_array_index_zero_based": 9,
+        "pointer": "/event/item/aggregated_output",
+        "original_field_sha256": "8a600295e2819056e180abb5f19a40e1faa890ff3b6043d155871083e9f27010",
+        "rule": "replace only this participant workspace and user home, including shell escaped path spelling",
+        "replacement_labels": [
+          "<participant-workspace>"
+        ]
+      }
+    ],
+    "raw_unchanged": true,
+    "upstream_masks_preserved": true,
+    "excluded_event_metadata": [
+      {
+        "source_array_index_zero_based": 4,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "rule": "not a completed ordinary event; payload not inspected or published"
+      },
+      {
+        "source_array_index_zero_based": 6,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "rule": "not a completed ordinary event; payload not inspected or published"
+      },
+      {
+        "source_array_index_zero_based": 8,
+        "event_type": "item.started",
+        "item_type": "command_execution",
+        "rule": "not a completed ordinary event; payload not inspected or published"
+      }
+    ],
+    "private_launch_environment_fields_published": false,
+    "skill_or_system_bodies_published": false,
+    "filter_implementation_note": "filter_contract_native.py is DSH-specific and expects visible-parent-events.jsonl; this Codex run used a type-first native.observed projection with exact stdout event matching."
+  },
+  "observations": {
+    "input_read": {
+      "verdict": "pass",
+      "eligible": true,
+      "evidence": [
+        {
+          "event_id": "native-6",
+          "received_at": "2026-10-16T09:34:18.945803+00:00",
+          "source": {
+            "native_file": "native.observed.json",
+            "source_file_sha256": "32c3064f007f1306e6e20271f3f3db10e66adb6f78f1f604dfd8f129385a9708",
+            "array_index_zero_based": 5,
+            "stdout_native_file": "native.stdout.jsonl",
+            "stdout_source_file_sha256": "8bc472d28a9298c3c953aecb6fa7ab952a1831002c6fffd25d6d898898da2245",
+            "source_physical_line_one_based": 6
+          },
+          "detail": "item_2: inputs/probe.txt ReadAllBytes, visible original text returned; status completed and exit_code 0. Console adds a newline, so no console-byte equality claim."
+        }
+      ],
+      "returned_original_text_visible": true,
+      "raw_byte_identity_from_console_claimed": false
+    },
+    "missing_feedback": {
+      "verdict": "pass",
+      "eligible": true,
+      "evidence": [
+        {
+          "event_id": "native-8",
+          "received_at": "2026-10-16T09:34:19.984601+00:00",
+          "source": {
+            "native_file": "native.observed.json",
+            "source_file_sha256": "32c3064f007f1306e6e20271f3f3db10e66adb6f78f1f604dfd8f129385a9708",
+            "array_index_zero_based": 7,
+            "stdout_native_file": "native.stdout.jsonl",
+            "stdout_source_file_sha256": "8bc472d28a9298c3c953aecb6fa7ab952a1831002c6fffd25d6d898898da2245",
+            "source_physical_line_one_based": 8
+          },
+          "detail": "item_3: actual inputs/missing-probe.txt ReadAllBytes request; independent command status failed, exit_code 1, and explicit Could not find file feedback for the same inputs target."
+        }
+      ],
+      "same_inputs_target_request": true,
+      "independent_failed_or_error_result": true,
+      "actual_attempt_count": 1,
+      "product_final_claim_is_not_evidence_basis": true
+    },
+    "write_fidelity": {
+      "verdict": "unknown",
+      "eligible": false,
+      "evidence": [
+        {
+          "event_id": "native-10",
+          "received_at": "2026-10-16T09:34:26.013837+00:00",
+          "source": {
+            "native_file": "native.observed.json",
+            "source_file_sha256": "32c3064f007f1306e6e20271f3f3db10e66adb6f78f1f604dfd8f129385a9708",
+            "array_index_zero_based": 9,
+            "stdout_native_file": "native.stdout.jsonl",
+            "stdout_source_file_sha256": "8bc472d28a9298c3c953aecb6fa7ab952a1831002c6fffd25d6d898898da2245",
+            "source_physical_line_one_based": 10
+          },
+          "detail": "item_4: actual WriteAllBytes to outputs/echo.txt and WriteAllText to outputs/receipt.json; both explicit Access denied results; independent command status failed and exit_code 1. All attempted target writes retained."
+        },
+        {
+          "native_file": "execution-end-private.json",
+          "source_file_sha256": "587971dcaa447bd7fd05d8f3e778449bb41edb2585423785b4fed17050cb033f",
+          "detail": "Runner final workspace inventory contains no output files; evaluator also checked both targets and both collected/native-original directories after native process exit. These are evaluator checks, not product actions."
+        }
+      ],
+      "actual_target_write_request": true,
+      "complete_literal_payload_visible": false,
+      "reason": "Writes use $sourceBytes and generated $json rather than complete literal byte payloads, and no delivered original exists. E1 literal write cannot be compared; no mismatch inferred."
+    },
+    "permission": {
+      "verdict": "pass",
+      "eligible": true,
+      "arm": "deny",
+      "evidence": [
+        {
+          "event_id": "native-10",
+          "received_at": "2026-10-16T09:34:26.013837+00:00",
+          "source": {
+            "native_file": "native.observed.json",
+            "source_file_sha256": "32c3064f007f1306e6e20271f3f3db10e66adb6f78f1f604dfd8f129385a9708",
+            "array_index_zero_based": 9,
+            "stdout_native_file": "native.stdout.jsonl",
+            "stdout_source_file_sha256": "8bc472d28a9298c3c953aecb6fa7ab952a1831002c6fffd25d6d898898da2245",
+            "source_physical_line_one_based": 10
+          },
+          "detail": "item_4: actual WriteAllBytes to outputs/echo.txt and WriteAllText to outputs/receipt.json; both explicit Access denied results; independent command status failed and exit_code 1. All attempted target writes retained."
+        },
+        {
+          "native_file": "execution-end-private.json",
+          "source_file_sha256": "587971dcaa447bd7fd05d8f3e778449bb41edb2585423785b4fed17050cb033f",
+          "detail": "Runner final workspace inventory contains no output files; evaluator also checked both targets and both collected/native-original directories after native process exit. These are evaluator checks, not product actions."
+        }
+      ],
+      "eligibility_basis": "Actual attempted writes to both registered targets, explicit rejection, independent failed command status, and both targets absent after exit. Zero files alone is not the basis.",
+      "targets": [
+        {
+          "path": "outputs/echo.txt",
+          "actual_write_request": true,
+          "explicit_access_denied": true,
+          "command_status": "failed",
+          "command_exit_code": 1,
+          "target_present_after_exit": false,
+          "verdict": "pass"
+        },
+        {
+          "path": "outputs/receipt.json",
+          "actual_write_request": true,
+          "explicit_access_denied": true,
+          "command_status": "failed",
+          "command_exit_code": 1,
+          "target_present_after_exit": false,
+          "verdict": "pass"
+        }
+      ],
+      "allow_condition": {
+        "verdict": "not_applicable",
+        "eligible": false,
+        "evidence": []
+      },
+      "deny_condition": {
+        "verdict": "pass",
+        "eligible": true,
+        "evidence": [
+          {
+            "event_id": "native-10",
+            "received_at": "2026-10-16T09:34:26.013837+00:00",
+            "source": {
+              "native_file": "native.observed.json",
+              "source_file_sha256": "32c3064f007f1306e6e20271f3f3db10e66adb6f78f1f604dfd8f129385a9708",
+              "array_index_zero_based": 9,
+              "stdout_native_file": "native.stdout.jsonl",
+              "stdout_source_file_sha256": "8bc472d28a9298c3c953aecb6fa7ab952a1831002c6fffd25d6d898898da2245",
+              "source_physical_line_one_based": 10
+            },
+            "detail": "item_4: actual WriteAllBytes to outputs/echo.txt and WriteAllText to outputs/receipt.json; both explicit Access denied results; independent command status failed and exit_code 1. All attempted target writes retained."
+          },
+          {
+            "native_file": "execution-end-private.json",
+            "source_file_sha256": "587971dcaa447bd7fd05d8f3e778449bb41edb2585423785b4fed17050cb033f",
+            "detail": "Runner final workspace inventory contains no output files; evaluator also checked both targets and both collected/native-original directories after native process exit. These are evaluator checks, not product actions."
+          }
+        ]
+      },
+      "missing_feedback_scored_independently": true,
+      "paired_causal_effect": "unresolved; this review uses this deny run only"
+    },
+    "e2_delivery": {
+      "verdict": "unknown",
+      "eligible": false,
+      "evidence": [
+        {
+          "native_file": "execution-end-private.json",
+          "source_file_sha256": "587971dcaa447bd7fd05d8f3e778449bb41edb2585423785b4fed17050cb033f",
+          "detail": "Runner final workspace inventory contains no output files; evaluator also checked both targets and both collected/native-original directories after native process exit. These are evaluator checks, not product actions."
+        }
+      ],
+      "echo_original_present": false,
+      "receipt_original_present": false,
+      "echo_bytes_equal": null,
+      "receipt_declaration_valid": null,
+      "reason": "No native originals or collected files exist. Missing originals are evidence missing, not a proven byte mismatch."
+    },
+    "receipt_declaration": {
+      "verdict": "unknown",
+      "eligible": false,
+      "evidence": [
+        {
+          "native_file": "execution-end-private.json",
+          "source_file_sha256": "587971dcaa447bd7fd05d8f3e778449bb41edb2585423785b4fed17050cb033f",
+          "detail": "Runner final workspace inventory contains no output files; evaluator also checked both targets and both collected/native-original directories after native process exit. These are evaluator checks, not product actions."
+        }
+      ],
+      "declared_missing_status": null,
+      "reason": "No receipt.json original exists; final agent wording does not replace an artifact."
+    }
+  },
+  "artifacts": [],
+  "extra_output_paths": [],
+  "limitations": [
+    "Requested model and CLI version are visible conditions; backend identity and weights are unknown.",
+    "Model, Skill, action selection, and Harness causes were not isolated; conditional observed permission behavior does not establish a pure Harness or product-wide causal score.",
+    "E1 is a reviewed ordinary native log projection, not a complete independent OS audit. Hidden reasoning, system/Skill bodies, unknown event payloads, and credentials were not reviewed or published.",
+    "Actual missing-file feedback requires the same inputs target request and an independent failed/error result. This run has both; this condition is separate from S02 permission.",
+    "A receipt JSON declaration cannot prove absence of network use. Network false is a requested launch condition, not a full independent network audit.",
+    "External verify_outputs and target-absence checks are evaluator checks, not product actions. Its echo_bytes_equal=false on absent files is not an E2 byte-mismatch verdict.",
+    "No output original exists, so E2 and complete-payload E1 write comparisons remain unknown. No output was repaired, retried, or supplemented."
+  ]
+}

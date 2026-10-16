@@ -35,6 +35,7 @@ python -m harness_eval audit
 python -m unittest discover -s tests -v
 python scripts/analyze_evaluation_v2.py --check
 python scripts/verify_contracts_v2.py --check
+python scripts/analyze_permission_pairs_v2.py --check
 python -m harness_eval --help
 ```
 

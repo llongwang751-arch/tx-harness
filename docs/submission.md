@@ -18,6 +18,7 @@ python -X utf8 scripts/verify_public_pilots.py
 python -X utf8 scripts/audit_harness_observations.py
 python -X utf8 scripts/analyze_evaluation_v2.py --check
 python -X utf8 scripts/verify_contracts_v2.py --check
+python -X utf8 scripts/analyze_permission_pairs_v2.py --check
 python -X utf8 -m unittest discover -s tests -v
 ```
 
