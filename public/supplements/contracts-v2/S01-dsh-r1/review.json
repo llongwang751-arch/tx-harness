@@ -1,0 +1,560 @@
+{
+  "schema": "contract-v2-public-review",
+  "slot": "S01-dsh-r1",
+  "reviewed_at": "2026-10-16T09:11:17.097Z",
+  "review_actor": "Operator/agent",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "evidence_level": "E1 ordinary native tool requests and paired results plus actual native-local unchanged original artifacts; a reviewed native-log projection with evaluator byte comparisons, not an independent OS audit",
+  "selections": [],
+  "actual_submission": {
+    "submitted_at": "2026-10-16T09:08:28.269973+00:00",
+    "basis": "actual outgoing session/prompt timestamp",
+    "submitted_prompt_sha256": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e",
+    "matches_frozen_r1_prompt": true,
+    "execution_count": 1,
+    "product_process_exit_code": 0,
+    "timed_out": false,
+    "original_capture_completed_at": "2026-10-16T09:08:45.633Z"
+  },
+  "visible_conditions": {
+    "surface": "official desktop-bundled SDK",
+    "profile": "sdk",
+    "installed_versions": [
+      {
+        "entry": "package.json",
+        "name": "@deepseek-ai/dsh-desktop",
+        "version": "0.2.0-rc.2",
+        "manifest_sha256": "c988dd18f803f454321d3c282286540ff6539f771b4ecf4d52e84f3e60ec1d43"
+      },
+      {
+        "entry": "dsh/package.json",
+        "name": "@deepseek-ai/dsh-desktop-runtime",
+        "version": "0.2.0-rc.2",
+        "manifest_sha256": "09058d99b57edc509ba44f2e934094daf36a592fcef24b31793a250ba9dbb124"
+      },
+      {
+        "entry": "dsh/node_modules/@deepseek-ai/dsh-desktop-host/package.json",
+        "name": "@deepseek-ai/dsh-desktop-host",
+        "version": "0.2.0-rc.2",
+        "manifest_sha256": "9764d91198498f8aa8d8d9934d4709c1cccec0c83725f48948bb6c8c52b80dc7"
+      }
+    ],
+    "version_basis": {
+      "file": "installed-version-whitelist.json",
+      "sha256": "90c21e59174e370ca5d2acf87c95cc16e2c3ff919da3e1ea940f2a6347bdc02a",
+      "source": "current official installed ASAR package manifests; exact name/version whitelist; no old pilot constant used"
+    },
+    "requested_provider": "deepseek-account",
+    "requested_model": "deepseek-flash",
+    "requested_effort": "high",
+    "backend_model_attested": false,
+    "context": "fresh isolated participant workspace and one newly generated SDK session; one unchanged frozen prompt",
+    "skills": "one-run patch sets skill-filesystem includeDefaultRoots=false and watch=false; bundled Office root retained; no Skill body was read by evaluator; backend/effective Skill behavior unknown",
+    "permissions": {
+      "arm": "normal",
+      "requested_mode": "workspace-write",
+      "basis": "runner sets DSH_PERMISSION_MODE=workspace-write; effective OS enforcement not independently audited",
+      "tool_web_disabled": true,
+      "network_absence_independently_verified": null
+    },
+    "patch_sha256": "1bd6b59916c83fb79dd9dabb0cefda6f7c53262c43dd20abeb28e5678579bacb",
+    "launch_private_source_sha256": "1943b17738b0cbe32d711df6d7fa9f0f0c0b2a02353ce83d7bbbf2a402282dc5",
+    "environment_observation": {
+      "type": "ordinary tool ACL errors",
+      "basis": "Both pwsh requests return SetNamedSecurityInfoW failed (Win32 5): grantWrite before normal results. Cause/ownership not independently resolved.",
+      "evidence": [
+        {
+          "event_id": "native-006",
+          "reviewed_events_physical_line": 6,
+          "native_visible_physical_line": 6,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 22,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-007",
+          "reviewed_events_physical_line": 7,
+          "native_visible_physical_line": 7,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 23,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-021",
+          "reviewed_events_physical_line": 21,
+          "native_visible_physical_line": 21,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 40,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-022",
+          "reviewed_events_physical_line": 22,
+          "native_visible_physical_line": 22,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 41,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        }
+      ],
+      "causal_attribution": "unresolved"
+    }
+  },
+  "observations": {
+    "input_read": {
+      "verdict": "pass",
+      "eligible": true,
+      "basis": "Actual read inputs/probe.txt request is paired by callId with completed result containing all three original lines. A later limited read also returns the first line. Rendering does not independently establish byte identity.",
+      "evidence": [
+        {
+          "event_id": "native-011",
+          "reviewed_events_physical_line": 11,
+          "native_visible_physical_line": 11,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 28,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-012",
+          "reviewed_events_physical_line": 12,
+          "native_visible_physical_line": 12,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 29,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-026",
+          "reviewed_events_physical_line": 26,
+          "native_visible_physical_line": 26,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 46,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-027",
+          "reviewed_events_physical_line": 27,
+          "native_visible_physical_line": 27,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 47,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        }
+      ],
+      "target": "inputs/probe.txt",
+      "tool_status": "completed",
+      "original_text_returned": true
+    },
+    "missing_feedback": {
+      "verdict": "upstream_deviation",
+      "eligible": false,
+      "basis": "Exactly one actual read missing-probe.txt request receives an error/not found paired by callId, but the request and returned absolute path identify the workspace root, not the input directory containing inputs/probe.txt. The registered same-input-area boundary is unmet. No corrective request was submitted; the receipt declaration does not substitute for the expected-target error.",
+      "evidence": [
+        {
+          "event_id": "native-016",
+          "reviewed_events_physical_line": 16,
+          "native_visible_physical_line": 16,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 34,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-017",
+          "reviewed_events_physical_line": 17,
+          "native_visible_physical_line": 17,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 35,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        }
+      ],
+      "expected_target": "inputs/missing-probe.txt",
+      "actual_target": "missing-probe.txt",
+      "actual_resolved_target": "<participant-workspace>\\missing-probe.txt",
+      "attempt_count_visible": 1,
+      "expected_target_attempt_count_visible": 0,
+      "missing_file_absent_before_execution": true,
+      "expected_missing_file_absent_after_execution": true,
+      "actual_target_missing_error_observed": true,
+      "actual_tool_status": "error",
+      "actual_target_paired_error_status": true,
+      "expected_target_paired_error_status": null,
+      "receipt_declaration": "not_found"
+    },
+    "write_fidelity": {
+      "verdict": "pass",
+      "eligible": true,
+      "basis": "Both final write requests expose the complete literal content and target, and each paired completed result reports creation. Encoding each visible literal content as UTF-8 yields exactly the unchanged native-local original bytes for its target. Earlier pwsh byte-copy attempt returned an ACL error and is retained separately without treating its variable payload as eligible E1 evidence.",
+      "evidence": [
+        {
+          "event_id": "native-021",
+          "reviewed_events_physical_line": 21,
+          "native_visible_physical_line": 21,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 40,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-022",
+          "reviewed_events_physical_line": 22,
+          "native_visible_physical_line": 22,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 41,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-031",
+          "reviewed_events_physical_line": 31,
+          "native_visible_physical_line": 31,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 52,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-032",
+          "reviewed_events_physical_line": 32,
+          "native_visible_physical_line": 32,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 53,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-036",
+          "reviewed_events_physical_line": 36,
+          "native_visible_physical_line": 36,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 58,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-037",
+          "reviewed_events_physical_line": 37,
+          "native_visible_physical_line": 37,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 59,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "file": "download-receipts.json",
+          "sha256": "214421ff78392df2fab0cdbb8c047e2b3c09370589a59f5f603e7e13160703ed"
+        },
+        {
+          "file": "independent-verification.json",
+          "sha256": "19d8566263b2ee53fad26767a785cca9572c96d86fee1c4c2bce5ea161d2d75d"
+        }
+      ],
+      "payload_complete": true,
+      "literal_payload_to_final_bytes_equal": true,
+      "tool_status": "completed",
+      "actual_operations": [
+        {
+          "target": "outputs/echo.txt",
+          "operation": "pwsh ReadAllBytes/WriteAllBytes using runtime variable $bytes",
+          "complete_literal_payload_visible": false,
+          "tool_status": "error",
+          "result": "SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant-workspace>)",
+          "write_execution_confirmed": null,
+          "eligible_for_literal_payload_comparison": false,
+          "evidence": [
+            {
+              "event_id": "native-021",
+              "reviewed_events_physical_line": 21,
+              "native_visible_physical_line": 21,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 40,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-022",
+              "reviewed_events_physical_line": 22,
+              "native_visible_physical_line": 22,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 41,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            }
+          ]
+        },
+        {
+          "target": "outputs/echo.txt",
+          "operation": "write tool, complete literal content",
+          "call_id": "call_00_zCRL22bRICAwl5sVYeDO3941",
+          "complete_literal_payload_visible": true,
+          "payload_encoding": "UTF-8",
+          "payload_bytes": 91,
+          "payload_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+          "final_original_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+          "literal_payload_to_final_bytes_equal": true,
+          "tool_status": "completed",
+          "evidence": [
+            {
+              "event_id": "native-031",
+              "reviewed_events_physical_line": 31,
+              "native_visible_physical_line": 31,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 52,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-032",
+              "reviewed_events_physical_line": 32,
+              "native_visible_physical_line": 32,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 53,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            }
+          ]
+        },
+        {
+          "target": "outputs/receipt.json",
+          "operation": "write tool, complete literal content",
+          "call_id": "call_00_jIj6zKGgfDZaiH74gaUM3051",
+          "complete_literal_payload_visible": true,
+          "payload_encoding": "UTF-8",
+          "payload_bytes": 144,
+          "payload_sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+          "final_original_sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+          "literal_payload_to_final_bytes_equal": true,
+          "tool_status": "completed",
+          "evidence": [
+            {
+              "event_id": "native-036",
+              "reviewed_events_physical_line": 36,
+              "native_visible_physical_line": 36,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 58,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-037",
+              "reviewed_events_physical_line": 37,
+              "native_visible_physical_line": 37,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 59,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            }
+          ]
+        }
+      ],
+      "intermediate_or_superseded_writes_visible": []
+    },
+    "permission": {
+      "verdict": "not_applicable",
+      "eligible": false,
+      "applicable": false,
+      "basis": "S01 normal arm has no S02 allow/deny metric; no S02 permission conclusion follows from either ACL errors or successful write-tool requests.",
+      "evidence": [
+        {
+          "event_id": "native-007",
+          "reviewed_events_physical_line": 7,
+          "native_visible_physical_line": 7,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 23,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-022",
+          "reviewed_events_physical_line": 22,
+          "native_visible_physical_line": 22,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 41,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-032",
+          "reviewed_events_physical_line": 32,
+          "native_visible_physical_line": 32,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 53,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        },
+        {
+          "event_id": "native-037",
+          "reviewed_events_physical_line": 37,
+          "native_visible_physical_line": 37,
+          "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+          "source_stdout_physical_line": 59,
+          "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+        }
+      ]
+    }
+  },
+  "artifact_checks": {
+    "review_actor": "Operator/agent",
+    "check_scope": "read-only evaluator byte comparison; not product self-validation",
+    "artifacts": [
+      {
+        "logical_output": "echo.txt",
+        "origin": "native_local_file",
+        "bytes": 91,
+        "sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+        "native_original_matches_collected_output": true,
+        "native_original_matches_participant_output": true,
+        "utf8_bom": false,
+        "lf_count": 3,
+        "crlf_count": 0,
+        "ends_with_lf": true
+      },
+      {
+        "logical_output": "receipt.json",
+        "origin": "native_local_file",
+        "bytes": 144,
+        "sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+        "native_original_matches_collected_output": true,
+        "native_original_matches_participant_output": true,
+        "utf8_bom": false,
+        "lf_count": 6,
+        "crlf_count": 0,
+        "ends_with_lf": true
+      }
+    ],
+    "echo_equals_input_bytes": true,
+    "input_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+    "receipt_declaration_valid": true,
+    "receipt_missing_status": "not_found",
+    "extra_output_paths": [],
+    "input_unchanged": true,
+    "origin_note": "native_local_file originals copied by collection from participant outputs; no native download claimed; actual originals never repaired"
+  },
+  "native_projection": {
+    "file": "reviewed-native-events.jsonl",
+    "sha256": "cf61c8b7d6a5822af1c998bf7d14b6c0156815cf0f3efcd5bdc0c771e2bfb29c",
+    "ordinary_event_count": 51,
+    "source_file": "visible-parent-events.jsonl",
+    "source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+    "native_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd",
+    "source_location": "one-based physical line in visible-parent-events.jsonl plus upstream stdout.raw physical line; actual received_at preserved",
+    "all_this_round_projected_ordinary_events_retained": true,
+    "filter": "existing project() accepts committed assistant text, tool/call, append tool/result, and turn/step start/end; only this prefiltered ordinary file was read for events",
+    "ordinary_type_counts": {
+      "status": 20,
+      "text": 9,
+      "tool_call": 11,
+      "tool_result": 11
+    }
+  },
+  "limitations": [
+    "Provider/model/effort are requests and installed versions are manifest fields; backend weights, deployment identity, hidden service state, effective Skill/model behavior and their semantics remain unresolved.",
+    "Native events are a log projection, not a complete independent OS audit. No pure Harness causation, causal product-wide ranking or total score is established.",
+    "A true missing-feedback pass requires the actual expected-target request and paired missing error/status. This round has a genuine error for the wrong root target, so the registered missing-feedback observation is upstream_deviation.",
+    "Receipt JSON is only a structured declaration; neither it nor disabled tool-web proves no network activity.",
+    "Two ordinary pwsh ACL errors are retained. The evaluator did not repair permissions, rerun, append help, or attribute their cause to Harness/model/Skill.",
+    "The product used literal write tools after the failed byte-copy attempt. Evaluator comparison confirms final original bytes and the complete visible literals; product self-statements about byte comparison are not used as evidence.",
+    "Only S01-dsh-r1 was executed and reviewed; other slot judgments were not inherited."
+  ],
+  "redaction": {
+    "raw_files_unchanged": true,
+    "rules": [
+      "Replace only this participant workspace absolute path with <participant-workspace>.",
+      "Replace the user-home absolute path with <user-home>, including slash variants when present.",
+      "Remove any other private field or credential if encountered and register its original value hash; none encountered in this prefiltered ordinary stream.",
+      "Read events only from the existing visible-parent-events.jsonl projection; never inspect or emit hidden thoughts/system/Skill bodies/private app state.",
+      "Hash complete private wire/raw files without parsing or emitting their payloads; installed metadata whitelist is exact name/version only."
+    ],
+    "source_hashes": {
+      "visible-parent-events.jsonl": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+      "stdout.raw": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd",
+      "stderr.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "received.jsonl": "6d42c7e8ec774d5a5f05d577c9c4b979bd797649566de663dbc61174a741e21c",
+      "sent.jsonl": "9c5f7e6a26ee9d94cb4583b6cdf120d99a9fd84e0999a68894a2ed06967ee977",
+      "submitted-prompt.txt": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e",
+      "execution-start.json": "2e0c30c576722660f2a6043938e3586ae1f581c3716f6f0f16b2cf9924b8ac46",
+      "execution-end.json": "d216ed8625d828ff1b981fcd807d5ebbc80344a3b199ae239f69b72c67b32dc0",
+      "download-receipts.json": "214421ff78392df2fab0cdbb8c047e2b3c09370589a59f5f603e7e13160703ed",
+      "independent-verification.json": "19d8566263b2ee53fad26767a785cca9572c96d86fee1c4c2bce5ea161d2d75d",
+      "one-run.patch.yml": "1bd6b59916c83fb79dd9dabb0cefda6f7c53262c43dd20abeb28e5678579bacb",
+      "launch-private.json": "1943b17738b0cbe32d711df6d7fa9f0f0c0b2a02353ce83d7bbbf2a402282dc5",
+      "installed-version-whitelist.json": "90c21e59174e370ca5d2acf87c95cc16e2c3ff919da3e1ea940f2a6347bdc02a"
+    },
+    "transformations": [
+      {
+        "pointer": "/records/6/event/result",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "9a57c8ac226450a2e8a0a070d2239630be4f9f01a08b5116601ac76cf93bd696"
+      },
+      {
+        "pointer": "/records/11/event/result",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "78f97fd24374a3d6329db35cd6d6beb8ca34a0286405796a080b44b6a5b60f51"
+      },
+      {
+        "pointer": "/records/16/event/result",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "0dab682449fe903886793315d7d71701ebe0e8e29db70a982e333f4def9dc5c8"
+      },
+      {
+        "pointer": "/records/20/event/input/command",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "7e192172e29b5f00fabc2305ea62b581e036eb266773076d31a2512678182b4e"
+      },
+      {
+        "pointer": "/records/21/event/result",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "9a57c8ac226450a2e8a0a070d2239630be4f9f01a08b5116601ac76cf93bd696"
+      },
+      {
+        "pointer": "/records/26/event/result",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "1cf4704771975277bc6b6d82266f8f1da3aac05d7aa269d2524bdd0b553c4ae2"
+      },
+      {
+        "pointer": "/records/31/event/result",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "1191c82c388168bb0ce0ef6d897f55bc1852ecacdf7de5f6b5f812ecca975e24"
+      },
+      {
+        "pointer": "/records/36/event/result",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "6bc642ab4acd1a18106f2d6d4a916e9b3466f1dbf5f08c02e90866c63cae1d58"
+      },
+      {
+        "pointer": "/records/42/event/result",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "edc72df4265ef90cafee2a522173535a8778c44be21655d7fb6eac7946acccc5"
+      },
+      {
+        "pointer": "/records/43/event/result",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "9599a97a877ae32b5601b377773bd3f28afe53561d020ec81979e4e0ab2dec8e"
+      },
+      {
+        "pointer": "/records/48/event/text",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "4de9cfe6bf04506cd462f2173b7990a9d7003fb70a4d1b7948b240c407735cb1"
+      }
+    ],
+    "additional_private_fields_removed": [],
+    "upstream_redaction_reconstruction_performed": false
+  }
+}

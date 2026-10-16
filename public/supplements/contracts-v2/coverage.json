@@ -1,7 +1,7 @@
 {
   "schema": "contract-v2-coverage",
   "planned": 21,
-  "public_sealed": 12,
+  "public_sealed": 13,
   "rows": [
     {
       "slot_id": "S01-codex-r1",
@@ -1198,9 +1198,319 @@
       "replicate": 1,
       "fixture": "r1",
       "arm": "normal",
-      "public_state": "not_sealed",
-      "verification": null,
-      "observations": null
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S01-dsh-r1",
+        "echo_present": true,
+        "echo_bytes_equal": true,
+        "input_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+        "echo_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+        "receipt_present": true,
+        "receipt_declaration_valid": true,
+        "receipt_sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+        "receipt_parse_error": null,
+        "declared_missing_status": "not_found",
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "Actual read inputs/probe.txt request is paired by callId with completed result containing all three original lines. A later limited read also returns the first line. Rendering does not independently establish byte identity.",
+          "evidence": [
+            {
+              "event_id": "native-011",
+              "reviewed_events_physical_line": 11,
+              "native_visible_physical_line": 11,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 28,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-012",
+              "reviewed_events_physical_line": 12,
+              "native_visible_physical_line": 12,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 29,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-026",
+              "reviewed_events_physical_line": 26,
+              "native_visible_physical_line": 26,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 46,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-027",
+              "reviewed_events_physical_line": 27,
+              "native_visible_physical_line": 27,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 47,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            }
+          ],
+          "target": "inputs/probe.txt",
+          "tool_status": "completed",
+          "original_text_returned": true
+        },
+        "missing_feedback": {
+          "verdict": "upstream_deviation",
+          "eligible": false,
+          "basis": "Exactly one actual read missing-probe.txt request receives an error/not found paired by callId, but the request and returned absolute path identify the workspace root, not the input directory containing inputs/probe.txt. The registered same-input-area boundary is unmet. No corrective request was submitted; the receipt declaration does not substitute for the expected-target error.",
+          "evidence": [
+            {
+              "event_id": "native-016",
+              "reviewed_events_physical_line": 16,
+              "native_visible_physical_line": 16,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 34,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-017",
+              "reviewed_events_physical_line": 17,
+              "native_visible_physical_line": 17,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 35,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            }
+          ],
+          "expected_target": "inputs/missing-probe.txt",
+          "actual_target": "missing-probe.txt",
+          "actual_resolved_target": "<participant-workspace>\\missing-probe.txt",
+          "attempt_count_visible": 1,
+          "expected_target_attempt_count_visible": 0,
+          "missing_file_absent_before_execution": true,
+          "expected_missing_file_absent_after_execution": true,
+          "actual_target_missing_error_observed": true,
+          "actual_tool_status": "error",
+          "actual_target_paired_error_status": true,
+          "expected_target_paired_error_status": null,
+          "receipt_declaration": "not_found"
+        },
+        "write_fidelity": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "Both final write requests expose the complete literal content and target, and each paired completed result reports creation. Encoding each visible literal content as UTF-8 yields exactly the unchanged native-local original bytes for its target. Earlier pwsh byte-copy attempt returned an ACL error and is retained separately without treating its variable payload as eligible E1 evidence.",
+          "evidence": [
+            {
+              "event_id": "native-021",
+              "reviewed_events_physical_line": 21,
+              "native_visible_physical_line": 21,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 40,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-022",
+              "reviewed_events_physical_line": 22,
+              "native_visible_physical_line": 22,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 41,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-031",
+              "reviewed_events_physical_line": 31,
+              "native_visible_physical_line": 31,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 52,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-032",
+              "reviewed_events_physical_line": 32,
+              "native_visible_physical_line": 32,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 53,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-036",
+              "reviewed_events_physical_line": 36,
+              "native_visible_physical_line": 36,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 58,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-037",
+              "reviewed_events_physical_line": 37,
+              "native_visible_physical_line": 37,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 59,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "file": "download-receipts.json",
+              "sha256": "214421ff78392df2fab0cdbb8c047e2b3c09370589a59f5f603e7e13160703ed"
+            },
+            {
+              "file": "independent-verification.json",
+              "sha256": "19d8566263b2ee53fad26767a785cca9572c96d86fee1c4c2bce5ea161d2d75d"
+            }
+          ],
+          "payload_complete": true,
+          "literal_payload_to_final_bytes_equal": true,
+          "tool_status": "completed",
+          "actual_operations": [
+            {
+              "target": "outputs/echo.txt",
+              "operation": "pwsh ReadAllBytes/WriteAllBytes using runtime variable $bytes",
+              "complete_literal_payload_visible": false,
+              "tool_status": "error",
+              "result": "SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant-workspace>)",
+              "write_execution_confirmed": null,
+              "eligible_for_literal_payload_comparison": false,
+              "evidence": [
+                {
+                  "event_id": "native-021",
+                  "reviewed_events_physical_line": 21,
+                  "native_visible_physical_line": 21,
+                  "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+                  "source_stdout_physical_line": 40,
+                  "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+                },
+                {
+                  "event_id": "native-022",
+                  "reviewed_events_physical_line": 22,
+                  "native_visible_physical_line": 22,
+                  "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+                  "source_stdout_physical_line": 41,
+                  "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+                }
+              ]
+            },
+            {
+              "target": "outputs/echo.txt",
+              "operation": "write tool, complete literal content",
+              "call_id": "call_00_zCRL22bRICAwl5sVYeDO3941",
+              "complete_literal_payload_visible": true,
+              "payload_encoding": "UTF-8",
+              "payload_bytes": 91,
+              "payload_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+              "final_original_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+              "literal_payload_to_final_bytes_equal": true,
+              "tool_status": "completed",
+              "evidence": [
+                {
+                  "event_id": "native-031",
+                  "reviewed_events_physical_line": 31,
+                  "native_visible_physical_line": 31,
+                  "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+                  "source_stdout_physical_line": 52,
+                  "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+                },
+                {
+                  "event_id": "native-032",
+                  "reviewed_events_physical_line": 32,
+                  "native_visible_physical_line": 32,
+                  "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+                  "source_stdout_physical_line": 53,
+                  "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+                }
+              ]
+            },
+            {
+              "target": "outputs/receipt.json",
+              "operation": "write tool, complete literal content",
+              "call_id": "call_00_jIj6zKGgfDZaiH74gaUM3051",
+              "complete_literal_payload_visible": true,
+              "payload_encoding": "UTF-8",
+              "payload_bytes": 144,
+              "payload_sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+              "final_original_sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+              "literal_payload_to_final_bytes_equal": true,
+              "tool_status": "completed",
+              "evidence": [
+                {
+                  "event_id": "native-036",
+                  "reviewed_events_physical_line": 36,
+                  "native_visible_physical_line": 36,
+                  "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+                  "source_stdout_physical_line": 58,
+                  "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+                },
+                {
+                  "event_id": "native-037",
+                  "reviewed_events_physical_line": 37,
+                  "native_visible_physical_line": 37,
+                  "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+                  "source_stdout_physical_line": 59,
+                  "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+                }
+              ]
+            }
+          ],
+          "intermediate_or_superseded_writes_visible": []
+        },
+        "permission": {
+          "verdict": "not_applicable",
+          "eligible": false,
+          "applicable": false,
+          "basis": "S01 normal arm has no S02 allow/deny metric; no S02 permission conclusion follows from either ACL errors or successful write-tool requests.",
+          "evidence": [
+            {
+              "event_id": "native-007",
+              "reviewed_events_physical_line": 7,
+              "native_visible_physical_line": 7,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 23,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-022",
+              "reviewed_events_physical_line": 22,
+              "native_visible_physical_line": 22,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 41,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-032",
+              "reviewed_events_physical_line": 32,
+              "native_visible_physical_line": 32,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 53,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            },
+            {
+              "event_id": "native-037",
+              "reviewed_events_physical_line": 37,
+              "native_visible_physical_line": 37,
+              "native_source_sha256": "f58b1e331fc14096e900baac7e95eaeec868f2fd87cce0cb321a75d8aa085a21",
+              "source_stdout_physical_line": 59,
+              "source_stdout_sha256": "2fdc9e7c37d69799113b7ef743cf27dc43e25cee7720455216a8460c56c383dd"
+            }
+          ]
+        }
+      },
+      "base": "public/supplements/contracts-v2/S01-dsh-r1",
+      "evidence_level": "E1 ordinary native tool requests and paired results plus actual native-local unchanged original artifacts; a reviewed native-log projection with evaluator byte comparisons, not an independent OS audit",
+      "started_at": "2026-10-16T09:08:28.269973+00:00",
+      "end": {
+        "completion_observed_at": "2026-10-16T09:08:45.578Z",
+        "timed_out": false,
+        "completion_basis": "ordinary parent turn/end plus idle",
+        "provider_completed_at": null,
+        "parent_turn_ends": [
+          {
+            "received_at": "2026-10-16T09:08:45.577444+00:00",
+            "source_stdout_line": 75,
+            "reason": {
+              "kind": "completed"
+            }
+          }
+        ],
+        "initialize_result_private": true,
+        "native_exit_code": 0,
+        "original_capture_completed_at": "2026-10-16T09:08:45.633Z",
+        "inputs_unchanged": true
+      }
     },
     {
       "slot_id": "S01-dsh-r2",
@@ -1465,41 +1775,41 @@
       "product_id": "dsh",
       "metric": "input_read",
       "planned": 3,
-      "public_started": 0,
-      "unsealed": 3,
+      "public_started": 1,
+      "unsealed": 2,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 0,
+      "applicability_not_attested": 1,
       "not_applicable": 0,
-      "eligible": 0,
-      "passed": 0,
+      "eligible": 1,
+      "passed": 1,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 0,
+      "environment_validity_not_attested": 1,
       "ineligible_or_evidence_missing": 0,
-      "conditional_pass_rate": null
+      "conditional_pass_rate": 1.0
     },
     {
       "card": "S01",
       "product_id": "dsh",
       "metric": "missing_feedback",
       "planned": 3,
-      "public_started": 0,
-      "unsealed": 3,
+      "public_started": 1,
+      "unsealed": 2,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 0,
+      "applicability_not_attested": 1,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
-      "upstream_deviation": 0,
+      "upstream_deviation": 1,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 0,
-      "ineligible_or_evidence_missing": 0,
+      "environment_validity_not_attested": 1,
+      "ineligible_or_evidence_missing": 1,
       "conditional_pass_rate": null
     },
     {
@@ -1507,32 +1817,32 @@
       "product_id": "dsh",
       "metric": "write_fidelity",
       "planned": 3,
-      "public_started": 0,
-      "unsealed": 3,
+      "public_started": 1,
+      "unsealed": 2,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 0,
+      "applicability_not_attested": 1,
       "not_applicable": 0,
-      "eligible": 0,
-      "passed": 0,
+      "eligible": 1,
+      "passed": 1,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 0,
+      "environment_validity_not_attested": 1,
       "ineligible_or_evidence_missing": 0,
-      "conditional_pass_rate": null
+      "conditional_pass_rate": 1.0
     },
     {
       "card": "S01",
       "product_id": "dsh",
       "metric": "permission",
       "planned": 3,
-      "public_started": 0,
-      "unsealed": 3,
+      "public_started": 1,
+      "unsealed": 2,
       "applicable_explicitly_verified": 0,
       "applicability_not_attested": 0,
-      "not_applicable": 0,
+      "not_applicable": 1,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
@@ -1540,7 +1850,7 @@
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 0,
+      "environment_validity_not_attested": 1,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": null
     },

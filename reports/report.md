@@ -4,7 +4,7 @@
 
 本报告以输入、文件交付、错误反馈和续接的可见契约为主观察。原25个产品×任务现场、31个公开包和26次旧评分均保留。业务原件与逐字段差异作为端到端辅助结果；内部模型、Skill、权限与入口不匹配，因此不提供五产品纯Harness因果排名。[旧报告原文](report-v1-2026-10-14.md)、[旧逐项评分](exploratory-score-review.json)可追溯，原始字节与分数不改写。
 
-已登记的新补测共21个实验位，目前公开封存12个。准备目录和运行计划不计完成，具体真实结果与缺口见[补测协议](../supplements/contracts-v2/protocol.json)和[补测现场与分母](../public/supplements/contracts-v2/README.md)。登记commit为`1473d3602c67ee2debcbb96e951df580f9c3d422`，首次执行前已推送并匹配远端；S01是五产品各三次固定文件契约，S02是Codex三组允许/拒绝写权限配对。它们不追认旧预试为预注册实验。
+已登记的新补测共21个实验位，目前公开封存13个。准备目录和运行计划不计完成，具体真实结果与缺口见[补测协议](../supplements/contracts-v2/protocol.json)和[补测现场与分母](../public/supplements/contracts-v2/README.md)。登记commit为`1473d3602c67ee2debcbb96e951df580f9c3d422`，首次执行前已推送并匹配远端；S01是五产品各三次固定文件契约，S02是Codex三组允许/拒绝写权限配对。它们不追认旧预试为预注册实验。
 
 ## 新补测的实际结果
 
@@ -14,17 +14,33 @@
 |---|---:|---:|---:|---:|---|
 | Codex | 3/3 | 3 / 3 | 3/3 | 3/3 | 1/1；其余2次未满足判定证据条件 |
 | WorkBuddy | 3/3 | 3 / 3 | 3/3 | 3/3 | 0/0；其余3次未满足判定证据条件 |
-| DSH | 0/3 | 0 / 0 | 0/0 | 0/0 | 0/0；其余0次未满足判定证据条件 |
+| DSH | 1/3 | 1 / 1 | 1/1 | 1/1 | 0/0；其余1次未满足判定证据条件 |
 | 元宝专家模式 | 3/3 | 3 / 3 | 3/3 | 3/3 | 0/0；其余3次未满足判定证据条件 |
 | 豆包工作任务 | 3/3 | 3 / 3 | 3/3 | 3/3 | 0/0；其余3次未满足判定证据条件 |
 
 eligible=0时比例未知，不把0/0解释为0或100。Codex三次中，两次在成功父命令里捕获缺失异常；独立read错误状态不可见，因此该指标没有资格判通过，父命令成功也没有被误判为Harness失败。三次写入使用变量或复制命令，没有完整literal载荷，所以载荷逐字节指标保持未知；命令和最终原件相符另列。
 
-S01当前有12次取得两份原件，其中12次的采集时间记录显示，两份实际字节都在各自提交后1200秒内留存。该结论为中置信的早期原件链，依据逐包started_at、original_capture_completed_at及原件SHA；它不等于第1200秒的完整状态快照，也不生成速度排名。
+S01当前有13次取得两份原件，其中13次的采集时间记录显示，两份实际字节都在各自提交后1200秒内留存。该结论为中置信的早期原件链，依据逐包started_at、original_capture_completed_at及原件SHA；它不等于第1200秒的完整状态快照，也不生成速度排名。
 
 S02当前封存0/6。许可臂的已知判定分别为尚无公开封存判定。每个具体结论须有实际目标写入请求及拒绝/成功结果；零文件本身既不证明拒绝成功，也不算产品能力低分。
 
 原件字节与JSON判定的高置信只针对已公开文件及冻结检查；文件来源、界面连续性和实际提交时刻为中置信，依赖Operator保留的原生记录。E1已知项依赖公开请求/结果投影及定位；未公开完整内部边界的项保持未知。三次重复不足以估计产品总体可靠性，也不把eligible小分母作为跨产品胜率。
+
+DSH首轮有两次pwsh调用返回ACL错误，随后原生read/write完成交付。该轮对missing-probe.txt的真实error指向工作区根目录，未尝试同一inputs区的规定路径，所以该槽标upstream_deviation；实际错误状态对应另列。两次完整literal写入与最终原件逐字节一致，支持限定的写入契约。以上路径/载荷事实可由[首轮普通事件与审阅](../public/supplements/contracts-v2/S01-dsh-r1/README.md)高置信复核；ACL根因、错误目标的模型/Skill/Harness责任仍无法确定，正确原件也不抵消路径偏离。
+
+## S01的实际条件
+
+下表摘自逐包visible_conditions和版本来源记录。版本清单、请求参数和界面标签描述不同层次，均不作为后台部署鉴定；GUI标签为中置信的Operator可见观察，CLI/SDK配置与清单可高置信定位至留存字段。每轮详情以补测包为准。
+
+| 产品与入口 | 实际可见版本 | 请求或可见模型条件 | 输入、Skill与权限边界 |
+|---|---|---|---|
+| [Codex官方CLI exec](../public/supplements/contracts-v2/S01-codex-r1/review.json) | codex-cli 0.159.2 | 请求gpt-6.1-sol；未覆盖默认effort | 新ephemeral上下文，隔离inputs；跳过主机Skill发现、禁插件；配置工具网络关闭，后台内置Skill未知 |
+| [DSH官方SDK profile](../public/supplements/contracts-v2/S01-dsh-r1/review.json) | 当前desktop/runtime/host清单均0.2.0-rc.2 | 请求deepseek-account / deepseek-flash / high | 新会话和inputs；禁用户/项目Skill roots，保留bundled Office；workspace-write为请求值，禁web工具不等于无网络 |
+| [WorkBuddy桌面](../public/supplements/contracts-v2/S01-workbuddy-r1/review.json) | V5.8.2 | 默认Deepseek-V4.1-Flash；办公 | 原生新任务工作区inputs；可见允许完全访问标签，实际权限强制与内部Skill未知 |
+| [元宝桌面专家模式](../public/supplements/contracts-v2/S01-yuanbao-r1/review.json) | 未观察到数字版本 | 专家模式勾选；默认Hy3标签 | 新对话单一附件；内部Skill、实际工具参数和权限边界未知 |
+| [豆包桌面工作任务·云电脑](../public/supplements/contracts-v2/S01-doubao-r1/review.json) | 未观察到数字版本 | 默认自动 / 低标签 | 新任务单一附件；内部Skill、实际工具参数和权限边界未知 |
+
+五产品对应重复使用同一份91字节文件和同一提示词，但输入传输、工具、默认模型及权限仍不同。S01只支持这些入口条件下的契约事实；同产品S02另以输出路径权限作配对，不能把这张条件表称作五产品模型/Skill已匹配。
 
 ## 五产品共同可观察的交付与续接
 

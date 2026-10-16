@@ -1,0 +1,9 @@
+{
+  "started_at": "2026-10-16T09:08:28.269973+00:00",
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "start_basis": "actual outgoing session/prompt timestamp",
+  "surface": "official desktop-bundled SDK",
+  "requested_model": "deepseek-flash",
+  "requested_effort": "high",
+  "backend_model_attested": false
+}
