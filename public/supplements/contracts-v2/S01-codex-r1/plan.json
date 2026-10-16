@@ -1,0 +1,29 @@
+{
+  "schema": "contract-v2-preparation",
+  "slot": {
+    "slot_id": "S01-codex-r1",
+    "card": "S01",
+    "product_id": "codex",
+    "replicate": 1,
+    "fixture": "r1",
+    "arm": "normal"
+  },
+  "prepared_at": "2026-10-16T07:02:36.614Z",
+  "registration_sha256": "d7ba2f1b3d92a0cc9b7bc2511cfcfed0739dfacf148bd8146c87fd00bb6f50d9",
+  "fixture_sha256": {
+    "probe.txt": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+    "prompt.txt": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e"
+  },
+  "initial_workspace": {
+    "inputs/probe.txt": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+    "prompt.md": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e"
+  },
+  "model_execution_started": false,
+  "missing_file_absent_locally": true,
+  "redaction": {
+    "removed_fields": [
+      "workspace"
+    ],
+    "original_private_plan_sha256": "4853df1e0f2d9e7e7a262f20baeb7976e711866d941c23f12dad1a670d798732"
+  }
+}

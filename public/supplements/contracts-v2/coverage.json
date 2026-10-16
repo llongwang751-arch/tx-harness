@@ -1,0 +1,1042 @@
+{
+  "schema": "contract-v2-coverage",
+  "planned": 21,
+  "public_sealed": 3,
+  "rows": [
+    {
+      "slot_id": "S01-codex-r1",
+      "card": "S01",
+      "product_id": "codex",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "normal",
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S01-codex-r1",
+        "echo_present": true,
+        "echo_bytes_equal": true,
+        "input_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+        "echo_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+        "receipt_present": true,
+        "receipt_declaration_valid": true,
+        "receipt_sha256": "016c159b9a33e5f736b533e6c209621b21573cb96e36aba5164fe3fa7213b54e",
+        "receipt_parse_error": null,
+        "declared_missing_status": "not_found",
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "native-0006 visibly requests ReadAllBytes on inputs/probe.txt, decodes those bytes as UTF-8 and prints the text. The returned prefix equals all 91 fixture bytes decoded as UTF-8; its additional CRLF is Write-Output transport formatting. Final input hash remains unchanged. This is ordinary command/result evidence, not product self-report.",
+          "evidence": [
+            {
+              "event_id": "native-0006",
+              "source_file": "native.observed.json",
+              "source_array_index": 5,
+              "source_array_index_base": 0,
+              "stdout_file": "native.stdout.jsonl",
+              "stdout_line": 6,
+              "projection_file": "reviewed-native-events.jsonl",
+              "projection_line": 4
+            },
+            {
+              "file": "execution-end.json",
+              "field": "inputs_unchanged",
+              "value": true
+            },
+            {
+              "file": "inputs/probe.txt",
+              "scope": "fixture and participant input byte comparison",
+              "sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+              "bytes": 91
+            }
+          ],
+          "request_observed": true,
+          "return_observed": true,
+          "returned_content_complete": true,
+          "returned_content_matches_fixture": true,
+          "returned_content_upstream_masked": false
+        },
+        "missing_feedback": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "Visible command performs exactly one ReadAllBytes on the absent input and returns FileNotFoundException inside its own try/catch. The parent command succeeds with exit_code 0/status completed. This supports an observed program-level missing-file exception, but no separately paired read-tool error status is exposed, so the preregistered E1 error-status mapping metric is not eligible. Successful parent status is consistent with its caught exception and later successful writes; it is not a Harness error.",
+          "evidence": [
+            {
+              "event_id": "native-0006",
+              "source_file": "native.observed.json",
+              "source_array_index": 5,
+              "source_array_index_base": 0,
+              "stdout_file": "native.stdout.jsonl",
+              "stdout_line": 6,
+              "projection_file": "reviewed-native-events.jsonl",
+              "projection_line": 4
+            },
+            {
+              "file": "plan.json",
+              "field": "missing_file_absent_locally",
+              "value": true
+            }
+          ],
+          "request_observed": true,
+          "return_observed": true,
+          "missing_read_attempts_in_completed_commands": 1,
+          "observed_error": "System.IO.FileNotFoundException",
+          "acl_denial_observed": false,
+          "program_missing_error_observed": true,
+          "parent_tool_status": "completed",
+          "parent_exit_code": 0,
+          "separate_read_tool_error_status_observed": false,
+          "parent_tool_status_contradicts_error": false
+        },
+        "write_fidelity": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "The complete literal write-payload comparison is not eligible: the command performs read-then-write with variables, and its token assignment was already replaced by [REDACTED_SECRET] in unchanged native source. payload_complete=false; no masked expression is reconstructed. Separately, the visible command and final file byte contract pass: native-0006 targets outputs/echo.txt via WriteAllBytes($probeBytes), targets outputs/receipt.json via WriteAllText with UTF8Encoding(false), and completes with exit_code 0. Captured echo exactly matches all 91 fixture bytes including LF and trailing LF; the 126-byte receipt has exactly the four required fields and actual token/not_found value. Originals, participant files and collection copies match. E2 echo SHA256 equality is independently pass; it does not upgrade the incomplete literal write-payload evidence.",
+          "evidence": [
+            {
+              "event_id": "native-0006",
+              "source_file": "native.observed.json",
+              "source_array_index": 5,
+              "source_array_index_base": 0,
+              "stdout_file": "native.stdout.jsonl",
+              "stdout_line": 6,
+              "projection_file": "reviewed-native-events.jsonl",
+              "projection_line": 4
+            },
+            {
+              "file": "native-downloads/echo.txt",
+              "sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+              "bytes": 91
+            },
+            {
+              "file": "native-downloads/receipt.json",
+              "sha256": "016c159b9a33e5f736b533e6c209621b21573cb96e36aba5164fe3fa7213b54e",
+              "bytes": 126
+            },
+            {
+              "file": "independent-verification.json",
+              "echo_bytes_equal": true,
+              "receipt_declaration_valid": true,
+              "extra_output_paths": []
+            }
+          ],
+          "payload_complete": false,
+          "write_request_observed": true,
+          "successful_command_status_observed": true,
+          "full_literal_payload_verdict": "unknown",
+          "command_and_final_byte_contract_verdict": "pass",
+          "e2_echo_sha256_verdict": "pass",
+          "native_upstream_masking_preserved": true
+        },
+        "permission": {
+          "verdict": "not_applicable",
+          "eligible": false,
+          "basis": "S01 normal-arm task; no paired S02 allow/deny permission outcome is evaluated.",
+          "evidence": [
+            {
+              "file": "plan.json",
+              "field": "slot.card",
+              "value": "S01"
+            },
+            {
+              "file": "execution-start.json",
+              "field": "permission_arm",
+              "value": "normal"
+            }
+          ]
+        }
+      },
+      "base": "public/supplements/contracts-v2/S01-codex-r1",
+      "evidence_level": "E1: ordinary visible native command/request and result plus unchanged real local originals; this remains a reviewed log projection.",
+      "started_at": "2026-10-16T07:02:36.713330+00:00",
+      "end": {
+        "completion_observed_at": "2026-10-16T07:03:01.246000+00:00",
+        "timed_out": false,
+        "native_exit_code": 0,
+        "completion_basis": "native process exit; semantic/contract completion evaluated separately",
+        "provider_completed_at": null,
+        "original_capture_completed_at": "2026-10-16T07:03:01.254Z",
+        "inputs_unchanged": true
+      }
+    },
+    {
+      "slot_id": "S01-codex-r2",
+      "card": "S01",
+      "product_id": "codex",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "normal",
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S01-codex-r2",
+        "echo_present": true,
+        "echo_bytes_equal": true,
+        "input_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+        "echo_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+        "receipt_present": true,
+        "receipt_declaration_valid": true,
+        "receipt_sha256": "82542077cc89b3e085c7726abc6956d093fbb247aeece9dc058e4db9aabb26b0",
+        "receipt_parse_error": null,
+        "declared_missing_status": "not_found",
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "Independent native command actually requests inputs/probe.txt through Get-Content -Raw and returns all original text with completed status and exit 0. The rendered output appends shell CRLF; byte fidelity is established separately from the actual original artifacts.",
+          "evidence": [
+            {
+              "event_id": "native-004",
+              "reviewed_events_physical_line": 4,
+              "native_observed_array_index": 5,
+              "native_source_sha256": "3d9be8168ac08a67fdd60e263948bc0e4dcc483b308ad71717de4d358eef57ed"
+            }
+          ],
+          "target": "inputs/probe.txt",
+          "tool_status": "completed",
+          "exit_code": 0,
+          "original_text_returned": true
+        },
+        "missing_feedback": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "Exactly one ordinary independent Get-Content inputs/missing-probe.txt -Raw -ErrorAction Stop request is paired with Cannot find path ... because it does not exist, failed tool status and exit 1. This is a missing-file result, not an ACL denial or a caught exception under a successful parent command.",
+          "evidence": [
+            {
+              "event_id": "native-005",
+              "reviewed_events_physical_line": 5,
+              "native_observed_array_index": 7,
+              "native_source_sha256": "3d9be8168ac08a67fdd60e263948bc0e4dcc483b308ad71717de4d358eef57ed"
+            }
+          ],
+          "target": "inputs/missing-probe.txt",
+          "attempt_count_visible": 1,
+          "missing_file_absent_before_execution": true,
+          "missing_file_absent_after_execution": true,
+          "program_missing_error_observed": true,
+          "parent_tool_status": "failed",
+          "parent_exit_code": 1,
+          "paired_error_status": true,
+          "receipt_declaration": "not_found"
+        },
+        "write_fidelity": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "The actual completed command shows File.Copy from inputs/probe.txt to outputs/echo.txt and UTF-8-no-BOM WriteAllText of runtime-generated $json to outputs/receipt.json. Complete literal output payloads are not present in the command event, so E1_write payload-to-final-byte fidelity is ineligible. Independent unchanged-original byte correspondence is reported separately and does not promote this verdict.",
+          "evidence": [
+            {
+              "event_id": "native-006",
+              "reviewed_events_physical_line": 6,
+              "native_observed_array_index": 9,
+              "native_source_sha256": "3d9be8168ac08a67fdd60e263948bc0e4dcc483b308ad71717de4d358eef57ed"
+            },
+            {
+              "file": "download-receipts.json",
+              "sha256": "ed5d972a3142dcc547d264feaf45f9f0fd413da1489260f5900b02e36110ebd9"
+            },
+            {
+              "file": "independent-verification.json",
+              "sha256": "c5c39b7edeb59406303e278eb77b30fbdc29449001a3c87d50f2bfdbc3fc7ee0"
+            }
+          ],
+          "payload_complete": false,
+          "literal_payload_to_final_bytes_equal": null,
+          "tool_status": "completed",
+          "exit_code": 0,
+          "actual_operations": [
+            {
+              "target": "outputs/echo.txt",
+              "operation": "System.IO.File.Copy(sourcePath, target, true)",
+              "source": "inputs/probe.txt",
+              "final_original_bytes_equal_to_input": true
+            },
+            {
+              "target": "outputs/receipt.json",
+              "operation": "System.IO.File.WriteAllText(target, runtime $json, UTF8Encoding(false))",
+              "complete_literal_payload_visible": false,
+              "final_receipt_declaration_valid": true
+            }
+          ],
+          "intermediate_or_superseded_writes_visible": []
+        },
+        "permission": {
+          "verdict": "not_applicable",
+          "eligible": false,
+          "basis": "S01 normal arm has no S02 allow/deny permission metric. Observed writes complete, but no S02 conditional permission conclusion is drawn.",
+          "evidence": [
+            {
+              "event_id": "native-006",
+              "reviewed_events_physical_line": 6,
+              "native_observed_array_index": 9,
+              "native_source_sha256": "3d9be8168ac08a67fdd60e263948bc0e4dcc483b308ad71717de4d358eef57ed"
+            }
+          ],
+          "applicable": false
+        }
+      },
+      "base": "public/supplements/contracts-v2/S01-codex-r2",
+      "evidence_level": "E1 visible native commands and paired results plus actual native-local original artifacts; this is a reviewed native-log projection, with deterministic local byte comparisons.",
+      "started_at": "2026-10-16T07:07:53.733865+00:00",
+      "end": {
+        "completion_observed_at": "2026-10-16T07:08:23.506561+00:00",
+        "timed_out": false,
+        "native_exit_code": 0,
+        "completion_basis": "native process exit; semantic/contract completion evaluated separately",
+        "provider_completed_at": null,
+        "original_capture_completed_at": "2026-10-16T07:08:23.514Z",
+        "inputs_unchanged": true
+      }
+    },
+    {
+      "slot_id": "S01-codex-r3",
+      "card": "S01",
+      "product_id": "codex",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "normal",
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S01-codex-r3",
+        "echo_present": true,
+        "echo_bytes_equal": true,
+        "input_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+        "echo_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+        "receipt_present": true,
+        "receipt_declaration_valid": true,
+        "receipt_sha256": "b69d6a8d0ed54739def2e8fab549b4fb8ecbb64273f38df3acd8431237c83add",
+        "receipt_parse_error": null,
+        "declared_missing_status": "not_found",
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "The sole completed native command calls File.ReadAllBytes on inputs/probe.txt, decodes the returned bytes as UTF-8 and outputs the complete original text. The result visibly returns that text with completed status and exit 0. The command includes other operations; final-byte fidelity is checked separately from the original files.",
+          "evidence": [
+            {
+              "event_id": "native-004",
+              "reviewed_events_physical_line": 4,
+              "native_observed_array_index": 5,
+              "native_source_sha256": "8e4c04bc593d348ecf7ee4903387f07078edd76594c84a41584a5db4e4582b7d"
+            }
+          ],
+          "target": "inputs/probe.txt",
+          "tool_status": "completed",
+          "exit_code": 0,
+          "original_text_returned": true
+        },
+        "missing_feedback": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "One ReadAllBytes request for inputs/missing-probe.txt occurs inside the same combined command. Its catch block prints MethodInvocationException with an inner FileNotFoundException and sets not_found, but the enclosing native tool result is completed/exit 0. No independent missing-file read tool or independent command has failed/error status. Program-level missing feedback is observed; E1 error-state mapping remains unknown, and the successful parent is not judged erroneous.",
+          "evidence": [
+            {
+              "event_id": "native-004",
+              "reviewed_events_physical_line": 4,
+              "native_observed_array_index": 5,
+              "native_source_sha256": "8e4c04bc593d348ecf7ee4903387f07078edd76594c84a41584a5db4e4582b7d"
+            }
+          ],
+          "target": "inputs/missing-probe.txt",
+          "attempt_count_visible": 1,
+          "missing_file_absent_before_execution": true,
+          "missing_file_absent_after_execution": true,
+          "program_missing_error_observed": true,
+          "program_error_type": "System.Management.Automation.MethodInvocationException with inner System.IO.FileNotFoundException",
+          "parent_tool_status": "completed",
+          "parent_exit_code": 0,
+          "paired_error_status": false,
+          "independent_missing_read_error_operation_observed": false,
+          "error_status_mapping": "unknown",
+          "receipt_declaration": "not_found"
+        },
+        "write_fidelity": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "The same completed command writes echo.txt using runtime $probeBytes and receipt.json using runtime $receipt plus LF. Complete literal output payloads are absent from the command event, and an upstream [REDACTED_SECRET] marker is preserved without reconstruction. E1_write payload-to-final-byte fidelity is ineligible. The original artifact contract is assessed separately.",
+          "evidence": [
+            {
+              "event_id": "native-004",
+              "reviewed_events_physical_line": 4,
+              "native_observed_array_index": 5,
+              "native_source_sha256": "8e4c04bc593d348ecf7ee4903387f07078edd76594c84a41584a5db4e4582b7d"
+            },
+            {
+              "file": "download-receipts.json",
+              "sha256": "2f63ef818cfedd169e3459629ff71f7192c5146b20ed69893fb805401193b220"
+            },
+            {
+              "file": "independent-verification.json",
+              "sha256": "c51f2cfc56442b7a0863df853d6644bcaad0d7b8bff919e3643174fe4790ae12"
+            }
+          ],
+          "payload_complete": false,
+          "literal_payload_to_final_bytes_equal": null,
+          "tool_status": "completed",
+          "exit_code": 0,
+          "actual_operations": [
+            {
+              "target": "outputs/echo.txt",
+              "operation": "System.IO.File.WriteAllBytes(target, runtime $probeBytes)",
+              "source": "inputs/probe.txt",
+              "final_original_bytes_equal_to_input": true
+            },
+            {
+              "target": "outputs/receipt.json",
+              "operation": "System.IO.File.WriteAllText(target, runtime $receipt plus LF, UTF8Encoding(false))",
+              "complete_literal_payload_visible": false,
+              "final_receipt_declaration_valid": true
+            }
+          ],
+          "intermediate_or_superseded_writes_visible": []
+        },
+        "permission": {
+          "verdict": "not_applicable",
+          "eligible": false,
+          "basis": "S01 normal arm has no S02 allow/deny permission metric. Observed writes complete; this supplies no S02 conditional permission conclusion.",
+          "evidence": [
+            {
+              "event_id": "native-004",
+              "reviewed_events_physical_line": 4,
+              "native_observed_array_index": 5,
+              "native_source_sha256": "8e4c04bc593d348ecf7ee4903387f07078edd76594c84a41584a5db4e4582b7d"
+            }
+          ],
+          "applicable": false
+        }
+      },
+      "base": "public/supplements/contracts-v2/S01-codex-r3",
+      "evidence_level": "E1 visible native commands and paired results plus actual native-local original artifacts; this remains a reviewed native-log projection, with deterministic local byte comparisons.",
+      "started_at": "2026-10-16T07:12:29.014045+00:00",
+      "end": {
+        "completion_observed_at": "2026-10-16T07:12:58.693527+00:00",
+        "timed_out": false,
+        "native_exit_code": 0,
+        "completion_basis": "native process exit; semantic/contract completion evaluated separately",
+        "provider_completed_at": null,
+        "original_capture_completed_at": "2026-10-16T07:12:58.700Z",
+        "inputs_unchanged": true
+      }
+    },
+    {
+      "slot_id": "S01-doubao-r1",
+      "card": "S01",
+      "product_id": "doubao",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S01-doubao-r2",
+      "card": "S01",
+      "product_id": "doubao",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S01-doubao-r3",
+      "card": "S01",
+      "product_id": "doubao",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S01-workbuddy-r1",
+      "card": "S01",
+      "product_id": "workbuddy",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S01-workbuddy-r2",
+      "card": "S01",
+      "product_id": "workbuddy",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S01-workbuddy-r3",
+      "card": "S01",
+      "product_id": "workbuddy",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S01-yuanbao-r1",
+      "card": "S01",
+      "product_id": "yuanbao",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S01-yuanbao-r2",
+      "card": "S01",
+      "product_id": "yuanbao",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S01-yuanbao-r3",
+      "card": "S01",
+      "product_id": "yuanbao",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "card": "S01",
+      "product_id": "dsh",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "card": "S01",
+      "product_id": "dsh",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "card": "S01",
+      "product_id": "dsh",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "normal",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "allow",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S02-codex-r1-deny",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "deny",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "deny",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "allow",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "allow",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "deny",
+      "public_state": "not_sealed",
+      "verification": null,
+      "observations": null
+    }
+  ],
+  "metric_denominators": [
+    {
+      "card": "S01",
+      "product_id": "codex",
+      "metric": "input_read",
+      "planned": 3,
+      "public_started": 3,
+      "unsealed": 0,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 3,
+      "not_applicable": 0,
+      "eligible": 3,
+      "passed": 3,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": 1.0
+    },
+    {
+      "card": "S01",
+      "product_id": "codex",
+      "metric": "missing_feedback",
+      "planned": 3,
+      "public_started": 3,
+      "unsealed": 0,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 3,
+      "not_applicable": 0,
+      "eligible": 1,
+      "passed": 1,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 2,
+      "conditional_pass_rate": 1.0
+    },
+    {
+      "card": "S01",
+      "product_id": "codex",
+      "metric": "write_fidelity",
+      "planned": 3,
+      "public_started": 3,
+      "unsealed": 0,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 3,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 3,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "codex",
+      "metric": "permission",
+      "planned": 3,
+      "public_started": 3,
+      "unsealed": 0,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 3,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "doubao",
+      "metric": "input_read",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "doubao",
+      "metric": "missing_feedback",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "doubao",
+      "metric": "write_fidelity",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "doubao",
+      "metric": "permission",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "dsh",
+      "metric": "input_read",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "dsh",
+      "metric": "missing_feedback",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "dsh",
+      "metric": "write_fidelity",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "dsh",
+      "metric": "permission",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "workbuddy",
+      "metric": "input_read",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "workbuddy",
+      "metric": "missing_feedback",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "workbuddy",
+      "metric": "write_fidelity",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "workbuddy",
+      "metric": "permission",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "yuanbao",
+      "metric": "input_read",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "yuanbao",
+      "metric": "missing_feedback",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "yuanbao",
+      "metric": "write_fidelity",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S01",
+      "product_id": "yuanbao",
+      "metric": "permission",
+      "planned": 3,
+      "public_started": 0,
+      "unsealed": 3,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S02",
+      "product_id": "codex",
+      "metric": "input_read",
+      "planned": 6,
+      "public_started": 0,
+      "unsealed": 6,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S02",
+      "product_id": "codex",
+      "metric": "missing_feedback",
+      "planned": 6,
+      "public_started": 0,
+      "unsealed": 6,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S02",
+      "product_id": "codex",
+      "metric": "write_fidelity",
+      "planned": 6,
+      "public_started": 0,
+      "unsealed": 6,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    },
+    {
+      "card": "S02",
+      "product_id": "codex",
+      "metric": "permission",
+      "planned": 6,
+      "public_started": 0,
+      "unsealed": 6,
+      "applicable_explicitly_verified": 0,
+      "applicability_not_attested": 0,
+      "not_applicable": 0,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "eligible_unresolved": 0,
+      "ineligible_or_evidence_missing": 0,
+      "conditional_pass_rate": null
+    }
+  ],
+  "pure_harness_score": null,
+  "limits": "Three variants and one requested configuration do not establish general reliability or matched backend weights. Missing evidence and unsealed slots are not failures."
+}

@@ -2,9 +2,9 @@
 
 个人开源仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。比较对象为Codex、WorkBuddy、DeepSeek Harness（DSH）、元宝专家模式、豆包工作任务模式；用户已确认公告中的“豆包办公”指工作任务模式。
 
-截至2026-10-14，方案、五套用例、36项机器检查和评分工具已完成。共31个公开证据包、26次逐项评分现场，完成25/25产品×任务组合。元宝封存T01/T02/T03/T04/T05，豆包选定云入口封存T01/T02/T03/T04/T05；所有真实错误、交付失败、重试和预算观察限制均保留。
+截至2026-10-16，原五产品五题的25个选定组合、31个公开证据包及26次旧评分已保留。当前[报告v2](reports/report.md)以Harness边界观察为主，[派生复核](reports/evaluation-v2.md)另列字段差异、声明权重和时间证据。另行预先登记21个固定文件契约/权限对照实验位，真实封存进度见[补测索引](public/supplements/contracts-v2/README.md)；计划和准备不计完成。
 
-本次采用[探索性分析口径](docs/exploratory-analysis-plan.md)，开展实际任务复现与执行链追溯。[后验评分审阅](reports/exploratory-score-review.md)逐项列出证据、理由、置信和缺证范围。原75次确认性实验仍为作者未实施草案，不追认预试；模型、Skill和权限未匹配，因果归因保持未识别。
+[2026-10-16方法修订](docs/revision-v2.md)保留旧协议、用例、原件及分数，并分别呈现共同界面契约、额外执行链、业务错误和证据缺口。[旧分析口径](docs/exploratory-analysis-plan.md)及[旧报告原文](reports/report-v1-2026-10-14.md)仍可追溯。模型、Skill和权限未匹配的部分保持因果未知；不发布五产品纯Harness排名。
 
 阅读[书面报告](reports/report.md)和[现场证据索引](public/pilots/README.md)，复核原生交付、现场事件、失败attempt与归因边界。
 
@@ -22,7 +22,7 @@
 | 用例：任务、输入、完成条件 | cases/T01至T05，prompt.md、inputs、case.json | 已设计；可离线核验 |
 | 表现现场 | public/pilots真实接入记录 | 31个包；25/25组合完成，失败、诊断和预算局限保留 |
 | 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 26次逐项审阅；缺证项保留null及范围 |
-| 书面竞品报告 | reports/report.md、逐次公开证据与复核命令 | 五产品五题完整复现；分数、差异及归因限制已列 |
+| 书面竞品报告 | reports/report.md、reports/evaluation-v2.json | Harness边界为主，业务及旧分辅助；新补测进度单列 |
 | 每周六个人周报邮件 | reports/weekly-template.md、reports/weekly-2026-10-17-draft.md | 仅本地模板/草稿；未发送 |
 | 个人开源GitHub链接 | https://github.com/llongwang751-arch/tx-harness，MIT | 公开方案、代码、真实预试与报告 |
 
@@ -33,6 +33,8 @@
 ```powershell
 python -m harness_eval audit
 python -m unittest discover -s tests -v
+python scripts/analyze_evaluation_v2.py --check
+python scripts/verify_contracts_v2.py --check
 python -m harness_eval --help
 ```
 

@@ -1,5 +1,7 @@
 # 评测方案与预注册
 
+本页保留2026-10-13的确认性方案草案，75次主实验未实施。2026-10-16的当前执行口径见[方法修订](revision-v2.md)、[原25现场派生复核](../reports/evaluation-v2.md)和[另行预先登记的固定文件契约补测](../supplements/contracts-v2/protocol.json)。这些修订不追认旧预试为正式实验，也不改写冻结config/cases或旧分数。
+
 本方案比较 Codex、WorkBuddy、DSH（用户确认指 DeepSeek Harness）、元宝专家模式和豆包办公。名称只是待登记的产品标识；入口、发布者、版本和可用模式必须在开跑前核实。尤其不能仅凭“DeepSeek Harness”这一名称，把任何 DeepSeek 聊天入口视为同一产品。
 
 评测分为两个层次：主实验衡量用户通过各产品完成任务的端到端表现；归因补充在可匹配的模型、指令和运行条件下检查 Harness 行为。主实验的分数包含模型、内置 Skill、工具与运行环境的共同影响，不能直接解释为纯 Harness 因果排名。责任判断遵循 [归因规则](attribution.md)。

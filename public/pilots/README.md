@@ -1,5 +1,7 @@
 # 真实预试索引
 
+2026-10-16修订：本页只索引原31个pilot包，旧原件未变。当前Harness主观察、业务字段差异及时间证据见[报告v2](../../reports/report.md)和[派生复核](../../reports/evaluation-v2.md)。另行预先登记的S01/S02补测见[独立索引](../supplements/contracts-v2/README.md)，不混入旧25组合或冒称旧实验重复。
+
 2026-10-13至14（Asia/Shanghai）在独立参与者目录通过产品原生CLI、SDK和正常桌面入口执行或恢复观察，保留全部失败与修正尝试。当前31个公开包、26次后验评分，已完成25/25个产品×任务组合。所有目录均为pilot、产品侧失败或入口诊断，不能追认为正式75个样本。后验评分另见[探索性审阅](../../reports/exploratory-score-review.md)，完整覆盖及纯Harness因果排名的限制见[分析口径](../../docs/exploratory-analysis-plan.md)。
 
 | 记录 | 结果 | 证据 |

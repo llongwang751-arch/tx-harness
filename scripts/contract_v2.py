@@ -99,6 +99,12 @@ def export(s):
             safe_public_text(line);records.append(json.loads(line))
     else:raise ValueError('No reviewed ordinary event projection')
     public_review={k:v for k,v in review.items() if k not in ('private_notes',)}
+    for key in ('input_read','missing_feedback','write_fidelity','permission'):
+        item=review.get('observations',{}).get(key,{})
+        if item.get('verdict') not in ('pass','fail','unknown','upstream_deviation','not_applicable') or not isinstance(item.get('evidence'),list):
+            raise ValueError('Missing structured observation: '+key)
+        if item['verdict'] in ('pass','fail') and (item.get('eligible') is not True or not item['evidence']):
+            raise ValueError('Known metric verdict requires eligible operation and concrete evidence')
     public_text=json.dumps({'review':public_review,'start':start,'end':end},ensure_ascii=False)
     safe_public_text(public_text)
     verification=verify_outputs(p/'outputs',fixture/'probe.txt')
@@ -119,11 +125,22 @@ def export(s):
         if extra.is_symlink() or not extra.resolve().is_relative_to((p/'outputs').resolve()):raise ValueError('Extra output escapes evidence directory')
         target=d/'outputs'/extra.relative_to(p/'outputs');target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(extra,target)
     save(d/'review.json',public_review);save(d/'execution-start.json',start);save(d/'execution-end.json',end)
+    plan_projection={k:v for k,v in read(p/'plan.json').items() if k!='workspace'}
+    plan_projection['redaction']={'removed_fields':['workspace'],'original_private_plan_sha256':sha(p/'plan.json')}
+    save(d/'plan.json',plan_projection)
+    if (p/'independent-verification.json').exists():
+        safe_public_text((p/'independent-verification.json').read_text(encoding='utf-8'))
+        shutil.copyfile(p/'independent-verification.json',d/'independent-verification.json')
     save(d/'download-receipts.json',native);save(d/'verification.json',verification)
     (d/'visible-events.jsonl').write_text(''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in records),encoding='utf-8',newline='\n')
+    if (p/'reviewed-native-events.jsonl').exists():
+        shutil.copyfile(p/'reviewed-native-events.jsonl',d/'visible-events.jsonl')
+        shutil.copyfile(p/'reviewed-native-events.jsonl',d/'reviewed-native-events.jsonl')
     save(d/'metadata.json',{'schema':'contract-v2-public-evidence','slot':spec,'registration_sha256':sha(BASE/'protocol.json'),
         'registration_commit':review['registration_commit'],'review_actor':'Operator/agent','source_plan_sha256':sha(p/'plan.json'),
         'raw_records_sha256':{x.name:sha(x) for x in sorted(p.iterdir()) if x.is_file() and x.suffix in ('.json','.jsonl','.raw')},
+        'public_projection_file':'visible-events.jsonl','reviewed_projection_alias':'reviewed-native-events.jsonl' if (p/'reviewed-native-events.jsonl').exists() else None,
+        'export_source_sha256':sha(Path(__file__)),'preparation_source_sha256':{x.name:sha(x) for x in sorted((p/'prepare-source').iterdir()) if x.is_file()},
         'evidence_level':review['evidence_level'],'backend_model_attested':False,'pure_harness_score':None,
         'confidence':'High for unchanged original bytes and deterministic comparison; UI provenance relies on reviewed native observations; causation unresolved'})
     (d/'README.md').write_text(f'# {s}\n\n独立登记的固定文件契约补测。原件和普通可见证据支持范围见review、计时及收据；声明不替代实际工具反馈。\n\n复核：`python -X utf8 scripts/contract_v2.py verify --slot {s}`。没有综合或纯Harness分。\n',encoding='utf-8',newline='\n')
