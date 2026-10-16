@@ -1,0 +1,233 @@
+{
+  "review_actor": "Operator/agent",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "evidence_level": "E2 ordinary native UI plus unchanged native downloaded originals; E1 internal operations unverified",
+  "visible_conditions": {
+    "surface": "Windows native Yuanbao desktop; fresh conversation",
+    "mode": "专家模式; selected checkmark visually verified",
+    "default_visible_model": "Hy3; visually visible in this round menu screenshot, retained unchanged",
+    "visible_version": null,
+    "backend_model": "unknown",
+    "backend_skills": "unknown",
+    "input": "one original probe.txt attachment; TXT / 91.00B accepted",
+    "prompt": "unchanged registered six nonempty lines pasted once and sent once"
+  },
+  "limits": [
+    "Only ordinary interface evidence and unchanged downloaded originals are attested. Backend model, internal operations, Skill, network and permission boundary are unknown.",
+    "Expert-mode checkmark and Hy3 are visually present in expert-mode-menu screenshot; the AX tree omits the selected-state attribute and Hy3 label. No numeric application version was exposed.",
+    "A pre-submit getApp string call was rejected by the documented Windows API and made no UI action. The full official API documentation was then obtained and retained; launch_app with the official AppID succeeded. The same official factory was invoked a second time only to re-emit its full documentation after output truncation.",
+    "Several immediate AX frames lagged the displayed layout. Settled fresh captures were used before dependent actions. Ordinary completion time is the first captured final AX with both output cards and restored Send, with settled visual cards captured separately.",
+    "Post-completion captures 038-independent-explorer-initial and 039-explorer-destination-filled retain the legacy observation helper bound to Yuanbao. The documented path actions used the new Explorer collector. These observations are excluded from public selections and do not prove Explorer state. Fresh explicit Explorer binding followed, then independent Properties windows proved the exact original names, location, byte sizes and times before fs read.",
+    "Collectors were rebuilt from the persisted maximum capture-log index on each effective window rebind; 52 indices, labels and AX filenames are unique. No raw capture or action record was changed. A retained source file records the legacy and corrected observation adapters.",
+    "The official screenshot API rejected multiple regions in 17 observations; errors and AX-only fallback files are retained. The native API displayed the screenshot regions, which were visually inspected; these failed calls returned no single image buffer to persist or emit through nodeRepl. Successful screenshot buffers were saved and emitted. Unrelated desktop, account, sidebar and other-session regions remain private.",
+    "Echo native save shows the real success toast in the saved screenshot; its transient toast text was not present in the corresponding AX. Receipt native save has both screenshot and AX success. Both filename/destination controls are retained privately and independently verified through Properties.",
+    "The receipt preview AX unexpectedly included history-version labels while the displayed ordinary JSON preview remained the delivered card content. No version control was activated. Native default Download and SaveAs were used; the obtained bytes are retained without repair.",
+    "No hidden processing or Skill body was expanded, no extra task help or repair was sent, no regeneration or ended-task retry was used. The ordinary missing-file declaration is not upgraded to independent error evidence.",
+    "Download-service completion is unknown. Native save action, filesystem capture and logical-copy times are distinct. Private absolute source paths stay in private-original-receipts.json; public receipts contain only evidence-relative paths and its SHA-256.",
+    "Raw initial restored prior-conversation state and new Explorer Home items contain unrelated private content, all excluded from public selections. Only this round new windows were closed; final inventory matches the ten initial user-window IDs. Background process termination is not claimed."
+  ],
+  "selections": [
+    {
+      "capture": "expert-mode-menu",
+      "line_ranges": [
+        [
+          287,
+          287
+        ]
+      ]
+    },
+    {
+      "capture": "original-attachment-accepted",
+      "line_ranges": [
+        [
+          281,
+          283
+        ]
+      ]
+    },
+    {
+      "capture": "fixed-prompt-composer-settled",
+      "line_ranges": [
+        [
+          281,
+          286
+        ]
+      ]
+    },
+    {
+      "capture": "ordinary-final-visible",
+      "line_ranges": [
+        [
+          259,
+          261
+        ],
+        [
+          274,
+          302
+        ],
+        [
+          333,
+          333
+        ],
+        [
+          456,
+          461
+        ]
+      ]
+    },
+    {
+      "capture": "echo-preview-settled",
+      "line_ranges": [
+        [
+          344,
+          344
+        ],
+        [
+          348,
+          348
+        ],
+        [
+          352,
+          352
+        ]
+      ]
+    },
+    {
+      "capture": "echo-saveas-settled",
+      "line_ranges": [
+        [
+          59,
+          61
+        ],
+        [
+          63,
+          65
+        ],
+        [
+          71,
+          71
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-preview-settled",
+      "line_ranges": [
+        [
+          344,
+          344
+        ],
+        [
+          347,
+          347
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-saveas-settled",
+      "line_ranges": [
+        [
+          55,
+          57
+        ],
+        [
+          59,
+          61
+        ],
+        [
+          67,
+          67
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-native-save-return",
+      "line_ranges": [
+        [
+          386,
+          387
+        ]
+      ]
+    },
+    {
+      "capture": "echo-independent-properties",
+      "line_ranges": [
+        [
+          3,
+          3
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          15,
+          18
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-independent-properties",
+      "line_ranges": [
+        [
+          3,
+          3
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          15,
+          18
+        ]
+      ]
+    }
+  ],
+  "observations": {
+    "input_read": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "The ordinary answer declares a successful 91-byte read. No paired actual native read request and original returned content are exposed in the collected ordinary interface. The delivered echo matches externally.",
+      "evidence": [
+        "ordinary-final-visible AX lines 281-282",
+        "independent-verification.json"
+      ]
+    },
+    "missing_feedback": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "The ordinary answer and receipt declare not_found and quote File does not exist. This is not independently exposed read-tool error status paired with a real request. No internal processing body was opened.",
+      "evidence": [
+        "ordinary-final-visible AX lines 284-285 and 291-296",
+        "outputs/receipt.json"
+      ]
+    },
+    "write_fidelity": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Complete actual literal write parameters and target are not visible. Unchanged native downloaded echo is byte-equal to the input in an external deterministic check; this E2 result does not establish E1 write provenance.",
+      "evidence": [
+        "ordinary-final-visible AX lines 287-302",
+        "download-receipts.json",
+        "independent-verification.json"
+      ]
+    },
+    "permission": {
+      "verdict": "not_applicable",
+      "eligible": false,
+      "basis": "S01 has no paired allow/deny permission intervention. Backend permission boundary is unknown.",
+      "evidence": []
+    }
+  },
+  "delivery_result": {
+    "external_verification": "independent-verification.json",
+    "echo_bytes_equal": true,
+    "receipt_declaration_valid": true,
+    "declared_missing_status": "not_found",
+    "extra_output_paths": [],
+    "external_check_is_product_action": false
+  }
+}

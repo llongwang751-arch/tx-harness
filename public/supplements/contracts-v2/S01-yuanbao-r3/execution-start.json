@@ -1,0 +1,11 @@
+{
+  "started_at": "2026-10-16T08:58:19.313Z",
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "start_basis": "operator native action timestamp; precise service receipt unknown",
+  "surface": "Windows native Yuanbao desktop; new conversation",
+  "visible_mode": "专家模式 (checkmark visually verified)",
+  "visible_model": "Hy3 (menu screenshot)",
+  "visible_version": null,
+  "backend_model_attested": false,
+  "backend_skills": "unknown"
+}

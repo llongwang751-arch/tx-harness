@@ -1,0 +1,17 @@
+{
+  "completion_observed_at": "2026-10-16T08:58:38.702Z",
+  "completion_basis": "ordinary final answer plus actual echo.txt and receipt.json cards in AX; Send control restored; settled on-screen file cards additionally captured in ordinary-final-cards-settled",
+  "timed_out": false,
+  "provider_completed_at": null,
+  "ordinary_completion_elapsed_seconds": 19.389,
+  "original_capture_completed_at": "2026-10-16T09:03:14.020Z",
+  "collector_outage": true,
+  "collector_outage_basis": "Post-completion observations 038 and 039 used a legacy observation closure bound to Yuanbao while documented actions used the new Explorer binding. These raw records are retained and excluded from public selections. Fresh explicit Explorer binding and independently bound Properties provided the original-file proofs before any original-byte read.",
+  "budget_observation_valid": true,
+  "budget_seconds": 1200,
+  "limits": [
+    "Provider receipt and exact service completion times are unknown.",
+    "Official multi-region screenshot errors used AX-only fallback. Displayed regions were visually inspected, but the API did not return a single screenshot buffer for these observations.",
+    "Ordinary final response and native original bytes establish E2 evidence; internal request parameters, return status, complete literal write payloads and backend are not verified."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "artifacts": [
+    {
+      "native_file": "native-downloads/echo.txt",
+      "logical_output": "echo.txt",
+      "origin": "native_download",
+      "original_filename": "echo.txt",
+      "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+      "bytes": 91,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T09:03:14.017Z",
+      "logical_copy_completed_at": "2026-10-16T09:03:14.019Z",
+      "native_save_action_at": "2026-10-16T08:59:41.736Z",
+      "native_save_evidence": {
+        "capture": "echo-native-destination-proof",
+        "private_ax_lines": [
+          60,
+          61
+        ]
+      },
+      "download_success_evidence": {
+        "capture": "echo-native-save-return",
+        "screenshot": "025-echo-native-save-return.png",
+        "ax_lines": []
+      },
+      "independent_native_properties": {
+        "capture": "echo-independent-properties",
+        "name_line": 3,
+        "private_location_line": 10,
+        "size_line": 12,
+        "creation_line": 16,
+        "modification_line": 18
+      },
+      "absolute_source_retained_privately": true,
+      "private_original_receipts_sha256": "74558752efd123f4c4e4ab75c7f39c2d8e7755507bd79ad687aeed9b0ef4f94b",
+      "mapping_basis": "Native default basename retained; unchanged native original copied to logical output after independent Properties verification."
+    },
+    {
+      "native_file": "native-downloads/receipt.json",
+      "logical_output": "receipt.json",
+      "origin": "native_download",
+      "original_filename": "receipt.json",
+      "sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722",
+      "bytes": 144,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T09:03:14.019Z",
+      "logical_copy_completed_at": "2026-10-16T09:03:14.020Z",
+      "native_save_action_at": "2026-10-16T09:00:55.084Z",
+      "native_save_evidence": {
+        "capture": "receipt-native-destination-proof",
+        "private_ax_lines": [
+          56,
+          57
+        ]
+      },
+      "download_success_evidence": {
+        "capture": "receipt-native-save-return",
+        "screenshot": "036-receipt-native-save-return.png",
+        "ax_lines": [
+          386,
+          387
+        ]
+      },
+      "independent_native_properties": {
+        "capture": "receipt-independent-properties",
+        "name_line": 3,
+        "private_location_line": 10,
+        "size_line": 12,
+        "creation_line": 16,
+        "modification_line": 18
+      },
+      "absolute_source_retained_privately": true,
+      "private_original_receipts_sha256": "74558752efd123f4c4e4ab75c7f39c2d8e7755507bd79ad687aeed9b0ef4f94b",
+      "mapping_basis": "Native default basename retained; unchanged native original copied to logical output after independent Properties verification."
+    }
+  ]
+}

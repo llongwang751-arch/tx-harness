@@ -2,6 +2,8 @@
 
 本次按公告允许的任务复现与过程追溯路径交付。五产品各五题的当前实际覆盖见[报告](../reports/report.md)和[后验评分](../reports/exploratory-score-review.json)；准备目录不算已测试。原75次确认性实验是作者提出的后续草案，不是公告规定的提交次数，不追认本次预试。
 
+2026-10-16另在首次执行前登记21个固定文件契约及许可配对实验位，材料和判定规则见[补测协议](../supplements/contracts-v2/protocol.json)，实际封存结果与分母见[补测索引](../public/supplements/contracts-v2/README.md)。这批补测与原五题分开统计；它减少部分任务语义干扰，仍不证明五产品使用同一模型部署或内置Skill。
+
 1. 提交个人公开仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)，使用分支`codex/evaluation`并记录实际提交commit。
 2. 阅读[分析口径](exploratory-analysis-plan.md)、[五套用例](../cases)、[打分细则](rubric.md)和[证据索引](../public/pilots/README.md)。报告逐题结果须与原件、检查和人工理由对应。
 3. 按索引复核指定原件及manifest；评分JSON每项保留来源SHA-256、定位、置信依据、替代解释和归因。失败、诊断、重试与协议偏离全部保留。
@@ -14,6 +16,8 @@
 python -X utf8 -m harness_eval audit
 python -X utf8 scripts/verify_public_pilots.py
 python -X utf8 scripts/audit_harness_observations.py
+python -X utf8 scripts/analyze_evaluation_v2.py --check
+python -X utf8 scripts/verify_contracts_v2.py --check
 python -X utf8 -m unittest discover -s tests -v
 ```
 
