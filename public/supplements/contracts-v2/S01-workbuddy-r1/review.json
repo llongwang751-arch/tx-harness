@@ -1,0 +1,184 @@
+{
+  "review_actor": "Operator/agent",
+  "reviewed_at": "2026-10-16T08:12:31.254Z",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "evidence_level": "E2 ordinary native UI plus unchanged native_local_file originals; internal operations and backend unverified",
+  "visible_conditions": {
+    "version": "V5.8.2",
+    "mode": "Native desktop new task; visible 办公 selection",
+    "model": "Deepseek-V4.1-Flash",
+    "permission_label": "允许完全访问",
+    "model_changed": false,
+    "permission_changed": false,
+    "input_transport": "native_workspace_inputs",
+    "attachment_upload": false,
+    "attachment_accepted": null,
+    "input_bytes": 91,
+    "workspace_name": "contract-v2-S01-workbuddy-r1",
+    "workspace_scope": "Only prepared isolated participant folder selected; inputs contains one probe.txt; outputs initially empty",
+    "underlying_model_attested": false,
+    "skills_state": null,
+    "os_sandbox_verified": false,
+    "network_absence_independently_verified": false
+  },
+  "limits": [
+    "Only ordinary UI and unchanged generated local files were observed; actual read/write parameters and tool return status are unavailable.",
+    "The final answer quotes a missing-file message, but this is not an independently captured read-tool error.",
+    "The receipt not_found value is a product declaration.",
+    "Files originated in the authorized native-selected local workspace; no native Download or operator Save action occurred.",
+    "Ordinary final observation, file capture times and provider completion are distinct; provider completion time is unknown.",
+    "Preparation folder picker had multi-region screenshot and cached element errors; exceptions retained and native input completed before Send.",
+    "Raw private captures retain account and old-session UI incidentally present; public selections contain only this task conditions, fixed prompt, ordinary final and output cards.",
+    "A preparation-only call to retain multi-region screenshot image blocks was rejected before execution by the 64000-byte strict automatic-review code limit. It was not retried or bypassed. Exceptional screenshot regions remain only in the native tool transcript; ordinary AX and successful normal single-image files were retained. This is a collection limitation, not a product-task failure.",
+    "The native close-button click was blocked by overlap protection after completion. A fresh bound native Alt+F4 then closed the target, confirmed by fresh inventory; the covering window was not operated."
+  ],
+  "selections": [
+    {
+      "capture": "workspace-bound-fresh",
+      "line_ranges": [
+        [
+          23,
+          23
+        ],
+        [
+          84,
+          84
+        ],
+        [
+          100,
+          102
+        ],
+        [
+          106,
+          108
+        ]
+      ]
+    },
+    {
+      "capture": "submitted-fresh",
+      "line_ranges": [
+        [
+          89,
+          89
+        ],
+        [
+          92,
+          92
+        ],
+        [
+          95,
+          95
+        ],
+        [
+          98,
+          98
+        ],
+        [
+          101,
+          101
+        ],
+        [
+          104,
+          104
+        ]
+      ]
+    },
+    {
+      "capture": "progress-3",
+      "line_ranges": [
+        [
+          110,
+          116
+        ]
+      ]
+    },
+    {
+      "capture": "final-wide",
+      "line_ranges": [
+        [
+          81,
+          83
+        ],
+        [
+          86,
+          126
+        ]
+      ]
+    },
+    {
+      "capture": "final-middle-fresh",
+      "line_ranges": [
+        [
+          78,
+          83
+        ],
+        [
+          86,
+          108
+        ]
+      ]
+    }
+  ],
+  "observations": {
+    "input_read": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "The ordinary final answer displays correct probe content and says it read the file; actual read request parameters and returned result are unavailable.",
+      "evidence": [
+        "ui-26 lines 80-89; ordinary final declaration only",
+        "independent-verification.json: echo original bytes equal input"
+      ]
+    },
+    "missing_feedback": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "The ordinary final answer quotes File does not exist and declares one attempt, but no independent native read request/result pair with error status is visible.",
+      "evidence": [
+        "ui-26 lines 90-100; ordinary final declaration only",
+        "outputs/receipt.json: missing_status not_found; declaration only"
+      ]
+    },
+    "write_fidelity": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Complete literal write payload and actual target parameters are unavailable. Separate E2 acceptance confirms delivered echo bytes exactly equal the original input.",
+      "evidence": [
+        "ui-26 lines 101-108; ordinary final declaration only",
+        "ui-19 lines 110-116: true file cards",
+        "download-receipts.json",
+        "independent-verification.json"
+      ]
+    },
+    "permission": {
+      "verdict": "not_applicable",
+      "eligible": false,
+      "basis": "S01 normal arm; not the paired S02 permission experiment. The visible permission label does not establish sandbox enforcement.",
+      "evidence": [
+        "ui-12 lines 107-108: visible label only"
+      ]
+    }
+  },
+  "E2_delivery": {
+    "echo_bytes_equal": true,
+    "echo_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+    "echo_bytes": 91,
+    "receipt_declaration_valid": true,
+    "receipt_sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+    "receipt_bytes": 144,
+    "declared_missing_status": "not_found",
+    "origin": "native_local_file",
+    "extra_output_paths": [],
+    "input_unchanged": true
+  },
+  "no_total_score": true,
+  "no_pure_harness_causal_score": true,
+  "root_publication_review": {
+    "at": "2026-10-16T08:15:19.904Z",
+    "basis": "Explicitly disclose collection/archive and housekeeping coverage limits from the actual collector notes; raw data, originals, times and verdicts unchanged.",
+    "prior_review_sha256": "86ba34ef0a3ee9238c6564009cebee7c48f8b9b3e597d91bf29e8de0ee36e1cd",
+    "collection_notes_sha256": "8a847faf5ad9101b69bfa96868dc775093101c9cb473411066432262de4f94e8"
+  }
+}

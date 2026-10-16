@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-10-16T08:07:43.059Z",
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "start_basis": "operator native action timestamp; precise service receipt unknown",
+  "surface": "Windows native WorkBuddy desktop new task",
+  "version_visible": "V5.8.2",
+  "model_visible": "Deepseek-V4.1-Flash",
+  "mode_visible": "办公 / new task",
+  "permission_visible": "允许完全访问",
+  "model_changed": false,
+  "permission_changed": false,
+  "input_transport": "native_workspace_inputs",
+  "source_prompt_sha256": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e",
+  "followup_prompts": [],
+  "timeout_seconds": 1200,
+  "workspace_selection_record": "workspace-input.json (private raw source)",
+  "workspace_scope": "Fresh isolated participant directory with inputs/probe.txt 91 bytes and initially empty outputs",
+  "redaction": {
+    "removed_fields": [
+      "workspace"
+    ],
+    "original_private_record_sha256": "f282dede01c3389f81210dd788f9e05fdac324e5d01d574f229c951fcdb0de03"
+  }
+}

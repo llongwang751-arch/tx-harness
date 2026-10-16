@@ -1,0 +1,18 @@
+{
+  "verified_at": "2026-10-16T08:09:30.513Z",
+  "verification_actor": "external evaluator; read-only retained originals",
+  "result": {
+    "echo_present": true,
+    "echo_bytes_equal": true,
+    "input_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+    "echo_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+    "receipt_present": true,
+    "receipt_declaration_valid": true,
+    "receipt_sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+    "receipt_parse_error": null,
+    "declared_missing_status": "not_found",
+    "missing_read_error_independently_verified": null,
+    "extra_output_paths": [],
+    "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+  }
+}

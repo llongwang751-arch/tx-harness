@@ -1,0 +1,18 @@
+{
+  "completion_observed_at": "2026-10-16T08:08:53.138Z",
+  "completion_basis": "progress-3: ordinary final answer, receipt.json 144 B and echo.txt 91 B native cards, Send disabled and no Stop control",
+  "timed_out": false,
+  "provider_completed_at": null,
+  "original_capture_completed_at": "2026-10-16T08:09:15.501Z",
+  "collector_outage": false,
+  "budget_observation_valid": true,
+  "timeout_seconds": 1200,
+  "elapsed_to_completion_observation_seconds": 70.079,
+  "limits": [
+    "Service completion time unknown",
+    "Preparation folder-picker screenshot multi-region errors and AX click cache rejection retained; normal collection recovered before submission",
+    "Native workspace file origin; not download",
+    "Internal calls, error status and literal write payload not exposed",
+    "OS sandbox, Skill state and no-network enforcement unverified"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "artifacts": [
+    {
+      "native_file": "native-downloads/echo.txt",
+      "logical_output": "echo.txt",
+      "origin": "native_local_file",
+      "original_filename": "echo.txt",
+      "sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+      "bytes": 91,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T08:09:15.494Z",
+      "native_save_action_at": null,
+      "native_save_action_basis": "WorkBuddy generated file in native-selected authorized workspace; no operator download or save action",
+      "native_ui_capture": "019-progress-3.ax.txt",
+      "native_ui_label": "progress-3",
+      "native_output_card_evidence": {
+        "capture": "progress-3",
+        "ax_file": "019-progress-3.ax.txt",
+        "line_ranges": [
+          [
+            113,
+            115
+          ]
+        ]
+      },
+      "logical_mapping_basis": "Exact workspace outputs relative name; unchanged bytes retained in native-downloads and outputs",
+      "native_source": "Authorized native-selected participant workspace outputs/echo.txt",
+      "native_source_path_record": "download-receipts.original.json (private raw source)"
+    },
+    {
+      "native_file": "native-downloads/receipt.json",
+      "logical_output": "receipt.json",
+      "origin": "native_local_file",
+      "original_filename": "receipt.json",
+      "sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+      "bytes": 144,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T08:09:15.499Z",
+      "native_save_action_at": null,
+      "native_save_action_basis": "WorkBuddy generated file in native-selected authorized workspace; no operator download or save action",
+      "native_ui_capture": "019-progress-3.ax.txt",
+      "native_ui_label": "progress-3",
+      "native_output_card_evidence": {
+        "capture": "progress-3",
+        "ax_file": "019-progress-3.ax.txt",
+        "line_ranges": [
+          [
+            110,
+            112
+          ]
+        ]
+      },
+      "logical_mapping_basis": "Exact workspace outputs relative name; unchanged bytes retained in native-downloads and outputs",
+      "native_source": "Authorized native-selected participant workspace outputs/receipt.json",
+      "native_source_path_record": "download-receipts.original.json (private raw source)"
+    }
+  ],
+  "original_capture_completed_at": "2026-10-16T08:09:15.501Z",
+  "input_transport": "native_workspace_inputs",
+  "source_is_download": false,
+  "redaction": {
+    "removed_fields": [
+      "artifacts[].absolute_native_source_path"
+    ],
+    "original_private_record_sha256": "759ace411b790eec4c293bdc67a16f9f9471ea06d748a1b336dd4b0cf53fb949",
+    "mapping": "native_file is unchanged retained original relative to private evidence root; absolute workspace provenance stays in original private receipt"
+  }
+}
