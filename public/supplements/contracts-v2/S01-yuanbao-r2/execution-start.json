@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-10-16T08:47:14.994Z",
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "start_basis": "operator native action timestamp; precise service receipt unknown",
+  "surface": "official native Yuanbao desktop com.tencent.yuanbao.app",
+  "visible_mode": "专家模式 selected checkmark",
+  "visible_model_label": "Hy3",
+  "visible_version": null,
+  "version_basis": "No numeric version visible on current task surface",
+  "backend_model": "unknown",
+  "backend_skill": "unknown",
+  "budget_seconds": 1200,
+  "send_action": {
+    "at": "2026-10-16T08:47:14.994Z",
+    "label": "send-fixed-task-once",
+    "method": "click",
+    "args": [
+      338
+    ],
+    "result": "returned"
+  }
+}

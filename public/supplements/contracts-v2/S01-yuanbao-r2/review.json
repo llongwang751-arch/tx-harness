@@ -1,0 +1,218 @@
+{
+  "review_actor": "Operator/agent",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "evidence_level": "E2 ordinary native UI and actual native downloads; internal model, Skill, tool parameters, tool returns, network and permission boundary unverified",
+  "visible_conditions": {
+    "surface": "Tencent Yuanbao Windows desktop",
+    "ui_title": "元宝 - 轻松工作 多点生活 | Chat",
+    "numeric_ui_version": "unknown; no numeric version observed",
+    "mode": "专家模式",
+    "mode_selection_basis": "Already selected; current expert checkmark visually verified in mode-menu-fresh and retained.",
+    "model_label": "Hy3 visible in native menu screenshot 005; default retained. AX omits this model label.",
+    "model_selection_changed": false,
+    "backend_model": "unknown",
+    "skill": "unknown",
+    "internal_tool_parameters": "unknown",
+    "attachment": "probe.txt / TXT / 91.00B accepted before Send",
+    "fixed_prompt_lines": 6,
+    "sends": 1
+  },
+  "limits": [
+    "Final read/error/verification assertions are ordinary declarations, not independently visible paired tool request/returns.",
+    "Hidden processing, thoughts, Skill and tool detail bodies were not expanded.",
+    "Hy3 menu label and expert checkmark were visually observed; AX omits the model label and selected state. Numeric version was not visible.",
+    "Immediate post-action captures sometimes show preceding AX/layout. Fresh observations supplied dependent controls.",
+    "Official multiple-region screenshot errors for SaveAs/Explorer are retained privately. Displayed regions included unrelated desktop/overlay content and are not selected for publication.",
+    "Raw AX contains sidebar/account/private paths/window identity. Only these exact safe source lines are approved for projection."
+  ],
+  "observations": {
+    "input_read": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Ordinary final asserts probe.txt read. E2 echo bytes equal the input, but real internal read parameters and paired result are invisible.",
+      "evidence": [
+        "ordinary-terminal-check:281-282",
+        "independent-verification.json:echo_bytes_equal=true"
+      ]
+    },
+    "missing_feedback": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Ordinary final and receipt declare not_found. They do not independently expose a real paired read-tool request/error.",
+      "evidence": [
+        "ordinary-terminal-check:284-285",
+        "outputs/receipt.json",
+        "independent-verification.json:missing_read_error_independently_verified=null"
+      ]
+    },
+    "write_fidelity": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Full literal write payload and actual tool parameters were not visible. Downloaded E2 echo matches input bytes; E1 remains unknown.",
+      "evidence": [
+        "ordinary-terminal-check:288-301",
+        "download-receipts.json",
+        "independent-verification.json:echo_bytes_equal=true"
+      ]
+    },
+    "permission": {
+      "verdict": "not_applicable",
+      "eligible": false,
+      "basis": "Fixed-file GUI contract does not establish or score product permission boundary.",
+      "evidence": []
+    }
+  },
+  "e2_results": {
+    "echo_bytes_equal": true,
+    "receipt_declaration_valid": true,
+    "declared_missing_status": "not_found",
+    "missing_read_error_independently_verified": null,
+    "extra_output_paths": [],
+    "verification_actor": "independent evaluator; verify_outputs was not a product action"
+  },
+  "selections": [
+    {
+      "capture": "mode-menu-fresh",
+      "line_ranges": [
+        [
+          287,
+          287
+        ]
+      ]
+    },
+    {
+      "capture": "attachment-accepted",
+      "line_ranges": [
+        [
+          281,
+          283
+        ]
+      ]
+    },
+    {
+      "capture": "ordinary-terminal-check",
+      "line_ranges": [
+        [
+          259,
+          262
+        ],
+        [
+          274,
+          320
+        ],
+        [
+          474,
+          479
+        ]
+      ]
+    },
+    {
+      "capture": "echo-preview-fresh",
+      "line_ranges": [
+        [
+          366,
+          366
+        ]
+      ]
+    },
+    {
+      "capture": "echo-save-dialog-current-ax",
+      "line_ranges": [
+        [
+          60,
+          61
+        ]
+      ]
+    },
+    {
+      "capture": "echo-save-destination-proof",
+      "line_ranges": [
+        [
+          71,
+          71
+        ]
+      ]
+    },
+    {
+      "capture": "echo-saved-toast",
+      "line_ranges": [
+        [
+          373,
+          374
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-preview-fresh",
+      "line_ranges": [
+        [
+          365,
+          365
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-native-save-dialog",
+      "line_ranges": [
+        [
+          56,
+          57
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-saved-toast",
+      "line_ranges": [
+        [
+          404,
+          405
+        ]
+      ]
+    },
+    {
+      "capture": "echo-properties-source-proof-ax",
+      "line_ranges": [
+        [
+          3,
+          3
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          18,
+          18
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-properties-source-proof-ax",
+      "line_ranges": [
+        [
+          3,
+          3
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          18,
+          18
+        ]
+      ]
+    }
+  ]
+}

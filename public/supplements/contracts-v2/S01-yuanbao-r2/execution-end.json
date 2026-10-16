@@ -1,0 +1,15 @@
+{
+  "completion_observed_at": "2026-10-16T08:47:31.576Z",
+  "completion_basis": "ordinary-terminal-check native AX contained final answer, both real output cards and Send restored; ordinary-final-visible subsequently showed actual cards on screen",
+  "timed_out": false,
+  "provider_completed_at": null,
+  "original_capture_completed_at": "2026-10-16T08:52:09.346Z",
+  "ordinary_elapsed_seconds": 16.582,
+  "collector_outage": false,
+  "budget_observation_valid": true,
+  "limits": [
+    "Service completion timestamp unknown; operator ordinary-terminal observation time is used.",
+    "Multiple-region screenshots failed for native SaveAs and Explorer. Official AX-only captures and original runtime errors were preserved; no runtime modification.",
+    "Internal tool parameters and paired returns were not opened. Product read/error/verification assertions remain declarations."
+  ]
+}

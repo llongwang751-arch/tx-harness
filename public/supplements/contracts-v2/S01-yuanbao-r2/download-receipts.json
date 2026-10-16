@@ -1,0 +1,66 @@
+{
+  "artifacts": [
+    {
+      "native_file": "native-downloads/echo.txt",
+      "logical_output": "echo.txt",
+      "origin": "native_download",
+      "original_filename": "echo.txt",
+      "sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+      "bytes": 91,
+      "downloaded_at": null,
+      "native_save_action_at": "2026-10-16T08:48:49.260Z",
+      "original_bytes_captured_at": "2026-10-16T08:51:17.904Z",
+      "logical_copy_completed_at": "2026-10-16T08:51:17.906Z",
+      "source_created_at_fs": "2026-10-16T08:48:50.077Z",
+      "source_modified_at_fs": "2026-10-16T08:48:50.078Z",
+      "native_created_time_label": "2026年10月16日，16:48:50 Asia/Shanghai",
+      "native_save_evidence": [
+        "echo-save-destination-proof",
+        "echo-saved-toast",
+        "echo-properties-source-proof-ax"
+      ],
+      "native_source_proof": {
+        "capture": "echo-properties-source-proof-ax",
+        "filename_line": 3,
+        "location_line": 10,
+        "size_line": 12,
+        "created_line": 16,
+        "modified_line": 18
+      },
+      "logical_mapping": "echo.txt native default original basename → outputs/echo.txt without changing bytes",
+      "download_route": "native echo.txt card → preview Download → TXT → native SaveAs default basename; no response text/code-fence saving",
+      "private_source_receipt_sha256": "0ea07c2902bc3a769727c9a4ff4174578b343908b9aec31768bed4ed548482bc"
+    },
+    {
+      "native_file": "native-downloads/receipt.json",
+      "logical_output": "receipt.json",
+      "origin": "native_download",
+      "original_filename": "receipt.json",
+      "sha256": "c9a4c0f3f6c51328a7b10f16257323db6d7cbe9a96218064a75ef87cf66fcb61",
+      "bytes": 144,
+      "downloaded_at": null,
+      "native_save_action_at": "2026-10-16T08:49:52.751Z",
+      "original_bytes_captured_at": "2026-10-16T08:52:09.346Z",
+      "logical_copy_completed_at": "2026-10-16T08:52:09.348Z",
+      "source_created_at_fs": "2026-10-16T08:49:53.624Z",
+      "source_modified_at_fs": "2026-10-16T08:49:53.624Z",
+      "native_created_time_label": "2026年10月16日，16:49:53 Asia/Shanghai",
+      "native_save_evidence": [
+        "receipt-save-destination-proof",
+        "receipt-saved-toast",
+        "receipt-properties-source-proof-ax"
+      ],
+      "native_source_proof": {
+        "capture": "receipt-properties-source-proof-ax",
+        "filename_line": 3,
+        "location_line": 10,
+        "size_line": 12,
+        "created_line": 16,
+        "modified_line": 18
+      },
+      "logical_mapping": "receipt.json native default original basename → outputs/receipt.json without changing bytes",
+      "download_route": "native receipt.json card → preview Download to local → native SaveAs default basename; no response text/code-fence saving",
+      "private_source_receipt_sha256": "0ea07c2902bc3a769727c9a4ff4174578b343908b9aec31768bed4ed548482bc"
+    }
+  ]
+}

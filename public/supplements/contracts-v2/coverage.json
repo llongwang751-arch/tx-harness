@@ -1,7 +1,7 @@
 {
   "schema": "contract-v2-coverage",
   "planned": 21,
-  "public_sealed": 10,
+  "public_sealed": 11,
   "rows": [
     {
       "slot_id": "S01-codex-r1",
@@ -1039,9 +1039,77 @@
       "replicate": 2,
       "fixture": "r2",
       "arm": "normal",
-      "public_state": "not_sealed",
-      "verification": null,
-      "observations": null
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S01-yuanbao-r2",
+        "echo_present": true,
+        "echo_bytes_equal": true,
+        "input_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+        "echo_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+        "receipt_present": true,
+        "receipt_declaration_valid": true,
+        "receipt_sha256": "c9a4c0f3f6c51328a7b10f16257323db6d7cbe9a96218064a75ef87cf66fcb61",
+        "receipt_parse_error": null,
+        "declared_missing_status": "not_found",
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "Ordinary final asserts probe.txt read. E2 echo bytes equal the input, but real internal read parameters and paired result are invisible.",
+          "evidence": [
+            "ordinary-terminal-check:281-282",
+            "independent-verification.json:echo_bytes_equal=true"
+          ]
+        },
+        "missing_feedback": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "Ordinary final and receipt declare not_found. They do not independently expose a real paired read-tool request/error.",
+          "evidence": [
+            "ordinary-terminal-check:284-285",
+            "outputs/receipt.json",
+            "independent-verification.json:missing_read_error_independently_verified=null"
+          ]
+        },
+        "write_fidelity": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "Full literal write payload and actual tool parameters were not visible. Downloaded E2 echo matches input bytes; E1 remains unknown.",
+          "evidence": [
+            "ordinary-terminal-check:288-301",
+            "download-receipts.json",
+            "independent-verification.json:echo_bytes_equal=true"
+          ]
+        },
+        "permission": {
+          "verdict": "not_applicable",
+          "eligible": false,
+          "basis": "Fixed-file GUI contract does not establish or score product permission boundary.",
+          "evidence": []
+        }
+      },
+      "base": "public/supplements/contracts-v2/S01-yuanbao-r2",
+      "evidence_level": "E2 ordinary native UI and actual native downloads; internal model, Skill, tool parameters, tool returns, network and permission boundary unverified",
+      "started_at": "2026-10-16T08:47:14.994Z",
+      "end": {
+        "completion_observed_at": "2026-10-16T08:47:31.576Z",
+        "completion_basis": "ordinary-terminal-check native AX contained final answer, both real output cards and Send restored; ordinary-final-visible subsequently showed actual cards on screen",
+        "timed_out": false,
+        "provider_completed_at": null,
+        "original_capture_completed_at": "2026-10-16T08:52:09.346Z",
+        "ordinary_elapsed_seconds": 16.582,
+        "collector_outage": false,
+        "budget_observation_valid": true,
+        "limits": [
+          "Service completion timestamp unknown; operator ordinary-terminal observation time is used.",
+          "Multiple-region screenshots failed for native SaveAs and Explorer. Official AX-only captures and original runtime errors were preserved; no runtime modification.",
+          "Internal tool parameters and paired returns were not opened. Product read/error/verification assertions remain declarations."
+        ]
+      }
     },
     {
       "slot_id": "S01-yuanbao-r3",
@@ -1496,20 +1564,20 @@
       "product_id": "yuanbao",
       "metric": "input_read",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 1,
+      "applicability_not_attested": 2,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 1,
+      "unknown_verdict": 2,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
-      "ineligible_or_evidence_missing": 1,
+      "environment_validity_not_attested": 2,
+      "ineligible_or_evidence_missing": 2,
       "conditional_pass_rate": null
     },
     {
@@ -1517,20 +1585,20 @@
       "product_id": "yuanbao",
       "metric": "missing_feedback",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 1,
+      "applicability_not_attested": 2,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 1,
+      "unknown_verdict": 2,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
-      "ineligible_or_evidence_missing": 1,
+      "environment_validity_not_attested": 2,
+      "ineligible_or_evidence_missing": 2,
       "conditional_pass_rate": null
     },
     {
@@ -1538,20 +1606,20 @@
       "product_id": "yuanbao",
       "metric": "write_fidelity",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 1,
+      "applicability_not_attested": 2,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 1,
+      "unknown_verdict": 2,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
-      "ineligible_or_evidence_missing": 1,
+      "environment_validity_not_attested": 2,
+      "ineligible_or_evidence_missing": 2,
       "conditional_pass_rate": null
     },
     {
@@ -1559,11 +1627,11 @@
       "product_id": "yuanbao",
       "metric": "permission",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
       "applicability_not_attested": 0,
-      "not_applicable": 1,
+      "not_applicable": 2,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
@@ -1571,7 +1639,7 @@
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
+      "environment_validity_not_attested": 2,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": null
     },
