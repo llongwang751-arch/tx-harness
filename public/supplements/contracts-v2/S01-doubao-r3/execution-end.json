@@ -1,0 +1,15 @@
+{
+  "completion_observed_at": "2026-10-16T07:57:02.350Z",
+  "completion_basis": "ordinary-final capture: final answer, two native file cards, common duration 50 seconds, composer idle",
+  "timed_out": false,
+  "provider_completed_at": null,
+  "original_capture_completed_at": "2026-10-16T08:00:15.133Z",
+  "collector_outage": false,
+  "budget_observation_valid": true,
+  "limits": [
+    "GUI E2 only; actual internal read/write parameters, independent read-error result, model identity, Skill and network not verified.",
+    "Windows multi-region screenshot API errors preserved; AX and native input remained usable.",
+    "Native download completion service timestamps unavailable; downloaded_at null; save actions and original capture times recorded separately.",
+    "Final housekeeping close-doubao-precheck capture reused index 36 after app collector switching; raw log retained, files have distinct names, duplicate housekeeping capture excluded from reviewed selections. Task execution, completion and original evidence are unaffected."
+  ]
+}

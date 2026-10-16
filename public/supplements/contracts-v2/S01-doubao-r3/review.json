@@ -1,0 +1,188 @@
+{
+  "review_actor": "Operator/agent",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "evidence_level": "E2 ordinary native GUI and unchanged native downloads; E1 internal tool/model/Skill/network not verified",
+  "visible_conditions": {
+    "product": "Doubao Windows native GUI",
+    "mode": "工作任务 → 云电脑",
+    "model_label": "自动 低",
+    "version": "unknown",
+    "attachment": "probe.txt",
+    "attachment_bytes": 91,
+    "attachments_count": 1,
+    "prompt_nonempty_lines": 6,
+    "send_count": 1,
+    "additional_help_messages": 0,
+    "task_reruns": 0,
+    "output_repairs": 0
+  },
+  "limits": [
+    "GUI E2 only; actual internal read/write parameters, independent read-error result, model identity, Skill and network not verified.",
+    "Windows multi-region screenshot API errors preserved; AX and native input remained usable.",
+    "Native download completion service timestamps unavailable; downloaded_at null; save actions and original capture times recorded separately.",
+    "Final housekeeping close-doubao-precheck capture reused index 36 after app collector switching; raw log retained, files have distinct names, duplicate housekeeping capture excluded from reviewed selections. Task execution, completion and original evidence are unaffected."
+  ],
+  "selections": [
+    {
+      "capture": "composer-verification",
+      "line_ranges": [
+        [
+          298,
+          301
+        ],
+        [
+          308,
+          308
+        ],
+        [
+          326,
+          326
+        ],
+        [
+          335,
+          340
+        ]
+      ]
+    },
+    {
+      "capture": "ordinary-final",
+      "line_ranges": [
+        [
+          307,
+          317
+        ],
+        [
+          320,
+          320
+        ],
+        [
+          322,
+          380
+        ],
+        [
+          409,
+          409
+        ],
+        [
+          428,
+          428
+        ]
+      ]
+    },
+    {
+      "capture": "echo-download-choice",
+      "line_ranges": [
+        [
+          433,
+          433
+        ],
+        [
+          445,
+          446
+        ],
+        [
+          462,
+          466
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-download-complete",
+      "line_ranges": [
+        [
+          446,
+          451
+        ],
+        [
+          482,
+          486
+        ]
+      ]
+    },
+    {
+      "capture": "echo-native-properties",
+      "line_ranges": [
+        [
+          3,
+          3
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          15,
+          20
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-native-properties",
+      "line_ranges": [
+        [
+          3,
+          3
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          15,
+          20
+        ]
+      ]
+    }
+  ],
+  "observations": {
+    "input_read": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Ordinary final claims source read and current token; unchanged downloaded echo equals current 91-byte input. Exact internal read request and returned payload are not exposed in paired ordinary native E1 evidence.",
+      "evidence": [
+        "ordinary-final AX 337-341",
+        "independent-verification.json: echo_bytes_equal",
+        "echo-native-properties AX 3,11-12,15-20"
+      ]
+    },
+    "missing_feedback": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Product final and receipt declare not_found and a File does not exist message. This is product-authored declaration; independent actual read call parameters/result are not visible, so no E1 pass is assigned.",
+      "evidence": [
+        "ordinary-final AX 342-350",
+        "outputs/receipt.json: missing_status=not_found"
+      ]
+    },
+    "write_fidelity": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Full literal write tool payload is not exposed in ordinary GUI. E2 external comparison shows downloaded echo has exactly the input bytes and receipt has the required four fields; this does not establish E1 write-call fidelity.",
+      "evidence": [
+        "independent-verification.json",
+        "download-receipts.json",
+        "echo-native-properties AX 3,11-12,15-20",
+        "receipt-native-properties AX 3,11-12,15-20"
+      ]
+    },
+    "permission": {
+      "verdict": "not_applicable",
+      "eligible": false,
+      "basis": "This fixed-file contract slot has no permission-gated operation to score.",
+      "evidence": []
+    }
+  },
+  "e2_artifact_results": {
+    "echo_present": true,
+    "echo_bytes": 91,
+    "echo_bytes_equal": true,
+    "receipt_present": true,
+    "receipt_bytes": 144,
+    "receipt_declaration_valid": true,
+    "declared_missing_status": "not_found",
+    "missing_read_error_independently_verified": null
+  }
+}

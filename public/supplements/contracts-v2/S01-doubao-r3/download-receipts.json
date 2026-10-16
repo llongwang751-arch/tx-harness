@@ -1,0 +1,94 @@
+{
+  "artifacts": [
+    {
+      "native_file": "native-downloads/echo (2).txt",
+      "logical_output": "echo.txt",
+      "origin": "native_download",
+      "original_filename": "echo (2).txt",
+      "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+      "bytes": 91,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T07:59:36.067Z",
+      "native_save_action": {
+        "at": "2026-10-16T07:57:33.231Z",
+        "label": "echo-download-button",
+        "method": "click",
+        "args": [
+          1325
+        ],
+        "result": "returned"
+      },
+      "native_path_proof": {
+        "visibility": "private_original",
+        "capture": "echo-native-properties",
+        "ax": "040-echo-native-properties.ax.txt",
+        "source_ax_sha256": "509b274fa7a9e9b3f18675a44aa18958a6fedc8c8e4bc5c607c26bd154953c1e",
+        "private_path_line": 10,
+        "safe_line_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            15,
+            20
+          ]
+        ],
+        "type": "private_original",
+        "public_selection_omits_location": true
+      },
+      "mapping": {
+        "echo (2).txt": "echo.txt"
+      }
+    },
+    {
+      "native_file": "native-downloads/receipt (2).json",
+      "logical_output": "receipt.json",
+      "origin": "native_download",
+      "original_filename": "receipt (2).json",
+      "sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722",
+      "bytes": 144,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T08:00:15.133Z",
+      "native_save_action": {
+        "at": "2026-10-16T07:58:09.159Z",
+        "label": "receipt-download-button",
+        "method": "click",
+        "args": [
+          1419
+        ],
+        "result": "returned"
+      },
+      "native_path_proof": {
+        "visibility": "private_original",
+        "capture": "receipt-native-properties",
+        "ax": "043-receipt-native-properties.ax.txt",
+        "source_ax_sha256": "ecddb5e1f4a9a32d249414913b9773b80b23e51117fa081d3c4614657c030b0e",
+        "private_path_line": 10,
+        "safe_line_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            15,
+            20
+          ]
+        ],
+        "type": "private_original",
+        "public_selection_omits_location": true
+      },
+      "mapping": {
+        "receipt (2).json": "receipt.json"
+      }
+    }
+  ]
+}
