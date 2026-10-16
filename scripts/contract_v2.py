@@ -66,7 +66,7 @@ def verify_outputs(directory,input_file):
         'receipt_sha256':sha(receipt) if receipt.is_file() else None,'receipt_parse_error':error,
         'declared_missing_status':receipt_data.get('missing_status') if isinstance(receipt_data,dict) else None,
         'missing_read_error_independently_verified':None,
-        'extra_output_paths':[p.relative_to(directory).as_posix() for p in sorted(directory.rglob('*')) if p.is_file() and p.name not in ('echo.txt','receipt.json')],
+        'extra_output_paths':[p.relative_to(directory).as_posix() for p in sorted(directory.rglob('*')) if p.is_file() and p.relative_to(directory).as_posix() not in ('echo.txt','receipt.json')],
         'limitation':'Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score.'}
 
 def export(s):
@@ -150,7 +150,10 @@ def export(s):
 def verify_public(s):
     _,_,d=paths(s);manifest=read(d/'manifest.json');actual=inventory(d);actual.pop('manifest.json')
     if actual!=manifest:raise ValueError('Public manifest mismatch')
-    spec=slot(s);v=verify_outputs(d/'outputs',BASE/'fixtures'/spec['fixture']/'probe.txt')
+    spec=slot(s);fixture=BASE/'fixtures'/spec['fixture']
+    if (d/'inputs/probe.txt').read_bytes()!=(fixture/'probe.txt').read_bytes() or (d/'submitted-prompt.txt').read_bytes()!=(fixture/'prompt.txt').read_bytes():
+        raise ValueError('Public input or submitted prompt differs from registered fixture')
+    v=verify_outputs(d/'outputs',fixture/'probe.txt')
     if v!=read(d/'verification.json'):raise ValueError('Verification no longer matches original bytes')
     if read(d/'metadata.json')['registration_sha256']!=sha(BASE/'protocol.json'):raise ValueError('Registration mismatch')
     check_registration(read(d/'metadata.json')['registration_commit'])

@@ -1,0 +1,211 @@
+{
+  "review_actor": "Operator/agent",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "evidence_level": "E2: ordinary native UI and unchanged native downloads; internal tools, model, Skill and network unverified",
+  "visible_conditions": {
+    "product": "Doubao desktop",
+    "surface": "工作任务 → 云电脑",
+    "visible_model_at_submit": "自动 低",
+    "visible_version": null,
+    "model_selection_changed": false,
+    "attachment": "probe.txt 91B",
+    "attachment_count": 1,
+    "prompt_nonempty_lines": 6,
+    "actual_send_count": 1,
+    "time_budget_seconds": 1200,
+    "completion_ui_reported_duration": "52 秒"
+  },
+  "limits": [
+    "Read request parameters and raw file-read return states were not independently exposed. A final answer claiming an error is an ordinary declaration.",
+    "Full literal write payload was not independently visible. Echo byte equality is an external E2 artifact check.",
+    "The provider completion timestamp is unknown. Ordinary completion observation, native saves and original capture times are recorded separately.",
+    "Raw AX, screenshots, account labels, other conversations, private paths, window IDs, share URLs and intermediate processing details remain private.",
+    "A blank work composer was reached during post-completion navigation and the completed conversation was reopened through native UI; no second submission or rescue content was sent.",
+    "Post-completion file retrieval encountered official CUA screenshot and accessibility limitations. The real Downloads folder and independent native file properties proved each path before filesystem capture."
+  ],
+  "selections": [
+    {
+      "capture": "s01-db-r1-attachment-accepted",
+      "line_ranges": [
+        [
+          270,
+          273
+        ],
+        [
+          280,
+          280
+        ],
+        [
+          298,
+          298
+        ]
+      ]
+    },
+    {
+      "capture": "s01-db-r1-composer-verified",
+      "line_ranges": [
+        [
+          307,
+          312
+        ]
+      ]
+    },
+    {
+      "capture": "s01-db-r1-progress-02",
+      "line_ranges": [
+        [
+          282,
+          289
+        ],
+        [
+          295,
+          296
+        ],
+        [
+          301,
+          302
+        ],
+        [
+          304,
+          322
+        ],
+        [
+          331,
+          331
+        ]
+      ]
+    },
+    {
+      "capture": "s01-db-r1-back-to-doubao",
+      "line_ranges": [
+        [
+          396,
+          397
+        ],
+        [
+          415,
+          416
+        ]
+      ]
+    },
+    {
+      "capture": "s01-db-r1-echo-downloaded-toast",
+      "line_ranges": [
+        [
+          416,
+          417
+        ]
+      ]
+    },
+    {
+      "capture": "s01-db-r1-receipt-preview-ready",
+      "line_ranges": [
+        [
+          418,
+          418
+        ],
+        [
+          422,
+          422
+        ]
+      ]
+    },
+    {
+      "capture": "s01-db-r1-receipt-download-complete",
+      "line_ranges": [
+        [
+          457,
+          458
+        ]
+      ]
+    },
+    {
+      "capture": "s01-db-r1-echo-real-path-proof",
+      "line_ranges": [
+        [
+          3,
+          3
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          15,
+          18
+        ]
+      ]
+    },
+    {
+      "capture": "s01-db-r1-receipt-real-path-proof",
+      "line_ranges": [
+        [
+          3,
+          3
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          15,
+          18
+        ]
+      ]
+    }
+  ],
+  "observations": {
+    "input_read": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Ordinary final answer says probe.txt was read and states the synthetic token. E2 echo original matches the input bytes. Actual read request parameters and tool return are not independently visible, so this does not establish E1 input_read.",
+      "evidence": [
+        "s01-db-r1-progress-02 AX lines 307-309; native-downloads/echo.txt; independent-verification.json"
+      ]
+    },
+    "missing_feedback": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "The ordinary final answer claims one missing-probe.txt attempt and a File does not exist error; receipt declares not_found. A paired real read request and independent raw error state are not visible, so E1 missing_feedback remains unknown.",
+      "evidence": [
+        "s01-db-r1-progress-02 AX lines 310-313; native-downloads/receipt.json; independent-verification.json"
+      ]
+    },
+    "write_fidelity": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Full literal write input and actual write return were not visible. E2 original echo is 91 bytes and exactly equals probe.txt, and receipt is a valid four-field declaration. These externally checked bytes do not prove E1 write parameters or the claimed product self-verification.",
+      "evidence": [
+        "s01-db-r1-progress-02 AX lines 314-322; download-receipts.json; independent-verification.json"
+      ]
+    },
+    "permission": {
+      "verdict": "not_applicable",
+      "eligible": false,
+      "basis": "This fixed normal file contract did not include a permission-change operation or permission-conflict challenge.",
+      "evidence": []
+    }
+  },
+  "e2_artifact_results": {
+    "verification_actor": "external operator read-only acceptance",
+    "product_self_check": false,
+    "echo_bytes_equal": true,
+    "echo_bytes": 91,
+    "echo_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+    "receipt_declaration_valid": true,
+    "receipt_bytes": 144,
+    "receipt_sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+    "declared_missing_status": "not_found",
+    "missing_read_error_independently_verified": null,
+    "extra_output_paths": []
+  },
+  "root_publication_review": {
+    "at": "2026-10-16T07:39:51.454Z",
+    "basis": "Added exact safe native property excerpts for each original. Full location remains private. Original artifacts, raw captures, times and metric verdicts unchanged.",
+    "prior_review_sha256": "70229bc0dd019e4450b0b4b7f3016345cea6b02a37cabfd1588cc681dd548e16",
+    "prior_receipts_sha256": "ae0906a3f358ebb65cd58a46894e845485df1de5e52de0c06b20f8c33a2fb5b8"
+  }
+}

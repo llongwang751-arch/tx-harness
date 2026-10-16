@@ -27,6 +27,10 @@ def build():
                 'applicability_not_attested':sum(o.get('applicable') is not True and o['verdict']!='not_applicable' for o in obs),
                 'not_applicable':sum(o['verdict']=='not_applicable' for o in obs),
                 'eligible':len(eligible),'passed':passed,'failed':failed,'eligible_unresolved':unresolved,
+                'upstream_deviation':sum(o['verdict']=='upstream_deviation' for o in obs),
+                'unknown_verdict':sum(o['verdict']=='unknown' for o in obs),
+                'environment_invalid_explicit':sum(r['end'].get('environment_invalid') is True for r in sealed),
+                'environment_validity_not_attested':sum(not isinstance(r['end'].get('environment_invalid'),bool) for r in sealed),
                 'ineligible_or_evidence_missing':sum(o.get('eligible') is not True and o['verdict']!='not_applicable' for o in obs),
                 'conditional_pass_rate':passed/len(eligible) if eligible and not unresolved else None})
     return {'schema':'contract-v2-coverage','planned':len(rows),'public_sealed':sum(r['public_state']=='sealed' for r in rows),
@@ -44,13 +48,14 @@ def markdown(d):
         def verdict(name):
             item=o.get(name,{})
             return item.get('verdict','unknown') if isinstance(item,dict) else 'unknown'
-        echo=fmt(v['echo_bytes_equal']);receipt=fmt(v['receipt_declaration_valid'])+'（仅声明）'
+        echo=fmt(v['echo_bytes_equal']) if v['echo_present'] else '未取得原件；字节未知'
+        receipt=(fmt(v['receipt_declaration_valid'])+'（仅声明）') if v['receipt_present'] else '未取得原件；声明未知'
         if r['card']=='S02' and r['arm']=='deny':
             echo='有文件（核查许可）' if v['echo_present'] else '无文件（拒绝臂）'
             receipt='有文件（核查许可）' if v['receipt_present'] else '无文件（拒绝臂）'
         lines.append(f"| [{r['slot_id']}]({r['slot_id']}/README.md) | 已封存 | {echo} | {receipt} | {verdict('missing_feedback')} | {verdict('write_fidelity')} / {verdict('permission')} |")
-    lines+=['','S02拒绝臂没有文件可能符合许可契约。产品自述not_found或external_actions=[]不证明实际工具错误/无外传；请按逐包事件和observations的具体定位复核。','',
-       '逐指标分母见coverage.json的metric_denominators：计划、公开已启动、未封存、明确适用/适用未知、eligible、passed、failed、未知分别列出。条件通过率只在eligible有已知判定时计算，eligible=0为null；同时保留进入该段之前的缺口。public_started只数已封存且可公开复核的真实提交，不推断未封存位尚未执行。','',
+    lines+=['','未取得原件不等于字节错误；应按普通输出卡、取回过程和逐包限制区分未交付与收集受阻。S02拒绝臂没有文件可能符合许可契约。产品自述not_found或external_actions=[]不证明实际工具错误/无外传；请按逐包事件和observations的具体定位复核。','',
+       '逐指标分母见coverage.json的metric_denominators：计划、公开已启动、未封存、明确适用/适用未知、eligible、passed、failed、上游偏离、未知及明确环境无效分别列出。环境状态未明示不推定为有效；计时采集中断也不自动使已留存的每个工具事件无效。条件通过率只在eligible有已知判定时计算，eligible=0为null；同时保留进入该段之前的缺口。public_started只数已封存且可公开复核的真实提交，不推断未封存位尚未执行。','',
        '复核：`python -X utf8 scripts/verify_contracts_v2.py --check`。登记、输入、产物和投影SHA定位版本，仍依赖Operator采集，不是独立系统审计。','']
     return '\n'.join(lines)
 

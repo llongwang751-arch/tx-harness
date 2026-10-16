@@ -1,0 +1,23 @@
+{
+  "completion_observed_at": "2026-10-16T07:21:34.663Z",
+  "completion_basis": "ordinary final response plus echo.txt and receipt.json output cards observed in s01-db-r1-progress-02; stop-generation control absent; UI displays 共用时52秒",
+  "timed_out": false,
+  "provider_completed_at": null,
+  "original_capture_completed_at": "2026-10-16T07:33:40.192Z",
+  "collector_outage": false,
+  "budget_observation_valid": true,
+  "limits": [
+    "Tool request parameters, true error return, full literal write payload, model backend, skill and network are not independently visible.",
+    "Screenshot multi-region failures affected pre-submit native file chooser; AX remained readable and native keyboard input succeeded.",
+    "Ordinary completion observation time is later than provider completion; provider timestamp unknown."
+  ],
+  "submit_to_completion_observation_seconds": 72.907,
+  "completion_to_original_capture_seconds": 725.529,
+  "collector_observation_limitations": [
+    "Native screenshot calls intermittently rejected multiple regions during file selection and post-completion original retrieval; errors were retained and AX-only observations used where available.",
+    "Notepad accessibility was unavailable. Its restored tabs and raw screenshots remain private.",
+    "Some immediately returned frames retained old layout; fresh observations and actual independent window inventory were used before dependent actions.",
+    "Native launch reported notargetable for Doubao although a fresh inventory exposed its real window.",
+    "No collector outage occurred during the short model execution interval. File retrieval took longer and is timed separately."
+  ]
+}

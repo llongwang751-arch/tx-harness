@@ -29,5 +29,12 @@ class ContractVerificationTests(unittest.TestCase):
         v=mod.verify_outputs(self.out,self.input);self.assertFalse(v['receipt_declaration_valid']);self.assertIn('duplicate',v['receipt_parse_error'])
     def test_missing_output_not_repaired_or_filled(self):
         v=mod.verify_outputs(self.out,self.input);self.assertFalse(v['echo_present']);self.assertIsNone(v['echo_sha256']);self.assertFalse(v['receipt_declaration_valid'])
+    def test_nested_names_do_not_hide_extra_outputs(self):
+        (self.out/'extra').mkdir()
+        (self.out/'extra/echo.txt').write_bytes(b'not the registered output')
+        (self.out/'extra/receipt.json').write_bytes(b'{}')
+        v=mod.verify_outputs(self.out,self.input)
+        self.assertEqual(v['extra_output_paths'],['extra/echo.txt','extra/receipt.json'])
+        self.assertFalse(v['echo_present']);self.assertFalse(v['receipt_present'])
 
 if __name__=='__main__':unittest.main()

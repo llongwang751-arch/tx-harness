@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-10-16T07:20:21.756Z",
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "start_basis": "operator native action timestamp; precise service receipt unknown",
+  "surface": "Doubao native desktop 工作任务 → 云电脑",
+  "visible_model": "自动 低",
+  "visible_mode": "云电脑",
+  "visible_version": null,
+  "version_limit": "version not exposed on ordinary current composer",
+  "attachment": "probe.txt 91B",
+  "prompt_nonempty_lines": 6,
+  "pre_send_recorded_at": "2026-10-16T07:20:21.755Z",
+  "native_send_action_at": "2026-10-16T07:20:21.756Z",
+  "precise_service_receipt_at": null
+}

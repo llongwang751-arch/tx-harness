@@ -1,0 +1,127 @@
+{
+  "artifacts": [
+    {
+      "native_file": "native-downloads/echo.txt",
+      "logical_output": "echo.txt",
+      "origin": "native_download",
+      "original_filename": "echo.txt",
+      "sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+      "bytes": 91,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T07:30:51.811Z",
+      "native_save_action_at": "2026-10-16T07:22:14.588Z",
+      "native_save_action_evidence": {
+        "capture": "s01-db-r1-echo-preview-ready",
+        "screenshot": "030-s01-db-r1-echo-preview-ready.png",
+        "control": "echo.txt preview native download icon; later AX tooltip explicitly names 下载",
+        "ordinary_ax_evidence": {
+          "capture": "s01-db-r1-back-to-doubao",
+          "line_ranges": [
+            [
+              396,
+              397
+            ],
+            [
+              415,
+              416
+            ]
+          ]
+        }
+      },
+      "download_completion_evidence": {
+        "capture": "s01-db-r1-echo-downloaded-toast",
+        "line_ranges": [
+          [
+            416,
+            417
+          ]
+        ]
+      },
+      "native_path_proof": {
+        "capture": "s01-db-r1-echo-real-path-proof",
+        "line_ranges": [
+          [
+            3,
+            12
+          ]
+        ],
+        "visibility": "Full location proof is private; only name, size and timestamps are included in the public ordinary AX projection.",
+        "private_ax_sha256": "4a0bebbee893fd9c207a76795936880c00260cf048ad63e2a3b69ea98a06343a",
+        "public_safe_excerpt_line_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            15,
+            18
+          ]
+        ]
+      },
+      "logical_mapping": "downloaded echo.txt original bytes copied unchanged to outputs/echo.txt"
+    },
+    {
+      "native_file": "native-downloads/receipt.json",
+      "logical_output": "receipt.json",
+      "origin": "native_download",
+      "original_filename": "receipt.json",
+      "sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+      "bytes": 144,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T07:33:40.192Z",
+      "native_save_action_at": "2026-10-16T07:32:20.348Z",
+      "native_save_action_evidence": {
+        "capture": "s01-db-r1-receipt-preview-ready",
+        "line_ranges": [
+          [
+            418,
+            418
+          ],
+          [
+            422,
+            422
+          ]
+        ]
+      },
+      "download_completion_evidence": {
+        "capture": "s01-db-r1-receipt-download-complete",
+        "line_ranges": [
+          [
+            457,
+            458
+          ]
+        ]
+      },
+      "native_path_proof": {
+        "capture": "s01-db-r1-receipt-real-path-proof",
+        "line_ranges": [
+          [
+            3,
+            12
+          ]
+        ],
+        "visibility": "Full location proof is private; only name, size and timestamps are included in the public ordinary AX projection.",
+        "private_ax_sha256": "3a244b89b3fdfbb2c5dd396579370eca533f16fa65017d037388380e0b118fe5",
+        "public_safe_excerpt_line_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            15,
+            18
+          ]
+        ]
+      },
+      "logical_mapping": "downloaded receipt.json original bytes copied unchanged to outputs/receipt.json"
+    }
+  ]
+}
