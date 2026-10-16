@@ -1,0 +1,13 @@
+{
+  "completion_observed_at": "2026-10-16T08:35:18.270Z",
+  "completion_basis": "ordinary final answer \"两个文件均已生成并通过校验。\" plus echo.txt and receipt.json file cards; Send control restored; observed in ordinary-progress-01",
+  "timed_out": false,
+  "provider_completed_at": null,
+  "original_capture_completed_at": "2026-10-16T08:40:32.016Z",
+  "collector_outage": false,
+  "budget_observation_valid": true,
+  "limits": [
+    "Internal read/write parameters, tool returns and Skill not opened; ordinary assertions are not E1 proof.",
+    "Multiple-region screenshot errors preserved for native upload dialog; AX-only controls retained."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-10-16T08:34:49.655Z",
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "start_basis": "operator native Send action timestamp; precise service receipt unknown",
+  "surface": "Tencent Yuanbao Windows native desktop",
+  "visible_mode": "专家模式; current selection tick verified",
+  "visible_model_label": "Hy3 (default; unchanged)",
+  "visible_ui_title": "元宝 - 轻松工作 多点生活 | Chat",
+  "ui_version": "unknown (no numeric version visible)",
+  "backend_model": "unknown",
+  "backend_skill": "unknown",
+  "backend_tool_parameters": "unknown"
+}

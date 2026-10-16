@@ -1,6 +1,6 @@
 # 固定文件契约补测现场
 
-协议预先登记21位；当前公开封存9/21。未封存不等于失败或未开始。旧31个pilot包和旧25组合另列，不混作独立重复。
+协议预先登记21位；当前公开封存10/21。未封存不等于失败或未开始。旧31个pilot包和旧25组合另列，不混作独立重复。
 
 S01为五产品各三次固定读写/缺失文件反馈；S02为Codex三组允许/拒绝写权限配对。仅在实际目标操作出现时检查E1契约；GUI内部参数未知，保留E2。没有综合分或纯Harness排名。
 
@@ -15,7 +15,7 @@ S01为五产品各三次固定读写/缺失文件反馈；S02为Codex三组允�
 | [S01-workbuddy-r1](S01-workbuddy-r1/README.md) | 已封存 | 通过 | 通过（仅声明） | unknown | unknown / not_applicable |
 | [S01-workbuddy-r2](S01-workbuddy-r2/README.md) | 已封存 | 通过 | 通过（仅声明） | unknown | unknown / not_applicable |
 | [S01-workbuddy-r3](S01-workbuddy-r3/README.md) | 已封存 | 通过 | 通过（仅声明） | unknown | unknown / not_applicable |
-| S01-yuanbao-r1 | 未封存 | 未知 | 未知 | 未知 | 未知 |
+| [S01-yuanbao-r1](S01-yuanbao-r1/README.md) | 已封存 | 通过 | 通过（仅声明） | unknown | unknown / not_applicable |
 | S01-yuanbao-r2 | 未封存 | 未知 | 未知 | 未知 | 未知 |
 | S01-yuanbao-r3 | 未封存 | 未知 | 未知 | 未知 | 未知 |
 | S01-dsh-r1 | 未封存 | 未知 | 未知 | 未知 | 未知 |

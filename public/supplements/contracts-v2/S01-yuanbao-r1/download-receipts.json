@@ -1,0 +1,64 @@
+{
+  "artifacts": [
+    {
+      "native_file": "native-downloads/echo.txt",
+      "logical_output": "echo.txt",
+      "origin": "native_download",
+      "original_filename": "echo.txt",
+      "sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+      "bytes": 91,
+      "downloaded_at": null,
+      "native_save_action_at": "2026-10-16T08:36:39.684Z",
+      "original_bytes_captured_at": "2026-10-16T08:39:24.196Z",
+      "source_created_at_fs": "2026-10-16T08:36:40.524Z",
+      "source_modified_at_fs": "2026-10-16T08:36:40.524Z",
+      "native_created_time_label": "2026年10月16日，16:36:40 Asia/Shanghai",
+      "native_save_evidence": [
+        "echo-save-destination-proof",
+        "echo-saved-toast",
+        "echo-properties-source-proof-ax"
+      ],
+      "logical_mapping": "echo.txt native default original basename → outputs/echo.txt without changing bytes",
+      "download_route": "native echo.txt card → preview Download → TXT → SaveAs default echo.txt; not final response text or code-fence saving",
+      "private_source_receipt_sha256": "63ccede918fcd73cd0e971267e11297266c437575bdd2963b14616b91254fa4a",
+      "native_source_proof": {
+        "capture": "echo-properties-source-proof-ax",
+        "filename_line": 3,
+        "location_line": 10,
+        "size_line": 12,
+        "created_line": 16,
+        "modified_line": 18
+      }
+    },
+    {
+      "native_file": "native-downloads/receipt.json",
+      "logical_output": "receipt.json",
+      "origin": "native_download",
+      "original_filename": "receipt.json",
+      "sha256": "2a782d01967b6bf050576f365f982aff43d73c9c4cf1e3d1dbbc8ce04111f44a",
+      "bytes": 144,
+      "downloaded_at": null,
+      "native_save_action_at": "2026-10-16T08:37:37.750Z",
+      "original_bytes_captured_at": "2026-10-16T08:40:32.016Z",
+      "source_created_at_fs": "2026-10-16T08:37:38.599Z",
+      "source_modified_at_fs": "2026-10-16T08:37:38.599Z",
+      "native_created_time_label": "2026年10月16日，16:37:38 Asia/Shanghai",
+      "native_save_evidence": [
+        "receipt-save-destination-current-ax",
+        "receipt-saved-toast",
+        "receipt-properties-source-proof-ax"
+      ],
+      "logical_mapping": "receipt.json native default original basename → outputs/receipt.json without changing bytes",
+      "download_route": "native receipt.json card → preview Download to local → SaveAs default receipt.json; not final response text or code-fence saving",
+      "private_source_receipt_sha256": "63ccede918fcd73cd0e971267e11297266c437575bdd2963b14616b91254fa4a",
+      "native_source_proof": {
+        "capture": "receipt-properties-source-proof-ax",
+        "filename_line": 3,
+        "location_line": 10,
+        "size_line": 12,
+        "created_line": 16,
+        "modified_line": 18
+      }
+    }
+  ]
+}
