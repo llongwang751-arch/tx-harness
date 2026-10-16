@@ -2,7 +2,7 @@
 
 个人开源仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。比较对象为Codex、WorkBuddy、DeepSeek Harness（DSH）、元宝专家模式、豆包工作任务模式；用户已确认公告中的“豆包办公”指工作任务模式。
 
-截至2026-10-16，原五产品五题的25个选定组合、31个公开证据包及26次旧评分已保留。当前[报告v2](reports/report.md)以Harness边界观察为主，[派生复核](reports/evaluation-v2.md)另列字段差异、声明权重和时间证据。另行预先登记21个固定文件契约/权限对照实验位，真实封存进度见[补测索引](public/supplements/contracts-v2/README.md)；计划和准备不计完成。
+截至2026-10-16，原五产品五题的25个选定组合、31个公开证据包及26次旧评分已保留。另行预先登记的21个固定文件契约/权限对照实验位已全部执行并封存，见[补测索引](public/supplements/contracts-v2/README.md)。当前[报告v2](reports/report.md)以Harness边界观察为主，[派生复核](reports/evaluation-v2.md)另列字段差异、声明权重和时间证据。
 
 [2026-10-16方法修订](docs/revision-v2.md)保留旧协议、用例、原件及分数，并分别呈现共同界面契约、额外执行链、业务错误和证据缺口。[旧分析口径](docs/exploratory-analysis-plan.md)及[旧报告原文](reports/report-v1-2026-10-14.md)仍可追溯。模型、Skill和权限未匹配的部分保持因果未知；不发布五产品纯Harness排名。
 
@@ -18,11 +18,11 @@
 
 | 要求 | 材料 | 当前状态 |
 |---|---|---|
-| 评测方案 | docs/protocol.md、config/protocol.json、docs/exploratory-analysis-plan.md | 确认性草案未实施；本次按探索性口径复现和追溯 |
+| 评测方案 | docs/protocol.md、config/protocol.json、docs/exploratory-analysis-plan.md、supplements/contracts-v2/protocol.json | 原五题按探索性口径；另行预登记的21轮补测已完成，原75轮草案未实施 |
 | 用例：任务、输入、完成条件 | cases/T01至T05，prompt.md、inputs、case.json | 已设计；可离线核验 |
-| 表现现场 | public/pilots真实接入记录 | 31个包；25/25组合完成，失败、诊断和预算局限保留 |
+| 表现现场 | public/pilots、public/supplements/contracts-v2 | 旧31个包及25/25组合、新21/21补测；失败、诊断和预算局限保留 |
 | 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 26次逐项审阅；缺证项保留null及范围 |
-| 书面竞品报告 | reports/report.md、reports/evaluation-v2.json | Harness边界为主，业务及旧分辅助；新补测进度单列 |
+| 书面竞品报告 | reports/report.md、reports/evaluation-v2.json、reports/permission-pairs-v2.json | Harness边界为主，业务及旧分辅助；三组实际许可对照与条件核对单列 |
 | 每周六个人周报邮件 | reports/weekly-template.md、reports/weekly-2026-10-17-draft.md | 仅本地模板/草稿；未发送 |
 | 个人开源GitHub链接 | https://github.com/llongwang751-arch/tx-harness，MIT | 公开方案、代码、真实预试与报告 |
 
@@ -56,7 +56,10 @@ cases/          五套任务、原始输入、仅供评测员使用的答案
 harness_eval/   标准库CLI：准备、记录、核验、封存、打分、汇总
 tests/          验收判定与证据门槛的回归测试
 reports/        完整探索性报告、逐项评分、周报与确认性草案
+supplements/    新补测预登记协议、变体输入与提示词
 runs/           本地采集包（Git忽略）
+public/pilots/  原31个公开现场包
+public/supplements/  新21轮补测现场、原件与分母
 public/runs/    经审查导出的公开证据包（可提交）
 private/        私有原始记录（Git忽略）
 ```

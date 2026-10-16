@@ -2,7 +2,7 @@
 
 本次按公告允许的任务复现与过程追溯路径交付。五产品各五题的当前实际覆盖见[报告](../reports/report.md)和[后验评分](../reports/exploratory-score-review.json)；准备目录不算已测试。原75次确认性实验是作者提出的后续草案，不是公告规定的提交次数，不追认本次预试。
 
-2026-10-16另在首次执行前登记21个固定文件契约及许可配对实验位，材料和判定规则见[补测协议](../supplements/contracts-v2/protocol.json)，实际封存结果与分母见[补测索引](../public/supplements/contracts-v2/README.md)。这批补测与原五题分开统计；它减少部分任务语义干扰，仍不证明五产品使用同一模型部署或内置Skill。
+2026-10-16另在首次执行前登记21个固定文件契约及许可配对实验位，现已全部执行并封存。材料和判定规则见[补测协议](../supplements/contracts-v2/protocol.json)，实际结果与分母见[补测索引](../public/supplements/contracts-v2/README.md)，三组许可配对的条件核对见[实际启动条件表](../reports/permission-pairs-v2.json)。这批补测与原五题分开统计；它减少部分任务语义干扰，仍不证明五产品使用同一模型部署或内置Skill。
 
 1. 提交个人公开仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)，使用分支`codex/evaluation`并记录实际提交commit。
 2. 阅读[分析口径](exploratory-analysis-plan.md)、[五套用例](../cases)、[打分细则](rubric.md)和[证据索引](../public/pilots/README.md)。报告逐题结果须与原件、检查和人工理由对应。

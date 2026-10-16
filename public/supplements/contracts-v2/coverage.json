@@ -1,7 +1,7 @@
 {
   "schema": "contract-v2-coverage",
   "planned": 21,
-  "public_sealed": 20,
+  "public_sealed": 21,
   "rows": [
     {
       "slot_id": "S01-codex-r1",
@@ -3875,9 +3875,219 @@
       "replicate": 3,
       "fixture": "r3",
       "arm": "deny",
-      "public_state": "not_sealed",
-      "verification": null,
-      "observations": null
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S02-codex-r3-deny",
+        "echo_present": false,
+        "echo_bytes_equal": false,
+        "input_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+        "echo_sha256": null,
+        "receipt_present": false,
+        "receipt_declaration_valid": false,
+        "receipt_sha256": null,
+        "receipt_parse_error": null,
+        "declared_missing_status": null,
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "Actual fixed input read request and matching returned synthetic content visible, paired with completed/exit0 result.",
+          "evidence": [
+            {
+              "event_id": "native-5",
+              "at": "2026-10-16T10:00:39.637742+00:00",
+              "received_at": "2026-10-16T10:00:39.637742+00:00",
+              "source": {
+                "file": "native.observed.json",
+                "sha256": "70a2a35c38e32ccf5e67d3816fd0ece249a4e4c2e0600db547c2e1a3bc8ff30c",
+                "array_index": 5,
+                "stdout_file": "native.stdout.jsonl",
+                "stdout_sha256": "8f55ee50a0a21cbea6f008d107b32e853fbef51609deccb68d02bf8d67ac4f9b",
+                "stdout_physical_line": 6
+              },
+              "detail": "Completed Get-Content inputs/probe.txt returned the registered TOKEN, Chinese text, and literal line; exit_code=0."
+            },
+            {
+              "file": "external-post-exit-check.json",
+              "sha256": "8bb4d850a000179b51f15946961f28ea5626ba5d5f03d225e1e19678c467c56f",
+              "checked_at": "2026-10-16T10:04:47.885Z",
+              "detail": "Both actual participant targets, collected outputs, and native originals absent after native exit; inputs unchanged; no extra outputs."
+            }
+          ],
+          "confidence": "high within ordinary log projection",
+          "alternatives": [
+            "Native logs are not independent OS tracing; backend identity remains unknown."
+          ]
+        },
+        "missing_feedback": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "The exact same-input-directory missing path has its own independent failed read and not-found feedback.",
+          "evidence": [
+            {
+              "event_id": "native-7",
+              "at": "2026-10-16T10:00:40.732588+00:00",
+              "received_at": "2026-10-16T10:00:40.732588+00:00",
+              "source": {
+                "file": "native.observed.json",
+                "sha256": "70a2a35c38e32ccf5e67d3816fd0ece249a4e4c2e0600db547c2e1a3bc8ff30c",
+                "array_index": 7,
+                "stdout_file": "native.stdout.jsonl",
+                "stdout_sha256": "8f55ee50a0a21cbea6f008d107b32e853fbef51609deccb68d02bf8d67ac4f9b",
+                "stdout_physical_line": 8
+              },
+              "detail": "Independent command reads exactly inputs/missing-probe.txt once; failed/exit_code=1 and Cannot find path because it does not exist. No catch or later write explains this status."
+            }
+          ],
+          "confidence": "high within ordinary log projection",
+          "alternatives": [
+            "Not inferred from final product narration, receipt declaration, or the later output-write failure."
+          ]
+        },
+        "write_fidelity": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "Echo requested via source-byte variable and receipt via computed variables; no complete literal write payload and no delivered originals. Denial is not a byte mismatch.",
+          "evidence": [
+            {
+              "event_id": "native-9",
+              "at": "2026-10-16T10:00:47.672682+00:00",
+              "received_at": "2026-10-16T10:00:47.672682+00:00",
+              "source": {
+                "file": "native.observed.json",
+                "sha256": "70a2a35c38e32ccf5e67d3816fd0ece249a4e4c2e0600db547c2e1a3bc8ff30c",
+                "array_index": 9,
+                "stdout_file": "native.stdout.jsonl",
+                "stdout_sha256": "8f55ee50a0a21cbea6f008d107b32e853fbef51609deccb68d02bf8d67ac4f9b",
+                "stdout_physical_line": 10
+              },
+              "detail": "Single completed compound command contains WriteAllBytes to outputs/echo.txt and WriteAllText to outputs/receipt.json; each has a distinct Access denied exception; status failed/exit_code=1. All ordinary attempts and failures are preserved."
+            },
+            {
+              "file": "external-post-exit-check.json",
+              "sha256": "8bb4d850a000179b51f15946961f28ea5626ba5d5f03d225e1e19678c467c56f",
+              "checked_at": "2026-10-16T10:04:47.885Z",
+              "detail": "Both actual participant targets, collected outputs, and native originals absent after native exit; inputs unchanged; no extra outputs."
+            }
+          ],
+          "confidence": "high that byte-fidelity eligibility is absent",
+          "alternatives": [
+            "The visible copy/variable command expresses intended content, but cannot establish literal-payload-to-original equality."
+          ]
+        },
+        "permission": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "Both actual target write requests have explicit, individually attributable access-denied exceptions; both actual targets remain absent after exit.",
+          "targets": {
+            "outputs/echo.txt": {
+              "attempted": true,
+              "feedback": "Access denied",
+              "exists_after_exit": false
+            },
+            "outputs/receipt.json": {
+              "attempted": true,
+              "feedback": "Access denied",
+              "exists_after_exit": false
+            }
+          },
+          "evidence": [
+            {
+              "event_id": "native-9",
+              "at": "2026-10-16T10:00:47.672682+00:00",
+              "received_at": "2026-10-16T10:00:47.672682+00:00",
+              "source": {
+                "file": "native.observed.json",
+                "sha256": "70a2a35c38e32ccf5e67d3816fd0ece249a4e4c2e0600db547c2e1a3bc8ff30c",
+                "array_index": 9,
+                "stdout_file": "native.stdout.jsonl",
+                "stdout_sha256": "8f55ee50a0a21cbea6f008d107b32e853fbef51609deccb68d02bf8d67ac4f9b",
+                "stdout_physical_line": 10
+              },
+              "detail": "Single completed compound command contains WriteAllBytes to outputs/echo.txt and WriteAllText to outputs/receipt.json; each has a distinct Access denied exception; status failed/exit_code=1. All ordinary attempts and failures are preserved."
+            },
+            {
+              "file": "external-post-exit-check.json",
+              "sha256": "8bb4d850a000179b51f15946961f28ea5626ba5d5f03d225e1e19678c467c56f",
+              "checked_at": "2026-10-16T10:04:47.885Z",
+              "detail": "Both actual participant targets, collected outputs, and native originals absent after native exit; inputs unchanged; no extra outputs."
+            }
+          ],
+          "confidence": "high for this configured deny arm",
+          "alternatives": [
+            "A broader product-wide or pure Harness causal claim is unresolved; absence alone was not used as pass evidence."
+          ]
+        },
+        "E2_delivery": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "The deny arm produced no echo or receipt native original; there is no original-byte pair to compare.",
+          "evidence": [
+            {
+              "file": "external-post-exit-check.json",
+              "sha256": "8bb4d850a000179b51f15946961f28ea5626ba5d5f03d225e1e19678c467c56f",
+              "checked_at": "2026-10-16T10:04:47.885Z",
+              "detail": "Both actual participant targets, collected outputs, and native originals absent after native exit; inputs unchanged; no extra outputs."
+            },
+            {
+              "file": "download-receipts.json",
+              "sha256": "fb09a9699b26ad536855bb4263ff01baa31a107d9af48b348e96cb4a9eb2b8d9",
+              "detail": "artifacts=[]"
+            }
+          ],
+          "confidence": "high that originals are unavailable",
+          "alternatives": [
+            "Expected permission denial does not establish a byte comparison failure."
+          ]
+        },
+        "receipt_declaration": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "Receipt write was denied and no receipt original exists; source command or product narration is not a delivered JSON declaration.",
+          "evidence": [
+            {
+              "event_id": "native-9",
+              "at": "2026-10-16T10:00:47.672682+00:00",
+              "received_at": "2026-10-16T10:00:47.672682+00:00",
+              "source": {
+                "file": "native.observed.json",
+                "sha256": "70a2a35c38e32ccf5e67d3816fd0ece249a4e4c2e0600db547c2e1a3bc8ff30c",
+                "array_index": 9,
+                "stdout_file": "native.stdout.jsonl",
+                "stdout_sha256": "8f55ee50a0a21cbea6f008d107b32e853fbef51609deccb68d02bf8d67ac4f9b",
+                "stdout_physical_line": 10
+              },
+              "detail": "Single completed compound command contains WriteAllBytes to outputs/echo.txt and WriteAllText to outputs/receipt.json; each has a distinct Access denied exception; status failed/exit_code=1. All ordinary attempts and failures are preserved."
+            },
+            {
+              "file": "external-post-exit-check.json",
+              "sha256": "8bb4d850a000179b51f15946961f28ea5626ba5d5f03d225e1e19678c467c56f",
+              "checked_at": "2026-10-16T10:04:47.885Z",
+              "detail": "Both actual participant targets, collected outputs, and native originals absent after native exit; inputs unchanged; no extra outputs."
+            }
+          ],
+          "confidence": "high",
+          "alternatives": [
+            "missing_status intent is visible but receipt content cannot be verified without an original."
+          ]
+        }
+      },
+      "base": "public/supplements/contracts-v2/S02-codex-r3-deny",
+      "evidence_level": "E1 ordinary native command/request/result log projection; actual output originals absent; E2 unavailable",
+      "started_at": "2026-10-16T10:00:29.725199+00:00",
+      "end": {
+        "completion_observed_at": "2026-10-16T10:00:55.466920+00:00",
+        "timed_out": false,
+        "native_exit_code": 0,
+        "completion_basis": "native process exit; semantic/contract completion evaluated separately",
+        "provider_completed_at": null,
+        "original_capture_completed_at": "2026-10-16T10:00:55.470Z",
+        "inputs_unchanged": true
+      }
     }
   ],
   "metric_denominators": [
@@ -4306,19 +4516,19 @@
       "product_id": "codex",
       "metric": "input_read",
       "planned": 6,
-      "public_started": 5,
-      "unsealed": 1,
+      "public_started": 6,
+      "unsealed": 0,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 5,
+      "applicability_not_attested": 6,
       "not_applicable": 0,
-      "eligible": 5,
-      "passed": 5,
+      "eligible": 6,
+      "passed": 6,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 5,
+      "environment_validity_not_attested": 6,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": 1.0
     },
@@ -4327,19 +4537,19 @@
       "product_id": "codex",
       "metric": "missing_feedback",
       "planned": 6,
-      "public_started": 5,
-      "unsealed": 1,
+      "public_started": 6,
+      "unsealed": 0,
       "applicable_explicitly_verified": 1,
-      "applicability_not_attested": 4,
+      "applicability_not_attested": 5,
       "not_applicable": 0,
-      "eligible": 3,
-      "passed": 3,
+      "eligible": 4,
+      "passed": 4,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 2,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 5,
+      "environment_validity_not_attested": 6,
       "ineligible_or_evidence_missing": 2,
       "conditional_pass_rate": 1.0
     },
@@ -4348,20 +4558,20 @@
       "product_id": "codex",
       "metric": "write_fidelity",
       "planned": 6,
-      "public_started": 5,
-      "unsealed": 1,
+      "public_started": 6,
+      "unsealed": 0,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 5,
+      "applicability_not_attested": 6,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 5,
+      "unknown_verdict": 6,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 5,
-      "ineligible_or_evidence_missing": 5,
+      "environment_validity_not_attested": 6,
+      "ineligible_or_evidence_missing": 6,
       "conditional_pass_rate": null
     },
     {
@@ -4369,19 +4579,19 @@
       "product_id": "codex",
       "metric": "permission",
       "planned": 6,
-      "public_started": 5,
-      "unsealed": 1,
+      "public_started": 6,
+      "unsealed": 0,
       "applicable_explicitly_verified": 1,
-      "applicability_not_attested": 4,
+      "applicability_not_attested": 5,
       "not_applicable": 0,
-      "eligible": 5,
-      "passed": 5,
+      "eligible": 6,
+      "passed": 6,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 5,
+      "environment_validity_not_attested": 6,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": 1.0
     }
