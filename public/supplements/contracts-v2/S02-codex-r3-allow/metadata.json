@@ -1,0 +1,49 @@
+{
+  "schema": "contract-v2-public-evidence",
+  "slot": {
+    "slot_id": "S02-codex-r3-allow",
+    "card": "S02",
+    "product_id": "codex",
+    "replicate": 3,
+    "fixture": "r3",
+    "arm": "allow"
+  },
+  "registration_sha256": "d7ba2f1b3d92a0cc9b7bc2511cfcfed0739dfacf148bd8146c87fd00bb6f50d9",
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "review_actor": "Operator/agent",
+  "source_plan_sha256": "9eaa8a03c48a3ba3ee0de9484520cc5bf8d8bb28b620be27bd46ddd7510d6029",
+  "raw_records_sha256": {
+    "close-checkpoint.json": "48af25e2f62d29003dbedd67af821bfa3b5a2dbcaeee70928863ef25c46852fe",
+    "download-receipts.json": "ce3883a7fa83fde58b4b2fdbdedd41af1b7f6e7e1a227b56234b8e11c4a05d87",
+    "execution-end-private.json": "298c739b94a78470d78360cf964563a9b464a79e306c65c48c96831b649dace5",
+    "execution-end.json": "523ccf292139d4076eb9ad4ed4b42f05d2afdcae908e4f7e4db598dbca3e5933",
+    "execution-start.json": "bf484babb309f0792840f15d3969a1c661de1b8b68283aec837fdbf231de9fb5",
+    "independent-verification.json": "850577d19f1e0fa30e7d4226e12e765d11b0b0e075f2711291a29a1348631564",
+    "launch-private.json": "1bbda4d26766a3e608b219f8e7d524c16fde5188b1c68b3f544bb246e8f5b642",
+    "native.observed.json": "51e93cd2a9f2871666b0b0fea91544b0a6fbf39aff19d27e316145955f6275c6",
+    "native.result.json": "3b8f944b65148264a098d80a45cc7899846c74684d4562236802395b07bb90f7",
+    "native.stdout.jsonl": "a9c47cfa1a0fe1a077df762e7f6bf752f1d44eacdf06ed257cb984e631e16fc1",
+    "ordinary-contract-redactions.json": "6fcb45d455d846ba30179bc4e3daed490f571e04c4473683b20d0e48e61e7003",
+    "plan.json": "9eaa8a03c48a3ba3ee0de9484520cc5bf8d8bb28b620be27bd46ddd7510d6029",
+    "process-exit-check.json": "ad56577736a869b0fd8893ea50f37af33ed2a950099fde41e8bac981d2e09708",
+    "public-review.json": "c70aab89c4fe1eced7f57d56e362d664c935e82cd7ffec052a5ce4cba42b198c",
+    "reviewed-native-events.jsonl": "342b792bd9fe6e527daff38922c4cde25c88545107f3b7107ad67a90d330e490",
+    "run-started.json": "b48dcdc101a1481728a46e4b0ccf6b35ac3450ff261e6893d9929ed017eee9f3"
+  },
+  "public_projection_file": "visible-events.jsonl",
+  "reviewed_projection_alias": "reviewed-native-events.jsonl",
+  "export_source_sha256": "b0a8f88387660f6426c8ea7bf5215675385d1b82d57b6f306d34a9403cbd9348",
+  "preparation_source_sha256": {
+    "contract_v2.py": "b0a8f88387660f6426c8ea7bf5215675385d1b82d57b6f306d34a9403cbd9348",
+    "filter_contract_native.py": "724795073cffe21977fe4eb9b4ef27878a548b919fdbd8777d652e9cfb6e72dc",
+    "run_codex_pilot.py": "e8772918cfabc7e17e6d2dd6d26eb50b14cc0d9f315888b3c8e61d7aadf433af",
+    "run_contract_cli.py": "b34727a560fbe8d9fe9da42706f4b17297fe833e38afdb9a367d9b8b2cf61e23",
+    "run_dsh_multiturn_pilot.py": "0b2899b87a456df40cb72fd5130667ceec73e00354e4d85f05939d8224fbcb34",
+    "run_dsh_pilot.py": "b4fb519d8ce1f7fc26180ebb2591a1c301ba23afa85a41894933680b320479a0",
+    "run_dsh_sdk_pilot.py": "02bd67a75ae7c319ca2ee4f04dc0c2f6b20349b0d5ab590b3300bc7a46fe1cc8"
+  },
+  "evidence_level": "E1 ordinary visible native command/result projections plus unchanged actual local originals; still a log projection, not an independent complete OS audit",
+  "backend_model_attested": false,
+  "pure_harness_score": null,
+  "confidence": "High for unchanged original bytes and deterministic comparison; UI provenance relies on reviewed native observations; causation unresolved"
+}

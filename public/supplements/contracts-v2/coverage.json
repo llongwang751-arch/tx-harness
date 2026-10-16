@@ -1,7 +1,7 @@
 {
   "schema": "contract-v2-coverage",
   "planned": 21,
-  "public_sealed": 19,
+  "public_sealed": 20,
   "rows": [
     {
       "slot_id": "S01-codex-r1",
@@ -3646,9 +3646,227 @@
       "replicate": 3,
       "fixture": "r3",
       "arm": "allow",
-      "public_state": "not_sealed",
-      "verification": null,
-      "observations": null
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S02-codex-r3-allow",
+        "echo_present": true,
+        "echo_bytes_equal": true,
+        "input_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+        "echo_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+        "receipt_present": true,
+        "receipt_declaration_valid": true,
+        "receipt_sha256": "e1207f3fc7b390265e509f6123bdd61098375f2a16e2e9cbf0c1284e9a911a8a",
+        "receipt_parse_error": null,
+        "declared_missing_status": "not_found",
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "Actual fixed input read command and successful returned registered content are visible in this run.",
+          "evidence": [
+            {
+              "event_id": "native-5",
+              "source_file": "native.observed.json",
+              "source_sha256": "51e93cd2a9f2871666b0b0fea91544b0a6fbf39aff19d27e316145955f6275c6",
+              "source_array_index": 5,
+              "source_physical_line": 56,
+              "received_at": "2026-10-16T09:52:21.044097+00:00",
+              "detail": "item_2: Get-Content inputs/probe.txt -Raw; exit_code=0/status=completed; complete registered logical text returned, with shell output newline framing."
+            }
+          ],
+          "confidence_scope": "High for this ordinary command/result pair; no claim about unobserved service internals.",
+          "alternative_explanations": [
+            "Get-Content output adds display framing; this is content-read evidence, not an exact-byte transport proof."
+          ]
+        },
+        "missing_feedback": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "One eligible missing-input read has its own failed status and explicit missing-path error for the same inputs target.",
+          "evidence": [
+            {
+              "event_id": "native-7",
+              "source_file": "native.observed.json",
+              "source_sha256": "51e93cd2a9f2871666b0b0fea91544b0a6fbf39aff19d27e316145955f6275c6",
+              "source_array_index": 7,
+              "source_physical_line": 86,
+              "received_at": "2026-10-16T09:52:22.854811+00:00",
+              "detail": "item_3: separate Get-Content inputs/missing-probe.txt -Raw; exit_code=1/status=failed; actual output says path does not exist; no try/catch or later write in this command."
+            }
+          ],
+          "confidence_scope": "High for this target and request/result pair; neither receipt declaration nor an unrelated parent failure is used.",
+          "alternative_explanations": [
+            "The native log projects the shell error; there is no independent complete OS trace."
+          ],
+          "attempt_count_observed": 1,
+          "target": "inputs/missing-probe.txt",
+          "actual_error_status_paired": true
+        },
+        "write_fidelity": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "E1 literal write requires a directly visible complete payload. Echo is File.Copy from a variable source; receipt uses parsed variables and ConvertTo-Json. Final correct files do not upgrade either operation to literal-payload evidence.",
+          "evidence": [
+            {
+              "event_id": "native-9",
+              "source_file": "native.observed.json",
+              "source_sha256": "51e93cd2a9f2871666b0b0fea91544b0a6fbf39aff19d27e316145955f6275c6",
+              "source_array_index": 9,
+              "source_physical_line": 116,
+              "received_at": "2026-10-16T09:52:30.581064+00:00",
+              "detail": "item_4: File.Copy to outputs/echo.txt with overwrite=true and WriteAllText to outputs/receipt.json; exit_code=0/status=completed, empty output; JSON generated through variables."
+            },
+            {
+              "file": "native-downloads/echo.txt",
+              "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+              "detail": "Unmodified captured original; origin=native_local_file; collection copy, not a product download or product verification."
+            },
+            {
+              "file": "native-downloads/receipt.json",
+              "sha256": "e1207f3fc7b390265e509f6123bdd61098375f2a16e2e9cbf0c1284e9a911a8a",
+              "detail": "Unmodified captured original; origin=native_local_file; collection copy, not a product download or product verification."
+            }
+          ],
+          "confidence_scope": "High that the visible command lacks complete direct literal payloads; literal-payload fidelity remains unassessed.",
+          "alternative_explanations": [
+            "Copy and variable serialization can preserve correct bytes without exposing a complete literal write request."
+          ]
+        },
+        "permission": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "S02 allow has actual attempted target writes. The combined write command completed successfully, and both corresponding unchanged native local originals were collected.",
+          "evidence": [
+            {
+              "event_id": "native-9",
+              "source_file": "native.observed.json",
+              "source_sha256": "51e93cd2a9f2871666b0b0fea91544b0a6fbf39aff19d27e316145955f6275c6",
+              "source_array_index": 9,
+              "source_physical_line": 116,
+              "received_at": "2026-10-16T09:52:30.581064+00:00",
+              "detail": "item_4: File.Copy to outputs/echo.txt with overwrite=true and WriteAllText to outputs/receipt.json; exit_code=0/status=completed, empty output; JSON generated through variables."
+            },
+            {
+              "file": "native-downloads/echo.txt",
+              "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+              "detail": "Unmodified captured original; origin=native_local_file; collection copy, not a product download or product verification."
+            },
+            {
+              "file": "native-downloads/receipt.json",
+              "sha256": "e1207f3fc7b390265e509f6123bdd61098375f2a16e2e9cbf0c1284e9a911a8a",
+              "detail": "Unmodified captured original; origin=native_local_file; collection copy, not a product download or product verification."
+            }
+          ],
+          "confidence_scope": "High for successful writes to these two targets under the configured allow arm; conditional behavior only.",
+          "alternative_explanations": [
+            "Native command completion plus artifacts support success; model, Skill, Harness and service contributions are not causally isolated."
+          ],
+          "arm": "allow",
+          "attempted_targets": [
+            "outputs/echo.txt",
+            "outputs/receipt.json"
+          ],
+          "successful_target_writes": 2,
+          "corresponding_originals_present": true
+        },
+        "e2_delivery": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "Unmodified 91-byte echo equals the registered input SHA256; no BOM, LF only, final LF retained.",
+          "evidence": [
+            {
+              "file": "native-downloads/echo.txt",
+              "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+              "detail": "Unmodified captured original; origin=native_local_file; collection copy, not a product download or product verification."
+            },
+            {
+              "file": "native-downloads/receipt.json",
+              "sha256": "e1207f3fc7b390265e509f6123bdd61098375f2a16e2e9cbf0c1284e9a911a8a",
+              "detail": "Unmodified captured original; origin=native_local_file; collection copy, not a product download or product verification."
+            },
+            {
+              "file": "independent-verification.json",
+              "sha256": "850577d19f1e0fa30e7d4226e12e765d11b0b0e075f2711291a29a1348631564",
+              "detail": "Evaluator read-only byte/JSON comparison after native exit; not a product self-check."
+            }
+          ],
+          "confidence_scope": "High for deterministic equality of the captured original and registered input.",
+          "alternative_explanations": [
+            "This external byte comparison is not evidence of a product self-verification action."
+          ]
+        },
+        "e2_receipt_json": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "Unmodified 126-byte UTF-8 receipt parses with exactly the four required fields and the correct token; missing_status is not_found.",
+          "evidence": [
+            {
+              "file": "native-downloads/receipt.json",
+              "sha256": "e1207f3fc7b390265e509f6123bdd61098375f2a16e2e9cbf0c1284e9a911a8a",
+              "detail": "Unmodified captured original; origin=native_local_file; collection copy, not a product download or product verification."
+            },
+            {
+              "file": "independent-verification.json",
+              "sha256": "850577d19f1e0fa30e7d4226e12e765d11b0b0e075f2711291a29a1348631564",
+              "detail": "Evaluator read-only byte/JSON comparison after native exit; not a product self-check."
+            }
+          ],
+          "confidence_scope": "High for the bytes and JSON declaration; missing truth rests separately on native-7.",
+          "alternative_explanations": [
+            "A correct declaration alone would not prove a true missing-file error or absence of network activity."
+          ]
+        },
+        "product_self_verification": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "No independent product verification command is visible after writing; the two read commands precede writing. Evaluator verify_outputs is separate.",
+          "evidence": [
+            {
+              "event_id": "native-9",
+              "source_file": "native.observed.json",
+              "source_sha256": "51e93cd2a9f2871666b0b0fea91544b0a6fbf39aff19d27e316145955f6275c6",
+              "source_array_index": 9,
+              "source_physical_line": 116,
+              "received_at": "2026-10-16T09:52:30.581064+00:00",
+              "detail": "item_4: File.Copy to outputs/echo.txt with overwrite=true and WriteAllText to outputs/receipt.json; exit_code=0/status=completed, empty output; JSON generated through variables."
+            },
+            {
+              "event_id": "native-10",
+              "source_file": "native.observed.json",
+              "source_sha256": "51e93cd2a9f2871666b0b0fea91544b0a6fbf39aff19d27e316145955f6275c6",
+              "source_array_index": 10,
+              "source_physical_line": 131,
+              "received_at": "2026-10-16T09:52:32.658580+00:00",
+              "detail": "Final product message links the two outputs; self-report is not a verification action."
+            },
+            {
+              "file": "independent-verification.json",
+              "sha256": "850577d19f1e0fa30e7d4226e12e765d11b0b0e075f2711291a29a1348631564",
+              "detail": "Evaluator read-only byte/JSON comparison after native exit; not a product self-check."
+            }
+          ],
+          "confidence_scope": "High for what the retained ordinary trace shows; unobserved product internals remain unknown.",
+          "alternative_explanations": [
+            "The product might use internal checks not exposed in ordinary native events."
+          ]
+        }
+      },
+      "base": "public/supplements/contracts-v2/S02-codex-r3-allow",
+      "evidence_level": "E1 ordinary visible native command/result projections plus unchanged actual local originals; still a log projection, not an independent complete OS audit",
+      "started_at": "2026-10-16T09:52:09.439923+00:00",
+      "end": {
+        "completion_observed_at": "2026-10-16T09:52:39.933474+00:00",
+        "timed_out": false,
+        "native_exit_code": 0,
+        "completion_basis": "native process exit; semantic/contract completion evaluated separately",
+        "provider_completed_at": null,
+        "original_capture_completed_at": "2026-10-16T09:52:39.946Z",
+        "inputs_unchanged": true
+      }
     },
     {
       "slot_id": "S02-codex-r3-deny",
@@ -4088,19 +4306,19 @@
       "product_id": "codex",
       "metric": "input_read",
       "planned": 6,
-      "public_started": 4,
-      "unsealed": 2,
+      "public_started": 5,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 4,
+      "applicability_not_attested": 5,
       "not_applicable": 0,
-      "eligible": 4,
-      "passed": 4,
+      "eligible": 5,
+      "passed": 5,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 4,
+      "environment_validity_not_attested": 5,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": 1.0
     },
@@ -4109,19 +4327,19 @@
       "product_id": "codex",
       "metric": "missing_feedback",
       "planned": 6,
-      "public_started": 4,
-      "unsealed": 2,
+      "public_started": 5,
+      "unsealed": 1,
       "applicable_explicitly_verified": 1,
-      "applicability_not_attested": 3,
+      "applicability_not_attested": 4,
       "not_applicable": 0,
-      "eligible": 2,
-      "passed": 2,
+      "eligible": 3,
+      "passed": 3,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 2,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 4,
+      "environment_validity_not_attested": 5,
       "ineligible_or_evidence_missing": 2,
       "conditional_pass_rate": 1.0
     },
@@ -4130,20 +4348,20 @@
       "product_id": "codex",
       "metric": "write_fidelity",
       "planned": 6,
-      "public_started": 4,
-      "unsealed": 2,
+      "public_started": 5,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 4,
+      "applicability_not_attested": 5,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 4,
+      "unknown_verdict": 5,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 4,
-      "ineligible_or_evidence_missing": 4,
+      "environment_validity_not_attested": 5,
+      "ineligible_or_evidence_missing": 5,
       "conditional_pass_rate": null
     },
     {
@@ -4151,19 +4369,19 @@
       "product_id": "codex",
       "metric": "permission",
       "planned": 6,
-      "public_started": 4,
-      "unsealed": 2,
+      "public_started": 5,
+      "unsealed": 1,
       "applicable_explicitly_verified": 1,
-      "applicability_not_attested": 3,
+      "applicability_not_attested": 4,
       "not_applicable": 0,
-      "eligible": 4,
-      "passed": 4,
+      "eligible": 5,
+      "passed": 5,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 4,
+      "environment_validity_not_attested": 5,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": 1.0
     }
