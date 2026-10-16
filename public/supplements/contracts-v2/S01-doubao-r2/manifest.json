@@ -1,0 +1,18 @@
+{
+  "download-receipts.json": "7a6612df27c99442a7e9fb7d967041fa07ef1f569605bc909b8659bef88f4cad",
+  "execution-end.json": "4f209588c6c1645cfe077d169b0907584d3a319f995ffe0ca8749ff0361ab090",
+  "execution-start.json": "1782c9fb537a5876456989efadc97886bbe14eaf2d57cef9a40a733926510c4b",
+  "independent-verification.json": "c5c39b7edeb59406303e278eb77b30fbdc29449001a3c87d50f2bfdbc3fc7ee0",
+  "inputs/probe.txt": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+  "metadata.json": "061ce881d3292da4dbfd15bcc332a90405e47e63a78099b6e4b64481b5cd454f",
+  "native-downloads/echo (1).txt": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+  "native-downloads/receipt (1).json": "82542077cc89b3e085c7726abc6956d093fbb247aeece9dc058e4db9aabb26b0",
+  "outputs/echo.txt": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+  "outputs/receipt.json": "82542077cc89b3e085c7726abc6956d093fbb247aeece9dc058e4db9aabb26b0",
+  "plan.json": "c6deb1e8abf265486020855703dba0825c0b85d913949510fad9909a3da7927e",
+  "README.md": "0c374840c677226ae43d938d6cf14b3c78a3824ebffcf722923fa233418dbaf1",
+  "review.json": "94b92b7761dd790538018d510fa0d1fe07e79cf19a66cebf8fb8d923e74dc5f1",
+  "submitted-prompt.txt": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e",
+  "verification.json": "c5c39b7edeb59406303e278eb77b30fbdc29449001a3c87d50f2bfdbc3fc7ee0",
+  "visible-events.jsonl": "00c630fded11715fb846aeda25182a80386aaaf1175b354bd4a9e5e4a101e212"
+}

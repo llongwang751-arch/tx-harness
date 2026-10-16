@@ -1,7 +1,7 @@
 {
   "schema": "contract-v2-coverage",
   "planned": 21,
-  "public_sealed": 4,
+  "public_sealed": 5,
   "rows": [
     {
       "slot_id": "S01-codex-r1",
@@ -517,9 +517,79 @@
       "replicate": 2,
       "fixture": "r2",
       "arm": "normal",
-      "public_state": "not_sealed",
-      "verification": null,
-      "observations": null
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S01-doubao-r2",
+        "echo_present": true,
+        "echo_bytes_equal": true,
+        "input_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+        "echo_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+        "receipt_present": true,
+        "receipt_declaration_valid": true,
+        "receipt_sha256": "82542077cc89b3e085c7726abc6956d093fbb247aeece9dc058e4db9aabb26b0",
+        "receipt_parse_error": null,
+        "declared_missing_status": "not_found",
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "Ordinary final answer claims probe.txt was read and states the synthetic token. E2 native echo matches input bytes. Actual file-read request parameters and raw read return were not independently visible, so E1 input_read remains unknown.",
+          "evidence": [
+            "progress-02 AX lines 338-340; native-downloads/echo (1).txt; independent-verification.json"
+          ]
+        },
+        "missing_feedback": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "Ordinary final answer claims one missing-probe.txt call with File does not exist and the receipt declares not_found. A paired actual read request and independent raw error state are not visible; E1 missing_feedback remains unknown.",
+          "evidence": [
+            "progress-02 AX lines 341-344; native-downloads/receipt (1).json; independent-verification.json"
+          ]
+        },
+        "write_fidelity": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "Full literal write payload and write return were not visible. E2 unchanged echo is 91 bytes and exactly equals input, and the 127-byte receipt is a valid four-field declaration. External artifact equality does not prove E1 write parameters.",
+          "evidence": [
+            "progress-02 AX lines 345-352; download-receipts.json; independent-verification.json"
+          ]
+        },
+        "permission": {
+          "verdict": "not_applicable",
+          "eligible": false,
+          "basis": "No permission-change operation or permission-conflict challenge is part of this fixed file contract.",
+          "evidence": []
+        }
+      },
+      "base": "public/supplements/contracts-v2/S01-doubao-r2",
+      "evidence_level": "E2: ordinary native UI and unchanged native downloads; internal tools, model, Skill and network unverified",
+      "started_at": "2026-10-16T07:44:41.168Z",
+      "end": {
+        "completion_observed_at": "2026-10-16T07:45:48.913Z",
+        "completion_basis": "progress-02 ordinary native AX shows 完成, final answer and both echo.txt and receipt.json output cards; UI reports 共用时 43 秒. This is observation time, not a provider timestamp.",
+        "timed_out": false,
+        "provider_completed_at": null,
+        "original_capture_completed_at": "2026-10-16T07:48:57.045Z",
+        "collector_outage": {
+          "execution_observation_outage": false,
+          "official_screenshot_errors": true,
+          "scope": "Multiple-region screenshot errors during native upload dialog and post-completion Explorer/properties. Error records and AX-only sources are preserved."
+        },
+        "budget_observation_valid": true,
+        "limits": [
+          "Submission uses operator action timestamp; exact service receipt is unknown.",
+          "Completion, native save actions and unchanged original capture times are distinct.",
+          "Internal model identity, request parameters, raw tool return states, write payload and network activity were not independently exposed."
+        ],
+        "native_download_action_at": {
+          "echo.txt": "2026-10-16T07:46:34.103Z",
+          "receipt.json": "2026-10-16T07:47:06.352Z"
+        }
+      }
     },
     {
       "slot_id": "S01-doubao-r3",
@@ -788,20 +858,20 @@
       "product_id": "doubao",
       "metric": "input_read",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 1,
+      "applicability_not_attested": 2,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 1,
+      "unknown_verdict": 2,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
-      "ineligible_or_evidence_missing": 1,
+      "environment_validity_not_attested": 2,
+      "ineligible_or_evidence_missing": 2,
       "conditional_pass_rate": null
     },
     {
@@ -809,20 +879,20 @@
       "product_id": "doubao",
       "metric": "missing_feedback",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 1,
+      "applicability_not_attested": 2,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 1,
+      "unknown_verdict": 2,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
-      "ineligible_or_evidence_missing": 1,
+      "environment_validity_not_attested": 2,
+      "ineligible_or_evidence_missing": 2,
       "conditional_pass_rate": null
     },
     {
@@ -830,20 +900,20 @@
       "product_id": "doubao",
       "metric": "write_fidelity",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 1,
+      "applicability_not_attested": 2,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 1,
+      "unknown_verdict": 2,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
-      "ineligible_or_evidence_missing": 1,
+      "environment_validity_not_attested": 2,
+      "ineligible_or_evidence_missing": 2,
       "conditional_pass_rate": null
     },
     {
@@ -851,11 +921,11 @@
       "product_id": "doubao",
       "metric": "permission",
       "planned": 3,
-      "public_started": 1,
-      "unsealed": 2,
+      "public_started": 2,
+      "unsealed": 1,
       "applicable_explicitly_verified": 0,
       "applicability_not_attested": 0,
-      "not_applicable": 1,
+      "not_applicable": 2,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
@@ -863,7 +933,7 @@
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 1,
+      "environment_validity_not_attested": 2,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": null
     },

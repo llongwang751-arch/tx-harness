@@ -1,0 +1,53 @@
+{
+  "schema": "contract-v2-public-evidence",
+  "slot": {
+    "slot_id": "S01-doubao-r2",
+    "card": "S01",
+    "product_id": "doubao",
+    "replicate": 2,
+    "fixture": "r2",
+    "arm": "normal"
+  },
+  "registration_sha256": "d7ba2f1b3d92a0cc9b7bc2511cfcfed0739dfacf148bd8146c87fd00bb6f50d9",
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "review_actor": "Operator/agent",
+  "source_plan_sha256": "d2d715de3190c32ae989f2ade4e9d3c61e62ad741f7ca00ee70f4220dd97243a",
+  "raw_records_sha256": {
+    "actions.jsonl": "765400cbfec47dbb669983d253852d548848050018b9a2c3475e3f701ec39caa",
+    "capture-hashes.jsonl": "1c850ee8528ebd086621190047224c51d49708b54e15beefbe9bc64e24c715d0",
+    "capture-integrity-index.json": "6214fa90f33ab573995234b301ac8f503a26190e62536fb26bef973b3e06c619",
+    "capture-log.jsonl": "26f6847c0fb5b312ee7c3c23dfeaf1404761ab1bb2cc6a2e593a3bf071fcb7cd",
+    "close-checkpoint.json": "5a48c617c837ada9274a6523bc29daf9496ccd683675671c6871d2892ff5be73",
+    "collector-errors.jsonl": "1c6e661f5075c5daba0be7fd07ed07aec7241db1de83d956be7bb8f528aa7712",
+    "completion-checkpoint.json": "9631a147adfe165e8ae08bedd8a41005ce6b59640b138b6ea0bf6e9d6bb40a47",
+    "composer-verification.json": "a54602d29c1b1507c266ec664794d907856d5f9f8bf15fb87e54f262463b3d85",
+    "download-receipts.json": "7a6612df27c99442a7e9fb7d967041fa07ef1f569605bc909b8659bef88f4cad",
+    "echo-properties-fresh-inventory.json": "31ced30eb9ec082c6b064b966a4bee7a42a4fe599b04d2833816be2f045c0dc1",
+    "echo-properties-window-inventory.json": "1e2bea7dcdc01dde3db3423197a27f126e87f3e82930d1a02cc2820d118c2ed2",
+    "execution-end.json": "4f209588c6c1645cfe077d169b0907584d3a319f995ffe0ca8749ff0361ab090",
+    "execution-start.json": "880c2688957ec7a1707f560b4a7a8bb577f675e8b8d9cd4987542522929a58d8",
+    "explorer-fresh-inventory.json": "857af62b0abb3e6ee13a0dbf41feed8e906e84ac2c1e47d5e4b558ad0bb8146b",
+    "explorer-launched-inventory.json": "8c1a42ed686800db1244319ff7abedbe8ccafc44f0b89427814d4a8a312cf29b",
+    "final-window-inventory.json": "0099fe12cecd35429cdd52fddd44bfe04e8f072707f29ab64c10948c0300b43b",
+    "independent-verification.json": "c5c39b7edeb59406303e278eb77b30fbdc29449001a3c87d50f2bfdbc3fc7ee0",
+    "initial-window-inventory.json": "c966eb12e531554a1eafdde0b0561ed1e6848703f273c526d012c8791d6b45c6",
+    "launch-error.json": "647e6d3590b8cbaa067012bdb6fbb587726690baf40f7c58e8620be7d3272fda",
+    "launched-window-inventory.json": "b3ae397778a430a111e0a3d08f96caaec8916d7ddf738a02a605ee17271fe498",
+    "node-kernel-release.json": "5a5e61d2f885e184ec8f2b4233a21a52df36c30118658032b9d792ca9bbac257",
+    "plan.json": "d2d715de3190c32ae989f2ade4e9d3c61e62ad741f7ca00ee70f4220dd97243a",
+    "pre-explorer-app-inventory.json": "14f2209f267221e79b933baa7e76b7c0764243388cc89f83824cd78ee3ea912d",
+    "private-original-paths.json": "11b3b61bc25bf319f332c4382de8965ce6294b5315e8aa5d736881859b2a12c7",
+    "public-review.json": "94b92b7761dd790538018d510fa0d1fe07e79cf19a66cebf8fb8d923e74dc5f1",
+    "receipt-properties-fresh-inventory.json": "a36bca974dafd5b88904854dab197120ee88e0a67a87b99207a83d343a31d563"
+  },
+  "public_projection_file": "visible-events.jsonl",
+  "reviewed_projection_alias": null,
+  "export_source_sha256": "a70622795f7a50c7125f44a7b844362f309d1cec63777dcf2a2d52d752469202",
+  "preparation_source_sha256": {
+    "contract_v2.py": "a70622795f7a50c7125f44a7b844362f309d1cec63777dcf2a2d52d752469202"
+  },
+  "evidence_level": "E2: ordinary native UI and unchanged native downloads; internal tools, model, Skill and network unverified",
+  "backend_model_attested": false,
+  "pure_harness_score": null,
+  "confidence": "High for unchanged original bytes and deterministic comparison; UI provenance relies on reviewed native observations; causation unresolved"
+}

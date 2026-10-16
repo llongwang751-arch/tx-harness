@@ -1,0 +1,22 @@
+{
+  "completion_observed_at": "2026-10-16T07:45:48.913Z",
+  "completion_basis": "progress-02 ordinary native AX shows 完成, final answer and both echo.txt and receipt.json output cards; UI reports 共用时 43 秒. This is observation time, not a provider timestamp.",
+  "timed_out": false,
+  "provider_completed_at": null,
+  "original_capture_completed_at": "2026-10-16T07:48:57.045Z",
+  "collector_outage": {
+    "execution_observation_outage": false,
+    "official_screenshot_errors": true,
+    "scope": "Multiple-region screenshot errors during native upload dialog and post-completion Explorer/properties. Error records and AX-only sources are preserved."
+  },
+  "budget_observation_valid": true,
+  "limits": [
+    "Submission uses operator action timestamp; exact service receipt is unknown.",
+    "Completion, native save actions and unchanged original capture times are distinct.",
+    "Internal model identity, request parameters, raw tool return states, write payload and network activity were not independently exposed."
+  ],
+  "native_download_action_at": {
+    "echo.txt": "2026-10-16T07:46:34.103Z",
+    "receipt.json": "2026-10-16T07:47:06.352Z"
+  }
+}

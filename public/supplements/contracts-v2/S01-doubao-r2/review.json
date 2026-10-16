@@ -1,0 +1,206 @@
+{
+  "review_actor": "Operator/agent",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "evidence_level": "E2: ordinary native UI and unchanged native downloads; internal tools, model, Skill and network unverified",
+  "visible_conditions": {
+    "product": "Doubao desktop",
+    "surface": "工作任务 → 云电脑",
+    "visible_model_at_submit": "自动 低",
+    "visible_version": null,
+    "model_selection_changed": false,
+    "attachment": "probe.txt 91B",
+    "attachment_count": 1,
+    "prompt_nonempty_lines": 6,
+    "actual_send_count": 1,
+    "time_budget_seconds": 1200,
+    "completion_ui_reported_duration": "43 秒"
+  },
+  "limits": [
+    "Read request parameters and raw file-read return states were not independently exposed. A final answer claiming an error remains an ordinary declaration.",
+    "Full literal write payload was not independently visible. Echo equality is an external E2 artifact check.",
+    "The provider completion timestamp is unknown; ordinary completion observation, native saves and original capture times are recorded separately.",
+    "Raw AX, screenshots, account labels, other conversations, private locations, window IDs, share URLs and processing details remain private.",
+    "Downloads received duplicate suffixes. Current native properties proved each actual original filename, byte size, location and matching download-time creation/modification before filesystem capture.",
+    "Official native screenshot errors around upload and Explorer/properties were retained; AX-only observations preserved the actual location proof.",
+    "Numeric capture index 33 was reused across separately constructed collectors; labels and raw filenames are unique. Selected public event indices are unique."
+  ],
+  "selections": [
+    {
+      "capture": "attachment-accepted-ready",
+      "line_ranges": [
+        [
+          291,
+          294
+        ],
+        [
+          301,
+          301
+        ],
+        [
+          319,
+          319
+        ]
+      ]
+    },
+    {
+      "capture": "pre-send-verified",
+      "line_ranges": [
+        [
+          328,
+          333
+        ]
+      ]
+    },
+    {
+      "capture": "progress-02",
+      "line_ranges": [
+        [
+          303,
+          310
+        ],
+        [
+          313,
+          313
+        ],
+        [
+          327,
+          328
+        ],
+        [
+          333,
+          334
+        ],
+        [
+          336,
+          352
+        ]
+      ]
+    },
+    {
+      "capture": "echo-preview-ready",
+      "line_ranges": [
+        [
+          420,
+          421
+        ]
+      ]
+    },
+    {
+      "capture": "echo-downloaded-toast",
+      "line_ranges": [
+        [
+          417,
+          418
+        ],
+        [
+          437,
+          438
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-preview-ready",
+      "line_ranges": [
+        [
+          422,
+          422
+        ],
+        [
+          426,
+          426
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-downloaded-toast",
+      "line_ranges": [
+        [
+          457,
+          458
+        ]
+      ]
+    },
+    {
+      "capture": "echo-real-path-proof",
+      "line_ranges": [
+        [
+          3,
+          3
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          15,
+          18
+        ]
+      ]
+    },
+    {
+      "capture": "receipt-real-path-proof",
+      "line_ranges": [
+        [
+          3,
+          3
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          15,
+          18
+        ]
+      ]
+    }
+  ],
+  "observations": {
+    "input_read": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Ordinary final answer claims probe.txt was read and states the synthetic token. E2 native echo matches input bytes. Actual file-read request parameters and raw read return were not independently visible, so E1 input_read remains unknown.",
+      "evidence": [
+        "progress-02 AX lines 338-340; native-downloads/echo (1).txt; independent-verification.json"
+      ]
+    },
+    "missing_feedback": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Ordinary final answer claims one missing-probe.txt call with File does not exist and the receipt declares not_found. A paired actual read request and independent raw error state are not visible; E1 missing_feedback remains unknown.",
+      "evidence": [
+        "progress-02 AX lines 341-344; native-downloads/receipt (1).json; independent-verification.json"
+      ]
+    },
+    "write_fidelity": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "Full literal write payload and write return were not visible. E2 unchanged echo is 91 bytes and exactly equals input, and the 127-byte receipt is a valid four-field declaration. External artifact equality does not prove E1 write parameters.",
+      "evidence": [
+        "progress-02 AX lines 345-352; download-receipts.json; independent-verification.json"
+      ]
+    },
+    "permission": {
+      "verdict": "not_applicable",
+      "eligible": false,
+      "basis": "No permission-change operation or permission-conflict challenge is part of this fixed file contract.",
+      "evidence": []
+    }
+  },
+  "e2_artifact_results": {
+    "verification_actor": "external operator read-only acceptance",
+    "product_self_check": false,
+    "echo_bytes_equal": true,
+    "echo_bytes": 91,
+    "echo_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+    "receipt_declaration_valid": true,
+    "receipt_bytes": 127,
+    "receipt_sha256": "82542077cc89b3e085c7726abc6956d093fbb247aeece9dc058e4db9aabb26b0",
+    "declared_missing_status": "not_found",
+    "missing_read_error_independently_verified": null,
+    "extra_output_paths": []
+  }
+}
