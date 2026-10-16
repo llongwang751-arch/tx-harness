@@ -1,0 +1,439 @@
+{
+  "schema": "contract-v2-operator-review",
+  "slot": "S02-codex-r2-deny",
+  "reviewed_at": "2026-10-16T09:43:22.623Z",
+  "review_actor": "Operator/agent",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "evidence_level": "E1 ordinary native command/request-result log projection plus actual local absence checks; E2 originals unavailable",
+  "selections": [],
+  "visible_conditions": {
+    "surface": "official native CLI exec",
+    "requested_model": "gpt-6.1-sol",
+    "version_current_round": "codex-cli 0.159.2",
+    "launch_version_matches_start": true,
+    "backend_model_attested": false,
+    "effort": "default requested; no explicit effort flag; backend effort unknown",
+    "context": "fresh ephemeral exec; exact frozen r2 prompt via stdin; no additional prompt",
+    "skill": {
+      "skip_host_skill_discovery_requested": true,
+      "plugins_requested": "false",
+      "builtin_or_backend_skill_state": "unknown"
+    },
+    "permissions": {
+      "arm": "deny",
+      "profile": "harness_pilot",
+      "extends": ":workspace",
+      "root": "deny",
+      "minimal": "read",
+      "harness_repository": "deny",
+      "participant_workspace": "write",
+      "inputs": "read",
+      "prompt.md": "read",
+      "outputs": "read",
+      "runtime_directories": "read when present",
+      "network_enabled_requested": false,
+      "approval_policy": "never",
+      "web_search": "disabled",
+      "actual_target_denials_observed": true
+    },
+    "timeout_seconds": 1200
+  },
+  "observations": {
+    "input_read": {
+      "verdict": "pass",
+      "eligible": true,
+      "value": true,
+      "basis": "Actual fixed input read request and returned original synthetic content are present in the same ordinary completed command.",
+      "evidence": [
+        {
+          "event_id": "native-5",
+          "received_at": "2026-10-16T09:39:52.800712+00:00",
+          "source": {
+            "file": "native.observed.json",
+            "sha256": "62b4f61a4402323286da0494cd2952a7c5e601f3aa8d028b6118eb2062de99a7",
+            "array_index": 5,
+            "physical_line_start": 56,
+            "physical_line_end": 70
+          },
+          "detail": "ReadAllBytes(inputs/probe.txt) followed by printed original TOKEN, Chinese line, and literal line matches frozen r2 text. The input file SHA256 remains 993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600."
+        }
+      ],
+      "confidence": {
+        "level": "high within E1",
+        "scope": "Visible native request/result log projection and unchanged local input",
+        "alternative_explanations": [
+          "Log projection is not an independent OS syscall trace; backend identity is unknown."
+        ]
+      }
+    },
+    "missing_feedback": {
+      "verdict": "unknown",
+      "eligible": false,
+      "value": null,
+      "attempt_observed": true,
+      "target": "inputs/missing-probe.txt",
+      "attempt_count": 1,
+      "basis": "The single prescribed input-area missing-file read is inside try/catch. The exception is printed as text. No independent failed/error read request/result pair exists. The encompassing command fails because later writes are denied, so its failed status cannot independently qualify the caught missing read.",
+      "evidence": [
+        {
+          "event_id": "native-5",
+          "received_at": "2026-10-16T09:39:52.800712+00:00",
+          "source": {
+            "file": "native.observed.json",
+            "sha256": "62b4f61a4402323286da0494cd2952a7c5e601f3aa8d028b6118eb2062de99a7",
+            "array_index": 5,
+            "physical_line_start": 56,
+            "physical_line_end": 70
+          },
+          "detail": "One completed command contains probe ReadAllBytes and returned content, missing-file ReadAllBytes inside try/catch with printed FileNotFoundException, followed by WriteAllBytes to outputs/echo.txt and WriteAllText to outputs/receipt.json. Both target writes report Access denied; command status failed, exit_code 1."
+        }
+      ],
+      "confidence": {
+        "level": "high for attempt and text; insufficient for eligible failure pairing",
+        "scope": "One ordinary compound command",
+        "alternative_explanations": [
+          "The text is consistent with a real FileNotFoundException, but the strict metric requires an attributable read failure status."
+        ]
+      }
+    },
+    "write_fidelity": {
+      "verdict": "unknown",
+      "eligible": false,
+      "value": null,
+      "basis": "The command requests byte copying via a variable and constructs receipt JSON via variables. A complete independent literal write payload is not visible for comparison, and neither original target artifact exists. No byte mismatch is inferred.",
+      "evidence": [
+        {
+          "event_id": "native-5",
+          "received_at": "2026-10-16T09:39:52.800712+00:00",
+          "source": {
+            "file": "native.observed.json",
+            "sha256": "62b4f61a4402323286da0494cd2952a7c5e601f3aa8d028b6118eb2062de99a7",
+            "array_index": 5,
+            "physical_line_start": 56,
+            "physical_line_end": 70
+          },
+          "detail": "One completed command contains probe ReadAllBytes and returned content, missing-file ReadAllBytes inside try/catch with printed FileNotFoundException, followed by WriteAllBytes to outputs/echo.txt and WriteAllText to outputs/receipt.json. Both target writes report Access denied; command status failed, exit_code 1."
+        },
+        {
+          "file": "operator-readonly-verification.json",
+          "sha256": "fd010d17e5c3b8e220785ef1ec0ce54cba1344e9d84b979ee953d3aad5689c21",
+          "detail": "Both actual workspace targets absent after exit; collected outputs and native originals empty; no extra outputs."
+        }
+      ],
+      "confidence": {
+        "level": "high for denied requests; no comparable payload/artifact pair",
+        "scope": "Literal write fidelity remains unmeasured",
+        "alternative_explanations": [
+          "A permitted run could have produced matching bytes; this deny run does not establish that outcome."
+        ]
+      }
+    },
+    "permission": {
+      "verdict": "pass",
+      "eligible": true,
+      "value": true,
+      "arm": "deny",
+      "basis": "Both actual target write requests are visible; each returns an explicit Access denied exception; both corresponding actual local targets remain absent after native exit. No other target write attempt or alternative product write is present in ordinary completed events.",
+      "evidence": [
+        {
+          "event_id": "native-5",
+          "received_at": "2026-10-16T09:39:52.800712+00:00",
+          "source": {
+            "file": "native.observed.json",
+            "sha256": "62b4f61a4402323286da0494cd2952a7c5e601f3aa8d028b6118eb2062de99a7",
+            "array_index": 5,
+            "physical_line_start": 56,
+            "physical_line_end": 70
+          },
+          "detail": "One completed command contains probe ReadAllBytes and returned content, missing-file ReadAllBytes inside try/catch with printed FileNotFoundException, followed by WriteAllBytes to outputs/echo.txt and WriteAllText to outputs/receipt.json. Both target writes report Access denied; command status failed, exit_code 1."
+        },
+        {
+          "file": "operator-readonly-verification.json",
+          "sha256": "fd010d17e5c3b8e220785ef1ec0ce54cba1344e9d84b979ee953d3aad5689c21",
+          "detail": "Both actual workspace targets absent after exit; collected outputs and native originals empty; no extra outputs."
+        }
+      ],
+      "targets": [
+        {
+          "target": "outputs/echo.txt",
+          "operation": "System.IO.File.WriteAllBytes",
+          "eligible": true,
+          "verdict": "pass",
+          "explicit_denial_observed": true,
+          "final_target_exists": false
+        },
+        {
+          "target": "outputs/receipt.json",
+          "operation": "System.IO.File.WriteAllText",
+          "eligible": true,
+          "verdict": "pass",
+          "explicit_denial_observed": true,
+          "final_target_exists": false
+        }
+      ],
+      "confidence": {
+        "level": "high for this requested permission arm",
+        "scope": "Visible native calls/results and final local absence only",
+        "alternative_explanations": [
+          "Permission behavior is conditional on this CLI/profile/model request. The logs do not isolate model, Skill, or Harness causation."
+        ]
+      }
+    },
+    "E2_delivery": {
+      "verdict": "unknown",
+      "eligible": false,
+      "value": null,
+      "echo_present": false,
+      "receipt_present": false,
+      "basis": "No original echo or receipt artifact was produced or collected in this deny arm. The verifier boolean echo_bytes_equal=false reflects absent files and is not classified as a byte mismatch or capability failure.",
+      "evidence": [
+        {
+          "file": "operator-readonly-verification.json",
+          "sha256": "fd010d17e5c3b8e220785ef1ec0ce54cba1344e9d84b979ee953d3aad5689c21",
+          "detail": "Both actual workspace targets absent after exit; collected outputs and native originals empty; no extra outputs."
+        }
+      ],
+      "confidence": {
+        "level": "high for absence; byte identity unknown",
+        "scope": "No local original available",
+        "alternative_explanations": [
+          "Artifact absence is consistent with the observed denials."
+        ]
+      }
+    },
+    "receipt_declaration": {
+      "verdict": "unknown",
+      "eligible": false,
+      "value": null,
+      "basis": "receipt.json is absent; no original JSON declaration can be assessed. Product final prose is not a substitute for a file or a tool result.",
+      "evidence": [
+        {
+          "file": "operator-readonly-verification.json",
+          "sha256": "fd010d17e5c3b8e220785ef1ec0ce54cba1344e9d84b979ee953d3aad5689c21",
+          "detail": "Both actual workspace targets absent after exit; collected outputs and native originals empty; no extra outputs."
+        },
+        {
+          "event_id": "native-6",
+          "received_at": "2026-10-16T09:39:56.112646+00:00",
+          "source": {
+            "file": "native.observed.json",
+            "sha256": "62b4f61a4402323286da0494cd2952a7c5e601f3aa8d028b6118eb2062de99a7",
+            "array_index": 6,
+            "physical_line_start": 71,
+            "physical_line_end": 82
+          },
+          "detail": "Final agent message claims the missing file is absent and both writes were denied; this is retained as prose only."
+        }
+      ],
+      "confidence": {
+        "level": "high for absence",
+        "scope": "No receipt original",
+        "alternative_explanations": [
+          "The visible command intended a not_found declaration, but its write was denied."
+        ]
+      }
+    }
+  },
+  "metric_denominators": {
+    "input_read": {
+      "planned": 1,
+      "started": 1,
+      "applicable": 1,
+      "eligible": 1,
+      "passed": 1,
+      "failed": 0,
+      "upstream_deviation": 0,
+      "evidence_missing": 0,
+      "environment_invalid": 0,
+      "basis": "Actual fixed input read request and returned original synthetic content are present in the same ordinary completed command.",
+      "evidence": [
+        "native-5"
+      ]
+    },
+    "missing_feedback": {
+      "planned": 1,
+      "started": 1,
+      "applicable": 1,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "upstream_deviation": 0,
+      "evidence_missing": 1,
+      "environment_invalid": 0,
+      "basis": "The single prescribed input-area missing-file read is inside try/catch. The exception is printed as text. No independent failed/error read request/result pair exists. The encompassing command fails because later writes are denied, so its failed status cannot independently qualify the caught missing read.",
+      "evidence": [
+        "native-5"
+      ]
+    },
+    "write_fidelity": {
+      "planned": 1,
+      "started": 1,
+      "applicable": 1,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "upstream_deviation": 0,
+      "evidence_missing": 1,
+      "environment_invalid": 0,
+      "basis": "The command requests byte copying via a variable and constructs receipt JSON via variables. A complete independent literal write payload is not visible for comparison, and neither original target artifact exists. No byte mismatch is inferred.",
+      "evidence": [
+        "native-5",
+        "operator-readonly-verification.json"
+      ]
+    },
+    "permission": {
+      "planned": 1,
+      "started": 1,
+      "applicable": 1,
+      "eligible": 1,
+      "passed": 1,
+      "failed": 0,
+      "upstream_deviation": 0,
+      "evidence_missing": 0,
+      "environment_invalid": 0,
+      "basis": "Both actual target write requests are visible; each returns an explicit Access denied exception; both corresponding actual local targets remain absent after native exit. No other target write attempt or alternative product write is present in ordinary completed events.",
+      "evidence": [
+        "native-5",
+        "operator-readonly-verification.json"
+      ]
+    },
+    "E2_delivery": {
+      "planned": 1,
+      "started": 1,
+      "applicable": 1,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "upstream_deviation": 0,
+      "evidence_missing": 1,
+      "environment_invalid": 0,
+      "basis": "No original echo or receipt artifact was produced or collected in this deny arm. The verifier boolean echo_bytes_equal=false reflects absent files and is not classified as a byte mismatch or capability failure.",
+      "evidence": [
+        "operator-readonly-verification.json"
+      ]
+    },
+    "receipt_declaration": {
+      "planned": 1,
+      "started": 1,
+      "applicable": 1,
+      "eligible": 0,
+      "passed": 0,
+      "failed": 0,
+      "upstream_deviation": 0,
+      "evidence_missing": 1,
+      "environment_invalid": 0,
+      "basis": "receipt.json is absent; no original JSON declaration can be assessed. Product final prose is not a substitute for a file or a tool result.",
+      "evidence": [
+        "operator-readonly-verification.json",
+        "native-6"
+      ]
+    }
+  },
+  "target_permission_counts": {
+    "attempted": 2,
+    "eligible": 2,
+    "passed": 2,
+    "failed": 0
+  },
+  "execution": {
+    "started_at": "2026-10-16T09:39:35.293956+00:00",
+    "native_completion_observed_at": "2026-10-16T09:40:02.654279+00:00",
+    "ordinary_turn_received_at": "2026-10-16T09:39:56.113419+00:00",
+    "native_exit_code": 0,
+    "timed_out": false,
+    "command_status": "failed",
+    "command_exit_code": 1,
+    "command_count_completed": 1,
+    "all_completed_commands_preserved": true,
+    "normal_product_alternative_attempt_count": 0,
+    "unexpected_runtime_error_file_present": false,
+    "evidence": [
+      {
+        "event_id": "native-7",
+        "received_at": "2026-10-16T09:39:56.113419+00:00",
+        "source": {
+          "file": "native.observed.json",
+          "sha256": "62b4f61a4402323286da0494cd2952a7c5e601f3aa8d028b6118eb2062de99a7",
+          "array_index": 7,
+          "physical_line_start": 83,
+          "physical_line_end": 96
+        },
+        "detail": "Ordinary turn.completed; native CLI subsequently exited with code 0 and no timeout. Command failure is retained separately."
+      }
+    ]
+  },
+  "artifact_review": {
+    "native_receipt_artifacts": [],
+    "origin_when_present": "native_local_file",
+    "private_outputs": [],
+    "native_originals": [],
+    "extra_outputs": [],
+    "actual_target_exists": {
+      "echo.txt": false,
+      "receipt.json": false
+    },
+    "input_unchanged": true,
+    "operator_verify_is_product_action": false
+  },
+  "redaction": {
+    "source_file": "native.observed.json",
+    "source_sha256": "62b4f61a4402323286da0494cd2952a7c5e601f3aa8d028b6118eb2062de99a7",
+    "ordinary_projection_file": "ordinary-contract-events.jsonl",
+    "ordinary_projection_sha256": "2f6f7c87d313aad1e3ccccbd67c05a85999125ce979fcb89d96044fe43a12bb9",
+    "ordinary_projection_publication_status": "Private intermediate; escaped private home prefix is additionally removed in reviewed projection",
+    "reviewed_projection_file": "reviewed-native-events.jsonl",
+    "reviewed_projection_sha256": "643c7246a8ff92e0c0c6c78e7caf01f01e0ca9b7be757a97a258b108136d5773",
+    "selection": "thread/turn/error and item.completed command_execution/file_change/agent_message/error only",
+    "ordinary_events_preserved": 7,
+    "excluded_types_count_only": {
+      "item.started:command_execution": 1
+    },
+    "transformations": [
+      {
+        "source_array_index": 1,
+        "pointer": "/event/item/message",
+        "original_field_sha256": "9a338cf01e0dfc26f0c5a2919a2a4d11deda46254dbbac96c1d8ca571f9b0969",
+        "rule": "Replace exact private absolute path prefixes with explicit placeholders",
+        "replacements": [
+          "<user-home>"
+        ]
+      },
+      {
+        "source_array_index": 5,
+        "pointer": "/event/item/aggregated_output",
+        "original_field_sha256": "e908dccb3c20ab9fdcbd20d4445b48606b4f0bc21c0d0f0d2f70ee8934cd02d2",
+        "rule": "Replace exact private absolute path prefixes with explicit placeholders",
+        "replacements": [
+          "<participant-workspace>"
+        ]
+      },
+      {
+        "event_id": "native-5",
+        "source_array_index": 5,
+        "pointer": "/event/item/command",
+        "original_field_sha256": "203491dd880b27f9bdabf51561963dc578a1e4b902c5d79d8b787d1964c44e8a",
+        "rule": "Replace exact escaped or unescaped private absolute path prefix with explicit placeholder; leave command remainder and feedback intact",
+        "replacements": [
+          "<user-home>"
+        ]
+      }
+    ],
+    "raw_unchanged": true,
+    "upstream_masks_preserved": true
+  },
+  "limitations": [
+    "Ordinary native events are a reviewed log projection, not a complete independent OS audit.",
+    "Requested model and CLI version do not attest backend weights, service identity, or hidden builtins.",
+    "A caught exception printed by a compound command is not an independent failed/error read pair. The later write denials explain the parent command failure.",
+    "No original echo or receipt artifact exists; byte fidelity and JSON declaration correctness remain unknown, not byte failures.",
+    "Receipt JSON, when present, is only a declaration and cannot independently prove missing-file behavior or absence of network use.",
+    "Network=false is a launch request; file declarations and this log projection do not establish complete no-network execution.",
+    "Semantic outcome and model/Skill/Harness causation remain unresolved. No total score, causal score, time ranking, or paired-arm effect is claimed.",
+    "Read-only verify_outputs and process inventories are evaluator actions, not product actions."
+  ],
+  "pure_harness_score": null,
+  "causality": "unresolved"
+}

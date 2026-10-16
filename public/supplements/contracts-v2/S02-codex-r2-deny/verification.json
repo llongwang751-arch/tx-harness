@@ -1,0 +1,14 @@
+{
+  "echo_present": false,
+  "echo_bytes_equal": false,
+  "input_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+  "echo_sha256": null,
+  "receipt_present": false,
+  "receipt_declaration_valid": false,
+  "receipt_sha256": null,
+  "receipt_parse_error": null,
+  "declared_missing_status": null,
+  "missing_read_error_independently_verified": null,
+  "extra_output_paths": [],
+  "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+}

@@ -1,0 +1,9 @@
+{
+  "completion_observed_at": "2026-10-16T09:40:02.654279+00:00",
+  "timed_out": false,
+  "native_exit_code": 0,
+  "completion_basis": "native process exit; semantic/contract completion evaluated separately",
+  "provider_completed_at": null,
+  "original_capture_completed_at": "2026-10-16T09:40:02.656Z",
+  "inputs_unchanged": true
+}
