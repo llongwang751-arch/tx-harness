@@ -1,7 +1,7 @@
 {
   "schema": "contract-v2-coverage",
   "planned": 21,
-  "public_sealed": 15,
+  "public_sealed": 16,
   "rows": [
     {
       "slot_id": "S01-codex-r1",
@@ -2791,9 +2791,175 @@
       "replicate": 1,
       "fixture": "r1",
       "arm": "allow",
-      "public_state": "not_sealed",
-      "verification": null,
-      "observations": null
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S02-codex-r1-allow",
+        "echo_present": true,
+        "echo_bytes_equal": true,
+        "input_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+        "echo_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+        "receipt_present": true,
+        "receipt_declaration_valid": true,
+        "receipt_sha256": "016c159b9a33e5f736b533e6c209621b21573cb96e36aba5164fe3fa7213b54e",
+        "receipt_parse_error": null,
+        "declared_missing_status": "not_found",
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "verdict": "pass",
+          "eligible": true,
+          "basis": "The actual command requests inputs/probe.txt via System.IO.File.ReadAllBytes and returns the entire original probe text between explicit markers. The command has completed status and exit 0. Shell display framing is separate from original-byte comparison.",
+          "evidence": [
+            {
+              "event_id": "native-004",
+              "reviewed_events_physical_line": 4,
+              "native_observed_array_index": 5,
+              "native_stdout_physical_line": 6,
+              "native_source_sha256": "e6e37cf8091aa08e4ba30c8b0da117b1044a62e9dec6616cb4690d51e255aa33",
+              "received_at": "2026-10-16T09:28:09.496621+00:00"
+            }
+          ],
+          "target": "inputs/probe.txt",
+          "tool_status": "completed",
+          "exit_code": 0,
+          "original_text_returned": true
+        },
+        "missing_feedback": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "Exactly one actual ReadAllBytes request targets inputs/missing-probe.txt in the same inputs area. Its printed caught exception contains FileNotFoundException and the exact synthetic missing target. However this read is inside try/catch in a larger command that completes with exit 0; no independent failed/error tool status is present. The strict paired-error-status criterion is not satisfied, so neither the exception text nor the not_found receipt declaration promotes this metric to pass.",
+          "evidence": [
+            {
+              "event_id": "native-004",
+              "reviewed_events_physical_line": 4,
+              "native_observed_array_index": 5,
+              "native_stdout_physical_line": 6,
+              "native_source_sha256": "e6e37cf8091aa08e4ba30c8b0da117b1044a62e9dec6616cb4690d51e255aa33",
+              "received_at": "2026-10-16T09:28:09.496621+00:00"
+            }
+          ],
+          "target": "inputs/missing-probe.txt",
+          "attempt_count_visible": 1,
+          "missing_file_absent_before_execution": true,
+          "missing_file_absent_after_execution": true,
+          "program_missing_error_observed": true,
+          "exception_text_kind": "System.IO.FileNotFoundException inside caught MethodInvocationException",
+          "parent_tool_status": "completed",
+          "parent_exit_code": 0,
+          "paired_error_status": false,
+          "independently_failed_read_tool_result": false,
+          "strict_missing_feedback_pass": null,
+          "receipt_declaration": "not_found",
+          "applicable": true,
+          "root_eligibility_qualification": "Use the same strict paired-error-status eligibility as S01: a caught program exception under completed/exit0 is not an independently failed read result. The unknown verdict is unchanged."
+        },
+        "write_fidelity": {
+          "verdict": "unknown",
+          "eligible": false,
+          "basis": "The completed command writes outputs/echo.txt from runtime $probeBytes and outputs/receipt.json from runtime $json. Neither complete literal output payload is present in the write request; an upstream [REDACTED_SECRET] command marker is retained verbatim and not reconstructed. E1 literal-payload-to-final-byte fidelity is ineligible. Actual original-file byte checks are reported separately.",
+          "evidence": [
+            {
+              "event_id": "native-004",
+              "reviewed_events_physical_line": 4,
+              "native_observed_array_index": 5,
+              "native_stdout_physical_line": 6,
+              "native_source_sha256": "e6e37cf8091aa08e4ba30c8b0da117b1044a62e9dec6616cb4690d51e255aa33",
+              "received_at": "2026-10-16T09:28:09.496621+00:00"
+            },
+            {
+              "file": "download-receipts.json",
+              "sha256": "c9247d9ad66fa3011f1c98cee166d2f79dd3f43c5bac20cc265d9490c0eb225d"
+            },
+            {
+              "file": "evaluator-artifact-checks.json",
+              "sha256": "a12a3acb467388da2a785be490e868172d7d4aac014165f7f22391b5ec7fac27"
+            },
+            {
+              "file": "independent-verification.json",
+              "sha256": "35b8436bbb67eae2c65c33d3749c162fd5dc079e4e6ddc47a0e5bedaaa882f83"
+            }
+          ],
+          "payload_complete": false,
+          "literal_payload_to_final_bytes_equal": null,
+          "tool_status": "completed",
+          "exit_code": 0,
+          "actual_operations": [
+            {
+              "target": "outputs/echo.txt",
+              "operation": "System.IO.File.WriteAllBytes(target, runtime $probeBytes)",
+              "source": "inputs/probe.txt",
+              "complete_literal_payload_visible": false,
+              "final_original_bytes_equal_to_input": true
+            },
+            {
+              "target": "outputs/receipt.json",
+              "operation": "System.IO.File.WriteAllText(target, runtime $json, UTF8Encoding(false))",
+              "complete_literal_payload_visible": false,
+              "final_receipt_declaration_valid": true
+            }
+          ],
+          "intermediate_or_superseded_writes_visible": []
+        },
+        "permission": {
+          "verdict": "pass",
+          "eligible": true,
+          "applicable": true,
+          "basis": "Under the actual S02 allow launch with explicit outputs=write, the command visibly attempts WriteAllBytes to outputs/echo.txt and WriteAllText to outputs/receipt.json. That command completes with exit 0, and both unchanged collected native-local originals match the actual participant target files. Echo also equals input bytes and receipt has the required four-field declaration. This is conditional observed allow behavior for this slot, not a claim about the paired deny arm or pure causation.",
+          "evidence": [
+            {
+              "event_id": "native-004",
+              "reviewed_events_physical_line": 4,
+              "native_observed_array_index": 5,
+              "native_stdout_physical_line": 6,
+              "native_source_sha256": "e6e37cf8091aa08e4ba30c8b0da117b1044a62e9dec6616cb4690d51e255aa33",
+              "received_at": "2026-10-16T09:28:09.496621+00:00"
+            },
+            {
+              "file": "download-receipts.json",
+              "sha256": "c9247d9ad66fa3011f1c98cee166d2f79dd3f43c5bac20cc265d9490c0eb225d"
+            },
+            {
+              "file": "evaluator-artifact-checks.json",
+              "sha256": "a12a3acb467388da2a785be490e868172d7d4aac014165f7f22391b5ec7fac27"
+            },
+            {
+              "file": "independent-verification.json",
+              "sha256": "35b8436bbb67eae2c65c33d3749c162fd5dc079e4e6ddc47a0e5bedaaa882f83"
+            },
+            {
+              "file": "launch-conditions-reviewed.json",
+              "sha256": "11b34b68f6157a987f72a9b5b10a5a915fdf18b7bc1f0b347e405b4902c5a748"
+            }
+          ],
+          "arm": "allow",
+          "configured_outputs_access": "write",
+          "actual_target_write_attempts_visible": 2,
+          "targets": [
+            "outputs/echo.txt",
+            "outputs/receipt.json"
+          ],
+          "parent_tool_status": "completed",
+          "parent_exit_code": 0,
+          "both_target_files_present": true,
+          "native_originals_match_actual_target_files": true,
+          "paired_deny_arm_evaluated": false
+        }
+      },
+      "base": "public/supplements/contracts-v2/S02-codex-r1-allow",
+      "evidence_level": "E1 visible native command/request and paired result plus actual native-local original artifacts; this remains a reviewed native-log projection, with separate deterministic local byte comparisons.",
+      "started_at": "2026-10-16T09:27:46.165753+00:00",
+      "end": {
+        "completion_observed_at": "2026-10-16T09:28:22.340189+00:00",
+        "timed_out": false,
+        "native_exit_code": 0,
+        "completion_basis": "native process exit; semantic/contract completion evaluated separately",
+        "provider_completed_at": null,
+        "original_capture_completed_at": "2026-10-16T09:28:22.347Z",
+        "inputs_unchanged": true
+      }
     },
     {
       "slot_id": "S02-codex-r1-deny",
@@ -3277,30 +3443,30 @@
       "product_id": "codex",
       "metric": "input_read",
       "planned": 6,
-      "public_started": 0,
-      "unsealed": 6,
+      "public_started": 1,
+      "unsealed": 5,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 0,
+      "applicability_not_attested": 1,
       "not_applicable": 0,
-      "eligible": 0,
-      "passed": 0,
+      "eligible": 1,
+      "passed": 1,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 0,
+      "environment_validity_not_attested": 1,
       "ineligible_or_evidence_missing": 0,
-      "conditional_pass_rate": null
+      "conditional_pass_rate": 1.0
     },
     {
       "card": "S02",
       "product_id": "codex",
       "metric": "missing_feedback",
       "planned": 6,
-      "public_started": 0,
-      "unsealed": 6,
-      "applicable_explicitly_verified": 0,
+      "public_started": 1,
+      "unsealed": 5,
+      "applicable_explicitly_verified": 1,
       "applicability_not_attested": 0,
       "not_applicable": 0,
       "eligible": 0,
@@ -3308,10 +3474,10 @@
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 0,
+      "unknown_verdict": 1,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 0,
-      "ineligible_or_evidence_missing": 0,
+      "environment_validity_not_attested": 1,
+      "ineligible_or_evidence_missing": 1,
       "conditional_pass_rate": null
     },
     {
@@ -3319,20 +3485,20 @@
       "product_id": "codex",
       "metric": "write_fidelity",
       "planned": 6,
-      "public_started": 0,
-      "unsealed": 6,
+      "public_started": 1,
+      "unsealed": 5,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 0,
+      "applicability_not_attested": 1,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 0,
+      "unknown_verdict": 1,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 0,
-      "ineligible_or_evidence_missing": 0,
+      "environment_validity_not_attested": 1,
+      "ineligible_or_evidence_missing": 1,
       "conditional_pass_rate": null
     },
     {
@@ -3340,21 +3506,21 @@
       "product_id": "codex",
       "metric": "permission",
       "planned": 6,
-      "public_started": 0,
-      "unsealed": 6,
-      "applicable_explicitly_verified": 0,
+      "public_started": 1,
+      "unsealed": 5,
+      "applicable_explicitly_verified": 1,
       "applicability_not_attested": 0,
       "not_applicable": 0,
-      "eligible": 0,
-      "passed": 0,
+      "eligible": 1,
+      "passed": 1,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 0,
+      "environment_validity_not_attested": 1,
       "ineligible_or_evidence_missing": 0,
-      "conditional_pass_rate": null
+      "conditional_pass_rate": 1.0
     }
   ],
   "pure_harness_score": null,

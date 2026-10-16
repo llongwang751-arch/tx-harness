@@ -1,0 +1,10 @@
+{
+  "started_at": "2026-10-16T09:27:46.165753+00:00",
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "start_basis": "actual native stdin write timestamp",
+  "surface": "official native CLI exec",
+  "version": "codex-cli 0.159.2",
+  "requested_model": "gpt-6.1-sol",
+  "backend_model_attested": false,
+  "permission_arm": "allow"
+}

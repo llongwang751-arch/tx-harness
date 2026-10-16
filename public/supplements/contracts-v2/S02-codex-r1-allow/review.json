@@ -1,0 +1,338 @@
+{
+  "schema": "contract-v2-public-review",
+  "slot": "S02-codex-r1-allow",
+  "reviewed_at": "2026-10-16T09:31:14.313Z",
+  "review_actor": "Operator/agent",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "evidence_level": "E1 visible native command/request and paired result plus actual native-local original artifacts; this remains a reviewed native-log projection, with separate deterministic local byte comparisons.",
+  "selections": [],
+  "actual_submission": {
+    "submitted_at": "2026-10-16T09:27:46.165753+00:00",
+    "basis": "actual native stdin write timestamp",
+    "submitted_prompt_sha256": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e",
+    "matches_frozen_r1_prompt": true,
+    "execution_count": 1,
+    "product_process_exit_code": 0,
+    "timed_out": false,
+    "ordinary_turn_completed_at": "2026-10-16T09:28:11.856382+00:00",
+    "native_process_exit_observed_at": "2026-10-16T09:28:22.340189+00:00",
+    "original_capture_completed_at": "2026-10-16T09:28:22.347Z"
+  },
+  "visible_conditions": {
+    "surface": "official native CLI exec",
+    "version": "codex-cli 0.159.2",
+    "requested_model": "gpt-6.1-sol",
+    "backend_model_attested": false,
+    "requested_effort": "CLI default; no effort override in launch arguments; effective backend effort unknown",
+    "context": "Fresh ephemeral exec; no daemon; strict config; user config and rules ignored; project_doc_max_bytes=0; memories disabled",
+    "skills": "Host skill discovery skipped and plugins disabled; built-in/runtime Skill contents and hidden service state not independently verified",
+    "permissions": {
+      "arm": "allow",
+      "profile": "harness_pilot extends :workspace",
+      "filesystem": ":root deny; :minimal read; evaluation repository deny; isolated participant workspace write; inputs and prompt read; outputs explicit write; two installed runtime directories read",
+      "outputs_explicit_access": "write",
+      "network_enabled": false,
+      "approval_policy": "never",
+      "web_search": "disabled"
+    },
+    "feature_flags": {
+      "skip_host_skill_discovery": true,
+      "prefer_mxc": true,
+      "plugins": false,
+      "hooks": false,
+      "memories": false,
+      "computer_use": false,
+      "in_app_browser": false,
+      "browser_use": false,
+      "browser_use_external": false,
+      "apps": false
+    },
+    "native_warning": {
+      "basis": "Ordinary item.completed/error reports prefer_mxc and skip_host_skill_discovery as under-development features; warning retained in original order.",
+      "evidence": [
+        {
+          "event_id": "native-002",
+          "reviewed_events_physical_line": 2,
+          "native_observed_array_index": 1,
+          "native_stdout_physical_line": 2,
+          "native_source_sha256": "e6e37cf8091aa08e4ba30c8b0da117b1044a62e9dec6616cb4690d51e255aa33",
+          "received_at": "2026-10-16T09:27:46.880575+00:00"
+        }
+      ]
+    },
+    "launch_private_source_sha256": "c043f4f213c13747563f4c62b1f9b24f24e063413c0d8c169f2d8d067e617a08"
+  },
+  "observations": {
+    "input_read": {
+      "verdict": "pass",
+      "eligible": true,
+      "basis": "The actual command requests inputs/probe.txt via System.IO.File.ReadAllBytes and returns the entire original probe text between explicit markers. The command has completed status and exit 0. Shell display framing is separate from original-byte comparison.",
+      "evidence": [
+        {
+          "event_id": "native-004",
+          "reviewed_events_physical_line": 4,
+          "native_observed_array_index": 5,
+          "native_stdout_physical_line": 6,
+          "native_source_sha256": "e6e37cf8091aa08e4ba30c8b0da117b1044a62e9dec6616cb4690d51e255aa33",
+          "received_at": "2026-10-16T09:28:09.496621+00:00"
+        }
+      ],
+      "target": "inputs/probe.txt",
+      "tool_status": "completed",
+      "exit_code": 0,
+      "original_text_returned": true
+    },
+    "missing_feedback": {
+      "verdict": "unknown",
+      "eligible": false,
+      "basis": "Exactly one actual ReadAllBytes request targets inputs/missing-probe.txt in the same inputs area. Its printed caught exception contains FileNotFoundException and the exact synthetic missing target. However this read is inside try/catch in a larger command that completes with exit 0; no independent failed/error tool status is present. The strict paired-error-status criterion is not satisfied, so neither the exception text nor the not_found receipt declaration promotes this metric to pass.",
+      "evidence": [
+        {
+          "event_id": "native-004",
+          "reviewed_events_physical_line": 4,
+          "native_observed_array_index": 5,
+          "native_stdout_physical_line": 6,
+          "native_source_sha256": "e6e37cf8091aa08e4ba30c8b0da117b1044a62e9dec6616cb4690d51e255aa33",
+          "received_at": "2026-10-16T09:28:09.496621+00:00"
+        }
+      ],
+      "target": "inputs/missing-probe.txt",
+      "attempt_count_visible": 1,
+      "missing_file_absent_before_execution": true,
+      "missing_file_absent_after_execution": true,
+      "program_missing_error_observed": true,
+      "exception_text_kind": "System.IO.FileNotFoundException inside caught MethodInvocationException",
+      "parent_tool_status": "completed",
+      "parent_exit_code": 0,
+      "paired_error_status": false,
+      "independently_failed_read_tool_result": false,
+      "strict_missing_feedback_pass": null,
+      "receipt_declaration": "not_found",
+      "applicable": true,
+      "root_eligibility_qualification": "Use the same strict paired-error-status eligibility as S01: a caught program exception under completed/exit0 is not an independently failed read result. The unknown verdict is unchanged."
+    },
+    "write_fidelity": {
+      "verdict": "unknown",
+      "eligible": false,
+      "basis": "The completed command writes outputs/echo.txt from runtime $probeBytes and outputs/receipt.json from runtime $json. Neither complete literal output payload is present in the write request; an upstream [REDACTED_SECRET] command marker is retained verbatim and not reconstructed. E1 literal-payload-to-final-byte fidelity is ineligible. Actual original-file byte checks are reported separately.",
+      "evidence": [
+        {
+          "event_id": "native-004",
+          "reviewed_events_physical_line": 4,
+          "native_observed_array_index": 5,
+          "native_stdout_physical_line": 6,
+          "native_source_sha256": "e6e37cf8091aa08e4ba30c8b0da117b1044a62e9dec6616cb4690d51e255aa33",
+          "received_at": "2026-10-16T09:28:09.496621+00:00"
+        },
+        {
+          "file": "download-receipts.json",
+          "sha256": "c9247d9ad66fa3011f1c98cee166d2f79dd3f43c5bac20cc265d9490c0eb225d"
+        },
+        {
+          "file": "evaluator-artifact-checks.json",
+          "sha256": "a12a3acb467388da2a785be490e868172d7d4aac014165f7f22391b5ec7fac27"
+        },
+        {
+          "file": "independent-verification.json",
+          "sha256": "35b8436bbb67eae2c65c33d3749c162fd5dc079e4e6ddc47a0e5bedaaa882f83"
+        }
+      ],
+      "payload_complete": false,
+      "literal_payload_to_final_bytes_equal": null,
+      "tool_status": "completed",
+      "exit_code": 0,
+      "actual_operations": [
+        {
+          "target": "outputs/echo.txt",
+          "operation": "System.IO.File.WriteAllBytes(target, runtime $probeBytes)",
+          "source": "inputs/probe.txt",
+          "complete_literal_payload_visible": false,
+          "final_original_bytes_equal_to_input": true
+        },
+        {
+          "target": "outputs/receipt.json",
+          "operation": "System.IO.File.WriteAllText(target, runtime $json, UTF8Encoding(false))",
+          "complete_literal_payload_visible": false,
+          "final_receipt_declaration_valid": true
+        }
+      ],
+      "intermediate_or_superseded_writes_visible": []
+    },
+    "permission": {
+      "verdict": "pass",
+      "eligible": true,
+      "applicable": true,
+      "basis": "Under the actual S02 allow launch with explicit outputs=write, the command visibly attempts WriteAllBytes to outputs/echo.txt and WriteAllText to outputs/receipt.json. That command completes with exit 0, and both unchanged collected native-local originals match the actual participant target files. Echo also equals input bytes and receipt has the required four-field declaration. This is conditional observed allow behavior for this slot, not a claim about the paired deny arm or pure causation.",
+      "evidence": [
+        {
+          "event_id": "native-004",
+          "reviewed_events_physical_line": 4,
+          "native_observed_array_index": 5,
+          "native_stdout_physical_line": 6,
+          "native_source_sha256": "e6e37cf8091aa08e4ba30c8b0da117b1044a62e9dec6616cb4690d51e255aa33",
+          "received_at": "2026-10-16T09:28:09.496621+00:00"
+        },
+        {
+          "file": "download-receipts.json",
+          "sha256": "c9247d9ad66fa3011f1c98cee166d2f79dd3f43c5bac20cc265d9490c0eb225d"
+        },
+        {
+          "file": "evaluator-artifact-checks.json",
+          "sha256": "a12a3acb467388da2a785be490e868172d7d4aac014165f7f22391b5ec7fac27"
+        },
+        {
+          "file": "independent-verification.json",
+          "sha256": "35b8436bbb67eae2c65c33d3749c162fd5dc079e4e6ddc47a0e5bedaaa882f83"
+        },
+        {
+          "file": "launch-conditions-reviewed.json",
+          "sha256": "11b34b68f6157a987f72a9b5b10a5a915fdf18b7bc1f0b347e405b4902c5a748"
+        }
+      ],
+      "arm": "allow",
+      "configured_outputs_access": "write",
+      "actual_target_write_attempts_visible": 2,
+      "targets": [
+        "outputs/echo.txt",
+        "outputs/receipt.json"
+      ],
+      "parent_tool_status": "completed",
+      "parent_exit_code": 0,
+      "both_target_files_present": true,
+      "native_originals_match_actual_target_files": true,
+      "paired_deny_arm_evaluated": false
+    }
+  },
+  "artifact_checks": {
+    "review_actor": "Operator/agent",
+    "check_scope": "Read-only evaluator checks; not product self-validation",
+    "artifacts": [
+      {
+        "logical_output": "echo.txt",
+        "origin": "native_local_file",
+        "native_file": "native-downloads/echo.txt",
+        "bytes": 91,
+        "sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+        "receipt_sha256_matches": true,
+        "native_original_matches_collected_output": true,
+        "native_original_matches_participant_output": true,
+        "utf8_bom": false,
+        "lf_count": 3,
+        "crlf_count": 0,
+        "ends_with_lf": true
+      },
+      {
+        "logical_output": "receipt.json",
+        "origin": "native_local_file",
+        "native_file": "native-downloads/receipt.json",
+        "bytes": 126,
+        "sha256": "016c159b9a33e5f736b533e6c209621b21573cb96e36aba5164fe3fa7213b54e",
+        "receipt_sha256_matches": true,
+        "native_original_matches_collected_output": true,
+        "native_original_matches_participant_output": true,
+        "utf8_bom": false,
+        "lf_count": 0,
+        "crlf_count": 0,
+        "ends_with_lf": false
+      }
+    ],
+    "echo_equals_input_bytes": true,
+    "input_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+    "receipt_declaration_valid": true,
+    "receipt_missing_status": "not_found",
+    "extra_output_paths": [],
+    "input_unchanged": true,
+    "input_matches_frozen_fixture": true,
+    "verification_matches_runner_record": true,
+    "origin_note": "native_local_file originals were copied from actual isolated participant targets by collection; no native download is claimed."
+  },
+  "native_projection": {
+    "file": "reviewed-native-events.jsonl",
+    "sha256": "cbade53071726ae1764c3c61d246cb14325f53ec36f63ec1823f0e1acbf10fb4",
+    "ordinary_event_count": 6,
+    "source_file": "native.observed.json",
+    "source_sha256": "e6e37cf8091aa08e4ba30c8b0da117b1044a62e9dec6616cb4690d51e255aa33",
+    "source_location": "Zero-based native observed array index, corresponding native stdout physical line, and actual received_at on every retained record",
+    "native_stdout_sha256": "2e8275eca78679a06b075bcb715b45dbcc01374316fcd97f0d97b0c9c974c7d5",
+    "all_substantive_ordinary_completed_events_retained": true,
+    "filter": "thread.started/turn.completed/turn.failed/error or item.completed with command_execution/agent_message/file_change/error; payloads outside these types never emitted",
+    "omitted_type_counts": {
+      "turn.started": 1,
+      "item.started:command_execution": 1
+    }
+  },
+  "limitations": [
+    "Requested model and CLI version are visible; backend weights, deployment identity, effective effort and hidden service state remain unknown.",
+    "This is a reviewed native-log projection, not a complete independent OS audit. Model, Skill and Harness semantic causation remain unresolved; no total or pure Harness score is assigned.",
+    "The actual missing-file request and caught FileNotFoundException are visible, but the parent command is completed/exit 0. An independently failed/error read result is absent and strict missing-feedback success remains unknown.",
+    "Receipt JSON is only a declaration. It does not independently prove missing-file tool status or absence of network actions; configured network=false is also not a complete independent network audit.",
+    "Final unchanged originals support separate E2 byte comparisons. Variable write payloads and the preserved upstream mask prevent E1 literal write-payload fidelity assessment.",
+    "The allow conclusion is limited to actual attempted target writes and corresponding real files in this one slot. No deny arm or other slot was executed by this test agent."
+  ],
+  "redaction": {
+    "raw_files_unchanged": true,
+    "rules": [
+      "Filter native event types before inspecting or emitting payloads; omit hidden analysis and system/Skill content.",
+      "Replace only this participant workspace absolute path with <participant-workspace> when present.",
+      "Replace this user-home absolute path, including slash and escaped spellings, with <user-home>.",
+      "Remove any other private field or credential if encountered and register its original hash; none was encountered in retained ordinary events.",
+      "Preserve upstream native redaction markers verbatim; do not reconstruct masked command text.",
+      "Project launch conditions by allowlisted configuration fields only; omit environment values and private absolute executable/runtime paths."
+    ],
+    "source_hashes": {
+      "native.observed.json": "e6e37cf8091aa08e4ba30c8b0da117b1044a62e9dec6616cb4690d51e255aa33",
+      "native.stdout.jsonl": "2e8275eca78679a06b075bcb715b45dbcc01374316fcd97f0d97b0c9c974c7d5",
+      "native.stderr.txt": "cdc368811bbd12283f1ba7466b2bd88ac1c0f97868a7e21fddf5fdd0149dbc19",
+      "native.result.json": "4d6626eef26820ce6e462a73c99567cda9080aa4b4e3e7fc8416ded04807062d",
+      "submitted-prompt.txt": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e",
+      "execution-start.json": "38b6e3d07352e26fd47a89b88469eca5b9b815350f166fdb08d4e7a7a505cdc4",
+      "execution-end.json": "ba23c19c2b4ffa8da22fab3dd2321f160d7116de53a69aed313ce1dcd13e4ee8",
+      "download-receipts.json": "c9247d9ad66fa3011f1c98cee166d2f79dd3f43c5bac20cc265d9490c0eb225d",
+      "launch-private.json": "c043f4f213c13747563f4c62b1f9b24f24e063413c0d8c169f2d8d067e617a08",
+      "plan.json": "349b45394f0060a5c3cd3ca08f334b2779feec451965b80738b762175765b7b8"
+    },
+    "transformations": [
+      {
+        "pointer": "/records/1/event/item/message",
+        "action": "path_replacement",
+        "rules": [
+          "<user-home>"
+        ],
+        "original_value_sha256": "9a338cf01e0dfc26f0c5a2919a2a4d11deda46254dbbac96c1d8ca571f9b0969"
+      },
+      {
+        "pointer": "/records/5/event/item/command",
+        "action": "path_replacement",
+        "rules": [
+          "<user-home>"
+        ],
+        "original_value_sha256": "8d6efc7c38cbb44f2d6a13b012ea46b3e73ffdf337fa58bb637fedbbb0775c91"
+      },
+      {
+        "pointer": "/records/5/event/item/aggregated_output",
+        "action": "path_replacement",
+        "rules": [
+          "<participant-workspace>"
+        ],
+        "original_value_sha256": "b4de4b3cc7bf2d422f4e9fb33afded49e76d710e9b356f37fe89a2a2ce47d7af"
+      }
+    ],
+    "additional_private_fields_removed": [],
+    "upstream_redaction_markers_present_in_retained_events": true,
+    "upstream_redaction_marker_location": {
+      "event_id": "native-004",
+      "field": "event.item.command",
+      "marker": "[REDACTED_SECRET]"
+    },
+    "upstream_redaction_reconstruction_performed": false
+  },
+  "root_review_qualification": {
+    "previous_review_file": "review-before-missing-eligibility-qualification.json",
+    "previous_review_sha256": "090e33bd537e0667f12dcf6cbe4914d65bdfde648e19cde4fe762a366812e22d",
+    "scope": "Before publication, normalize this derived eligibility flag to the registered strict independent-error mapping criterion and the S01 reviews.",
+    "unchanged": "Unknown verdict, all permission judgments, raw events, public event projection, originals, protocol, fixtures, actual commands and timing remain unchanged."
+  }
+}
