@@ -1,0 +1,379 @@
+{
+  "schema": "contract-v2-public-review",
+  "slot": "S02-codex-r2-allow",
+  "reviewed_at": "2026-10-16T09:49:50.978173+00:00",
+  "review_actor": "Operator/agent",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "evidence_level": "E1: reviewed ordinary native CLI command/request and result projection plus unchanged real native local artifacts; this remains a log projection, not independent full OS audit",
+  "selections": [],
+  "visible_conditions": {
+    "surface": "official native CLI exec",
+    "version": "codex-cli 0.159.2",
+    "requested_model": "gpt-6.1-sol",
+    "backend_model": "unknown",
+    "backend_model_attested": false,
+    "requested_effort": "default; no explicit effort override in frozen runner",
+    "skill_condition": "Host skill discovery skipped; plugins, hooks and memories disabled in actual launch; built-in Skill state unknown",
+    "permission_arm": "allow",
+    "output_permission": "write",
+    "other_launch_conditions": {
+      "source_file": "launch-private.json",
+      "source_sha256": "46fc0d84e59857c2746dcedd3bc7ddb06bd8576a4d936b16bc879e3fcc8a1bfd",
+      "version": "codex-cli 0.159.2",
+      "requested_model": "gpt-6.1-sol",
+      "fresh_ephemeral": true,
+      "flags": [
+        "--no-daemon",
+        "--strict-config",
+        "--ignore-user-config",
+        "--ignore-rules",
+        "--skip-git-repo-check",
+        "--json",
+        "--ephemeral"
+      ],
+      "configured_options": {
+        "default_permissions": "\"harness_pilot\"",
+        "permissions.harness_pilot.extends": "\":workspace\"",
+        "permissions.harness_pilot.network.enabled": "false",
+        "approval_policy": "\"never\"",
+        "web_search": "\"disabled\"",
+        "project_doc_max_bytes": "0",
+        "features.skip_host_skill_discovery": "true",
+        "features.prefer_mxc": "true",
+        "features.plugins": "false",
+        "features.hooks": "false",
+        "features.memories": "false",
+        "features.computer_use": "false",
+        "features.in_app_browser": "false",
+        "features.browser_use": "false",
+        "features.browser_use_external": "false",
+        "features.apps": "false",
+        "shell_environment_policy.inherit": "\"none\""
+      },
+      "filesystem_summary": {
+        ":root": "deny",
+        ":minimal": "read",
+        "<evaluation-repository>": "deny",
+        "<participant-workspace>": "write",
+        "<participant-workspace>/inputs": "read",
+        "<participant-workspace>/prompt.md": "read",
+        "<participant-workspace>/outputs": "write",
+        "official_runtime_directories": "read when present"
+      },
+      "filesystem_argument_sha256": "9593675fe0091039ccad03e2a4e81227aad936ce2cc8dada62b58c754272e6f4",
+      "redactions": {
+        "executable_path": "withheld; official native binary resolved by frozen runner",
+        "filesystem_private_path_values": "replaced by role labels",
+        "shell_environment_policy.set": "entire value omitted; not read into public review"
+      },
+      "backend_model_attested": false,
+      "built_in_skills": "unknown"
+    },
+    "budget_seconds": 1200,
+    "started_at": "2026-10-16T09:45:34.228161+00:00",
+    "completion_observed_at": "2026-10-16T09:46:02.586827+00:00",
+    "timed_out": false,
+    "native_exit_code": 0,
+    "fresh_ephemeral": true
+  },
+  "observations": {
+    "input_read": {
+      "verdict": "pass",
+      "eligible": true,
+      "basis": "A dedicated ordinary native command opens inputs/probe.txt; completed status and exit 0 return all three registered content lines. Console output is text evidence, not an independent byte read trace.",
+      "evidence": [
+        {
+          "event_id": "native-5",
+          "received_at": "2026-10-16T09:45:46.451608+00:00",
+          "source_file": "native.observed.json",
+          "source_sha256": "4a4e4ac7508be5a4b02353c2def2ef117348385b20a303be1459902c08a4d402",
+          "source_array_index": 5,
+          "source_json_pointer": "/5/event",
+          "stdout_source_file": "native.stdout.jsonl",
+          "stdout_source_sha256": "ee43a069cf828c3388c69df340b0ad27f6d1c6642be45db3eabda9a86b729cb3",
+          "stdout_physical_line": 6,
+          "note": "Get-Content -LiteralPath inputs/probe.txt -Raw; status completed; exit_code 0; returned registered token, Chinese line and literal line."
+        },
+        {
+          "file": "artifact-review.json",
+          "sha256": "6dd4d93b39cb82cde7613432ad1894638f48eff9d86e6347b4ed4f8b03d1691b",
+          "note": "Registered fixture and participant input unchanged."
+        }
+      ],
+      "confidence": "High for visible request/result and registered content correspondence; evidence remains a native CLI log projection.",
+      "alternative_explanations": [
+        "The native event stream is supplied by the CLI and is not an independent OS audit. Agent intent text alone would not establish a read."
+      ]
+    },
+    "missing_feedback": {
+      "verdict": "pass",
+      "eligible": true,
+      "basis": "One dedicated actual read request targets inputs/missing-probe.txt in the same input directory. Its own native result has status failed, exit_code 1 and Cannot find path because it does not exist. This is separate from all output writes.",
+      "evidence": [
+        {
+          "event_id": "native-7",
+          "received_at": "2026-10-16T09:45:47.680933+00:00",
+          "source_file": "native.observed.json",
+          "source_sha256": "4a4e4ac7508be5a4b02353c2def2ef117348385b20a303be1459902c08a4d402",
+          "source_array_index": 7,
+          "source_json_pointer": "/7/event",
+          "stdout_source_file": "native.stdout.jsonl",
+          "stdout_source_sha256": "ee43a069cf828c3388c69df340b0ad27f6d1c6642be45db3eabda9a86b729cb3",
+          "stdout_physical_line": 8,
+          "note": "Get-Content -LiteralPath inputs/missing-probe.txt -Raw -ErrorAction Stop; direct failed result, exit_code 1, exact requested missing path in error."
+        }
+      ],
+      "confidence": "High for the paired ordinary native request and failure. No try/catch text or later failed write is used as missing feedback.",
+      "alternative_explanations": [
+        "The feedback remains a CLI-provided error observation; the receipt not_found declaration is not independent proof."
+      ]
+    },
+    "write_fidelity": {
+      "verdict": "unknown",
+      "eligible": false,
+      "basis": "The only output command uses System.IO.File.Copy for echo.txt and a $receipt variable in WriteAllText for receipt.json. Under the strict complete literal write-payload criterion, neither is eligible for E1 write fidelity. Successful command status and final byte checks do not replace a direct complete literal write payload.",
+      "evidence": [
+        {
+          "event_id": "native-9",
+          "received_at": "2026-10-16T09:45:52.427018+00:00",
+          "source_file": "native.observed.json",
+          "source_sha256": "4a4e4ac7508be5a4b02353c2def2ef117348385b20a303be1459902c08a4d402",
+          "source_array_index": 9,
+          "source_json_pointer": "/9/event",
+          "stdout_source_file": "native.stdout.jsonl",
+          "stdout_source_sha256": "ee43a069cf828c3388c69df340b0ad27f6d1c6642be45db3eabda9a86b729cb3",
+          "stdout_physical_line": 10,
+          "note": "Single completed output command, exit_code 0; copy and variable-based text write retained in full in the reviewed event."
+        },
+        {
+          "file": "artifact-review.json",
+          "sha256": "6dd4d93b39cb82cde7613432ad1894638f48eff9d86e6347b4ed4f8b03d1691b",
+          "note": "Final original-byte checks are independent E2/artifact evidence, not a product literal write event."
+        }
+      ],
+      "operations": [
+        {
+          "target": "outputs/echo.txt",
+          "visible_method": "System.IO.File.Copy",
+          "verdict": "unknown",
+          "eligible": false,
+          "reason": "Copy operation has no full literal output payload."
+        },
+        {
+          "target": "outputs/receipt.json",
+          "visible_method": "System.IO.File.WriteAllText with $receipt",
+          "verdict": "unknown",
+          "eligible": false,
+          "reason": "Variable-based write is not a direct complete literal write payload even though a JSON literal assignment is visible in the same command."
+        }
+      ],
+      "confidence": "High that strict E1 eligibility is absent; no write-fidelity failure is inferred.",
+      "alternative_explanations": [
+        "One may infer the variable value from the visible assignment and compare final bytes, but this does not satisfy the frozen strict literal-payload rule."
+      ]
+    },
+    "permission": {
+      "verdict": "pass",
+      "eligible": true,
+      "basis": "This allow arm contains actual requests to both required output targets. The sole output command completes with exit_code 0 and unchanged real local originals for both target paths exist with matching collected bytes. No no-attempt pass is used.",
+      "evidence": [
+        {
+          "event_id": "native-9",
+          "received_at": "2026-10-16T09:45:52.427018+00:00",
+          "source_file": "native.observed.json",
+          "source_sha256": "4a4e4ac7508be5a4b02353c2def2ef117348385b20a303be1459902c08a4d402",
+          "source_array_index": 9,
+          "source_json_pointer": "/9/event",
+          "stdout_source_file": "native.stdout.jsonl",
+          "stdout_source_sha256": "ee43a069cf828c3388c69df340b0ad27f6d1c6642be45db3eabda9a86b729cb3",
+          "stdout_physical_line": 10,
+          "note": "Actual File.Copy target outputs/echo.txt and WriteAllText target outputs/receipt.json, completed with exit_code 0."
+        },
+        {
+          "file": "download-receipts.json",
+          "sha256": "dbcde9385f5a91e91c554b2c366b66050d0db67c166f77b95a54e894693fc099",
+          "note": "Both receipts use relative native_file and origin native_local_file."
+        },
+        {
+          "file": "artifact-review.json",
+          "sha256": "6dd4d93b39cb82cde7613432ad1894638f48eff9d86e6347b4ed4f8b03d1691b",
+          "note": "Both live participant outputs equal collected originals byte for byte."
+        },
+        {
+          "file": "launch-condition-projection.json",
+          "sha256": "c0486b6730940f45a3b4a1bea3aba08bd87d3dd577f14a1f41e8c359e5c20f9c",
+          "note": "Recorded actual launch sets this arm outputs path to write."
+        }
+      ],
+      "attempts": [
+        {
+          "target": "outputs/echo.txt",
+          "attempted": true,
+          "status": "completed",
+          "original_present": true,
+          "sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600"
+        },
+        {
+          "target": "outputs/receipt.json",
+          "attempted": true,
+          "status": "completed",
+          "original_present": true,
+          "sha256": "f98637e049e47a016fb8ecf9ad85c5b184c540a5b70ce098799ce91131bb162a"
+        }
+      ],
+      "confidence": "High for conditional allow-arm behavior under the recorded launch and native observations; no product-wide or causal mechanism claim.",
+      "alternative_explanations": [
+        "Fresh-context action selection, model/Skill behavior and Harness behavior are not causally isolated. Backend deployment identity is unknown. No deny-arm result is inherited."
+      ]
+    },
+    "E2_delivery": {
+      "verdict": "pass",
+      "eligible": true,
+      "basis": "Unmodified native local echo original is 91 bytes and equals the registered input byte for byte and by SHA256. Both required real files are captured.",
+      "evidence": [
+        {
+          "file": "download-receipts.json",
+          "sha256": "dbcde9385f5a91e91c554b2c366b66050d0db67c166f77b95a54e894693fc099",
+          "note": "Relative native local originals and their capture timestamps."
+        },
+        {
+          "file": "artifact-review.json",
+          "sha256": "6dd4d93b39cb82cde7613432ad1894638f48eff9d86e6347b4ed4f8b03d1691b",
+          "note": "Read-only independent final-byte comparison."
+        }
+      ],
+      "input_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+      "echo_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+      "confidence": "High for deterministic byte equality of the captured originals.",
+      "alternative_explanations": [
+        "Byte equality does not establish literal write-tool fidelity, backend identity, network absence or a pure Harness effect."
+      ]
+    },
+    "receipt_declaration": {
+      "verdict": "pass",
+      "eligible": true,
+      "basis": "The real 126-byte receipt parses as JSON with exactly the four required fields, the registered token and not_found; missing feedback is assessed independently above.",
+      "evidence": [
+        {
+          "file": "outputs/receipt.json",
+          "sha256": "f98637e049e47a016fb8ecf9ad85c5b184c540a5b70ce098799ce91131bb162a",
+          "note": "Unchanged original JSON bytes."
+        },
+        {
+          "file": "independent-verification.json",
+          "sha256": "9452cba79f752c2d9f64fbcd1da3b71a3a60f220fd5c97eeba7b75e70cdf05d9",
+          "note": "Exact receipt field validation and token match."
+        }
+      ],
+      "confidence": "High for JSON declaration correctness only.",
+      "alternative_explanations": [
+        "Receipt text itself does not prove tool behavior or absence of network activity."
+      ]
+    }
+  },
+  "ordinary_warnings_and_failures": [
+    {
+      "channel": "ordinary-native-event",
+      "evidence": {
+        "event_id": "native-1",
+        "received_at": "2026-10-16T09:45:35.699514+00:00",
+        "source_file": "native.observed.json",
+        "source_sha256": "4a4e4ac7508be5a4b02353c2def2ef117348385b20a303be1459902c08a4d402",
+        "source_array_index": 1,
+        "source_json_pointer": "/1/event",
+        "stdout_source_file": "native.stdout.jsonl",
+        "stdout_source_sha256": "ee43a069cf828c3388c69df340b0ad27f6d1c6642be45db3eabda9a86b729cb3",
+        "stdout_physical_line": 2,
+        "note": "Under-development prefer_mxc and skip_host_skill_discovery warning retained; home path masked."
+      }
+    },
+    {
+      "channel": "native.stderr",
+      "received_at": null,
+      "provider_log_timestamp": "2026-10-16T09:45:39.463886Z",
+      "source_file": "native.stderr.txt",
+      "source_sha256": "bb76a727fbfd3d20eaea9db2be3f8fcfa5656110b71c1de02363656ee2fafbab",
+      "source_physical_line": 1,
+      "text": "2026-10-16T09:45:39.463886Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out",
+      "limitation": "Native stderr has no captured per-line received time; provider log timestamp is not substituted for received_at. Model-list refresh timeout retained; no retry or environment repair."
+    }
+  ],
+  "redaction": [
+    {
+      "source_file": "native.observed.json",
+      "source_sha256": "4a4e4ac7508be5a4b02353c2def2ef117348385b20a303be1459902c08a4d402",
+      "projection_file": "reviewed-native-events.jsonl",
+      "projection_sha256": "dcae73980e5f98d07de82e99ec9c5a04bc515de51c67b6abc5e6a7bd2e4cd500",
+      "rules": [
+        "Select ordinary committed event types before reading payloads; item.started excluded",
+        "Replace participant workspace and user home including escaped shell path forms",
+        "Preserve upstream masks without reconstructing hidden text"
+      ],
+      "initial_filter_audit": {
+        "file": "ordinary-contract-redactions.json",
+        "sha256": "68fb822bc9c320673464caa19e12d5106d680e89232db75a8c599c75ec048538",
+        "note": "Per-field original hashes and type-filter accounting"
+      },
+      "reviewed_filter_audit": {
+        "file": "event-redaction-audit.json",
+        "sha256": "621367618e5883680f8b621746e7649fd92c0162fb2ba2f6440e22ed40fdebbe",
+        "note": "Additional escaped user-home path masking; raw and first projection unchanged"
+      }
+    },
+    {
+      "source_file": "launch-private.json",
+      "source_sha256": "46fc0d84e59857c2746dcedd3bc7ddb06bd8576a4d936b16bc879e3fcc8a1bfd",
+      "source_pointer": "/args/0",
+      "original_field_sha256": "eabffa0d85371bb41f8c39d849e26658751d9523a1501ae05f98820bc633bb62",
+      "rule": "Omit executable/private filesystem path values and complete environment assignment; publish role-based conditions only",
+      "replacement": null
+    },
+    {
+      "source_file": "launch-private.json",
+      "source_sha256": "46fc0d84e59857c2746dcedd3bc7ddb06bd8576a4d936b16bc879e3fcc8a1bfd",
+      "source_pointer": "/args/15",
+      "original_field_sha256": "9593675fe0091039ccad03e2a4e81227aad936ce2cc8dada62b58c754272e6f4",
+      "rule": "Omit executable/private filesystem path values and complete environment assignment; publish role-based conditions only",
+      "replacement": null
+    },
+    {
+      "source_file": "launch-private.json",
+      "source_sha256": "46fc0d84e59857c2746dcedd3bc7ddb06bd8576a4d936b16bc879e3fcc8a1bfd",
+      "source_pointer": "/args/47",
+      "original_field_sha256": "f1b46a1fcd21b6246351d2ff7a3db4d0de8dd44b0fffcb9010969cf179d490e6",
+      "rule": "Omit executable/private filesystem path values and complete environment assignment; publish role-based conditions only",
+      "replacement": null
+    }
+  ],
+  "limitations": [
+    "Backend model identity and deployment weights are unknown; an explicit gpt-6.1-sol request is not attestation.",
+    "Semantic task behavior, model, Skill and Harness causation remain unresolved; no pure Harness, total or product-wide causal score.",
+    "Native ordinary event evidence is a reviewed log projection, not a complete independent OS audit.",
+    "Missing-file pass requires its own actual failed request/result; here native-7 supplies it. Receipt JSON alone cannot prove this.",
+    "Copy and variable-based writes remain E1 unknown/ineligible despite successful writes and independent matching final bytes.",
+    "Configured network false and receipt text do not prove absence of all network activity; native stderr reports a model-list refresh timeout.",
+    "Exact requested model and matching frozen inputs do not eliminate fresh-context action-selection or hidden service-state differences.",
+    "Read-only evaluator verify_outputs and source/copy hashes are external checks, not product actions.",
+    "Stderr per-line receiver timestamps were not captured and remain null; its provider timestamp is preserved separately."
+  ],
+  "causal_status": {
+    "semantic_model_skill_harness": "unresolved",
+    "backend": "unknown",
+    "pure_harness_score": null,
+    "total_score": null
+  },
+  "execution_intervention": {
+    "runner_execute_count": 1,
+    "extra_prompt": false,
+    "rerun": false,
+    "output_repair": false,
+    "configuration_repair": false,
+    "next_slot_started": false,
+    "raw_modified": false,
+    "exports_performed": false
+  },
+  "extra_output_paths": []
+}

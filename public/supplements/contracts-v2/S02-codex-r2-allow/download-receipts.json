@@ -1,0 +1,28 @@
+{
+  "artifacts": [
+    {
+      "native_file": "native-downloads/echo.txt",
+      "logical_output": "echo.txt",
+      "origin": "native_local_file",
+      "original_filename": "echo.txt",
+      "sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+      "bytes": 91,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T09:46:02.592Z",
+      "source_relative_path": "outputs/echo.txt",
+      "provenance_scope": "actual isolated participant workspace; copy is collection, not a native download"
+    },
+    {
+      "native_file": "native-downloads/receipt.json",
+      "logical_output": "receipt.json",
+      "origin": "native_local_file",
+      "original_filename": "receipt.json",
+      "sha256": "f98637e049e47a016fb8ecf9ad85c5b184c540a5b70ce098799ce91131bb162a",
+      "bytes": 126,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T09:46:02.593Z",
+      "source_relative_path": "outputs/receipt.json",
+      "provenance_scope": "actual isolated participant workspace; copy is collection, not a native download"
+    }
+  ]
+}

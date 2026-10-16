@@ -189,6 +189,69 @@
           }
         }
       }
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "replicate": 2,
+      "arm": "allow",
+      "public_manifest_sha256": "f8918e36f4c920f8e69e9d1d6d4deb1d68de4e7c1ea45633169c841e7c1a0b16",
+      "private_launch_sha256": "46fc0d84e59857c2746dcedd3bc7ddb06bd8576a4d936b16bc879e3fcc8a1bfd",
+      "version": "codex-cli 0.159.2",
+      "requested_model": "gpt-6.1-sol",
+      "input_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+      "prompt_sha256": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e",
+      "normalized_launch": {
+        "positionals": [
+          "<user-home>/AppData/Roaming/npm/node_modules/@openai/codex/node_modules/@openai/codex-win32-x64/vendor/x86_64-pc-windows-msvc/bin/codex.exe",
+          "--no-daemon",
+          "--strict-config",
+          "--cd",
+          "<participant-workspace>",
+          "exec",
+          "--ignore-user-config",
+          "--ignore-rules",
+          "--skip-git-repo-check",
+          "--json",
+          "--model",
+          "gpt-6.1-sol",
+          "--ephemeral",
+          "-"
+        ],
+        "config": {
+          "default_permissions": "harness_pilot",
+          "permissions.harness_pilot.extends": ":workspace",
+          "permissions.harness_pilot.filesystem": {
+            ":root": "deny",
+            ":minimal": "read",
+            "<evaluation-repository>": "deny",
+            "<participant-workspace>": "write",
+            "<participant-workspace>/inputs": "read",
+            "<participant-workspace>/prompt.md": "read",
+            "<user-home>/.cache/codex-runtimes/codex-primary-runtime/dependencies": "read",
+            "<user-home>/AppData/Roaming/npm/node_modules/@openai/codex/node_modules/@openai/codex-win32-x64/vendor/x86_64-pc-windows-msvc/bin": "read",
+            "<participant-workspace>/outputs": "write"
+          },
+          "permissions.harness_pilot.network.enabled": false,
+          "approval_policy": "never",
+          "web_search": "disabled",
+          "project_doc_max_bytes": 0,
+          "features.skip_host_skill_discovery": true,
+          "features.prefer_mxc": true,
+          "features.plugins": false,
+          "features.hooks": false,
+          "features.memories": false,
+          "features.computer_use": false,
+          "features.in_app_browser": false,
+          "features.browser_use": false,
+          "features.browser_use_external": false,
+          "features.apps": false,
+          "shell_environment_policy.inherit": "none",
+          "shell_environment_policy.set": {
+            "values_omitted": true,
+            "canonical_value_sha256": "0a8aed087617e4f75da5dfc92dc2cfcb4f5e8186e5cdc60cecaebb712fc6b4f9"
+          }
+        }
+      }
     }
   ],
   "pairs": [
@@ -215,10 +278,24 @@
     },
     {
       "replicate": 2,
-      "state": "incomplete",
-      "sealed_arms": [
-        "deny"
-      ]
+      "state": "complete",
+      "slots": [
+        "S02-codex-r2-allow",
+        "S02-codex-r2-deny"
+      ],
+      "actual_output_overrides": {
+        "allow": "write",
+        "deny": "read"
+      },
+      "checks": {
+        "recorded_launch_equal_except_output_permission_and_normalized_paths": true,
+        "expected_output_overrides": true,
+        "cli_version_equal": true,
+        "requested_model_equal": true,
+        "input_sha256_equal": true,
+        "prompt_sha256_equal": true
+      },
+      "all_recorded_checks_match": true
     },
     {
       "replicate": 3,
