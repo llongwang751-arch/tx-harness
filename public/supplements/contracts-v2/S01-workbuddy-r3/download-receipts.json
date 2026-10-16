@@ -1,0 +1,126 @@
+{
+  "artifacts": [
+    {
+      "native_file": "native-downloads/echo.txt",
+      "logical_output": "echo.txt",
+      "origin": "native_local_file",
+      "original_filename": "echo.txt",
+      "source_relative_path": "outputs/echo.txt",
+      "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+      "bytes": 91,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T08:28:36.076Z",
+      "native_save_action_at": null,
+      "native_save_action": "Application-generated file in selected native workspace; no download action",
+      "evidence": [
+        {
+          "capture": "016-final-bottom-fresh.ax.txt",
+          "element_label": "echo.txt",
+          "line_ranges": [
+            [
+              141,
+              143
+            ]
+          ]
+        },
+        {
+          "capture": "008-workspace-bound.ax.txt",
+          "element_label": "contract-v2-S01-workbuddy-r3",
+          "line_ranges": [
+            [
+              112,
+              112
+            ]
+          ]
+        }
+      ],
+      "logical_mapping": "Selected workspace outputs/echo.txt copied byte-for-byte to private native-downloads/echo.txt and outputs/echo.txt",
+      "native_source_action_evidence": [
+        {
+          "capture": "008-workspace-bound.ax.txt",
+          "line_ranges": [
+            [
+              112,
+              112
+            ]
+          ]
+        },
+        {
+          "capture": "012-r3-running-initial.ax.txt",
+          "line_ranges": [
+            [
+              108,
+              108
+            ],
+            [
+              111,
+              111
+            ]
+          ]
+        }
+      ],
+      "private_source_receipt_sha256": "766b957408d84406dfbb0d72dc295cd9630df205887d15030d32c3781a6a80c3"
+    },
+    {
+      "native_file": "native-downloads/receipt.json",
+      "logical_output": "receipt.json",
+      "origin": "native_local_file",
+      "original_filename": "receipt.json",
+      "source_relative_path": "outputs/receipt.json",
+      "sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722",
+      "bytes": 144,
+      "downloaded_at": null,
+      "original_bytes_captured_at": "2026-10-16T08:28:36.080Z",
+      "native_save_action_at": null,
+      "native_save_action": "Application-generated file in selected native workspace; no download action",
+      "evidence": [
+        {
+          "capture": "016-final-bottom-fresh.ax.txt",
+          "element_label": "receipt.json",
+          "line_ranges": [
+            [
+              138,
+              140
+            ]
+          ]
+        },
+        {
+          "capture": "008-workspace-bound.ax.txt",
+          "element_label": "contract-v2-S01-workbuddy-r3",
+          "line_ranges": [
+            [
+              112,
+              112
+            ]
+          ]
+        }
+      ],
+      "logical_mapping": "Selected workspace outputs/receipt.json copied byte-for-byte to private native-downloads/receipt.json and outputs/receipt.json",
+      "native_source_action_evidence": [
+        {
+          "capture": "008-workspace-bound.ax.txt",
+          "line_ranges": [
+            [
+              112,
+              112
+            ]
+          ]
+        },
+        {
+          "capture": "012-r3-running-initial.ax.txt",
+          "line_ranges": [
+            [
+              108,
+              108
+            ],
+            [
+              111,
+              111
+            ]
+          ]
+        }
+      ],
+      "private_source_receipt_sha256": "766b957408d84406dfbb0d72dc295cd9630df205887d15030d32c3781a6a80c3"
+    }
+  ]
+}

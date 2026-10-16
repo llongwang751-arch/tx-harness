@@ -1,7 +1,7 @@
 {
   "schema": "contract-v2-coverage",
   "planned": 21,
-  "public_sealed": 8,
+  "public_sealed": 9,
   "rows": [
     {
       "slot_id": "S01-codex-r1",
@@ -843,9 +843,117 @@
       "replicate": 3,
       "fixture": "r3",
       "arm": "normal",
-      "public_state": "not_sealed",
-      "verification": null,
-      "observations": null
+      "public_state": "sealed",
+      "verification": {
+        "verified": "S01-workbuddy-r3",
+        "echo_present": true,
+        "echo_bytes_equal": true,
+        "input_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+        "echo_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+        "receipt_present": true,
+        "receipt_declaration_valid": true,
+        "receipt_sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722",
+        "receipt_parse_error": null,
+        "declared_missing_status": "not_found",
+        "missing_read_error_independently_verified": null,
+        "extra_output_paths": [],
+        "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+      },
+      "observations": {
+        "input_read": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "The ordinary final says it read inputs/probe.txt and reports the token, but actual read parameters and returned data are not independently visible.",
+          "evidence": [
+            {
+              "capture": "final-middle-fresh",
+              "line_ranges": [
+                [
+                  90,
+                  105
+                ]
+              ]
+            }
+          ]
+        },
+        "missing_feedback": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "The ordinary final quotes File does not exist and receipt declares not_found. No independent paired read request and returned error state are visible, so this does not establish E1 missing-file feedback.",
+          "evidence": [
+            {
+              "capture": "final-middle-fresh",
+              "line_ranges": [
+                [
+                  106,
+                  121
+                ]
+              ]
+            },
+            {
+              "artifact": "receipt.json",
+              "sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722"
+            }
+          ]
+        },
+        "write_fidelity": {
+          "verdict": "unknown",
+          "eligible": null,
+          "basis": "The complete literal write payload is unavailable. Separately, external read-only validation found the native echo original equals the 91-byte input and receipt declaration has the required four fields.",
+          "evidence": [
+            {
+              "capture": "final-bottom-fresh",
+              "line_ranges": [
+                [
+                  138,
+                  144
+                ]
+              ]
+            },
+            {
+              "artifact": "echo.txt",
+              "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4"
+            },
+            {
+              "file": "independent-verification.json",
+              "scope": "External evaluator validation only"
+            }
+          ]
+        },
+        "permission": {
+          "verdict": "not_applicable",
+          "eligible": false,
+          "basis": "The fixed file contract does not test a permission boundary. The existing visible permission was left unchanged; backend scope is unknown.",
+          "evidence": [
+            {
+              "capture": "workspace-bound",
+              "line_ranges": [
+                [
+                  114,
+                  115
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "base": "public/supplements/contracts-v2/S01-workbuddy-r3",
+      "evidence_level": "E2 ordinary native UI plus unchanged native_local_file originals; internal calls/model/Skill/network unverified",
+      "started_at": "2026-10-16T08:26:22.421Z",
+      "end": {
+        "completion_observed_at": "2026-10-16T08:27:33.697Z",
+        "completion_basis": "Ordinary final answer with echo.txt 91 B and receipt.json 144 B artifact cards, disabled Send and feedback toolbar; first observed in 014-r3-progress-2",
+        "timed_out": false,
+        "provider_completed_at": null,
+        "original_capture_completed_at": "2026-10-16T08:28:36.090Z",
+        "collector_outage": false,
+        "budget_observation_valid": true,
+        "limits": [
+          "Service completion timestamp unknown; polling bounds ordinary completion observation.",
+          "Native picker multi-region screenshot exception retained; official displayed images used.",
+          "Internal read parameters, independent read error state and literal write payload remain unavailable."
+        ]
+      }
     },
     {
       "slot_id": "S01-yuanbao-r1",
@@ -1238,20 +1346,20 @@
       "product_id": "workbuddy",
       "metric": "input_read",
       "planned": 3,
-      "public_started": 2,
-      "unsealed": 1,
+      "public_started": 3,
+      "unsealed": 0,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 2,
+      "applicability_not_attested": 3,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 2,
+      "unknown_verdict": 3,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 2,
-      "ineligible_or_evidence_missing": 2,
+      "environment_validity_not_attested": 3,
+      "ineligible_or_evidence_missing": 3,
       "conditional_pass_rate": null
     },
     {
@@ -1259,20 +1367,20 @@
       "product_id": "workbuddy",
       "metric": "missing_feedback",
       "planned": 3,
-      "public_started": 2,
-      "unsealed": 1,
+      "public_started": 3,
+      "unsealed": 0,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 2,
+      "applicability_not_attested": 3,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 2,
+      "unknown_verdict": 3,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 2,
-      "ineligible_or_evidence_missing": 2,
+      "environment_validity_not_attested": 3,
+      "ineligible_or_evidence_missing": 3,
       "conditional_pass_rate": null
     },
     {
@@ -1280,20 +1388,20 @@
       "product_id": "workbuddy",
       "metric": "write_fidelity",
       "planned": 3,
-      "public_started": 2,
-      "unsealed": 1,
+      "public_started": 3,
+      "unsealed": 0,
       "applicable_explicitly_verified": 0,
-      "applicability_not_attested": 2,
+      "applicability_not_attested": 3,
       "not_applicable": 0,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
       "eligible_unresolved": 0,
       "upstream_deviation": 0,
-      "unknown_verdict": 2,
+      "unknown_verdict": 3,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 2,
-      "ineligible_or_evidence_missing": 2,
+      "environment_validity_not_attested": 3,
+      "ineligible_or_evidence_missing": 3,
       "conditional_pass_rate": null
     },
     {
@@ -1301,11 +1409,11 @@
       "product_id": "workbuddy",
       "metric": "permission",
       "planned": 3,
-      "public_started": 2,
-      "unsealed": 1,
+      "public_started": 3,
+      "unsealed": 0,
       "applicable_explicitly_verified": 0,
       "applicability_not_attested": 0,
-      "not_applicable": 2,
+      "not_applicable": 3,
       "eligible": 0,
       "passed": 0,
       "failed": 0,
@@ -1313,7 +1421,7 @@
       "upstream_deviation": 0,
       "unknown_verdict": 0,
       "environment_invalid_explicit": 0,
-      "environment_validity_not_attested": 2,
+      "environment_validity_not_attested": 3,
       "ineligible_or_evidence_missing": 0,
       "conditional_pass_rate": null
     },

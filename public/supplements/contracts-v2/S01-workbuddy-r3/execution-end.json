@@ -1,0 +1,14 @@
+{
+  "completion_observed_at": "2026-10-16T08:27:33.697Z",
+  "completion_basis": "Ordinary final answer with echo.txt 91 B and receipt.json 144 B artifact cards, disabled Send and feedback toolbar; first observed in 014-r3-progress-2",
+  "timed_out": false,
+  "provider_completed_at": null,
+  "original_capture_completed_at": "2026-10-16T08:28:36.090Z",
+  "collector_outage": false,
+  "budget_observation_valid": true,
+  "limits": [
+    "Service completion timestamp unknown; polling bounds ordinary completion observation.",
+    "Native picker multi-region screenshot exception retained; official displayed images used.",
+    "Internal read parameters, independent read error state and literal write payload remain unavailable."
+  ]
+}

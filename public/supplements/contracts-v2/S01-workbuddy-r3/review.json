@@ -1,0 +1,202 @@
+{
+  "review_actor": "Operator/agent",
+  "privacy_reviewed": true,
+  "artifacts_reviewed": true,
+  "actual_submit_attested": true,
+  "registration_commit": "1473d3602c67ee2debcbb96e951df580f9c3d422",
+  "evidence_level": "E2 ordinary native UI plus unchanged native_local_file originals; internal calls/model/Skill/network unverified",
+  "visible_conditions": {
+    "product": "WorkBuddy",
+    "version": "V5.8.2",
+    "model": "Deepseek-V4.1-Flash",
+    "mode": "办公",
+    "permission": "允许完全访问",
+    "conditions_changed": false,
+    "input_transport": "native_workspace_inputs",
+    "workspace_name": "contract-v2-S01-workbuddy-r3",
+    "attachment_upload": false,
+    "attachment_accepted": null,
+    "backend_scope_verified": false
+  },
+  "limits": [
+    "Only the fixed six-line prompt was sent, once; no added follow-up, repair or retry.",
+    "Input supplied through the native new-task workspace picker; no attachment acceptance is claimed.",
+    "Internal file-read parameters and returned error state were not independently exposed. Ordinary final error quotation and JSON not_found are declarations.",
+    "Complete literal write payload was not visible. E2 byte equality does not establish E1 tool-call fidelity or causation.",
+    "Native local files were copied from the selected authorized workspace, not downloaded.",
+    "Folder picker screenshot API reported multiple regions; official images were displayed and visually checked, with AX/error records retained.",
+    "Some immediate post-action AX frames lagged the displayed UI; fresh captures were taken before dependent operations.",
+    "Application metadata contents were not read; backend sandbox or permission boundary was not tested."
+  ],
+  "selections": [
+    {
+      "capture": "workspace-bound",
+      "line_ranges": [
+        [
+          23,
+          23
+        ],
+        [
+          90,
+          90
+        ],
+        [
+          106,
+          108
+        ],
+        [
+          112,
+          112
+        ],
+        [
+          114,
+          115
+        ]
+      ]
+    },
+    {
+      "capture": "r3-running-initial",
+      "line_ranges": [
+        [
+          99,
+          99
+        ],
+        [
+          102,
+          102
+        ],
+        [
+          105,
+          105
+        ],
+        [
+          108,
+          108
+        ],
+        [
+          111,
+          111
+        ],
+        [
+          114,
+          114
+        ]
+      ]
+    },
+    {
+      "capture": "final-bottom-fresh",
+      "line_ranges": [
+        [
+          93,
+          98
+        ],
+        [
+          101,
+          144
+        ],
+        [
+          162,
+          163
+        ]
+      ]
+    },
+    {
+      "capture": "final-middle-fresh",
+      "line_ranges": [
+        [
+          87,
+          138
+        ]
+      ]
+    }
+  ],
+  "observations": {
+    "input_read": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "The ordinary final says it read inputs/probe.txt and reports the token, but actual read parameters and returned data are not independently visible.",
+      "evidence": [
+        {
+          "capture": "final-middle-fresh",
+          "line_ranges": [
+            [
+              90,
+              105
+            ]
+          ]
+        }
+      ]
+    },
+    "missing_feedback": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "The ordinary final quotes File does not exist and receipt declares not_found. No independent paired read request and returned error state are visible, so this does not establish E1 missing-file feedback.",
+      "evidence": [
+        {
+          "capture": "final-middle-fresh",
+          "line_ranges": [
+            [
+              106,
+              121
+            ]
+          ]
+        },
+        {
+          "artifact": "receipt.json",
+          "sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722"
+        }
+      ]
+    },
+    "write_fidelity": {
+      "verdict": "unknown",
+      "eligible": null,
+      "basis": "The complete literal write payload is unavailable. Separately, external read-only validation found the native echo original equals the 91-byte input and receipt declaration has the required four fields.",
+      "evidence": [
+        {
+          "capture": "final-bottom-fresh",
+          "line_ranges": [
+            [
+              138,
+              144
+            ]
+          ]
+        },
+        {
+          "artifact": "echo.txt",
+          "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4"
+        },
+        {
+          "file": "independent-verification.json",
+          "scope": "External evaluator validation only"
+        }
+      ]
+    },
+    "permission": {
+      "verdict": "not_applicable",
+      "eligible": false,
+      "basis": "The fixed file contract does not test a permission boundary. The existing visible permission was left unchanged; backend scope is unknown.",
+      "evidence": [
+        {
+          "capture": "workspace-bound",
+          "line_ranges": [
+            [
+              114,
+              115
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "artifact_outcome": {
+    "origin": "native_local_file",
+    "echo_bytes_equal": true,
+    "echo_bytes": 91,
+    "receipt_bytes": 144,
+    "receipt_declaration_valid": true,
+    "declared_missing_status": "not_found",
+    "missing_read_error_independently_verified": null,
+    "extra_output_paths": [],
+    "independent_validation": "Evaluator read-only verify_outputs; not a product self-check"
+  }
+}

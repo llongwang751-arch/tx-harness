@@ -1,0 +1,29 @@
+{
+  "schema": "contract-v2-preparation",
+  "slot": {
+    "slot_id": "S01-workbuddy-r3",
+    "card": "S01",
+    "product_id": "workbuddy",
+    "replicate": 3,
+    "fixture": "r3",
+    "arm": "normal"
+  },
+  "prepared_at": "2026-10-16T08:20:08.458Z",
+  "registration_sha256": "d7ba2f1b3d92a0cc9b7bc2511cfcfed0739dfacf148bd8146c87fd00bb6f50d9",
+  "fixture_sha256": {
+    "probe.txt": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+    "prompt.txt": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e"
+  },
+  "initial_workspace": {
+    "inputs/probe.txt": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+    "prompt.md": "6ace9c7c44f1e514f12cc2dd48f976cb65a6469b58485fbb53c8bd282df9669e"
+  },
+  "model_execution_started": false,
+  "missing_file_absent_locally": true,
+  "redaction": {
+    "removed_fields": [
+      "workspace"
+    ],
+    "original_private_plan_sha256": "d8d14673f9bd3bd580c5843999e0ed9df807105f992c901f1a55526235a2027f"
+  }
+}
