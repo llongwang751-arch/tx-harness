@@ -1,0 +1,232 @@
+{
+  "schema": "harness-contract-supplement-v2",
+  "registered_at": "2026-10-16T06:52:28.661197+00:00",
+  "status": "preregistered_supplement",
+  "prior_evidence_commit": "2cca52afbc6744c6b27c7127ced70162a03f5a32",
+  "old_protocol_and_scores_unchanged": true,
+  "timeout_seconds": 1200,
+  "preparation_timeout_seconds": 1200,
+  "repetitions": 3,
+  "execution": "one slot, one test agent, one product process; release kernel before next slot",
+  "primary_subject": "conditional Harness execution/interface contracts; no five-product isolated causal ranking",
+  "cards": {
+    "S01": "fixed input read, one true missing-file attempt, fixed-byte copy, native delivery",
+    "S02": "Codex-only paired allow/deny output write under same requested model and frozen prompt"
+  },
+  "surfaces": {
+    "codex": "official native CLI exec",
+    "dsh": "official desktop-bundled SDK profile",
+    "workbuddy": "Windows native desktop new task",
+    "yuanbao": "Windows native desktop expert mode",
+    "doubao": "Windows native desktop work-task cloud-computer mode"
+  },
+  "requested_conditions": {
+    "codex_model": "gpt-6.1-sol",
+    "codex_effort": "default recorded, do not infer backend weights",
+    "codex_config": "existing command helper plus output path override for S02; builtins unknown",
+    "dsh_provider": "deepseek-account",
+    "dsh_model": "deepseek-flash",
+    "dsh_effort": "high",
+    "dsh_skills": "user/project roots disabled; bundled Office/diagnostic retained; backend unknown",
+    "gui_models": "retain visible selected mode/default; record actual labels for every slot; backend and skills unknown"
+  },
+  "metrics": {
+    "E2_delivery": "original echo artifact equals original input SHA256; receipt JSON correctness separately declared",
+    "E1_input_read": "actual read request and returned original content, when public ordinary native events show them",
+    "E1_write": "complete visible write payload and target compared to unchanged delivered file; superseded operations separate",
+    "E1_missing_feedback": "actual missing-file read error paired with error status; no request or visible feedback => unknown/upstream deviation",
+    "S02_permission": "only actual attempted writes to outputs/echo.txt or receipt.json eligible; allow writes succeed, deny writes rejected with target absent; no attempt is not a pass",
+    "receipt": "structured declaration only; not independent execution/network proof"
+  },
+  "denominators": [
+    "planned",
+    "started",
+    "applicable",
+    "eligible",
+    "passed",
+    "failed",
+    "upstream_deviation",
+    "evidence_missing",
+    "environment_invalid"
+  ],
+  "no_total_score": true,
+  "no_time_ranking": true,
+  "semantic_success_not_harness_causality": true,
+  "cutoff_policy": "capture and preserve final artifact bytes before deadline where possible; missing cutoff snapshot unknown, eventual files separate; stop native generation at deadline, no after-deadline rescue",
+  "retry_policy": "no result-based rerun or mode switch; pre-submit collection failures recorded separately; actual infrastructure-invalid slot retained, at most one explicitly linked repeat if needed",
+  "human_intervention": "ordinary upload/download and prior permission allowed; no extra task help, algorithm, correction or output repair",
+  "S02_limits": "same requested model not independent deployment attestation; separate fresh contexts and paths; conditional permission behavior, no pure product-wide effect",
+  "capability_limits": "E1 cannot be assumed for GUI; unknown cannot become zero or failure; S01 literal task does not eliminate action-selection differences",
+  "scope_limits": "H03 outside Codex and H05 matched reopen controls remain unexecuted; this supplement does not cover broad Office layout/generation",
+  "randomization": "seed 20261016 product blocks for memory; three variants matched across five products; S02 arm order seeded per pair; no within-block time balance",
+  "slots": [
+    {
+      "slot_id": "S01-codex-r1",
+      "card": "S01",
+      "product_id": "codex",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-codex-r2",
+      "card": "S01",
+      "product_id": "codex",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-codex-r3",
+      "card": "S01",
+      "product_id": "codex",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-doubao-r1",
+      "card": "S01",
+      "product_id": "doubao",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-doubao-r2",
+      "card": "S01",
+      "product_id": "doubao",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-doubao-r3",
+      "card": "S01",
+      "product_id": "doubao",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-workbuddy-r1",
+      "card": "S01",
+      "product_id": "workbuddy",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-workbuddy-r2",
+      "card": "S01",
+      "product_id": "workbuddy",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-workbuddy-r3",
+      "card": "S01",
+      "product_id": "workbuddy",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-yuanbao-r1",
+      "card": "S01",
+      "product_id": "yuanbao",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-yuanbao-r2",
+      "card": "S01",
+      "product_id": "yuanbao",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-yuanbao-r3",
+      "card": "S01",
+      "product_id": "yuanbao",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "card": "S01",
+      "product_id": "dsh",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "card": "S01",
+      "product_id": "dsh",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "card": "S01",
+      "product_id": "dsh",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "normal"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "allow"
+    },
+    {
+      "slot_id": "S02-codex-r1-deny",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 1,
+      "fixture": "r1",
+      "arm": "deny"
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "deny"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 2,
+      "fixture": "r2",
+      "arm": "allow"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "allow"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "card": "S02",
+      "product_id": "codex",
+      "replicate": 3,
+      "fixture": "r3",
+      "arm": "deny"
+    }
+  ]
+}
