@@ -148,4 +148,4 @@ python -X utf8 scripts/analyze_permission_pairs_v2.py --check
 python -X utf8 -m unittest discover -s tests -v
 ```
 
-补测单包复核：`python -X utf8 scripts/contract_v2.py verify --slot <实际slot>`。输入、输出、收据与声明分别保留，不把外部检查写成产品自身校验。周报沿用草稿，邮件发送暂不处理。
+补测单包复核：`python -X utf8 scripts/contract_v2.py verify --slot <实际slot>`。输入、输出、收据与声明分别保留，不把外部检查写成产品自身校验。邮件周报按本人确认的已发版本以Markdown归档，见[个人周报索引](weekly/README.md)；后续仓库改动见[变更记录](../CHANGELOG.md)。

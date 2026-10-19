@@ -1,0 +1,31 @@
+# 变更记录
+
+按北京时间记录已经完成并留在仓库中的改动。历史条目根据Git提交补记，后续计划写在[个人周报](reports/weekly/README.md)中。
+
+## 2026-10-19
+
+- 新增本变更记录，补齐项目建立、五产品任务复现、方法修订和周报整理的历史入口。
+- 新增[周报索引](reports/weekly/README.md)及[2026-10-17周报归档](reports/weekly/2026-10-17.md)。本人于2026-10-19确认邮件已发送，正文与仓库原稿一致；归档保留原稿版本和正文校验值，实际发送时间未单独记录。
+- 更新首页、提交说明和报告中的周报状态，保留[发送前原稿](reports/weekly-2026-10-17-draft.md)。修订[周报模板](reports/weekly-template.md)，去掉未实施的75次实验固定分母。
+- 本次只整理文档和归档入口，没有新增产品测试或修改既有原件、评分。
+
+## 2026-10-17
+
+- 将周报改为个人复盘的语气，说明方法调整、题目区分度不足及下周安排。对应提交：[d2a9d55](https://github.com/llongwang751-arch/tx-harness/commit/d2a9d55)。
+- 完善邮件主题、自我介绍、称呼和落款，形成[发送前留存稿](reports/weekly-2026-10-17-draft.md)。对应提交：[7f4ab60](https://github.com/llongwang751-arch/tx-harness/commit/7f4ab60)。
+
+## 2026-10-16
+
+- 在首次补测前登记21个实验位及固定输入、提示词、执行和判定规则。登记提交：[1473d36](https://github.com/llongwang751-arch/tx-harness/commit/1473d3602c67ee2debcbb96e951df580f9c3d422)。
+- 完成五产品各三次固定文件任务，以及Codex三组允许/拒绝写权限配对，合计21轮。实际过程、原件和指标分母见[补测索引](public/supplements/contracts-v2/README.md)。完成提交：[3d1c7b9](https://github.com/llongwang751-arch/tx-harness/commit/3d1c7b931b08f62cf4333797b98587c91d17b0dc)。
+- 发布[报告v2](reports/report.md)和[逐字段复核](reports/evaluation-v2.md)，分开业务结果、可见执行边界和归因未知，保留旧协议、原件及分数。核对三组权限配对的实际启动条件，不将它们外推为五产品纯Harness排名。
+- 修正后续采集的隐私过滤与引用方式，记录版本、源哈希和限制。DSH第二轮采集问题及修正经过见[方法修订](docs/revision-v2.md)，没有因此重跑或覆盖已封存现场。
+
+## 2026-10-14
+
+- 完成原五产品各五题的25个选定组合，保留31个公开包和26次评分，失败、入口诊断、重试及预算局限另列。对应提交：[2cca52a](https://github.com/llongwang751-arch/tx-harness/commit/2cca52afbc6744c6b27c7127ced70162a03f5a32)。
+- 原报告现保留为[报告v1](reports/report-v1-2026-10-14.md)，原始评分与证据可继续复核。
+
+## 2026-10-13
+
+- 建立Python标准库评测工具、五套用例及方案、采集、评分和归因文档，开始保存真实接入记录。初始提交：[0b69a2a](https://github.com/llongwang751-arch/tx-harness/commit/0b69a2a)。

@@ -8,6 +8,8 @@
 
 阅读[书面报告](reports/report.md)和[现场证据索引](public/pilots/README.md)，复核原生交付、现场事件、失败attempt与归因边界。
 
+仓库更新见[变更记录](CHANGELOG.md)，邮件周报见[个人周报索引](reports/weekly/README.md)。2026-10-17周报已按本人确认的发送版本归档。
+
 ## 归因原则
 
 模型、Skill、工具权限和Harness会共同影响结果。无法把五产品换成同一模型和同一Skill时，主实验只能比较固定配置的端到端表现。研究者通过现场证据定位故障，再用同模型/同Skill的匹配对照或Harness内消融验证候选原因。没有对照的推测标为待验证，不声称已剥离模型影响。
@@ -23,7 +25,7 @@
 | 表现现场 | public/pilots、public/supplements/contracts-v2 | 旧31个包及25/25组合、新21/21补测；失败、诊断和预算局限保留 |
 | 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 26次逐项审阅；缺证项保留null及范围 |
 | 书面竞品报告 | reports/report.md、reports/evaluation-v2.json、reports/permission-pairs-v2.json | Harness边界为主，业务及旧分辅助；三组实际许可对照与条件核对单列 |
-| 每周六个人周报邮件 | reports/weekly-template.md、reports/weekly-2026-10-17-draft.md | 仅本地模板/草稿；未发送 |
+| 每周六个人周报邮件 | reports/weekly/README.md、reports/weekly/2026-10-17.md、reports/weekly-template.md | 10月17日周报已发送，正文已按本人确认版本以Markdown归档 |
 | 个人开源GitHub链接 | https://github.com/llongwang751-arch/tx-harness，MIT | 公开方案、代码、真实预试与报告 |
 
 ## 快速开始
@@ -56,6 +58,7 @@ cases/          五套任务、原始输入、仅供评测员使用的答案
 harness_eval/   标准库CLI：准备、记录、核验、封存、打分、汇总
 tests/          验收判定与证据门槛的回归测试
 reports/        完整探索性报告、逐项评分、周报与确认性草案
+reports/weekly/ 已发送邮件周报的Markdown归档与索引
 supplements/    新补测预登记协议、变体输入与提示词
 runs/           本地采集包（Git忽略）
 public/pilots/  原31个公开现场包
