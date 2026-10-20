@@ -1,0 +1,53 @@
+{
+  "source_file": "launch-private.json",
+  "source_sha256": "46fc0d84e59857c2746dcedd3bc7ddb06bd8576a4d936b16bc879e3fcc8a1bfd",
+  "version": "codex-cli 0.159.2",
+  "requested_model": "gpt-6.1-sol",
+  "fresh_ephemeral": true,
+  "flags": [
+    "--no-daemon",
+    "--strict-config",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--skip-git-repo-check",
+    "--json",
+    "--ephemeral"
+  ],
+  "configured_options": {
+    "default_permissions": "\"harness_pilot\"",
+    "permissions.harness_pilot.extends": "\":workspace\"",
+    "permissions.harness_pilot.network.enabled": "false",
+    "approval_policy": "\"never\"",
+    "web_search": "\"disabled\"",
+    "project_doc_max_bytes": "0",
+    "features.skip_host_skill_discovery": "true",
+    "features.prefer_mxc": "true",
+    "features.plugins": "false",
+    "features.hooks": "false",
+    "features.memories": "false",
+    "features.computer_use": "false",
+    "features.in_app_browser": "false",
+    "features.browser_use": "false",
+    "features.browser_use_external": "false",
+    "features.apps": "false",
+    "shell_environment_policy.inherit": "\"none\""
+  },
+  "filesystem_summary": {
+    ":root": "deny",
+    ":minimal": "read",
+    "<evaluation-repository>": "deny",
+    "<participant-workspace>": "write",
+    "<participant-workspace>/inputs": "read",
+    "<participant-workspace>/prompt.md": "read",
+    "<participant-workspace>/outputs": "write",
+    "official_runtime_directories": "read when present"
+  },
+  "filesystem_argument_sha256": "9593675fe0091039ccad03e2a4e81227aad936ce2cc8dada62b58c754272e6f4",
+  "redactions": {
+    "executable_path": "withheld; official native binary resolved by frozen runner",
+    "filesystem_private_path_values": "replaced by role labels",
+    "shell_environment_policy.set": "entire value omitted; not read into public review"
+  },
+  "backend_model_attested": false,
+  "built_in_skills": "unknown"
+}

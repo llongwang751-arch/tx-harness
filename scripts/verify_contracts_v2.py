@@ -2,6 +2,26 @@
 import argparse,json
 from contract_v2 import ROOT,BASE,read,verify_public
 
+def delivery_denominators(rows):
+    """Artifact presence is separate from comparison, permission, and timing."""
+    summaries=[]
+    for card,product,arm in sorted({(r['card'],r['product_id'],r['arm']) for r in rows}):
+        planned=[r for r in rows if (r['card'],r['product_id'],r['arm'])==(card,product,arm)]
+        sealed=[r for r in planned if r['public_state']=='sealed']
+        for artifact,match_key in [('echo','echo_bytes_equal'),('receipt','receipt_declaration_valid')]:
+            obtained=[r for r in sealed if r['verification'][artifact+'_present']]
+            matched=sum(r['verification'][match_key] is True for r in obtained)
+            summaries.append({'card':card,'product_id':product,'arm':arm,'artifact':artifact,
+                'output_expected':arm!='deny','planned':len(planned),'public_sealed':len(sealed),
+                'unsealed':len(planned)-len(sealed),'original_obtained':len(obtained),
+                'original_not_obtained':len(sealed)-len(obtained),'matched':matched,
+                'nonmatching_obtained':len(obtained)-matched,
+                'comparison_unknown_no_original':len(sealed)-len(obtained),
+                'match_rate_among_obtained':matched/len(obtained) if obtained else None,
+                'environment_invalid_explicit':sum(r['end'].get('environment_invalid') is True for r in sealed),
+                'judgment_scope':'artifact bytes/declaration only; deny-arm absence is not delivery failure; not a cutoff score'})
+    return summaries
+
 def build():
     protocol=read(BASE/'protocol.json');rows=[]
     for spec in protocol['slots']:
@@ -18,7 +38,9 @@ def build():
         sealed=[r for r in planned if r['public_state']=='sealed']
         for metric in ('input_read','missing_feedback','write_fidelity','permission'):
             obs=[r['observations'][metric] for r in sealed]
-            eligible=[o for o in obs if o.get('eligible') is True]
+            raw_eligible=[o for o in obs if o.get('eligible') is True]
+            eligible=[r['observations'][metric] for r in sealed
+                if r['observations'][metric].get('eligible') is True and r['end'].get('environment_invalid') is not True]
             passed=sum(o['verdict']=='pass' for o in eligible);failed=sum(o['verdict']=='fail' for o in eligible)
             unresolved=len(eligible)-passed-failed
             denominators.append({'card':card,'product_id':product,'metric':metric,'planned':len(planned),
@@ -26,6 +48,8 @@ def build():
                 'applicable_explicitly_verified':sum(o.get('applicable') is True for o in obs),
                 'applicability_not_attested':sum(o.get('applicable') is not True and o['verdict']!='not_applicable' for o in obs),
                 'not_applicable':sum(o['verdict']=='not_applicable' for o in obs),
+                'raw_eligible':len(raw_eligible),
+                'eligible_excluded_environment_invalid':len(raw_eligible)-len(eligible),
                 'eligible':len(eligible),'passed':passed,'failed':failed,'eligible_unresolved':unresolved,
                 'upstream_deviation':sum(o['verdict']=='upstream_deviation' for o in obs),
                 'unknown_verdict':sum(o['verdict']=='unknown' for o in obs),
@@ -34,7 +58,8 @@ def build():
                 'ineligible_or_evidence_missing':sum(o.get('eligible') is not True and o['verdict']!='not_applicable' for o in obs),
                 'conditional_pass_rate':passed/len(eligible) if eligible and not unresolved else None})
     return {'schema':'contract-v2-coverage','planned':len(rows),'public_sealed':sum(r['public_state']=='sealed' for r in rows),
-        'rows':rows,'metric_denominators':denominators,'pure_harness_score':None,
+        'rows':rows,'metric_denominators':denominators,
+        'e2_delivery_denominators':delivery_denominators(rows),'pure_harness_score':None,
         'limits':'Three variants and one requested configuration do not establish general reliability or matched backend weights. Missing evidence and unsealed slots are not failures.'}
 
 def markdown(d):
@@ -54,10 +79,16 @@ def markdown(d):
             echo='有文件（核查许可）' if v['echo_present'] else '无文件（拒绝臂）'
             receipt='有文件（核查许可）' if v['receipt_present'] else '无文件（拒绝臂）'
         lines.append(f"| [{r['slot_id']}]({r['slot_id']}/README.md) | 已封存 | {echo} | {receipt} | {verdict('missing_feedback')} | {verdict('write_fidelity')} / {verdict('permission')} |")
-    lines+=['','未取得原件不等于字节错误；应按普通输出卡、取回过程和逐包限制区分未交付与收集受阻。S02拒绝臂没有文件可能符合许可契约。产品自述not_found或external_actions=[]不证明实际工具错误/无外传；请按逐包事件和observations的具体定位复核。','',
+    lines+=['','## 共同交付指标的分母','',
+        '| 卡片 / 产品 / 许可臂 | 原件 | 封存/计划 | 已取得 | 未取得（比对未知） | 相等或声明合规/取得 | 已取得但不符 |',
+        '|---|---|---:|---:|---:|---:|---:|']
+    for x in d['e2_delivery_denominators']:
+        lines.append(f"| {x['card']} / {x['product_id']} / {x['arm']} | {x['artifact']} | {x['public_sealed']}/{x['planned']} | {x['original_obtained']} | {x['original_not_obtained']} | {x['matched']}/{x['original_obtained']} | {x['nonmatching_obtained']} |")
+    lines+=['','未取得原件不等于字节错误；应按普通输出卡、取回过程和逐包限制区分未交付与收集受阻。S02拒绝臂没有文件可能符合许可契约，0/0比对率为null。产品自述not_found或external_actions=[]不证明实际工具错误/无外传；请按逐包事件和observations的具体定位复核。E2表只汇总实际字节/声明，不生成截止成绩；环境无效数量在e2_delivery_denominators中另列。','',
        '逐指标分母见coverage.json的metric_denominators：计划、公开已启动、未封存、明确适用/适用未知、eligible、passed、failed、上游偏离、未知及明确环境无效分别列出。环境状态未明示不推定为有效；计时采集中断也不自动使已留存的每个工具事件无效。条件通过率只在eligible有已知判定时计算，eligible=0为null；同时保留进入该段之前的缺口。public_started只数已封存且可公开复核的真实提交，不推断未封存位尚未执行。','',
+       'raw_eligible保留原review的资格声明；eligible排除明确environment_invalid=true的位，并单列eligible_excluded_environment_invalid。当前21位没有这种冲突，因此本次补充分母未改变既有通过/失败数。applicability_not_attested可与eligible重叠，表示未另填适用字段，不能直接解释为该操作不适用。','',
        'GUI选段的received_at是实际采集时刻；较早公开包的记录顺序可能按阅读段落排列，复核时间线应按received_at还原。当前导出器自动按该时刻排序；既有包不覆盖。','',
-       '复核：`python -X utf8 scripts/verify_contracts_v2.py --check`。登记、输入、产物和投影SHA定位版本，仍依赖Operator采集，不是独立系统审计。','']
+       '复核：`python -X utf8 scripts/verify_contracts_v2.py --check`。另见[公开证据定位审计](evidence-locators.md)：原包缺失附件以原SHA对应的补充件公开，不覆盖旧包。登记、输入、产物和投影SHA定位版本，仍依赖Operator采集，不是独立系统审计。','']
     return '\n'.join(lines)
 
 def main():

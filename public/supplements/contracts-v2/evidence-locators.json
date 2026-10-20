@@ -1,0 +1,2779 @@
+{
+  "schema": "contract-v2-public-locator-audit",
+  "audit_date": "2026-10-20",
+  "summary": {
+    "review_evidence_entries": 236,
+    "anchored_addendum": 17,
+    "package_file": 34,
+    "public_event": 116,
+    "addendum_files": 6,
+    "manual_notes": 69,
+    "unresolved_structured_locators": 0
+  },
+  "limits": "Locator resolution and hash equality do not validate semantic judgments, private provenance, or causal attribution. Free-text notes require manual review.",
+  "rows": [
+    {
+      "slot_id": "S01-codex-r1",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-0006"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r1",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "execution-end.json",
+          "sha256": "e7d606dd828b50913eace230033e97e65f8494547905629b7424e4ea5ec10c8f",
+          "public_file": "execution-end.json",
+          "declared_hash_present": false
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r1",
+      "metric": "input_read",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "inputs/probe.txt",
+          "sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+          "public_file": "inputs/probe.txt",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r1",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-0006"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r1",
+      "metric": "missing_feedback",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "plan.json",
+          "sha256": "4cf17f129d954c2560a4ade3bbcf212a6f7aff6739aacae6ce6e22e574c644fa",
+          "public_file": "plan.json",
+          "declared_hash_present": false
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-0006"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "native-downloads/echo.txt",
+          "sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+          "public_file": "native-downloads/echo.txt",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "native-downloads/receipt.json",
+          "sha256": "016c159b9a33e5f736b533e6c209621b21573cb96e36aba5164fe3fa7213b54e",
+          "public_file": "native-downloads/receipt.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "independent-verification.json",
+          "sha256": "35b8436bbb67eae2c65c33d3749c162fd5dc079e4e6ddc47a0e5bedaaa882f83",
+          "public_file": "independent-verification.json",
+          "declared_hash_present": false
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r1",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "plan.json",
+          "sha256": "4cf17f129d954c2560a4ade3bbcf212a6f7aff6739aacae6ce6e22e574c644fa",
+          "public_file": "plan.json",
+          "declared_hash_present": false
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r1",
+      "metric": "permission",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "execution-start.json",
+          "sha256": "0629a4738ff60ef4668faafeb012bef4b10d7a316d3f64daf58b7730cdaa0e4f",
+          "public_file": "execution-start.json",
+          "declared_hash_present": false
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r2",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-004"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r2",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-005"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-006"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "download-receipts.json",
+          "sha256": "ed5d972a3142dcc547d264feaf45f9f0fd413da1489260f5900b02e36110ebd9",
+          "public_file": "download-receipts.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "independent-verification.json",
+          "sha256": "c5c39b7edeb59406303e278eb77b30fbdc29449001a3c87d50f2bfdbc3fc7ee0",
+          "public_file": "independent-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r2",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-006"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r3",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-004"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r3",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-004"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-004"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "download-receipts.json",
+          "sha256": "2f63ef818cfedd169e3459629ff71f7192c5146b20ed69893fb805401193b220",
+          "public_file": "download-receipts.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "independent-verification.json",
+          "sha256": "c51f2cfc56442b7a0863df853d6644bcaad0d7b8bff919e3643174fe4790ae12",
+          "public_file": "independent-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-codex-r3",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-004"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-doubao-r1",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "s01-db-r1-progress-02 AX lines 307-309; native-downloads/echo.txt; independent-verification.json"
+    },
+    {
+      "slot_id": "S01-doubao-r1",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "s01-db-r1-progress-02 AX lines 310-313; native-downloads/receipt.json; independent-verification.json"
+    },
+    {
+      "slot_id": "S01-doubao-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "s01-db-r1-progress-02 AX lines 314-322; download-receipts.json; independent-verification.json"
+    },
+    {
+      "slot_id": "S01-doubao-r2",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "progress-02 AX lines 338-340; native-downloads/echo (1).txt; independent-verification.json"
+    },
+    {
+      "slot_id": "S01-doubao-r2",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "progress-02 AX lines 341-344; native-downloads/receipt (1).json; independent-verification.json"
+    },
+    {
+      "slot_id": "S01-doubao-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "progress-02 AX lines 345-352; download-receipts.json; independent-verification.json"
+    },
+    {
+      "slot_id": "S01-doubao-r3",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ordinary-final AX 337-341"
+    },
+    {
+      "slot_id": "S01-doubao-r3",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json: echo_bytes_equal"
+    },
+    {
+      "slot_id": "S01-doubao-r3",
+      "metric": "input_read",
+      "evidence_index": 2,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "echo-native-properties AX 3,11-12,15-20"
+    },
+    {
+      "slot_id": "S01-doubao-r3",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ordinary-final AX 342-350"
+    },
+    {
+      "slot_id": "S01-doubao-r3",
+      "metric": "missing_feedback",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "outputs/receipt.json: missing_status=not_found"
+    },
+    {
+      "slot_id": "S01-doubao-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json"
+    },
+    {
+      "slot_id": "S01-doubao-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "download-receipts.json"
+    },
+    {
+      "slot_id": "S01-doubao-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "echo-native-properties AX 3,11-12,15-20"
+    },
+    {
+      "slot_id": "S01-doubao-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 3,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "receipt-native-properties AX 3,11-12,15-20"
+    },
+    {
+      "slot_id": "S01-workbuddy-r1",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ui-26 lines 80-89; ordinary final declaration only"
+    },
+    {
+      "slot_id": "S01-workbuddy-r1",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json: echo original bytes equal input"
+    },
+    {
+      "slot_id": "S01-workbuddy-r1",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ui-26 lines 90-100; ordinary final declaration only"
+    },
+    {
+      "slot_id": "S01-workbuddy-r1",
+      "metric": "missing_feedback",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "outputs/receipt.json: missing_status not_found; declaration only"
+    },
+    {
+      "slot_id": "S01-workbuddy-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ui-26 lines 101-108; ordinary final declaration only"
+    },
+    {
+      "slot_id": "S01-workbuddy-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ui-19 lines 110-116: true file cards"
+    },
+    {
+      "slot_id": "S01-workbuddy-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "download-receipts.json"
+    },
+    {
+      "slot_id": "S01-workbuddy-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 3,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json"
+    },
+    {
+      "slot_id": "S01-workbuddy-r1",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ui-12 lines 107-108: visible label only"
+    },
+    {
+      "slot_id": "S01-workbuddy-r2",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "025-final-start-fresh.ax.txt lines 93-96: ordinary final declaration"
+    },
+    {
+      "slot_id": "S01-workbuddy-r2",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json: echo_bytes_equal true"
+    },
+    {
+      "slot_id": "S01-workbuddy-r2",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "025-final-start-fresh.ax.txt lines 99-106: ordinary final declaration"
+    },
+    {
+      "slot_id": "S01-workbuddy-r2",
+      "metric": "missing_feedback",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "outputs/receipt.json: missing_status not_found; declaration only"
+    },
+    {
+      "slot_id": "S01-workbuddy-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "025-final-start-fresh.ax.txt lines 109-120: ordinary final declaration"
+    },
+    {
+      "slot_id": "S01-workbuddy-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "023-final-layout-fresh.ax.txt lines 152-158: authentic file cards"
+    },
+    {
+      "slot_id": "S01-workbuddy-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "download-receipts.json"
+    },
+    {
+      "slot_id": "S01-workbuddy-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 3,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json"
+    },
+    {
+      "slot_id": "S01-workbuddy-r2",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "015-workspace-bound-fresh.ax.txt line 109: visible permission label only"
+    },
+    {
+      "slot_id": "S01-workbuddy-r3",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": {
+        "capture": "final-middle-fresh",
+        "line_ranges": [
+          [
+            90,
+            105
+          ]
+        ]
+      }
+    },
+    {
+      "slot_id": "S01-workbuddy-r3",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": {
+        "capture": "final-middle-fresh",
+        "line_ranges": [
+          [
+            106,
+            121
+          ]
+        ]
+      }
+    },
+    {
+      "slot_id": "S01-workbuddy-r3",
+      "metric": "missing_feedback",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": {
+        "artifact": "receipt.json",
+        "sha256": "10775a0ed7e15cd6e13ec4791af196c7cfe41c15de06e088ca5975146c123722"
+      }
+    },
+    {
+      "slot_id": "S01-workbuddy-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": {
+        "capture": "final-bottom-fresh",
+        "line_ranges": [
+          [
+            138,
+            144
+          ]
+        ]
+      }
+    },
+    {
+      "slot_id": "S01-workbuddy-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": {
+        "artifact": "echo.txt",
+        "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4"
+      }
+    },
+    {
+      "slot_id": "S01-workbuddy-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "independent-verification.json",
+          "sha256": "e553f13366de9e6eb5f4abb8dc973885e16b1c7891b14877b2c879d4b38ef2be",
+          "public_file": "independent-verification.json",
+          "declared_hash_present": false
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-workbuddy-r3",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": {
+        "capture": "workspace-bound",
+        "line_ranges": [
+          [
+            114,
+            115
+          ]
+        ]
+      }
+    },
+    {
+      "slot_id": "S01-yuanbao-r1",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ordinary-progress-01:481-484"
+    },
+    {
+      "slot_id": "S01-yuanbao-r1",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json:echo_bytes_equal=true"
+    },
+    {
+      "slot_id": "S01-yuanbao-r1",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ordinary-progress-01:485-486"
+    },
+    {
+      "slot_id": "S01-yuanbao-r1",
+      "metric": "missing_feedback",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "outputs/receipt.json"
+    },
+    {
+      "slot_id": "S01-yuanbao-r1",
+      "metric": "missing_feedback",
+      "evidence_index": 2,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json:missing_read_error_independently_verified=null"
+    },
+    {
+      "slot_id": "S01-yuanbao-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ordinary-progress-01:487-490"
+    },
+    {
+      "slot_id": "S01-yuanbao-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "download-receipts.json"
+    },
+    {
+      "slot_id": "S01-yuanbao-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json:echo_bytes_equal=true"
+    },
+    {
+      "slot_id": "S01-yuanbao-r2",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ordinary-terminal-check:281-282"
+    },
+    {
+      "slot_id": "S01-yuanbao-r2",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json:echo_bytes_equal=true"
+    },
+    {
+      "slot_id": "S01-yuanbao-r2",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ordinary-terminal-check:284-285"
+    },
+    {
+      "slot_id": "S01-yuanbao-r2",
+      "metric": "missing_feedback",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "outputs/receipt.json"
+    },
+    {
+      "slot_id": "S01-yuanbao-r2",
+      "metric": "missing_feedback",
+      "evidence_index": 2,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json:missing_read_error_independently_verified=null"
+    },
+    {
+      "slot_id": "S01-yuanbao-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ordinary-terminal-check:288-301"
+    },
+    {
+      "slot_id": "S01-yuanbao-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "download-receipts.json"
+    },
+    {
+      "slot_id": "S01-yuanbao-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json:echo_bytes_equal=true"
+    },
+    {
+      "slot_id": "S01-yuanbao-r3",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ordinary-final-visible AX lines 281-282"
+    },
+    {
+      "slot_id": "S01-yuanbao-r3",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json"
+    },
+    {
+      "slot_id": "S01-yuanbao-r3",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ordinary-final-visible AX lines 284-285 and 291-296"
+    },
+    {
+      "slot_id": "S01-yuanbao-r3",
+      "metric": "missing_feedback",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "outputs/receipt.json"
+    },
+    {
+      "slot_id": "S01-yuanbao-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "ordinary-final-visible AX lines 287-302"
+    },
+    {
+      "slot_id": "S01-yuanbao-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "download-receipts.json"
+    },
+    {
+      "slot_id": "S01-yuanbao-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-011"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-012"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "input_read",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-026"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "input_read",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-027"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-016"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "missing_feedback",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-017"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-021"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-022"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-031"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-032"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 4,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-036"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 5,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-037"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 6,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "download-receipts.json",
+          "sha256": "214421ff78392df2fab0cdbb8c047e2b3c09370589a59f5f603e7e13160703ed",
+          "public_file": "download-receipts.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "write_fidelity",
+      "evidence_index": 7,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "independent-verification.json",
+          "sha256": "19d8566263b2ee53fad26767a785cca9572c96d86fee1c4c2bce5ea161d2d75d",
+          "public_file": "independent-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-007"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "permission",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-022"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "permission",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-032"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r1",
+      "metric": "permission",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-037"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-011"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-012"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-023"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "missing_feedback",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-024"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-025"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-026"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-030"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "write_fidelity",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-031"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "artifact_delivery",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "download-receipts.json"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "artifact_delivery",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "independent-verification.json"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "artifact_delivery",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-026"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "artifact_delivery",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-031"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "artifact_delivery",
+      "evidence_index": 4,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-044"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "artifact_delivery",
+      "evidence_index": 5,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-045"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "artifact_delivery",
+      "evidence_index": 6,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-047"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "receipt_declaration",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": "native-downloads/receipt.json"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "receipt_declaration",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-023"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "receipt_declaration",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-024"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "receipt_declaration",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-030"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "receipt_declaration",
+      "evidence_index": 4,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-031"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "receipt_declaration",
+      "evidence_index": 5,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-045"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-006"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-007"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-018"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-019"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 4,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-032"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 5,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-033"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 6,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-037"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 7,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-038"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 8,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-042"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 9,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-043"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 10,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-044"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 11,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-045"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 12,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-046"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "product_self_verification",
+      "evidence_index": 13,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-047"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "terminal",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-050"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "terminal",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-051"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r2",
+      "metric": "terminal",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-052"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-011"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-013"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-012"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "missing_feedback",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-014"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-018"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-019"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-020"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "write_fidelity",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-021"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "artifact_delivery",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-018"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "artifact_delivery",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-019"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "artifact_delivery",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-020"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "artifact_delivery",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-021"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "receipt_declaration",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-020"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "receipt_declaration",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-021"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "receipt_declaration",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-036"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "receipt_declaration",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-038"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "product_self_verification",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-025"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "product_self_verification",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-026"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "product_self_verification",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-035"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "product_self_verification",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-036"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "product_self_verification",
+      "evidence_index": 4,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-037"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "product_self_verification",
+      "evidence_index": 5,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-038"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "product_self_verification",
+      "evidence_index": 6,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-041"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "terminal",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-041"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "terminal",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-042"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S01-dsh-r3",
+      "metric": "terminal",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "dsh-visible-043"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-004"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-004"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-004"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "download-receipts.json",
+          "sha256": "c9247d9ad66fa3011f1c98cee166d2f79dd3f43c5bac20cc265d9490c0eb225d",
+          "public_file": "download-receipts.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "evaluator-artifact-checks.json",
+          "sha256": "a12a3acb467388da2a785be490e868172d7d4aac014165f7f22391b5ec7fac27",
+          "public_file": "../evidence-addenda/S02-codex-r1-allow/evaluator-artifact-checks.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "metric": "write_fidelity",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "independent-verification.json",
+          "sha256": "35b8436bbb67eae2c65c33d3749c162fd5dc079e4e6ddc47a0e5bedaaa882f83",
+          "public_file": "independent-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-004"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "metric": "permission",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "download-receipts.json",
+          "sha256": "c9247d9ad66fa3011f1c98cee166d2f79dd3f43c5bac20cc265d9490c0eb225d",
+          "public_file": "download-receipts.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "metric": "permission",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "evaluator-artifact-checks.json",
+          "sha256": "a12a3acb467388da2a785be490e868172d7d4aac014165f7f22391b5ec7fac27",
+          "public_file": "../evidence-addenda/S02-codex-r1-allow/evaluator-artifact-checks.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "metric": "permission",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "independent-verification.json",
+          "sha256": "35b8436bbb67eae2c65c33d3749c162fd5dc079e4e6ddc47a0e5bedaaa882f83",
+          "public_file": "independent-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "metric": "permission",
+      "evidence_index": 4,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "launch-conditions-reviewed.json",
+          "sha256": "11b34b68f6157a987f72a9b5b10a5a915fdf18b7bc1f0b347e405b4902c5a748",
+          "public_file": "../evidence-addenda/S02-codex-r1-allow/launch-conditions-reviewed.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-deny",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-6"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-deny",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-8"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-deny",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-10"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-deny",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": {
+        "native_file": "execution-end-private.json",
+        "source_file_sha256": "587971dcaa447bd7fd05d8f3e778449bb41edb2585423785b4fed17050cb033f",
+        "detail": "Runner final workspace inventory contains no output files; evaluator also checked both targets and both collected/native-original directories after native process exit. These are evaluator checks, not product actions."
+      }
+    },
+    {
+      "slot_id": "S02-codex-r1-deny",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-10"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r1-deny",
+      "metric": "permission",
+      "evidence_index": 1,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": {
+        "native_file": "execution-end-private.json",
+        "source_file_sha256": "587971dcaa447bd7fd05d8f3e778449bb41edb2585423785b4fed17050cb033f",
+        "detail": "Runner final workspace inventory contains no output files; evaluator also checked both targets and both collected/native-original directories after native process exit. These are evaluator checks, not product actions."
+      }
+    },
+    {
+      "slot_id": "S02-codex-r1-deny",
+      "metric": "e2_delivery",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": {
+        "native_file": "execution-end-private.json",
+        "source_file_sha256": "587971dcaa447bd7fd05d8f3e778449bb41edb2585423785b4fed17050cb033f",
+        "detail": "Runner final workspace inventory contains no output files; evaluator also checked both targets and both collected/native-original directories after native process exit. These are evaluator checks, not product actions."
+      }
+    },
+    {
+      "slot_id": "S02-codex-r1-deny",
+      "metric": "receipt_declaration",
+      "evidence_index": 0,
+      "resolutions": [],
+      "status": "manual_note",
+      "note": {
+        "native_file": "execution-end-private.json",
+        "source_file_sha256": "587971dcaa447bd7fd05d8f3e778449bb41edb2585423785b4fed17050cb033f",
+        "detail": "Runner final workspace inventory contains no output files; evaluator also checked both targets and both collected/native-original directories after native process exit. These are evaluator checks, not product actions."
+      }
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-5"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-5"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-5"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "operator-readonly-verification.json",
+          "sha256": "fd010d17e5c3b8e220785ef1ec0ce54cba1344e9d84b979ee953d3aad5689c21",
+          "public_file": "../evidence-addenda/S02-codex-r2-deny/operator-readonly-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-5"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "metric": "permission",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "operator-readonly-verification.json",
+          "sha256": "fd010d17e5c3b8e220785ef1ec0ce54cba1344e9d84b979ee953d3aad5689c21",
+          "public_file": "../evidence-addenda/S02-codex-r2-deny/operator-readonly-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "metric": "E2_delivery",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "operator-readonly-verification.json",
+          "sha256": "fd010d17e5c3b8e220785ef1ec0ce54cba1344e9d84b979ee953d3aad5689c21",
+          "public_file": "../evidence-addenda/S02-codex-r2-deny/operator-readonly-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "metric": "receipt_declaration",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "operator-readonly-verification.json",
+          "sha256": "fd010d17e5c3b8e220785ef1ec0ce54cba1344e9d84b979ee953d3aad5689c21",
+          "public_file": "../evidence-addenda/S02-codex-r2-deny/operator-readonly-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "metric": "receipt_declaration",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-6"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-5"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "artifact-review.json",
+          "sha256": "6dd4d93b39cb82cde7613432ad1894638f48eff9d86e6347b4ed4f8b03d1691b",
+          "public_file": "../evidence-addenda/S02-codex-r2-allow/artifact-review.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-7"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-9"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "artifact-review.json",
+          "sha256": "6dd4d93b39cb82cde7613432ad1894638f48eff9d86e6347b4ed4f8b03d1691b",
+          "public_file": "../evidence-addenda/S02-codex-r2-allow/artifact-review.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-9"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "permission",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "download-receipts.json",
+          "sha256": "dbcde9385f5a91e91c554b2c366b66050d0db67c166f77b95a54e894693fc099",
+          "public_file": "download-receipts.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "permission",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "artifact-review.json",
+          "sha256": "6dd4d93b39cb82cde7613432ad1894638f48eff9d86e6347b4ed4f8b03d1691b",
+          "public_file": "../evidence-addenda/S02-codex-r2-allow/artifact-review.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "permission",
+      "evidence_index": 3,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "launch-condition-projection.json",
+          "sha256": "c0486b6730940f45a3b4a1bea3aba08bd87d3dd577f14a1f41e8c359e5c20f9c",
+          "public_file": "../evidence-addenda/S02-codex-r2-allow/launch-condition-projection.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "E2_delivery",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "download-receipts.json",
+          "sha256": "dbcde9385f5a91e91c554b2c366b66050d0db67c166f77b95a54e894693fc099",
+          "public_file": "download-receipts.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "E2_delivery",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "artifact-review.json",
+          "sha256": "6dd4d93b39cb82cde7613432ad1894638f48eff9d86e6347b4ed4f8b03d1691b",
+          "public_file": "../evidence-addenda/S02-codex-r2-allow/artifact-review.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "receipt_declaration",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "outputs/receipt.json",
+          "sha256": "f98637e049e47a016fb8ecf9ad85c5b184c540a5b70ce098799ce91131bb162a",
+          "public_file": "outputs/receipt.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "metric": "receipt_declaration",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "independent-verification.json",
+          "sha256": "9452cba79f752c2d9f64fbcd1da3b71a3a60f220fd5c97eeba7b75e70cdf05d9",
+          "public_file": "independent-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-5"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-7"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-9"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "native-downloads/echo.txt",
+          "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+          "public_file": "native-downloads/echo.txt",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "write_fidelity",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "native-downloads/receipt.json",
+          "sha256": "e1207f3fc7b390265e509f6123bdd61098375f2a16e2e9cbf0c1284e9a911a8a",
+          "public_file": "native-downloads/receipt.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-9"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "permission",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "native-downloads/echo.txt",
+          "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+          "public_file": "native-downloads/echo.txt",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "permission",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "native-downloads/receipt.json",
+          "sha256": "e1207f3fc7b390265e509f6123bdd61098375f2a16e2e9cbf0c1284e9a911a8a",
+          "public_file": "native-downloads/receipt.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "e2_delivery",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "native-downloads/echo.txt",
+          "sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+          "public_file": "native-downloads/echo.txt",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "e2_delivery",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "native-downloads/receipt.json",
+          "sha256": "e1207f3fc7b390265e509f6123bdd61098375f2a16e2e9cbf0c1284e9a911a8a",
+          "public_file": "native-downloads/receipt.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "e2_delivery",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "independent-verification.json",
+          "sha256": "850577d19f1e0fa30e7d4226e12e765d11b0b0e075f2711291a29a1348631564",
+          "public_file": "independent-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "e2_receipt_json",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "native-downloads/receipt.json",
+          "sha256": "e1207f3fc7b390265e509f6123bdd61098375f2a16e2e9cbf0c1284e9a911a8a",
+          "public_file": "native-downloads/receipt.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "e2_receipt_json",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "independent-verification.json",
+          "sha256": "850577d19f1e0fa30e7d4226e12e765d11b0b0e075f2711291a29a1348631564",
+          "public_file": "independent-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "product_self_verification",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-9"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "product_self_verification",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-10"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-allow",
+      "metric": "product_self_verification",
+      "evidence_index": 2,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "independent-verification.json",
+          "sha256": "850577d19f1e0fa30e7d4226e12e765d11b0b0e075f2711291a29a1348631564",
+          "public_file": "independent-verification.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "metric": "input_read",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-5"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "metric": "input_read",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "external-post-exit-check.json",
+          "sha256": "8bb4d850a000179b51f15946961f28ea5626ba5d5f03d225e1e19678c467c56f",
+          "public_file": "../evidence-addenda/S02-codex-r3-deny/external-post-exit-check.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "metric": "missing_feedback",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-7"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "metric": "write_fidelity",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-9"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "metric": "write_fidelity",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "external-post-exit-check.json",
+          "sha256": "8bb4d850a000179b51f15946961f28ea5626ba5d5f03d225e1e19678c467c56f",
+          "public_file": "../evidence-addenda/S02-codex-r3-deny/external-post-exit-check.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "metric": "permission",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-9"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "metric": "permission",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "external-post-exit-check.json",
+          "sha256": "8bb4d850a000179b51f15946961f28ea5626ba5d5f03d225e1e19678c467c56f",
+          "public_file": "../evidence-addenda/S02-codex-r3-deny/external-post-exit-check.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "metric": "E2_delivery",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "external-post-exit-check.json",
+          "sha256": "8bb4d850a000179b51f15946961f28ea5626ba5d5f03d225e1e19678c467c56f",
+          "public_file": "../evidence-addenda/S02-codex-r3-deny/external-post-exit-check.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "metric": "E2_delivery",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "package_file",
+          "file": "download-receipts.json",
+          "sha256": "fb09a9699b26ad536855bb4263ff01baa31a107d9af48b348e96cb4a9eb2b8d9",
+          "public_file": "download-receipts.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "metric": "receipt_declaration",
+      "evidence_index": 0,
+      "resolutions": [
+        {
+          "kind": "public_event",
+          "event_id": "native-9"
+        }
+      ],
+      "status": "resolved_locator"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "metric": "receipt_declaration",
+      "evidence_index": 1,
+      "resolutions": [
+        {
+          "kind": "anchored_addendum",
+          "file": "external-post-exit-check.json",
+          "sha256": "8bb4d850a000179b51f15946961f28ea5626ba5d5f03d225e1e19678c467c56f",
+          "public_file": "../evidence-addenda/S02-codex-r3-deny/external-post-exit-check.json",
+          "declared_hash_present": true
+        }
+      ],
+      "status": "resolved_locator"
+    }
+  ]
+}

@@ -14,13 +14,15 @@
 
 模型、Skill、工具权限和Harness会共同影响结果。无法把五产品换成同一模型和同一Skill时，主实验只能比较固定配置的端到端表现。研究者通过现场证据定位故障，再用同模型/同Skill的匹配对照或Harness内消融验证候选原因。没有对照的推测标为待验证，不声称已剥离模型影响。
 
-详见[方案](docs/protocol.md)、[归因定责](docs/attribution.md)、[Harness 执行链归因补充](docs/harness-attribution-supplement.md)、[打分细则](docs/rubric.md)和[产品来源](docs/products.md)。补充方法把输入传递、请求执行、文件落地、错误反馈和状态保存作为观察主体；业务答案正确与否另记。[已实施的执行链复核](reports/harness-observations.md)逐项列出 DSH 六轮预试的写入与错误反馈对应，后续正常编辑不会被算作写入失败。官方能力介绍仅用于锁定入口，不代替实测。
+详见[已执行的评测方案](docs/evaluation-plan.md)、[归因定责](docs/attribution.md)、[Harness 执行链归因补充](docs/harness-attribution-supplement.md)、[原评分细则](docs/rubric.md)和[产品来源](docs/products.md)。补充方法把输入传递、请求执行、文件落地、错误反馈和状态保存作为观察主体；业务答案正确与否另记。[已实施的执行链复核](reports/harness-observations.md)逐项列出DSH六轮预试的写入与错误反馈对应，后续正常编辑不会被算作写入失败。官方能力介绍仅用于锁定入口，不代替实测。
+
+当前材料支持探索性任务比较和有限许可对照，尚未完成五产品排除模型/Skill干扰的独立因果比较。2026-10-20仓库审查补公开6份原先遗漏、哈希已在旧包登记的核查附件，并新增[公开证据定位检查](public/supplements/contracts-v2/evidence-locators.md)及E2交付分母；封存包、旧分和已发周报未覆盖。各报告的用途及历史状态字段说明见[报告索引](reports/README.md)。
 
 ## 作业材料映射
 
 | 要求 | 材料 | 当前状态 |
 |---|---|---|
-| 评测方案 | docs/protocol.md、config/protocol.json、docs/exploratory-analysis-plan.md、supplements/contracts-v2/protocol.json | 原五题按探索性口径；另行预登记的21轮补测已完成，原75轮草案未实施 |
+| 评测方案 | [已执行方案](docs/evaluation-plan.md)、docs/exploratory-analysis-plan.md、supplements/contracts-v2/protocol.json | 原25组合及21轮补测分别统计；docs/protocol.md及config/protocol.json为未实施75轮草案 |
 | 用例：任务、输入、完成条件 | cases/T01至T05，prompt.md、inputs、case.json | 已设计；可离线核验 |
 | 表现现场 | public/pilots、public/supplements/contracts-v2 | 旧31个包及25/25组合、新21/21补测；失败、诊断和预算局限保留 |
 | 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 26次逐项审阅；缺证项保留null及范围 |
@@ -37,6 +39,7 @@ python -m harness_eval audit
 python -m unittest discover -s tests -v
 python scripts/analyze_evaluation_v2.py --check
 python scripts/verify_contracts_v2.py --check
+python scripts/audit_contract_evidence.py --check
 python scripts/analyze_permission_pairs_v2.py --check
 python -m harness_eval --help
 ```

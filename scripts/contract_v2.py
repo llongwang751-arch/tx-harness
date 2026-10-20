@@ -116,6 +116,16 @@ def export(s):
         if not original.resolve().is_relative_to(p.resolve()) or not original.is_file():raise ValueError('Invalid original path')
         if sha(original)!=sha(p/'outputs'/logical) or a['sha256']!=sha(original):raise ValueError('Original bytes do not match')
         safe_public_text(json.dumps(a,ensure_ascii=False))
+    # Attachments are never inferred from private provenance descriptors. A new
+    # export must explicitly list privacy-reviewed files before publication.
+    from audit_contract_evidence import attachment_plan,audit_package
+    published={'inputs/probe.txt','submitted-prompt.txt','review.json','execution-start.json','execution-end.json','plan.json',
+        'download-receipts.json','verification.json','visible-events.jsonl','metadata.json','README.md','manifest.json'}
+    if (p/'independent-verification.json').is_file():published.add('independent-verification.json')
+    if (p/'reviewed-native-events.jsonl').is_file():published.add('reviewed-native-events.jsonl')
+    published.update('outputs/'+name for name in inventory(p/'outputs'))
+    published.update('native-downloads/'+Path(a['native_file']).name for a in native['artifacts'])
+    attachments=attachment_plan(p,review,published)
     d.mkdir(parents=True);(d/'inputs').mkdir();(d/'native-downloads').mkdir();(d/'outputs').mkdir()
     shutil.copyfile(fixture/'probe.txt',d/'inputs/probe.txt');shutil.copyfile(p/'submitted-prompt.txt',d/'submitted-prompt.txt')
     for a in native['artifacts']:
@@ -132,6 +142,8 @@ def export(s):
     if (p/'independent-verification.json').exists():
         safe_public_text((p/'independent-verification.json').read_text(encoding='utf-8'))
         shutil.copyfile(p/'independent-verification.json',d/'independent-verification.json')
+    for name,source in attachments.items():
+        target=d/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,target)
     save(d/'download-receipts.json',native);save(d/'verification.json',verification)
     (d/'visible-events.jsonl').write_text(''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in records),encoding='utf-8',newline='\n')
     if (p/'reviewed-native-events.jsonl').exists():
@@ -146,6 +158,7 @@ def export(s):
         'confidence':'High for unchanged original bytes and deterministic comparison; UI provenance relies on reviewed native observations; causation unresolved'})
     (d/'README.md').write_text(f'# {s}\n\n独立登记的固定文件契约补测。原件和普通可见证据支持范围见review、计时及收据；声明不替代实际工具反馈。\n\n复核：`python -X utf8 scripts/contract_v2.py verify --slot {s}`。没有综合或纯Harness分。\n',encoding='utf-8',newline='\n')
     save(d/'manifest.json',inventory(d))
+    audit_package(d,{})
     return {'exported':s,**verification}
 
 def verify_public(s):

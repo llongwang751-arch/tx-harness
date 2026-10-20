@@ -16,5 +16,6 @@ jobs:
       - run: python scripts/verify_public_pilots.py
       - run: python scripts/analyze_evaluation_v2.py --check
       - run: python scripts/verify_contracts_v2.py --check
+      - run: python scripts/audit_contract_evidence.py --check
       - run: python scripts/analyze_permission_pairs_v2.py --check
       - run: python -m unittest discover -s tests -v

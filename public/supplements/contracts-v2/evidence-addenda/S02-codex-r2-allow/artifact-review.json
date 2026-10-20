@@ -1,0 +1,46 @@
+{
+  "reviewed_at": "2026-10-16T09:49:50.974945+00:00",
+  "actor": "Operator/agent",
+  "action_scope": "Read-only evaluator verification; not a product action",
+  "verification_function": "contract_v2.verify_outputs",
+  "results": {
+    "echo_present": true,
+    "echo_bytes_equal": true,
+    "input_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+    "echo_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+    "receipt_present": true,
+    "receipt_declaration_valid": true,
+    "receipt_sha256": "f98637e049e47a016fb8ecf9ad85c5b184c540a5b70ce098799ce91131bb162a",
+    "receipt_parse_error": null,
+    "declared_missing_status": "not_found",
+    "missing_read_error_independently_verified": null,
+    "extra_output_paths": [],
+    "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+  },
+  "artifacts": [
+    {
+      "logical_output": "echo.txt",
+      "native_file": "native-downloads/echo.txt",
+      "origin": "native_local_file",
+      "native_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+      "collected_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+      "participant_source_sha256": "993890b7f540b5e97dfa15930b1b21b027b4c254e3c8535585271720049d3600",
+      "all_three_byte_equal": true,
+      "bytes": 91
+    },
+    {
+      "logical_output": "receipt.json",
+      "native_file": "native-downloads/receipt.json",
+      "origin": "native_local_file",
+      "native_sha256": "f98637e049e47a016fb8ecf9ad85c5b184c540a5b70ce098799ce91131bb162a",
+      "collected_sha256": "f98637e049e47a016fb8ecf9ad85c5b184c540a5b70ce098799ce91131bb162a",
+      "participant_source_sha256": "f98637e049e47a016fb8ecf9ad85c5b184c540a5b70ce098799ce91131bb162a",
+      "all_three_byte_equal": true,
+      "bytes": 126
+    }
+  ],
+  "input_unchanged_and_fixture_equal": true,
+  "submitted_prompt_fixture_equal": true,
+  "native_originals_modified": false,
+  "extra_output_paths": []
+}

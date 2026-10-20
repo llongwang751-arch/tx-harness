@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-10-16T09:29:43.724Z",
+  "check_actor": "Operator/agent",
+  "check_scope": "Read-only evaluator checks; not product self-validation",
+  "artifacts": [
+    {
+      "logical_output": "echo.txt",
+      "origin": "native_local_file",
+      "native_file": "native-downloads/echo.txt",
+      "bytes": 91,
+      "sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+      "receipt_sha256_matches": true,
+      "native_original_matches_collected_output": true,
+      "native_original_matches_participant_output": true,
+      "utf8_bom": false,
+      "lf_count": 3,
+      "crlf_count": 0,
+      "ends_with_lf": true
+    },
+    {
+      "logical_output": "receipt.json",
+      "origin": "native_local_file",
+      "native_file": "native-downloads/receipt.json",
+      "bytes": 126,
+      "sha256": "016c159b9a33e5f736b533e6c209621b21573cb96e36aba5164fe3fa7213b54e",
+      "receipt_sha256_matches": true,
+      "native_original_matches_collected_output": true,
+      "native_original_matches_participant_output": true,
+      "utf8_bom": false,
+      "lf_count": 0,
+      "crlf_count": 0,
+      "ends_with_lf": false
+    }
+  ],
+  "verification": {
+    "echo_present": true,
+    "echo_bytes_equal": true,
+    "input_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+    "echo_sha256": "b8922bc87f45c24592502f89da9a17b0300c79940eb69d61507a7aa421acbf81",
+    "receipt_present": true,
+    "receipt_declaration_valid": true,
+    "receipt_sha256": "016c159b9a33e5f736b533e6c209621b21573cb96e36aba5164fe3fa7213b54e",
+    "receipt_parse_error": null,
+    "declared_missing_status": "not_found",
+    "missing_read_error_independently_verified": null,
+    "extra_output_paths": [],
+    "limitation": "Receipt content is a declaration; a true read error requires paired ordinary native request/result evidence. No total or causal score."
+  },
+  "verification_matches_runner_record": true,
+  "input_matches_frozen_fixture": true,
+  "submitted_prompt_matches_frozen_fixture": true,
+  "missing_absent_after_execution": true,
+  "participant_outputs_only_expected": true
+}

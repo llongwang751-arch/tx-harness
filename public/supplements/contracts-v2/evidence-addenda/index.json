@@ -1,0 +1,50 @@
+{
+  "schema": "contract-v2-evidence-addenda",
+  "published_on": "2026-10-20",
+  "sealed_source_commit": "3d1c7b931b08f62cf4333797b98587c91d17b0dc",
+  "reason": "Previously omitted reviewed attachments; byte-identical to hashes already in sealed metadata and review. Original packages and verdicts unchanged.",
+  "files": [
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "referenced_file": "evaluator-artifact-checks.json",
+      "public_file": "S02-codex-r1-allow/evaluator-artifact-checks.json",
+      "sha256": "a12a3acb467388da2a785be490e868172d7d4aac014165f7f22391b5ec7fac27",
+      "source_metadata_sha256": "e0aded9e6b125e9070802b743c88c2880c73656b0f27054a4894f05fdf274f67"
+    },
+    {
+      "slot_id": "S02-codex-r1-allow",
+      "referenced_file": "launch-conditions-reviewed.json",
+      "public_file": "S02-codex-r1-allow/launch-conditions-reviewed.json",
+      "sha256": "11b34b68f6157a987f72a9b5b10a5a915fdf18b7bc1f0b347e405b4902c5a748",
+      "source_metadata_sha256": "e0aded9e6b125e9070802b743c88c2880c73656b0f27054a4894f05fdf274f67"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "referenced_file": "artifact-review.json",
+      "public_file": "S02-codex-r2-allow/artifact-review.json",
+      "sha256": "6dd4d93b39cb82cde7613432ad1894638f48eff9d86e6347b4ed4f8b03d1691b",
+      "source_metadata_sha256": "36bdaafa0c367ac0a9989546451b8c92be4937720b62329b3e941875174b8333"
+    },
+    {
+      "slot_id": "S02-codex-r2-allow",
+      "referenced_file": "launch-condition-projection.json",
+      "public_file": "S02-codex-r2-allow/launch-condition-projection.json",
+      "sha256": "c0486b6730940f45a3b4a1bea3aba08bd87d3dd577f14a1f41e8c359e5c20f9c",
+      "source_metadata_sha256": "36bdaafa0c367ac0a9989546451b8c92be4937720b62329b3e941875174b8333"
+    },
+    {
+      "slot_id": "S02-codex-r2-deny",
+      "referenced_file": "operator-readonly-verification.json",
+      "public_file": "S02-codex-r2-deny/operator-readonly-verification.json",
+      "sha256": "fd010d17e5c3b8e220785ef1ec0ce54cba1344e9d84b979ee953d3aad5689c21",
+      "source_metadata_sha256": "8fed311f327ce8bacc827ead544121a3916bd20689a8f4ac05f081a0fb4c0d83"
+    },
+    {
+      "slot_id": "S02-codex-r3-deny",
+      "referenced_file": "external-post-exit-check.json",
+      "public_file": "S02-codex-r3-deny/external-post-exit-check.json",
+      "sha256": "8bb4d850a000179b51f15946961f28ea5626ba5d5f03d225e1e19678c467c56f",
+      "source_metadata_sha256": "2a6a4e78d34d5dc768f6ae18a1df1ba46f984ac77fec18d5a221bc3732a555d6"
+    }
+  ]
+}

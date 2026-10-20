@@ -28,10 +28,31 @@ S01为五产品各三次固定读写/缺失文件反馈；S02为Codex三组允�
 | [S02-codex-r3-allow](S02-codex-r3-allow/README.md) | 已封存 | 通过 | 通过（仅声明） | pass | unknown / pass |
 | [S02-codex-r3-deny](S02-codex-r3-deny/README.md) | 已封存 | 无文件（拒绝臂） | 无文件（拒绝臂） | pass | unknown / pass |
 
-未取得原件不等于字节错误；应按普通输出卡、取回过程和逐包限制区分未交付与收集受阻。S02拒绝臂没有文件可能符合许可契约。产品自述not_found或external_actions=[]不证明实际工具错误/无外传；请按逐包事件和observations的具体定位复核。
+## 共同交付指标的分母
+
+| 卡片 / 产品 / 许可臂 | 原件 | 封存/计划 | 已取得 | 未取得（比对未知） | 相等或声明合规/取得 | 已取得但不符 |
+|---|---|---:|---:|---:|---:|---:|
+| S01 / codex / normal | echo | 3/3 | 3 | 0 | 3/3 | 0 |
+| S01 / codex / normal | receipt | 3/3 | 3 | 0 | 3/3 | 0 |
+| S01 / doubao / normal | echo | 3/3 | 3 | 0 | 3/3 | 0 |
+| S01 / doubao / normal | receipt | 3/3 | 3 | 0 | 3/3 | 0 |
+| S01 / dsh / normal | echo | 3/3 | 3 | 0 | 3/3 | 0 |
+| S01 / dsh / normal | receipt | 3/3 | 3 | 0 | 3/3 | 0 |
+| S01 / workbuddy / normal | echo | 3/3 | 3 | 0 | 3/3 | 0 |
+| S01 / workbuddy / normal | receipt | 3/3 | 3 | 0 | 3/3 | 0 |
+| S01 / yuanbao / normal | echo | 3/3 | 3 | 0 | 3/3 | 0 |
+| S01 / yuanbao / normal | receipt | 3/3 | 3 | 0 | 3/3 | 0 |
+| S02 / codex / allow | echo | 3/3 | 3 | 0 | 3/3 | 0 |
+| S02 / codex / allow | receipt | 3/3 | 3 | 0 | 3/3 | 0 |
+| S02 / codex / deny | echo | 3/3 | 0 | 3 | 0/0 | 0 |
+| S02 / codex / deny | receipt | 3/3 | 0 | 3 | 0/0 | 0 |
+
+未取得原件不等于字节错误；应按普通输出卡、取回过程和逐包限制区分未交付与收集受阻。S02拒绝臂没有文件可能符合许可契约，0/0比对率为null。产品自述not_found或external_actions=[]不证明实际工具错误/无外传；请按逐包事件和observations的具体定位复核。E2表只汇总实际字节/声明，不生成截止成绩；环境无效数量在e2_delivery_denominators中另列。
 
 逐指标分母见coverage.json的metric_denominators：计划、公开已启动、未封存、明确适用/适用未知、eligible、passed、failed、上游偏离、未知及明确环境无效分别列出。环境状态未明示不推定为有效；计时采集中断也不自动使已留存的每个工具事件无效。条件通过率只在eligible有已知判定时计算，eligible=0为null；同时保留进入该段之前的缺口。public_started只数已封存且可公开复核的真实提交，不推断未封存位尚未执行。
 
+raw_eligible保留原review的资格声明；eligible排除明确environment_invalid=true的位，并单列eligible_excluded_environment_invalid。当前21位没有这种冲突，因此本次补充分母未改变既有通过/失败数。applicability_not_attested可与eligible重叠，表示未另填适用字段，不能直接解释为该操作不适用。
+
 GUI选段的received_at是实际采集时刻；较早公开包的记录顺序可能按阅读段落排列，复核时间线应按received_at还原。当前导出器自动按该时刻排序；既有包不覆盖。
 
-复核：`python -X utf8 scripts/verify_contracts_v2.py --check`。登记、输入、产物和投影SHA定位版本，仍依赖Operator采集，不是独立系统审计。
+复核：`python -X utf8 scripts/verify_contracts_v2.py --check`。另见[公开证据定位审计](evidence-locators.md)：原包缺失附件以原SHA对应的补充件公开，不覆盖旧包。登记、输入、产物和投影SHA定位版本，仍依赖Operator采集，不是独立系统审计。

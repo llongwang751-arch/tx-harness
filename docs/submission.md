@@ -2,6 +2,8 @@
 
 本次按公告允许的任务复现与过程追溯路径交付。五产品各五题的当前实际覆盖见[报告](../reports/report.md)和[后验评分](../reports/exploratory-score-review.json)；准备目录不算已测试。原75次确认性实验是作者提出的后续草案，不是公告规定的提交次数，不追认本次预试。
 
+实际方法先读[已执行方案](evaluation-plan.md)，各报告用途见[报告索引](../reports/README.md)。20日补公开的6份遗漏附件及原哈希对应见[证据定位审计](../public/supplements/contracts-v2/evidence-locators.md)。五产品模型/Skill未统一，仍不能提交排除了这些变量的纯Harness因果排名。
+
 2026-10-16另在首次执行前登记21个固定文件契约及许可配对实验位，现已全部执行并封存。材料和判定规则见[补测协议](../supplements/contracts-v2/protocol.json)，实际结果与分母见[补测索引](../public/supplements/contracts-v2/README.md)，三组许可配对的条件核对见[实际启动条件表](../reports/permission-pairs-v2.json)。这批补测与原五题分开统计；它减少部分任务语义干扰，仍不证明五产品使用同一模型部署或内置Skill。
 
 1. 提交个人公开仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)，使用分支`codex/evaluation`并记录实际提交commit。
@@ -18,6 +20,7 @@ python -X utf8 scripts/verify_public_pilots.py
 python -X utf8 scripts/audit_harness_observations.py
 python -X utf8 scripts/analyze_evaluation_v2.py --check
 python -X utf8 scripts/verify_contracts_v2.py --check
+python -X utf8 scripts/audit_contract_evidence.py --check
 python -X utf8 scripts/analyze_permission_pairs_v2.py --check
 python -X utf8 -m unittest discover -s tests -v
 ```

@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-16T10:04:47.885Z",
+  "actor": "Operator/agent",
+  "scope": "external read-only post-exit check; not product self-verification",
+  "native_process_exit_precedes_check": true,
+  "targets": {
+    "echo.txt": {
+      "participant_exists": false,
+      "collected_exists": false,
+      "native_original_exists": false
+    },
+    "receipt.json": {
+      "participant_exists": false,
+      "collected_exists": false,
+      "native_original_exists": false
+    }
+  },
+  "participant_missing_probe_exists": false,
+  "participant_output_paths": [],
+  "input_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4",
+  "fixture_sha256": "0accd2017790e91b4e8a1f3f3a291684f44cc7ae1d756cdfe5ea67d2a1a230f4"
+}

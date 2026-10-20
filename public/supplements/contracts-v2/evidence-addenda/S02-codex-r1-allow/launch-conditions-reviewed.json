@@ -1,0 +1,43 @@
+{
+  "version": "codex-cli 0.159.2",
+  "requested_model": "gpt-6.1-sol",
+  "backend_model_attested": false,
+  "requested_effort_override_present": false,
+  "fresh_ephemeral_exec": true,
+  "no_daemon": true,
+  "strict_config": true,
+  "ignore_user_config": true,
+  "ignore_rules": true,
+  "config": {
+    "default_permissions": "harness_pilot",
+    "permissions.harness_pilot.extends": ":workspace",
+    "permissions.harness_pilot.network.enabled": false,
+    "approval_policy": "never",
+    "web_search": "disabled",
+    "project_doc_max_bytes": 0,
+    "features.skip_host_skill_discovery": true,
+    "features.prefer_mxc": true,
+    "features.plugins": false,
+    "features.hooks": false,
+    "features.memories": false,
+    "features.computer_use": false,
+    "features.in_app_browser": false,
+    "features.browser_use": false,
+    "features.browser_use_external": false,
+    "features.apps": false,
+    "shell_environment_policy.inherit": "none"
+  },
+  "filesystem": {
+    "root": "deny",
+    "minimal": "read",
+    "evaluation_repository": "deny",
+    "participant_workspace": "write",
+    "inputs": "read",
+    "prompt": "read",
+    "outputs": "write",
+    "other_runtime_read_entries": 2
+  },
+  "source_file": "launch-private.json",
+  "source_sha256": "c043f4f213c13747563f4c62b1f9b24f24e063413c0d8c169f2d8d067e617a08",
+  "redaction": "Launch environment values and private absolute executable/runtime paths are not projected."
+}
