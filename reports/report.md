@@ -1,6 +1,6 @@
 # 五款产品的Harness边界观察与任务复现报告 v2
 
-作者：GitHub用户 `llongwang751-arch`。原现场采集：2026-10-13至14；方法修订：2026-10-16。仓库：[tx-harness](https://github.com/llongwang751-arch/tx-harness)，分支codex/evaluation。
+作者：李明远（GitHub：`llongwang751-arch`）。原现场采集：2026-10-13至14；方法修订：2026-10-16。仓库：[tx-harness](https://github.com/llongwang751-arch/tx-harness)，分支codex/evaluation。
 
 本报告以输入、文件交付、错误反馈和续接的可见契约为主观察。原25个产品×任务现场、31个公开包和26次旧评分均保留。业务原件与逐字段差异作为端到端辅助结果；内部模型、Skill、权限与入口不匹配，因此不提供五产品纯Harness因果排名。[旧报告原文](report-v1-2026-10-14.md)、[旧逐项评分](exploratory-score-review.json)可追溯，原始字节与分数不改写。
 

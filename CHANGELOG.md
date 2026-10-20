@@ -2,17 +2,22 @@
 
 按北京时间记录已经完成并留在仓库中的改动。历史条目根据Git提交补记，后续计划写在[个人周报](reports/weekly/README.md)中。
 
+## 2026-10-20
+
+- 根据本人提供的姓名李明远，补全仓库首页、书面报告作者及周报主题、自我介绍和落款，周报模板同步填写姓名。
+- [周报公开归档](reports/weekly/2026-10-17.md)注明署名补全日期，保留[发送前占位稿](https://github.com/llongwang751-arch/tx-harness/blob/7f4ab6096d647cd3e97c5f5fbe678bd8991b3bd8/reports/weekly-2026-10-17-draft.md)、[首次归档版本](https://github.com/llongwang751-arch/tx-harness/blob/d54d0d9f803b93e4fe1544c913f0df811067b172/reports/weekly/2026-10-17.md)及新旧内容校验值。邮件留存内容仅替换姓名占位，业务正文和评测结果未改。
+
 ## 2026-10-19
 
 - 新增本变更记录，补齐项目建立、五产品任务复现、方法修订和周报整理的历史入口。
 - 新增[周报索引](reports/weekly/README.md)及[2026-10-17周报归档](reports/weekly/2026-10-17.md)。本人于2026-10-19确认邮件已发送，正文与仓库原稿一致；归档保留原稿版本和正文校验值，实际发送时间未单独记录。
-- 更新首页、提交说明和报告中的周报状态，保留[发送前原稿](reports/weekly-2026-10-17-draft.md)。修订[周报模板](reports/weekly-template.md)，去掉未实施的75次实验固定分母。
+- 更新首页、提交说明和报告中的周报状态，保留[发送前占位原稿](https://github.com/llongwang751-arch/tx-harness/blob/7f4ab6096d647cd3e97c5f5fbe678bd8991b3bd8/reports/weekly-2026-10-17-draft.md)。修订[周报模板](reports/weekly-template.md)，去掉未实施的75次实验固定分母。
 - 本次只整理文档和归档入口，没有新增产品测试或修改既有原件、评分。
 
 ## 2026-10-17
 
 - 将周报改为个人复盘的语气，说明方法调整、题目区分度不足及下周安排。对应提交：[d2a9d55](https://github.com/llongwang751-arch/tx-harness/commit/d2a9d55)。
-- 完善邮件主题、自我介绍、称呼和落款，形成[发送前留存稿](reports/weekly-2026-10-17-draft.md)。对应提交：[7f4ab60](https://github.com/llongwang751-arch/tx-harness/commit/7f4ab60)。
+- 完善邮件主题、自我介绍、称呼和落款，形成[发送前留存稿](https://github.com/llongwang751-arch/tx-harness/blob/7f4ab6096d647cd3e97c5f5fbe678bd8991b3bd8/reports/weekly-2026-10-17-draft.md)。对应提交：[7f4ab60](https://github.com/llongwang751-arch/tx-harness/commit/7f4ab60)。
 
 ## 2026-10-16
 
