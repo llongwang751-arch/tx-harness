@@ -2,18 +2,21 @@
   "schema": "week2-progress-counts/v1",
   "period_start": "2026-10-18",
   "period_end": "2026-10-24",
-  "as_of": "2026-10-21",
+  "as_of": "2026-10-22",
   "product_runs": {
-    "independent_product_runs": 0,
-    "valid": 0,
-    "passed": 0,
+    "independent_product_runs": 2,
+    "valid": 1,
+    "passed": 1,
     "failed": 0,
-    "unknown": 0,
+    "unknown": 1,
     "invalid": 0
   },
-  "new_public_product_packages": [],
+  "new_public_product_packages": [
+    "public/supplements/window-reopen-v1/W01-control/manifest.json",
+    "public/supplements/window-reopen-v1/W02-window-reopen/manifest.json"
+  ],
   "previous_public_package_count": 52,
-  "current_public_package_count": 52,
+  "current_public_package_count": 54,
   "offline_work_units_not_product_runs": {
     "synthetic_examples": 22,
     "expected_valid": 10,
@@ -30,7 +33,7 @@
   "evidence": [
     {
       "path": "supplements/week2/executions.json",
-      "sha256": "b7413ebbec4ec69055eecbe60da67f00103208cd92618c609f10e96daa8487c7",
+      "sha256": "55fffbe2dd9f590bece4acaed012f518d4e1e79d1f5dafdcbe96ce6bfb894800",
       "json_pointer": ""
     },
     {

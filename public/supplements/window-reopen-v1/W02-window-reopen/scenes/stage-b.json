@@ -1,0 +1,750 @@
+{
+  "kind": "reviewed_native_AX_excerpt",
+  "captured_at": "2026-10-21T16:41:45.982Z",
+  "private_source_name": "010-stage-b-progress.ax.txt",
+  "private_source_sha256": "506a3bbf84dd4556c83deb75338ec7198f0d2d500bbce1259e88d0337ffcb6ff",
+  "selection": "explicit task-only AX node ranges",
+  "lines": [
+    {
+      "source_line": 21,
+      "text": "\t\t\t1998 文本 字节级复制 probe.txt 并生成交付文件"
+    },
+    {
+      "source_line": 22,
+      "text": "\t\t\t1999 按钮 对话内搜索"
+    },
+    {
+      "source_line": 23,
+      "text": "\t\t\t2000 按钮 分享"
+    },
+    {
+      "source_line": 24,
+      "text": "\t\t\t\t2001 图像"
+    },
+    {
+      "source_line": 25,
+      "text": "\t\t\t2341 图像"
+    },
+    {
+      "source_line": 26,
+      "text": "\t\t\t2342 文本 WorkBuddy"
+    },
+    {
+      "source_line": 27,
+      "text": "\t\t\t2343 文本 已完成 30s"
+    },
+    {
+      "source_line": 28,
+      "text": "\t\t\t2344 文本 第一阶段已完成。"
+    },
+    {
+      "source_line": 29,
+      "text": "\t\t\t2345 列表"
+    },
+    {
+      "source_line": 30,
+      "text": "\t\t\t\t2346 列表项目 (selectable)"
+    },
+    {
+      "source_line": 31,
+      "text": "\t\t\t\t\t2347 文本 •"
+    },
+    {
+      "source_line": 32,
+      "text": "\t\t\t\t\t2348 文本 源文件："
+    },
+    {
+      "source_line": 33,
+      "text": "\t\t\t\t\t2349 文本 D:\\harness-window-reopen-v1\\inputs\\probe.txt"
+    },
+    {
+      "source_line": 34,
+      "text": "\t\t\t\t\t2350 文本 ，128 字节"
+    },
+    {
+      "source_line": 35,
+      "text": "\t\t\t\t2351 列表项目 (selectable)"
+    },
+    {
+      "source_line": 36,
+      "text": "\t\t\t\t\t2352 文本 •"
+    },
+    {
+      "source_line": 37,
+      "text": "\t\t\t\t\t2353 文本 交付文件："
+    },
+    {
+      "source_line": 38,
+      "text": "\t\t\t\t\t2354 文本 stage-a.txt"
+    },
+    {
+      "source_line": 39,
+      "text": "\t\t\t\t2355 列表项目 (selectable)"
+    },
+    {
+      "source_line": 40,
+      "text": "\t\t\t\t\t2356 文本 •"
+    },
+    {
+      "source_line": 41,
+      "text": "\t\t\t\t\t2357 文本 校验结果："
+    },
+    {
+      "source_line": 42,
+      "text": "\t\t\t\t\t2358 文本 cmp"
+    },
+    {
+      "source_line": 43,
+      "text": "\t\t\t\t\t2359 文本 二进制比对一致，两者 SHA-256 均为"
+    },
+    {
+      "source_line": 44,
+      "text": "\t\t\t\t\t2360 文本 d7e5f5aea847b82e1351dbc481259bca0c87db74b1960e634b15a809ad88f0be"
+    },
+    {
+      "source_line": 45,
+      "text": "\t\t\t2361 文本 采用二进制复制，未做任何编码、换行符、空格或标点的改动。第二阶段的文件尚未生成。"
+    },
+    {
+      "source_line": 46,
+      "text": "\t\t\t2362 文本 STAGE_A"
+    },
+    {
+      "source_line": 47,
+      "text": "\t\t\t2363 文本 _"
+    },
+    {
+      "source_line": 48,
+      "text": "\t\t\t2364 文本 R"
+    },
+    {
+      "source_line": 49,
+      "text": "\t\t\t2365 文本 E"
+    },
+    {
+      "source_line": 50,
+      "text": "\t\t\t2366 文本 A"
+    },
+    {
+      "source_line": 51,
+      "text": "\t\t\t2367 文本 D"
+    },
+    {
+      "source_line": 52,
+      "text": "\t\t\t2368 文本 Y"
+    },
+    {
+      "source_line": 53,
+      "text": "\t\t\t2369 按钮 stage-a.txt"
+    },
+    {
+      "source_line": 54,
+      "text": "\t\t\t2370 文本 stage-a.txt"
+    },
+    {
+      "source_line": 55,
+      "text": "\t\t\t2371 文本 128 B"
+    },
+    {
+      "source_line": 56,
+      "text": "\t\t\t2372 按钮 查看所有产物 (3)"
+    },
+    {
+      "source_line": 57,
+      "text": "\t\t\t2373 按钮 复制"
+    },
+    {
+      "source_line": 58,
+      "text": "\t\t\t\t2374 图像"
+    },
+    {
+      "source_line": 59,
+      "text": "\t\t\t2375 按钮 点赞"
+    },
+    {
+      "source_line": 60,
+      "text": "\t\t\t\t2376 图像"
+    },
+    {
+      "source_line": 61,
+      "text": "\t\t\t2377 按钮 点踩"
+    },
+    {
+      "source_line": 62,
+      "text": "\t\t\t\t2378 图像"
+    },
+    {
+      "source_line": 63,
+      "text": "\t\t\t2379 按钮 朗读"
+    },
+    {
+      "source_line": 64,
+      "text": "\t\t\t\t2380 图像"
+    },
+    {
+      "source_line": 65,
+      "text": "\t\t\t2381 按钮 分享"
+    },
+    {
+      "source_line": 66,
+      "text": "\t\t\t\t2382 图像"
+    },
+    {
+      "source_line": 67,
+      "text": "\t\t\t2383 按钮 更多操作"
+    },
+    {
+      "source_line": 68,
+      "text": "\t\t\t\t2384 图像"
+    },
+    {
+      "source_line": 69,
+      "text": "\t\t\t2385 文本 共消耗"
+    },
+    {
+      "source_line": 70,
+      "text": "\t\t\t2386 文本 0.45"
+    },
+    {
+      "source_line": 71,
+      "text": "\t\t\t2387 图像"
+    },
+    {
+      "source_line": 72,
+      "text": "\t\t\t2388 文本 Deepseek-V4.1-Flash"
+    },
+    {
+      "source_line": 73,
+      "text": "\t\t\t2389 文本 00:37"
+    },
+    {
+      "source_line": 74,
+      "text": "\t\t\t2134 文本 按初始要求继续第二阶段。"
+    },
+    {
+      "source_line": 75,
+      "text": "\t\t\t2135 工具栏"
+    },
+    {
+      "source_line": 76,
+      "text": "\t\t\t\t2136 文本 00:41"
+    },
+    {
+      "source_line": 77,
+      "text": "\t\t\t\t2137 按钮 复制"
+    },
+    {
+      "source_line": 78,
+      "text": "\t\t\t\t\t2138 图像"
+    },
+    {
+      "source_line": 79,
+      "text": "\t\t\t\t2390 按钮 将对话及产物回退到此消息前"
+    },
+    {
+      "source_line": 80,
+      "text": "\t\t\t\t\t2391 图像"
+    },
+    {
+      "source_line": 81,
+      "text": "\t\t\t\t2392 按钮 编辑"
+    },
+    {
+      "source_line": 82,
+      "text": "\t\t\t\t\t2393 图像"
+    },
+    {
+      "source_line": 83,
+      "text": "\t\t\t2417 图像"
+    },
+    {
+      "source_line": 84,
+      "text": "\t\t\t2146 文本 WorkBuddy"
+    },
+    {
+      "source_line": 85,
+      "text": "\t\t\t2418 文本 已完成 21s"
+    },
+    {
+      "source_line": 86,
+      "text": "\t\t\t2394 文本 第二阶段已完成，两个文件均已交付。"
+    },
+    {
+      "source_line": 87,
+      "text": "\t\t\t2395 列表"
+    },
+    {
+      "source_line": 88,
+      "text": "\t\t\t\t2396 列表项目 (selectable)"
+    },
+    {
+      "source_line": 89,
+      "text": "\t\t\t\t\t2397 文本 •"
+    },
+    {
+      "source_line": 90,
+      "text": "\t\t\t\t\t2398 文本 stage-b.txt"
+    },
+    {
+      "source_line": 91,
+      "text": "\t\t\t\t\t2399 文本 ：以二进制方式复制"
+    },
+    {
+      "source_line": 92,
+      "text": "\t\t\t\t\t2400 文本 probe.txt"
+    },
+    {
+      "source_line": 93,
+      "text": "\t\t\t\t\t2401 文本 ，未改动任何字节，"
+    },
+    {
+      "source_line": 94,
+      "text": "\t\t\t\t\t2402 文本 cmp"
+    },
+    {
+      "source_line": 95,
+      "text": "\t\t\t\t\t2403 文本 比对一致，大小为 128 字节，SHA-256 为"
+    },
+    {
+      "source_line": 96,
+      "text": "\t\t\t\t\t2419 文本 d7e5f5aea847b82e1351dbc481259bca0c87db74b1960e634b15a809ad88f0be"
+    },
+    {
+      "source_line": 97,
+      "text": "\t\t\t\t\t2420 文本 。"
+    },
+    {
+      "source_line": 98,
+      "text": "\t\t\t\t2421 列表项目 (selectable)"
+    },
+    {
+      "source_line": 99,
+      "text": "\t\t\t\t\t2422 文本 •"
+    },
+    {
+      "source_line": 100,
+      "text": "\t\t\t\t\t2423 文本 receipt.json"
+    },
+    {
+      "source_line": 101,
+      "text": "\t\t\t\t\t2424 文本 ：已通过 JSON 解析校验，顶层字段恰好为"
+    },
+    {
+      "source_line": 102,
+      "text": "\t\t\t\t\t2425 文本 stage"
+    },
+    {
+      "source_line": 103,
+      "text": "\t\t\t\t\t2426 文本 、"
+    },
+    {
+      "source_line": 104,
+      "text": "\t\t\t\t\t2427 文本 source"
+    },
+    {
+      "source_line": 105,
+      "text": "\t\t\t\t\t2428 文本 、"
+    },
+    {
+      "source_line": 106,
+      "text": "\t\t\t\t\t2429 文本 bytes"
+    },
+    {
+      "source_line": 107,
+      "text": "\t\t\t\t\t2430 文本 、"
+    },
+    {
+      "source_line": 108,
+      "text": "\t\t\t\t\t2431 文本 sha256"
+    },
+    {
+      "source_line": 109,
+      "text": "\t\t\t\t\t2432 文本 四个，其中"
+    },
+    {
+      "source_line": 110,
+      "text": "\t\t\t\t\t2433 文本 stage"
+    },
+    {
+      "source_line": 111,
+      "text": "\t\t\t\t\t2434 文本 为"
+    },
+    {
+      "source_line": 112,
+      "text": "\t\t\t\t\t2435 文本 \"B\""
+    },
+    {
+      "source_line": 113,
+      "text": "\t\t\t\t\t2436 文本 ，"
+    },
+    {
+      "source_line": 114,
+      "text": "\t\t\t\t\t2437 文本 source"
+    },
+    {
+      "source_line": 115,
+      "text": "\t\t\t\t\t2438 文本 为"
+    },
+    {
+      "source_line": 116,
+      "text": "\t\t\t\t\t2439 文本 \"probe.txt\""
+    },
+    {
+      "source_line": 117,
+      "text": "\t\t\t\t\t2440 文本 ，"
+    },
+    {
+      "source_line": 118,
+      "text": "\t\t\t\t\t2441 文本 bytes"
+    },
+    {
+      "source_line": 119,
+      "text": "\t\t\t\t\t2442 文本 为整数"
+    },
+    {
+      "source_line": 120,
+      "text": "\t\t\t\t\t2443 文本 128"
+    },
+    {
+      "source_line": 121,
+      "text": "\t\t\t\t\t2444 文本 ，"
+    },
+    {
+      "source_line": 122,
+      "text": "\t\t\t\t\t2445 文本 sha256"
+    },
+    {
+      "source_line": 123,
+      "text": "\t\t\t\t\t2446 文本 为小写十六进制。"
+    },
+    {
+      "source_line": 124,
+      "text": "\t\t\t2447 文本 未联网，未修改其他资料，也未安装任何内容。"
+    },
+    {
+      "source_line": 125,
+      "text": "\t\t\t2448 文本 STAGE_"
+    },
+    {
+      "source_line": 126,
+      "text": "\t\t\t2449 文本 B"
+    },
+    {
+      "source_line": 127,
+      "text": "\t\t\t2450 文本 _"
+    },
+    {
+      "source_line": 128,
+      "text": "\t\t\t2451 文本 D"
+    },
+    {
+      "source_line": 129,
+      "text": "\t\t\t2452 文本 O"
+    },
+    {
+      "source_line": 130,
+      "text": "\t\t\t2453 文本 N"
+    },
+    {
+      "source_line": 131,
+      "text": "\t\t\t2454 文本 E"
+    },
+    {
+      "source_line": 132,
+      "text": "\t\t\t2455 按钮 receipt.json"
+    },
+    {
+      "source_line": 133,
+      "text": "\t\t\t2456 文本 receipt.json"
+    },
+    {
+      "source_line": 134,
+      "text": "\t\t\t2457 文本 140 B"
+    },
+    {
+      "source_line": 135,
+      "text": "\t\t\t2458 按钮 stage-b.txt"
+    },
+    {
+      "source_line": 136,
+      "text": "\t\t\t2459 文本 stage-b.txt"
+    },
+    {
+      "source_line": 137,
+      "text": "\t\t\t2460 文本 128 B"
+    },
+    {
+      "source_line": 138,
+      "text": "\t\t\t2461 按钮 查看所有产物 (3)"
+    },
+    {
+      "source_line": 139,
+      "text": "\t\t\t2462 按钮 复制"
+    },
+    {
+      "source_line": 140,
+      "text": "\t\t\t\t2463 图像"
+    },
+    {
+      "source_line": 141,
+      "text": "\t\t\t2464 按钮 点赞"
+    },
+    {
+      "source_line": 142,
+      "text": "\t\t\t\t2465 图像"
+    },
+    {
+      "source_line": 143,
+      "text": "\t\t\t2466 按钮 点踩"
+    },
+    {
+      "source_line": 144,
+      "text": "\t\t\t\t2467 图像"
+    },
+    {
+      "source_line": 145,
+      "text": "\t\t\t2468 按钮 朗读"
+    },
+    {
+      "source_line": 146,
+      "text": "\t\t\t\t2469 图像"
+    },
+    {
+      "source_line": 147,
+      "text": "\t\t\t2470 按钮 点击将重新生成会话和产物，请谨慎操作"
+    },
+    {
+      "source_line": 148,
+      "text": "\t\t\t\t2471 图像"
+    },
+    {
+      "source_line": 149,
+      "text": "\t\t\t2472 按钮 分享"
+    },
+    {
+      "source_line": 150,
+      "text": "\t\t\t\t2473 图像"
+    },
+    {
+      "source_line": 151,
+      "text": "\t\t\t2474 按钮 更多操作"
+    },
+    {
+      "source_line": 152,
+      "text": "\t\t\t\t2475 图像"
+    },
+    {
+      "source_line": 153,
+      "text": "\t\t\t2476 文本 共消耗"
+    },
+    {
+      "source_line": 154,
+      "text": "\t\t\t2477 文本 0.14"
+    },
+    {
+      "source_line": 155,
+      "text": "\t\t\t2478 图像"
+    },
+    {
+      "source_line": 156,
+      "text": "\t\t\t2479 文本 Deepseek-V4.1-Flash"
+    },
+    {
+      "source_line": 157,
+      "text": "\t\t\t2480 文本 00:41"
+    },
+    {
+      "source_line": 158,
+      "text": "\t\t\t2087 编辑 (settable, string) Value: ﻿ 今天帮你做些什么？@ 添加上下文，/调用技能与指令"
+    },
+    {
+      "source_line": 159,
+      "text": "\t\t\t\t2143 文本 ﻿"
+    },
+    {
+      "source_line": 160,
+      "text": "\t\t\t\t2144 文本 今天帮你做些什么？@ 添加上下文，/调用技能与指令"
+    },
+    {
+      "source_line": 161,
+      "text": "\t\t\t2410 状态 ID: DndLiveRegion-6"
+    },
+    {
+      "source_line": 162,
+      "text": "\t\t\t2091 组合框 (settable, string) 更多操作"
+    },
+    {
+      "source_line": 163,
+      "text": "\t\t\t\t2092 图像"
+    },
+    {
+      "source_line": 164,
+      "text": "\t\t\t2093 组合框 (settable, string) Value: 允许完全访问"
+    },
+    {
+      "source_line": 165,
+      "text": "\t\t\t\t2094 文本 允许完全访问"
+    },
+    {
+      "source_line": 166,
+      "text": "\t\t\t2095 按钮"
+    },
+    {
+      "source_line": 167,
+      "text": "\t\t\t\t2096 图像"
+    },
+    {
+      "source_line": 168,
+      "text": "\t\t\t2097 组合框 (settable, string) Select model: Deepseek-V4.1-Flash Value: Deepseek-V4.1-Flash"
+    },
+    {
+      "source_line": 169,
+      "text": "\t\t\t\t2098 图像"
+    },
+    {
+      "source_line": 170,
+      "text": "\t\t\t\t2099 文本 Deepseek-V4.1-Flash"
+    },
+    {
+      "source_line": 171,
+      "text": "\t\t\t2100 按钮 点击或长按 Alt 语音输入"
+    },
+    {
+      "source_line": 172,
+      "text": "\t\t\t\t2101 图像"
+    },
+    {
+      "source_line": 173,
+      "text": "\t\t\t2102 按钮 (disabled) 发送"
+    },
+    {
+      "source_line": 174,
+      "text": "\t\t\t2103 文本 内容由 AI 生成，请核实重要信息"
+    },
+    {
+      "source_line": 175,
+      "text": "\t\t\t2104 选项卡 Artifact tabs"
+    },
+    {
+      "source_line": 176,
+      "text": "\t\t\t\t2105 选项卡项目 (selectable) stage-a.txt 关闭"
+    },
+    {
+      "source_line": 177,
+      "text": "\t\t\t\t\t2106 文本 stage-a.txt"
+    },
+    {
+      "source_line": 178,
+      "text": "\t\t\t\t\t2107 按钮 关闭"
+    },
+    {
+      "source_line": 179,
+      "text": "\t\t\t\t2315 选项卡项目 (selectable) receipt.json 关闭"
+    },
+    {
+      "source_line": 180,
+      "text": "\t\t\t\t\t2316 文本 receipt.json"
+    },
+    {
+      "source_line": 181,
+      "text": "\t\t\t\t\t2331 按钮 关闭"
+    },
+    {
+      "source_line": 182,
+      "text": "\t\t\t\t2108 按钮 新标签页"
+    },
+    {
+      "source_line": 183,
+      "text": "\t\t\t2109 按钮 进入全屏"
+    },
+    {
+      "source_line": 184,
+      "text": "\t\t\t2110 按钮 收起右侧栏"
+    },
+    {
+      "source_line": 185,
+      "text": "\t\t\t2317 文本 receipt.json"
+    },
+    {
+      "source_line": 186,
+      "text": "\t\t\t2318 按钮 文档发布状态"
+    },
+    {
+      "source_line": 187,
+      "text": "\t\t\t2319 按钮 将 receipt.json 上传到云端"
+    },
+    {
+      "source_line": 188,
+      "text": "\t\t\t2320 菜单项 分享 receipt.json ID: wb-popover-trigger\\:r1id\\:"
+    },
+    {
+      "source_line": 189,
+      "text": "\t\t\t2321 按钮 更多操作"
+    },
+    {
+      "source_line": 190,
+      "text": "\t\t\t2332 editor (settable, string) Editor content"
+    },
+    {
+      "source_line": 191,
+      "text": "\t\t\t2411 文本 引用来源 (0)"
+    },
+    {
+      "source_line": 192,
+      "text": "\t\t\t2412 按钮 关闭"
+    },
+    {
+      "source_line": 193,
+      "text": "\t\t\t2119 按钮 展开侧边栏"
+    },
+    {
+      "source_line": 194,
+      "text": "\t\t\t\t2120 图像"
+    },
+    {
+      "source_line": 195,
+      "text": "\t\t\t2121 按钮 新建任务"
+    },
+    {
+      "source_line": 196,
+      "text": "\t\t\t2122 按钮 最小化"
+    },
+    {
+      "source_line": 197,
+      "text": "\t\t\t2123 按钮 最大化"
+    },
+    {
+      "source_line": 198,
+      "text": "\t\t\t2124 按钮 关闭"
+    },
+    {
+      "source_line": 199,
+      "text": "\t\t\t2413 警报"
+    },
+    {
+      "source_line": 200,
+      "text": "\t\t\t2414 警报"
+    },
+    {
+      "source_line": 201,
+      "text": "\t\t\t2415 组"
+    },
+    {
+      "source_line": 202,
+      "text": "\t\t\t2416 组"
+    },
+    {
+      "source_line": 203,
+      "text": "\t\t\t2481 工具提示 Enter 发送，Shift+Enter 换行 ID: \\:r1fi\\:"
+    },
+    {
+      "source_line": 204,
+      "text": "\t\t\t\t2482 文本 Enter 发送，Shift+Enter 换行"
+    },
+    {
+      "source_line": 205,
+      "text": "\t\t2129 窗格 (disabled)"
+    }
+  ],
+  "limits": "Operator-selected excerpt; raw app AX stays private because it includes account and unrelated history. Hash is a custody anchor, not independent proof of UI authenticity."
+}

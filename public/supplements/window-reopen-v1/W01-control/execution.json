@@ -1,0 +1,44 @@
+{
+  "schema": "window-reopen-execution/v1",
+  "run_id": "W01-control",
+  "actual_submitted": true,
+  "registration_commit": "c6d3215523ec75dbe4bae009d9474c04aab6108f",
+  "started_at": "2026-10-21T16:30:09.008Z",
+  "finished_at": "2026-10-21T16:34:59.821Z",
+  "native_submission_id": "observed-ui:WorkBuddy:W01-control:2026-10-21T16:30:09.008Z",
+  "identity_basis": "Operator correlation key, not a server UUID. Unique selected workspace, fresh task action, observed title, original message, Stage A state and creation time jointly identify the task.",
+  "task_title": "复制 probe.txt 为 stage-a.txt",
+  "input_sha256": "d7e5f5aea847b82e1351dbc481259bca0c87db74b1960e634b15a809ad88f0be",
+  "prompt_sha256": "35395a76d061d0a4f2ec823a4b7c49ce61a9e03312cc62482e10cba9cb4351bf",
+  "configuration": {
+    "product": "WorkBuddy Windows desktop",
+    "version_label": "V5.8.3",
+    "model_label": "Deepseek-V4.1-Flash",
+    "mode": "办公",
+    "permissions": "允许完全访问",
+    "backend_model": "unknown",
+    "hidden_skills": "unknown"
+  },
+  "validity": "valid",
+  "outcome": "pass",
+  "artifact_outcome": "pass",
+  "pair_intervention_eligible": null,
+  "reason": "Fixed continuation submitted within the registered timing window; all native files obtained and sealed within budget; byte and JSON contracts pass.",
+  "evidence": [
+    "submission.json",
+    "checkpoint.json",
+    "continuation.json",
+    "seal.json",
+    "judgment.json",
+    "scenes/final.png",
+    "scenes/source-folder.json",
+    "scenes/stage-a.json",
+    "scenes/stage-b.json"
+  ],
+  "action_record_coverage": "Instrumented subset of UI actions, not a complete application event export. Preparation, some inventory and file-dialog operations are documented separately.",
+  "limits": [
+    "The UI and times are single-operator observations with AI assistance.",
+    "Visible model labels do not establish backend identity or unchanged global memory/Skill.",
+    "Source attachment bytes after relaunch were not independently downloaded; source path and Stage A copies cannot establish attachment storage integrity."
+  ]
+}

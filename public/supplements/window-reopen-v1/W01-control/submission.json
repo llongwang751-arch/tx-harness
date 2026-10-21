@@ -1,0 +1,10 @@
+{
+  "run_id": "W01-control",
+  "registration_commit": "c6d3215",
+  "before_at": "2026-10-21T16:30:09.008Z",
+  "before_monotonic_ms": 735062.9838,
+  "window_id": 67724,
+  "workspace": "D:/harness-window-reopen-v1/W01-control",
+  "after_at": "2026-10-21T16:30:09.144Z",
+  "after_monotonic_ms": 735199.5529
+}

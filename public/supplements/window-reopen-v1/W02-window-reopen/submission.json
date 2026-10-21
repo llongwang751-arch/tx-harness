@@ -1,0 +1,10 @@
+{
+  "run_id": "W02-window-reopen",
+  "registration_commit": "c6d3215",
+  "before_at": "2026-10-21T16:37:20.453Z",
+  "before_monotonic_ms": 1166508.8925,
+  "window_id": 67724,
+  "workspace": "D:/harness-window-reopen-v1/W02-window-reopen",
+  "after_at": "2026-10-21T16:37:20.569Z",
+  "after_monotonic_ms": 1166624.432
+}

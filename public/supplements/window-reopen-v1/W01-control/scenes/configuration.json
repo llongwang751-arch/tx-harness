@@ -1,0 +1,102 @@
+{
+  "kind": "reviewed_native_AX_excerpt",
+  "captured_at": "2026-10-21T16:29:58.648Z",
+  "private_source_name": "001-before-submission.ax.txt",
+  "private_source_sha256": "cdeef33972c50e3382ad3be541656f2bbac9ee44dc3610169ccbfc2e618f3fc9",
+  "selection": "explicit task-only AX node ranges",
+  "lines": [
+    {
+      "source_line": 97,
+      "text": "\t\t\t\t395 单选按钮 (selectable) 办公"
+    },
+    {
+      "source_line": 98,
+      "text": "\t\t\t\t396 单选按钮 (selectable) 开发"
+    },
+    {
+      "source_line": 99,
+      "text": "\t\t\t\t397 单选按钮 (selectable) 设计"
+    },
+    {
+      "source_line": 100,
+      "text": "\t\t\t\t398 按钮 创作文档"
+    },
+    {
+      "source_line": 101,
+      "text": "\t\t\t\t399 按钮 金融服务"
+    },
+    {
+      "source_line": 102,
+      "text": "\t\t\t\t400 按钮 分析数据"
+    },
+    {
+      "source_line": 103,
+      "text": "\t\t\t\t401 按钮 制作PPT"
+    },
+    {
+      "source_line": 104,
+      "text": "\t\t\t\t402 按钮 深度研究"
+    },
+    {
+      "source_line": 105,
+      "text": "\t\t\t\t403 按钮 策划方案"
+    },
+    {
+      "source_line": 106,
+      "text": "\t\t\t\t404 按钮 定时任务"
+    },
+    {
+      "source_line": 107,
+      "text": "\t\t\t\t405 编辑 (settable, string) Value: ﻿ probe.txt ﻿ ​​"
+    },
+    {
+      "source_line": 114,
+      "text": "\t\t\t\t408 状态 ID: DndLiveRegion-2"
+    },
+    {
+      "source_line": 115,
+      "text": "\t\t\t\t409 组合框 (settable, string) 更多操作"
+    },
+    {
+      "source_line": 116,
+      "text": "\t\t\t\t\t410 图像"
+    },
+    {
+      "source_line": 117,
+      "text": "\t\t\t\t411 组合框 (settable, string) Select model: Deepseek-V4.1-Flash Value: Deepseek-V4.1-Flash"
+    },
+    {
+      "source_line": 118,
+      "text": "\t\t\t\t\t412 图像"
+    },
+    {
+      "source_line": 119,
+      "text": "\t\t\t\t\t413 文本 Deepseek-V4.1-Flash"
+    },
+    {
+      "source_line": 120,
+      "text": "\t\t\t\t414 按钮 点击或长按 Alt 语音输入"
+    },
+    {
+      "source_line": 121,
+      "text": "\t\t\t\t\t415 图像"
+    },
+    {
+      "source_line": 122,
+      "text": "\t\t\t\t416 按钮 发送"
+    },
+    {
+      "source_line": 123,
+      "text": "\t\t\t\t417 菜单项 W01-control"
+    },
+    {
+      "source_line": 124,
+      "text": "\t\t\t\t418 组合框 (settable, string) Value: 允许完全访问"
+    },
+    {
+      "source_line": 125,
+      "text": "\t\t\t\t\t419 文本 允许完全访问"
+    }
+  ],
+  "limits": "Operator-selected excerpt; raw app AX stays private because it includes account and unrelated history. Hash is a custody anchor, not independent proof of UI authenticity."
+}

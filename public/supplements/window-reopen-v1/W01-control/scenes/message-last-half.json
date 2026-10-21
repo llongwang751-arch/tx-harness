@@ -1,0 +1,54 @@
+{
+  "kind": "reviewed_native_AX_excerpt",
+  "captured_at": "2026-10-21T16:32:42.467Z",
+  "private_source_name": "009-original-message-scrolled.ax.txt",
+  "private_source_sha256": "44def9a7885800400636e6933946f4157da043fa7fc314faea024bdf67f9a44e",
+  "selection": "explicit task-only AX node ranges",
+  "lines": [
+    {
+      "source_line": 76,
+      "text": "\t\t\t1054 文本 再次使用最初附加的probe.txt，将全部原始字节复制为stage-b.txt；同时生成receipt.json，且只能有四个顶层字段：stage为字符串B，source为字符串probe.txt，bytes为原始附件的整数字节数，sha256为原始附件字节的SHA-256小写十六进制值。交付这两个可以取回的文件，结束响应，最后单独写一行“STAGE_B_DONE”。"
+    },
+    {
+      "source_line": 77,
+      "text": "\t\t\t1055 文本 不需要联网、修改其他资料、使用其他工作空间或安装任何东西。如果附件不可读或不能交付原件，请如实说明，不要猜测内容，也不要索取本任务以外的资料。"
+    },
+    {
+      "source_line": 78,
+      "text": "\t\t\t1037 工具栏"
+    },
+    {
+      "source_line": 79,
+      "text": "\t\t\t\t1038 文本 00:30"
+    },
+    {
+      "source_line": 80,
+      "text": "\t\t\t\t1039 按钮 复制"
+    },
+    {
+      "source_line": 81,
+      "text": "\t\t\t\t\t1040 图像"
+    },
+    {
+      "source_line": 82,
+      "text": "\t\t\t\t1041 按钮 编辑"
+    },
+    {
+      "source_line": 83,
+      "text": "\t\t\t\t\t1042 图像"
+    },
+    {
+      "source_line": 84,
+      "text": "\t\t\t1043 图像"
+    },
+    {
+      "source_line": 85,
+      "text": "\t\t\t1044 文本 WorkBuddy"
+    },
+    {
+      "source_line": 86,
+      "text": "\t\t\t1045 文本 已完成 39s"
+    }
+  ],
+  "limits": "Operator-selected excerpt; raw app AX stays private because it includes account and unrelated history. Hash is a custody anchor, not independent proof of UI authenticity."
+}

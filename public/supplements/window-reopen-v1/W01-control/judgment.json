@@ -1,0 +1,25 @@
+{
+  "rule_version": "window-reopen/v1",
+  "files": {
+    "stage-a.txt": {
+      "obtained": true,
+      "bytes": 128,
+      "sha256": "d7e5f5aea847b82e1351dbc481259bca0c87db74b1960e634b15a809ad88f0be",
+      "matches_input": true
+    },
+    "stage-b.txt": {
+      "obtained": true,
+      "bytes": 128,
+      "sha256": "d7e5f5aea847b82e1351dbc481259bca0c87db74b1960e634b15a809ad88f0be",
+      "matches_input": true
+    },
+    "receipt.json": {
+      "obtained": true,
+      "bytes": 140,
+      "sha256": "18b35f479981e64f6095924e7cc67587c7635017841d49cee4890a3e9ccde860",
+      "contract_valid": true
+    }
+  },
+  "joint_delivery_pass": true,
+  "limits": "Only obtained bytes are checked. Timing, UI delivery, task identity and intervention need separate scene evidence."
+}

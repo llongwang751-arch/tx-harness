@@ -1,0 +1,30 @@
+{
+  "kind": "reviewed_native_AX_excerpt",
+  "captured_at": "2026-10-21T16:32:04.424Z",
+  "private_source_name": "007-control-wait-state.ax.txt",
+  "private_source_sha256": "c904f0798c7cf58a9d743d7796a607c59cd0d5c9d219e3d8b4a303643e327e75",
+  "selection": "explicit task-only AX node ranges",
+  "lines": [
+    {
+      "source_line": 76,
+      "text": "\t\t\t1032 组"
+    },
+    {
+      "source_line": 77,
+      "text": "\t\t\t\t1033 文本 probe.txt"
+    },
+    {
+      "source_line": 78,
+      "text": "\t\t\t1034 文本 研究任务 REOPEN-P1。这是一个分两阶段的文件交付任务，请只处理本次附加的probe.txt，在当前选定的工作空间交付文件。"
+    },
+    {
+      "source_line": 79,
+      "text": "\t\t\t1035 文本 第一阶段（现在执行）："
+    },
+    {
+      "source_line": 80,
+      "text": "\t\t\t1036 文本 读取最初附加的probe.txt，保持全部原始字节，将其复制为stage-a.txt并提供可以取回的文件。不要改编码、换行、空格或标点。完成后结束本轮响应，最后单独写一行“STAGE_A_READY”，等待我继续。现在不要生成第二阶段文件。"
+    }
+  ],
+  "limits": "Operator-selected excerpt; raw app AX stays private because it includes account and unrelated history. Hash is a custody anchor, not independent proof of UI authenticity."
+}

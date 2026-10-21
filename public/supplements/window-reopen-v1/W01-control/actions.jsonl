@@ -1,0 +1,8 @@
+{"at":"2026-10-21T16:30:09.010Z","label":"initial-submit","method":"click","args":[416],"result":"returned"}
+{"at":"2026-10-21T16:31:05.446Z","label":"artifact-source-menu","method":"click","args":[951],"result":"returned"}
+{"at":"2026-10-21T16:31:17.481Z","label":"open-artifact-folder","method":"click","args":[[1136,200]],"result":"returned"}
+{"at":"2026-10-21T16:31:50.891Z","label":"show-initial-message","method":"scroll","args":[[554,243],"up",{"pixels":1260}],"result":"returned"}
+{"at":"2026-10-21T16:32:28.621Z","label":"read-message-lower-half","method":"scroll","args":[[576,295],"down",{"pixels":607}],"result":"returned"}
+{"at":"2026-10-21T16:33:53.986Z","label":"stage-b-fixed-continuation","method":"click","args":[791],"result":"returned"}
+{"at":"2026-10-21T16:34:28.582Z","label":"hide-unrelated-history","method":"click","args":[430],"result":"returned"}
+{"at":"2026-10-21T16:35:15.186Z","label":"close-finished-control-window","method":"pressKey","args":["alt+F4"],"result":"returned"}

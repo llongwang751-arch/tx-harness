@@ -20,4 +20,5 @@ jobs:
       - run: python scripts/analyze_permission_pairs_v2.py --check
       - run: python scripts/audit_grader_v3.py --check
       - run: python scripts/verify_week2.py --check
+      - run: python scripts/verify_window_reopen.py
       - run: python -m unittest discover -s tests -v

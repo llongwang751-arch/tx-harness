@@ -2,10 +2,51 @@
   "schema": "weekly-independent-product-executions/v1",
   "period_start": "2026-10-18",
   "period_end": "2026-10-24",
-  "as_of": "2026-10-21",
+  "as_of": "2026-10-22",
   "previous_week_baseline_commit": "7f4ab6096d647cd3e97c5f5fbe678bd8991b3bd8",
-  "entries": [],
-  "operator_attestation": "This week's current work is offline grader diagnostics, read-only rechecks and evidence repair. No new product task was submitted during this work. The public package diff is a cross-check, not proof about unrecorded executions.",
+  "entries": [
+    {
+      "run_id": "W01-control",
+      "native_submission_id": "observed-ui:WorkBuddy:W01-control:2026-10-21T16:30:09.008Z",
+      "kind": "product_execution",
+      "actual_submitted": true,
+      "validity": "valid",
+      "outcome": "pass",
+      "started_at": "2026-10-21T16:30:09.008Z",
+      "public_manifest": "public/supplements/window-reopen-v1/W01-control/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/window-reopen-v1/W01-control/execution.json",
+          "sha256": "18e650d9916d45ccfa92519b06cdeb934edca3b79edf7009d9e0be615792e92f"
+        },
+        {
+          "path": "public/supplements/window-reopen-v1/W01-control/manifest.json",
+          "sha256": "884a0137a9dd01b1c1b4f21fdfbb9a3b5f1be5a1f50c14b5da73f9322958e6e8"
+        }
+      ]
+    },
+    {
+      "run_id": "W02-window-reopen",
+      "native_submission_id": "observed-ui:WorkBuddy:W02-window-reopen:2026-10-21T16:37:20.453Z",
+      "kind": "product_execution",
+      "actual_submitted": true,
+      "validity": "unknown",
+      "outcome": "unknown",
+      "started_at": "2026-10-21T16:37:20.453Z",
+      "public_manifest": "public/supplements/window-reopen-v1/W02-window-reopen/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/window-reopen-v1/W02-window-reopen/execution.json",
+          "sha256": "d41cf31a2a0221178fe5574a18e1bf9b4a08b41a4f76e5d7d4099dd2b685cd24"
+        },
+        {
+          "path": "public/supplements/window-reopen-v1/W02-window-reopen/manifest.json",
+          "sha256": "2bf2e65bbdef534240bffe119f84635db1b6555ba5173c1310a1c2d33ee45dc0"
+        }
+      ]
+    }
+  ],
+  "operator_attestation": "Two new WorkBuddy desktop tasks were actually submitted by native Computer Use on 2026-10-22 Asia/Shanghai. W01 is valid and passes; W02 files pass but intervention validity is unknown due to an observer capture gap. Stages, screenshots, grader tests and old artifact rechecks are not new runs.",
   "definitions": {
     "independent_run": "One actually submitted product task/session with its own input, configuration, start/end and public evidence. New grading rows, tool calls, screenshots, synthetic answers and replayed artifact checks are not product runs.",
     "valid": "Run conditions are valid and the task outcome can be judged; includes both passing and failing product outcomes",

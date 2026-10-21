@@ -1,0 +1,4 @@
+REOPEN-P1-e4e4eeab35809b7ca8a1faf8ed6369f1
+中文原件：窗口重开核对。
+symbols: <> & = + / \
+space:  keep  two  spaces

@@ -1,0 +1,47 @@
+{
+  "schema": "window-reopen-execution/v1",
+  "run_id": "W02-window-reopen",
+  "actual_submitted": true,
+  "registration_commit": "c6d3215523ec75dbe4bae009d9474c04aab6108f",
+  "started_at": "2026-10-21T16:37:20.453Z",
+  "finished_at": "2026-10-21T16:41:54.815Z",
+  "native_submission_id": "observed-ui:WorkBuddy:W02-window-reopen:2026-10-21T16:37:20.453Z",
+  "identity_basis": "Operator correlation key, not a server UUID. Unique selected workspace, fresh task action, observed title, original message, Stage A state and creation time jointly identify the task.",
+  "task_title": "字节级复制 probe.txt 并生成交付文件",
+  "input_sha256": "d7e5f5aea847b82e1351dbc481259bca0c87db74b1960e634b15a809ad88f0be",
+  "prompt_sha256": "35395a76d061d0a4f2ec823a4b7c49ce61a9e03312cc62482e10cba9cb4351bf",
+  "configuration": {
+    "product": "WorkBuddy Windows desktop",
+    "version_label": "V5.8.3",
+    "model_label": "Deepseek-V4.1-Flash",
+    "mode": "办公",
+    "permissions": "允许完全访问",
+    "backend_model": "unknown",
+    "hidden_skills": "unknown"
+  },
+  "validity": "unknown",
+  "outcome": "unknown",
+  "artifact_outcome": "pass",
+  "pair_intervention_eligible": false,
+  "reason": "Task artifacts pass, but no observation established that the window disappeared before relaunch. Preserve the protocol uncertainty instead of claiming an intervention effect.",
+  "evidence": [
+    "submission.json",
+    "checkpoint.json",
+    "continuation.json",
+    "seal.json",
+    "judgment.json",
+    "scenes/final.png",
+    "scenes/source-folder.json",
+    "scenes/stage-a.json",
+    "scenes/stage-b.json",
+    "intervention.json",
+    "scenes/restored-message.json",
+    "scenes/restored.png"
+  ],
+  "action_record_coverage": "Instrumented subset of UI actions, not a complete application event export. Preparation, some inventory and file-dialog operations are documented separately.",
+  "limits": [
+    "The UI and times are single-operator observations with AI assistance.",
+    "Visible model labels do not establish backend identity or unchanged global memory/Skill.",
+    "Source attachment bytes after relaunch were not independently downloaded; source path and Stage A copies cannot establish attachment storage integrity."
+  ]
+}

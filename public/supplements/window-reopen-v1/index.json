@@ -1,0 +1,17 @@
+{
+  "schema": "window-reopen-index/v1",
+  "registration_commit": "c6d3215523ec75dbe4bae009d9474c04aab6108f",
+  "date": "2026-10-22",
+  "runs": [
+    "W01-control",
+    "W02-window-reopen"
+  ],
+  "pair_validity": "unknown",
+  "known_valid_runs": 1,
+  "known_passed_runs": 1,
+  "failed_runs": 0,
+  "unknown_runs": 1,
+  "artifact_complete_runs": 2,
+  "pair_causal_effect": "not_established",
+  "new_independent_product_runs": 2
+}

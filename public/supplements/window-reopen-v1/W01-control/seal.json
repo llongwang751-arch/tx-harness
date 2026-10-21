@@ -1,0 +1,54 @@
+{
+  "at": "2026-10-21T16:34:59.821Z",
+  "elapsed_ms": 290814.2169,
+  "reason": "all-required-files-obtained-and-response-ended",
+  "budget_seconds": 1200,
+  "within_budget": true,
+  "inventory": [
+    {
+      "at": "2026-10-21T16:31:36.929Z",
+      "elapsed_ms": 87921.35629999998,
+      "source": "D:/harness-window-reopen-v1/W01-control/stage-a.txt",
+      "scene": "artifact-source.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v1/W01-control/collected/stage-a/stage-a.txt",
+      "bytes": 128,
+      "sha256": "d7e5f5aea847b82e1351dbc481259bca0c87db74b1960e634b15a809ad88f0be"
+    },
+    {
+      "at": "2026-10-21T16:32:29.050Z",
+      "elapsed_ms": 140042.1623999999,
+      "source": "D:/harness-window-reopen-v1/W01-control/stage-a.txt",
+      "scene": "captures/005-stage-a-check.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v1/W01-control/collected/stage-a-after-wait/stage-a.txt",
+      "bytes": 128,
+      "sha256": "d7e5f5aea847b82e1351dbc481259bca0c87db74b1960e634b15a809ad88f0be"
+    },
+    {
+      "at": "2026-10-21T16:34:59.811Z",
+      "elapsed_ms": 290804.0560999999,
+      "source": "D:/harness-window-reopen-v1/W01-control/stage-a.txt",
+      "scene": "captures/013-stage-b-result.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v1/W01-control/collected/stage-b/stage-a.txt",
+      "bytes": 128,
+      "sha256": "d7e5f5aea847b82e1351dbc481259bca0c87db74b1960e634b15a809ad88f0be"
+    },
+    {
+      "at": "2026-10-21T16:34:59.816Z",
+      "elapsed_ms": 290808.5292,
+      "source": "D:/harness-window-reopen-v1/W01-control/stage-b.txt",
+      "scene": "captures/013-stage-b-result.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v1/W01-control/collected/stage-b/stage-b.txt",
+      "bytes": 128,
+      "sha256": "d7e5f5aea847b82e1351dbc481259bca0c87db74b1960e634b15a809ad88f0be"
+    },
+    {
+      "at": "2026-10-21T16:34:59.820Z",
+      "elapsed_ms": 290812.6383,
+      "source": "D:/harness-window-reopen-v1/W01-control/receipt.json",
+      "scene": "captures/013-stage-b-result.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v1/W01-control/collected/stage-b/receipt.json",
+      "bytes": 140,
+      "sha256": "18b35f479981e64f6095924e7cc67587c7635017841d49cee4890a3e9ccde860"
+    }
+  ]
+}

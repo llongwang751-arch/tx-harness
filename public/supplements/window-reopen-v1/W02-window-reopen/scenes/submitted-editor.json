@@ -1,0 +1,130 @@
+{
+  "kind": "reviewed_native_AX_excerpt",
+  "captured_at": "2026-10-21T16:37:21.630Z",
+  "private_source_name": "003-initial-submitted.ax.txt",
+  "private_source_sha256": "4044260c9bf658185bac0fc9574935a03290729c44a9a52666dddd3840c5e7d5",
+  "selection": "explicit task-only AX node ranges",
+  "lines": [
+    {
+      "source_line": 32,
+      "text": "\t\t\t\t1555 编辑 (settable, string) Value: ﻿ probe.txt ﻿ 研究任务 REOPEN-P1。这是一个分两阶段的文件交付任务，请只处理本次附加的probe.txt，在当前选定的工作空间交付文件。 ﻿ 第一阶段（现在执行）： 读取最初附加的probe.txt，保持全部原始字节，将其复制为stage-a.txt并提供可以取回的文件。不要改编码、换行、空格或标点。完成后结束本轮响应，最后单独写一行“STAGE_A_READY”，等待我继续。现在不要生成第二阶段文件。 ﻿ 第二阶段（只有收到“按初始要求继续第二阶段。”后执行）： 再次使用最初附加的probe.txt，将全部原始字节复制为stage-b.txt；同时生成receipt.json，且只能有四个顶层字段：stage为字符串B，source为字符串probe.txt，bytes为原始附件的整数字节数，sha256为原始附件字节的SHA-256小写十六进制值。交付这两个可以取回的文件，结束响应，最后单独写一行“STAGE_B_DONE”。 ﻿ 不需要联网、修改其他资料、使用其他工作空间或安装任何东西。如果附件不可读或不能交付原件，请如实说明，不要猜测内容，也不要索取本任务以外的资料。 ﻿"
+    },
+    {
+      "source_line": 33,
+      "text": "\t\t\t\t\t1750 文本 ﻿"
+    },
+    {
+      "source_line": 34,
+      "text": "\t\t\t\t\t1751 sortable probe.txt"
+    },
+    {
+      "source_line": 35,
+      "text": "\t\t\t\t\t\t1752 组"
+    },
+    {
+      "source_line": 36,
+      "text": "\t\t\t\t\t\t\t1753 文本 probe.txt"
+    },
+    {
+      "source_line": 37,
+      "text": "\t\t\t\t\t1754 文本 ﻿"
+    },
+    {
+      "source_line": 38,
+      "text": "\t\t\t\t\t1756 文本 研究任务 REOPEN-P1。这是一个分两阶段的文件交付任务，请只处理本次附加的probe.txt，在当前选定的工作空间交付文件。"
+    },
+    {
+      "source_line": 39,
+      "text": "\t\t\t\t\t1757 文本 ﻿"
+    },
+    {
+      "source_line": 40,
+      "text": "\t\t\t\t\t1758 文本 第一阶段（现在执行）："
+    },
+    {
+      "source_line": 41,
+      "text": "\t\t\t\t\t1759 文本 读取最初附加的probe.txt，保持全部原始字节，将其复制为stage-a.txt并提供可以取回的文件。不要改编码、换行、空格或标点。完成后结束本轮响应，最后单独写一行“STAGE_A_READY”，等待我继续。现在不要生成第二阶段文件。"
+    },
+    {
+      "source_line": 42,
+      "text": "\t\t\t\t\t1760 文本 ﻿"
+    },
+    {
+      "source_line": 43,
+      "text": "\t\t\t\t\t1761 文本 第二阶段（只有收到“按初始要求继续第二阶段。”后执行）："
+    },
+    {
+      "source_line": 44,
+      "text": "\t\t\t\t\t1762 文本 再次使用最初附加的probe.txt，将全部原始字节复制为stage-b.txt；同时生成receipt.json，且只能有四个顶层字段：stage为字符串B，source为字符串probe.txt，bytes为原始附件的整数字节数，sha256为原始附件字节的SHA-256小写十六进制值。交付这两个可以取回的文件，结束响应，最后单独写一行“STAGE_B_DONE”。"
+    },
+    {
+      "source_line": 45,
+      "text": "\t\t\t\t\t1763 文本 ﻿"
+    },
+    {
+      "source_line": 46,
+      "text": "\t\t\t\t\t1764 文本 不需要联网、修改其他资料、使用其他工作空间或安装任何东西。如果附件不可读或不能交付原件，请如实说明，不要猜测内容，也不要索取本任务以外的资料。"
+    },
+    {
+      "source_line": 47,
+      "text": "\t\t\t\t\t1765 文本 ﻿"
+    },
+    {
+      "source_line": 48,
+      "text": "\t\t\t\t1558 状态 ID: DndLiveRegion-5"
+    },
+    {
+      "source_line": 49,
+      "text": "\t\t\t\t1559 组合框 (settable, string) 更多操作"
+    },
+    {
+      "source_line": 50,
+      "text": "\t\t\t\t\t1560 图像"
+    },
+    {
+      "source_line": 51,
+      "text": "\t\t\t\t1766 按钮 增强提示词"
+    },
+    {
+      "source_line": 52,
+      "text": "\t\t\t\t\t1767 图像"
+    },
+    {
+      "source_line": 53,
+      "text": "\t\t\t\t1561 组合框 (settable, string) Select model: Deepseek-V4.1-Flash Value: Deepseek-V4.1-Flash"
+    },
+    {
+      "source_line": 54,
+      "text": "\t\t\t\t\t1562 图像"
+    },
+    {
+      "source_line": 55,
+      "text": "\t\t\t\t\t1563 文本 Deepseek-V4.1-Flash"
+    },
+    {
+      "source_line": 56,
+      "text": "\t\t\t\t1564 按钮 点击或长按 Alt 语音输入"
+    },
+    {
+      "source_line": 57,
+      "text": "\t\t\t\t\t1565 图像"
+    },
+    {
+      "source_line": 58,
+      "text": "\t\t\t\t1566 按钮 发送"
+    },
+    {
+      "source_line": 59,
+      "text": "\t\t\t\t1567 菜单项 W02-window-reopen"
+    },
+    {
+      "source_line": 60,
+      "text": "\t\t\t\t1568 组合框 (settable, string) Value: 允许完全访问"
+    },
+    {
+      "source_line": 61,
+      "text": "\t\t\t\t\t1569 文本 允许完全访问"
+    }
+  ],
+  "limits": "Operator-selected excerpt; raw app AX stays private because it includes account and unrelated history. Hash is a custody anchor, not independent proof of UI authenticity."
+}

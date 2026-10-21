@@ -1,0 +1,9 @@
+{"at":"2026-10-21T16:36:51.160Z","label":"open-attachment-menu","method":"click","args":[1559],"result":"returned"}
+{"at":"2026-10-21T16:37:20.455Z","label":"initial-submit","method":"click","args":[1566],"result":"returned"}
+{"at":"2026-10-21T16:38:33.909Z","label":"artifact-source-menu","method":"click","args":[1974],"result":"returned"}
+{"at":"2026-10-21T16:38:40.484Z","label":"open-artifact-folder","method":"click","args":[[1130,200]],"result":"returned"}
+{"at":"2026-10-21T16:39:11.501Z","label":"planned-window-close","method":"pressKey","args":["alt+F4"],"result":"returned"}
+{"at":"2026-10-21T16:40:17.312Z","label":"show-restored-message","method":"scroll","args":[[540,240],"up",{"pixels":1260}],"result":"returned"}
+{"at":"2026-10-21T16:40:32.453Z","label":"read-restored-message-lower-half","method":"scroll","args":[[570,300],"down",{"pixels":607}],"result":"returned"}
+{"at":"2026-10-21T16:41:11.509Z","label":"stage-b-fixed-continuation","method":"click","args":[2102],"result":"returned"}
+{"at":"2026-10-21T16:42:08.883Z","label":"close-finished-test-window","method":"pressKey","args":["alt+F4"],"result":"returned"}

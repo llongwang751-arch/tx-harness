@@ -1,0 +1,116 @@
+{
+  "kind": "reviewed_native_AX_excerpt",
+  "private_source_name": "artifact-source.ax.txt",
+  "private_source_sha256": "ec2487eb483e8ed30fac6e858c1efab36bca45b960749617264f31a4bd337506",
+  "lines": [
+    {
+      "source_line": 8,
+      "text": "\t\t\t\t\t\t6 文本 1 个项目 Description: 项目总数 ID: PropertyValue"
+    },
+    {
+      "source_line": 10,
+      "text": "\t\t\t\t\t\t8 文本 选中 1 个项目 128 字节 Description: 所选项目数量和大小 ID: PropertyValue"
+    },
+    {
+      "source_line": 53,
+      "text": "\t\t\t\t\t\t51 列表项目 (selectable, settable, string) stage-a.txt Value: stage-a.txt ID: 0"
+    },
+    {
+      "source_line": 54,
+      "text": "\t\t\t\t\t\t\t52 编辑 (settable, string) 名称 Value: stage-a.txt ID: System.ItemNameDisplay"
+    },
+    {
+      "source_line": 55,
+      "text": "\t\t\t\t\t\t\t53 编辑 修改日期 Value: ‎2026/‎10/‎22 ‏‎0:30 ID: System.DateModified"
+    },
+    {
+      "source_line": 56,
+      "text": "\t\t\t\t\t\t\t54 编辑 类型 Value: 文本文档 ID: System.ItemTypeText"
+    },
+    {
+      "source_line": 57,
+      "text": "\t\t\t\t\t\t\t55 编辑 大小 Value: 1 KB ID: System.Size"
+    },
+    {
+      "source_line": 62,
+      "text": "\t\t\t\t\t\t60 选项卡项目 (selectable) W01-control"
+    },
+    {
+      "source_line": 63,
+      "text": "\t\t\t\t\t\t\t61 图像"
+    },
+    {
+      "source_line": 64,
+      "text": "\t\t\t\t\t\t\t62 文本 W01-control"
+    },
+    {
+      "source_line": 65,
+      "text": "\t\t\t\t\t\t\t63 按钮 关闭标签页 ID: CloseButton"
+    },
+    {
+      "source_line": 70,
+      "text": "\t\t\t\t\t68 应用栏按钮 上移到“harness-window-reopen-v1”(Alt + 向上键) Description: 上移到“harness-window-reopen-v1”(Alt + 向上键) ID: upButton"
+    },
+    {
+      "source_line": 71,
+      "text": "\t\t\t\t\t69 应用栏按钮 刷新“W01-control”(F5) Description: 刷新“W01-control”(F5) ID: refreshButton"
+    },
+    {
+      "source_line": 72,
+      "text": "\t\t\t\t70 组 ID: PART_AutoSuggestBox"
+    },
+    {
+      "source_line": 73,
+      "text": "\t\t\t\t\t71 编辑 (settable, string) 地址栏 ID: TextBox"
+    },
+    {
+      "source_line": 74,
+      "text": "\t\t\t\t72 拆分按钮 此电脑 ID: FirstCrumbStackPanel"
+    },
+    {
+      "source_line": 75,
+      "text": "\t\t\t\t\t73 图像"
+    },
+    {
+      "source_line": 76,
+      "text": "\t\t\t\t74 组 ID: PART_BreadcrumbBar"
+    },
+    {
+      "source_line": 77,
+      "text": "\t\t\t\t\t75 拆分按钮 此电脑"
+    },
+    {
+      "source_line": 78,
+      "text": "\t\t\t\t\t\t76 文本 此电脑"
+    },
+    {
+      "source_line": 79,
+      "text": "\t\t\t\t\t77 拆分按钮 本地磁盘 (D:)"
+    },
+    {
+      "source_line": 80,
+      "text": "\t\t\t\t\t\t78 文本 本地磁盘 (D:)"
+    },
+    {
+      "source_line": 81,
+      "text": "\t\t\t\t\t79 拆分按钮 harness-window-reopen-v1"
+    },
+    {
+      "source_line": 82,
+      "text": "\t\t\t\t\t\t80 文本 harness-window-reopen-v1"
+    },
+    {
+      "source_line": 83,
+      "text": "\t\t\t\t\t81 拆分按钮 W01-control"
+    },
+    {
+      "source_line": 84,
+      "text": "\t\t\t\t\t\t82 文本 W01-control"
+    },
+    {
+      "source_line": 111,
+      "text": "\t\t109 标题栏 (settable, string) Value: W01-control - 文件资源管理器"
+    }
+  ],
+  "limits": "Only the product-opened task output folder is selected; file data were copied after this source was observed."
+}

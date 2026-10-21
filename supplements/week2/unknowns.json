@@ -1,6 +1,6 @@
 {
   "schema": "bounded-unknown-register/v1",
-  "as_of": "2026-10-21",
+  "as_of": "2026-10-22",
   "items": [
     {
       "id": "U01",
@@ -12,7 +12,11 @@
       "stop_condition": "If these controls cannot be exposed by the product interface, stop pursuing independent attribution in this batch; reopen only when new official configuration/provenance becomes available.",
       "review_by": "2026-10-24",
       "owner": "李明远",
-      "evidence": ["reports/report.md", "supplements/contracts-v2/protocol.json", "reports/permission-pairs-v2.json"]
+      "evidence": [
+        "reports/report.md",
+        "supplements/contracts-v2/protocol.json",
+        "reports/permission-pairs-v2.json"
+      ]
     },
     {
       "id": "U02",
@@ -24,7 +28,10 @@
       "stop_condition": "The current public source audit contains no complete deadline snapshots; stop further inference from completion labels or eventual artifacts. Reopen only upon discovery of contemporaneous snapshots, leaving scores unknown meanwhile.",
       "review_by": "2026-10-21",
       "owner": "李明远",
-      "evidence": ["reports/evaluation-v2.json", "docs/evaluation-plan.md"]
+      "evidence": [
+        "reports/evaluation-v2.json",
+        "docs/evaluation-plan.md"
+      ]
     },
     {
       "id": "U03",
@@ -36,7 +43,10 @@
       "stop_condition": "If a supported export cannot expose paired ordinary requests/results by the next review, stop repeating the same UI capture for this question. Reopen only with a new supported evidence source.",
       "review_by": "2026-10-24",
       "owner": "李明远",
-      "evidence": ["public/supplements/contracts-v2/coverage.json", "reports/report.md"]
+      "evidence": [
+        "public/supplements/contracts-v2/coverage.json",
+        "reports/report.md"
+      ]
     },
     {
       "id": "U04",
@@ -48,7 +58,11 @@
       "stop_condition": "If no external review is received by 2026-10-24, deliver the self-contained packet and retain this limitation; do not count an invitation or prepared document as completed review.",
       "review_by": "2026-10-24",
       "owner": "李明远",
-      "evidence": ["docs/evaluation-plan.md", "reports/grader-audit-v3.json", "reports/week2/external-review-packet.md"]
+      "evidence": [
+        "docs/evaluation-plan.md",
+        "reports/grader-audit-v3.json",
+        "reports/week2/external-review-packet.md"
+      ]
     },
     {
       "id": "U05",
@@ -60,7 +74,42 @@
       "stop_condition": "Stop this repair batch when all fixed expectations and rule ablations pass and the historical-impact audit is complete. Reopen for a concrete new counterexample, not merely to increase the example count.",
       "review_by": "2026-10-24",
       "owner": "李明远",
-      "evidence": ["supplements/grader-v3/rules.json", "reports/grader-audit-v3.json"]
+      "evidence": [
+        "supplements/grader-v3/rules.json",
+        "reports/grader-audit-v3.json"
+      ]
+    },
+    {
+      "id": "U06",
+      "question": "Did the W02 window disappear before relaunch, and what was the intervention effect?",
+      "state": "closed_investigation_still_unknown",
+      "known": "A normal close command was sent, but the immediately collected inventory still listed WorkBuddy. Launch occurred before an absent-window observation. Final bytes pass; this does not establish the intended intervention.",
+      "impact": "W02 validity and paired effect stay unknown; not a product failure or a valid intervention success.",
+      "next_action": "Retain this attempt and the observer gap. Any future protocol must require an observed window-absent state before launch, with a bounded verification loop and no task submission until preflight passes.",
+      "stop_condition": "This historical missing interval cannot be recaptured. Stop this two-run batch without replacement runs; reopen the research question only through a separately preregistered batch.",
+      "review_by": "2026-10-22",
+      "owner": "李明远",
+      "evidence": [
+        "reports/window-reopen-v1.md",
+        "public/supplements/window-reopen-v1/W02-window-reopen/intervention.json",
+        "public/supplements/window-reopen-v1/W02-window-reopen/execution.json"
+      ]
+    },
+    {
+      "id": "U07",
+      "question": "Were the originally attached bytes preserved in product-managed storage across the reopening commands?",
+      "state": "bounded_unknown",
+      "known": "The original probe.txt label remains accessible and the host input plus Stage A/Stage B copies match. The original product-managed attachment was not independently downloaded, so those observations do not establish attachment storage integrity.",
+      "impact": "Attachment-card continuity and collected output correctness are separate from stored-attachment byte preservation; do not award zero/full marks for unknown storage bytes.",
+      "next_action": "In a future preflight, inspect an official native download/open-source entry and record whether it exposes the original stored attachment independently of the host source file.",
+      "stop_condition": "If the interface exposes only a host-file pointer or no independent attachment retrieval, stop this metric as unknown. Do not substitute model recall or repeated screenshots.",
+      "review_by": "2026-10-31",
+      "owner": "李明远",
+      "evidence": [
+        "reports/window-reopen-v1.md",
+        "public/supplements/window-reopen-v1/W02-window-reopen/review.json",
+        "supplements/window-reopen-v1/protocol.md"
+      ]
     }
   ]
 }

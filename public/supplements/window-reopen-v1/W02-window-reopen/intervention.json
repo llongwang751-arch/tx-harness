@@ -1,0 +1,19 @@
+{
+  "claim": "window_reopen_only",
+  "close_started_at": "2026-10-21T16:39:11.501Z",
+  "before_window_id": 67724,
+  "closed_observed_at": "2026-10-21T16:39:11.593Z",
+  "after_close_workbuddy_windows": [
+    {
+      "app": "process:E:\\workbuddy\\WorkBuddy.exe",
+      "id": 67724,
+      "title": "WorkBuddy"
+    }
+  ],
+  "restored_at": "2026-10-21T16:40:18.511Z",
+  "restored_same_task": true,
+  "task_title": "字节级复制 probe.txt 并生成交付文件",
+  "verdict": "unknown",
+  "reason": "Close inventory was captured while the target was still listed, and launch followed before a window-absent observation. Reopened UI and changed document element are insufficient to prove the unobserved disappearance interval.",
+  "protocol_deviation": true
+}

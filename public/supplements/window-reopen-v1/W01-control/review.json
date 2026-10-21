@@ -1,0 +1,81 @@
+{
+  "rule_version": "window-reopen/v1",
+  "rules": "../../../../supplements/window-reopen-v1/protocol.json",
+  "inputs": [
+    "../../../../supplements/window-reopen-v1/fixtures/p1/probe.txt",
+    "../../../../supplements/window-reopen-v1/fixtures/p1/prompt.txt"
+  ],
+  "configuration": "execution.json#/configuration",
+  "artifacts": "judgment.json",
+  "metrics": {
+    "original_message_accessible": {
+      "status": "pass",
+      "evidence": [
+        "scenes/message-first-half.json",
+        "scenes/message-last-half.json"
+      ],
+      "confidence": "medium",
+      "reason": "Task identity and original user text are accessible through the native UI; this is not proof of what the model backend loaded."
+    },
+    "attachment_card_identity": {
+      "status": "pass",
+      "evidence": [
+        "scenes/message-first-half.json"
+      ],
+      "confidence": "medium",
+      "reason": "The original task still exposes a probe.txt attachment label. A matching name does not prove matching stored bytes."
+    },
+    "attachment_stored_bytes": {
+      "status": "unknown",
+      "evidence": [
+        "scenes/source-folder.json"
+      ],
+      "confidence": "not_established",
+      "reason": "Only the host source path and delivered output bytes were observed; the original attachment was not independently retrieved from product storage."
+    },
+    "existing_stage_a_bytes": {
+      "status": "pass",
+      "evidence": [
+        "seal.json",
+        "judgment.json",
+        "scenes/stage-a.json"
+      ],
+      "confidence": "high_for_collected_bytes_medium_for_UI_provenance",
+      "reason": "Original Stage A, its later reread and final collection all match the fixed input SHA. This includes local filesystem persistence, not isolated remote storage."
+    },
+    "stage_b_joint_delivery": {
+      "status": "pass",
+      "evidence": [
+        "judgment.json",
+        "seal.json",
+        "scenes/final.png"
+      ],
+      "confidence": "high_for_bytes_medium_for_UI_and_times",
+      "reason": "All required native files were actually obtained and sealed within budget; frozen byte/JSON checks pass. Model, Skill and Harness remain joint contributors."
+    },
+    "window_intervention": {
+      "status": "not_applicable",
+      "evidence": [
+        "actions.jsonl"
+      ],
+      "confidence": "medium",
+      "reason": "The control window was left open until after the sealed result."
+    }
+  },
+  "phenomenon": "The stay-open task delivered the original bytes in both stages.",
+  "cause_clue": "Files and receipt agree with the declared attachment under this configuration.",
+  "validated_conclusion": "The individual stay-open execution meets the frozen artifact and acquisition-budget conditions.",
+  "unexcluded_variables": [
+    "absolute workspace paths",
+    "fixed control-first order and wall time",
+    "backend routing and model variation",
+    "hidden/automatic Skill and global memory",
+    "sidebar layout differs between initial task pages"
+  ],
+  "unknown_register": [
+    "U01",
+    "U03",
+    "U06",
+    "U07"
+  ]
+}

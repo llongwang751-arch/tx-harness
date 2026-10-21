@@ -1,0 +1,354 @@
+{
+  "kind": "reviewed_native_AX_excerpt",
+  "captured_at": "2026-10-21T16:30:54.534Z",
+  "private_source_name": "005-stage-a-check.ax.txt",
+  "private_source_sha256": "a825cb5058276bec5a86ca9653d02cc3b737afadcf8c3054143d416438eee9f5",
+  "selection": "explicit task-only AX node ranges",
+  "lines": [
+    {
+      "source_line": 5,
+      "text": "\t\t\t\t840 菜单项 编辑(E)"
+    },
+    {
+      "source_line": 6,
+      "text": "\t\t\t\t\t841 文本 编辑("
+    },
+    {
+      "source_line": 7,
+      "text": "\t\t\t\t\t842 文本 E"
+    },
+    {
+      "source_line": 8,
+      "text": "\t\t\t\t\t843 文本 )"
+    },
+    {
+      "source_line": 9,
+      "text": "\t\t\t\t844 菜单项 窗口(W)"
+    },
+    {
+      "source_line": 10,
+      "text": "\t\t\t\t\t845 文本 窗口("
+    },
+    {
+      "source_line": 11,
+      "text": "\t\t\t\t\t846 文本 W"
+    },
+    {
+      "source_line": 12,
+      "text": "\t\t\t\t\t847 文本 )"
+    },
+    {
+      "source_line": 13,
+      "text": "\t\t\t\t848 菜单项 帮助(H)"
+    },
+    {
+      "source_line": 14,
+      "text": "\t\t\t\t\t849 文本 帮助("
+    },
+    {
+      "source_line": 15,
+      "text": "\t\t\t\t\t850 文本 H"
+    },
+    {
+      "source_line": 16,
+      "text": "\t\t\t\t\t851 文本 )"
+    },
+    {
+      "source_line": 17,
+      "text": "\t\t\t\t852 菜单项 关于(A)"
+    },
+    {
+      "source_line": 18,
+      "text": "\t\t\t\t\t853 文本 关于("
+    },
+    {
+      "source_line": 19,
+      "text": "\t\t\t\t\t854 文本 A"
+    },
+    {
+      "source_line": 20,
+      "text": "\t\t\t\t\t855 文本 )"
+    },
+    {
+      "source_line": 42,
+      "text": "\t\t\t\t963 文本 刚刚"
+    },
+    {
+      "source_line": 73,
+      "text": "\t\t\t793 文本 复制 probe.txt 为 stage-a.txt"
+    },
+    {
+      "source_line": 74,
+      "text": "\t\t\t794 按钮 对话内搜索"
+    },
+    {
+      "source_line": 77,
+      "text": "\t\t\t954 文本 第一阶段已完成。"
+    },
+    {
+      "source_line": 78,
+      "text": "\t\t\t955 列表"
+    },
+    {
+      "source_line": 79,
+      "text": "\t\t\t\t956 列表项目 (selectable)"
+    },
+    {
+      "source_line": 80,
+      "text": "\t\t\t\t\t957 文本 •"
+    },
+    {
+      "source_line": 81,
+      "text": "\t\t\t\t\t968 文本 源文件："
+    },
+    {
+      "source_line": 82,
+      "text": "\t\t\t\t\t969 文本 D:\\harness-window-reopen-v1\\inputs\\probe.txt"
+    },
+    {
+      "source_line": 83,
+      "text": "\t\t\t\t\t970 文本 ，128 字节，UTF-8，LF 换行。"
+    },
+    {
+      "source_line": 84,
+      "text": "\t\t\t\t971 列表项目 (selectable)"
+    },
+    {
+      "source_line": 85,
+      "text": "\t\t\t\t\t972 文本 •"
+    },
+    {
+      "source_line": 86,
+      "text": "\t\t\t\t\t973 文本 交付文件："
+    },
+    {
+      "source_line": 87,
+      "text": "\t\t\t\t\t974 文本 stage-a.txt"
+    },
+    {
+      "source_line": 88,
+      "text": "\t\t\t\t\t975 文本 ，同样是 128 字节。"
+    },
+    {
+      "source_line": 89,
+      "text": "\t\t\t\t976 列表项目 (selectable)"
+    },
+    {
+      "source_line": 90,
+      "text": "\t\t\t\t\t977 文本 •"
+    },
+    {
+      "source_line": 91,
+      "text": "\t\t\t\t\t978 文本 用"
+    },
+    {
+      "source_line": 92,
+      "text": "\t\t\t\t\t979 文本 cmp"
+    },
+    {
+      "source_line": 93,
+      "text": "\t\t\t\t\t980 文本 做了一次逐字节比对，结果完全一致，编码、换行、两个连续空格以及"
+    },
+    {
+      "source_line": 94,
+      "text": "\t\t\t\t\t981 文本 <> & = + / \\"
+    },
+    {
+      "source_line": 95,
+      "text": "\t\t\t\t\t982 文本 都原样保留。"
+    },
+    {
+      "source_line": 96,
+      "text": "\t\t\t983 文本 stage-b.txt 未生成，等你的指令。"
+    },
+    {
+      "source_line": 97,
+      "text": "\t\t\t986 文本 STAGE_A"
+    },
+    {
+      "source_line": 98,
+      "text": "\t\t\t987 文本 _"
+    },
+    {
+      "source_line": 99,
+      "text": "\t\t\t988 文本 R"
+    },
+    {
+      "source_line": 100,
+      "text": "\t\t\t989 文本 E"
+    },
+    {
+      "source_line": 101,
+      "text": "\t\t\t990 文本 A"
+    },
+    {
+      "source_line": 102,
+      "text": "\t\t\t991 文本 D"
+    },
+    {
+      "source_line": 103,
+      "text": "\t\t\t992 文本 Y"
+    },
+    {
+      "source_line": 104,
+      "text": "\t\t\t993 按钮 stage-a.txt"
+    },
+    {
+      "source_line": 105,
+      "text": "\t\t\t994 文本 stage-a.txt"
+    },
+    {
+      "source_line": 106,
+      "text": "\t\t\t995 文本 128 B"
+    },
+    {
+      "source_line": 107,
+      "text": "\t\t\t996 按钮 查看所有产物 (1)"
+    },
+    {
+      "source_line": 108,
+      "text": "\t\t\t997 按钮 复制"
+    },
+    {
+      "source_line": 109,
+      "text": "\t\t\t\t998 图像"
+    },
+    {
+      "source_line": 110,
+      "text": "\t\t\t999 按钮 点赞"
+    },
+    {
+      "source_line": 111,
+      "text": "\t\t\t\t1000 图像"
+    },
+    {
+      "source_line": 112,
+      "text": "\t\t\t1001 按钮 点踩"
+    },
+    {
+      "source_line": 113,
+      "text": "\t\t\t\t1002 图像"
+    },
+    {
+      "source_line": 114,
+      "text": "\t\t\t1003 按钮 朗读"
+    },
+    {
+      "source_line": 115,
+      "text": "\t\t\t\t1004 图像"
+    },
+    {
+      "source_line": 116,
+      "text": "\t\t\t1005 按钮 点击将重新生成会话和产物，请谨慎操作"
+    },
+    {
+      "source_line": 117,
+      "text": "\t\t\t\t1006 图像"
+    },
+    {
+      "source_line": 118,
+      "text": "\t\t\t1007 按钮 分享"
+    },
+    {
+      "source_line": 119,
+      "text": "\t\t\t\t1008 图像"
+    },
+    {
+      "source_line": 120,
+      "text": "\t\t\t1009 按钮 更多操作"
+    },
+    {
+      "source_line": 121,
+      "text": "\t\t\t\t1010 图像"
+    },
+    {
+      "source_line": 122,
+      "text": "\t\t\t1011 文本 共消耗"
+    },
+    {
+      "source_line": 123,
+      "text": "\t\t\t1012 文本 0.59"
+    },
+    {
+      "source_line": 124,
+      "text": "\t\t\t1013 图像"
+    },
+    {
+      "source_line": 125,
+      "text": "\t\t\t1014 文本 Deepseek-V4.1-Flash"
+    },
+    {
+      "source_line": 126,
+      "text": "\t\t\t1015 文本 00:30"
+    },
+    {
+      "source_line": 133,
+      "text": "\t\t\t835 组合框 (settable, string) 允许完全访问"
+    },
+    {
+      "source_line": 134,
+      "text": "\t\t\t888 按钮"
+    },
+    {
+      "source_line": 135,
+      "text": "\t\t\t\t889 图像"
+    },
+    {
+      "source_line": 137,
+      "text": "\t\t\t\t939 图像"
+    },
+    {
+      "source_line": 142,
+      "text": "\t\t\t940 选项卡 Artifact tabs"
+    },
+    {
+      "source_line": 143,
+      "text": "\t\t\t\t941 选项卡项目 (selectable) stage-a.txt 关闭"
+    },
+    {
+      "source_line": 144,
+      "text": "\t\t\t\t\t942 文本 stage-a.txt"
+    },
+    {
+      "source_line": 145,
+      "text": "\t\t\t\t\t943 按钮 关闭"
+    },
+    {
+      "source_line": 146,
+      "text": "\t\t\t\t944 按钮 新标签页"
+    },
+    {
+      "source_line": 147,
+      "text": "\t\t\t945 按钮 进入全屏"
+    },
+    {
+      "source_line": 148,
+      "text": "\t\t\t946 按钮 收起右侧栏"
+    },
+    {
+      "source_line": 149,
+      "text": "\t\t\t947 文本 stage-a.txt"
+    },
+    {
+      "source_line": 150,
+      "text": "\t\t\t948 按钮 文档发布状态"
+    },
+    {
+      "source_line": 151,
+      "text": "\t\t\t949 按钮 将 stage-a.txt 上传到云端"
+    },
+    {
+      "source_line": 152,
+      "text": "\t\t\t950 菜单项 分享 stage-a.txt ID: wb-popover-trigger\\:r10h\\:"
+    },
+    {
+      "source_line": 153,
+      "text": "\t\t\t951 按钮 更多操作"
+    },
+    {
+      "source_line": 154,
+      "text": "\t\t\t952 文本 REOPEN-P1-e4e4eeab35809b7ca8a1faf8ed6369f1 中文原件：窗口重开核对。 symbols: <> & = + / \\ space: keep two spaces"
+    }
+  ],
+  "limits": "Operator-selected excerpt; raw app AX stays private because it includes account and unrelated history. Hash is a custody anchor, not independent proof of UI authenticity."
+}
