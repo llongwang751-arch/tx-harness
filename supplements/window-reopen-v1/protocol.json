@@ -1,0 +1,42 @@
+{
+  "schema": "window-reopen-protocol/v1",
+  "registered_date": "2026-10-22",
+  "state": "frozen_before_submission",
+  "product": "WorkBuddy Windows desktop",
+  "version_label": "V5.8.3",
+  "model_label": "Deepseek-V4.1-Flash",
+  "mode": "办公",
+  "permissions": "允许完全访问",
+  "backend_model": "unknown",
+  "hidden_skills": "unknown",
+  "intervention": "normal_window_close_and_reopen_not_process_restart",
+  "order": [
+    "W01-control",
+    "W02-window-reopen"
+  ],
+  "max_runs": 2,
+  "checkpoint_delay_seconds": 120,
+  "delay_tolerance_seconds": 15,
+  "run_budget_seconds": 1200,
+  "files": {
+    "supplements/window-reopen-v1/fixtures/p1/probe.txt": {
+      "bytes": 128,
+      "sha256": "d7e5f5aea847b82e1351dbc481259bca0c87db74b1960e634b15a809ad88f0be"
+    },
+    "supplements/window-reopen-v1/fixtures/p1/prompt.txt": {
+      "bytes": 1182,
+      "sha256": "35395a76d061d0a4f2ec823a4b7c49ce61a9e03312cc62482e10cba9cb4351bf"
+    },
+    "supplements/window-reopen-v1/protocol.md": {
+      "bytes": 5879,
+      "sha256": "80e588d3d27a17b6a35193be91dccc22b937115dc09db005818731692536cc56"
+    },
+    "scripts/window_reopen.py": {
+      "bytes": 2291,
+      "sha256": "8ac24b6b631c3f57c43b8a977464c6e3fad0a4a10cab7f6f389484008bd1fc43"
+    }
+  },
+  "workspace_initial_inventory": [],
+  "continuation_message": "按初始要求继续第二阶段。",
+  "stop_after_pair": true
+}
