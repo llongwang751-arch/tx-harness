@@ -1,0 +1,14 @@
+{
+  "schema": "window-reopen-public-index/v2",
+  "registration_commit": "51cd34f436f22f66f22dddd8e2d14a94535a362c",
+  "runs": [
+    "R01-reopen",
+    "R02-control"
+  ],
+  "new_independent_product_runs": 2,
+  "known_valid_runs": 2,
+  "known_passed_runs": 2,
+  "failed_runs": 0,
+  "unknown_runs": 0,
+  "pair_scope": "One prospective native UI/local-file pair; no visible primary failure observed; no universal or pure five-product causal effect."
+}

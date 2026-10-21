@@ -1,0 +1,37 @@
+{
+  "before_windows": [
+    {
+      "app": "process:E:\\workbuddy\\WorkBuddy.exe",
+      "id": 67724,
+      "title": "WorkBuddy"
+    }
+  ],
+  "close_started_at": "2026-10-21T17:12:54.668Z",
+  "observations": [
+    {
+      "sequence": 1,
+      "at": "2026-10-21T17:12:54.771Z",
+      "windows": [
+        {
+          "app": "process:E:\\workbuddy\\WorkBuddy.exe",
+          "id": 67724,
+          "title": "WorkBuddy"
+        }
+      ]
+    },
+    {
+      "sequence": 2,
+      "at": "2026-10-21T17:13:02.335Z",
+      "windows": []
+    },
+    {
+      "sequence": 3,
+      "at": "2026-10-21T17:13:09.501Z",
+      "windows": []
+    }
+  ],
+  "launch_at": "2026-10-21T17:13:09.501Z",
+  "same_task": true,
+  "restored_at": "2026-10-21T17:13:45.250Z",
+  "identity_scene": "captures/014-restored-original-message.ax.txt"
+}

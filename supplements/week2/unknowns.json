@@ -53,7 +53,7 @@
       "question": "Have independent reviewers reproduced the two key conclusions?",
       "state": "open",
       "known": "A two-claim review packet has been prepared on 2026-10-21, but no external reproduction feedback has been received. Current collection and review remain single-operator with AI assistance; CI and agent review are not external independent review.",
-      "impact": "Do not claim external corroboration",
+      "impact": "Optional additional external corroboration not yet received. The mentor requirements do not mandate a second human reviewer; no external review is claimed.",
       "next_action": "The user can share the prepared two-claim packet; accept dated feedback only if a reviewer actually performs the reproduction. Keep the item incomplete without that feedback.",
       "stop_condition": "If no external review is received by 2026-10-24, deliver the self-contained packet and retain this limitation; do not count an invitation or prepared document as completed review.",
       "review_by": "2026-10-24",
@@ -85,30 +85,32 @@
       "state": "closed_investigation_still_unknown",
       "known": "A normal close command was sent, but the immediately collected inventory still listed WorkBuddy. Launch occurred before an absent-window observation. Final bytes pass; this does not establish the intended intervention.",
       "impact": "W02 validity and paired effect stay unknown; not a product failure or a valid intervention success.",
-      "next_action": "Retain this attempt and the observer gap. Any future protocol must require an observed window-absent state before launch, with a bounded verification loop and no task submission until preflight passes.",
+      "next_action": "Retain W02 and its observer gap permanently. The separately preregistered R01/R02 v2 pair now verifies the prospective native UI/local-file observation; it does not repair W02 historical validity.",
       "stop_condition": "This historical missing interval cannot be recaptured. Stop this two-run batch without replacement runs; reopen the research question only through a separately preregistered batch.",
       "review_by": "2026-10-22",
       "owner": "李明远",
       "evidence": [
         "reports/window-reopen-v1.md",
         "public/supplements/window-reopen-v1/W02-window-reopen/intervention.json",
-        "public/supplements/window-reopen-v1/W02-window-reopen/execution.json"
+        "public/supplements/window-reopen-v1/W02-window-reopen/execution.json",
+        "reports/window-reopen-v2.md"
       ]
     },
     {
       "id": "U07",
       "question": "Were the originally attached bytes preserved in product-managed storage across the reopening commands?",
-      "state": "bounded_unknown",
-      "known": "The original probe.txt label remains accessible and the host input plus Stage A/Stage B copies match. The original product-managed attachment was not independently downloaded, so those observations do not establish attachment storage integrity.",
+      "state": "closed_investigation_still_unknown",
+      "known": "V2 before/after native Save As retrieved the original message attachment and existing Stage A bytes in both arms, before a new operator model submission. Host source and local outputs remained present. This establishes the bounded local UI retrieval, not independent product-managed cloud storage.",
       "impact": "Attachment-card continuity and collected output correctness are separate from stored-attachment byte preservation; do not award zero/full marks for unknown storage bytes.",
-      "next_action": "In a future preflight, inspect an official native download/open-source entry and record whether it exposes the original stored attachment independently of the host source file.",
-      "stop_condition": "If the interface exposes only a host-file pointer or no independent attachment retrieval, stop this metric as unknown. Do not substitute model recall or repeated screenshots.",
+      "next_action": "Keep the local UI retrieval result separate from cloud storage. Reopen the cloud question only if an official retrieval/provenance interface can distinguish a product-managed independent copy from the retained host source; preregister before any new task.",
+      "stop_condition": "The current interface and retained-host-source design do not isolate cloud storage. Stop this metric in the current batch; do not repeat tasks, infer from model recall or convert it into a score.",
       "review_by": "2026-10-31",
       "owner": "李明远",
       "evidence": [
         "reports/window-reopen-v1.md",
         "public/supplements/window-reopen-v1/W02-window-reopen/review.json",
-        "supplements/window-reopen-v1/protocol.md"
+        "supplements/window-reopen-v1/protocol.md",
+        "reports/window-reopen-v2.md"
       ]
     }
   ]

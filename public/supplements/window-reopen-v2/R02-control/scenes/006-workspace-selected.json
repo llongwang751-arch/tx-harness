@@ -1,0 +1,301 @@
+{
+  "schema": "reviewed-native-ax-excerpt/v1",
+  "captured_at": "2026-10-21T17:20:58.748Z",
+  "source_capture": "captures/006-workspace-selected.ax.txt",
+  "source_sha256": "031a40c6a3d99495da44b06c5a297fcec787c4ce22fe827ee4a7813c28d8eec6",
+  "lines": [
+    {
+      "line": 2,
+      "text": "\t0 窗格 WorkBuddy Secondary Actions: Raise"
+    },
+    {
+      "line": 4,
+      "text": "\t\t\t1793 菜单栏"
+    },
+    {
+      "line": 5,
+      "text": "\t\t\t\t1794 菜单项 编辑(E)"
+    },
+    {
+      "line": 6,
+      "text": "\t\t\t\t\t1795 文本 编辑("
+    },
+    {
+      "line": 7,
+      "text": "\t\t\t\t\t1796 文本 E"
+    },
+    {
+      "line": 8,
+      "text": "\t\t\t\t\t1797 文本 )"
+    },
+    {
+      "line": 9,
+      "text": "\t\t\t\t1798 菜单项 窗口(W)"
+    },
+    {
+      "line": 10,
+      "text": "\t\t\t\t\t1799 文本 窗口("
+    },
+    {
+      "line": 11,
+      "text": "\t\t\t\t\t1800 文本 W"
+    },
+    {
+      "line": 12,
+      "text": "\t\t\t\t\t1801 文本 )"
+    },
+    {
+      "line": 13,
+      "text": "\t\t\t\t1802 菜单项 帮助(H)"
+    },
+    {
+      "line": 14,
+      "text": "\t\t\t\t\t1803 文本 帮助("
+    },
+    {
+      "line": 15,
+      "text": "\t\t\t\t\t1804 文本 H"
+    },
+    {
+      "line": 16,
+      "text": "\t\t\t\t\t1805 文本 )"
+    },
+    {
+      "line": 17,
+      "text": "\t\t\t\t1806 菜单项 关于(A)"
+    },
+    {
+      "line": 18,
+      "text": "\t\t\t\t\t1807 文本 关于("
+    },
+    {
+      "line": 19,
+      "text": "\t\t\t\t\t1808 文本 A"
+    },
+    {
+      "line": 20,
+      "text": "\t\t\t\t\t1809 文本 )"
+    },
+    {
+      "line": 21,
+      "text": "\t\t\t1917 主要"
+    },
+    {
+      "line": 22,
+      "text": "\t\t\t\t1918 单选按钮 (selectable) 办公"
+    },
+    {
+      "line": 23,
+      "text": "\t\t\t\t1919 单选按钮 (selectable) 开发"
+    },
+    {
+      "line": 24,
+      "text": "\t\t\t\t1920 单选按钮 (selectable) 设计"
+    },
+    {
+      "line": 25,
+      "text": "\t\t\t\t1921 按钮 创作文档"
+    },
+    {
+      "line": 26,
+      "text": "\t\t\t\t1922 按钮 金融服务"
+    },
+    {
+      "line": 27,
+      "text": "\t\t\t\t1923 按钮 分析数据"
+    },
+    {
+      "line": 28,
+      "text": "\t\t\t\t1924 按钮 制作PPT"
+    },
+    {
+      "line": 29,
+      "text": "\t\t\t\t1925 按钮 深度研究"
+    },
+    {
+      "line": 30,
+      "text": "\t\t\t\t1926 按钮 策划方案"
+    },
+    {
+      "line": 31,
+      "text": "\t\t\t\t1927 按钮 定时任务"
+    },
+    {
+      "line": 32,
+      "text": "\t\t\t\t1928 编辑 (settable, string) Value: ﻿ 今天帮你做些什么？@ 添加上下文，/调用技能与指令"
+    },
+    {
+      "line": 33,
+      "text": "\t\t\t\t\t1929 文本 ﻿"
+    },
+    {
+      "line": 34,
+      "text": "\t\t\t\t\t1930 文本 今天帮你做些什么？@ 添加上下文，/调用技能与指令"
+    },
+    {
+      "line": 35,
+      "text": "\t\t\t\t1931 状态 ID: DndLiveRegion-11"
+    },
+    {
+      "line": 36,
+      "text": "\t\t\t\t1932 组合框 (settable, string) 更多操作"
+    },
+    {
+      "line": 37,
+      "text": "\t\t\t\t\t1933 图像"
+    },
+    {
+      "line": 38,
+      "text": "\t\t\t\t1934 组合框 (settable, string) Select model: Deepseek-V4.1-Flash Value: Deepseek-V4.1-Flash"
+    },
+    {
+      "line": 39,
+      "text": "\t\t\t\t\t1935 图像"
+    },
+    {
+      "line": 40,
+      "text": "\t\t\t\t\t1936 文本 Deepseek-V4.1-Flash"
+    },
+    {
+      "line": 41,
+      "text": "\t\t\t\t1937 按钮 点击或长按 Alt 语音输入"
+    },
+    {
+      "line": 42,
+      "text": "\t\t\t\t\t1938 图像"
+    },
+    {
+      "line": 43,
+      "text": "\t\t\t\t1939 按钮 (disabled) 发送"
+    },
+    {
+      "line": 44,
+      "text": "\t\t\t\t1940 菜单项 R02-control"
+    },
+    {
+      "line": 45,
+      "text": "\t\t\t\t2088 按钮 (disabled) 选择分支"
+    },
+    {
+      "line": 46,
+      "text": "\t\t\t\t1941 组合框 (settable, string) Value: 允许完全访问"
+    },
+    {
+      "line": 47,
+      "text": "\t\t\t\t\t1942 文本 允许完全访问"
+    },
+    {
+      "line": 48,
+      "text": "\t\t\t\t1950 按钮 每周一提醒我安排本周工作重点"
+    },
+    {
+      "line": 49,
+      "text": "\t\t\t\t1951 按钮 帮我把几组数字整理成分析表格"
+    },
+    {
+      "line": 50,
+      "text": "\t\t\t\t1952 按钮 给客户反馈分类，找出优先解决的问题"
+    },
+    {
+      "line": 51,
+      "text": "\t\t\t\t1953 按钮 帮我做一份独立接单的首单验证计划"
+    },
+    {
+      "line": 52,
+      "text": "\t\t\t\t1943 文本 内容由 AI 生成，请核实重要信息"
+    },
+    {
+      "line": 53,
+      "text": "\t\t\t1954 按钮 新标签页"
+    },
+    {
+      "line": 54,
+      "text": "\t\t\t1955 按钮 进入全屏"
+    },
+    {
+      "line": 55,
+      "text": "\t\t\t1956 按钮 收起右侧栏"
+    },
+    {
+      "line": 56,
+      "text": "\t\t\t1944 文本 引用来源 (0)"
+    },
+    {
+      "line": 57,
+      "text": "\t\t\t1945 按钮 关闭"
+    },
+    {
+      "line": 58,
+      "text": "\t\t\t1910 按钮 展开侧边栏"
+    },
+    {
+      "line": 59,
+      "text": "\t\t\t\t1911 图像"
+    },
+    {
+      "line": 60,
+      "text": "\t\t\t1912 按钮 新建任务"
+    },
+    {
+      "line": 61,
+      "text": "\t\t\t1913 按钮 最小化"
+    },
+    {
+      "line": 62,
+      "text": "\t\t\t1914 按钮 最大化"
+    },
+    {
+      "line": 63,
+      "text": "\t\t\t1915 按钮 关闭"
+    },
+    {
+      "line": 64,
+      "text": "\t\t\t1946 警报"
+    },
+    {
+      "line": 65,
+      "text": "\t\t\t1947 警报"
+    },
+    {
+      "line": 66,
+      "text": "\t\t\t1948 组"
+    },
+    {
+      "line": 67,
+      "text": "\t\t\t1949 组"
+    },
+    {
+      "line": 68,
+      "text": "\t\t1916 窗格 (disabled)"
+    },
+    {
+      "line": 69,
+      "text": "\t\t1200 窗格"
+    },
+    {
+      "line": 70,
+      "text": "\t\t\t1201 窗格"
+    },
+    {
+      "line": 71,
+      "text": "\t\t\t\t1202 窗格"
+    },
+    {
+      "line": 72,
+      "text": "\t\t\t\t\t1203 窗格"
+    },
+    {
+      "line": 73,
+      "text": "\t\t\t\t\t\t1204 窗格"
+    },
+    {
+      "line": 74,
+      "text": "\t\t\t\t\t\t\t1205 窗格"
+    },
+    {
+      "line": 75,
+      "text": "\t\t\t\t\t\t\t1206 窗格"
+    }
+  ],
+  "review": "Task-only UI excerpt reviewed by the collecting operator with AI assistance. Account/root URL and unrelated dialog navigation omitted. Raw source retained privately; source authenticity is not independently established by this digest."
+}

@@ -4,19 +4,21 @@
   "period_end": "2026-10-24",
   "as_of": "2026-10-22",
   "product_runs": {
-    "independent_product_runs": 2,
-    "valid": 1,
-    "passed": 1,
+    "independent_product_runs": 4,
+    "valid": 3,
+    "passed": 3,
     "failed": 0,
     "unknown": 1,
     "invalid": 0
   },
   "new_public_product_packages": [
     "public/supplements/window-reopen-v1/W01-control/manifest.json",
-    "public/supplements/window-reopen-v1/W02-window-reopen/manifest.json"
+    "public/supplements/window-reopen-v1/W02-window-reopen/manifest.json",
+    "public/supplements/window-reopen-v2/R01-reopen/manifest.json",
+    "public/supplements/window-reopen-v2/R02-control/manifest.json"
   ],
   "previous_public_package_count": 52,
-  "current_public_package_count": 54,
+  "current_public_package_count": 56,
   "offline_work_units_not_product_runs": {
     "synthetic_examples": 22,
     "expected_valid": 10,
@@ -33,7 +35,7 @@
   "evidence": [
     {
       "path": "supplements/week2/executions.json",
-      "sha256": "55fffbe2dd9f590bece4acaed012f518d4e1e79d1f5dafdcbe96ce6bfb894800",
+      "sha256": "8c89394dd3b58c23cef7f6a9c761729ef57aca22fef72deedd2b4dd4bd6969d6",
       "json_pointer": ""
     },
     {

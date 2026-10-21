@@ -1,0 +1,46 @@
+[
+  {
+    "relative_path": "retrieval-before/probe.txt",
+    "method": "native_ui_save_as",
+    "source_role": "original_message_attachment",
+    "source_scene": "captures/007-before-probe-source.ax.txt",
+    "destination_scene": "captures/008-before-probe-save-dialog.ax.txt",
+    "at": "2026-10-21T17:10:56.068Z",
+    "elapsed_ms": 146116.16760000004,
+    "bytes": 137,
+    "sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+  },
+  {
+    "relative_path": "retrieval-before/stage-a.txt",
+    "method": "native_ui_save_as",
+    "source_role": "native_stage_a_card",
+    "source_scene": "captures/010-before-stage-a-source.ax.txt",
+    "destination_scene": "captures/011-before-stage-a-save-dialog.ax.txt",
+    "at": "2026-10-21T17:12:54.569Z",
+    "elapsed_ms": 264616.2454,
+    "bytes": 137,
+    "sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+  },
+  {
+    "relative_path": "retrieval-after/probe.txt",
+    "method": "native_ui_save_as",
+    "source_role": "original_message_attachment",
+    "source_scene": "captures/015-after-probe-source.ax.txt",
+    "destination_scene": "captures/016-after-probe-save-dialog.ax.txt",
+    "at": "2026-10-21T17:14:18.057Z",
+    "elapsed_ms": 348104.8646,
+    "bytes": 137,
+    "sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+  },
+  {
+    "relative_path": "retrieval-after/stage-a.txt",
+    "method": "native_ui_save_as",
+    "source_role": "native_stage_a_card",
+    "source_scene": "captures/018-after-stage-a-source.ax.txt",
+    "destination_scene": "captures/019-after-stage-a-save-dialog.ax.txt",
+    "at": "2026-10-21T17:14:58.370Z",
+    "elapsed_ms": 388418.28,
+    "bytes": 137,
+    "sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "run_id": "R02-control",
+  "registration_commit": "51cd34f",
+  "before_at": "2026-10-21T17:21:54.436Z",
+  "before_monotonic_ms": 1295680.0703,
+  "workspace": "D:/harness-window-reopen-v2/R02-control",
+  "window_id": 67724,
+  "initial_workspace_inventory": [],
+  "after_at": "2026-10-21T17:21:54.613Z",
+  "after_monotonic_ms": 1295857.0724
+}

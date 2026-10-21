@@ -1,0 +1,545 @@
+{
+  "schema": "reviewed-native-ax-excerpt/v1",
+  "captured_at": "2026-10-21T17:19:35.424Z",
+  "source_capture": "captures/023-final-delivery.ax.txt",
+  "source_sha256": "9322e0af3d7d4a7e644bbf0f4183a866deb0caf80d3b5586cf47cb20fa035f1d",
+  "lines": [
+    {
+      "line": 2,
+      "text": "\t0 窗格 WorkBuddy Secondary Actions: Raise"
+    },
+    {
+      "line": 4,
+      "text": "\t\t\t1208 菜单栏"
+    },
+    {
+      "line": 5,
+      "text": "\t\t\t\t1209 菜单项 编辑(E)"
+    },
+    {
+      "line": 6,
+      "text": "\t\t\t\t\t1210 文本 编辑("
+    },
+    {
+      "line": 7,
+      "text": "\t\t\t\t\t1211 文本 E"
+    },
+    {
+      "line": 8,
+      "text": "\t\t\t\t\t1212 文本 )"
+    },
+    {
+      "line": 9,
+      "text": "\t\t\t\t1213 菜单项 窗口(W)"
+    },
+    {
+      "line": 10,
+      "text": "\t\t\t\t\t1214 文本 窗口("
+    },
+    {
+      "line": 11,
+      "text": "\t\t\t\t\t1215 文本 W"
+    },
+    {
+      "line": 12,
+      "text": "\t\t\t\t\t1216 文本 )"
+    },
+    {
+      "line": 13,
+      "text": "\t\t\t\t1217 菜单项 帮助(H)"
+    },
+    {
+      "line": 14,
+      "text": "\t\t\t\t\t1218 文本 帮助("
+    },
+    {
+      "line": 15,
+      "text": "\t\t\t\t\t1219 文本 H"
+    },
+    {
+      "line": 16,
+      "text": "\t\t\t\t\t1220 文本 )"
+    },
+    {
+      "line": 17,
+      "text": "\t\t\t\t1221 菜单项 关于(A)"
+    },
+    {
+      "line": 18,
+      "text": "\t\t\t\t\t1222 文本 关于("
+    },
+    {
+      "line": 19,
+      "text": "\t\t\t\t\t1223 文本 A"
+    },
+    {
+      "line": 20,
+      "text": "\t\t\t\t\t1224 文本 )"
+    },
+    {
+      "line": 21,
+      "text": "\t\t\t1225 文本 按字节复制 probe.txt 为 stage-a.txt"
+    },
+    {
+      "line": 22,
+      "text": "\t\t\t1226 按钮 对话内搜索"
+    },
+    {
+      "line": 23,
+      "text": "\t\t\t1227 按钮 分享"
+    },
+    {
+      "line": 24,
+      "text": "\t\t\t\t1228 图像"
+    },
+    {
+      "line": 25,
+      "text": "\t\t\t1600 文本 按初始要求继续第二阶段。"
+    },
+    {
+      "line": 26,
+      "text": "\t\t\t1601 工具栏"
+    },
+    {
+      "line": 27,
+      "text": "\t\t\t\t1602 文本 01:15"
+    },
+    {
+      "line": 28,
+      "text": "\t\t\t\t1603 按钮 复制"
+    },
+    {
+      "line": 29,
+      "text": "\t\t\t\t\t1604 图像"
+    },
+    {
+      "line": 30,
+      "text": "\t\t\t\t1733 按钮 将对话及产物回退到此消息前"
+    },
+    {
+      "line": 31,
+      "text": "\t\t\t\t\t1734 图像"
+    },
+    {
+      "line": 32,
+      "text": "\t\t\t\t1735 按钮 编辑"
+    },
+    {
+      "line": 33,
+      "text": "\t\t\t\t\t1736 图像"
+    },
+    {
+      "line": 34,
+      "text": "\t\t\t1737 图像"
+    },
+    {
+      "line": 35,
+      "text": "\t\t\t1612 文本 WorkBuddy"
+    },
+    {
+      "line": 36,
+      "text": "\t\t\t1738 文本 已完成 21s"
+    },
+    {
+      "line": 37,
+      "text": "\t\t\t1719 文本 第二阶段已完成：我重新从最初附加的"
+    },
+    {
+      "line": 38,
+      "text": "\t\t\t1739 文本 probe.txt"
+    },
+    {
+      "line": 39,
+      "text": "\t\t\t1740 文本 出发，逐字节复制内容并生成回执。"
+    },
+    {
+      "line": 40,
+      "text": "\t\t\t1741 文本 交付文件如下："
+    },
+    {
+      "line": 41,
+      "text": "\t\t\t1742 列表"
+    },
+    {
+      "line": 42,
+      "text": "\t\t\t\t1743 列表项目 (selectable)"
+    },
+    {
+      "line": 43,
+      "text": "\t\t\t\t\t1744 文本 •"
+    },
+    {
+      "line": 44,
+      "text": "\t\t\t\t\t1745 文本 stage-b.txt"
+    },
+    {
+      "line": 45,
+      "text": "\t\t\t\t\t1746 文本 ：与源文件逐字节完全一致，未改编码、换行、空格或标点"
+    },
+    {
+      "line": 46,
+      "text": "\t\t\t\t1747 列表项目 (selectable)"
+    },
+    {
+      "line": 47,
+      "text": "\t\t\t\t\t1748 文本 •"
+    },
+    {
+      "line": 48,
+      "text": "\t\t\t\t\t1749 文本 receipt.json"
+    },
+    {
+      "line": 49,
+      "text": "\t\t\t\t\t1750 文本 ：只有 4 个顶层字段，即"
+    },
+    {
+      "line": 50,
+      "text": "\t\t\t\t\t1751 文本 stage"
+    },
+    {
+      "line": 51,
+      "text": "\t\t\t\t\t1752 文本 ="
+    },
+    {
+      "line": 52,
+      "text": "\t\t\t\t\t1753 文本 \"B\""
+    },
+    {
+      "line": 53,
+      "text": "\t\t\t\t\t1754 文本 、"
+    },
+    {
+      "line": 54,
+      "text": "\t\t\t\t\t1755 文本 source"
+    },
+    {
+      "line": 55,
+      "text": "\t\t\t\t\t1756 文本 ="
+    },
+    {
+      "line": 56,
+      "text": "\t\t\t\t\t1757 文本 \"probe.txt\""
+    },
+    {
+      "line": 57,
+      "text": "\t\t\t\t\t1758 文本 、"
+    },
+    {
+      "line": 58,
+      "text": "\t\t\t\t\t1759 文本 bytes"
+    },
+    {
+      "line": 59,
+      "text": "\t\t\t\t\t1760 文本 ="
+    },
+    {
+      "line": 60,
+      "text": "\t\t\t\t\t1761 文本 137"
+    },
+    {
+      "line": 61,
+      "text": "\t\t\t\t\t1762 文本 （整数）、"
+    },
+    {
+      "line": 62,
+      "text": "\t\t\t\t\t1763 文本 sha256"
+    },
+    {
+      "line": 63,
+      "text": "\t\t\t\t\t1764 文本 ="
+    },
+    {
+      "line": 64,
+      "text": "\t\t\t\t\t1765 文本 b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+    },
+    {
+      "line": 65,
+      "text": "\t\t\t\t\t1766 文本 （小写十六进制）"
+    },
+    {
+      "line": 66,
+      "text": "\t\t\t1767 文本 校验结果："
+    },
+    {
+      "line": 67,
+      "text": "\t\t\t1768 文本 cmp"
+    },
+    {
+      "line": 68,
+      "text": "\t\t\t1769 文本 逐字节比对一致；Python 复核确认字段名恰好是这四个，类型分别为 string、string、int、string，"
+    },
+    {
+      "line": 69,
+      "text": "\t\t\t1770 文本 bytes"
+    },
+    {
+      "line": 70,
+      "text": "\t\t\t1771 文本 与 137 相符，"
+    },
+    {
+      "line": 71,
+      "text": "\t\t\t1772 文本 sha256"
+    },
+    {
+      "line": 72,
+      "text": "\t\t\t1773 文本 与源字节重算值一致。"
+    },
+    {
+      "line": 73,
+      "text": "\t\t\t1774 文本 STAGE_"
+    },
+    {
+      "line": 74,
+      "text": "\t\t\t1775 文本 B"
+    },
+    {
+      "line": 75,
+      "text": "\t\t\t1776 文本 _"
+    },
+    {
+      "line": 76,
+      "text": "\t\t\t1777 文本 D"
+    },
+    {
+      "line": 77,
+      "text": "\t\t\t1778 文本 O"
+    },
+    {
+      "line": 78,
+      "text": "\t\t\t1779 文本 N"
+    },
+    {
+      "line": 79,
+      "text": "\t\t\t1780 文本 E"
+    },
+    {
+      "line": 80,
+      "text": "\t\t\t1781 按钮 receipt.json"
+    },
+    {
+      "line": 81,
+      "text": "\t\t\t1782 文本 receipt.json"
+    },
+    {
+      "line": 82,
+      "text": "\t\t\t1783 文本 140 B"
+    },
+    {
+      "line": 83,
+      "text": "\t\t\t1784 按钮 stage-b.txt"
+    },
+    {
+      "line": 84,
+      "text": "\t\t\t1785 文本 stage-b.txt"
+    },
+    {
+      "line": 85,
+      "text": "\t\t\t1786 文本 137 B"
+    },
+    {
+      "line": 86,
+      "text": "\t\t\t1322 编辑 (settable, string) Value: ﻿ 今天帮你做些什么？@ 添加上下文，/调用技能与指令"
+    },
+    {
+      "line": 87,
+      "text": "\t\t\t\t1609 文本 ﻿"
+    },
+    {
+      "line": 88,
+      "text": "\t\t\t\t1610 文本 今天帮你做些什么？@ 添加上下文，/调用技能与指令"
+    },
+    {
+      "line": 89,
+      "text": "\t\t\t1326 组合框 (settable, string) 更多操作"
+    },
+    {
+      "line": 90,
+      "text": "\t\t\t\t1327 图像"
+    },
+    {
+      "line": 91,
+      "text": "\t\t\t1328 组合框 (settable, string) Value: 允许完全访问"
+    },
+    {
+      "line": 92,
+      "text": "\t\t\t\t1329 文本 允许完全访问"
+    },
+    {
+      "line": 93,
+      "text": "\t\t\t1330 按钮"
+    },
+    {
+      "line": 94,
+      "text": "\t\t\t\t1331 图像"
+    },
+    {
+      "line": 95,
+      "text": "\t\t\t1332 组合框 (settable, string) Select model: Deepseek-V4.1-Flash Value: Deepseek-V4.1-Flash"
+    },
+    {
+      "line": 96,
+      "text": "\t\t\t\t1333 图像"
+    },
+    {
+      "line": 97,
+      "text": "\t\t\t\t1334 文本 Deepseek-V4.1-Flash"
+    },
+    {
+      "line": 98,
+      "text": "\t\t\t1335 按钮 点击或长按 Alt 语音输入"
+    },
+    {
+      "line": 99,
+      "text": "\t\t\t\t1336 图像"
+    },
+    {
+      "line": 100,
+      "text": "\t\t\t1337 按钮 (disabled) 发送"
+    },
+    {
+      "line": 101,
+      "text": "\t\t\t1338 文本 内容由 AI 生成，请核实重要信息"
+    },
+    {
+      "line": 102,
+      "text": "\t\t\t1339 选项卡 Artifact tabs"
+    },
+    {
+      "line": 103,
+      "text": "\t\t\t\t1340 选项卡项目 (selectable) stage-a.txt 关闭"
+    },
+    {
+      "line": 104,
+      "text": "\t\t\t\t\t1341 文本 stage-a.txt"
+    },
+    {
+      "line": 105,
+      "text": "\t\t\t\t\t1342 按钮 关闭"
+    },
+    {
+      "line": 106,
+      "text": "\t\t\t\t1343 选项卡项目 (selectable) probe.txt 关闭"
+    },
+    {
+      "line": 107,
+      "text": "\t\t\t\t\t1344 文本 probe.txt"
+    },
+    {
+      "line": 108,
+      "text": "\t\t\t\t\t1345 按钮 关闭"
+    },
+    {
+      "line": 109,
+      "text": "\t\t\t\t1651 选项卡项目 (selectable) receipt.json 关闭"
+    },
+    {
+      "line": 110,
+      "text": "\t\t\t\t\t1652 文本 receipt.json"
+    },
+    {
+      "line": 111,
+      "text": "\t\t\t\t\t1653 按钮 关闭"
+    },
+    {
+      "line": 112,
+      "text": "\t\t\t\t1346 按钮 新标签页"
+    },
+    {
+      "line": 113,
+      "text": "\t\t\t1347 按钮 进入全屏"
+    },
+    {
+      "line": 114,
+      "text": "\t\t\t1348 按钮 收起右侧栏"
+    },
+    {
+      "line": 115,
+      "text": "\t\t\t1654 文本 receipt.json"
+    },
+    {
+      "line": 116,
+      "text": "\t\t\t1655 按钮 文档发布状态"
+    },
+    {
+      "line": 117,
+      "text": "\t\t\t1656 按钮 将 receipt.json 上传到云端"
+    },
+    {
+      "line": 118,
+      "text": "\t\t\t1657 菜单项 分享 receipt.json ID: wb-popover-trigger\\:r204\\:"
+    },
+    {
+      "line": 119,
+      "text": "\t\t\t1658 按钮 更多操作"
+    },
+    {
+      "line": 120,
+      "text": "\t\t\t1660 editor (settable, string) Editor content"
+    },
+    {
+      "line": 121,
+      "text": "\t\t\t1357 按钮 展开侧边栏"
+    },
+    {
+      "line": 122,
+      "text": "\t\t\t\t1358 图像"
+    },
+    {
+      "line": 123,
+      "text": "\t\t\t1359 按钮 新建任务"
+    },
+    {
+      "line": 124,
+      "text": "\t\t\t1360 按钮 最小化"
+    },
+    {
+      "line": 125,
+      "text": "\t\t\t1361 按钮 最大化"
+    },
+    {
+      "line": 126,
+      "text": "\t\t\t1362 按钮 关闭"
+    },
+    {
+      "line": 127,
+      "text": "\t\t\t1787 工具提示 Enter 发送，Shift+Enter 换行 ID: \\:r1qp\\:"
+    },
+    {
+      "line": 128,
+      "text": "\t\t\t\t1788 文本 Enter 发送，Shift+Enter 换行"
+    },
+    {
+      "line": 129,
+      "text": "\t\t1367 窗格 (disabled)"
+    },
+    {
+      "line": 130,
+      "text": "\t\t1200 窗格"
+    },
+    {
+      "line": 131,
+      "text": "\t\t\t1201 窗格"
+    },
+    {
+      "line": 132,
+      "text": "\t\t\t\t1202 窗格"
+    },
+    {
+      "line": 133,
+      "text": "\t\t\t\t\t1203 窗格"
+    },
+    {
+      "line": 134,
+      "text": "\t\t\t\t\t\t1204 窗格"
+    },
+    {
+      "line": 135,
+      "text": "\t\t\t\t\t\t\t1205 窗格"
+    },
+    {
+      "line": 136,
+      "text": "\t\t\t\t\t\t\t1206 窗格"
+    }
+  ],
+  "review": "Task-only UI excerpt reviewed by the collecting operator with AI assistance. Account/root URL and unrelated dialog navigation omitted. Raw source retained privately; source authenticity is not independently established by this digest."
+}

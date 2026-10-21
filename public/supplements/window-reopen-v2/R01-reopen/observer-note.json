@@ -1,0 +1,4 @@
+{
+  "at": "2026-10-21T17:12:38.707Z",
+  "issue": "No-overwrite guard stopped a helper using an earlier copied destination. No save action was issued. Helper calls now take explicit per-file context; original files were not touched."
+}

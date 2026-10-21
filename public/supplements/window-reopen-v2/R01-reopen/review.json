@@ -1,0 +1,96 @@
+{
+  "rule_version": "window-reopen/v2",
+  "rules": "../../../../supplements/window-reopen-v2/protocol.json",
+  "inputs": [
+    "../../../../supplements/window-reopen-v2/fixtures/probe.txt",
+    "../../../../supplements/window-reopen-v2/fixtures/prompt.txt"
+  ],
+  "configuration": "execution.json#/configuration",
+  "artifacts": "judgment.json",
+  "metrics": {
+    "original_message_accessible": {
+      "status": "pass",
+      "reason": "Full frozen initial text, research marker, task title and creation time remain available in the original native task. Does not establish backend model context.",
+      "evidence": [
+        "scenes/015-after-probe-source.json"
+      ],
+      "confidence": "medium"
+    },
+    "original_attachment_direct_retrieval": {
+      "status": "pass",
+      "reason": "Before and after copies were saved from the original message attachment through native Save As; all bytes match. The host source remained present.",
+      "evidence": [
+        "ui-retrieval.json",
+        "scene-index.json",
+        "seal.json"
+      ],
+      "confidence": "high_for_bytes_medium_for_operator_UI_provenance"
+    },
+    "existing_stage_a_direct_retrieval": {
+      "status": "pass",
+      "reason": "Before and after copies were saved from the native delivered Stage A card and match the fixed input.",
+      "evidence": [
+        "ui-retrieval.json",
+        "scene-index.json",
+        "seal.json"
+      ],
+      "confidence": "high_for_bytes_medium_for_operator_UI_provenance"
+    },
+    "operator_model_messages_during_primary": {
+      "status": "pass",
+      "reason": "No new operator-submitted model message between checkpoint and primary capture; direct UI operations only. Unexposed background model or Skill activity is not ruled out.",
+      "evidence": [
+        "actions.jsonl",
+        "checkpoint.json",
+        "primary.json",
+        "continuation.json"
+      ],
+      "confidence": "medium"
+    },
+    "window_intervention": {
+      "status": "pass",
+      "reason": "Two consecutive absent-window inventories preceded launch, followed by the same task.",
+      "evidence": [
+        "close-proof.json",
+        "actions.jsonl"
+      ],
+      "confidence": "medium"
+    },
+    "stage_b_joint_delivery": {
+      "status": "pass",
+      "reason": "Frozen byte/receipt contract passed; originals actually collected and sealed within 1200 seconds. This result is joint Model/Skill/Harness behavior.",
+      "evidence": [
+        "judgment.json",
+        "seal.json",
+        "scenes/023-final-delivery.png"
+      ],
+      "confidence": "high_for_bytes_medium_for_operator_UI_provenance"
+    },
+    "attachment_cloud_storage": {
+      "status": "unknown",
+      "reason": "Native retrieval may resolve a local source pointer. No isolated product-managed cloud copy was established.",
+      "evidence": [
+        "ui-retrieval.json",
+        "scenes/015-after-probe-source.json"
+      ],
+      "confidence": "not_established"
+    }
+  },
+  "phenomenon": "Original message and two native file entries remained usable, with matching before/after retrieved bytes and a passing Stage B joint delivery.",
+  "cause_clue": "Direct retrieval precedes the model continuation, so the primary file observation does not rely on a newly submitted regeneration request.",
+  "validated_conclusion": "Under these recorded local-file and visible UI conditions, the registered primary observation and joint delivery pass for this individual run.",
+  "unexcluded_variables": [
+    "host source and delivered local files remain present",
+    "different absolute workspaces and wall time",
+    "fixed reopen-first order; one pair only",
+    "backend routing/model variation",
+    "hidden automatic Skill and global memory",
+    "operator-collected UI and manually selected excerpts"
+  ],
+  "unknown_register": [
+    "U01",
+    "U03",
+    "U06",
+    "U07"
+  ]
+}

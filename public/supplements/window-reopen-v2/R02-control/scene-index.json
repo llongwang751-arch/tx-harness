@@ -1,0 +1,16 @@
+{
+  "captures/006-workspace-selected.ax.txt": "scenes/006-workspace-selected.json",
+  "captures/010-initial-config-prompt.ax.txt": "scenes/010-initial-config-prompt.json",
+  "captures/014-stage-a-finished.ax.txt": "scenes/014-stage-a-finished.json",
+  "captures/017-before-probe-source-ready.ax.txt": "scenes/017-before-probe-source-ready.json",
+  "captures/018-before-probe-save-dialog.ax.txt": "scenes/018-before-probe-save-dialog.json",
+  "captures/020-before-stage-a-source-ready.ax.txt": "scenes/020-before-stage-a-source-ready.json",
+  "captures/022-before-stage-a-confirmed-save-dialog.ax.txt": "scenes/022-before-stage-a-confirmed-save-dialog.json",
+  "captures/023-after-original-message.ax.txt": "scenes/023-after-original-message.json",
+  "captures/024-after-probe-source.ax.txt": "scenes/024-after-probe-source.json",
+  "captures/025-after-probe-save-dialog.ax.txt": "scenes/025-after-probe-save-dialog.json",
+  "captures/026-after-stage-a-source.ax.txt": "scenes/026-after-stage-a-source.json",
+  "captures/027-after-stage-a-save-dialog.ax.txt": "scenes/027-after-stage-a-save-dialog.json",
+  "captures/032-final-delivery.ax.txt": "scenes/032-final-delivery.json",
+  "captures/033-native-final-artifact-directory.ax.txt": "scenes/033-native-final-artifact-directory.json"
+}

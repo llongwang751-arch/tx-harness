@@ -1,0 +1,49 @@
+{
+  "schema": "reviewed-native-ax-excerpt/v1",
+  "captured_at": "2026-10-21T17:24:52.668Z",
+  "source_capture": "captures/025-after-probe-save-dialog.ax.txt",
+  "source_sha256": "9de52e5383c536b31f7cab34d1d27a5d1b91899ca71006db233247d5e26868fe",
+  "lines": [
+    {
+      "line": 3,
+      "text": "\t\t2681 对话框 另存为 Secondary Actions: Raise"
+    },
+    {
+      "line": 64,
+      "text": "\t\t\t\t2742 文本 文件名: Description: 文件名: ID: SaveDialogLabel"
+    },
+    {
+      "line": 65,
+      "text": "\t\t\t\t2743 组合框 (settable, string) 文件名: Value: D:\\harness-window-reopen-v2\\acquisitions\\R02-control\\retrieval-after\\probe.txt ID: FileNameControlHost"
+    },
+    {
+      "line": 66,
+      "text": "\t\t\t\t\t2744 编辑 (settable, string) 文件名: Value: D:\\harness-window-reopen-v2\\acquisitions\\R02-control\\retrieval-after\\probe.txt ID: 1001"
+    },
+    {
+      "line": 104,
+      "text": "\t\t\t2782 标题栏 (settable, string) Value: 另存为"
+    },
+    {
+      "line": 271,
+      "text": "\t\t2681 对话框 另存为 Secondary Actions: Raise"
+    },
+    {
+      "line": 332,
+      "text": "\t\t\t\t2742 文本 文件名: Description: 文件名: ID: SaveDialogLabel"
+    },
+    {
+      "line": 333,
+      "text": "\t\t\t\t2743 组合框 (settable, string) 文件名: Value: D:\\harness-window-reopen-v2\\acquisitions\\R02-control\\retrieval-after\\probe.txt ID: FileNameControlHost"
+    },
+    {
+      "line": 334,
+      "text": "\t\t\t\t\t2744 编辑 (settable, string) 文件名: Value: D:\\harness-window-reopen-v2\\acquisitions\\R02-control\\retrieval-after\\probe.txt ID: 1001"
+    },
+    {
+      "line": 372,
+      "text": "\t\t\t2782 标题栏 (settable, string) Value: 另存为"
+    }
+  ],
+  "review": "Task-only UI excerpt reviewed by the collecting operator with AI assistance. Account/root URL and unrelated dialog navigation omitted. Raw source retained privately; source authenticity is not independently established by this digest."
+}

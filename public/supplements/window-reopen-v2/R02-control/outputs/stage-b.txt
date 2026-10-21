@@ -1,0 +1,4 @@
+REOPEN-P2-76e7fc6c603f1febcf6d8d19b9359e0c
+中文原件：原生另存与窗口恢复。
+symbols: <> & = + / \
+space:  keep  two  spaces

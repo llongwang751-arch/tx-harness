@@ -74,7 +74,9 @@ def product_manifest(name):
             or len(parts) == 5 and parts[:3] == ['public', 'supplements', 'contracts-v2']
             and parts[3].startswith('S') and parts[-1] == 'manifest.json'
             or len(parts) == 5 and parts[:3] == ['public', 'supplements', 'window-reopen-v1']
-            and parts[3].startswith('W') and parts[-1] == 'manifest.json')
+            and parts[3].startswith('W') and parts[-1] == 'manifest.json'
+            or len(parts) == 5 and parts[:3] == ['public', 'supplements', 'window-reopen-v2']
+            and parts[3].startswith('R') and parts[-1] == 'manifest.json')
 
 
 def weekly_counts():
@@ -82,11 +84,13 @@ def weekly_counts():
     counts = count_executions(registry['entries'])
     old = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only',
         registry['previous_week_baseline_commit'], '--', 'public/pilots',
-        'public/supplements/contracts-v2', 'public/supplements/window-reopen-v1'], cwd=ROOT, text=True).splitlines()
+        'public/supplements/contracts-v2', 'public/supplements/window-reopen-v1',
+        'public/supplements/window-reopen-v2'], cwd=ROOT, text=True).splitlines()
     old = {name for name in old if product_manifest(name)}
     current = {path.relative_to(ROOT).as_posix() for directory, pattern in [
         ('public/pilots', '*/manifest.json'), ('public/supplements/contracts-v2', 'S*/manifest.json'),
-        ('public/supplements/window-reopen-v1', 'W*/manifest.json')]
+        ('public/supplements/window-reopen-v1', 'W*/manifest.json'),
+        ('public/supplements/window-reopen-v2', 'R*/manifest.json')]
         for path in (ROOT / directory).glob(pattern)}
     added = current - old
     registered = set()

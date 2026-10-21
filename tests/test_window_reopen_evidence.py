@@ -76,6 +76,8 @@ class WindowReopenEvidenceChecks(unittest.TestCase):
 
     def test_new_namespace_counts_product_runs_but_not_synthetic_examples(self):
         self.assertTrue(product_manifest('public/supplements/window-reopen-v1/W01-control/manifest.json'))
+        self.assertTrue(product_manifest('public/supplements/window-reopen-v2/R01-reopen/manifest.json'))
+        self.assertFalse(product_manifest('public/supplements/window-reopen-v2/fixtures/manifest.json'))
         self.assertFalse(product_manifest('public/grader-audit-v3/N1/manifest.json'))
         self.assertFalse(product_manifest('public/supplements/window-reopen-v1/fixtures/manifest.json'))
 

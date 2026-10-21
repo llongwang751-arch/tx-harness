@@ -1,0 +1,40 @@
+{
+  "schema": "window-reopen-execution/v2",
+  "run_id": "R01-reopen",
+  "registration_commit": "51cd34f436f22f66f22dddd8e2d14a94535a362c",
+  "actual_submitted": true,
+  "started_at": "2026-10-21T17:08:29.952Z",
+  "ended_at": "2026-10-21T17:19:59.982Z",
+  "input_sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6",
+  "prompt_sha256": "b76836c815a5f301951229c6d87a5a8d97ede0fb2438ade55d0b0c1b6bc6b1ea",
+  "configuration": {
+    "product": "WorkBuddy Windows desktop",
+    "version_label": "V5.8.3",
+    "version_basis": "UI preflight for this batch; not a backend build attestation",
+    "mode": "办公",
+    "model_label": "Deepseek-V4.1-Flash",
+    "permission_label": "允许完全访问",
+    "workspace": "D:/harness-window-reopen-v2/R01-reopen",
+    "attachment_source": "D:/harness-window-reopen-v2/inputs/probe.txt",
+    "skill": "No explicit install or invocation; hidden/automatic Skills unknown",
+    "source_file_remains_present": true,
+    "collection": "Official native Computer Use; single active product task; operator with AI assistance"
+  },
+  "validity": "valid",
+  "outcome": "pass",
+  "artifact_outcome": "pass",
+  "primary_outcome": "pass",
+  "evidence": [
+    "submission.json",
+    "checkpoint.json",
+    "continuation.json",
+    "seal.json",
+    "primary.json",
+    "ui-retrieval.json",
+    "collection.jsonl",
+    "close-proof.json",
+    "scene-index.json",
+    "actions.jsonl",
+    "judgment.json"
+  ]
+}

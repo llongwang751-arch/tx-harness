@@ -8,8 +8,9 @@
 |---|---|
 | [report.md](report.md) | 当前书面报告：差异、旧分与理由、边界观察、补测及归因限制 |
 | [窗口重开与续接](window-reopen-v1.md) | 2次真实WorkBuddy桌面任务；两次文件通过，W02干预未知，不能作配对因果结论 |
+| [直接取回与窗口重开v2](window-reopen-v2.md) | 另登记2次真实任务；启动前两次空窗口清单、前后四份原生取回及联合交付通过；本地源保留，不证明云存储或一般可靠性 |
 | [grader-audit-v3.md](grader-audit-v3.md) / [JSON](grader-audit-v3.json) | 22组合成判卷样例、20次守卫开关与25份旧原件复算；均不算新增产品运行 |
-| [第二周结论与来源](week2/claims.json) / [计数](week2/counts.json) | 六条有界结论及规则、输入、配置、现场、产物、理由；周报新增产品运行2，有效1、未知1 |
+| [第二周结论与来源](week2/claims.json) / [计数](week2/counts.json) | 六条判卷/许可结论及两轮v2包内逐项review；本周新增产品运行4，有效通过3、未知1，现场与计数分开核对 |
 | [evaluation-v2.md](evaluation-v2.md) / [JSON](evaluation-v2.json) | 原25现场的逐字段、声明权重、共同界面和计时复核；严格截止分均为null |
 | [exploratory-score-review.md](exploratory-score-review.md) / [JSON](exploratory-score-review.json) | 冻结的旧26次评分，含额外豆包本地T01失败；仅25个选定组合用于描述均值 |
 | [补测分母](../public/supplements/contracts-v2/README.md) / [JSON](../public/supplements/contracts-v2/coverage.json) | S01五产品各三轮及S02三组许可对照；E2原件与E1资格分开，无综合分 |

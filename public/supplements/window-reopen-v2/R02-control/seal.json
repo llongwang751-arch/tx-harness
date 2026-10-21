@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-21T17:28:14.858Z",
+  "elapsed_ms": 380421.5795,
+  "reason": "all-required-native-retrievals-and-final-artifacts-obtained",
+  "budget_seconds": 1200,
+  "within_budget": true,
+  "inventory": [
+    {
+      "at": "2026-10-21T17:23:25.591Z",
+      "elapsed_ms": 91154.7723999999,
+      "source": "D:/harness-window-reopen-v2/acquisitions/R02-control/retrieval-before/probe.txt",
+      "scene": "captures/018-before-probe-save-dialog.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v2/R02-control/collected/retrieval-before/probe.txt",
+      "bytes": 137,
+      "sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+    },
+    {
+      "at": "2026-10-21T17:24:12.843Z",
+      "elapsed_ms": 138407.46460000006,
+      "source": "D:/harness-window-reopen-v2/acquisitions/R02-control/retrieval-before/stage-a.txt",
+      "scene": "captures/022-before-stage-a-confirmed-save-dialog.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v2/R02-control/collected/retrieval-before/stage-a.txt",
+      "bytes": 137,
+      "sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+    },
+    {
+      "at": "2026-10-21T17:24:57.796Z",
+      "elapsed_ms": 183360.24300000002,
+      "source": "D:/harness-window-reopen-v2/acquisitions/R02-control/retrieval-after/probe.txt",
+      "scene": "captures/025-after-probe-save-dialog.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v2/R02-control/collected/retrieval-after/probe.txt",
+      "bytes": 137,
+      "sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+    },
+    {
+      "at": "2026-10-21T17:25:37.452Z",
+      "elapsed_ms": 223016.1514000001,
+      "source": "D:/harness-window-reopen-v2/acquisitions/R02-control/retrieval-after/stage-a.txt",
+      "scene": "captures/027-after-stage-a-save-dialog.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v2/R02-control/collected/retrieval-after/stage-a.txt",
+      "bytes": 137,
+      "sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+    },
+    {
+      "at": "2026-10-21T17:28:14.852Z",
+      "elapsed_ms": 380415.31819999986,
+      "source": "D:/harness-window-reopen-v2/R02-control/stage-a.txt",
+      "scene": "captures/033-native-final-artifact-directory.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v2/R02-control/collected/stage-b/stage-a.txt",
+      "bytes": 137,
+      "sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+    },
+    {
+      "at": "2026-10-21T17:28:14.855Z",
+      "elapsed_ms": 380418.11840000004,
+      "source": "D:/harness-window-reopen-v2/R02-control/stage-b.txt",
+      "scene": "captures/033-native-final-artifact-directory.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v2/R02-control/collected/stage-b/stage-b.txt",
+      "bytes": 137,
+      "sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+    },
+    {
+      "at": "2026-10-21T17:28:14.857Z",
+      "elapsed_ms": 380420.8924,
+      "source": "D:/harness-window-reopen-v2/R02-control/receipt.json",
+      "scene": "captures/033-native-final-artifact-directory.ax.txt",
+      "collected": "D:/tx-harness/private/window-reopen-v2/R02-control/collected/stage-b/receipt.json",
+      "bytes": 140,
+      "sha256": "a5ac8f15b288be165150bdcd5d467148a6499b47368bbdd23ecb677e740ad083"
+    }
+  ]
+}

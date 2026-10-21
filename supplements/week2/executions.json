@@ -44,9 +44,49 @@
           "sha256": "2bf2e65bbdef534240bffe119f84635db1b6555ba5173c1310a1c2d33ee45dc0"
         }
       ]
+    },
+    {
+      "run_id": "R01-reopen",
+      "native_submission_id": "observed-ui:WorkBuddy:R01-reopen:2026-10-21T17:08:29.952Z",
+      "kind": "product_execution",
+      "actual_submitted": true,
+      "validity": "valid",
+      "outcome": "pass",
+      "started_at": "2026-10-21T17:08:29.952Z",
+      "public_manifest": "public/supplements/window-reopen-v2/R01-reopen/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/window-reopen-v2/R01-reopen/execution.json",
+          "sha256": "31812a08375c64ceab87367fbabd6a223cfe0c701474bff01b6ddcaffabb639b"
+        },
+        {
+          "path": "public/supplements/window-reopen-v2/R01-reopen/manifest.json",
+          "sha256": "50ed90839d4d2e8f869993793eb4371a579d58b67e8bff7d6008e09ba193f44e"
+        }
+      ]
+    },
+    {
+      "run_id": "R02-control",
+      "native_submission_id": "observed-ui:WorkBuddy:R02-control:2026-10-21T17:21:54.436Z",
+      "kind": "product_execution",
+      "actual_submitted": true,
+      "validity": "valid",
+      "outcome": "pass",
+      "started_at": "2026-10-21T17:21:54.436Z",
+      "public_manifest": "public/supplements/window-reopen-v2/R02-control/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/window-reopen-v2/R02-control/execution.json",
+          "sha256": "0c2df8e2378bb1701988c1bc5003b2cae78db6de6b7556377c4d6e7eee7bf6fd"
+        },
+        {
+          "path": "public/supplements/window-reopen-v2/R02-control/manifest.json",
+          "sha256": "b704c30ed483df39e57ca5c6043a365c820f03e7b7a017fbd9349839e961f5db"
+        }
+      ]
     }
   ],
-  "operator_attestation": "Two new WorkBuddy desktop tasks were actually submitted by native Computer Use on 2026-10-22 Asia/Shanghai. W01 is valid and passes; W02 files pass but intervention validity is unknown due to an observer capture gap. Stages, screenshots, grader tests and old artifact rechecks are not new runs.",
+  "operator_attestation": "Four actual WorkBuddy desktop task submissions on 2026-10-22 Asia/Shanghai in two separately registered batches. W01, R01 and R02 are valid passes; W02 intervention remains unknown. One product task was active at a time, using official native Computer Use with AI assistance. Preflight, stages, screenshots, synthetic examples and artifact rechecks are not extra runs.",
   "definitions": {
     "independent_run": "One actually submitted product task/session with its own input, configuration, start/end and public evidence. New grading rows, tool calls, screenshots, synthetic answers and replayed artifact checks are not product runs.",
     "valid": "Run conditions are valid and the task outcome can be judged; includes both passing and failing product outcomes",

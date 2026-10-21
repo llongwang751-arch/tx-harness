@@ -1,0 +1,77 @@
+{
+  "schema": "reviewed-native-ax-excerpt/v1",
+  "captured_at": "2026-10-21T17:28:14.844Z",
+  "source_capture": "captures/033-native-final-artifact-directory.ax.txt",
+  "source_sha256": "00344bbf26a1569c09e54b12e1baa1a534ecf5b946b460ce21de67e79a22fa32",
+  "lines": [
+    {
+      "line": 53,
+      "text": "\t\t\t\t\t\t51 列表项目 (selectable, settable, string) receipt.json Value: receipt.json ID: 0"
+    },
+    {
+      "line": 54,
+      "text": "\t\t\t\t\t\t\t52 编辑 (settable, string) 名称 Value: receipt.json ID: System.ItemNameDisplay"
+    },
+    {
+      "line": 58,
+      "text": "\t\t\t\t\t\t56 列表项目 (selectable, settable, string) stage-a.txt Value: stage-a.txt ID: 1"
+    },
+    {
+      "line": 59,
+      "text": "\t\t\t\t\t\t\t57 编辑 (settable, string) 名称 Value: stage-a.txt ID: System.ItemNameDisplay"
+    },
+    {
+      "line": 63,
+      "text": "\t\t\t\t\t\t61 列表项目 (selectable, settable, string) stage-b.txt Value: stage-b.txt ID: 2"
+    },
+    {
+      "line": 64,
+      "text": "\t\t\t\t\t\t\t62 编辑 (settable, string) 名称 Value: stage-b.txt ID: System.ItemNameDisplay"
+    },
+    {
+      "line": 74,
+      "text": "\t\t\t\t\t\t\t72 文本 R02-control"
+    },
+    {
+      "line": 84,
+      "text": "\t\t\t\t82 拆分按钮 此电脑 ID: FirstCrumbStackPanel"
+    },
+    {
+      "line": 87,
+      "text": "\t\t\t\t\t85 拆分按钮 此电脑"
+    },
+    {
+      "line": 88,
+      "text": "\t\t\t\t\t\t86 文本 此电脑"
+    },
+    {
+      "line": 89,
+      "text": "\t\t\t\t\t87 拆分按钮 本地磁盘 (D:)"
+    },
+    {
+      "line": 90,
+      "text": "\t\t\t\t\t\t88 文本 本地磁盘 (D:)"
+    },
+    {
+      "line": 91,
+      "text": "\t\t\t\t\t89 拆分按钮 harness-window-reopen-v2"
+    },
+    {
+      "line": 92,
+      "text": "\t\t\t\t\t\t90 文本 harness-window-reopen-v2"
+    },
+    {
+      "line": 93,
+      "text": "\t\t\t\t\t91 拆分按钮 R02-control"
+    },
+    {
+      "line": 94,
+      "text": "\t\t\t\t\t\t92 文本 R02-control"
+    },
+    {
+      "line": 121,
+      "text": "\t\t119 标题栏 (settable, string) Value: R02-control - 文件资源管理器"
+    }
+  ],
+  "review": "Task-only UI excerpt reviewed by the collecting operator with AI assistance. Account/root URL and unrelated dialog navigation omitted. Raw source retained privately; source authenticity is not independently established by this digest."
+}

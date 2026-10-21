@@ -1,0 +1,16 @@
+{
+  "captures/001-config.ax.txt": "scenes/001-config.json",
+  "captures/002-before-submission.ax.txt": "scenes/002-before-submission.json",
+  "captures/005-stage-a-baseline.ax.txt": "scenes/005-stage-a-baseline.json",
+  "captures/007-before-probe-source.ax.txt": "scenes/007-before-probe-source.json",
+  "captures/008-before-probe-save-dialog.ax.txt": "scenes/008-before-probe-save-dialog.json",
+  "captures/010-before-stage-a-source.ax.txt": "scenes/010-before-stage-a-source.json",
+  "captures/011-before-stage-a-save-dialog.ax.txt": "scenes/011-before-stage-a-save-dialog.json",
+  "captures/014-restored-original-message.ax.txt": "scenes/014-restored-original-message.json",
+  "captures/015-after-probe-source.ax.txt": "scenes/015-after-probe-source.json",
+  "captures/016-after-probe-save-dialog.ax.txt": "scenes/016-after-probe-save-dialog.json",
+  "captures/018-after-stage-a-source.ax.txt": "scenes/018-after-stage-a-source.json",
+  "captures/019-after-stage-a-save-dialog.ax.txt": "scenes/019-after-stage-a-save-dialog.json",
+  "captures/023-final-delivery.ax.txt": "scenes/023-final-delivery.json",
+  "captures/025-native-final-artifact-directory.ax.txt": "scenes/025-native-final-artifact-directory.json"
+}

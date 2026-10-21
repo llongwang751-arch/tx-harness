@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-21T17:24:20.955Z",
+  "claim": "window_kept_open",
+  "windows": [
+    {
+      "app": "process:E:\\workbuddy\\WorkBuddy.exe",
+      "id": 67724,
+      "title": "WorkBuddy"
+    }
+  ]
+}
