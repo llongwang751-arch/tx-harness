@@ -72,3 +72,5 @@ python -X utf8 -m unittest tests.test_grader_v3 -v
 ```
 
 这些命令不启动产品，不读私人运行记录，不改旧产物；完整仓库复核仍按[实际方案](../../docs/evaluation-plan.md)执行。
+
+首次[Linux CI](https://github.com/llongwang751-arch/tx-harness/actions/runs/39556898818)发现T04源文件清单的键序依赖操作系统：README/rates顺序不同，导致G4/N4元数据及manifest摘要不符。本机用大小写敏感排序复现，改为显式稳定序列化并加回归；已经公开的合成样例字节保留。该问题属于评测生成器的可复现性，不能记为产品失败。

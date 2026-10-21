@@ -5,6 +5,7 @@ import shutil
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -12,9 +13,21 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 from evaluation_v3.grader import adjudicate
 from harness_eval import core
 from verify_week2 import count_executions, pointer
+from audit_grader_v3 import make_examples, PUBLIC
 
 
 class GraderGuardTests(unittest.TestCase):
+    def test_example_bytes_are_stable_under_case_sensitive_inventory_order(self):
+        original_inventory = core.inventory
+        def case_sensitive_inventory(directory, exclude=()):
+            result = original_inventory(directory, exclude)
+            return dict(sorted(result.items(), key=lambda pair: tuple(pair[0].split('/'))))
+        with tempfile.TemporaryDirectory() as temporary:
+            generated = Path(temporary) / 'examples'
+            with patch.object(core, 'inventory', case_sensitive_inventory):
+                make_examples(generated)
+            self.assertEqual(original_inventory(generated), original_inventory(PUBLIC))
+
     def test_ablation_is_reversible_and_does_not_modify_the_artifacts(self):
         for example, case_id, responsible in [
             ('N6', 'T03', 'CSV_STRICT'), ('N7', 'T03', 'T03_CHANGELOG_KEYS'),

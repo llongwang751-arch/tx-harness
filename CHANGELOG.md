@@ -9,6 +9,7 @@
 - 公开22组固定合成样例（10组合规、12组不合规）：旧版误接受4组，新版这批误接受0、误拒绝0；完成20次守卫开关核查，结果与预期一致。旧25个选定现场只读重验，新增拒绝0。材料见[判卷审计](reports/grader-audit-v3.md)，不将针对性回归当成产品可靠性结论。
 - 为[六条重点结论](reports/week2/claims.json)绑定规则版本、输入、配置、现场、原件、理由及置信范围，分别写现象、原因线索、验证结论和未排除因素；[五项未知](supplements/week2/unknowns.json)设定下一步及停止条件。
 - 准备[两条结论外部复核包](reports/week2/external-review-packet.md)，当前尚未收到外部复算意见。新增[10月24日文字周报草稿](reports/weekly/2026-10-24-draft.md)，数据截至21日，尚未发送；[下周计划](supplements/week2/next-week-plan.json)限制三项并注明规模与完成条件。
+- 首次Linux CI发现合成元数据的跨平台键序差异：T04的README/rates在Windows和Linux排序不同，导致G4/N4元数据及manifest字节漂移。用平台排序模拟复现后，为生成器规定稳定顺序并增加回归；保留已公开样例字节和[首次失败记录](https://github.com/llongwang751-arch/tx-harness/actions/runs/39556898818)，未改业务判定或产品原件。
 
 ## 2026-10-20
 
