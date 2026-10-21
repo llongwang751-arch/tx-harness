@@ -1,0 +1,50 @@
+{
+  "schema": "week2-progress-counts/v1",
+  "period_start": "2026-10-18",
+  "period_end": "2026-10-24",
+  "as_of": "2026-10-21",
+  "product_runs": {
+    "independent_product_runs": 0,
+    "valid": 0,
+    "passed": 0,
+    "failed": 0,
+    "unknown": 0,
+    "invalid": 0
+  },
+  "new_public_product_packages": [],
+  "previous_public_package_count": 52,
+  "current_public_package_count": 52,
+  "offline_work_units_not_product_runs": {
+    "synthetic_examples": 22,
+    "expected_valid": 10,
+    "expected_invalid": 12,
+    "legacy_false_accepts": 4,
+    "v3_false_accepts": 0,
+    "v3_false_rejects": 0,
+    "ablation_checks": 20,
+    "historical_artifact_rechecks": 25,
+    "historical_newly_rejected": 0,
+    "new_independent_product_runs": 0
+  },
+  "baseline_commit": "7f4ab6096d647cd3e97c5f5fbe678bd8991b3bd8",
+  "evidence": [
+    {
+      "path": "supplements/week2/executions.json",
+      "sha256": "b7413ebbec4ec69055eecbe60da67f00103208cd92618c609f10e96daa8487c7",
+      "json_pointer": ""
+    },
+    {
+      "path": "reports/grader-audit-v3.json",
+      "sha256": "ebb0a35fdcfb778a3733000d8a6266d81148e07e23ab7510c5c7c75175b922ab",
+      "json_pointer": ""
+    }
+  ],
+  "definitions": {
+    "independent_run": "One actually submitted product task/session with its own input, configuration, start/end and public evidence. New grading rows, tool calls, screenshots, synthetic answers and replayed artifact checks are not product runs.",
+    "valid": "Run conditions are valid and the task outcome can be judged; includes both passing and failing product outcomes",
+    "failed": "A subset of valid: a known product/task failure, never merely absent internal evidence",
+    "unknown": "Run validity or task outcome cannot be established; report separately and investigate under the unknown register",
+    "invalid": "Explicit infrastructure-invalid run; neither a product failure nor evidence of success"
+  },
+  "limits": "Known product failures are a subset of valid runs. Public package diff cross-checks the declared ledger; it cannot establish what unrecorded activity happened. Synthetic examples, ablations, grading rows and rechecks are not independent product runs."
+}

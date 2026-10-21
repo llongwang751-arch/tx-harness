@@ -1,0 +1,17 @@
+{
+  "schema": "artifact-validity-rules/v3.0",
+  "registered_on": "2026-10-21",
+  "purpose": "Offline grader diagnostics and prospective artifact acceptance; no product runs and no replacement of historical scores",
+  "legacy_source": "harness_eval/core.py",
+  "rules": {
+    "CSV_STRICT": "All csv_rows targets must also parse with csv.reader(strict=True); unclosed quoted fields are invalid, while a missing final newline alone is allowed",
+    "T03_CHANGELOG_KEYS": "T03 prompt requires exactly two top-level keys in change_log.json: changes and unchanged_paths",
+    "DECODED_FORBIDDEN_TEXT": "For JSON text_excludes targets, inspect decoded JSON strings including keys, in addition to legacy raw-text inspection"
+  },
+  "exact_top_level_keys": {
+    "T03": {"change_log.json": ["changes", "unchanged_paths"]}
+  },
+  "acceptance": "all frozen legacy artifact checks pass AND all enabled v3 validity guards pass",
+  "scoring": "No new weighted score. Legacy numeric results are quoted explicitly and never overwrite sealed scores",
+  "limits": "Synthetic correctness and ablation validate these guards on selected examples; not a proof of full CSV/JSON correctness, product reliability, live Harness causality, or cutoff timing"
+}

@@ -1,0 +1,24 @@
+{
+  "total": {
+    "order_count": 4,
+    "gross_cents": 50300,
+    "refund_cents": 7000,
+    "net_cents": 43300
+  },
+  "groups": [
+    {
+      "customer_group": "business",
+      "order_count": 2,
+      "gross_cents": 26500,
+      "refund_cents": 3000,
+      "net_cents": 23500
+    },
+    {
+      "customer_group": "retail",
+      "order_count": 2,
+      "gross_cents": 23800,
+      "refund_cents": 4000,
+      "net_cents": 19800
+    }
+  ]
+}

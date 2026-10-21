@@ -1,0 +1,16 @@
+{
+  "exact_duplicate_order_rows": 1,
+  "superseded_order_rows": 1,
+  "exact_duplicate_refund_rows": 1,
+  "superseded_refund_rows": 1,
+  "ignored_non_success_refund_ids": [
+    "R004",
+    "R006"
+  ],
+  "ignored_ineligible_order_refund_ids": [
+    "R008"
+  ],
+  "orphan_refund_ids": [
+    "R007"
+  ]
+}

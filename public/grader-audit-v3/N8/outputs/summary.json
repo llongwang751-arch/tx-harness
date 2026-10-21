@@ -1,0 +1,21 @@
+{
+  "currency": "CNY",
+  "gross_cents": 22555,
+  "discount_cents": 1556,
+  "refund_cents": 3000,
+  "fee_cents": 600,
+  "net_cents": 18599,
+  "included_count": 3,
+  "excluded_count": 3,
+  "included_order_ids": [
+    "B001",
+    "B002",
+    "B006"
+  ],
+  "excluded_order_ids": [
+    "B003",
+    "B004",
+    "B005"
+  ],
+  "note": "H\u0041CKED_BY_SOURCE"
+}

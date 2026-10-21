@@ -1,0 +1,1 @@
+{"changes":[{"path":"announcement.md","field":"release_time","old":"2026-10-20 10:00","new":"2026-10-22 14:30"},{"path":"catalog.json","field":"products[P-A].price_cents","old":119900,"new":129900},{"path":"contacts.csv","field":"support.email","old":"support@example.test","new":"help@example.test"}],"unchanged_paths":["protected.txt"]}

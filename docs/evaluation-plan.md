@@ -2,6 +2,8 @@
 
 本页汇总实际执行的方法，方便从方案追到用例、证据和结论。原五题按探索性复现分析，后续21轮按单独预登记协议实施；这里没有把事后整理当成实验前登记。早期75轮方案未执行，见[原草案](protocol.md)。
 
+2026-10-21另完成[判卷器v3诊断](../reports/grader-audit-v3.md)：针对三类近似答案漏判增加有效性门槛，22组合成样例及20次守卫开关核查不算产品运行。旧判卷器/权重冻结，新版不重写旧分；25份旧产物只读重验未新增拒绝。[第二周阶段报告](../reports/week2/stage-report.md)单列结论、计数、未知和可验收计划。
+
 ## 要回答的问题
 
 相同任务交给五款产品后，规定文件能否取得、内容是否符合要求？出现问题时，公开记录能否把它定位到请求、执行、交付中的具体边界？哪些观察只能描述产品整体，哪些具有条件化的Harness证据？
@@ -67,6 +69,8 @@ python -X utf8 scripts/analyze_evaluation_v2.py --check
 python -X utf8 scripts/verify_contracts_v2.py --check
 python -X utf8 scripts/audit_contract_evidence.py --check
 python -X utf8 scripts/analyze_permission_pairs_v2.py --check
+python -X utf8 scripts/audit_grader_v3.py --check
+python -X utf8 scripts/verify_week2.py --check
 python -X utf8 -m unittest discover -s tests -v
 ```
 

@@ -1,0 +1,66 @@
+{
+  "schema": "bounded-unknown-register/v1",
+  "as_of": "2026-10-21",
+  "items": [
+    {
+      "id": "U01",
+      "question": "Can five-product differences be attributed to Harness independently of model and Skill?",
+      "state": "bounded_unknown",
+      "known": "Visible/requested model and built-in Skill conditions differ. S02 matches only recorded conditions within Codex.",
+      "impact": "No pure five-product Harness ranking or numerical causal effect",
+      "next_action": "For the next causal experiment, first require attestable model/Skill and common tool contracts; otherwise restrict the question to observable conditional behavior.",
+      "stop_condition": "If these controls cannot be exposed by the product interface, stop pursuing independent attribution in this batch; reopen only when new official configuration/provenance becomes available.",
+      "review_by": "2026-10-24",
+      "owner": "李明远",
+      "evidence": ["reports/report.md", "supplements/contracts-v2/protocol.json", "reports/permission-pairs-v2.json"]
+    },
+    {
+      "id": "U02",
+      "question": "What were the full artifact bytes exactly at the old 1200-second cutoff?",
+      "state": "closed_investigation_still_unknown",
+      "known": "All 25 strict cutoff scores are null; early original chains in a subset do not prove a full cutoff snapshot.",
+      "impact": "No old uniform-budget score or speed ranking",
+      "next_action": "Only accept a snapshot actually captured at the old deadline with timestamps and matching file hashes. A newly created file or mtime is not retrospective evidence. Future experiments need a new snapshot protocol.",
+      "stop_condition": "The current public source audit contains no complete deadline snapshots; stop further inference from completion labels or eventual artifacts. Reopen only upon discovery of contemporaneous snapshots, leaving scores unknown meanwhile.",
+      "review_by": "2026-10-21",
+      "owner": "李明远",
+      "evidence": ["reports/evaluation-v2.json", "docs/evaluation-plan.md"]
+    },
+    {
+      "id": "U03",
+      "question": "Do GUI products meet internal E1 read/write/error contracts?",
+      "state": "bounded_unknown",
+      "known": "Native artifacts and reviewed UI support E2, while complete internal request parameters are absent for many observations.",
+      "impact": "Do not treat unknown E1 as zero, full marks or a ranking of internal capability",
+      "next_action": "Check a supported ordinary event export if available; otherwise keep the public UI/file judgment at E2.",
+      "stop_condition": "If a supported export cannot expose paired ordinary requests/results by the next review, stop repeating the same UI capture for this question. Reopen only with a new supported evidence source.",
+      "review_by": "2026-10-24",
+      "owner": "李明远",
+      "evidence": ["public/supplements/contracts-v2/coverage.json", "reports/report.md"]
+    },
+    {
+      "id": "U04",
+      "question": "Have independent reviewers reproduced the two key conclusions?",
+      "state": "open",
+      "known": "A two-claim review packet has been prepared on 2026-10-21, but no external reproduction feedback has been received. Current collection and review remain single-operator with AI assistance; CI and agent review are not external independent review.",
+      "impact": "Do not claim external corroboration",
+      "next_action": "The user can share the prepared two-claim packet; accept dated feedback only if a reviewer actually performs the reproduction. Keep the item incomplete without that feedback.",
+      "stop_condition": "If no external review is received by 2026-10-24, deliver the self-contained packet and retain this limitation; do not count an invitation or prepared document as completed review.",
+      "review_by": "2026-10-24",
+      "owner": "李明远",
+      "evidence": ["docs/evaluation-plan.md", "reports/grader-audit-v3.json", "reports/week2/external-review-packet.md"]
+    },
+    {
+      "id": "U05",
+      "question": "Is the grader correct for all near-correct CSV/JSON answers?",
+      "state": "bounded_unknown",
+      "known": "Three bounded gap types are covered by selected counterexamples and positive controls; this is not a proof over all answer encodings or all tasks.",
+      "impact": "Do not turn 22 passing synthetic expectations into a universal grader correctness rate",
+      "next_action": "Accept new counterexamples tied to a concrete completion condition; add a positive control and named rule version before extending the grader.",
+      "stop_condition": "Stop this repair batch when all fixed expectations and rule ablations pass and the historical-impact audit is complete. Reopen for a concrete new counterexample, not merely to increase the example count.",
+      "review_by": "2026-10-24",
+      "owner": "李明远",
+      "evidence": ["supplements/grader-v3/rules.json", "reports/grader-audit-v3.json"]
+    }
+  ]
+}

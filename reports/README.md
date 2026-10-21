@@ -2,9 +2,13 @@
 
 当前交付以[书面竞品评测报告v2](report.md)为准，方法见[已执行方案](../docs/evaluation-plan.md)。它覆盖原25个选定产品×任务现场，以及另行预登记的21轮补测；没有五产品纯Harness因果排名。
 
+第二周先读[2026-10-21阶段报告](week2/stage-report.md)：含判卷漏洞的固定反例和开关验证、完整证据绑定、运行计数及未知管理。它补充评测方法，不覆盖旧产品现场和分数。
+
 | 文件 | 用途和口径 |
 |---|---|
 | [report.md](report.md) | 当前书面报告：差异、旧分与理由、边界观察、补测及归因限制 |
+| [grader-audit-v3.md](grader-audit-v3.md) / [JSON](grader-audit-v3.json) | 22组合成判卷样例、20次守卫开关与25份旧原件复算；均不算新增产品运行 |
+| [第二周结论与来源](week2/claims.json) / [计数](week2/counts.json) | 六条有界结论及规则、输入、配置、现场、产物、理由；周报新增产品运行0 |
 | [evaluation-v2.md](evaluation-v2.md) / [JSON](evaluation-v2.json) | 原25现场的逐字段、声明权重、共同界面和计时复核；严格截止分均为null |
 | [exploratory-score-review.md](exploratory-score-review.md) / [JSON](exploratory-score-review.json) | 冻结的旧26次评分，含额外豆包本地T01失败；仅25个选定组合用于描述均值 |
 | [补测分母](../public/supplements/contracts-v2/README.md) / [JSON](../public/supplements/contracts-v2/coverage.json) | S01五产品各三轮及S02三组许可对照；E2原件与E1资格分开，无综合分 |

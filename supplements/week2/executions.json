@@ -1,0 +1,16 @@
+{
+  "schema": "weekly-independent-product-executions/v1",
+  "period_start": "2026-10-18",
+  "period_end": "2026-10-24",
+  "as_of": "2026-10-21",
+  "previous_week_baseline_commit": "7f4ab6096d647cd3e97c5f5fbe678bd8991b3bd8",
+  "entries": [],
+  "operator_attestation": "This week's current work is offline grader diagnostics, read-only rechecks and evidence repair. No new product task was submitted during this work. The public package diff is a cross-check, not proof about unrecorded executions.",
+  "definitions": {
+    "independent_run": "One actually submitted product task/session with its own input, configuration, start/end and public evidence. New grading rows, tool calls, screenshots, synthetic answers and replayed artifact checks are not product runs.",
+    "valid": "Run conditions are valid and the task outcome can be judged; includes both passing and failing product outcomes",
+    "failed": "A subset of valid: a known product/task failure, never merely absent internal evidence",
+    "unknown": "Run validity or task outcome cannot be established; report separately and investigate under the unknown register",
+    "invalid": "Explicit infrastructure-invalid run; neither a product failure nor evidence of success"
+  }
+}

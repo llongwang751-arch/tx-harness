@@ -1,0 +1,8 @@
+claim_id,decision,approved_cents,reason_code,rule_ids
+Q001,approved,5001,CAP,FIN2-01
+Q002,approved,7500,CAP,FIN3-01
+Q003,approved,24000,FULL,EXC-01
+Q004,approved,20000,CAP,FIN3-02
+Q005,rejected,0,NO_RECEIPT,FIN3-04
+Q006,approved,120000,CAP,FIN3-03
+Q007,rejected,0,INVALID_NIGHTS,FIN3-03

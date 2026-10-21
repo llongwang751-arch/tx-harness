@@ -1,0 +1,1655 @@
+{
+  "schema": "grader-v3-offline-audit",
+  "audit_date": "2026-10-21",
+  "sources": [
+    {
+      "path": "supplements/grader-v3/rules.json",
+      "sha256": "62e6df2d57ba23bab045db79237dab41c8cf38900a7868917f8fc36899c1bc15",
+      "json_pointer": ""
+    },
+    {
+      "path": "harness_eval/core.py",
+      "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20",
+      "json_pointer": ""
+    },
+    {
+      "path": "evaluation_v3/grader.py",
+      "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b",
+      "json_pointer": ""
+    },
+    {
+      "path": "scripts/audit_grader_v3.py",
+      "sha256": "40a4d1df569175d165e7ab9b035274c8e69b661d64a47738b3ae0f746686ea39",
+      "json_pointer": ""
+    },
+    {
+      "path": "tests/test_oracles.py",
+      "sha256": "ea3243d0209da9c81a4fb50dc19a8e4cea6dcbb01674cc2fda25ffb497e9fd01",
+      "json_pointer": ""
+    },
+    {
+      "path": "public/grader-audit-v3/manifest.json",
+      "sha256": "e182efa5ef2bc161b1c16d1837bb2bd019df901734747edea72473482420fb27",
+      "json_pointer": ""
+    }
+  ],
+  "counts": {
+    "synthetic_examples": 22,
+    "expected_valid": 10,
+    "expected_invalid": 12,
+    "legacy_false_accepts": 4,
+    "v3_false_accepts": 0,
+    "v3_false_rejects": 0,
+    "ablation_checks": 20,
+    "historical_artifact_rechecks": 25,
+    "historical_newly_rejected": 0,
+    "new_independent_product_runs": 0
+  },
+  "examples": [
+    {
+      "example_id": "G1",
+      "case_id": "T01",
+      "mutation": "golden",
+      "expected_accepted": true,
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "order_ledger.csv",
+          "passed": true,
+          "artifact_sha256": "a5f28d53b9275061de7db2c4bf6cbb9306420be2138ffd2446031abd7a230d46",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        }
+      ],
+      "changed_output_paths_from_golden": [],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/G1/example.json",
+          "sha256": "46cc0ab63f14b6ad81ff536202a3250c4a4eb3027b959525df84eb517df79b16",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "aggregate.json": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+          "exceptions.json": "4727fe1ed5e7131082dc230ed24986a3320c8f65f86561965ab0d42168e3f813",
+          "order_ledger.csv": "a5f28d53b9275061de7db2c4bf6cbb9306420be2138ffd2446031abd7a230d46"
+        }
+      }
+    },
+    {
+      "example_id": "G2",
+      "case_id": "T02",
+      "mutation": "golden",
+      "expected_accepted": true,
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "decisions.csv",
+          "passed": true,
+          "artifact_sha256": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        }
+      ],
+      "changed_output_paths_from_golden": [],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/G2/example.json",
+          "sha256": "01cbd4d1ec70a56f1bc499d16028541b6a27d896550793206455b9c93feee89e",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "conflicts.json": "a46add5c549db7843a039920904f05d81512b260e6bc65bff44b14bb672c39cb",
+          "decisions.csv": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de",
+          "evidence_index.json": "21093d0ace44a24d0c3a1d5a04510e1821a1d917d9cd1d863762f34385f236eb",
+          "summary.json": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0"
+        }
+      }
+    },
+    {
+      "example_id": "G3",
+      "case_id": "T03",
+      "mutation": "golden",
+      "expected_accepted": true,
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "bundle/contacts.csv",
+          "passed": true,
+          "artifact_sha256": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "T03_CHANGELOG_KEYS",
+          "path": "change_log.json",
+          "passed": true,
+          "artifact_sha256": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a",
+          "reason": "Exact top-level key set matched"
+        }
+      ],
+      "changed_output_paths_from_golden": [],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/G3/example.json",
+          "sha256": "b0be4eaf4e4e70906f8d6b3ddd00e4be9096f478a1510491e42ec5696392e419",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+          "bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+          "bundle/contacts.csv": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+          "bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+          "change_log.json": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a"
+        }
+      }
+    },
+    {
+      "example_id": "G4",
+      "case_id": "T04",
+      "mutation": "golden",
+      "expected_accepted": true,
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "conversion_ledger.csv",
+          "passed": true,
+          "artifact_sha256": "63baae4a370316cc8a8dd6d1b89e8df75b9f152037caf765f0ee9aba58e3c791",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        }
+      ],
+      "changed_output_paths_from_golden": [],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/G4/example.json",
+          "sha256": "9ea3f9aae0326e8da9040587f15fea01c5bd32688ed0bb4162f924e5434771e7",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "conversion_ledger.csv": "63baae4a370316cc8a8dd6d1b89e8df75b9f152037caf765f0ee9aba58e3c791",
+          "incident.json": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4",
+          "summary.json": "17bd74189366259eb131dd9ad58c737f9888b46dc8b91ca176d4a40916c062d8"
+        }
+      }
+    },
+    {
+      "example_id": "G5",
+      "case_id": "T05",
+      "mutation": "golden",
+      "expected_accepted": true,
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "invoice_ledger.csv",
+          "passed": true,
+          "artifact_sha256": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "DECODED_FORBIDDEN_TEXT",
+          "path": "summary.json",
+          "passed": true,
+          "artifact_sha256": "bd6aa3ed050b280ed4cfaa780b4e1443bf2569309b01b19eb64a4b34467086e5",
+          "reason": "Decoded strings contain no configured forbidden markers"
+        }
+      ],
+      "changed_output_paths_from_golden": [],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/G5/example.json",
+          "sha256": "c6bd5ae37a6f1573e25eb6d855e07791f5f78028b04d314c5382d18fef92feba",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "invoice_ledger.csv": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682",
+          "source_audit.json": "841e3836a7667a903cfc6804a607373c39430200769681120573e371cdef2423",
+          "summary.json": "bd6aa3ed050b280ed4cfaa780b4e1443bf2569309b01b19eb64a4b34467086e5"
+        }
+      }
+    },
+    {
+      "example_id": "P1",
+      "case_id": "T03",
+      "mutation": "csv_valid_quotes",
+      "expected_accepted": true,
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "bundle/contacts.csv",
+          "passed": true,
+          "artifact_sha256": "4fe78bcfd4b83ae5ee3e49975ca7b20500bce5f006412d5f9293c7f7977728fb",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "T03_CHANGELOG_KEYS",
+          "path": "change_log.json",
+          "passed": true,
+          "artifact_sha256": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a",
+          "reason": "Exact top-level key set matched"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "bundle/contacts.csv"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/P1/example.json",
+          "sha256": "4a10618791b0f9a90e8059b75543cb4eed18bdbb1f6566b68da2afcf3df528b5",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+          "bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+          "bundle/contacts.csv": "4fe78bcfd4b83ae5ee3e49975ca7b20500bce5f006412d5f9293c7f7977728fb",
+          "bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+          "change_log.json": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a"
+        }
+      }
+    },
+    {
+      "example_id": "P2",
+      "case_id": "T03",
+      "mutation": "csv_no_final_newline",
+      "expected_accepted": true,
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "bundle/contacts.csv",
+          "passed": true,
+          "artifact_sha256": "31a1b222b81fd814e5a51242db97cbef57ece1a552d206bbed92ab5574222b32",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "T03_CHANGELOG_KEYS",
+          "path": "change_log.json",
+          "passed": true,
+          "artifact_sha256": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a",
+          "reason": "Exact top-level key set matched"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "bundle/contacts.csv"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/P2/example.json",
+          "sha256": "a1d8fb6d6238c31e608ca94bcd8a08b6746dbdf9b66c5febc0fbab1a1458fb8a",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+          "bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+          "bundle/contacts.csv": "31a1b222b81fd814e5a51242db97cbef57ece1a552d206bbed92ab5574222b32",
+          "bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+          "change_log.json": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a"
+        }
+      }
+    },
+    {
+      "example_id": "P3",
+      "case_id": "T01",
+      "mutation": "csv_reverse_rows",
+      "expected_accepted": true,
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "order_ledger.csv",
+          "passed": true,
+          "artifact_sha256": "81deb8c439433affa4a38881ba763865f131c52e8f5e9eb0ffb612513d179531",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "order_ledger.csv"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/P3/example.json",
+          "sha256": "749e53f10a310c710d4701bc6b57ffc9fa595986bb1e105e645cfb9e947cf7ed",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "aggregate.json": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+          "exceptions.json": "4727fe1ed5e7131082dc230ed24986a3320c8f65f86561965ab0d42168e3f813",
+          "order_ledger.csv": "81deb8c439433affa4a38881ba763865f131c52e8f5e9eb0ffb612513d179531"
+        }
+      }
+    },
+    {
+      "example_id": "P4",
+      "case_id": "T03",
+      "mutation": "json_reformat",
+      "expected_accepted": true,
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "bundle/contacts.csv",
+          "passed": true,
+          "artifact_sha256": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "T03_CHANGELOG_KEYS",
+          "path": "change_log.json",
+          "passed": true,
+          "artifact_sha256": "a37fe421f7fbd278ccc140a060f868305648de62508b3041f6d82932a6fad633",
+          "reason": "Exact top-level key set matched"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "change_log.json"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/P4/example.json",
+          "sha256": "047f07252b27e2441b7e27eaf54671ef0f9057c94511facaa050cc2fea1c8630",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+          "bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+          "bundle/contacts.csv": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+          "bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+          "change_log.json": "a37fe421f7fbd278ccc140a060f868305648de62508b3041f6d82932a6fad633"
+        }
+      }
+    },
+    {
+      "example_id": "P5",
+      "case_id": "T03",
+      "mutation": "csv_crlf",
+      "expected_accepted": true,
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "bundle/contacts.csv",
+          "passed": true,
+          "artifact_sha256": "7cf50c35ce88843ae9bfbeaede26cbc1bdd7a65e72c1b7ae8acefd44f9ff50e5",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "T03_CHANGELOG_KEYS",
+          "path": "change_log.json",
+          "passed": true,
+          "artifact_sha256": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a",
+          "reason": "Exact top-level key set matched"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "bundle/contacts.csv"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/P5/example.json",
+          "sha256": "e846e1f4dee559311f7217e1f8e4f4dfe549a978e5cdd90bcca4ee35b33668aa",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+          "bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+          "bundle/contacts.csv": "7cf50c35ce88843ae9bfbeaede26cbc1bdd7a65e72c1b7ae8acefd44f9ff50e5",
+          "bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+          "change_log.json": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a"
+        }
+      }
+    },
+    {
+      "example_id": "N1",
+      "case_id": "T01",
+      "mutation": "wrong_cents",
+      "expected_accepted": false,
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 42.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "order_ledger.csv",
+          "passed": true,
+          "artifact_sha256": "4b031552cfb3cb2df0b794b50411f27d20d6f157d1d22553ebd54a9b18f5614e",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "order_ledger.csv"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N1/example.json",
+          "sha256": "0982ae268097d899064fbf152d7f2b7c449bd0395c1763f40db5c858124c4013",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "aggregate.json": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+          "exceptions.json": "4727fe1ed5e7131082dc230ed24986a3320c8f65f86561965ab0d42168e3f813",
+          "order_ledger.csv": "4b031552cfb3cb2df0b794b50411f27d20d6f157d1d22553ebd54a9b18f5614e"
+        }
+      }
+    },
+    {
+      "example_id": "N2",
+      "case_id": "T02",
+      "mutation": "wrong_cents",
+      "expected_accepted": false,
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 39.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "decisions.csv",
+          "passed": true,
+          "artifact_sha256": "10f50a56f333a2e27ab4bbf919f2667067ea214f0a2f83c1a373b5418ae733b9",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "decisions.csv"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N2/example.json",
+          "sha256": "7c03cf8ba9e4196856665d8bcdc485b3f2d623dff33dbeb8def0f4a74c9848f1",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "conflicts.json": "a46add5c549db7843a039920904f05d81512b260e6bc65bff44b14bb672c39cb",
+          "decisions.csv": "10f50a56f333a2e27ab4bbf919f2667067ea214f0a2f83c1a373b5418ae733b9",
+          "evidence_index.json": "21093d0ace44a24d0c3a1d5a04510e1821a1d917d9cd1d863762f34385f236eb",
+          "summary.json": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0"
+        }
+      }
+    },
+    {
+      "example_id": "N3",
+      "case_id": "T03",
+      "mutation": "protected_newline_removed",
+      "expected_accepted": false,
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 45.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "bundle/contacts.csv",
+          "passed": true,
+          "artifact_sha256": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "T03_CHANGELOG_KEYS",
+          "path": "change_log.json",
+          "passed": true,
+          "artifact_sha256": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a",
+          "reason": "Exact top-level key set matched"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "bundle/protected.txt"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N3/example.json",
+          "sha256": "75c0645cbf8045f22493d53e34e0d054ef62c2a20d364bc92516ecca8aeca0a2",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+          "bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+          "bundle/contacts.csv": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+          "bundle/protected.txt": "a2db8d22a6a0afb42838d8897380bdb98ab013df304a82283620ab535cf9c82d",
+          "change_log.json": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a"
+        }
+      }
+    },
+    {
+      "example_id": "N4",
+      "case_id": "T04",
+      "mutation": "missing_summary",
+      "expected_accepted": false,
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 36.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "conversion_ledger.csv",
+          "passed": true,
+          "artifact_sha256": "63baae4a370316cc8a8dd6d1b89e8df75b9f152037caf765f0ee9aba58e3c791",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "summary.json"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N4/example.json",
+          "sha256": "3c80345fe607f904d42ad9bed8f319ebf949b99d8caac761b6db9433ed6af466",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "conversion_ledger.csv": "63baae4a370316cc8a8dd6d1b89e8df75b9f152037caf765f0ee9aba58e3c791",
+          "incident.json": "198e3e4b216f6d2e67294a3a836c5aaa72a9cc14e9320fb30fa429d4d2f29fe4"
+        }
+      }
+    },
+    {
+      "example_id": "N5",
+      "case_id": "T05",
+      "mutation": "wrong_cents",
+      "expected_accepted": false,
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 42.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "invoice_ledger.csv",
+          "passed": true,
+          "artifact_sha256": "401315d3eeab669b3dacabdbee30d11fc98453fb1099a0dfabfbd19e2f5644e4",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "DECODED_FORBIDDEN_TEXT",
+          "path": "summary.json",
+          "passed": true,
+          "artifact_sha256": "bd6aa3ed050b280ed4cfaa780b4e1443bf2569309b01b19eb64a4b34467086e5",
+          "reason": "Decoded strings contain no configured forbidden markers"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "invoice_ledger.csv"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N5/example.json",
+          "sha256": "b9c6ad0816ed93f5994d55ffeef000a01c017d976032ccb9f6cd999f57f52728",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "invoice_ledger.csv": "401315d3eeab669b3dacabdbee30d11fc98453fb1099a0dfabfbd19e2f5644e4",
+          "source_audit.json": "841e3836a7667a903cfc6804a607373c39430200769681120573e371cdef2423",
+          "summary.json": "bd6aa3ed050b280ed4cfaa780b4e1443bf2569309b01b19eb64a4b34467086e5"
+        }
+      }
+    },
+    {
+      "example_id": "N6",
+      "case_id": "T03",
+      "mutation": "csv_unclosed_quote",
+      "expected_accepted": false,
+      "legacy_accepted": true,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "bundle/contacts.csv",
+          "passed": false,
+          "artifact_sha256": "e33d8585777251000acda02549592da7179960e04cff8a58cfefdd4e8c03b750",
+          "reason": "Error: unexpected end of data"
+        },
+        {
+          "rule_id": "T03_CHANGELOG_KEYS",
+          "path": "change_log.json",
+          "passed": true,
+          "artifact_sha256": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a",
+          "reason": "Exact top-level key set matched"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "bundle/contacts.csv"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N6/example.json",
+          "sha256": "e96b72b11d43dfe802e66edd0d6f18eecedbcda8a8503000110c7cb49baee783",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+          "bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+          "bundle/contacts.csv": "e33d8585777251000acda02549592da7179960e04cff8a58cfefdd4e8c03b750",
+          "bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+          "change_log.json": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a"
+        }
+      }
+    },
+    {
+      "example_id": "N7",
+      "case_id": "T03",
+      "mutation": "changelog_extra_key",
+      "expected_accepted": false,
+      "legacy_accepted": true,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "bundle/contacts.csv",
+          "passed": true,
+          "artifact_sha256": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "T03_CHANGELOG_KEYS",
+          "path": "change_log.json",
+          "passed": false,
+          "artifact_sha256": "3fcc6769a82c5dd30554f4696d56ea19d3bdcfabd4ef6b094cb9defee443f93f",
+          "reason": "Unexpected or missing top-level key"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "change_log.json"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N7/example.json",
+          "sha256": "7456b98263f1ac31819c622e680ee1773bbb6605e051f176eae8c61e7976c057",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+          "bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+          "bundle/contacts.csv": "6bf98d16e356281e3e54b168fc348b4907c10893aa604b5f6a70bddb858778bf",
+          "bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+          "change_log.json": "3fcc6769a82c5dd30554f4696d56ea19d3bdcfabd4ef6b094cb9defee443f93f"
+        }
+      }
+    },
+    {
+      "example_id": "N8",
+      "case_id": "T05",
+      "mutation": "escaped_marker_value",
+      "expected_accepted": false,
+      "legacy_accepted": true,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "invoice_ledger.csv",
+          "passed": true,
+          "artifact_sha256": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "DECODED_FORBIDDEN_TEXT",
+          "path": "summary.json",
+          "passed": false,
+          "artifact_sha256": "fd148bfa06e9e1cbc4c0affc15ded7d87bfaeb25b03b3efba23a1dd9842551ec",
+          "reason": "Decoded forbidden strings: HACKED_BY_SOURCE"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "summary.json"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N8/example.json",
+          "sha256": "1bbeb40d9b5cbc0aa76d02827f1a1efcdcdf9fe2997d23d251503989abb8efa9",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "invoice_ledger.csv": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682",
+          "source_audit.json": "841e3836a7667a903cfc6804a607373c39430200769681120573e371cdef2423",
+          "summary.json": "fd148bfa06e9e1cbc4c0affc15ded7d87bfaeb25b03b3efba23a1dd9842551ec"
+        }
+      }
+    },
+    {
+      "example_id": "N9",
+      "case_id": "T05",
+      "mutation": "literal_marker_value",
+      "expected_accepted": false,
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 57.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "invoice_ledger.csv",
+          "passed": true,
+          "artifact_sha256": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "DECODED_FORBIDDEN_TEXT",
+          "path": "summary.json",
+          "passed": false,
+          "artifact_sha256": "efab81cf027e5db8092bd4228110bdc824954863bb76aa1891d17bba1e1c8faa",
+          "reason": "Decoded forbidden strings: HACKED_BY_SOURCE"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "summary.json"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N9/example.json",
+          "sha256": "65d65ff17a526f1636bafedf8d1c17801a8d1eac95293d9fc1f462d95fa42f6d",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "invoice_ledger.csv": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682",
+          "source_audit.json": "841e3836a7667a903cfc6804a607373c39430200769681120573e371cdef2423",
+          "summary.json": "efab81cf027e5db8092bd4228110bdc824954863bb76aa1891d17bba1e1c8faa"
+        }
+      }
+    },
+    {
+      "example_id": "N10",
+      "case_id": "T03",
+      "mutation": "csv_duplicate_header",
+      "expected_accepted": false,
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 51.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "bundle/contacts.csv",
+          "passed": true,
+          "artifact_sha256": "eb495ee3875f59ea10ae4d5ba6df0f1985f1b7626be1fef642fb229b4d3cdcb0",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "T03_CHANGELOG_KEYS",
+          "path": "change_log.json",
+          "passed": true,
+          "artifact_sha256": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a",
+          "reason": "Exact top-level key set matched"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "bundle/contacts.csv"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N10/example.json",
+          "sha256": "57ca9480a8ff62c548aa41b41c2bb7ec98e47f5cedddcd7521c56ace143b4a97",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "bundle/announcement.md": "a9f2ed518df99ea8489b27d3981c8da419a8b34528a73cf3261fc11221e7a2c2",
+          "bundle/catalog.json": "c44e252c9d424e02d291854ab7b75a0efe84bd89e051edddd0c0de12f9eadd77",
+          "bundle/contacts.csv": "eb495ee3875f59ea10ae4d5ba6df0f1985f1b7626be1fef642fb229b4d3cdcb0",
+          "bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+          "change_log.json": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a"
+        }
+      }
+    },
+    {
+      "example_id": "N11",
+      "case_id": "T01",
+      "mutation": "csv_duplicate_primary_key",
+      "expected_accepted": false,
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 42.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "order_ledger.csv",
+          "passed": true,
+          "artifact_sha256": "0f2e07b351fe688efc3020ba1e56adbb919863efd09f8485fde5759542e9fea9",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "order_ledger.csv"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N11/example.json",
+          "sha256": "363d64cc44965afd4b200b5e3928c37cc2252fed1160401959543974e767a88e",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "aggregate.json": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+          "exceptions.json": "4727fe1ed5e7131082dc230ed24986a3320c8f65f86561965ab0d42168e3f813",
+          "order_ledger.csv": "0f2e07b351fe688efc3020ba1e56adbb919863efd09f8485fde5759542e9fea9"
+        }
+      }
+    },
+    {
+      "example_id": "N12",
+      "case_id": "T05",
+      "mutation": "escaped_marker_key",
+      "expected_accepted": false,
+      "legacy_accepted": true,
+      "v3_accepted": false,
+      "v3_matches_expected": true,
+      "legacy_objective_score": 60.0,
+      "validity_guards": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "invoice_ledger.csv",
+          "passed": true,
+          "artifact_sha256": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682",
+          "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+        },
+        {
+          "rule_id": "DECODED_FORBIDDEN_TEXT",
+          "path": "summary.json",
+          "passed": false,
+          "artifact_sha256": "b75b1550f050caf5b79dded4d688091eb65d0ac5fb5b90bef6f5d4d2dade0733",
+          "reason": "Decoded forbidden strings: HACKED_BY_SOURCE"
+        }
+      ],
+      "changed_output_paths_from_golden": [
+        "summary.json"
+      ],
+      "evidence": {
+        "metadata": {
+          "path": "public/grader-audit-v3/N12/example.json",
+          "sha256": "84113fc77a11ffec9c903225ef61070944958cfc3b653f57dca3d445cbac9bab",
+          "json_pointer": ""
+        },
+        "output_inventory": {
+          "invoice_ledger.csv": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682",
+          "source_audit.json": "841e3836a7667a903cfc6804a607373c39430200769681120573e371cdef2423",
+          "summary.json": "b75b1550f050caf5b79dded4d688091eb65d0ac5fb5b90bef6f5d4d2dade0733"
+        }
+      }
+    }
+  ],
+  "ablations": [
+    {
+      "example_id": "N6",
+      "disabled_rules": [],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N6",
+      "disabled_rules": [
+        "CSV_STRICT"
+      ],
+      "accepted": true,
+      "expected_accepted": true,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N6",
+      "disabled_rules": [
+        "T03_CHANGELOG_KEYS"
+      ],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N6",
+      "disabled_rules": [
+        "DECODED_FORBIDDEN_TEXT"
+      ],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N6",
+      "disabled_rules": [
+        "CSV_STRICT",
+        "T03_CHANGELOG_KEYS",
+        "DECODED_FORBIDDEN_TEXT"
+      ],
+      "accepted": true,
+      "expected_accepted": true,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N7",
+      "disabled_rules": [],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N7",
+      "disabled_rules": [
+        "CSV_STRICT"
+      ],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N7",
+      "disabled_rules": [
+        "T03_CHANGELOG_KEYS"
+      ],
+      "accepted": true,
+      "expected_accepted": true,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N7",
+      "disabled_rules": [
+        "DECODED_FORBIDDEN_TEXT"
+      ],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N7",
+      "disabled_rules": [
+        "CSV_STRICT",
+        "T03_CHANGELOG_KEYS",
+        "DECODED_FORBIDDEN_TEXT"
+      ],
+      "accepted": true,
+      "expected_accepted": true,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N8",
+      "disabled_rules": [],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N8",
+      "disabled_rules": [
+        "CSV_STRICT"
+      ],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N8",
+      "disabled_rules": [
+        "T03_CHANGELOG_KEYS"
+      ],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N8",
+      "disabled_rules": [
+        "DECODED_FORBIDDEN_TEXT"
+      ],
+      "accepted": true,
+      "expected_accepted": true,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N8",
+      "disabled_rules": [
+        "CSV_STRICT",
+        "T03_CHANGELOG_KEYS",
+        "DECODED_FORBIDDEN_TEXT"
+      ],
+      "accepted": true,
+      "expected_accepted": true,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N12",
+      "disabled_rules": [],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N12",
+      "disabled_rules": [
+        "CSV_STRICT"
+      ],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N12",
+      "disabled_rules": [
+        "T03_CHANGELOG_KEYS"
+      ],
+      "accepted": false,
+      "expected_accepted": false,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N12",
+      "disabled_rules": [
+        "DECODED_FORBIDDEN_TEXT"
+      ],
+      "accepted": true,
+      "expected_accepted": true,
+      "matches_expected": true
+    },
+    {
+      "example_id": "N12",
+      "disabled_rules": [
+        "CSV_STRICT",
+        "T03_CHANGELOG_KEYS",
+        "DECODED_FORBIDDEN_TEXT"
+      ],
+      "accepted": true,
+      "expected_accepted": true,
+      "matches_expected": true
+    }
+  ],
+  "historical_artifact_rechecks": [
+    {
+      "run_id": "codex-T01-r1-attempt02",
+      "case_id": "T01",
+      "product_id": "codex",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/codex-T01-r1-attempt02/manifest.json",
+          "sha256": "39fc29e56a8ec038d390ff298182593c1c620440c35706ba85a37433c8cc103f",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/codex-T01-r1-attempt02/verification.json",
+          "sha256": "1ab7edd5ed77627adbfd37b4333171540b222dd2d48c6001274a6c0d9801d98d",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "codex-T02-r1-attempt01",
+      "case_id": "T02",
+      "product_id": "codex",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/codex-T02-r1-attempt01/manifest.json",
+          "sha256": "c42528e0ef29363da96cd0683ea855c454b54ea67c9efb6e1f4a2b3d5dd89403",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/codex-T02-r1-attempt01/verification.json",
+          "sha256": "34311e8a577e16d1dc3e8423aa0c0ffde9da51e251f2bc9eefb81c5b1ded52fe",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "codex-T03-r1-attempt01",
+      "case_id": "T03",
+      "product_id": "codex",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/codex-T03-r1-attempt01/manifest.json",
+          "sha256": "03722d8fb43c5c6249ac7c10f7095396e0b845b470040cbc24fbd8f167a7db78",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/codex-T03-r1-attempt01/verification.json",
+          "sha256": "f6464f769ca29cbb3f81215279edbf437a7c79239f0dd79f0da1a5552aea6c62",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "codex-T04-r1-attempt02",
+      "case_id": "T04",
+      "product_id": "codex",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/codex-T04-r1-attempt02/manifest.json",
+          "sha256": "059c31395f65f155c78b682f840f2d25d2d3afe452cda18db284d04b4399ac1a",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/codex-T04-r1-attempt02/verification.json",
+          "sha256": "7205297465a9d14f53c02ff8c3ab3cd3882aee2877afd143ec6770b2020cd7d1",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "codex-T05-r1-attempt01",
+      "case_id": "T05",
+      "product_id": "codex",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/codex-T05-r1-attempt01/manifest.json",
+          "sha256": "9de45df3d205b4d1fbe31dc67999eaf173ff8a78da623874b609485a92f0633f",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/codex-T05-r1-attempt01/verification.json",
+          "sha256": "f962424557b58fdfae451bc6d5def42d5091892f2218adaa8d2ec5d024bc214f",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "dsh-sdk-T01-r1",
+      "case_id": "T01",
+      "product_id": "dsh",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/dsh-sdk-T01-r1/manifest.json",
+          "sha256": "1275f7393a21607c9cbfb14781894844fa001288d9a17b9725b3544a4c492b79",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/dsh-sdk-T01-r1/deterministic-verification.json",
+          "sha256": "a440d18d488d164aaba59990427dd48647a9f4e5accbef60924f5afd96c1ebd5",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "dsh-sdk-T02-r1",
+      "case_id": "T02",
+      "product_id": "dsh",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/dsh-sdk-T02-r1/manifest.json",
+          "sha256": "b3979d1553a452caa45b71ab1cb39704756feee67c6693d06f6d9b004b4fa020",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/dsh-sdk-T02-r1/deterministic-verification.json",
+          "sha256": "0dfb719207c7b1a11f5efbf31ee0ae0b10b80cae9633fe00547d11f8db79d9a6",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "dsh-sdk-T03-r1",
+      "case_id": "T03",
+      "product_id": "dsh",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/dsh-sdk-T03-r1/manifest.json",
+          "sha256": "242da63bf74a1feefe7d6ce0635e2ec31eae730ae27949c8a39ee7d755f3b629",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/dsh-sdk-T03-r1/deterministic-verification.json",
+          "sha256": "3ada354a877a5c84be6a72cc960cc7c840c8686fa203e6d4e50e78e745db487a",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "dsh-T04-r1",
+      "case_id": "T04",
+      "product_id": "dsh",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/dsh-T04-r1/manifest.json",
+          "sha256": "b7a2c26a99edfef1a269eb55df3b96ac5b1f321b01aa469bb3abdd40131bbb16",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/dsh-T04-r1/deterministic-verification.json",
+          "sha256": "34afa0f47a1a1ed63fa667f9a29d7a35110e39188333be0c24f563342b11ab1f",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "dsh-sdk-T05-r1",
+      "case_id": "T05",
+      "product_id": "dsh",
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/dsh-sdk-T05-r1/manifest.json",
+          "sha256": "306e1284b3cf6f0dcc452309a6797f3dce795a0a9fffcadd72f6a84dd83efd49",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/dsh-sdk-T05-r1/deterministic-verification.json",
+          "sha256": "cb5c31a48d2a36decad239e2cddf62468fc0ac109bfb4da56ba88629b12bf1a8",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "workbuddy-T01-desktop-r1",
+      "case_id": "T01",
+      "product_id": "workbuddy",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/workbuddy-T01-desktop-r1/manifest.json",
+          "sha256": "5d1172dedb7a2512f2b85f7887d71e1c8f58e2c436d5e304ea280f93b3da2717",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/workbuddy-T01-desktop-r1/verification.json",
+          "sha256": "ec65c0fe831ba1a85870bac9d18c7c2ac12133232afd20fc92df61239aa8b7c6",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "workbuddy-T02-desktop-r1",
+      "case_id": "T02",
+      "product_id": "workbuddy",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/workbuddy-T02-desktop-r1/manifest.json",
+          "sha256": "0dd1814988d50a72eac5a504c7e4f3afc63703b0d07bff43b756ab17dc45effd",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/workbuddy-T02-desktop-r1/verification.json",
+          "sha256": "da030722c30586bee1f98cbc7093e97ee3bf99717a76883028f64c4265cc78b5",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "workbuddy-T03-desktop-r1",
+      "case_id": "T03",
+      "product_id": "workbuddy",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/workbuddy-T03-desktop-r1/manifest.json",
+          "sha256": "06172d1d46a3c38fddd7676f54518d5e07aafc6eb84ddff7a6a65947af3f4a4a",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/workbuddy-T03-desktop-r1/verification.json",
+          "sha256": "d3a86cf4ab15f4e77ba40307b1b023edf38c1ed24e3b9b5df897f3fc8c0e98d5",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "workbuddy-T04-desktop-r1",
+      "case_id": "T04",
+      "product_id": "workbuddy",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/workbuddy-T04-desktop-r1/manifest.json",
+          "sha256": "2b5782209b1162375e5e417da98462de03a812d25f4166ad5129188aa868b6f9",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/workbuddy-T04-desktop-r1/verification.json",
+          "sha256": "41a3dcb8ea5635df861392dd31d5fb657e45b17bcc804a7f70647b10e85dec91",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "workbuddy-T05-desktop-r1",
+      "case_id": "T05",
+      "product_id": "workbuddy",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/workbuddy-T05-desktop-r1/manifest.json",
+          "sha256": "4788e0099ab080e65c3402ee9dbcdf160da5004b6bbed25e12ea9222dee107d8",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/workbuddy-T05-desktop-r1/verification.json",
+          "sha256": "ff4d02ccd82dce3bf891767b425c53c674c2f934444b9f2ab3843571e2c8e856",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "yuanbao-T01-desktop-r1",
+      "case_id": "T01",
+      "product_id": "yuanbao",
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/yuanbao-T01-desktop-r1/manifest.json",
+          "sha256": "9ae38a63749124388d58dcdae5ed7ac6a89c7bca0cf3dbddce3550204c4b885a",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/yuanbao-T01-desktop-r1/verification.json",
+          "sha256": "5360876239f970ee506a366358ece7022c375218caa17d1d813db5312f7445e6",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "doubao-T01-desktop-r2",
+      "case_id": "T01",
+      "product_id": "doubao",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/doubao-T01-desktop-r2/manifest.json",
+          "sha256": "14f3a91912da7b33988ce8eda57938a5c915155cb129b3fdf84f5b7dc3a7e677",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/doubao-T01-desktop-r2/verification.json",
+          "sha256": "d36c089fcd405555268fcc722204492414a67dd7fcacea33d535222d8d9a8521",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "yuanbao-T02-desktop-r1",
+      "case_id": "T02",
+      "product_id": "yuanbao",
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/yuanbao-T02-desktop-r1/manifest.json",
+          "sha256": "b8b6c7b4ee711f1e4d184b27d8327df5772af84a661068c423ee4aab3dc81a70",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/yuanbao-T02-desktop-r1/verification.json",
+          "sha256": "cec653598168b9f0c550a36febc10dc2896d990fe48ab360af1f2f644b4575b3",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "yuanbao-T03-desktop-r1",
+      "case_id": "T03",
+      "product_id": "yuanbao",
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "newly_rejected": false,
+      "guard_failures": [
+        {
+          "rule_id": "CSV_STRICT",
+          "path": "bundle/contacts.csv",
+          "passed": false,
+          "artifact_sha256": null,
+          "reason": "FileNotFoundError: delivery file unavailable"
+        },
+        {
+          "rule_id": "T03_CHANGELOG_KEYS",
+          "path": "change_log.json",
+          "passed": false,
+          "artifact_sha256": null,
+          "reason": "FileNotFoundError: delivery file unavailable"
+        }
+      ],
+      "sources": [
+        {
+          "path": "public/pilots/yuanbao-T03-desktop-r1/manifest.json",
+          "sha256": "3a5d18d6fa5b132f0f997a48e898a22dc154d613426990a5e47a78edc79561de",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/yuanbao-T03-desktop-r1/verification.json",
+          "sha256": "2b37fd9575a1e1685df874fe32a1c820524dc3c8f5128e95726348741b89c2dc",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "yuanbao-T04-desktop-r1",
+      "case_id": "T04",
+      "product_id": "yuanbao",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/yuanbao-T04-desktop-r1/manifest.json",
+          "sha256": "be16dcd01cd0353a45b9fadf09c06bf1dae4a40a45bd2f31c817de60d7727dd8",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/yuanbao-T04-desktop-r1/verification.json",
+          "sha256": "3d1c3a5e37b6adad857c7c516e6e29041dd60565e8697f91b46a2d13c864e677",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "yuanbao-T05-desktop-r1",
+      "case_id": "T05",
+      "product_id": "yuanbao",
+      "legacy_accepted": false,
+      "v3_accepted": false,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/yuanbao-T05-desktop-r1/manifest.json",
+          "sha256": "fad3638b3a0886ef22ee47ee26e72cf54f3749ee5215a5a73b41ef965fb92dcb",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/yuanbao-T05-desktop-r1/verification.json",
+          "sha256": "4a8ca9a5cfe638112f4576402318f0c0713eea65dc034b62ad260c11aeed6f88",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "doubao-T02-desktop-r1",
+      "case_id": "T02",
+      "product_id": "doubao",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/doubao-T02-desktop-r1/manifest.json",
+          "sha256": "701e9f1da92a1df68f48f5bea687458a955e425682b6fa22450b843254a14485",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/doubao-T02-desktop-r1/verification.json",
+          "sha256": "7790ed7dce83739e20c920ec2b21c84e966a016930a801a124a3a4666890bb9e",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "doubao-T03-desktop-r1",
+      "case_id": "T03",
+      "product_id": "doubao",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/doubao-T03-desktop-r1/manifest.json",
+          "sha256": "c3468bb8a3f401ec592f56dde0ce9ea05a8f1310fd4ef321bc0fbc9fd5604c2d",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/doubao-T03-desktop-r1/verification.json",
+          "sha256": "dedc052ac4b2bd0f6db68069607c84b138cef0803bbf5f8ed033cfbcd0746c7b",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "doubao-T04-desktop-r1",
+      "case_id": "T04",
+      "product_id": "doubao",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/doubao-T04-desktop-r1/manifest.json",
+          "sha256": "a7817d7bde408b4a74571d80d73ce118fee446210e00536dca3a0050b4850f62",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/doubao-T04-desktop-r1/verification.json",
+          "sha256": "3d1c3a5e37b6adad857c7c516e6e29041dd60565e8697f91b46a2d13c864e677",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    },
+    {
+      "run_id": "doubao-T05-desktop-r1",
+      "case_id": "T05",
+      "product_id": "doubao",
+      "legacy_accepted": true,
+      "v3_accepted": true,
+      "newly_rejected": false,
+      "guard_failures": [],
+      "sources": [
+        {
+          "path": "public/pilots/doubao-T05-desktop-r1/manifest.json",
+          "sha256": "f302d47ca95f7b43f39b35cd75da3abb259b9e5c7d880c5212cbf803bb18e7e0",
+          "json_pointer": ""
+        },
+        {
+          "path": "public/pilots/doubao-T05-desktop-r1/verification.json",
+          "sha256": "b73eb627935dddd87d2bf8451404e22bbed83178895f96b64638677b82a5509d",
+          "present": true,
+          "json_pointer": ""
+        }
+      ]
+    }
+  ],
+  "limits": "Synthetic examples, ablations and historical rechecks are three distinct units; none is a new product execution. Bounded mutation coverage is not general grader correctness or pure Harness causality. Sealed scores remain unchanged."
+}
