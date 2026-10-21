@@ -1,0 +1,70 @@
+{
+  "schema": "window-reopen-protocol/v2",
+  "registered_date": "2026-10-22",
+  "state": "frozen_before_first_submission",
+  "product": "WorkBuddy Windows desktop",
+  "version_label": "V5.8.3",
+  "model_label": "Deepseek-V4.1-Flash",
+  "mode": "办公",
+  "permission_label": "允许完全访问",
+  "order": [
+    "R01-reopen",
+    "R02-control"
+  ],
+  "max_initial_submissions": 2,
+  "checkpoint_delay_seconds": 180,
+  "delay_tolerance_seconds": 15,
+  "run_budget_seconds": 1200,
+  "close_observation_limit": 8,
+  "close_observation_budget_seconds": 30,
+  "required_consecutive_empty_inventories": 2,
+  "primary": "native_ui_original_message_and_file_retrieval_without_model_message",
+  "secondary": "joint_model_skill_harness_stage_b_delivery",
+  "not_claimed": [
+    "process restart",
+    "cloud attachment storage durability",
+    "backend model identity",
+    "five-product independent causal ranking"
+  ],
+  "workspace_paths": {
+    "R01-reopen": "D:/harness-window-reopen-v2/R01-reopen",
+    "R02-control": "D:/harness-window-reopen-v2/R02-control"
+  },
+  "attachment_source_path": "D:/harness-window-reopen-v2/inputs/probe.txt",
+  "continuation_message": "按初始要求继续第二阶段。",
+  "initial_workspace_inventory": [],
+  "files": {
+    "supplements/window-reopen-v2/protocol.md": {
+      "bytes": 7167,
+      "sha256": "bb5a8ff69ecf19fdcc4ba61a65a812f88322b7b18bc62fda1804ef1094932bfc"
+    },
+    "supplements/window-reopen-v2/fixtures/probe.txt": {
+      "bytes": 137,
+      "sha256": "b618117a9a71e3e32e40876546ca53fe4984acf4eb7da43d91e83edb946c92e6"
+    },
+    "supplements/window-reopen-v2/fixtures/prompt.txt": {
+      "bytes": 1182,
+      "sha256": "b76836c815a5f301951229c6d87a5a8d97ede0fb2438ade55d0b0c1b6bc6b1ea"
+    },
+    "scripts/window_reopen.py": {
+      "bytes": 2291,
+      "sha256": "8ac24b6b631c3f57c43b8a977464c6e3fad0a4a10cab7f6f389484008bd1fc43"
+    },
+    "scripts/window_reopen_v2.py": {
+      "bytes": 2501,
+      "sha256": "bc51f8b296d271febba80d640f769abd65545755605fbf5fdc33abde47a71f35"
+    },
+    "scripts/workbuddy_desktop_collector.mjs": {
+      "bytes": 1803,
+      "sha256": "a72cdf89fff4e7592249e90f21f7acee2a5b40eb15c781d3bcd3a7307e664b91"
+    },
+    "scripts/window_reopen_collection.mjs": {
+      "bytes": 1979,
+      "sha256": "f30457defc129cde53ee7e988032935e5924cf3b027f50d73ea8d44b88698f05"
+    },
+    "tests/test_window_reopen_v2.py": {
+      "bytes": 3332,
+      "sha256": "cfdd6eb4ccd4600dae2fd5a32de56da6cd61361113b94bf0c270db6d7f72b686"
+    }
+  }
+}
