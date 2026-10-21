@@ -28,8 +28,8 @@
       "sha256": "35395a76d061d0a4f2ec823a4b7c49ce61a9e03312cc62482e10cba9cb4351bf"
     },
     "supplements/window-reopen-v1/protocol.md": {
-      "bytes": 5879,
-      "sha256": "80e588d3d27a17b6a35193be91dccc22b937115dc09db005818731692536cc56"
+      "bytes": 6215,
+      "sha256": "f8e5d1503b4da4d41b71afe35b6fdc7b3f9ee92b0f9cf0a69c73e570cf9cfcff"
     },
     "scripts/window_reopen.py": {
       "bytes": 2291,
@@ -38,5 +38,11 @@
   },
   "workspace_initial_inventory": [],
   "continuation_message": "按初始要求继续第二阶段。",
-  "stop_after_pair": true
+  "stop_after_pair": true,
+  "workspace_paths": {
+    "W01-control": "D:/harness-window-reopen-v1/W01-control",
+    "W02-window-reopen": "D:/harness-window-reopen-v1/W02-window-reopen"
+  },
+  "attachment_source_path": "D:/harness-window-reopen-v1/inputs/probe.txt",
+  "pre_submission_amendment": "Move all product-accessible material outside the Git repository after preflight exposed inherited Worktree detection; no task had been submitted."
 }
