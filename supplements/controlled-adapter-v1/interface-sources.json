@@ -1,0 +1,195 @@
+{
+  "audit_kind": "read_only_installed_official_api_preflight",
+  "audited_at": "2026-10-23T17:00:57.943411+00:00",
+  "installed_version": "0.2.1-rc.2",
+  "official_tag": "dsh-v0.2.1-rc.2",
+  "official_reference_urls": [
+    "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.2/packages/llm/llm-pi-ai/README.md",
+    "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.2/packages/mcp/mcp-client/README.md",
+    "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.2/packages/sdk/protocol/README.md",
+    "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.2/packages/bundle/sdk-app/cordis.patch.yml"
+  ],
+  "sources": [
+    {
+      "archive_internal_path": "/package.json",
+      "sha256": "53ee01d3b1accfbd037d245fb4752fb5fa5f8e2a76b7de634a4223558ee54bb9",
+      "api_line_ranges": [
+        [
+          1,
+          5
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh-llm-pi-ai/lib/index.js",
+      "sha256": "99b5c20830a52f69641df8a18a39206079b0c725201958cce2c4a934f1d4f7cd",
+      "api_line_ranges": [
+        [
+          683,
+          711
+        ],
+        [
+          1035,
+          1083
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh-llm-pi-ai/README.md",
+      "sha256": "da63b3f79622bcb69ebafc345b04c4b930a5bd871c2cb13d1adcacf7afe3aa5e",
+      "api_line_ranges": [
+        [
+          29,
+          80
+        ],
+        [
+          119,
+          119
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh-sdk-jsonrpc-server/lib/index.js",
+      "sha256": "55412923f9f7c279f7e0b2a1e2853eaf238f390b3d84046cb9c94dc5f22a1e4a",
+      "api_line_ranges": [
+        [
+          120,
+          146
+        ],
+        [
+          153,
+          164
+        ],
+        [
+          188,
+          204
+        ],
+        [
+          277,
+          283
+        ],
+        [
+          389,
+          389
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh-home-paths/lib/index.js",
+      "sha256": "9877a6117c5def69b61fae12f70a7a7400894a9dc4a9f7069ce4cc58aeb66e9d",
+      "api_line_ranges": [
+        [
+          109,
+          125
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh-home-paths/README.md",
+      "sha256": "eafaf6e8588450ba6ed73d6c41646df58e1df8817554b6baa8ea1bc876d69175",
+      "api_line_ranges": [
+        [
+          29,
+          52
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh-mcp-client/lib/index.js",
+      "sha256": "758d8fc473b700b5d351158d06ce9f9e92c16e8b25497b08bb7bd2122a87f5dd",
+      "api_line_ranges": [
+        [
+          774,
+          800
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh-mcp-client/README.md",
+      "sha256": "346ad21f0c7f8bd7248a021513228769fcde1dec7065a3ea77e809f999805806",
+      "api_line_ranges": [
+        [
+          28,
+          75
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh-base/cordis.patch.yml",
+      "sha256": "a2cc57868a4d016609801e28781262515483dde29b41c2742d9a3b27a6f52f77",
+      "api_line_ranges": [
+        [
+          128,
+          136
+        ],
+        [
+          303,
+          315
+        ],
+        [
+          525,
+          529
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh-sdk-app/cordis.patch.yml",
+      "sha256": "f3b82cf41f2184d7099e393ce1d92ce109a1b76e490e57f7499a1803e540d238",
+      "api_line_ranges": [
+        [
+          8,
+          9
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          35,
+          41
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh-llm/lib/index.js",
+      "sha256": "d18d8ae4c8d961e628708c1e4698e09716a0ebb80e55a672e0bde1029bec1155",
+      "api_line_ranges": [
+        [
+          263,
+          274
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh-desktop-host/lib/cli.js",
+      "sha256": "ed8bd3ca840d67599bde74f940cdb1714f7b7a98cecd166705a42a661e5cd1b7",
+      "api_line_ranges": [
+        [
+          94,
+          118
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh/lib/bin.js",
+      "sha256": "80112efe368efb1a39720c7ada0af00442e5131fb2744edaaff8a3e8bb499e6f",
+      "api_line_ranges": [
+        [
+          105,
+          105
+        ]
+      ]
+    },
+    {
+      "archive_internal_path": "/dsh/node_modules/@deepseek-ai/dsh/lib/profile-boot-C14i-8IN.js",
+      "sha256": "32d6345d7457e7c19c18bad07a85856e7ef7c560d52a1da042d68981ee127b4d",
+      "api_line_ranges": [
+        [
+          216,
+          245
+        ]
+      ]
+    }
+  ],
+  "limits": "Installed-source interface review, not execution success or a claim that official tag bytes equal packaged build. No credentials or Skill bodies reviewed."
+}
