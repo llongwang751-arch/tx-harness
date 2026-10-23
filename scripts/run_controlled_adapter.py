@@ -47,12 +47,16 @@ def clean_environment():
     return {key:value for key,value in os.environ.items() if key.upper() in allowed}
 
 
-def verify_registration(commit,phase):
-    protocol_path=BASE/('calibration.json' if phase=='calibration' else 'protocol.json')
+def verify_registration(commit,phase,filename=None):
+    protocol_path=BASE/(filename or ('calibration.json' if phase=='calibration' else 'protocol.json'))
+    if protocol_path.parent.resolve()!=BASE.resolve():
+        raise ValueError('Registration must be directly in the controlled supplement')
     relative=protocol_path.relative_to(ROOT).as_posix()
     if subprocess.check_output(['git','show',f'{commit}:{relative}'],cwd=ROOT)!=protocol_path.read_bytes():
         raise ValueError('Protocol differs from registered git blob')
     protocol=read(protocol_path)
+    if protocol['phase']!=phase:
+        raise ValueError('Registration phase differs')
     for name,spec in protocol['files'].items():
         path=ROOT/name
         if digest(path)!=spec['sha256'] or path.stat().st_size!=spec['bytes']:
@@ -60,6 +64,14 @@ def verify_registration(commit,phase):
         if subprocess.check_output(['git','show',f'{commit}:{name}'],cwd=ROOT)!=path.read_bytes():
             raise ValueError('Registered adapter blob differs: '+name)
     return protocol
+
+
+def config_toml(value):
+    # JSON arrays of objects are not TOML arrays of inline tables. The legacy
+    # helper predates this fixture; keep old frozen launchers unchanged.
+    if isinstance(value,list):return '['+','.join(config_toml(item) for item in value)+']'
+    if isinstance(value,dict):return '{'+','.join(toml(key)+'='+config_toml(item) for key,item in value.items())+'}'
+    return toml(value)
 
 
 def codex_launch(workspace,home,tool,mode,journal,base_url):
@@ -80,7 +92,7 @@ def codex_launch(workspace,home,tool,mode,journal,base_url):
             'args':[str(tool),'--workspace',str(workspace),'--mode',mode,'--journal',str(journal)],
             'cwd':str(workspace),'enabled':True,'required':True,
             'default_tools_approval_mode':'auto','startup_timeout_sec':20,'tool_timeout_sec':20}}
-    for key,value in overrides.items():args+=['-c',key+'='+toml(value)]
+    for key,value in overrides.items():args+=['-c',key+'='+config_toml(value)]
     args+=['-']
     env=clean_environment();env['CODEX_HOME']=str(home)
     return exe,args,env
@@ -166,8 +178,8 @@ def dsh_turn(args,env,workspace,evidence,prompt,run_id,deadline):
         stop_tree(proc);peer.close_logs()
 
 
-def run(run_id,phase,commit):
-    protocol=verify_registration(commit,phase)
+def run(run_id,phase,commit,filename=None):
+    protocol=verify_registration(commit,phase,filename)
     spec=next(r for r in protocol['runs'] if r['run_id']==run_id)
     evidence=PRIVATE/run_id
     evidence.mkdir(parents=True,exist_ok=False)
@@ -182,7 +194,8 @@ def run(run_id,phase,commit):
     prompt=(BASE/'prompt.txt').read_text(encoding='utf-8')
     started=time.monotonic()
     result={'run_id':run_id,'phase':phase,'product_id':spec['product_id'],'mode':spec['mode'],
-        'registration_commit':commit,'started_at':now(),'initial_workspace_inventory':[],
+        'registration_commit':commit,'registration_file':filename or ('calibration.json' if phase=='calibration' else 'protocol.json'),
+        'started_at':now(),'initial_workspace_inventory':[],
         'model_kind':'deterministic_local_transport_fixture','real_model_inference':False,
         'shared_tool_sha256':digest(tool),'frozen_arguments_sha256':sha(encoded(fixture['arguments'])),
         'timeout_seconds':protocol['timeout_seconds']}
@@ -236,4 +249,5 @@ if __name__=='__main__':
     p.add_argument('--run-id',required=True)
     p.add_argument('--phase',choices=['calibration','main'],required=True)
     p.add_argument('--registration',required=True)
-    a=p.parse_args();run(a.run_id,a.phase,a.registration)
+    p.add_argument('--protocol',help='Explicit immutable registration filename for a new calibration revision')
+    a=p.parse_args();run(a.run_id,a.phase,a.registration,a.protocol)
