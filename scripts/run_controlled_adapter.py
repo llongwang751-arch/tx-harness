@@ -83,7 +83,6 @@ def codex_launch(workspace,home,tool,mode,journal,base_url):
         'model_providers.controlled':{'name':'Controlled local fixture','base_url':base_url,
             'wire_api':'responses','requires_openai_auth':False,'supports_websockets':False,
             'request_max_retries':0,'stream_max_retries':0,'stream_idle_timeout_ms':30000},
-        'model_supports_reasoning_summaries':False,
         'features.prefer_mxc':False,
         'features.skill_mcp_dependency_install':False,
         'skills.config':[{'path':str(home/'skills/.system'/name),'enabled':False}
