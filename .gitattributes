@@ -3,3 +3,7 @@
 * -text
 # This positive CSV control intentionally contains CRLF, not trailing spaces.
 public/grader-audit-v3/P5/outputs/bundle/contacts.csv whitespace=cr-at-eol
+# Controlled originals intentionally mix CRLF/LF; stderr includes a blank EOF.
+# Keep original bytes and describe the exception instead of cleaning evidence.
+public/supplements/controlled-adapter-v1/*/collected/artifact.txt whitespace=cr-at-eol
+public/supplements/controlled-adapter-v1/*/admission-error.txt whitespace=-blank-at-eof
