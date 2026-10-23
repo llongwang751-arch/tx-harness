@@ -1,0 +1,80 @@
+{
+  "schema": "controlled-workbuddy-registration/v2",
+  "phase": "calibration",
+  "registered_date": "2026-10-24",
+  "timeout_seconds": 120,
+  "preparation_timeout_seconds": 900,
+  "max_auxiliary_requests": 3,
+  "installed_versions": {
+    "workbuddy": "V5.8.3"
+  },
+  "executables": {
+    "workbuddy": {
+      "bytes": 204590360,
+      "sha256": "5ea5d8ba6f6a435c27c239115647886a9646f76ff5a721e82f84f0ff16ac5e15"
+    }
+  },
+  "files": {
+    "scripts/controlled_workbuddy_v2_fixture.py": {
+      "bytes": 14209,
+      "sha256": "e035515dbc5de8882e95696095f45b84e13fb447ea4a8f40bf5d76d31d0a6303"
+    },
+    "scripts/serve_controlled_workbuddy_v2.py": {
+      "bytes": 8512,
+      "sha256": "d0f972b30b6e959e1b0593022c280fb38ee46286522e7ff73f257b0f87db8709"
+    },
+    "tests/test_controlled_workbuddy_v2.py": {
+      "bytes": 7684,
+      "sha256": "87cb16a7913b88955795676d66acca5835caed6dcac528ec02a879195d06e63e"
+    },
+    "scripts/serve_controlled_workbuddy.py": {
+      "bytes": 15784,
+      "sha256": "5375c88835589732764045402e83886f36a218fbd0c78a71510a03bb66da7629"
+    },
+    "scripts/controlled_model_fixture.py": {
+      "bytes": 11374,
+      "sha256": "32beab330eb999c3b379e3c3aa35e898410172d480735ff2b1a7077fb2a48446"
+    },
+    "scripts/controlled_probe_mcp.py": {
+      "bytes": 9845,
+      "sha256": "16d2e25396f5e89cb96fbc22e02db4e5a3c54923dc97afcc5ba43d14f4adf3b2"
+    },
+    "supplements/controlled-workbuddy-v2/fixture.json": {
+      "bytes": 374,
+      "sha256": "ef3c95e6d9c3091db40bb22a5669c2f1a3915606c6cded2140bd11ab0b400efe"
+    },
+    "supplements/controlled-workbuddy-v2/prompt.txt": {
+      "bytes": 187,
+      "sha256": "76ea94d637980ef083e9bbe4d19a3ffbdb3008998ab2d298f5c0f3abf9ed836a"
+    },
+    "supplements/controlled-workbuddy-v2/tool-schema.json": {
+      "bytes": 224,
+      "sha256": "6f09aa4922c5fae13059ff126ee637a802401acf70e53147e80baeab0e3f2f39"
+    },
+    "supplements/controlled-workbuddy-v2/calibration.md": {
+      "bytes": 2807,
+      "sha256": "41d2aaedd00ee779f8e92186c8d146fc44a1ba2775c9fb619e4aeca54d33dcab"
+    }
+  },
+  "runs": [
+    {
+      "run_id": "WBC01-workbuddy-calibration",
+      "product_id": "workbuddy",
+      "mode": "success"
+    }
+  ],
+  "previous_registration_commit": "c18fd84",
+  "prior_calibration": "WBC00-workbuddy-calibration remains unknown; no retrospective change",
+  "adapter_version": "controlled-workbuddy/v2",
+  "canonical_target": "mcp__contract__probe_commit",
+  "tool_schema_sha256": "539edfd80313089fe7088dabb574cf51c4ab364f482b42f2a4c7efbbaec2a00b",
+  "fixture_source": {
+    "original_path": "supplements/controlled-adapter-v1/fixture.json",
+    "original_bytes": 374,
+    "original_sha256": "ef3c95e6d9c3091db40bb22a5669c2f1a3915606c6cded2140bd11ab0b400efe"
+  },
+  "real_model_inference": false,
+  "surface": "official WorkBuddy desktop via native Computer Use",
+  "comparability": "Same fixed tool, args, terminal and probe bytes; v2 auxiliary classification/schema identity adapter differs from C/D v1; no task-quality ranking",
+  "stop_rule": "one initial task; no retry or in-run schema/name relaxation; retain unknown diagnostic if unmatched; main protocol not yet registered"
+}
