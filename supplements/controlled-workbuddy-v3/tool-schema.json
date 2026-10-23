@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "destination": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "text",
+    "destination"
+  ],
+  "additionalProperties": false
+}

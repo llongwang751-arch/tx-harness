@@ -1,0 +1,16 @@
+# WorkBuddy v3 固定工具发现桥校准草稿
+
+WBC00/v1及WBC01/v2均保留校准未知。WBC01已观测到工具声明中有ToolSearch、没有probe_commit，不能由工具未暴露直接判定WorkBuddy不能调用MCP。本轮改变公开适配器流程，先登记再运行；不修改v1/v2，也没有登记正式臂。
+
+同工具分派后的参数、共享MCP、125字节输入和固定终止文本与Codex/DSH一致。WorkBuddy额外有一个固定工具发现步骤，全链路条件因此不同，不能宣称三款全链路完全同条件。
+
+1. 模型服务不解释系统/Skill/用户文字。最多3次无工具且无工具回包的辅助请求，固定答CONTROLLED_AUXILIARY，单列计数。
+2. 如唯一准确probe已声明，直接派固定probe；否则，仅当唯一名为ToolSearch的声明schema能验证固定参数时，派一次call_search_1，参数严格为query=+contract probe_commit、max_results=1。不能改查询或尝试多个搜索。
+3. ToolSearch schema仅支持明确type、properties、required、布尔additionalProperties、items、enum/const和基本数值/长度边界；不支持的组合/引用/约束拒绝。所有可选属性也检查结构。description等注释不参与验证且不记录。
+4. 下一请求必须包含唯一call_search_1的真实tool回包。回包仅留序列化字节数和哈希，不记录或理解搜索文本。标准结构化tool_reference可记工具名；不解析文本寻找工具或遍历隐藏字段。
+5. 新声明必须出现唯一准确probe且schema与原始共享MCP输入schema完全一致，才派call_controlled_1。规范名事前白名单为mcp__contract__probe_commit、mcp__custom-mcp__contract__probe_commit、mcp__custom_mcp__contract__probe_commit。后三段候选依据实际MCP clientInfo.name=workbuddy-mcp-probe:custom-mcp:contract预先列出，不声称已经观测到这些工具名。未知名字仍拒绝，不能仅凭名字认定MCP实际执行。
+6. 固定probe返回必须对应call_controlled_1且全部marker字段完全符合登记success/error模式，才能答CONTROLLED_DONE；历史搜索回包若仍在上下文，须哈希不变。额外回包、重复目标及终态后请求拒绝。协议一旦拒绝锁定本次运行，不能随结果改规则。
+7. 所有请求留时间、整体字节数/哈希及工具名/schema哈希。搜索schema留不含description/任意字符串值的结构投影；任意搜索文本、原始messages、Skill正文、headers和未知工具正文不落日志。
+8. 辅助请求、发现请求/返回、主2步各自计数；独立任务由原生接受现场计数，不能用HTTP或tool条目数替代。一次初始提交，准备900秒、实际提交后120秒；不由host控制产品。原生完成必须另有现场，2次主请求不能自行算完成。
+
+WBC02仅做校准。通过须同时有原共享MCP journal真实接收、原字节artifact与125字节SHA一致、真实返回关联和原生终态。若未通过，保留未知；诊断元数据可用于下一次另外登记，不能回填成已通过。
