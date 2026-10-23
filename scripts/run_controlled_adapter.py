@@ -90,7 +90,9 @@ def codex_launch(workspace,home,tool,mode,journal,base_url):
         'mcp_servers.contract':{'command':sys.executable,
             'args':[str(tool),'--workspace',str(workspace),'--mode',mode,'--journal',str(journal)],
             'cwd':str(workspace),'enabled':True,'required':True,
-            'default_tools_approval_mode':'auto','startup_timeout_sec':20,'tool_timeout_sec':20}}
+            'default_tools_approval_mode':'auto',
+            'tools':{'probe_commit':{'approval_mode':'approve'}},
+            'startup_timeout_sec':20,'tool_timeout_sec':20}}
     for key,value in overrides.items():args+=['-c',key+'='+config_toml(value)]
     args+=['-']
     env=clean_environment();env['CODEX_HOME']=str(home)
