@@ -1,0 +1,52 @@
+{
+  "run_id": "CA13-dsh-success",
+  "phase": "main",
+  "product_id": "dsh",
+  "mode": "success",
+  "registration_commit": "1a03e16",
+  "registration_file": "protocol.json",
+  "started_at": "2026-10-23T17:12:59.612+00:00",
+  "initial_workspace_inventory": [],
+  "model_kind": "deterministic_local_transport_fixture",
+  "real_model_inference": false,
+  "shared_tool_sha256": "16d2e25396f5e89cb96fbc22e02db4e5a3c54923dc97afcc5ba43d14f4adf3b2",
+  "frozen_arguments_sha256": "3d013a1acd56fe7b217c00140b5b717449daa37d3317c5c51b7c536a7ac6d004",
+  "timeout_seconds": 120,
+  "version": "0.2.1-rc.2",
+  "skill_configuration": "Fresh DSH_HOME/DSH_AGENTS_HOME; filesystem and Office providers, Skill tool and agent-instructions disabled by one-run patch.",
+  "executable_sha256": "9c789407850773ce7d914a3ec0476852bf1ceea69789d8ccf4e39be953f4bf52",
+  "exit_code": 0,
+  "completed_at": "2026-10-23T17:13:01.147+00:00",
+  "local_model_requests": 2,
+  "artifact": {
+    "bytes": 125,
+    "sha256": "a21822b8b21b9991cec154040fb574fd9dd33ca326caf79c04b208aa3d9d530d",
+    "acquired_at": "2026-10-23T17:13:01.622+00:00"
+  },
+  "ended_at": "2026-10-23T17:13:01.622+00:00",
+  "elapsed_seconds": 2.0098224000012124,
+  "actual_submitted": true,
+  "mcp_journal_present": true,
+  "task_accepted": true,
+  "actual_submission_attempt": true,
+  "admission_definition": "Ordinary native turn_start/turn.started observed; stdin write alone is only an attempt",
+  "calibration_issue": null,
+  "source_original_execution_sha256": "a58d5a219552932d1d0b5af9fc143baf7ced7d7175a24c4831b5ed5f4772b644",
+  "source_original_native_sha256": "73f254ce41dd7b4b374ad93f524a35b985967a8b44bbe552795a3e912ed75536",
+  "source_review": "Only ordinary fixture tool, final text and status events; raw SDK/system/Skill content stays private",
+  "cleanup_observation": {
+    "checked_after_all_runs": true,
+    "only_recorded_test_processes": true,
+    "pid_checks": [
+      {
+        "pid": 34304,
+        "alive": false
+      },
+      {
+        "pid": 36776,
+        "alive": false
+      }
+    ],
+    "limitation": "PID liveness after collection, not complete OS network/process provenance"
+  }
+}

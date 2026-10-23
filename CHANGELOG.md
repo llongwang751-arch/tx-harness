@@ -2,6 +2,15 @@
 
 按北京时间记录已经完成并留在仓库中的改动。历史条目根据Git提交补记，后续计划写在[个人周报](reports/weekly/README.md)中。
 
+## 2026-10-24
+
+- 实现[本地固定响应服务](scripts/controlled_model_fixture.py)、[共享MCP](scripts/controlled_probe_mcp.py)与[官方CLI/SDK运行入口](scripts/run_controlled_adapter.py)，真实Codex 0.159.2和DSH 0.2.1-rc.2接入同一冻结动作；不使用账户密钥或神经模型。DSH版本另记，未混入旧S01。
+- 先校准入口，再于首次正式提交前推送[`1a03e16`](https://github.com/llongwang751-arch/tx-harness/commit/1a03e16)冻结四臂。[实际现场](public/supplements/controlled-adapter-v1/README.md)显示四次正式任务均完成参数、执行效果、结果回传及正常终止：两份成功原件125字节且摘要相同，两次错误保持固定错误内容并无产物。
+- 保留校准五次启动及四个登记版本：两次接受前配置拒绝不算独立任务；三次接受任务中两通过、一审批适配器未知。没有覆盖失败或把未知记产品低分。所有本轮记录的测试产品/MCP进程均已退出，一次只运行一个实际产品。
+- 公开[专项报告](reports/controlled-adapter-v1.md)、[逐项复算](reports/controlled-adapter-v1.json)和九份证据包。模型固定程序不解释Skill；Codex仍检测到相关标题，不宣称全部Skill已删除。wire、schema包装和系统上下文保留差异，可信宿主MCP不测沙箱。GUI三产品仍在原真实任务轨道，未发布五产品纯Harness排名。
+- 新增34项离线测试，覆盖真实HTTP两种SSE、MCP字节与错误路径、重封manifest后的参数/回包/Unicode/隐藏文件/调用ID/接受任务造假及历史登记绑定。本机全套186项检查无失败，1项因Windows符号链接权限跳过；最终判卷13项复查通过。旧原件、旧分、已发周报和旧封存材料保护核查通过。
+- 更新[周报草稿](reports/weekly/2026-10-24-draft.md)、阶段报告、未知及最多三项下周目标。本周共11次已接受任务，有效9、失败0、未知2；其中真实模型4次、固定响应7次分列，另两次配置拒绝单列。环境变量值不公开，保留原始值摘要；周报由本人发送，尚未发送。
+
 ## 2026-10-23
 
 - 完成[五产品归因边界表](reports/attribution-boundaries.md)与[源审计JSON](reports/attribution-boundaries.json)：固定已有提交，逐款核对S01三轮实际模型/Skill条件、原件与内部边界。不同批次版本分列，模型请求/标签不升级为后台身份。

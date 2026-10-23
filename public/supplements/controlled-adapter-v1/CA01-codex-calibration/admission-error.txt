@@ -1,0 +1,1 @@
+Error loading config.toml: unknown configuration field `model_supports_reasoning_summaries` in -c/--config override

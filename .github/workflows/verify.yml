@@ -23,4 +23,5 @@ jobs:
       - run: python scripts/verify_window_reopen.py
       - run: python scripts/verify_window_reopen_v2.py
       - run: python scripts/audit_attribution_boundaries.py --check
+      - run: python scripts/audit_controlled_adapter.py --check
       - run: python -m unittest discover -s tests -v

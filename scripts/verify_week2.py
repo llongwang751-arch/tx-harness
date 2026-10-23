@@ -70,6 +70,11 @@ def count_executions(entries):
 
 def product_manifest(name):
     parts = name.split('/')
+    if (len(parts)==5 and parts[:3]==['public','supplements','controlled-adapter-v1']
+            and parts[3].startswith('CA') and parts[-1]=='manifest.json'):
+        # Configuration-rejected launch attempts remain public but never became
+        # an admitted task. Do not count those manifests as independent runs.
+        return core.read_json(ROOT/('/'.join(parts[:-1]))/'execution.json')['task_accepted'] is True
     return (len(parts) == 4 and parts[:2] == ['public', 'pilots'] and parts[-1] == 'manifest.json'
             or len(parts) == 5 and parts[:3] == ['public', 'supplements', 'contracts-v2']
             and parts[3].startswith('S') and parts[-1] == 'manifest.json'
@@ -85,13 +90,14 @@ def weekly_counts():
     old = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only',
         registry['previous_week_baseline_commit'], '--', 'public/pilots',
         'public/supplements/contracts-v2', 'public/supplements/window-reopen-v1',
-        'public/supplements/window-reopen-v2'], cwd=ROOT, text=True).splitlines()
+        'public/supplements/window-reopen-v2', 'public/supplements/controlled-adapter-v1'], cwd=ROOT, text=True).splitlines()
     old = {name for name in old if product_manifest(name)}
     current = {path.relative_to(ROOT).as_posix() for directory, pattern in [
         ('public/pilots', '*/manifest.json'), ('public/supplements/contracts-v2', 'S*/manifest.json'),
         ('public/supplements/window-reopen-v1', 'W*/manifest.json'),
-        ('public/supplements/window-reopen-v2', 'R*/manifest.json')]
-        for path in (ROOT / directory).glob(pattern)}
+        ('public/supplements/window-reopen-v2', 'R*/manifest.json'),
+        ('public/supplements/controlled-adapter-v1','CA*/manifest.json')]
+        for path in (ROOT / directory).glob(pattern) if product_manifest(path.relative_to(ROOT).as_posix())}
     added = current - old
     registered = set()
     for entry in registry['entries']:
@@ -108,14 +114,31 @@ def weekly_counts():
         if manifest:
             if manifest not in added:
                 raise ValueError('Old or missing package cannot be a new weekly run')
+            if manifest in registered:
+                raise ValueError('One public task package cannot be counted twice')
+            if '/controlled-adapter-v1/' in manifest:
+                scene=core.read_json((ROOT/manifest).parent/'execution.json')
+                if (scene['task_accepted'] is not True or entry['run_id']!=scene['run_id']
+                        or entry['started_at']!=scene['started_at']
+                        or entry.get('track')!='controlled_adapter_fixture'
+                        or entry.get('real_model_inference') is not False
+                        or entry.get('phase')!=scene['phase']):
+                    raise ValueError('Controlled task admission or inference track differs from source')
             registered.add(manifest)
     if added != registered:
         raise ValueError('New public product packages are not covered by the weekly ledger')
     if not old <= current:
         raise ValueError('Historical product package removed')
     grader = core.read_json(ROOT / GRADER_AUDIT)['counts']
+    tracks={label:count_executions([entry for entry in registry['entries']
+            if entry.get('track','real_model_task')==label])
+            for label in ('real_model_task','controlled_adapter_fixture')}
+    rejected=[path.relative_to(ROOT).as_posix() for path in sorted(
+        (ROOT/'public/supplements/controlled-adapter-v1').glob('CA*/manifest.json'))
+        if not product_manifest(path.relative_to(ROOT).as_posix())]
     return {'schema': 'week2-progress-counts/v1', 'period_start': registry['period_start'],
         'period_end': registry['period_end'], 'as_of': registry['as_of'], 'product_runs': counts,
+        'tracks':tracks,'configuration_rejected_attempts_not_independent_runs':rejected,
         'new_public_product_packages': sorted(added), 'previous_public_package_count': len(old),
         'current_public_package_count': len(current),
         'offline_work_units_not_product_runs': grader,
@@ -209,7 +232,9 @@ def make_claims():
         'artifacts': [reference(f'public/supplements/contracts-v2/S02-codex-r{i}-allow/outputs/{name}') for i in range(1, 4) for name in ('echo.txt', 'receipt.json')],
         'rationale': '真实目标尝试与成功/拒绝对应；没有文件不是独立的许可通过证据',
         'unknown_register': ['U01', 'U03']})
-    return {'schema': 'week2-bounded-claims/v1', 'as_of': '2026-10-21', 'claims': claims}
+    return {'schema': 'week2-bounded-claims/v1',
+            'as_of':core.read_json(BASE/'executions.json')['as_of'],
+            'analysis_first_completed':'2026-10-21','claims': claims}
 
 
 def validate_registers():

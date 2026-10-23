@@ -1,15 +1,15 @@
 {
   "schema": "bounded-unknown-register/v1",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-24",
   "items": [
     {
       "id": "U01",
       "question": "Can five-product differences be attributed to Harness independently of model and Skill?",
-      "state": "closed_investigation_still_unknown",
-      "known": "The five-product source review covers all three S01 configurations per product. All 15 metadata records lack backend model attestation. Codex and DSH control only parts of Skill configuration; DSH r2/r3 have actual retained Skill calls. GUI complete Skill conditions remain unknown. Existing local boundary and permission observations do not establish independent five-product causality.",
-      "impact": "No pure five-product Harness ranking or numerical causal effect",
-      "next_action": "The five-product boundary table is completed. Reopen only when a supported interface or new effective-configuration evidence can attest actual model deployment, full Skill scope and common tool/context/environment conditions, then preregister a minimal single-factor test.",
-      "stop_condition": "No such joint control evidence is present in the audited public records. Stop the stronger causal claim for this batch; do not repeat the same tasks or convert unknown to a score. This is not proof that an uninspected interface cannot exist.",
+      "state": "partially_resolved_controlled_component_track",
+      "known": "The five-product source review covers all three S01 configurations per product. All 15 metadata records lack backend model attestation. Codex and DSH control only parts of Skill configuration; DSH r2/r3 have actual retained Skill calls. GUI complete Skill conditions remain unknown. Existing local boundary and permission observations do not establish independent five-product causality. On Oct24 a newly supported per-run local provider plus common MCP was executed on official Codex0.159.2 and DSH0.2.1-rc.2. Four main fixed-response tasks passed; the deterministic controller does not interpret Skill text. Codex still exposes a Skill header; full deletion is not claimed. Three GUI products and default neural-model task causality remain uncontrolled.",
+      "impact": "Fixed generation/Skill-text action influence is removed for the executed two-product MCP contract; no pure five-product causal ranking or real-model quality inference.",
+      "next_action": "For WorkBuddy, Yuanbao and Doubao, check supported provider/MCP configuration once per product by Oct31; preregister a new controlled run only if the interface provides usable effective evidence. Keep fixed-component results separate from default neural-model tasks and from historical S01.",
+      "stop_condition": "This batch stops after four main arms. Do not repeat tasks or infer full Skill shutdown. For each remaining GUI product, stop after a supported-interface preflight without usable shared endpoint evidence; retain the specific remaining unknown and reopen only on new interface evidence.",
       "review_by": "2026-10-31",
       "owner": "李明远",
       "evidence": [
@@ -18,9 +18,12 @@
         "reports/permission-pairs-v2.json",
         "reports/attribution-boundaries.md",
         "reports/attribution-boundaries.json",
-        "supplements/attribution-audit-v1/assessment.json"
+        "supplements/attribution-audit-v1/assessment.json",
+        "reports/controlled-adapter-v1.md",
+        "reports/controlled-adapter-v1.json",
+        "supplements/controlled-adapter-v1/protocol.json"
       ],
-      "last_reviewed": "2026-10-23"
+      "last_reviewed": "2026-10-24"
     },
     {
       "id": "U02",

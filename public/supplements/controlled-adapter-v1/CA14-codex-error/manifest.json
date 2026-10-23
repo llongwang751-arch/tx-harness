@@ -1,0 +1,36 @@
+{
+  "schema": "controlled-fixture-evidence-manifest/v1",
+  "run_id": "CA14-codex-error",
+  "files": [
+    {
+      "path": "execution.json",
+      "bytes": 2054,
+      "sha256": "933d6584ece1d7d63d53a59f2667c6f24544fc8919c1ba91c1672988c6cce6de"
+    },
+    {
+      "path": "launch.json",
+      "bytes": 7432,
+      "sha256": "cb1c2d04c895ace10f54ab83fa40f715d7d81eca8b7c3d10825db2c49055c706"
+    },
+    {
+      "path": "mcp-events.jsonl",
+      "bytes": 2487,
+      "sha256": "417ec15e2c1680f6df3d082a0eb2376ecac9ec567f516c6ddc0862f8b8e10f1e"
+    },
+    {
+      "path": "model-events.jsonl",
+      "bytes": 2287,
+      "sha256": "0cfa2e1e2f468e4c8dccf899b4e630bd305e6fbd7834fef1347f9ea76fce9091"
+    },
+    {
+      "path": "native-events.jsonl",
+      "bytes": 1076,
+      "sha256": "5f65c0e46e78a987f1a2a0f77bec58a48edd09bbc7b9e4ca4c01fa00a853a7d2"
+    },
+    {
+      "path": "reviewed-native-scene.jsonl",
+      "bytes": 1799,
+      "sha256": "925b933081b1e9958e5453cf01451efc486f6f48eba7b2905392385b329fda1e"
+    }
+  ]
+}

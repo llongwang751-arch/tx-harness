@@ -1,0 +1,160 @@
+{
+  "args": [
+    "<USERPROFILE>\\AppData\\Local\\Programs\\DeepSeek Harness\\DeepSeek Harness.exe",
+    "--expose-internals",
+    "<USERPROFILE>\\AppData\\Local\\Programs\\DeepSeek Harness\\resources\\app.asar\\dsh\\node_modules\\@deepseek-ai\\dsh-desktop-host\\lib\\cli.js",
+    "--profile",
+    "sdk",
+    "--patch",
+    "<RUN_ROOT>\\single-run.patch.yml"
+  ],
+  "environment_names": [
+    "APPDATA",
+    "COMSPEC",
+    "DSH_AGENTS_HOME",
+    "DSH_HOME",
+    "DSH_MAX_TOKENS_AS_SUCCESS",
+    "DSH_TELEMETRY_DISABLED",
+    "ELECTRON_RUN_AS_NODE",
+    "HARNESS_CONTROLLED_PLACEHOLDER_KEY",
+    "LOCALAPPDATA",
+    "PATH",
+    "PATHEXT",
+    "PROGRAMDATA",
+    "PROGRAMFILES",
+    "PROGRAMFILES(X86)",
+    "SYSTEMDRIVE",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "external_credentials_forwarded": false,
+  "base_url": "http://127.0.0.1:50641/v1",
+  "workspace": "<RUN_ROOT>\\work",
+  "version": "0.2.1-rc.2",
+  "reviewed_actual_patch": [
+    {
+      "id": "llm-pi-ai",
+      "config": {
+        "providers": {
+          "controlled": {
+            "apiKeyEnv": "HARNESS_CONTROLLED_PLACEHOLDER_KEY",
+            "api": "openai-completions",
+            "baseURL": "http://127.0.0.1:50641/v1",
+            "retryPolicy": {
+              "mode": "normal",
+              "maxRetries": 0
+            },
+            "models": [
+              {
+                "id": "fixed-tool-v1",
+                "name": "fixed-tool-v1",
+                "contextWindow": 262144,
+                "maxTokens": 1024,
+                "input": [
+                  "text"
+                ],
+                "reasoningEfforts": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "skill-filesystem",
+      "disabled": true
+    },
+    {
+      "id": "skill-office",
+      "disabled": true
+    },
+    {
+      "id": "tool-skill",
+      "disabled": true
+    },
+    {
+      "id": "agent-instructions",
+      "disabled": true
+    },
+    {
+      "id": "llm-deepseek",
+      "disabled": true
+    },
+    {
+      "id": "llm-deepseek-account",
+      "disabled": true
+    },
+    {
+      "id": "session-log-deepseek",
+      "disabled": true
+    },
+    {
+      "id": "plugin-package-inventory-deepseek",
+      "disabled": true
+    },
+    {
+      "id": "session-telemetry-otel",
+      "disabled": true
+    },
+    {
+      "id": "tool-web",
+      "disabled": true
+    },
+    {
+      "id": "tool-plugin-manager",
+      "disabled": true
+    },
+    {
+      "id": "tool-subagent",
+      "disabled": true
+    },
+    {
+      "id": "tool-subagent-fork",
+      "disabled": true
+    },
+    {
+      "id": "tool-subagent-control",
+      "disabled": true
+    },
+    {
+      "id": "tool-subagent-list-agents",
+      "disabled": true
+    },
+    {
+      "id": "tool-workflow",
+      "disabled": true
+    },
+    {
+      "insert": [
+        {
+          "id": "mcp-controlled-contract",
+          "name": "@deepseek-ai/dsh-mcp-client",
+          "config": {
+            "serverName": "contract",
+            "transport": "stdio",
+            "command": "<PYTHON>",
+            "args": [
+              "<RUN_ROOT>\\runtime\\controlled_probe_mcp.py",
+              "--workspace",
+              "<RUN_ROOT>\\work",
+              "--mode",
+              "error",
+              "--journal",
+              "<EVAL_REPO>\\private\\controlled-adapter-v1\\CA11-dsh-error\\mcp-events.jsonl"
+            ],
+            "cwd": "<RUN_ROOT>\\work",
+            "env": {},
+            "failOnStartupError": true,
+            "toolCallTimeoutMs": 20000,
+            "reconnect": {
+              "enabled": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

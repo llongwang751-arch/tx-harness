@@ -1,0 +1,41 @@
+{
+  "schema": "controlled-fixture-evidence-manifest/v1",
+  "run_id": "CA00-dsh-calibration",
+  "files": [
+    {
+      "path": "collected/artifact.txt",
+      "bytes": 125,
+      "sha256": "a21822b8b21b9991cec154040fb574fd9dd33ca326caf79c04b208aa3d9d530d"
+    },
+    {
+      "path": "execution.json",
+      "bytes": 2160,
+      "sha256": "98b4567bb8a318f87baf2379b0f5ea4bd4611d3f6800ca25dc7c325478573b26"
+    },
+    {
+      "path": "launch.json",
+      "bytes": 3673,
+      "sha256": "b0733e1c28b87278f0fc40fa61e5a1dff44a224bc2102d7a64a9794dc860b56f"
+    },
+    {
+      "path": "mcp-events.jsonl",
+      "bytes": 1717,
+      "sha256": "f373b47b37ab5a53e9f97d4e1c22e260243832eaa557775da843467920ff655d"
+    },
+    {
+      "path": "model-events.jsonl",
+      "bytes": 2283,
+      "sha256": "4dc6bf29db8005f69c0d19eeadaf6ece638d3572ed00c5810e1ab7f05e8b31d2"
+    },
+    {
+      "path": "native-events.jsonl",
+      "bytes": 913,
+      "sha256": "8feb2ceb12ffb4bc498cb702d1e7512dd3001f521ba9d4bf20ba786f59956b6d"
+    },
+    {
+      "path": "reviewed-native-scene.jsonl",
+      "bytes": 981,
+      "sha256": "cd20694eed270eb154bf20f6ff08320fe9928145dfffe604ed23b3d294cbcb4f"
+    }
+  ]
+}

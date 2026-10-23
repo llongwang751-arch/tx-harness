@@ -1,0 +1,4 @@
+{"kind": "tool_call", "call_id": "call_controlled_1", "tool_name": "mcp__contract__probe_commit", "arguments": {"text": "CA-FROZEN-20261024-8d4a7e\n李明远｜Harness tool contract\r\nUnicode: αβ 😀\nSpacing:  left  right\nLiteral: $HOME `x` <>&\n", "destination": "artifact.txt"}, "public_scene_line": 4, "private_source_line": 4}
+{"kind": "tool_result", "call_id": "call_controlled_1", "payload": {"marker": "CONTROLLED_TOOL_V1", "mode": "error", "code": "E_FIXTURE_DENIED"}, "is_error": null, "is_error_source": "not_exposed", "native_status": "error", "public_scene_line": 5, "private_source_line": 5}
+{"kind": "assistant_text", "text": "CONTROLLED_DONE", "public_scene_line": 8, "private_source_line": 8}
+{"kind": "terminal", "normal": true, "reason": "completed", "exit_code": 0, "public_scene_line": 10, "private_source_line": 10}

@@ -1,0 +1,52 @@
+{
+  "run_id": "CA12-codex-success",
+  "phase": "main",
+  "product_id": "codex",
+  "mode": "success",
+  "registration_commit": "1a03e16",
+  "registration_file": "protocol.json",
+  "started_at": "2026-10-23T17:12:53.589+00:00",
+  "initial_workspace_inventory": [],
+  "model_kind": "deterministic_local_transport_fixture",
+  "real_model_inference": false,
+  "shared_tool_sha256": "16d2e25396f5e89cb96fbc22e02db4e5a3c54923dc97afcc5ba43d14f4adf3b2",
+  "frozen_arguments_sha256": "3d013a1acd56fe7b217c00140b5b717449daa37d3317c5c51b7c536a7ac6d004",
+  "timeout_seconds": 120,
+  "version": "codex-cli 0.159.2",
+  "skill_configuration": "Fresh isolated CODEX_HOME; host discovery skipped; plugins/hooks/memories/apps off; four packaged system-skill paths explicitly disabled; actual fixture path checked separately.",
+  "executable_sha256": "52f75c649bebb8001102a1dd129c1ea6d02b0940321e6d7e82ee0526753bd58a",
+  "exit_code": 0,
+  "completed_at": "2026-10-23T17:12:55.731+00:00",
+  "local_model_requests": 2,
+  "artifact": {
+    "bytes": 125,
+    "sha256": "a21822b8b21b9991cec154040fb574fd9dd33ca326caf79c04b208aa3d9d530d",
+    "acquired_at": "2026-10-23T17:12:55.827+00:00"
+  },
+  "ended_at": "2026-10-23T17:12:55.827+00:00",
+  "elapsed_seconds": 2.2384954999997717,
+  "actual_submitted": true,
+  "mcp_journal_present": true,
+  "task_accepted": true,
+  "actual_submission_attempt": true,
+  "admission_definition": "Ordinary native turn_start/turn.started observed; stdin write alone is only an attempt",
+  "calibration_issue": null,
+  "source_original_execution_sha256": "87df7928a73fe8ddadbdeb32e54ba4251e7f32ba06d7b924f04dc2252b2e839c",
+  "source_original_native_sha256": "10a91344bc998910caebc77e5e311ec602e726a7082689abe9adf9fdba55a615",
+  "source_review": "Only ordinary fixture tool, final text and status events; raw SDK/system/Skill content stays private",
+  "cleanup_observation": {
+    "checked_after_all_runs": true,
+    "only_recorded_test_processes": true,
+    "pid_checks": [
+      {
+        "pid": 32144,
+        "alive": false
+      },
+      {
+        "pid": 36396,
+        "alive": false
+      }
+    ],
+    "limitation": "PID liveness after collection, not complete OS network/process provenance"
+  }
+}

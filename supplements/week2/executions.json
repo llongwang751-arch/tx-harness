@@ -2,7 +2,7 @@
   "schema": "weekly-independent-product-executions/v1",
   "period_start": "2026-10-18",
   "period_end": "2026-10-24",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-24",
   "previous_week_baseline_commit": "7f4ab6096d647cd3e97c5f5fbe678bd8991b3bd8",
   "entries": [
     {
@@ -23,7 +23,9 @@
           "path": "public/supplements/window-reopen-v1/W01-control/manifest.json",
           "sha256": "884a0137a9dd01b1c1b4f21fdfbb9a3b5f1be5a1f50c14b5da73f9322958e6e8"
         }
-      ]
+      ],
+      "track": "real_model_task",
+      "real_model_inference": true
     },
     {
       "run_id": "W02-window-reopen",
@@ -43,7 +45,9 @@
           "path": "public/supplements/window-reopen-v1/W02-window-reopen/manifest.json",
           "sha256": "2bf2e65bbdef534240bffe119f84635db1b6555ba5173c1310a1c2d33ee45dc0"
         }
-      ]
+      ],
+      "track": "real_model_task",
+      "real_model_inference": true
     },
     {
       "run_id": "R01-reopen",
@@ -63,7 +67,9 @@
           "path": "public/supplements/window-reopen-v2/R01-reopen/manifest.json",
           "sha256": "50ed90839d4d2e8f869993793eb4371a579d58b67e8bff7d6008e09ba193f44e"
         }
-      ]
+      ],
+      "track": "real_model_task",
+      "real_model_inference": true
     },
     {
       "run_id": "R02-control",
@@ -83,15 +89,179 @@
           "path": "public/supplements/window-reopen-v2/R02-control/manifest.json",
           "sha256": "b704c30ed483df39e57ca5c6043a365c820f03e7b7a017fbd9349839e961f5db"
         }
+      ],
+      "track": "real_model_task",
+      "real_model_inference": true
+    },
+    {
+      "run_id": "CA00-dsh-calibration",
+      "native_submission_id": "official-fixed-fixture:CA00-dsh-calibration:2026-10-23T17:09:26.553+00:00",
+      "kind": "product_execution",
+      "track": "controlled_adapter_fixture",
+      "phase": "calibration",
+      "real_model_inference": false,
+      "actual_submitted": true,
+      "validity": "valid",
+      "outcome": "pass",
+      "started_at": "2026-10-23T17:09:26.553+00:00",
+      "public_manifest": "public/supplements/controlled-adapter-v1/CA00-dsh-calibration/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA00-dsh-calibration/execution.json",
+          "sha256": "98b4567bb8a318f87baf2379b0f5ea4bd4611d3f6800ca25dc7c325478573b26"
+        },
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA00-dsh-calibration/manifest.json",
+          "sha256": "812ad362dace145817ce414d21872a41bc42b461c932b6aee25e7fd00e72ad94"
+        }
+      ]
+    },
+    {
+      "run_id": "CA02-codex-calibration",
+      "native_submission_id": "official-fixed-fixture:CA02-codex-calibration:2026-10-23T17:11:09.076+00:00",
+      "kind": "product_execution",
+      "track": "controlled_adapter_fixture",
+      "phase": "calibration",
+      "real_model_inference": false,
+      "actual_submitted": true,
+      "validity": "unknown",
+      "outcome": "unknown",
+      "started_at": "2026-10-23T17:11:09.076+00:00",
+      "public_manifest": "public/supplements/controlled-adapter-v1/CA02-codex-calibration/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA02-codex-calibration/execution.json",
+          "sha256": "3cce3a246556f71104ebdb16bc34ac69edc8757dbc7ab9ef569cb6cbaabdac5f"
+        },
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA02-codex-calibration/manifest.json",
+          "sha256": "ff18c9e9d0f8c210872186301bd67293dc944d52a6bd66af83ff0ec245658793"
+        }
+      ]
+    },
+    {
+      "run_id": "CA03-codex-calibration",
+      "native_submission_id": "official-fixed-fixture:CA03-codex-calibration:2026-10-23T17:11:43.257+00:00",
+      "kind": "product_execution",
+      "track": "controlled_adapter_fixture",
+      "phase": "calibration",
+      "real_model_inference": false,
+      "actual_submitted": true,
+      "validity": "valid",
+      "outcome": "pass",
+      "started_at": "2026-10-23T17:11:43.257+00:00",
+      "public_manifest": "public/supplements/controlled-adapter-v1/CA03-codex-calibration/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA03-codex-calibration/execution.json",
+          "sha256": "6f213dc10a4ce8110ea24f77605a3d01aea048351b9a3851b56d22a0e14d0dac"
+        },
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA03-codex-calibration/manifest.json",
+          "sha256": "87ce4f0e17addd994b019715c4218cb50cccde6ae44c85820e4236deae2183fc"
+        }
+      ]
+    },
+    {
+      "run_id": "CA11-dsh-error",
+      "native_submission_id": "official-fixed-fixture:CA11-dsh-error:2026-10-23T17:12:47.816+00:00",
+      "kind": "product_execution",
+      "track": "controlled_adapter_fixture",
+      "phase": "main",
+      "real_model_inference": false,
+      "actual_submitted": true,
+      "validity": "valid",
+      "outcome": "pass",
+      "started_at": "2026-10-23T17:12:47.816+00:00",
+      "public_manifest": "public/supplements/controlled-adapter-v1/CA11-dsh-error/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA11-dsh-error/execution.json",
+          "sha256": "668836aeaa15c27b461a7dd5a553b03d653488d624c924db7201c57caea733bc"
+        },
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA11-dsh-error/manifest.json",
+          "sha256": "9980b89ba7d7f9a0aada964c93c01b411f94ae2f99884a2d3a03d8845278dbeb"
+        }
+      ]
+    },
+    {
+      "run_id": "CA12-codex-success",
+      "native_submission_id": "official-fixed-fixture:CA12-codex-success:2026-10-23T17:12:53.589+00:00",
+      "kind": "product_execution",
+      "track": "controlled_adapter_fixture",
+      "phase": "main",
+      "real_model_inference": false,
+      "actual_submitted": true,
+      "validity": "valid",
+      "outcome": "pass",
+      "started_at": "2026-10-23T17:12:53.589+00:00",
+      "public_manifest": "public/supplements/controlled-adapter-v1/CA12-codex-success/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA12-codex-success/execution.json",
+          "sha256": "babd9e460d83b27ffc07c0e27e28ce3c192e28ac939b9999d182feb6e1d95185"
+        },
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA12-codex-success/manifest.json",
+          "sha256": "359125c987898cd567ef85f1ca1472adcfa0cd90758a72fcc5bfb3b850b33268"
+        }
+      ]
+    },
+    {
+      "run_id": "CA13-dsh-success",
+      "native_submission_id": "official-fixed-fixture:CA13-dsh-success:2026-10-23T17:12:59.612+00:00",
+      "kind": "product_execution",
+      "track": "controlled_adapter_fixture",
+      "phase": "main",
+      "real_model_inference": false,
+      "actual_submitted": true,
+      "validity": "valid",
+      "outcome": "pass",
+      "started_at": "2026-10-23T17:12:59.612+00:00",
+      "public_manifest": "public/supplements/controlled-adapter-v1/CA13-dsh-success/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA13-dsh-success/execution.json",
+          "sha256": "0e6d4ccdf1ef0c54467270ef93d94877360f424d69682b323459fcb8fbff0a35"
+        },
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA13-dsh-success/manifest.json",
+          "sha256": "431fcfbb263c91d7a33a7eb247c8816c2ab05fa5b484e167cea01b06faf3d003"
+        }
+      ]
+    },
+    {
+      "run_id": "CA14-codex-error",
+      "native_submission_id": "official-fixed-fixture:CA14-codex-error:2026-10-23T17:13:04.893+00:00",
+      "kind": "product_execution",
+      "track": "controlled_adapter_fixture",
+      "phase": "main",
+      "real_model_inference": false,
+      "actual_submitted": true,
+      "validity": "valid",
+      "outcome": "pass",
+      "started_at": "2026-10-23T17:13:04.893+00:00",
+      "public_manifest": "public/supplements/controlled-adapter-v1/CA14-codex-error/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA14-codex-error/execution.json",
+          "sha256": "933d6584ece1d7d63d53a59f2667c6f24544fc8919c1ba91c1672988c6cce6de"
+        },
+        {
+          "path": "public/supplements/controlled-adapter-v1/CA14-codex-error/manifest.json",
+          "sha256": "a7f7b5186cb7d609f0c0503f02e4962301e13b02dc2e6a764fa4df1870915d85"
+        }
       ]
     }
   ],
-  "operator_attestation": "Four actual WorkBuddy desktop task submissions on 2026-10-22 Asia/Shanghai in two separately registered batches. W01, R01 and R02 are valid passes; W02 intervention remains unknown. One product task was active at a time, using official native Computer Use with AI assistance. Preflight, stages, screenshots, synthetic examples and artifact rechecks are not extra runs.",
+  "operator_attestation": "Four real-model WorkBuddy desktop tasks on Oct22 Asia/Shanghai plus seven admitted official Codex/DSH component tasks against a deterministic local fixture on Oct24. The latter have no neural inference and are not evidence of real-model task quality. Five calibration launch attempts contain three admitted tasks (two pass, one adapter unknown) and two pre-admission config rejections; four preregistered main component tasks passed. Two rejected attempts remain public, excluded from independent task count. One actual product test at a time; all recorded controlled test process IDs exited. AI-assisted single-operator collection, no external human review.",
   "definitions": {
     "independent_run": "One actually submitted product task/session with its own input, configuration, start/end and public evidence. New grading rows, tool calls, screenshots, synthetic answers and replayed artifact checks are not product runs.",
     "valid": "Run conditions are valid and the task outcome can be judged; includes both passing and failing product outcomes",
     "failed": "A subset of valid: a known product/task failure, never merely absent internal evidence",
     "unknown": "Run validity or task outcome cannot be established; report separately and investigate under the unknown register",
-    "invalid": "Explicit infrastructure-invalid run; neither a product failure nor evidence of success"
+    "invalid": "Explicit infrastructure-invalid run; neither a product failure nor evidence of success",
+    "controlled_adapter_fixture": "Real official Harness task with deterministic localhost responses instead of a neural model; count accepted sessions separately from real-model tasks. Calibrations and main arms are separate. Config rejection before a native turn is a launch attempt, not an independent task."
   }
 }

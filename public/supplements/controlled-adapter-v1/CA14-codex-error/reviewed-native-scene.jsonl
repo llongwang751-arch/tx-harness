@@ -1,0 +1,8 @@
+{"type": "thread.started", "thread_id": "01a169c0-7e5f-7a43-819b-d6c6596bc947"}
+{"type": "item.completed", "item": {"id": "item_0", "type": "error", "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in <RUN_ROOT>\\codex-home\\config.toml."}}
+{"type": "item.completed", "item": {"id": "item_1", "type": "error", "message": "Model metadata for `fixed-tool-v1` not found. Defaulting to fallback metadata; this can degrade performance and cause issues."}}
+{"type": "turn.started"}
+{"type": "item.started", "item": {"id": "item_2", "type": "mcp_tool_call", "server": "contract", "tool": "probe_commit", "arguments": {"text": "CA-FROZEN-20261024-8d4a7e\n李明远｜Harness tool contract\r\nUnicode: αβ 😀\nSpacing:  left  right\nLiteral: $HOME `x` <>&\n", "destination": "artifact.txt"}, "result": null, "error": null, "status": "in_progress"}}
+{"type": "item.completed", "item": {"id": "item_2", "type": "mcp_tool_call", "server": "contract", "tool": "probe_commit", "arguments": {"text": "CA-FROZEN-20261024-8d4a7e\n李明远｜Harness tool contract\r\nUnicode: αβ 😀\nSpacing:  left  right\nLiteral: $HOME `x` <>&\n", "destination": "artifact.txt"}, "result": {"content": [{"type": "text", "text": "{\"marker\":\"CONTROLLED_TOOL_V1\",\"mode\":\"error\",\"code\":\"E_FIXTURE_DENIED\"}"}], "structured_content": null}, "error": null, "status": "failed"}}
+{"type": "item.completed", "item": {"id": "item_3", "type": "agent_message", "text": "CONTROLLED_DONE"}}
+{"type": "turn.completed", "usage": {"input_tokens": 2, "cached_input_tokens": 0, "cache_write_input_tokens": 0, "output_tokens": 2, "reasoning_output_tokens": 0}}

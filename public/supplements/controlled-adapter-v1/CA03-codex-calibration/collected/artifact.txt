@@ -1,0 +1,5 @@
+CA-FROZEN-20261024-8d4a7e
+李明远｜Harness tool contract
+Unicode: αβ 😀
+Spacing:  left  right
+Literal: $HOME `x` <>&

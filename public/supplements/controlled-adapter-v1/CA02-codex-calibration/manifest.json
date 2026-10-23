@@ -1,0 +1,36 @@
+{
+  "schema": "controlled-fixture-evidence-manifest/v1",
+  "run_id": "CA02-codex-calibration",
+  "files": [
+    {
+      "path": "execution.json",
+      "bytes": 2089,
+      "sha256": "3cce3a246556f71104ebdb16bc34ac69edc8757dbc7ab9ef569cb6cbaabdac5f"
+    },
+    {
+      "path": "launch.json",
+      "bytes": 7288,
+      "sha256": "ea70485d8d9643793917dbafd2f2c3927f1e35c8c464d90dcf3b5671a60f08f4"
+    },
+    {
+      "path": "mcp-events.jsonl",
+      "bytes": 1163,
+      "sha256": "cfdd40ff8ea4b0b1936ffb5e7d6cb164b2f1b617f19800b56f27a9fc229a5512"
+    },
+    {
+      "path": "model-events.jsonl",
+      "bytes": 2283,
+      "sha256": "17e27ab3a60b502d26f48b0f9b8bae298ac70f5950eca7f195df27093bf40f10"
+    },
+    {
+      "path": "native-events.jsonl",
+      "bytes": 969,
+      "sha256": "c2f2f4d32814f8a486db685d52663facc436ee60d0fb67768e3e85e05b70693e"
+    },
+    {
+      "path": "reviewed-native-scene.jsonl",
+      "bytes": 1840,
+      "sha256": "fff4ec19d75be2d2c6d222b2cfb1414fece16a329a6bac2f5dcadd047d36a538"
+    }
+  ]
+}

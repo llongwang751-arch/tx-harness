@@ -1,0 +1,3 @@
+Error loading config.toml: invalid type: string "[{\"path\": \"D:\\\\harness-controlled-v1\\\\CA00-codex-calibration\\\\codex-home\\\\skills\\\\.system\\\\imagegen\", \"enabled\": false}, {\"path\": \"D:\\\\harness-controlled-v1\\\\CA00-codex-calibration\\\\codex-home\\\\skills\\\\.system\\\\openai-docs\", \"enabled\": false}, {\"path\": \"D:\\\\harness-controlled-v1\\\\CA00-codex-calibration\\\\codex-home\\\\skills\\\\.system\\\\skill-creator\", \"enabled\": false}, {\"path\": \"D:\\\\harness-controlled-v1\\\\CA00-codex-calibration\\\\codex-home\\\\skills\\\\.system\\\\skill-installer\", \"enabled\": false}]", expected a sequence
+in `skills.config`
+

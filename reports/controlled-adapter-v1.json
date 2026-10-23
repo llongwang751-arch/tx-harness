@@ -1,0 +1,2459 @@
+{
+  "schema": "controlled-adapter-public-audit/v1",
+  "fixture": {
+    "path": "supplements/controlled-adapter-v1/fixture.json",
+    "sha256": "ef3c95e6d9c3091db40bb22a5669c2f1a3915606c6cded2140bd11ab0b400efe",
+    "arguments_sha256": "3d013a1acd56fe7b217c00140b5b717449daa37d3317c5c51b7c536a7ac6d004",
+    "artifact_bytes": 125,
+    "artifact_sha256": "a21822b8b21b9991cec154040fb574fd9dd33ca326caf79c04b208aa3d9d530d"
+  },
+  "counts": {
+    "all": {
+      "attempts": 9,
+      "independent_tasks": 7,
+      "not_accepted_attempts": 2,
+      "passed_tasks": 6,
+      "failed_tasks": 0,
+      "unknown_tasks": 1,
+      "contract_not_satisfied_calibration_tasks": 1
+    },
+    "calibration": {
+      "attempts": 5,
+      "independent_tasks": 3,
+      "not_accepted_attempts": 2,
+      "passed_tasks": 2,
+      "failed_tasks": 0,
+      "unknown_tasks": 1,
+      "contract_not_satisfied_calibration_tasks": 1
+    },
+    "main": {
+      "attempts": 4,
+      "independent_tasks": 4,
+      "not_accepted_attempts": 0,
+      "passed_tasks": 4,
+      "failed_tasks": 0,
+      "unknown_tasks": 0,
+      "contract_not_satisfied_calibration_tasks": 0
+    }
+  },
+  "packages": [
+    {
+      "run_id": "CA00-codex-calibration",
+      "phase": "calibration",
+      "product_id": "codex",
+      "mode": "success",
+      "task_accepted": false,
+      "independent_task_count": 0,
+      "inventory_valid": true,
+      "outcome": "unknown",
+      "product_failure": false,
+      "checks": {
+        "run_identity": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "registered_phase_and_mode": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "task_admitted": {
+          "passed": false,
+          "evidence": [
+            "execution.json",
+            "native-events.jsonl"
+          ]
+        },
+        "admission_matches_ordinary_scene": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "reviewed-native-scene.jsonl"
+          ]
+        },
+        "no_neural_model_inference": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "within_registered_budget": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "external_credentials_not_forwarded": {
+          "passed": true,
+          "evidence": [
+            "launch.json"
+          ]
+        },
+        "two_model_requests": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "model_identity": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_model_tool_dispatch": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "fixed_arguments": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "one_exposed_target": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_mcp_call": {
+          "passed": false,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_exact_arguments": {
+          "passed": false,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_fixture_result": {
+          "passed": false,
+          "evidence": [
+            "mcp-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "mcp_error_flag": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "correlated_tool_return": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "model_received_actual_mcp_payload": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "fixed_terminal": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "no_fixture_transport_error": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "native_call_result_correlation": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_exact_tool_call": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl",
+            "model-events.jsonl"
+          ]
+        },
+        "native_tool_result": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "native_fixed_terminal_text": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_normal_completion": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "artifact_exact_bytes": {
+          "passed": false,
+          "evidence": [
+            "fixture.json"
+          ]
+        },
+        "artifact_receipt": {
+          "passed": false,
+          "evidence": [
+            "execution.json"
+          ]
+        }
+      },
+      "missing_evidence": [],
+      "integrity_errors": [],
+      "is_error_observations": {
+        "mcp_is_error": null,
+        "mcp_source": "mcp-events.jsonl response.result.isError",
+        "native_is_error": null,
+        "native_source": "missing",
+        "native_status": null,
+        "error_semantics_received": false,
+        "note": "Native boolean exposure is recorded separately from preserved synthetic error semantics."
+      },
+      "scope": "shared-tool dispatch/arguments/return contract only",
+      "calibration_issue": "config_rejected",
+      "native_correlation": {
+        "kind": "unresolved",
+        "model_call_id_verified_at_endpoint": false,
+        "note": "A native item ID is not upgraded into an unexposed model call ID; unique frozen arguments and MCP/endpoint records provide additional correlation."
+      },
+      "contract_satisfied": false,
+      "failed_checks": [
+        "task_admitted",
+        "two_model_requests",
+        "model_identity",
+        "one_model_tool_dispatch",
+        "fixed_arguments",
+        "one_exposed_target",
+        "one_mcp_call",
+        "mcp_exact_arguments",
+        "mcp_fixture_result",
+        "correlated_tool_return",
+        "model_received_actual_mcp_payload",
+        "fixed_terminal",
+        "native_call_result_correlation",
+        "native_exact_tool_call",
+        "native_tool_result",
+        "native_fixed_terminal_text",
+        "native_normal_completion",
+        "artifact_exact_bytes",
+        "artifact_receipt"
+      ],
+      "registration": {
+        "commit": "44db317",
+        "path": "supplements/controlled-adapter-v1/calibration.json",
+        "sha256": "e82e8860c8c0c7e56cb82c73a471daf049ca666d7daeb795e9bbd7302d523775",
+        "committed_at": "2026-10-24T01:08:56+08:00",
+        "historical_source_blobs_verified": 11
+      },
+      "confidence": "high_for_public_record_consistency_and_frozen_contract_only",
+      "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review.",
+      "metrics": {
+        "C1": {
+          "score": null,
+          "checks": [
+            "task_admitted",
+            "one_model_tool_dispatch",
+            "fixed_arguments",
+            "one_exposed_target",
+            "one_mcp_call",
+            "mcp_exact_arguments",
+            "native_exact_tool_call"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C2": {
+          "score": null,
+          "checks": [
+            "mcp_fixture_result",
+            "mcp_error_flag",
+            "artifact_exact_bytes",
+            "artifact_receipt"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C3": {
+          "score": null,
+          "checks": [
+            "correlated_tool_return",
+            "model_received_actual_mcp_payload",
+            "native_tool_result"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C4": {
+          "score": null,
+          "checks": [
+            "two_model_requests",
+            "fixed_terminal",
+            "no_fixture_transport_error",
+            "native_fixed_terminal_text",
+            "native_normal_completion",
+            "within_registered_budget"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        }
+      }
+    },
+    {
+      "run_id": "CA00-dsh-calibration",
+      "phase": "calibration",
+      "product_id": "dsh",
+      "mode": "success",
+      "task_accepted": true,
+      "independent_task_count": 1,
+      "inventory_valid": true,
+      "outcome": "pass",
+      "product_failure": false,
+      "checks": {
+        "run_identity": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "registered_phase_and_mode": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "task_admitted": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "native-events.jsonl"
+          ]
+        },
+        "admission_matches_ordinary_scene": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "reviewed-native-scene.jsonl"
+          ]
+        },
+        "no_neural_model_inference": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "within_registered_budget": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "external_credentials_not_forwarded": {
+          "passed": true,
+          "evidence": [
+            "launch.json"
+          ]
+        },
+        "two_model_requests": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "model_identity": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_model_tool_dispatch": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "fixed_arguments": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "one_exposed_target": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_mcp_call": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_exact_arguments": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_fixture_result": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "mcp_error_flag": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "correlated_tool_return": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "model_received_actual_mcp_payload": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "fixed_terminal": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "no_fixture_transport_error": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "native_call_result_correlation": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_exact_tool_call": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "model-events.jsonl"
+          ]
+        },
+        "native_tool_result": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "native_fixed_terminal_text": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_normal_completion": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "artifact_exact_bytes": {
+          "passed": true,
+          "evidence": [
+            "collected/artifact.txt",
+            "fixture.json"
+          ]
+        },
+        "artifact_receipt": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        }
+      },
+      "missing_evidence": [],
+      "integrity_errors": [],
+      "is_error_observations": {
+        "mcp_is_error": null,
+        "mcp_source": "mcp-events.jsonl response.result.isError",
+        "native_is_error": null,
+        "native_source": "not_exposed",
+        "native_status": "completed",
+        "error_semantics_received": false,
+        "note": "Native boolean exposure is recorded separately from preserved synthetic error semantics."
+      },
+      "scope": "shared-tool dispatch/arguments/return contract only",
+      "calibration_issue": null,
+      "native_correlation": {
+        "kind": "model_call_id_exposed",
+        "model_call_id_verified_at_endpoint": true,
+        "note": "A native item ID is not upgraded into an unexposed model call ID; unique frozen arguments and MCP/endpoint records provide additional correlation."
+      },
+      "contract_satisfied": true,
+      "failed_checks": [],
+      "registration": {
+        "commit": "44db317",
+        "path": "supplements/controlled-adapter-v1/calibration.json",
+        "sha256": "e82e8860c8c0c7e56cb82c73a471daf049ca666d7daeb795e9bbd7302d523775",
+        "committed_at": "2026-10-24T01:08:56+08:00",
+        "historical_source_blobs_verified": 11
+      },
+      "confidence": "high_for_public_record_consistency_and_frozen_contract_only",
+      "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review.",
+      "metrics": {
+        "C1": {
+          "score": null,
+          "checks": [
+            "task_admitted",
+            "one_model_tool_dispatch",
+            "fixed_arguments",
+            "one_exposed_target",
+            "one_mcp_call",
+            "mcp_exact_arguments",
+            "native_exact_tool_call"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C2": {
+          "score": null,
+          "checks": [
+            "mcp_fixture_result",
+            "mcp_error_flag",
+            "artifact_exact_bytes",
+            "artifact_receipt"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C3": {
+          "score": null,
+          "checks": [
+            "correlated_tool_return",
+            "model_received_actual_mcp_payload",
+            "native_tool_result"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C4": {
+          "score": null,
+          "checks": [
+            "two_model_requests",
+            "fixed_terminal",
+            "no_fixture_transport_error",
+            "native_fixed_terminal_text",
+            "native_normal_completion",
+            "within_registered_budget"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        }
+      }
+    },
+    {
+      "run_id": "CA01-codex-calibration",
+      "phase": "calibration",
+      "product_id": "codex",
+      "mode": "success",
+      "task_accepted": false,
+      "independent_task_count": 0,
+      "inventory_valid": true,
+      "outcome": "unknown",
+      "product_failure": false,
+      "checks": {
+        "run_identity": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "registered_phase_and_mode": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "task_admitted": {
+          "passed": false,
+          "evidence": [
+            "execution.json",
+            "native-events.jsonl"
+          ]
+        },
+        "admission_matches_ordinary_scene": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "reviewed-native-scene.jsonl"
+          ]
+        },
+        "no_neural_model_inference": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "within_registered_budget": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "external_credentials_not_forwarded": {
+          "passed": true,
+          "evidence": [
+            "launch.json"
+          ]
+        },
+        "two_model_requests": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "model_identity": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_model_tool_dispatch": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "fixed_arguments": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "one_exposed_target": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_mcp_call": {
+          "passed": false,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_exact_arguments": {
+          "passed": false,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_fixture_result": {
+          "passed": false,
+          "evidence": [
+            "mcp-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "mcp_error_flag": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "correlated_tool_return": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "model_received_actual_mcp_payload": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "fixed_terminal": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "no_fixture_transport_error": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "native_call_result_correlation": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_exact_tool_call": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl",
+            "model-events.jsonl"
+          ]
+        },
+        "native_tool_result": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "native_fixed_terminal_text": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_normal_completion": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "artifact_exact_bytes": {
+          "passed": false,
+          "evidence": [
+            "fixture.json"
+          ]
+        },
+        "artifact_receipt": {
+          "passed": false,
+          "evidence": [
+            "execution.json"
+          ]
+        }
+      },
+      "missing_evidence": [],
+      "integrity_errors": [],
+      "is_error_observations": {
+        "mcp_is_error": null,
+        "mcp_source": "mcp-events.jsonl response.result.isError",
+        "native_is_error": null,
+        "native_source": "missing",
+        "native_status": null,
+        "error_semantics_received": false,
+        "note": "Native boolean exposure is recorded separately from preserved synthetic error semantics."
+      },
+      "scope": "shared-tool dispatch/arguments/return contract only",
+      "calibration_issue": "config_rejected",
+      "native_correlation": {
+        "kind": "unresolved",
+        "model_call_id_verified_at_endpoint": false,
+        "note": "A native item ID is not upgraded into an unexposed model call ID; unique frozen arguments and MCP/endpoint records provide additional correlation."
+      },
+      "contract_satisfied": false,
+      "failed_checks": [
+        "task_admitted",
+        "two_model_requests",
+        "model_identity",
+        "one_model_tool_dispatch",
+        "fixed_arguments",
+        "one_exposed_target",
+        "one_mcp_call",
+        "mcp_exact_arguments",
+        "mcp_fixture_result",
+        "correlated_tool_return",
+        "model_received_actual_mcp_payload",
+        "fixed_terminal",
+        "native_call_result_correlation",
+        "native_exact_tool_call",
+        "native_tool_result",
+        "native_fixed_terminal_text",
+        "native_normal_completion",
+        "artifact_exact_bytes",
+        "artifact_receipt"
+      ],
+      "registration": {
+        "commit": "0a1ab3e",
+        "path": "supplements/controlled-adapter-v1/calibration-r2.json",
+        "sha256": "b9a787123106e20d2beb106fdf6517deb50f90176c67923a02f8003596883a53",
+        "committed_at": "2026-10-24T01:09:55+08:00",
+        "historical_source_blobs_verified": 11
+      },
+      "confidence": "high_for_public_record_consistency_and_frozen_contract_only",
+      "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review.",
+      "metrics": {
+        "C1": {
+          "score": null,
+          "checks": [
+            "task_admitted",
+            "one_model_tool_dispatch",
+            "fixed_arguments",
+            "one_exposed_target",
+            "one_mcp_call",
+            "mcp_exact_arguments",
+            "native_exact_tool_call"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C2": {
+          "score": null,
+          "checks": [
+            "mcp_fixture_result",
+            "mcp_error_flag",
+            "artifact_exact_bytes",
+            "artifact_receipt"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C3": {
+          "score": null,
+          "checks": [
+            "correlated_tool_return",
+            "model_received_actual_mcp_payload",
+            "native_tool_result"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C4": {
+          "score": null,
+          "checks": [
+            "two_model_requests",
+            "fixed_terminal",
+            "no_fixture_transport_error",
+            "native_fixed_terminal_text",
+            "native_normal_completion",
+            "within_registered_budget"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        }
+      }
+    },
+    {
+      "run_id": "CA02-codex-calibration",
+      "phase": "calibration",
+      "product_id": "codex",
+      "mode": "success",
+      "task_accepted": true,
+      "independent_task_count": 1,
+      "inventory_valid": true,
+      "outcome": "unknown",
+      "product_failure": false,
+      "checks": {
+        "run_identity": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "registered_phase_and_mode": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "task_admitted": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "native-events.jsonl"
+          ]
+        },
+        "admission_matches_ordinary_scene": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "reviewed-native-scene.jsonl"
+          ]
+        },
+        "no_neural_model_inference": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "within_registered_budget": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "external_credentials_not_forwarded": {
+          "passed": true,
+          "evidence": [
+            "launch.json"
+          ]
+        },
+        "two_model_requests": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "model_identity": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_model_tool_dispatch": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "fixed_arguments": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "one_exposed_target": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_mcp_call": {
+          "passed": false,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_exact_arguments": {
+          "passed": false,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_fixture_result": {
+          "passed": false,
+          "evidence": [
+            "mcp-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "mcp_error_flag": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "correlated_tool_return": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "model_received_actual_mcp_payload": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "fixed_terminal": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "no_fixture_transport_error": {
+          "passed": false,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "native_call_result_correlation": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_exact_tool_call": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "model-events.jsonl"
+          ]
+        },
+        "native_tool_result": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "native_fixed_terminal_text": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_normal_completion": {
+          "passed": false,
+          "evidence": [
+            "native-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "artifact_exact_bytes": {
+          "passed": false,
+          "evidence": [
+            "fixture.json"
+          ]
+        },
+        "artifact_receipt": {
+          "passed": false,
+          "evidence": [
+            "execution.json"
+          ]
+        }
+      },
+      "missing_evidence": [],
+      "integrity_errors": [],
+      "is_error_observations": {
+        "mcp_is_error": null,
+        "mcp_source": "mcp-events.jsonl response.result.isError",
+        "native_is_error": null,
+        "native_source": "not_exposed",
+        "native_status": "failed",
+        "error_semantics_received": false,
+        "note": "Native boolean exposure is recorded separately from preserved synthetic error semantics."
+      },
+      "scope": "shared-tool dispatch/arguments/return contract only",
+      "calibration_issue": "approval_blocked",
+      "native_correlation": {
+        "kind": "native_item_id_only",
+        "model_call_id_verified_at_endpoint": true,
+        "note": "A native item ID is not upgraded into an unexposed model call ID; unique frozen arguments and MCP/endpoint records provide additional correlation."
+      },
+      "contract_satisfied": false,
+      "failed_checks": [
+        "one_mcp_call",
+        "mcp_exact_arguments",
+        "mcp_fixture_result",
+        "model_received_actual_mcp_payload",
+        "fixed_terminal",
+        "no_fixture_transport_error",
+        "native_tool_result",
+        "native_fixed_terminal_text",
+        "native_normal_completion",
+        "artifact_exact_bytes",
+        "artifact_receipt"
+      ],
+      "registration": {
+        "commit": "60f12ff",
+        "path": "supplements/controlled-adapter-v1/calibration-r3.json",
+        "sha256": "62a7b4191b2e307b8d46efe804ac6c35daaff4c0e63484ca2595fe0f4fb0b8f5",
+        "committed_at": "2026-10-24T01:11:00+08:00",
+        "historical_source_blobs_verified": 12
+      },
+      "confidence": "high_for_public_record_consistency_and_frozen_contract_only",
+      "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review.",
+      "metrics": {
+        "C1": {
+          "score": null,
+          "checks": [
+            "task_admitted",
+            "one_model_tool_dispatch",
+            "fixed_arguments",
+            "one_exposed_target",
+            "one_mcp_call",
+            "mcp_exact_arguments",
+            "native_exact_tool_call"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C2": {
+          "score": null,
+          "checks": [
+            "mcp_fixture_result",
+            "mcp_error_flag",
+            "artifact_exact_bytes",
+            "artifact_receipt"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C3": {
+          "score": null,
+          "checks": [
+            "correlated_tool_return",
+            "model_received_actual_mcp_payload",
+            "native_tool_result"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C4": {
+          "score": null,
+          "checks": [
+            "two_model_requests",
+            "fixed_terminal",
+            "no_fixture_transport_error",
+            "native_fixed_terminal_text",
+            "native_normal_completion",
+            "within_registered_budget"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        }
+      }
+    },
+    {
+      "run_id": "CA03-codex-calibration",
+      "phase": "calibration",
+      "product_id": "codex",
+      "mode": "success",
+      "task_accepted": true,
+      "independent_task_count": 1,
+      "inventory_valid": true,
+      "outcome": "pass",
+      "product_failure": false,
+      "checks": {
+        "run_identity": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "registered_phase_and_mode": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "task_admitted": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "native-events.jsonl"
+          ]
+        },
+        "admission_matches_ordinary_scene": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "reviewed-native-scene.jsonl"
+          ]
+        },
+        "no_neural_model_inference": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "within_registered_budget": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "external_credentials_not_forwarded": {
+          "passed": true,
+          "evidence": [
+            "launch.json"
+          ]
+        },
+        "two_model_requests": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "model_identity": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_model_tool_dispatch": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "fixed_arguments": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "one_exposed_target": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_mcp_call": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_exact_arguments": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_fixture_result": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "mcp_error_flag": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "correlated_tool_return": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "model_received_actual_mcp_payload": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "fixed_terminal": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "no_fixture_transport_error": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "native_call_result_correlation": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_exact_tool_call": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "model-events.jsonl"
+          ]
+        },
+        "native_tool_result": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "native_fixed_terminal_text": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_normal_completion": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "artifact_exact_bytes": {
+          "passed": true,
+          "evidence": [
+            "collected/artifact.txt",
+            "fixture.json"
+          ]
+        },
+        "artifact_receipt": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        }
+      },
+      "missing_evidence": [],
+      "integrity_errors": [],
+      "is_error_observations": {
+        "mcp_is_error": null,
+        "mcp_source": "mcp-events.jsonl response.result.isError",
+        "native_is_error": null,
+        "native_source": "not_exposed",
+        "native_status": "completed",
+        "error_semantics_received": false,
+        "note": "Native boolean exposure is recorded separately from preserved synthetic error semantics."
+      },
+      "scope": "shared-tool dispatch/arguments/return contract only",
+      "calibration_issue": null,
+      "native_correlation": {
+        "kind": "native_item_id_only",
+        "model_call_id_verified_at_endpoint": true,
+        "note": "A native item ID is not upgraded into an unexposed model call ID; unique frozen arguments and MCP/endpoint records provide additional correlation."
+      },
+      "contract_satisfied": true,
+      "failed_checks": [],
+      "registration": {
+        "commit": "51b113e",
+        "path": "supplements/controlled-adapter-v1/calibration-r4.json",
+        "sha256": "48537fc1a43399f5e5d04a30b8e22d04bfae1cf4ed3eb47b5191a445d518334c",
+        "committed_at": "2026-10-24T01:11:34+08:00",
+        "historical_source_blobs_verified": 12
+      },
+      "confidence": "high_for_public_record_consistency_and_frozen_contract_only",
+      "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review.",
+      "metrics": {
+        "C1": {
+          "score": null,
+          "checks": [
+            "task_admitted",
+            "one_model_tool_dispatch",
+            "fixed_arguments",
+            "one_exposed_target",
+            "one_mcp_call",
+            "mcp_exact_arguments",
+            "native_exact_tool_call"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C2": {
+          "score": null,
+          "checks": [
+            "mcp_fixture_result",
+            "mcp_error_flag",
+            "artifact_exact_bytes",
+            "artifact_receipt"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C3": {
+          "score": null,
+          "checks": [
+            "correlated_tool_return",
+            "model_received_actual_mcp_payload",
+            "native_tool_result"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C4": {
+          "score": null,
+          "checks": [
+            "two_model_requests",
+            "fixed_terminal",
+            "no_fixture_transport_error",
+            "native_fixed_terminal_text",
+            "native_normal_completion",
+            "within_registered_budget"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        }
+      }
+    },
+    {
+      "run_id": "CA11-dsh-error",
+      "phase": "main",
+      "product_id": "dsh",
+      "mode": "error",
+      "task_accepted": true,
+      "independent_task_count": 1,
+      "inventory_valid": true,
+      "outcome": "pass",
+      "product_failure": false,
+      "checks": {
+        "run_identity": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "registered_phase_and_mode": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "task_admitted": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "native-events.jsonl"
+          ]
+        },
+        "admission_matches_ordinary_scene": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "reviewed-native-scene.jsonl"
+          ]
+        },
+        "no_neural_model_inference": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "within_registered_budget": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "external_credentials_not_forwarded": {
+          "passed": true,
+          "evidence": [
+            "launch.json"
+          ]
+        },
+        "two_model_requests": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "model_identity": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_model_tool_dispatch": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "fixed_arguments": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "one_exposed_target": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_mcp_call": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_exact_arguments": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_fixture_result": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "mcp_error_flag": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "correlated_tool_return": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "model_received_actual_mcp_payload": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "fixed_terminal": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "no_fixture_transport_error": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "native_call_result_correlation": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_exact_tool_call": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "model-events.jsonl"
+          ]
+        },
+        "native_tool_result": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "native_fixed_terminal_text": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_normal_completion": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "error_mode_has_no_artifact": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "manifest.json"
+          ]
+        }
+      },
+      "missing_evidence": [],
+      "integrity_errors": [],
+      "is_error_observations": {
+        "mcp_is_error": true,
+        "mcp_source": "mcp-events.jsonl response.result.isError",
+        "native_is_error": null,
+        "native_source": "not_exposed",
+        "native_status": "error",
+        "error_semantics_received": true,
+        "note": "Native boolean exposure is recorded separately from preserved synthetic error semantics."
+      },
+      "scope": "shared-tool dispatch/arguments/return contract only",
+      "calibration_issue": null,
+      "native_correlation": {
+        "kind": "model_call_id_exposed",
+        "model_call_id_verified_at_endpoint": true,
+        "note": "A native item ID is not upgraded into an unexposed model call ID; unique frozen arguments and MCP/endpoint records provide additional correlation."
+      },
+      "contract_satisfied": true,
+      "failed_checks": [],
+      "registration": {
+        "commit": "1a03e16",
+        "path": "supplements/controlled-adapter-v1/protocol.json",
+        "sha256": "03e69bf4a3cd48878be5106be50785259c69d2e56191c02709852b293890be36",
+        "committed_at": "2026-10-24T01:12:38+08:00",
+        "historical_source_blobs_verified": 14
+      },
+      "confidence": "high_for_public_record_consistency_and_frozen_contract_only",
+      "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review.",
+      "metrics": {
+        "C1": {
+          "score": 1,
+          "checks": [
+            "task_admitted",
+            "one_model_tool_dispatch",
+            "fixed_arguments",
+            "one_exposed_target",
+            "one_mcp_call",
+            "mcp_exact_arguments",
+            "native_exact_tool_call"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C2": {
+          "score": 1,
+          "checks": [
+            "mcp_fixture_result",
+            "mcp_error_flag",
+            "error_mode_has_no_artifact"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C3": {
+          "score": 1,
+          "checks": [
+            "correlated_tool_return",
+            "model_received_actual_mcp_payload",
+            "native_tool_result"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C4": {
+          "score": 1,
+          "checks": [
+            "two_model_requests",
+            "fixed_terminal",
+            "no_fixture_transport_error",
+            "native_fixed_terminal_text",
+            "native_normal_completion",
+            "within_registered_budget"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        }
+      }
+    },
+    {
+      "run_id": "CA12-codex-success",
+      "phase": "main",
+      "product_id": "codex",
+      "mode": "success",
+      "task_accepted": true,
+      "independent_task_count": 1,
+      "inventory_valid": true,
+      "outcome": "pass",
+      "product_failure": false,
+      "checks": {
+        "run_identity": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "registered_phase_and_mode": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "task_admitted": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "native-events.jsonl"
+          ]
+        },
+        "admission_matches_ordinary_scene": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "reviewed-native-scene.jsonl"
+          ]
+        },
+        "no_neural_model_inference": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "within_registered_budget": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "external_credentials_not_forwarded": {
+          "passed": true,
+          "evidence": [
+            "launch.json"
+          ]
+        },
+        "two_model_requests": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "model_identity": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_model_tool_dispatch": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "fixed_arguments": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "one_exposed_target": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_mcp_call": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_exact_arguments": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_fixture_result": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "mcp_error_flag": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "correlated_tool_return": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "model_received_actual_mcp_payload": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "fixed_terminal": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "no_fixture_transport_error": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "native_call_result_correlation": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_exact_tool_call": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "model-events.jsonl"
+          ]
+        },
+        "native_tool_result": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "native_fixed_terminal_text": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_normal_completion": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "artifact_exact_bytes": {
+          "passed": true,
+          "evidence": [
+            "collected/artifact.txt",
+            "fixture.json"
+          ]
+        },
+        "artifact_receipt": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        }
+      },
+      "missing_evidence": [],
+      "integrity_errors": [],
+      "is_error_observations": {
+        "mcp_is_error": null,
+        "mcp_source": "mcp-events.jsonl response.result.isError",
+        "native_is_error": null,
+        "native_source": "not_exposed",
+        "native_status": "completed",
+        "error_semantics_received": false,
+        "note": "Native boolean exposure is recorded separately from preserved synthetic error semantics."
+      },
+      "scope": "shared-tool dispatch/arguments/return contract only",
+      "calibration_issue": null,
+      "native_correlation": {
+        "kind": "native_item_id_only",
+        "model_call_id_verified_at_endpoint": true,
+        "note": "A native item ID is not upgraded into an unexposed model call ID; unique frozen arguments and MCP/endpoint records provide additional correlation."
+      },
+      "contract_satisfied": true,
+      "failed_checks": [],
+      "registration": {
+        "commit": "1a03e16",
+        "path": "supplements/controlled-adapter-v1/protocol.json",
+        "sha256": "03e69bf4a3cd48878be5106be50785259c69d2e56191c02709852b293890be36",
+        "committed_at": "2026-10-24T01:12:38+08:00",
+        "historical_source_blobs_verified": 14
+      },
+      "confidence": "high_for_public_record_consistency_and_frozen_contract_only",
+      "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review.",
+      "metrics": {
+        "C1": {
+          "score": 1,
+          "checks": [
+            "task_admitted",
+            "one_model_tool_dispatch",
+            "fixed_arguments",
+            "one_exposed_target",
+            "one_mcp_call",
+            "mcp_exact_arguments",
+            "native_exact_tool_call"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C2": {
+          "score": 1,
+          "checks": [
+            "mcp_fixture_result",
+            "mcp_error_flag",
+            "artifact_exact_bytes",
+            "artifact_receipt"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C3": {
+          "score": 1,
+          "checks": [
+            "correlated_tool_return",
+            "model_received_actual_mcp_payload",
+            "native_tool_result"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C4": {
+          "score": 1,
+          "checks": [
+            "two_model_requests",
+            "fixed_terminal",
+            "no_fixture_transport_error",
+            "native_fixed_terminal_text",
+            "native_normal_completion",
+            "within_registered_budget"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        }
+      }
+    },
+    {
+      "run_id": "CA13-dsh-success",
+      "phase": "main",
+      "product_id": "dsh",
+      "mode": "success",
+      "task_accepted": true,
+      "independent_task_count": 1,
+      "inventory_valid": true,
+      "outcome": "pass",
+      "product_failure": false,
+      "checks": {
+        "run_identity": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "registered_phase_and_mode": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "task_admitted": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "native-events.jsonl"
+          ]
+        },
+        "admission_matches_ordinary_scene": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "reviewed-native-scene.jsonl"
+          ]
+        },
+        "no_neural_model_inference": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "within_registered_budget": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "external_credentials_not_forwarded": {
+          "passed": true,
+          "evidence": [
+            "launch.json"
+          ]
+        },
+        "two_model_requests": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "model_identity": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_model_tool_dispatch": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "fixed_arguments": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "one_exposed_target": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_mcp_call": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_exact_arguments": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_fixture_result": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "mcp_error_flag": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "correlated_tool_return": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "model_received_actual_mcp_payload": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "fixed_terminal": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "no_fixture_transport_error": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "native_call_result_correlation": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_exact_tool_call": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "model-events.jsonl"
+          ]
+        },
+        "native_tool_result": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "native_fixed_terminal_text": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_normal_completion": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "artifact_exact_bytes": {
+          "passed": true,
+          "evidence": [
+            "collected/artifact.txt",
+            "fixture.json"
+          ]
+        },
+        "artifact_receipt": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        }
+      },
+      "missing_evidence": [],
+      "integrity_errors": [],
+      "is_error_observations": {
+        "mcp_is_error": null,
+        "mcp_source": "mcp-events.jsonl response.result.isError",
+        "native_is_error": null,
+        "native_source": "not_exposed",
+        "native_status": "completed",
+        "error_semantics_received": false,
+        "note": "Native boolean exposure is recorded separately from preserved synthetic error semantics."
+      },
+      "scope": "shared-tool dispatch/arguments/return contract only",
+      "calibration_issue": null,
+      "native_correlation": {
+        "kind": "model_call_id_exposed",
+        "model_call_id_verified_at_endpoint": true,
+        "note": "A native item ID is not upgraded into an unexposed model call ID; unique frozen arguments and MCP/endpoint records provide additional correlation."
+      },
+      "contract_satisfied": true,
+      "failed_checks": [],
+      "registration": {
+        "commit": "1a03e16",
+        "path": "supplements/controlled-adapter-v1/protocol.json",
+        "sha256": "03e69bf4a3cd48878be5106be50785259c69d2e56191c02709852b293890be36",
+        "committed_at": "2026-10-24T01:12:38+08:00",
+        "historical_source_blobs_verified": 14
+      },
+      "confidence": "high_for_public_record_consistency_and_frozen_contract_only",
+      "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review.",
+      "metrics": {
+        "C1": {
+          "score": 1,
+          "checks": [
+            "task_admitted",
+            "one_model_tool_dispatch",
+            "fixed_arguments",
+            "one_exposed_target",
+            "one_mcp_call",
+            "mcp_exact_arguments",
+            "native_exact_tool_call"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C2": {
+          "score": 1,
+          "checks": [
+            "mcp_fixture_result",
+            "mcp_error_flag",
+            "artifact_exact_bytes",
+            "artifact_receipt"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C3": {
+          "score": 1,
+          "checks": [
+            "correlated_tool_return",
+            "model_received_actual_mcp_payload",
+            "native_tool_result"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C4": {
+          "score": 1,
+          "checks": [
+            "two_model_requests",
+            "fixed_terminal",
+            "no_fixture_transport_error",
+            "native_fixed_terminal_text",
+            "native_normal_completion",
+            "within_registered_budget"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        }
+      }
+    },
+    {
+      "run_id": "CA14-codex-error",
+      "phase": "main",
+      "product_id": "codex",
+      "mode": "error",
+      "task_accepted": true,
+      "independent_task_count": 1,
+      "inventory_valid": true,
+      "outcome": "pass",
+      "product_failure": false,
+      "checks": {
+        "run_identity": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "registered_phase_and_mode": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "task_admitted": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "native-events.jsonl"
+          ]
+        },
+        "admission_matches_ordinary_scene": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "reviewed-native-scene.jsonl"
+          ]
+        },
+        "no_neural_model_inference": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "within_registered_budget": {
+          "passed": true,
+          "evidence": [
+            "execution.json"
+          ]
+        },
+        "external_credentials_not_forwarded": {
+          "passed": true,
+          "evidence": [
+            "launch.json"
+          ]
+        },
+        "two_model_requests": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "model_identity": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_model_tool_dispatch": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "fixed_arguments": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "one_exposed_target": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "one_mcp_call": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_exact_arguments": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "mcp_fixture_result": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl",
+            "fixture.json"
+          ]
+        },
+        "mcp_error_flag": {
+          "passed": true,
+          "evidence": [
+            "mcp-events.jsonl"
+          ]
+        },
+        "correlated_tool_return": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "model_received_actual_mcp_payload": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "fixed_terminal": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "no_fixture_transport_error": {
+          "passed": true,
+          "evidence": [
+            "model-events.jsonl"
+          ]
+        },
+        "native_call_result_correlation": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_exact_tool_call": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "model-events.jsonl"
+          ]
+        },
+        "native_tool_result": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "mcp-events.jsonl"
+          ]
+        },
+        "native_fixed_terminal_text": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl"
+          ]
+        },
+        "native_normal_completion": {
+          "passed": true,
+          "evidence": [
+            "native-events.jsonl",
+            "execution.json"
+          ]
+        },
+        "error_mode_has_no_artifact": {
+          "passed": true,
+          "evidence": [
+            "execution.json",
+            "manifest.json"
+          ]
+        }
+      },
+      "missing_evidence": [],
+      "integrity_errors": [],
+      "is_error_observations": {
+        "mcp_is_error": true,
+        "mcp_source": "mcp-events.jsonl response.result.isError",
+        "native_is_error": null,
+        "native_source": "not_exposed",
+        "native_status": "failed",
+        "error_semantics_received": true,
+        "note": "Native boolean exposure is recorded separately from preserved synthetic error semantics."
+      },
+      "scope": "shared-tool dispatch/arguments/return contract only",
+      "calibration_issue": null,
+      "native_correlation": {
+        "kind": "native_item_id_only",
+        "model_call_id_verified_at_endpoint": true,
+        "note": "A native item ID is not upgraded into an unexposed model call ID; unique frozen arguments and MCP/endpoint records provide additional correlation."
+      },
+      "contract_satisfied": true,
+      "failed_checks": [],
+      "registration": {
+        "commit": "1a03e16",
+        "path": "supplements/controlled-adapter-v1/protocol.json",
+        "sha256": "03e69bf4a3cd48878be5106be50785259c69d2e56191c02709852b293890be36",
+        "committed_at": "2026-10-24T01:12:38+08:00",
+        "historical_source_blobs_verified": 14
+      },
+      "confidence": "high_for_public_record_consistency_and_frozen_contract_only",
+      "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review.",
+      "metrics": {
+        "C1": {
+          "score": 1,
+          "checks": [
+            "task_admitted",
+            "one_model_tool_dispatch",
+            "fixed_arguments",
+            "one_exposed_target",
+            "one_mcp_call",
+            "mcp_exact_arguments",
+            "native_exact_tool_call"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C2": {
+          "score": 1,
+          "checks": [
+            "mcp_fixture_result",
+            "mcp_error_flag",
+            "error_mode_has_no_artifact"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C3": {
+          "score": 1,
+          "checks": [
+            "correlated_tool_return",
+            "model_received_actual_mcp_payload",
+            "native_tool_result"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        },
+        "C4": {
+          "score": 1,
+          "checks": [
+            "two_model_requests",
+            "fixed_terminal",
+            "no_fixture_transport_error",
+            "native_fixed_terminal_text",
+            "native_normal_completion",
+            "within_registered_budget"
+          ],
+          "rule": "supplements/controlled-adapter-v1/protocol.md",
+          "confidence_basis": "Pre-run commit blobs, actual endpoint and MCP records, native scene and original artifact hashes agree where checks pass; collection remains one AI-assisted operator, no external human review."
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Only public recorded bytes and normalized events are recomputed; no private source is read.",
+    "Calibration outcomes are never counted as product failures.",
+    "Fixed local transport removes model sampling for this contract, not general model/Skill influence.",
+    "Trusted MCP write effects do not test product filesystem sandbox enforcement.",
+    "Hashes establish consistency rather than independent authentication of collection."
+  ]
+}

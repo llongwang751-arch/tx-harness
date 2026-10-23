@@ -1,0 +1,41 @@
+{
+  "schema": "controlled-fixture-evidence-manifest/v1",
+  "run_id": "CA13-dsh-success",
+  "files": [
+    {
+      "path": "collected/artifact.txt",
+      "bytes": 125,
+      "sha256": "a21822b8b21b9991cec154040fb574fd9dd33ca326caf79c04b208aa3d9d530d"
+    },
+    {
+      "path": "execution.json",
+      "bytes": 2147,
+      "sha256": "0e6d4ccdf1ef0c54467270ef93d94877360f424d69682b323459fcb8fbff0a35"
+    },
+    {
+      "path": "launch.json",
+      "bytes": 3669,
+      "sha256": "b5f3974979fbf42a8e15cf97a1669a507965a94b5fb3e28f8eb54ce65fcad3aa"
+    },
+    {
+      "path": "mcp-events.jsonl",
+      "bytes": 1717,
+      "sha256": "2853e56dd2532b941c25cee32dc312cfe94124c01e12b71a855a808bbfad03bf"
+    },
+    {
+      "path": "model-events.jsonl",
+      "bytes": 2283,
+      "sha256": "d056ab61ca741544dfecdc6eefbacf2b047dacb7b24bc93bb9a79c4903f7a21c"
+    },
+    {
+      "path": "native-events.jsonl",
+      "bytes": 913,
+      "sha256": "8feb2ceb12ffb4bc498cb702d1e7512dd3001f521ba9d4bf20ba786f59956b6d"
+    },
+    {
+      "path": "reviewed-native-scene.jsonl",
+      "bytes": 981,
+      "sha256": "cd20694eed270eb154bf20f6ff08320fe9928145dfffe604ed23b3d294cbcb4f"
+    }
+  ]
+}

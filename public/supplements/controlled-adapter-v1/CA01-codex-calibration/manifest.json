@@ -1,0 +1,41 @@
+{
+  "schema": "controlled-fixture-evidence-manifest/v1",
+  "run_id": "CA01-codex-calibration",
+  "files": [
+    {
+      "path": "admission-error.txt",
+      "bytes": 116,
+      "sha256": "a82c58b882f556229e4e2ca299077df48ab1d9285585af52400ede47faeee21f"
+    },
+    {
+      "path": "execution.json",
+      "bytes": 2029,
+      "sha256": "e0a83aeb4f541a8bf5471b81a2649120daf8dcfd14cba40ecaf784f2107b4af4"
+    },
+    {
+      "path": "launch.json",
+      "bytes": 7395,
+      "sha256": "7c67990787d0c37c2a00431abd3c983584cc7b0da40551edb04886362578d435"
+    },
+    {
+      "path": "mcp-events.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "model-events.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native-events.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reviewed-native-scene.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

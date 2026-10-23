@@ -2,23 +2,52 @@
   "schema": "week2-progress-counts/v1",
   "period_start": "2026-10-18",
   "period_end": "2026-10-24",
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-24",
   "product_runs": {
-    "independent_product_runs": 4,
-    "valid": 3,
-    "passed": 3,
+    "independent_product_runs": 11,
+    "valid": 9,
+    "passed": 9,
     "failed": 0,
-    "unknown": 1,
+    "unknown": 2,
     "invalid": 0
   },
+  "tracks": {
+    "real_model_task": {
+      "independent_product_runs": 4,
+      "valid": 3,
+      "passed": 3,
+      "failed": 0,
+      "unknown": 1,
+      "invalid": 0
+    },
+    "controlled_adapter_fixture": {
+      "independent_product_runs": 7,
+      "valid": 6,
+      "passed": 6,
+      "failed": 0,
+      "unknown": 1,
+      "invalid": 0
+    }
+  },
+  "configuration_rejected_attempts_not_independent_runs": [
+    "public/supplements/controlled-adapter-v1/CA00-codex-calibration/manifest.json",
+    "public/supplements/controlled-adapter-v1/CA01-codex-calibration/manifest.json"
+  ],
   "new_public_product_packages": [
+    "public/supplements/controlled-adapter-v1/CA00-dsh-calibration/manifest.json",
+    "public/supplements/controlled-adapter-v1/CA02-codex-calibration/manifest.json",
+    "public/supplements/controlled-adapter-v1/CA03-codex-calibration/manifest.json",
+    "public/supplements/controlled-adapter-v1/CA11-dsh-error/manifest.json",
+    "public/supplements/controlled-adapter-v1/CA12-codex-success/manifest.json",
+    "public/supplements/controlled-adapter-v1/CA13-dsh-success/manifest.json",
+    "public/supplements/controlled-adapter-v1/CA14-codex-error/manifest.json",
     "public/supplements/window-reopen-v1/W01-control/manifest.json",
     "public/supplements/window-reopen-v1/W02-window-reopen/manifest.json",
     "public/supplements/window-reopen-v2/R01-reopen/manifest.json",
     "public/supplements/window-reopen-v2/R02-control/manifest.json"
   ],
   "previous_public_package_count": 52,
-  "current_public_package_count": 56,
+  "current_public_package_count": 63,
   "offline_work_units_not_product_runs": {
     "synthetic_examples": 22,
     "expected_valid": 10,
@@ -35,7 +64,7 @@
   "evidence": [
     {
       "path": "supplements/week2/executions.json",
-      "sha256": "0a2ea49eee1fadbc8073d0ac5e372a0dd4ad960e7f700313d449981ac376b6da",
+      "sha256": "fb398e6d5f5530208ae39c5a36eecf7ba1d8393e5e59f24616884fe4bc89b985",
       "json_pointer": ""
     },
     {
@@ -49,7 +78,8 @@
     "valid": "Run conditions are valid and the task outcome can be judged; includes both passing and failing product outcomes",
     "failed": "A subset of valid: a known product/task failure, never merely absent internal evidence",
     "unknown": "Run validity or task outcome cannot be established; report separately and investigate under the unknown register",
-    "invalid": "Explicit infrastructure-invalid run; neither a product failure nor evidence of success"
+    "invalid": "Explicit infrastructure-invalid run; neither a product failure nor evidence of success",
+    "controlled_adapter_fixture": "Real official Harness task with deterministic localhost responses instead of a neural model; count accepted sessions separately from real-model tasks. Calibrations and main arms are separate. Config rejection before a native turn is a launch attempt, not an independent task."
   },
   "limits": "Known product failures are a subset of valid runs. Public package diff cross-checks the declared ledger; it cannot establish what unrecorded activity happened. Synthetic examples, ablations, grading rows and rechecks are not independent product runs."
 }

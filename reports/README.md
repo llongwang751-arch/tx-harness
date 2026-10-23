@@ -2,16 +2,17 @@
 
 当前交付以[书面竞品评测报告v2](report.md)为准，方法见[已执行方案](../docs/evaluation-plan.md)。它覆盖原25个选定产品×任务现场，以及另行预登记的21轮补测；没有五产品纯Harness因果排名。
 
-第二周先读[2026-10-23更新的阶段报告](week2/stage-report.md)：含判卷漏洞的固定反例和开关验证、完整证据绑定、五产品归因边界核对、运行计数及未知管理。它补充评测方法，不覆盖旧产品现场和分数。
+第二周先读[2026-10-24更新的阶段报告](week2/stage-report.md)：含判卷反例、证据补齐、窗口实测及固定响应下的真实Harness工具对照。两种运行轨道分开计数，不覆盖旧现场和分数。
 
 | 文件 | 用途和口径 |
 |---|---|
 | [report.md](report.md) | 当前书面报告：差异、旧分与理由、边界观察、补测及归因限制 |
+| [固定响应工具契约](controlled-adapter-v1.md) / [JSON](controlled-adapter-v1.json) | 真实Codex/DSH正式四臂通过；校准三次接受任务两通过一未知，另两次配置拒绝不算任务；无神经推理，不外推五产品控制 |
 | [五产品归因边界表](attribution-boundaries.md) / [JSON](attribution-boundaries.json) | 2026-10-23逐产品核对模型、Skill、边界和停止条件；复核15轮S01，新增运行0次，条件分母不用于纯Harness排名 |
 | [窗口重开与续接](window-reopen-v1.md) | 2次真实WorkBuddy桌面任务；两次文件通过，W02干预未知，不能作配对因果结论 |
 | [直接取回与窗口重开v2](window-reopen-v2.md) | 另登记2次真实任务；启动前两次空窗口清单、前后四份原生取回及联合交付通过；本地源保留，不证明云存储或一般可靠性 |
 | [grader-audit-v3.md](grader-audit-v3.md) / [JSON](grader-audit-v3.json) | 22组合成判卷样例、20次守卫开关与25份旧原件复算；均不算新增产品运行 |
-| [第二周结论与来源](week2/claims.json) / [计数](week2/counts.json) | 六条判卷/许可结论及两轮v2包内逐项review；本周新增产品运行4，有效通过3、未知1，现场与计数分开核对 |
+| [第二周结论与来源](week2/claims.json) / [计数](week2/counts.json) | 六条旧判卷/许可结论、新专项逐项review与计数；本周11次接受任务，有效9、未知2；真实模型4次、固定响应7次分列 |
 | [evaluation-v2.md](evaluation-v2.md) / [JSON](evaluation-v2.json) | 原25现场的逐字段、声明权重、共同界面和计时复核；严格截止分均为null |
 | [exploratory-score-review.md](exploratory-score-review.md) / [JSON](exploratory-score-review.json) | 冻结的旧26次评分，含额外豆包本地T01失败；仅25个选定组合用于描述均值 |
 | [补测分母](../public/supplements/contracts-v2/README.md) / [JSON](../public/supplements/contracts-v2/coverage.json) | S01五产品各三轮及S02三组许可对照；E2原件与E1资格分开，无综合分 |
