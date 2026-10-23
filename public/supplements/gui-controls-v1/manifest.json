@@ -1,0 +1,37 @@
+{
+  "schema": "native-gui-preflight-manifest/v1",
+  "actual_task_runs": 0,
+  "note": "Preflight package only; WorkBuddy submitted calibrations are separate run packages.",
+  "files": [
+    {
+      "path": "doubao-local-stdio-form.jpg",
+      "bytes": 73033,
+      "sha256": "df2d1ce285c730f30211b71b307793ae49688056b6037df88c59d1c0698b57d6"
+    },
+    {
+      "path": "observations.json",
+      "bytes": 6343,
+      "sha256": "0c379dab0395744cf8799ed129483d912899c54d7e2ef645d54e2ca5d72863dc"
+    },
+    {
+      "path": "workbuddy-model-form.jpg",
+      "bytes": 51296,
+      "sha256": "f1a7fb8e7cbe556d65514e97cdeacf6997fa1d58262f88604c23f78c7ebe56fe"
+    },
+    {
+      "path": "yuanbao-settings-about.jpg",
+      "bytes": 37082,
+      "sha256": "41b37e6f4ab1c2ed65f70a690c33882f991c30ccdc977b48af1036d2b5184eb9"
+    },
+    {
+      "path": "yuanbao-settings-general.jpg",
+      "bytes": 43726,
+      "sha256": "7f87c1da72c81dcc7c5e368c04db7929bcd3d27c52833b0f2f55361faed6291c"
+    },
+    {
+      "path": "yuanbao-skill-authorization.jpg",
+      "bytes": 24363,
+      "sha256": "cc97f0143c8d07f3c778fbe03d04aa211dfa29413a54353d66adb99a9a31c78e"
+    }
+  ]
+}

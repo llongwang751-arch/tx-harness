@@ -1,0 +1,121 @@
+{
+  "schema": "native-gui-control-preflight/v1",
+  "date": "2026-10-24",
+  "author": "李明远",
+  "method": "Official native Computer Use, serial product windows; settings/form inspection only for Yuanbao and Doubao, zero new tasks for these two.",
+  "limits": [
+    "Visible menus and supported official documentation only; no private product database or hidden Skill-body inspection.",
+    "A missing entry in this bounded search is not proof that no other build/account exposes it.",
+    "Operator-reviewed UI evidence, no external independent observer."
+  ],
+  "products": [
+    {
+      "id": "workbuddy",
+      "version": "V5.8.3",
+      "surface": "办公新任务",
+      "observed": [
+        "自定义OpenAI兼容模型表单，完整URL、API Key、模型名、工具调用与自定义协议字段",
+        "自定义contract stdio MCP已由原生表单保存，真实initialize/tools/list已返回"
+      ],
+      "provider_endpoint": "usable local HTTP endpoint reached by actual task",
+      "mcp": "stdio source bound to registered script",
+      "full_skill_shutdown": "unverified; existing plugin preserved",
+      "images": [
+        "workbuddy-model-form.jpg"
+      ],
+      "rule_versions": [
+        "supplements/controlled-workbuddy-v1/calibration.json",
+        "supplements/controlled-workbuddy-v2/calibration.json"
+      ],
+      "confidence": "high for interface presence and actual endpoint/MCP discovery traffic; complete contract judged separately"
+    },
+    {
+      "id": "yuanbao",
+      "version": "V2.88.1",
+      "surface": "专家模式",
+      "observed": [
+        "模型菜单：Hy4 preview、Hy3、DeepSeek；快速回答、深度思考、专家模式",
+        "设置分类含通用设置、技能授权管理、音频、视频、数据管理、快捷键、关于我们",
+        "技能授权管理显示已授权账号与未授权账号；工具菜单为内置任务入口"
+      ],
+      "provider_endpoint": "not found in inspected model/settings menus",
+      "mcp": "shared stdio interface not found in inspected menus",
+      "full_skill_shutdown": "not established by selected/available skills or account authorization",
+      "images": [
+        "yuanbao-settings-general.jpg",
+        "yuanbao-settings-about.jpg",
+        "yuanbao-skill-authorization.jpg"
+      ],
+      "actual_new_tasks": 0,
+      "judgment": "preflight unknown for common fixed-provider experiment; no zero or full score",
+      "next_action": "Reopen only with a documented usable provider/tool interface for this surface/version or a distinct, preregistered real-model boundary experiment.",
+      "stop_condition": "Stop this interface preflight after model/settings/tool/skill menus; do not repeat task prompts to infer an unavailable control.",
+      "confidence": "high for displayed version/settings; moderate for bounded absence finding, not universal product absence"
+    },
+    {
+      "id": "doubao",
+      "version": "2.32.6_win",
+      "surface": "工作任务 → 云电脑",
+      "observed": [
+        "工作任务可选本地电脑和云电脑",
+        "云电脑模型菜单：自动、豆包2.1 Lite、豆包2.1 Pro",
+        "工作模式设置为设备控制、保持唤醒、初始化虚拟桌面和偏好指令",
+        "自定义连接器提供HTTP和STDIO，但表单明确：自定义连接器仅支持在本地电脑中使用"
+      ],
+      "provider_endpoint": "custom model address not found in inspected cloud model/settings menus",
+      "mcp": "local STDIO form exists; cloud support not established and UI limits it to local computer",
+      "full_skill_shutdown": "unverified",
+      "images": [
+        "doubao-local-stdio-form.jpg"
+      ],
+      "actual_new_tasks": 0,
+      "saved_connector": false,
+      "judgment": "preflight unknown for cloud fixed-provider experiment; local mode is a distinct product condition",
+      "next_action": "Require a supported cloud provider/tool interface, or separately register local-mode MCP checks retaining real-model influence.",
+      "stop_condition": "Stop cloud fixed-provider integration at this UI limitation; no silent switch to local mode or generic Doubao API.",
+      "confidence": "high for explicit local-only UI restriction; moderate for bounded model-entry absence"
+    }
+  ],
+  "reviewed_excerpts": [
+    {
+      "private_original_sha256": "2b6abd8d66595f1938d57087a417f997161978b9d2a6d5fa64d47f7ebfeef393",
+      "private_original_bytes": 3421,
+      "capture_name": "yuanbao-about.ax.txt",
+      "lines": [
+        "101 文本 当前版本为 V2.88.1"
+      ],
+      "disclosure": "Reviewed literal AX excerpts; unrelated account/session/sidebar text omitted. Full original remains private; hash alone is not independent verification."
+    },
+    {
+      "private_original_sha256": "5b0b2fc43a53e198ed48188d77256c969ffc673a1d3bba6297a587435d2e3994",
+      "private_original_bytes": 5370,
+      "capture_name": "yuanbao-settings-general.ax.txt",
+      "lines": [
+        "25 组 通用设置",
+        "27 组 技能授权管理",
+        "37 组 关于我们"
+      ],
+      "disclosure": "Reviewed literal AX excerpts; unrelated account/session/sidebar text omitted. Full original remains private; hash alone is not independent verification."
+    },
+    {
+      "private_original_sha256": "0b7341076c9833efeaa4cb193d4a831b31442d8b9ab1db2943343d1859779bc6",
+      "private_original_bytes": 2417,
+      "capture_name": "yuanbao-skill-permissions.ax.txt",
+      "lines": [
+        "92 选项卡项目 (selectable) 已授权账号",
+        "93 选项卡项目 (selectable) 未授权账号"
+      ],
+      "disclosure": "Reviewed literal AX excerpts; unrelated account/session/sidebar text omitted. Full original remains private; hash alone is not independent verification."
+    },
+    {
+      "private_original_sha256": "ecf76f0797404122b472996da42b4656f1f34d17634daf12b3aa7b5e2896bbfd",
+      "private_original_bytes": 2393,
+      "capture_name": "325-doubao-stdio-form-ready.ax.txt",
+      "lines": [
+        "2126 文本 自定义连接器仅支持在本地电脑中使用",
+        "2134 按钮 STDIO ID: radix-:raq:"
+      ],
+      "disclosure": "Reviewed literal AX excerpts; unrelated account/session/sidebar text omitted. Full original remains private; hash alone is not independent verification."
+    }
+  ]
+}
