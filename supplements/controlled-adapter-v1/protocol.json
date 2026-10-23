@@ -1,0 +1,124 @@
+{
+  "schema": "controlled-adapter-registration/v1",
+  "phase": "main",
+  "registered_date": "2026-10-24",
+  "timeout_seconds": 120,
+  "installed_versions": {
+    "codex": "codex-cli 0.159.2",
+    "dsh": "0.2.1-rc.2"
+  },
+  "executables": {
+    "codex": {
+      "sha256": "52f75c649bebb8001102a1dd129c1ea6d02b0940321e6d7e82ee0526753bd58a",
+      "bytes": 324702000
+    },
+    "dsh": {
+      "sha256": "9c789407850773ce7d914a3ec0476852bf1ceea69789d8ccf4e39be953f4bf52",
+      "bytes": 246343144
+    }
+  },
+  "files": {
+    "scripts/controlled_model_fixture.py": {
+      "sha256": "32beab330eb999c3b379e3c3aa35e898410172d480735ff2b1a7077fb2a48446",
+      "bytes": 11374
+    },
+    "scripts/controlled_probe_mcp.py": {
+      "sha256": "16d2e25396f5e89cb96fbc22e02db4e5a3c54923dc97afcc5ba43d14f4adf3b2",
+      "bytes": 9845
+    },
+    "scripts/run_controlled_adapter.py": {
+      "sha256": "18008c29f4ef305ef5e1916c0613cb2eb0d0ab8537eb124791c44a51be369259",
+      "bytes": 13890
+    },
+    "scripts/run_codex_pilot.py": {
+      "sha256": "e8772918cfabc7e17e6d2dd6d26eb50b14cc0d9f315888b3c8e61d7aadf433af",
+      "bytes": 25398
+    },
+    "scripts/run_dsh_sdk_pilot.py": {
+      "sha256": "02bd67a75ae7c319ca2ee4f04dc0c2f6b20349b0d5ab590b3300bc7a46fe1cc8",
+      "bytes": 15764
+    },
+    "scripts/run_dsh_multiturn_pilot.py": {
+      "sha256": "0b2899b87a456df40cb72fd5130667ceec73e00354e4d85f05939d8224fbcb34",
+      "bytes": 15993
+    },
+    "scripts/run_dsh_pilot.py": {
+      "sha256": "b4fb519d8ce1f7fc26180ebb2591a1c301ba23afa85a41894933680b320479a0",
+      "bytes": 8294
+    },
+    "supplements/controlled-adapter-v1/fixture.json": {
+      "sha256": "ef3c95e6d9c3091db40bb22a5669c2f1a3915606c6cded2140bd11ab0b400efe",
+      "bytes": 374
+    },
+    "supplements/controlled-adapter-v1/prompt.txt": {
+      "sha256": "76ea94d637980ef083e9bbe4d19a3ffbdb3008998ab2d298f5c0f3abf9ed836a",
+      "bytes": 187
+    },
+    "supplements/controlled-adapter-v1/interface-sources.json": {
+      "sha256": "eead721d76f4c7aa0400d7b26865a1827bf62ff4b540e0ac7eefb3a78218199b",
+      "bytes": 5114
+    },
+    "supplements/controlled-adapter-v1/calibration.md": {
+      "sha256": "a535a332280a4cf1d215853cfbd95a8d6e4a7512d3acee7d49bd6641a1595f15",
+      "bytes": 2299
+    },
+    "tests/test_controlled_model_fixture.py": {
+      "sha256": "7bac78dd4ebec9a2a6577bf48e191a84c9abca57fe3690321e741bda89c7394a",
+      "bytes": 13715
+    },
+    "supplements/controlled-adapter-v1/protocol.md": {
+      "sha256": "67cb3b7f1bac8ee9aaf09e65eb3d24f777ad1404e61b967af8970a3141f52532",
+      "bytes": 4424
+    },
+    "tests/test_controlled_probe_mcp.py": {
+      "sha256": "a4b27905d7ea1adff7b9e228a5f230275688c75aa86bc2ff81d62dc0889043f7",
+      "bytes": 7427
+    }
+  },
+  "runs": [
+    {
+      "run_id": "CA11-dsh-error",
+      "product_id": "dsh",
+      "mode": "error"
+    },
+    {
+      "run_id": "CA12-codex-success",
+      "product_id": "codex",
+      "mode": "success"
+    },
+    {
+      "run_id": "CA13-dsh-success",
+      "product_id": "dsh",
+      "mode": "success"
+    },
+    {
+      "run_id": "CA14-codex-error",
+      "product_id": "codex",
+      "mode": "error"
+    }
+  ],
+  "real_model_inference": false,
+  "stopping_rule": "One initial submission per registered ID, serial order; preserve all four outcomes. No retries or replacements. Adapter incompatibility is unknown pending separately registered follow-up.",
+  "calibration_sources": [
+    {
+      "run_id": "CA00-dsh-calibration",
+      "registration_commit": "44db317",
+      "accepted": true,
+      "local_requests": 2,
+      "artifact_sha256": "a21822b8b21b9991cec154040fb574fd9dd33ca326caf79c04b208aa3d9d530d"
+    },
+    {
+      "run_id": "CA03-codex-calibration",
+      "registration_commit": "51b113e",
+      "accepted": true,
+      "local_requests": 2,
+      "artifact_sha256": "a21822b8b21b9991cec154040fb574fd9dd33ca326caf79c04b208aa3d9d530d"
+    }
+  ],
+  "metrics": {
+    "C1": "exactly one real MCP call with exact frozen arguments",
+    "C2": "actual success bytes hash or actual fixed error with absent artifact",
+    "C3": "same fixed MCP return payload in matching call_id second model request",
+    "C4": "exactly two endpoint requests, fixed terminal, normal native end and exit0, within120s"
+  }
+}
