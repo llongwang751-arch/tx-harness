@@ -1,0 +1,10 @@
+{
+  "schema": "controlled-adapter-fixture/v1",
+  "arguments": {
+    "text": "CA-FROZEN-20261024-8d4a7e\n李明远｜Harness tool contract\r\nUnicode: αβ 😀\nSpacing:  left  right\nLiteral: $HOME `x` <>&\n",
+    "destination": "artifact.txt"
+  },
+  "terminal": "CONTROLLED_DONE",
+  "model_kind": "deterministic_local_transport_fixture",
+  "real_model_inference": false
+}

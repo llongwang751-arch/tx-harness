@@ -1,0 +1,63 @@
+{
+  "schema": "controlled-workbuddy-registration/v1",
+  "phase": "calibration",
+  "registered_date": "2026-10-24",
+  "timeout_seconds": 120,
+  "preparation_timeout_seconds": 900,
+  "installed_versions": {
+    "workbuddy": "V5.8.3"
+  },
+  "executables": {
+    "workbuddy": {
+      "bytes": 204590360,
+      "sha256": "5ea5d8ba6f6a435c27c239115647886a9646f76ff5a721e82f84f0ff16ac5e15"
+    }
+  },
+  "files": {
+    "scripts/serve_controlled_workbuddy.py": {
+      "bytes": 15784,
+      "sha256": "5375c88835589732764045402e83886f36a218fbd0c78a71510a03bb66da7629"
+    },
+    "scripts/controlled_model_fixture.py": {
+      "bytes": 11374,
+      "sha256": "32beab330eb999c3b379e3c3aa35e898410172d480735ff2b1a7077fb2a48446"
+    },
+    "scripts/controlled_probe_mcp.py": {
+      "bytes": 9845,
+      "sha256": "16d2e25396f5e89cb96fbc22e02db4e5a3c54923dc97afcc5ba43d14f4adf3b2"
+    },
+    "tests/test_controlled_workbuddy_host.py": {
+      "bytes": 8434,
+      "sha256": "bfbeb803c5d2daa8485ea4de2de446efe0ccb5eedad901e65d7524674b964cf2"
+    },
+    "supplements/controlled-workbuddy-v1/calibration.md": {
+      "bytes": 2089,
+      "sha256": "ed5619c987cfc1a6c5966b196613cf5ec1b97474e2bea83986b96a00d444cf70"
+    },
+    "supplements/controlled-workbuddy-v1/fixture.json": {
+      "bytes": 374,
+      "sha256": "ef3c95e6d9c3091db40bb22a5669c2f1a3915606c6cded2140bd11ab0b400efe"
+    },
+    "supplements/controlled-workbuddy-v1/prompt.txt": {
+      "bytes": 187,
+      "sha256": "76ea94d637980ef083e9bbe4d19a3ffbdb3008998ab2d298f5c0f3abf9ed836a"
+    }
+  },
+  "runs": [
+    {
+      "run_id": "WBC00-workbuddy-calibration",
+      "product_id": "workbuddy",
+      "mode": "success"
+    }
+  ],
+  "real_model_inference": false,
+  "surface": "official WorkBuddy desktop via native Computer Use",
+  "skill_control": "Visible/hidden Skill contents are not interpreted by the deterministic model fixture; full commercial Skill shutdown not claimed",
+  "baseline_comparability": "Same frozen model fixture, MCP source, arguments, prompt; desktop UI completion evidence differs from CLI exit status; preexisting plugin and system context recorded separately",
+  "supported_interface_sources": [
+    "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Model",
+    "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market",
+    "https://open.workbuddy.cn/docs/connector"
+  ],
+  "stop_rule": "one initial task submission, no retry; retain calibration incompatibility as observer unknown; new main protocol only after calibration"
+}
