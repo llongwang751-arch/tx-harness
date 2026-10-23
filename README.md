@@ -2,7 +2,9 @@
 
 作者：李明远。个人开源仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。比较对象为Codex、WorkBuddy、DeepSeek Harness（DSH）、元宝专家模式、豆包工作任务模式；用户已确认公告中的“豆包办公”指工作任务模式。
 
-2026-10-22第二周更新：[阶段报告](reports/week2/stage-report.md)及[验收要求映射](supplements/week2/requirements.md)。本周新增WorkBuddy原生桌面任务4次，有效通过3、失败0、未知1；[v1](reports/window-reopen-v1.md)保留旧关窗采集缺口，另行登记的[v2一对任务](reports/window-reopen-v2.md)验证直接原生取回及关窗观察，不替换旧未知。此次单产品专项补测与既有五产品比较分别统计。另有22组合成答案、20次守卫核查及25份旧产物复算，修正三类判卷缺口；七项未知设定下一步及停止条件。[10月24日文字周报](reports/weekly/2026-10-24-draft.md)数据截至22日，尚未发送，不用PDF。
+2026-10-23完成[五产品归因边界核对](reports/attribution-boundaries.md)：逐款列模型请求/标签、Skill部分控制或未知、实际边界和停止条件，核对旧15轮全部尝试。本次新增产品运行0次；未将DSH内置Skill保留写成全部关闭，也未将条件通过率用于纯Harness排名。来源字段、SHA及三轮配置见[JSON](reports/attribution-boundaries.json)。
+
+2026-10-22实测及23日材料更新：[阶段报告](reports/week2/stage-report.md)及[验收要求映射](supplements/week2/requirements.md)。本周新增WorkBuddy原生桌面任务4次，有效通过3、失败0、未知1；[v1](reports/window-reopen-v1.md)保留旧关窗采集缺口，另行登记的[v2一对任务](reports/window-reopen-v2.md)验证直接原生取回及关窗观察，不替换旧未知。此次单产品专项补测与既有五产品比较分别统计。另有22组合成答案、20次守卫核查及25份旧产物复算，修正三类判卷缺口；七项未知设定下一步及停止条件。[10月24日文字周报](reports/weekly/2026-10-24-draft.md)材料截至23日、产品实测截至22日，尚未发送，不用PDF。
 
 截至2026-10-16，原五产品五题的25个选定组合、31个公开证据包及26次旧评分已保留。另行预先登记的21个固定文件契约/权限对照实验位已全部执行并封存，见[补测索引](public/supplements/contracts-v2/README.md)。当前[报告v2](reports/report.md)以Harness边界观察为主，[派生复核](reports/evaluation-v2.md)另列字段差异、声明权重和时间证据。
 
@@ -46,6 +48,7 @@ python scripts/audit_grader_v3.py --check
 python scripts/verify_week2.py --check
 python scripts/verify_window_reopen.py
 python scripts/verify_window_reopen_v2.py
+python scripts/audit_attribution_boundaries.py --check
 python scripts/analyze_permission_pairs_v2.py --check
 python -m harness_eval --help
 ```

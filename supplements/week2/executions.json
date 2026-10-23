@@ -2,7 +2,7 @@
   "schema": "weekly-independent-product-executions/v1",
   "period_start": "2026-10-18",
   "period_end": "2026-10-24",
-  "as_of": "2026-10-22",
+  "as_of": "2026-10-23",
   "previous_week_baseline_commit": "7f4ab6096d647cd3e97c5f5fbe678bd8991b3bd8",
   "entries": [
     {

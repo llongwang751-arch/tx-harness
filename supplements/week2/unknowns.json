@@ -1,22 +1,26 @@
 {
   "schema": "bounded-unknown-register/v1",
-  "as_of": "2026-10-22",
+  "as_of": "2026-10-23",
   "items": [
     {
       "id": "U01",
       "question": "Can five-product differences be attributed to Harness independently of model and Skill?",
-      "state": "bounded_unknown",
-      "known": "Visible/requested model and built-in Skill conditions differ. S02 matches only recorded conditions within Codex.",
+      "state": "closed_investigation_still_unknown",
+      "known": "The five-product source review covers all three S01 configurations per product. All 15 metadata records lack backend model attestation. Codex and DSH control only parts of Skill configuration; DSH r2/r3 have actual retained Skill calls. GUI complete Skill conditions remain unknown. Existing local boundary and permission observations do not establish independent five-product causality.",
       "impact": "No pure five-product Harness ranking or numerical causal effect",
-      "next_action": "For the next causal experiment, first require attestable model/Skill and common tool contracts; otherwise restrict the question to observable conditional behavior.",
-      "stop_condition": "If these controls cannot be exposed by the product interface, stop pursuing independent attribution in this batch; reopen only when new official configuration/provenance becomes available.",
-      "review_by": "2026-10-24",
+      "next_action": "The five-product boundary table is completed. Reopen only when a supported interface or new effective-configuration evidence can attest actual model deployment, full Skill scope and common tool/context/environment conditions, then preregister a minimal single-factor test.",
+      "stop_condition": "No such joint control evidence is present in the audited public records. Stop the stronger causal claim for this batch; do not repeat the same tasks or convert unknown to a score. This is not proof that an uninspected interface cannot exist.",
+      "review_by": "2026-10-31",
       "owner": "李明远",
       "evidence": [
         "reports/report.md",
         "supplements/contracts-v2/protocol.json",
-        "reports/permission-pairs-v2.json"
-      ]
+        "reports/permission-pairs-v2.json",
+        "reports/attribution-boundaries.md",
+        "reports/attribution-boundaries.json",
+        "supplements/attribution-audit-v1/assessment.json"
+      ],
+      "last_reviewed": "2026-10-23"
     },
     {
       "id": "U02",

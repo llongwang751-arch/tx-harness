@@ -4,6 +4,8 @@
 
 配置见 [`config/products.json`](../config/products.json)。其中 `version: null`、`model: null` 和 `skills_visibility: "unknown"` 表示实验配置尚未现场采集，不表示产品不支持对应功能。正式实验必须固定同一产品的客户端、模式和版本；CLI、桌面端、云端、网页端的结果不可直接拼接成一次运行。
 
+2026-10-23补充：下表主要对应旧业务题入口；另行执行的S01及窗口v2配置见[五产品归因边界表](../reports/attribution-boundaries.md)。例如WorkBuddy旧业务题5.7.7、S01的V5.8.2与窗口v2预检V5.8.3分别保留，不能混成同一轮固定版本。当前官方可配置能力也不追认为历史运行已生效。
+
 ## 本轮实际入口与可见配置
 
 | 产品 | 实际选定入口 | 版本与模型证据 | 未控制条件 |

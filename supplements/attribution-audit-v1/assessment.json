@@ -1,0 +1,324 @@
+{
+  "schema": "attribution-source-review/v1",
+  "reviewed_at": "2026-10-23",
+  "source_baseline_commit": "b8cd4f95e7036e1fd35102fc5e96e430d44e5105",
+  "kind": "retrospective_public_source_audit",
+  "new_product_runs": 0,
+  "pure_harness_ranking_supported": false,
+  "products": [
+    {
+      "product_id": "codex",
+      "name": "Codex",
+      "model": "三轮请求gpt-6.1-sol；CLI 0.159.2；实际后台部署与effort未独立验证。",
+      "skill_control": "partial",
+      "skill": "启动配置跳过host Skill discovery，关闭plugins/hooks/memories/apps并限制项目文档；内置指令和后台Skill仍未知，不能写成无Skill。",
+      "phenomenon": "S01三轮取得相等echo与合规receipt；普通命令可支持部分读请求与返回，完整literal写载荷仍缺证。",
+      "cause_clue": "读取、变量写文件和异常捕获属于不同层次；父命令成功不等于其中每个文件读取都成功。",
+      "validated_conclusion": "支持已记录输入读取和S02指定配置中的写权限行为；不证明后台模型一致或五产品纯Harness优势。",
+      "next_action": "仅在新接口能提供有效部署、Skill清单和同一工具契约的证据时，另登记最小单因素对照。已有三组权限对照先作为局部证据复核。",
+      "stop_condition": "没有新增生效证据时停止追加相同请求或同名模型试跑；后台归因保持未知。",
+      "model_control": "requested_or_visible_label_only",
+      "all_skills_disabled_attested": false,
+      "independent_harness_causal_claim": false,
+      "confidence": "high_for_recomputed_bytes_medium_for_operator_provenance_not_established_for_independent_causality",
+      "confidence_basis": "公开原件、登记版本、字段定位和判定可复算；界面/请求来源仍依赖单一操作方与AI辅助采集，未收到外部人工复算反馈。",
+      "evidence": [
+        {
+          "path": "public/supplements/contracts-v2/S01-codex-r1/review.json",
+          "sha256": "4bba9eaecae9b7750985b97772dfeff9d70d37682572f800627c363948582860",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-codex-r2/review.json",
+          "sha256": "3cc41f1dcf9e13c55077273ce77b96c071e8b058d5a427aa92c264d4b5cf63eb",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-codex-r3/review.json",
+          "sha256": "f8f980af37186eff888675c404f13eb3e1153abb974a8c70480144b1d1cd91e4",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-codex-r1/metadata.json",
+          "sha256": "45d0dd59cddbeca9d18ae85a45f1a2f3b67139fc540f72a0a25422b522e16c09",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-codex-r2/metadata.json",
+          "sha256": "4b1b162695490b2336056ce4f4a4124c01320650e22f9e42591c2cb19cfc9c40",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-codex-r3/metadata.json",
+          "sha256": "304b0216261b1231018f075748dd3583c62a283c3877d3adb793274782bf43da",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-codex-r1/review.json",
+          "sha256": "4bba9eaecae9b7750985b97772dfeff9d70d37682572f800627c363948582860",
+          "json_pointer": "/visible_conditions/skill_condition"
+        },
+        {
+          "path": "reports/permission-pairs-v2.json",
+          "sha256": "2830b801fd134abe6722781bf4dac1941954d372898e7a99c373507af90daf00",
+          "json_pointer": "/pairs"
+        }
+      ]
+    },
+    {
+      "product_id": "workbuddy",
+      "name": "WorkBuddy",
+      "model": "S01三轮V5.8.2、办公、Deepseek-V4.1-Flash标签；不能与旧业务题5.7.7或窗口v2预检5.8.3混成同一批配置。",
+      "skill_control": "unknown",
+      "skill": "S01前两轮skills_state为null，第三轮没有完整Skill清单；窗口v2只记录未主动安装/调用，隐藏或自动Skill未排除。",
+      "phenomenon": "S01三轮原件验收通过，内部三项E1缺证；新窗口v2在续接前直接取回原附件与既有交付。",
+      "cause_clue": "原生直接另存发生在续接前，主观察不依赖新的操作方模型提交；主机源文件和本地原件始终存在。",
+      "validated_conclusion": "支持本次可见界面与本地文件取回；不证明云端附件保存、后台上下文完整或普遍恢复可靠性。",
+      "next_action": "只在官方导出能区分本地主机指针与独立存储，或能显示有效模型/Skill配置时再预检并登记。",
+      "stop_condition": "保留当前v2结论与v1未知，不重复关窗来凑通过率；没有新的正式证据入口则停止本批更强归因。",
+      "model_control": "requested_or_visible_label_only",
+      "all_skills_disabled_attested": false,
+      "independent_harness_causal_claim": false,
+      "confidence": "high_for_recomputed_bytes_medium_for_operator_provenance_not_established_for_independent_causality",
+      "confidence_basis": "公开原件、登记版本、字段定位和判定可复算；界面/请求来源仍依赖单一操作方与AI辅助采集，未收到外部人工复算反馈。",
+      "evidence": [
+        {
+          "path": "public/supplements/contracts-v2/S01-workbuddy-r1/review.json",
+          "sha256": "3a666a610265e0e552979d28ca46646399bc372ccaabea70b489f50befdf6104",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-workbuddy-r2/review.json",
+          "sha256": "38278fe0ca7089a45a37c7b1133a6869f5fc3b0aa6b8773c936bd785ec89b667",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-workbuddy-r3/review.json",
+          "sha256": "a27a46e9b3645d80dd8763ad02272c7ff5b01300d1b3ea5045e04b17e21cf00b",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-workbuddy-r1/metadata.json",
+          "sha256": "88ad68cc4e65ffd85e3edded9557c91401f07906832bfa51f70324828f7481fb",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-workbuddy-r2/metadata.json",
+          "sha256": "6ac4dbabf54c8327b8898e7331de66c43ad49462c74a283fb1a661d44316da6d",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-workbuddy-r3/metadata.json",
+          "sha256": "987be87a9ac3b6f049be29de94d16b4b3fb2c8dacfdddac6f7a6f240e24f1e9f",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/window-reopen-v2/R01-reopen/execution.json",
+          "sha256": "31812a08375c64ceab87367fbabd6a223cfe0c701474bff01b6ddcaffabb639b",
+          "json_pointer": "/configuration"
+        },
+        {
+          "path": "public/supplements/window-reopen-v2/R01-reopen/review.json",
+          "sha256": "143bde9367c4474dbe239e46b0ef6785244c3ddc2a3f7916cda84e3d4004a83a",
+          "json_pointer": "/metrics"
+        },
+        {
+          "path": "public/supplements/window-reopen-v2/R02-control/review.json",
+          "sha256": "2e3e646b515a16fdea0867cc582a3f3273e5a6fadce619373a761aff60b203e3",
+          "json_pointer": "/metrics"
+        }
+      ]
+    },
+    {
+      "product_id": "dsh",
+      "name": "DSH（DeepSeek Harness）",
+      "model": "官方桌面捆绑SDK 0.2.0-rc.2，请求deepseek-account/deepseek-flash、high；不是已鉴定的后台部署。",
+      "skill_control": "partial",
+      "skill": "includeDefaultRoots=false、watch=false只关闭用户/项目发现，保留Office及诊断Skill；r2/r3有实际Skill调用元数据，不能写全部关闭。",
+      "phenomenon": "S01三轮读与literal写契约成立；缺失目标反馈两轮进入条件并通过，另一次请求目标偏离。",
+      "cause_clue": "明确请求载荷、普通结果和原件可对应，能定位请求到文件这一段；ACL错误仍有环境或执行器解释。",
+      "validated_conclusion": "支持已观察边界中的请求/结果及写入一致；未进入缺失目标条件的一轮仍保留，不以2/2推总体恢复率。",
+      "next_action": "未来仅在正式入口能核实全部Skill范围与实际加载版本后，再考虑开关消融；须保留无Skill臂和有Skill臂的生效证明。",
+      "stop_condition": "只有includeDefaultRoots关闭而内置Skill仍保留时停止宣称Skill已隔离；不读取额外Skill正文来补模型身份。",
+      "model_control": "requested_or_visible_label_only",
+      "all_skills_disabled_attested": false,
+      "independent_harness_causal_claim": false,
+      "confidence": "high_for_recomputed_bytes_medium_for_operator_provenance_not_established_for_independent_causality",
+      "confidence_basis": "公开原件、登记版本、字段定位和判定可复算；界面/请求来源仍依赖单一操作方与AI辅助采集，未收到外部人工复算反馈。",
+      "evidence": [
+        {
+          "path": "public/supplements/contracts-v2/S01-dsh-r1/review.json",
+          "sha256": "ea739a02436eb2047e8d03ec195a714bda82a4af654452d350f1c1c513d89812",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-dsh-r2/review.json",
+          "sha256": "09695e321e76f9d5bbdb6a6e105bbb19dea88bc08b3cc2748e516adf1ff8118d",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-dsh-r3/review.json",
+          "sha256": "0c045c7523ff643cf3c4286b05b57738dada978dec64d09ce73835c7824a37ec",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-dsh-r1/metadata.json",
+          "sha256": "3a7db7ea69e113b217abc4a8eaa86a6634a134a04c6640c433b5375bc5dcdb66",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-dsh-r2/metadata.json",
+          "sha256": "48eab5a5943013da8789d1d7d4103b706ce94c20e0e1a6728e871e1b38b36589",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-dsh-r3/metadata.json",
+          "sha256": "da8dcbe833613e23d595589db7d5f3a81affec6eec7fd15fac9389268a5c0d79",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-dsh-r2/review.json",
+          "sha256": "09695e321e76f9d5bbdb6a6e105bbb19dea88bc08b3cc2748e516adf1ff8118d",
+          "json_pointer": "/visible_conditions/skills/actual_diagnostic_skill_call_visible"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-dsh-r3/review.json",
+          "sha256": "0c045c7523ff643cf3c4286b05b57738dada978dec64d09ce73835c7824a37ec",
+          "json_pointer": "/visible_conditions/skills/actual_skill_call_visible"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-dsh-r2/review.json",
+          "sha256": "09695e321e76f9d5bbdb6a6e105bbb19dea88bc08b3cc2748e516adf1ff8118d",
+          "json_pointer": "/limitations/7"
+        }
+      ]
+    },
+    {
+      "product_id": "yuanbao",
+      "name": "元宝专家模式",
+      "model": "专家模式原生菜单显示Hy3；r2标签依赖截图而非AX；S01数值版本及后台部署未知。",
+      "skill_control": "unknown",
+      "skill": "内置Skill和真实工具参数未知，没有加载清单或已生效的全禁用证明。",
+      "phenomenon": "S01三轮下载原件字节/声明验收通过；输入读取、错误状态映射与literal写入三项内部E1均缺证。",
+      "cause_clue": "助手表述、模式标签、附件卡和最终下载分别证明不同层次，不能互相代替真实工具请求。",
+      "validated_conclusion": "支持这些原生下载与固定文件验收事实；不能认定内部没有读写工具、没有Skill或与其他产品模型匹配。",
+      "next_action": "仅检查受支持的有效配置或普通请求/结果导出；若提供则先核对是否完整、可绑定当前任务。",
+      "stop_condition": "正式导出仍不能提供内部配对记录时保留E2，不靠重复截图或相同提示词升级E1及独立归因。",
+      "model_control": "requested_or_visible_label_only",
+      "all_skills_disabled_attested": false,
+      "independent_harness_causal_claim": false,
+      "confidence": "high_for_recomputed_bytes_medium_for_operator_provenance_not_established_for_independent_causality",
+      "confidence_basis": "公开原件、登记版本、字段定位和判定可复算；界面/请求来源仍依赖单一操作方与AI辅助采集，未收到外部人工复算反馈。",
+      "evidence": [
+        {
+          "path": "public/supplements/contracts-v2/S01-yuanbao-r1/review.json",
+          "sha256": "d2d6f3a901a462e9df29efb0b25a5453e59fc78663507c442c7884b2c2b355ce",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-yuanbao-r2/review.json",
+          "sha256": "4328ef7aa6e512f1876b6d8a4896771b0852262804740174a42d4f26e84f7a32",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-yuanbao-r3/review.json",
+          "sha256": "310f88dd2300631a44e4e8f7d1a289c55120942d39134cb319d3888ece63ed15",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-yuanbao-r1/metadata.json",
+          "sha256": "d54ed980d54b3b1772d2d7441eafbffb2faa4c4461d4e0fa64942dc0ec1c2006",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-yuanbao-r2/metadata.json",
+          "sha256": "15e514e2818c10fb30301b766fdf2042f53ae3e22bc7521b9ec18780649762b1",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-yuanbao-r3/metadata.json",
+          "sha256": "06c09923f0548fdb55cadbd3c7e75981beea490e3564ac1b2f428ca1a3c8e06f",
+          "json_pointer": "/backend_model_attested"
+        }
+      ]
+    },
+    {
+      "product_id": "doubao",
+      "name": "豆包工作任务模式",
+      "model": "S01工作任务→云电脑，提交时显示自动 低；不是可核验的具体底模版本；数值版本缺证。",
+      "skill_control": "unknown",
+      "skill": "公开metadata明确内部模型、Skill、工具和网络未验证；未提供完整Skill禁用/加载证明。",
+      "phenomenon": "S01三轮原生下载原件通过；三项内部E1缺证；云电脑入口与本地失败预试分别保留。",
+      "cause_clue": "自动档位只描述可见选择，正确原件不足以反推模型身份、内部执行参数或Skill状态。",
+      "validated_conclusion": "支持该云电脑入口的原件交付事实；不支持网络隔离、纯Harness因果分或内部机制排名。",
+      "next_action": "只在正式配置/导出能给出固定底模、Skill生效清单或普通请求结果后，登记最小验证任务。",
+      "stop_condition": "仅有自动档位和聊天自述时停止更强归因，不把无法提供内部证据记为产品失败。",
+      "model_control": "requested_or_visible_label_only",
+      "all_skills_disabled_attested": false,
+      "independent_harness_causal_claim": false,
+      "confidence": "high_for_recomputed_bytes_medium_for_operator_provenance_not_established_for_independent_causality",
+      "confidence_basis": "公开原件、登记版本、字段定位和判定可复算；界面/请求来源仍依赖单一操作方与AI辅助采集，未收到外部人工复算反馈。",
+      "evidence": [
+        {
+          "path": "public/supplements/contracts-v2/S01-doubao-r1/review.json",
+          "sha256": "b83679d8fc2c2cdc5bd1b8a8930f4980f13786e975f2c502d7dd57d108dfdf84",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-doubao-r2/review.json",
+          "sha256": "94b92b7761dd790538018d510fa0d1fe07e79cf19a66cebf8fb8d923e74dc5f1",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-doubao-r3/review.json",
+          "sha256": "a0bb002127ed192eefbcc4facdf6fe1c5d6a9cc2817982d885dbb17b392a6491",
+          "json_pointer": "/visible_conditions"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-doubao-r1/metadata.json",
+          "sha256": "135d5cdac8e409ecec855befe5511d38a4514b7021c1a1a94f96f438e7d25597",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-doubao-r2/metadata.json",
+          "sha256": "061ce881d3292da4dbfd15bcc332a90405e47e63a78099b6e4b64481b5cd454f",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-doubao-r3/metadata.json",
+          "sha256": "d965b411176b2501b30102e76ad5e16107e1166c880b4692237da08ccbca90a7",
+          "json_pointer": "/backend_model_attested"
+        },
+        {
+          "path": "public/supplements/contracts-v2/S01-doubao-r1/metadata.json",
+          "sha256": "135d5cdac8e409ecec855befe5511d38a4514b7021c1a1a94f96f438e7d25597",
+          "json_pointer": "/evidence_level"
+        }
+      ]
+    }
+  ],
+  "aggregate_sources": [
+    {
+      "path": "public/supplements/contracts-v2/coverage.json",
+      "sha256": "be69313a2c73e0f40de31ab8b4ddca328c345f6265fa2e6e358e02343ad0ba84",
+      "json_pointer": ""
+    },
+    {
+      "path": "supplements/contracts-v2/protocol.json",
+      "sha256": "d7ba2f1b3d92a0cc9b7bc2511cfcfed0739dfacf148bd8146c87fd00bb6f50d9",
+      "json_pointer": ""
+    }
+  ],
+  "research_question": "哪些具体Harness边界有可复核证据，哪些条件仍不支持独立模型/Skill归因？",
+  "new_experiment_decision": {
+    "execute_now": false,
+    "reason": "本次已公开源未提供新的、可操作且能核验生效的共同模型/全部Skill配置；先交付逐产品审计，不提交重复任务。",
+    "reopen_gate": [
+      "正式接口可在同一参评入口核验实际模型部署及参数",
+      "完整Skill启用/加载范围可核验，或固定完整Skill版本",
+      "工具、上下文、环境匹配且只改变一个预定因素",
+      "先登记输入、预算、随机配对顺序、全部尝试与停止条件"
+    ],
+    "scope_if_unmet": "继续报告端到端结果或局部边界事实，不发布五产品纯Harness排名。"
+  }
+}

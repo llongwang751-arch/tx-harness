@@ -2,7 +2,7 @@
   "schema": "week2-progress-counts/v1",
   "period_start": "2026-10-18",
   "period_end": "2026-10-24",
-  "as_of": "2026-10-22",
+  "as_of": "2026-10-23",
   "product_runs": {
     "independent_product_runs": 4,
     "valid": 3,
@@ -35,7 +35,7 @@
   "evidence": [
     {
       "path": "supplements/week2/executions.json",
-      "sha256": "8c89394dd3b58c23cef7f6a9c761729ef57aca22fef72deedd2b4dd4bd6969d6",
+      "sha256": "0a2ea49eee1fadbc8073d0ac5e372a0dd4ad960e7f700313d449981ac376b6da",
       "json_pointer": ""
     },
     {
