@@ -5,25 +5,26 @@
   "goals": [
     {
       "id": "P01",
-      "objective": "复核两条关键结论并如实记录外部反馈状态",
+      "objective": "按公开原件复核两条关键结论",
       "deliverables": [
-        "两条结论的复核材料",
-        "实际收到的反馈或未完成记录",
-        "必要的更正说明"
+        "两条结论的复算步骤",
+        "复算结果与差异记录",
+        "实际收到时才追加外部人工反馈"
       ],
-      "scale": "2条结论、最多1名外部评审者，优先CSV漏判原因与S02许可结论",
-      "completion": "评审者实际按步骤复算并留下日期及意见才算外部复核完成；没有反馈时只交付复核包并继续标未完成，不伪称完成",
+      "scale": "2条，优先CSV漏判原因和Codex许可边界",
+      "completion": "两条结论均能从公开原件重复检查，写明差异或无差异及依据；外部反馈只有实际收到且完成复算才登记，不把自查冒充外部复核",
       "dependency": "外部人工复核为额外质量目标，并非导师截图中的硬性要求；由本人联系，不代发邀请。无反馈只交付复核材料和未完成记录。"
     },
     {
-      "id": "P04",
-      "objective": "核查三款GUI产品是否有可用的共同模型端点及工具接口",
+      "id": "P05",
+      "objective": "明确WorkBuddy工具发现适配差异及是否继续测试",
       "deliverables": [
-        "三款产品各一条正式接口依据或缺口记录",
-        "可用时的新协议，否则明确停止记录"
+        "工具声明和schema差异记录",
+        "是否继续的判断及停止记录",
+        "仅条件成立时的新冻结协议和校准记录"
       ],
-      "scale": "WorkBuddy、元宝、豆包每款最多一次支持接口预检；默认0次新增任务，不重复业务题",
-      "completion": "每款列实际支持依据、能否配置相同动作与MCP、剩余变量和停止条件；仅满足条件才另登记运行，未接入不得写成已控制模型/Skill"
+      "scale": "1份差异记录；取得足够实际schema及正式接口依据后，最多1版新协议、1次校准；否则0次新任务",
+      "completion": "取得schema约束后再验证固定参数；实际probe与原生终态均满足才算接通。不能安全获得足够证据或仍不支持时停止，保留未知。原三次校准不覆盖，不把看到ToolSearch声明算实际调用。"
     },
     {
       "id": "P03",
@@ -57,6 +58,23 @@
         "supplements/attribution-audit-v1/assessment.json"
       ],
       "completion_record": "Five products and all three S01 configurations are bound to existing sources; conditions, all-attempt denominators, claims and stop/reopen gates are recorded. Read-only review creates zero new product runs and does not establish strict five-product causal controls."
+    },
+    {
+      "id": "P04",
+      "objective": "核查三款GUI产品是否有可用的共同模型端点及工具接口",
+      "deliverables": [
+        "三款产品各一条正式接口依据或缺口记录",
+        "可用时的新协议，否则明确停止记录"
+      ],
+      "scale": "WorkBuddy、元宝、豆包每款最多一次支持接口预检；默认0次新增任务，不重复业务题",
+      "completion": "每款列实际支持依据、能否配置相同动作与MCP、剩余变量和停止条件；仅满足条件才另登记运行，未接入不得写成已控制模型/Skill",
+      "state": "completed_early",
+      "completed_at": "2026-10-24",
+      "evidence": [
+        "reports/gui-interface-preflight.md",
+        "public/supplements/gui-controls-v1/observations.json"
+      ],
+      "completion_record": "Three supported-interface GUI preflights completed, with zero tasks counted from the preflights. WorkBuddy calibration tasks are recorded separately; no shared-tool success or five-product control is claimed."
     }
   ]
 }

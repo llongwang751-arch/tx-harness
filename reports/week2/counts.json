@@ -4,11 +4,11 @@
   "period_end": "2026-10-24",
   "as_of": "2026-10-24",
   "product_runs": {
-    "independent_product_runs": 11,
+    "independent_product_runs": 14,
     "valid": 9,
     "passed": 9,
     "failed": 0,
-    "unknown": 2,
+    "unknown": 5,
     "invalid": 0
   },
   "tracks": {
@@ -21,11 +21,29 @@
       "invalid": 0
     },
     "controlled_adapter_fixture": {
-      "independent_product_runs": 7,
+      "independent_product_runs": 10,
       "valid": 6,
       "passed": 6,
       "failed": 0,
-      "unknown": 1,
+      "unknown": 4,
+      "invalid": 0
+    }
+  },
+  "controlled_phases": {
+    "calibration": {
+      "independent_product_runs": 6,
+      "valid": 2,
+      "passed": 2,
+      "failed": 0,
+      "unknown": 4,
+      "invalid": 0
+    },
+    "main": {
+      "independent_product_runs": 4,
+      "valid": 4,
+      "passed": 4,
+      "failed": 0,
+      "unknown": 0,
       "invalid": 0
     }
   },
@@ -41,13 +59,16 @@
     "public/supplements/controlled-adapter-v1/CA12-codex-success/manifest.json",
     "public/supplements/controlled-adapter-v1/CA13-dsh-success/manifest.json",
     "public/supplements/controlled-adapter-v1/CA14-codex-error/manifest.json",
+    "public/supplements/controlled-workbuddy-v1/WBC00-workbuddy-calibration/manifest.json",
+    "public/supplements/controlled-workbuddy-v2/WBC01-workbuddy-calibration/manifest.json",
+    "public/supplements/controlled-workbuddy-v3/WBC02-workbuddy-calibration/manifest.json",
     "public/supplements/window-reopen-v1/W01-control/manifest.json",
     "public/supplements/window-reopen-v1/W02-window-reopen/manifest.json",
     "public/supplements/window-reopen-v2/R01-reopen/manifest.json",
     "public/supplements/window-reopen-v2/R02-control/manifest.json"
   ],
   "previous_public_package_count": 52,
-  "current_public_package_count": 63,
+  "current_public_package_count": 66,
   "offline_work_units_not_product_runs": {
     "synthetic_examples": 22,
     "expected_valid": 10,
@@ -64,7 +85,7 @@
   "evidence": [
     {
       "path": "supplements/week2/executions.json",
-      "sha256": "fb398e6d5f5530208ae39c5a36eecf7ba1d8393e5e59f24616884fe4bc89b985",
+      "sha256": "80fb1e13ba15d6665537b98fe9b817e878f29451d9ab378ab05af7a134484210",
       "json_pointer": ""
     },
     {

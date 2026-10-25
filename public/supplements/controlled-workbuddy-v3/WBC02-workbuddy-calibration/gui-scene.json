@@ -1,0 +1,33 @@
+{
+  "schema": "reviewed-native-workbuddy-scene/v1",
+  "run_id": "WBC02-workbuddy-calibration",
+  "task_accepted": true,
+  "acceptance_basis": "Actual initial user message, native processing status and Stop control in the active task, plus four corresponding local model endpoint requests. Submission alone and old sidebar task titles are not used as acceptance.",
+  "observed_at": "2026-10-23T18:01:28.474Z",
+  "interface": "official native Computer Use",
+  "native_terminal": {
+    "normal": null,
+    "status": "unknown",
+    "basis": "Only an in-progress native scene is available. The local fixture ended on its own 120-second task deadline. Later native completion could not be observed because the window was minimized; the user then paused. Fixture timeout does not establish desktop completion or failure."
+  },
+  "fixed_terminal_text": null,
+  "selected_model": "fixed-tool-v1",
+  "privacy": "Original desktop captures include unrelated private UI; only the reviewed task-specific lines below are public. No original AX or screenshot is exported.",
+  "confidence": "High for native task acceptance plus endpoint activity; native terminal unknown. No ToolSearch dispatch or shared probe call was observed.",
+  "native_cli_exit_code": null,
+  "native_cli_exit_basis": "Desktop UI has no CLI exit code.",
+  "raw_source": {
+    "private_original_sha256": "9b2b395721df6107824770518bf28443c3321eb7c012eecbae7615ec4bed27eb",
+    "private_original_bytes": 8226,
+    "capture_name": "443-workbuddy-WBC02-progress.ax.txt",
+    "lines": [
+      "2100 文本 这是固定工具契约实验。请使用 contract 的 probe_commit，并在取得结果后结束本轮。",
+      "2103 文本 测试响应由本地固定服务给出，不进行真实模型能力评测。",
+      "2074 文本 已处理 6s",
+      "2075 文本 思考中",
+      "2084 组合框 (settable, string) Select model: fixed-tool-v1 Value: fixed-tool-v1",
+      "2089 按钮 停止"
+    ],
+    "disclosure": "Reviewed literal AX excerpts only. Original remains private because of unrelated account/session/sidebar data; its hash does not authenticate an independent observer."
+  }
+}

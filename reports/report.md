@@ -2,7 +2,9 @@
 
 作者：李明远（GitHub：`llongwang751-arch`）。原现场采集：2026-10-13至14；方法修订：2026-10-16。仓库：[tx-harness](https://github.com/llongwang751-arch/tx-harness)，分支codex/evaluation。
 
-2026-10-24新增[固定动作的真实Harness对照](controlled-adapter-v1.md)：Codex与DSH接入同一固定响应服务和同一MCP，正式成功/错误四臂均满足契约；真实调度、原件和结果回传可逐项复核，没有神经模型推理。校准另留五次尝试，三次接受任务（两通过、一适配器未知），两次在接受前配置拒绝。固定程序不解释Skill，解决本调用路径的生成干扰；Codex仍见目录标题，不声称全Skill禁用。GUI三款尚未接入共同端点，原五产品因果边界与旧分不改。新结果、判分理由、置信范围及协议差异见专项报告和[逐项JSON](controlled-adapter-v1.json)。
+2026-10-25材料整理：第二周全部任务见[阶段报告](week2/stage-report.md)和[逐次登记](../supplements/week2/executions.json)。补归档24日WorkBuddy的[三次固定响应校准](controlled-workbuddy.md)，均为未知，最后一次原生终态未观察到；三款GUI[接口预检](gui-interface-preflight.md)计零任务。第二周共14次已接受任务，有效9、失败0、未知5。新报告不补成五产品统一模型或Skill比较，不改旧分。
+
+2026-10-24新增[固定动作的真实Harness对照](controlled-adapter-v1.md)：Codex与DSH接入同一固定响应服务和同一MCP，正式成功/错误四臂均满足契约；真实调度、原件和结果回传可逐项复核，没有神经模型推理。校准另留五次尝试，三次接受任务（两通过、一适配器未知），两次在接受前配置拒绝。固定程序不解释Skill，解决本调用路径的生成干扰；Codex仍见目录标题，不声称全Skill禁用。GUI三款尚未完成共同端点契约，原五产品因果边界与旧分不改。新结果、判分理由、置信范围及协议差异见专项报告和[逐项JSON](controlled-adapter-v1.json)。
 
 2026-10-23归因核对：[五产品归因边界表](attribution-boundaries.md)逐一绑定S01三轮实际配置、模型/Skill证据、全部尝试及停止条件。DSH关闭用户/项目Skill发现但保留内置Office/诊断Skill，第二、三轮有实际调用；不能写成全部禁用。Codex部分发现/扩展开关也不证明完整后台Skill隔离。条件通过率保留eligible、缺证、上游偏离及环境未证实，不筛选成功片段生成排名。本次仅复核旧15轮，新增产品运行0次，旧分和现场不改。
 

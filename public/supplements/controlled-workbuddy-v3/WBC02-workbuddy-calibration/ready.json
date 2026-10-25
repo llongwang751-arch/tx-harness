@@ -1,0 +1,14 @@
+{
+  "run_id": "WBC02-workbuddy-calibration",
+  "adapter_version": "controlled-workbuddy/v3",
+  "base_url": "http://127.0.0.1:63256/v1",
+  "chat_url": "http://127.0.0.1:63256/v1/chat/completions",
+  "version": "V5.8.3",
+  "shared_tool_sha256": "16d2e25396f5e89cb96fbc22e02db4e5a3c54923dc97afcc5ba43d14f4adf3b2",
+  "mcp_server_name": "contract",
+  "schema_sha256": "539edfd80313089fe7088dabb574cf51c4ab364f482b42f2a4c7efbbaec2a00b",
+  "timeout_seconds": 120,
+  "preparation_timeout_seconds": 900,
+  "max_auxiliary_requests": 3,
+  "product_process_started_by_host": false
+}

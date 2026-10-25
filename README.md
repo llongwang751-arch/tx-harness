@@ -2,11 +2,13 @@
 
 作者：李明远。个人开源仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。比较对象为Codex、WorkBuddy、DeepSeek Harness（DSH）、元宝专家模式、豆包工作任务模式；用户已确认公告中的“豆包办公”指工作任务模式。
 
-2026-10-24完成[固定响应工具契约对照](reports/controlled-adapter-v1.md)：真实Codex和DSH在共同冻结动作下完成四次正式任务，成功文件与错误回包均通过；没有调用神经模型。校准三次已接受任务中两通过、一未知，另两次配置拒绝不算任务，九份现场全部保留。本周共11次已接受任务，有效9、失败0、未知2，其中真实模型WorkBuddy任务4次、固定响应任务7次；两轨分别统计。[现场](public/supplements/controlled-adapter-v1/README.md)、[复算](reports/controlled-adapter-v1.json)及[文字周报草稿](reports/weekly/2026-10-24-draft.md)已同步，旧分不改。该方法固定了工具链路上的生成动作，尚不能扩为五产品全部统一模型/Skill。
+2026-10-25整理第二周交付（统计窗口10月18日至24日）：新增已接受任务14次，有效9、失败0、未知5。其中真实模型WorkBuddy任务4次，Codex/DSH固定响应任务7次，WorkBuddy固定响应校准3次；后10次没有神经模型推理。两次接受前配置拒绝另列，界面预检计零任务。[文字周报草稿](reports/weekly/2026-10-24-draft.md)、[逐次运行登记](supplements/week2/executions.json)、[阶段报告](reports/week2/stage-report.md)已同步，尚未发邮件，由本人发送。
+
+24日[Codex/DSH四次正式固定动作对照](reports/controlled-adapter-v1.md)均通过成功文件或预期错误契约；[WorkBuddy三次接入校准](reports/controlled-workbuddy.md)均未走通，保留为未知，不给产品判负。[三款GUI接口预检](reports/gui-interface-preflight.md)保留版本、界面原图和入口限制。当前只控制指定工具链路的生成动作，未完成五产品全部统一模型或完整Skill消融，旧分不改。
 
 2026-10-23完成[五产品归因边界核对](reports/attribution-boundaries.md)：逐款列模型请求/标签、Skill部分控制或未知、实际边界和停止条件，核对旧15轮全部尝试。本次新增产品运行0次；未将DSH内置Skill保留写成全部关闭，也未将条件通过率用于纯Harness排名。来源字段、SHA及三轮配置见[JSON](reports/attribution-boundaries.json)。
 
-2026-10-22实测及23日材料更新：[阶段报告](reports/week2/stage-report.md)及[验收要求映射](supplements/week2/requirements.md)。当时新增WorkBuddy原生桌面任务4次，有效通过3、失败0、未知1；[v1](reports/window-reopen-v1.md)保留旧关窗采集缺口，另行登记的[v2一对任务](reports/window-reopen-v2.md)验证直接原生取回及关窗观察，不替换旧未知。另有22组合成答案、20次守卫核查及25份旧产物复算，修正三类判卷缺口；七项未知设定下一步及停止条件。本周最新计数见上方24日记录，文字周报由本人发送，不用PDF。
+2026-10-22实测及23日材料更新：[阶段报告](reports/week2/stage-report.md)及[验收要求映射](supplements/week2/requirements.md)。当时新增WorkBuddy原生桌面任务4次，有效通过3、失败0、未知1；[v1](reports/window-reopen-v1.md)保留旧关窗采集缺口，另行登记的[v2一对任务](reports/window-reopen-v2.md)验证直接原生取回及关窗观察，不替换旧未知。另有22组合成答案、20次守卫核查及25份旧产物复算，修正三类判卷缺口；七项未知设定下一步及停止条件。本周最新计数见上方25日整理记录，文字周报由本人发送，不用PDF。
 
 截至2026-10-16，原五产品五题的25个选定组合、31个公开证据包及26次旧评分已保留。另行预先登记的21个固定文件契约/权限对照实验位已全部执行并封存，见[补测索引](public/supplements/contracts-v2/README.md)。当前[报告v2](reports/report.md)以Harness边界观察为主，[派生复核](reports/evaluation-v2.md)另列字段差异、声明权重和时间证据。
 
@@ -52,6 +54,8 @@ python scripts/verify_window_reopen.py
 python scripts/verify_window_reopen_v2.py
 python scripts/audit_attribution_boundaries.py --check
 python scripts/audit_controlled_adapter.py --check
+python scripts/audit_controlled_workbuddy.py --output reports/controlled-workbuddy.json --check
+python scripts/verify_gui_controls.py
 python scripts/analyze_permission_pairs_v2.py --check
 python -m harness_eval --help
 ```

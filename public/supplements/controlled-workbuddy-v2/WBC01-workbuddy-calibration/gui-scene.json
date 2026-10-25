@@ -1,0 +1,31 @@
+{
+  "schema": "reviewed-native-workbuddy-scene/v1",
+  "run_id": "WBC01-workbuddy-calibration",
+  "task_accepted": true,
+  "acceptance_basis": "Actual initial user message in native task plus corresponding model endpoint request; not inferred solely from submission.json.",
+  "observed_at": "2026-10-23T17:53:43.408Z",
+  "interface": "official native Computer Use",
+  "native_terminal": {
+    "normal": false,
+    "status": "error400",
+    "basis": "Native error and retry control observed; no retry used."
+  },
+  "fixed_terminal_text": null,
+  "selected_model": "fixed-tool-v1",
+  "privacy": "Original desktop captures include unrelated private UI; only reviewed task-specific lines are public.",
+  "confidence": "high for observed accepted task and adapter error; Harness MCP contract outcome unknown",
+  "native_cli_exit_code": null,
+  "native_cli_exit_basis": "Desktop UI has no CLI exit code.",
+  "raw_source": {
+    "private_original_sha256": "f25f9b92f450992ba12fb139d8fb61cecead729bbf7891602fbc93287931fd3a",
+    "private_original_bytes": 5916,
+    "capture_name": "422-workbuddy-WBC01-progress.ax.txt",
+    "lines": [
+      "1057 文本 这是固定工具契约实验。请使用 contract 的 probe_commit，并在取得结果后结束本轮。",
+      "1090 文本 抱歉，发生未知错误暂无响应。您可以稍后再试，或尝试新建任务",
+      "1041 组合框 (settable, string) Select model: fixed-tool-v1 Value: fixed-tool-v1",
+      "1046 按钮 (disabled) 发送"
+    ],
+    "disclosure": "Reviewed literal AX excerpts; unrelated account/session/sidebar text omitted. Full original remains private; hash alone is not independent verification."
+  }
+}

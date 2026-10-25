@@ -1,0 +1,32 @@
+{
+  "schema": "reviewed-workbuddy-fixture-package/v1",
+  "run_id": "WBC01-workbuddy-calibration",
+  "namespace": "controlled-workbuddy-v2",
+  "files": [
+    {
+      "path": "execution.json",
+      "bytes": 1426,
+      "sha256": "6719362e5c0df24f8233c0cdf939ec25c6870a489d290958741c3eec23097ffd"
+    },
+    {
+      "path": "gui-scene.json",
+      "bytes": 1680,
+      "sha256": "bfaf71eb3f60c32f29284e552ef0a72d36fd603bb3a2676390a96effe34acfb4"
+    },
+    {
+      "path": "mcp-events.jsonl",
+      "bytes": 2337,
+      "sha256": "20d1a3460c83f027c1023c6a44debc3a37896da6928fd941fa73c4edfe8641c1"
+    },
+    {
+      "path": "model-events.jsonl",
+      "bytes": 6820,
+      "sha256": "e57bcec2006fd6f90a3ea88253cc28c4a3a2b2d75d49f8e35013d32c9275f0fa"
+    },
+    {
+      "path": "ready.json",
+      "bytes": 571,
+      "sha256": "c50d8ae43bc669d2a6eeeb3eb218811cd9b0be45eefae2e7ddf137a1fca895ea"
+    }
+  ]
+}

@@ -253,9 +253,93 @@
           "sha256": "a7f7b5186cb7d609f0c0503f02e4962301e13b02dc2e6a764fa4df1870915d85"
         }
       ]
+    },
+    {
+      "run_id": "WBC00-workbuddy-calibration",
+      "native_submission_id": "observed-ui:WorkBuddy:fixed-fixture:WBC00-workbuddy-calibration:2026-10-23T17:45:06.610Z",
+      "kind": "product_execution",
+      "track": "controlled_adapter_fixture",
+      "phase": "calibration",
+      "real_model_inference": false,
+      "actual_submitted": true,
+      "validity": "unknown",
+      "outcome": "unknown",
+      "started_at": "2026-10-23T17:45:06.610Z",
+      "public_manifest": "public/supplements/controlled-workbuddy-v1/WBC00-workbuddy-calibration/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/controlled-workbuddy-v1/WBC00-workbuddy-calibration/execution.json",
+          "sha256": "63eb65fe2d8a8e5a92befd9653105c461f995494e61e67b72fc1d1ed4e5d9e5e"
+        },
+        {
+          "path": "public/supplements/controlled-workbuddy-v1/WBC00-workbuddy-calibration/gui-scene.json",
+          "sha256": "1e60f0eb97780cd18125f5fe2d7c56fe865a605f7e501e521224399ea88f8806"
+        },
+        {
+          "path": "public/supplements/controlled-workbuddy-v1/WBC00-workbuddy-calibration/manifest.json",
+          "sha256": "d19249c4308ab72298c24c469fe0d4a8d754cdaa3821c7b9f3918dbf1f01a9d9"
+        }
+      ],
+      "rationale": "Native task acceptance and local endpoint requests are recorded, but the fixed shared-tool contract was not completed. Adapter calibration unknown, not a product failure."
+    },
+    {
+      "run_id": "WBC01-workbuddy-calibration",
+      "native_submission_id": "observed-ui:WorkBuddy:fixed-fixture:WBC01-workbuddy-calibration:2026-10-23T17:53:29.273Z",
+      "kind": "product_execution",
+      "track": "controlled_adapter_fixture",
+      "phase": "calibration",
+      "real_model_inference": false,
+      "actual_submitted": true,
+      "validity": "unknown",
+      "outcome": "unknown",
+      "started_at": "2026-10-23T17:53:29.273Z",
+      "public_manifest": "public/supplements/controlled-workbuddy-v2/WBC01-workbuddy-calibration/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/controlled-workbuddy-v2/WBC01-workbuddy-calibration/execution.json",
+          "sha256": "6719362e5c0df24f8233c0cdf939ec25c6870a489d290958741c3eec23097ffd"
+        },
+        {
+          "path": "public/supplements/controlled-workbuddy-v2/WBC01-workbuddy-calibration/gui-scene.json",
+          "sha256": "bfaf71eb3f60c32f29284e552ef0a72d36fd603bb3a2676390a96effe34acfb4"
+        },
+        {
+          "path": "public/supplements/controlled-workbuddy-v2/WBC01-workbuddy-calibration/manifest.json",
+          "sha256": "9e62cdfdbee4d645c7c8fc8f702b7392f1b7ff29c4cbe3ceff993c7a88f2641c"
+        }
+      ],
+      "rationale": "Native task acceptance and local endpoint requests are recorded, but the fixed shared-tool contract was not completed. Adapter calibration unknown, not a product failure."
+    },
+    {
+      "run_id": "WBC02-workbuddy-calibration",
+      "native_submission_id": "observed-ui:WorkBuddy:fixed-fixture:WBC02-workbuddy-calibration:2026-10-23T18:01:18.994Z",
+      "kind": "product_execution",
+      "track": "controlled_adapter_fixture",
+      "phase": "calibration",
+      "real_model_inference": false,
+      "actual_submitted": true,
+      "validity": "unknown",
+      "outcome": "unknown",
+      "started_at": "2026-10-23T18:01:18.994Z",
+      "public_manifest": "public/supplements/controlled-workbuddy-v3/WBC02-workbuddy-calibration/manifest.json",
+      "evidence": [
+        {
+          "path": "public/supplements/controlled-workbuddy-v3/WBC02-workbuddy-calibration/execution.json",
+          "sha256": "baaf0b2a387b21a41a76b3118263fbe425b59b1c793cc525f3aa0fb9a5539c55"
+        },
+        {
+          "path": "public/supplements/controlled-workbuddy-v3/WBC02-workbuddy-calibration/gui-scene.json",
+          "sha256": "6de637f7779872353ea8651fcc701bed80f983d185eca53c948573934bef0b14"
+        },
+        {
+          "path": "public/supplements/controlled-workbuddy-v3/WBC02-workbuddy-calibration/manifest.json",
+          "sha256": "51c51fdc577085e26a62ac5f3c7c7dabf03d6eef3118ee6c82b5cc0938eee0e1"
+        }
+      ],
+      "rationale": "Native task acceptance and local endpoint requests are recorded, but the fixed shared-tool contract was not completed. Adapter calibration unknown, not a product failure."
     }
   ],
-  "operator_attestation": "Four real-model WorkBuddy desktop tasks on Oct22 Asia/Shanghai plus seven admitted official Codex/DSH component tasks against a deterministic local fixture on Oct24. The latter have no neural inference and are not evidence of real-model task quality. Five calibration launch attempts contain three admitted tasks (two pass, one adapter unknown) and two pre-admission config rejections; four preregistered main component tasks passed. Two rejected attempts remain public, excluded from independent task count. One actual product test at a time; all recorded controlled test process IDs exited. AI-assisted single-operator collection, no external human review.",
+  "operator_attestation": "Four real-model WorkBuddy desktop tasks on Oct22 Asia/Shanghai, seven admitted official Codex/DSH tasks against deterministic local responses on Oct24, and three accepted WorkBuddy desktop fixed-response calibrations on Oct24. Fixed-response tracks have no neural inference. C/D calibration: three admitted (two pass, one unknown), two config rejections before admission; four preregistered main tasks passed. WorkBuddy calibration: three unknown, zero formal main tasks, zero actual shared probe calls. GUI preflights are zero tasks, Yuanbao/Doubao received zero new tasks. One actual product test at a time. Fixture services ended; WBC02 native completion and desktop shutdown are not attested. AI-assisted single-operator collection, no external human review. Oct25 work only archives existing records and prepares the unsent weekly draft.",
   "definitions": {
     "independent_run": "One actually submitted product task/session with its own input, configuration, start/end and public evidence. New grading rows, tool calls, screenshots, synthetic answers and replayed artifact checks are not product runs.",
     "valid": "Run conditions are valid and the task outcome can be judged; includes both passing and failing product outcomes",
@@ -263,5 +347,6 @@
     "unknown": "Run validity or task outcome cannot be established; report separately and investigate under the unknown register",
     "invalid": "Explicit infrastructure-invalid run; neither a product failure nor evidence of success",
     "controlled_adapter_fixture": "Real official Harness task with deterministic localhost responses instead of a neural model; count accepted sessions separately from real-model tasks. Calibrations and main arms are separate. Config rejection before a native turn is a launch attempt, not an independent task."
-  }
+  },
+  "metadata_updated_on": "2026-10-25"
 }

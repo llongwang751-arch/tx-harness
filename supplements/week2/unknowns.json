@@ -6,10 +6,10 @@
       "id": "U01",
       "question": "Can five-product differences be attributed to Harness independently of model and Skill?",
       "state": "partially_resolved_controlled_component_track",
-      "known": "The five-product source review covers all three S01 configurations per product. All 15 metadata records lack backend model attestation. Codex and DSH control only parts of Skill configuration; DSH r2/r3 have actual retained Skill calls. GUI complete Skill conditions remain unknown. Existing local boundary and permission observations do not establish independent five-product causality. On Oct24 a newly supported per-run local provider plus common MCP was executed on official Codex0.159.2 and DSH0.2.1-rc.2. Four main fixed-response tasks passed; the deterministic controller does not interpret Skill text. Codex still exposes a Skill header; full deletion is not claimed. Three GUI products and default neural-model task causality remain uncontrolled.",
+      "known": "The five-product source review covers all three S01 configurations per product. All 15 metadata records lack backend model attestation. Codex and DSH control only parts of Skill configuration; DSH r2/r3 have actual retained Skill calls. GUI complete Skill conditions remain unknown. Existing local boundary and permission observations do not establish independent five-product causality. On Oct24 a newly supported per-run local provider plus common MCP was executed on official Codex0.159.2 and DSH0.2.1-rc.2. Four main fixed-response tasks passed; the deterministic controller does not interpret Skill text. Codex still exposes a Skill header; full deletion is not claimed. Three GUI products and default neural-model task causality remain uncontrolled. Oct24 native GUI preflights for all three remaining products were completed. WorkBuddy supports a custom endpoint and local MCP, but three accepted calibrations remain unknown with no shared probe call. Yuanbao has no shared endpoint found in the inspected menus; Doubao custom connectors explicitly apply only to local computer, while the tested entrance is cloud computer. These are bounded interface observations, not proof of permanent product absence.",
       "impact": "Fixed generation/Skill-text action influence is removed for the executed two-product MCP contract; no pure five-product causal ranking or real-model quality inference.",
-      "next_action": "For WorkBuddy, Yuanbao and Doubao, check supported provider/MCP configuration once per product by Oct31; preregister a new controlled run only if the interface provides usable effective evidence. Keep fixed-component results separate from default neural-model tasks and from historical S01.",
-      "stop_condition": "This batch stops after four main arms. Do not repeat tasks or infer full Skill shutdown. For each remaining GUI product, stop after a supported-interface preflight without usable shared endpoint evidence; retain the specific remaining unknown and reopen only on new interface evidence.",
+      "next_action": "Do not repeat completed GUI preflights. Obtain actual supported WorkBuddy ToolSearch schema constraints before a new registered diagnostic/calibration; at most one new protocol and one calibration under next-week P05. For Yuanbao/Doubao cloud, reopen only with new supported interface evidence.",
+      "stop_condition": "The four C/D main arms are complete and remain bounded component evidence. All three WorkBuddy calibrations are archived unknown. Stop further WorkBuddy attempts until sufficient actual schema evidence exists; stop Yuanbao/Doubao cloud common-endpoint work at the documented interface limits. No default-model or complete-Skill inference.",
       "review_by": "2026-10-31",
       "owner": "李明远",
       "evidence": [
@@ -21,9 +21,12 @@
         "supplements/attribution-audit-v1/assessment.json",
         "reports/controlled-adapter-v1.md",
         "reports/controlled-adapter-v1.json",
-        "supplements/controlled-adapter-v1/protocol.json"
+        "supplements/controlled-adapter-v1/protocol.json",
+        "reports/gui-interface-preflight.md",
+        "reports/controlled-workbuddy.md",
+        "reports/controlled-workbuddy.json"
       ],
-      "last_reviewed": "2026-10-24"
+      "last_reviewed": "2026-10-25"
     },
     {
       "id": "U02",
@@ -44,22 +47,25 @@
       "id": "U03",
       "question": "Do GUI products meet internal E1 read/write/error contracts?",
       "state": "bounded_unknown",
-      "known": "Native artifacts and reviewed UI support E2, while complete internal request parameters are absent for many observations.",
+      "known": "Native artifacts and reviewed UI support E2, while complete internal request parameters are absent for many observations. The new WorkBuddy fixed-response calibration exposes ordinary HTTP request metadata and MCP initialization/listing, but no probe call. WBC02 has unknown native completion; HTTP service deadline is not a desktop task terminal.",
       "impact": "Do not treat unknown E1 as zero, full marks or a ranking of internal capability",
-      "next_action": "Check a supported ordinary event export if available; otherwise keep the public UI/file judgment at E2.",
+      "next_action": "Investigate only a supported metadata/schema source under P05. Do not replace missing internal call evidence with repeated screenshots or infer that a declaration is an actual dispatch.",
       "stop_condition": "If a supported export cannot expose paired ordinary requests/results by the next review, stop repeating the same UI capture for this question. Reopen only with a new supported evidence source.",
-      "review_by": "2026-10-24",
+      "review_by": "2026-10-31",
       "owner": "李明远",
       "evidence": [
         "public/supplements/contracts-v2/coverage.json",
-        "reports/report.md"
-      ]
+        "reports/report.md",
+        "reports/controlled-workbuddy.json",
+        "reports/gui-interface-preflight.md"
+      ],
+      "last_reviewed": "2026-10-25"
     },
     {
       "id": "U04",
       "question": "Have independent reviewers reproduced the two key conclusions?",
       "state": "open",
-      "known": "A two-claim review packet has been prepared on 2026-10-21, but no external reproduction feedback has been received. Current collection and review remain single-operator with AI assistance; CI and agent review are not external independent review.",
+      "known": "A two-claim review packet has been prepared on 2026-10-21, but no external reproduction feedback has been received. Current collection and review remain single-operator with AI assistance; CI and agent review are not external independent review. No external reproduction feedback was available when preparing the Oct25 draft; the Oct24 review deadline did not establish completion.",
       "impact": "Optional additional external corroboration not yet received. The mentor requirements do not mandate a second human reviewer; no external review is claimed.",
       "next_action": "The user can share the prepared two-claim packet; accept dated feedback only if a reviewer actually performs the reproduction. Keep the item incomplete without that feedback.",
       "stop_condition": "If no external review is received by 2026-10-24, deliver the self-contained packet and retain this limitation; do not count an invitation or prepared document as completed review.",
@@ -69,7 +75,8 @@
         "docs/evaluation-plan.md",
         "reports/grader-audit-v3.json",
         "reports/week2/external-review-packet.md"
-      ]
+      ],
+      "last_reviewed": "2026-10-25"
     },
     {
       "id": "U05",

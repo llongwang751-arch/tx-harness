@@ -70,6 +70,19 @@ def count_executions(entries):
 
 def product_manifest(name):
     parts = name.split('/')
+    if (len(parts) == 5 and parts[:2] == ['public', 'supplements']
+            and parts[2] in {f'controlled-workbuddy-v{i}' for i in (1, 2, 3)}
+            and parts[3].startswith('WBC') and parts[-1] == 'manifest.json'):
+        folder = ROOT / '/'.join(parts[:-1])
+        execution = core.read_json(folder / 'execution.json')
+        if execution.get('actual_submitted') is not True:
+            return False
+        scene = core.read_json(folder / 'gui-scene.json')
+        if scene.get('task_accepted') is not True:
+            return False
+        if scene.get('run_id') != execution['run_id'] or not scene.get('acceptance_basis'):
+            raise ValueError('WorkBuddy task admission lacks a matching native scene')
+        return True
     if (len(parts)==5 and parts[:3]==['public','supplements','controlled-adapter-v1']
             and parts[3].startswith('CA') and parts[-1]=='manifest.json'):
         # Configuration-rejected launch attempts remain public but never became
@@ -90,13 +103,16 @@ def weekly_counts():
     old = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only',
         registry['previous_week_baseline_commit'], '--', 'public/pilots',
         'public/supplements/contracts-v2', 'public/supplements/window-reopen-v1',
-        'public/supplements/window-reopen-v2', 'public/supplements/controlled-adapter-v1'], cwd=ROOT, text=True).splitlines()
+        'public/supplements/window-reopen-v2', 'public/supplements/controlled-adapter-v1',
+        'public/supplements/controlled-workbuddy-v1', 'public/supplements/controlled-workbuddy-v2',
+        'public/supplements/controlled-workbuddy-v3'], cwd=ROOT, text=True).splitlines()
     old = {name for name in old if product_manifest(name)}
     current = {path.relative_to(ROOT).as_posix() for directory, pattern in [
         ('public/pilots', '*/manifest.json'), ('public/supplements/contracts-v2', 'S*/manifest.json'),
         ('public/supplements/window-reopen-v1', 'W*/manifest.json'),
         ('public/supplements/window-reopen-v2', 'R*/manifest.json'),
-        ('public/supplements/controlled-adapter-v1','CA*/manifest.json')]
+        ('public/supplements/controlled-adapter-v1','CA*/manifest.json'),
+        *[(f'public/supplements/controlled-workbuddy-v{i}', 'WBC*/manifest.json') for i in (1, 2, 3)]]
         for path in (ROOT / directory).glob(pattern) if product_manifest(path.relative_to(ROOT).as_posix())}
     added = current - old
     registered = set()
@@ -116,14 +132,21 @@ def weekly_counts():
                 raise ValueError('Old or missing package cannot be a new weekly run')
             if manifest in registered:
                 raise ValueError('One public task package cannot be counted twice')
-            if '/controlled-adapter-v1/' in manifest:
+            if '/controlled-adapter-v1/' in manifest or '/controlled-workbuddy-v' in manifest:
                 scene=core.read_json((ROOT/manifest).parent/'execution.json')
+                if '/controlled-workbuddy-v' in manifest:
+                    native = core.read_json((ROOT/manifest).parent/'gui-scene.json')
+                    scene = {**scene, 'task_accepted': native.get('task_accepted')}
                 if (scene['task_accepted'] is not True or entry['run_id']!=scene['run_id']
                         or entry['started_at']!=scene['started_at']
                         or entry.get('track')!='controlled_adapter_fixture'
                         or entry.get('real_model_inference') is not False
                         or entry.get('phase')!=scene['phase']):
                     raise ValueError('Controlled task admission or inference track differs from source')
+                if '/controlled-workbuddy-v' in manifest:
+                    if (entry['validity'] != 'unknown' or entry['outcome'] != 'unknown'
+                            or entry.get('phase') != 'calibration'):
+                        raise ValueError('Uncompleted WorkBuddy calibration cannot become a product result')
             registered.add(manifest)
     if added != registered:
         raise ValueError('New public product packages are not covered by the weekly ledger')
@@ -136,9 +159,13 @@ def weekly_counts():
     rejected=[path.relative_to(ROOT).as_posix() for path in sorted(
         (ROOT/'public/supplements/controlled-adapter-v1').glob('CA*/manifest.json'))
         if not product_manifest(path.relative_to(ROOT).as_posix())]
+    phases = {label: count_executions([entry for entry in registry['entries']
+              if entry.get('track') == 'controlled_adapter_fixture' and entry.get('phase') == label])
+              for label in ('calibration', 'main')}
     return {'schema': 'week2-progress-counts/v1', 'period_start': registry['period_start'],
         'period_end': registry['period_end'], 'as_of': registry['as_of'], 'product_runs': counts,
-        'tracks':tracks,'configuration_rejected_attempts_not_independent_runs':rejected,
+        'tracks':tracks, 'controlled_phases': phases,
+        'configuration_rejected_attempts_not_independent_runs':rejected,
         'new_public_product_packages': sorted(added), 'previous_public_package_count': len(old),
         'current_public_package_count': len(current),
         'offline_work_units_not_product_runs': grader,
