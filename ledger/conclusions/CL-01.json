@@ -14,7 +14,7 @@
     {
       "json_pointer": "/counts",
       "path": "ledger/formal-table.json",
-      "sha256": "fc4602f71531944949032f2a6be2b790f9ee691287f0b10de87f8a5c7d3b4dec"
+      "sha256": "6e862a0e25f4a24e1cc70d0ee1f1f6fd67f483efd83a61f91060ce933d9ea961"
     },
     {
       "json_pointer": "/product_run",
@@ -24,7 +24,7 @@
     {
       "json_pointer": "",
       "path": "reports/week3/formal-table.md",
-      "sha256": "6b7449cb45ab361d68c9044d2cfa66af9579440003efa3cbba6536c1854d7ac7"
+      "sha256": "881272420a9fb80da54ee6cc46715f326e8c235ae990c107058532cb23496ba5"
     },
     {
       "json_pointer": "/runs",
@@ -52,7 +52,7 @@
   "reproducible_experiment": {
     "claim": "CL-01",
     "command": "python -X utf8 scripts/ledger.py reproduce CL-01",
-    "expected_output_sha256": "0e951d1a3a3ba9e0cee0b64968ec8b79e78731f23f17c0415d2074226bdaa7ce",
+    "expected_output_sha256": "3c9eeb8ee45f13a540c70df3f29872d9ccda3ee9c8622199e9082181f302c40a",
     "what_it_does": "只读重算：重新生成全部运行记录、四道门槛、逐产品汇总与排名保留原因，不启动产品、不读 private。"
   },
   "schema": "tx-harness/conclusion/v1",

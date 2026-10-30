@@ -690,6 +690,7 @@ def build_table(records):
     controlled = [record for record in rows if record["track"] == "formal_controlled_contract"]
     calibration = [record for record in rows if record["track"] == "adapter_calibration"]
     repeat = [record for record in rows if record["track"] == "repeat_batch"]
+    native = [record for record in rows if record["track"] == "native_ui_probe"]
 
     def compact(record):
         return {
@@ -768,6 +769,7 @@ def build_table(records):
             "controlled_contract": len(controlled),
             "calibration": len(calibration),
             "repeat_batch": len(repeat),
+            "native_ui_probe": len(native),
             "comparison_eligible": sum(1 for record in main + controlled
                                        if table_eligible(record)),
             "comparison_excluded": sum(1 for record in main + controlled

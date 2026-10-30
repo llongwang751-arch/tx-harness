@@ -181,6 +181,7 @@
     "comparison_excluded": 0,
     "controlled_contract": 4,
     "end_to_end": 25,
+    "native_ui_probe": 4,
     "product_runs": 47,
     "repeat_batch": 8,
     "unknown_verdicts": 5

@@ -9,9 +9,9 @@
       "sha256": "415bde6db143d72a64fe5ee535e946e0466bd0ca5aac0398ea06687cce719a7b"
     },
     {
-      "bytes": 21762,
+      "bytes": 21788,
       "path": "ledger/formal-table.json",
-      "sha256": "fc4602f71531944949032f2a6be2b790f9ee691287f0b10de87f8a5c7d3b4dec"
+      "sha256": "6e862a0e25f4a24e1cc70d0ee1f1f6fd67f483efd83a61f91060ce933d9ea961"
     },
     {
       "bytes": 4469,
@@ -31,7 +31,7 @@
     {
       "bytes": 5760,
       "path": "ledger/conclusions/CL-01.json",
-      "sha256": "50ce0764eddf738360bf4948070d5902dad0a4d10102b430958bb32fad1a4689"
+      "sha256": "4ff4f75a225b5885869c1fa5d52d0e5876e0938c151cba85545e210368e654d4"
     },
     {
       "bytes": 6341,

@@ -204,7 +204,8 @@ def table_markdown(table):
                "不含人工过程维度。\n\n")
     counts = table["counts"]
     out.append(f"- 产品运行记录：{counts['product_runs']}（端到端 {counts['end_to_end']}、"
-               f"固定响应主臂 {counts['controlled_contract']}、接入校准 {counts['calibration']}）\n")
+               f"固定响应主臂 {counts['controlled_contract']}、接入校准 {counts['calibration']}、"
+               f"原生桌面 {counts['native_ui_probe']}、同题重复 {counts['repeat_batch']}）\n")
     out.append(f"- 通过四道门槛：{counts['comparison_eligible']}；"
                f"被门槛挡下：{counts['comparison_excluded']}；"
                f"未知裁定：{counts['unknown_verdicts']}\n")
