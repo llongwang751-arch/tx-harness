@@ -1,0 +1,26 @@
+{
+  "files": {
+    "adapter-source/run_dsh_multiturn_pilot.py": "0b2899b87a456df40cb72fd5130667ceec73e00354e4d85f05939d8224fbcb34",
+    "adapter-source/run_dsh_pilot.py": "b4fb519d8ce1f7fc26180ebb2591a1c301ba23afa85a41894933680b320479a0",
+    "adapter-source/run_dsh_sdk_pilot.py": "02bd67a75ae7c319ca2ee4f04dc0c2f6b20349b0d5ab590b3300bc7a46fe1cc8",
+    "case-prompt.md": "f892a120f54edd610f3fe9ef99d9dff8a75c550fc26fe83338cce4cd61231f42",
+    "claims.json": "8433ae14727da8eb6e47f29930c33b5b2eddbde7d66cb749b50b00a2d6e27ec2",
+    "deterministic-verification.json": "e2469d82d5d1130d24b2f8e27b26185cca51b107c88e7c3e37afd2f6329a317d",
+    "inputs/orders.csv": "159176fc640476c1c8b5fb02effdf7336d94c8d112dfa1286bf0a03a8e854ac1",
+    "inputs/refunds.csv": "5e5dda2c8d3a3f638ce53fccf3f8aca498b5db0c4e9f0a8ed84e30dab64158c7",
+    "observed-tool-errors.json": "92d154105cae151870a115fefd4261eb81035ef3d24e53a35881624c09dab54b",
+    "one-run-overlay.redacted.yml": "739be155337a8b7f7f135868554116e9ad5330a60f657e74b12d991723515487",
+    "outputs/aggregate.json": "670fe70d9b32508b3e21119ce5118ee89d11e58b35548466e17d011cd1ee965e",
+    "outputs/exceptions.json": "2f3ab5605a3659c0301165c344b32ec3077e7237be4d25dcce59d4e0a8f7e11e",
+    "outputs/order_ledger.csv": "a5f28d53b9275061de7db2c4bf6cbb9306420be2138ffd2446031abd7a230d46",
+    "projection-receipt.json": "71e8dbf0bcc9b93e622bd225b682aef86c865392e96d48d1d03c9f4e290fcf24",
+    "prompt-recorded-file.md": "de764499bb606eb4fb3d4520201eca1ccaf24290a74ed94696d45372738779c4",
+    "prompt.md": "2a6d5d60710e0eb8a1a5a8f6d6654d119a9daeb208fef30ee17564e11cefebd9",
+    "README.md": "21d64aa2d10990b77434686cf4030756e48217682cb62f8e116ac42147956d7e",
+    "run-metadata.json": "9d7ee11ad78a21260e1dcad1ad0da793101f88ec8aa83812fcc9a34eabf55ae0",
+    "sdk-control-receipts.jsonl": "89f77c633235abe759a7d33ea91b249a14246945312a35341950df9e62534a4b",
+    "sdk-sent.jsonl": "dd2c3aa74dd41f77c6fa4fb18e20f057a977c606c6d9163c67f0bc83aa8066f0",
+    "transmission-receipt.json": "dfbc4deec14d37acae0900742871b30c4f86cd9650852238ab0a9fa88a7fc9b4",
+    "visible-events.jsonl": "b90d3b4f77f0d09f448aeb4206556ac8d26bb4d15789dac42edbb163f74cfcbb"
+  }
+}

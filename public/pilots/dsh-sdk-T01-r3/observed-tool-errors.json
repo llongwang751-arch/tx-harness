@@ -1,0 +1,20 @@
+[
+  {
+    "source_stdout_line": 24,
+    "callId": "call_00_49FpCoL7cUMsc28nF0X52636",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 46,
+    "callId": "call_00_wCZrEI9Kbr9BUUBAoRj92840",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 64,
+    "callId": "call_00_De82tJ2Zg6eREWmaKNwi8620",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  }
+]

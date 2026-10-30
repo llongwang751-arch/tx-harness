@@ -136,7 +136,39 @@ def jsonl(relative):
 
 
 REPRODUCE = {"CL-01": lambda: reproduce_cl01(S.build_runs(), S.build_table(S.build_runs())),
-             "CL-02": reproduce_cl02}
+             "CL-02": reproduce_cl02,
+             "CL-03": lambda: reproduce_cl03()}
+
+
+REPEAT_DIRS = ("dsh-sdk-T01-r1", "dsh-sdk-T01-r2", "dsh-sdk-T01-r3")
+
+
+def reproduce_cl03():
+    runs = []
+    for name in REPEAT_DIRS:
+        base = ROOT / "public/pilots" / name / "outputs"
+        files = {}
+        for path in sorted(base.rglob("*")):
+            if path.is_file():
+                files[path.relative_to(base).as_posix()] = S.sha_file(path)
+        runs.append({"run_id": name, "files": files})
+    names = sorted({key for run in runs for key in run["files"]})
+    byte_identical = {name: len({run["files"][name] for run in runs}) == 1 for name in names}
+    semantic_identical = {}
+    for name in names:
+        if not name.endswith(".json"):
+            continue
+        digests = {S.sha_bytes(S.canonical(S.load(f"public/pilots/{run['run_id']}/outputs/{name}")))
+                   for run in runs}
+        semantic_identical[name] = len(digests) == 1
+    return {
+        "schema": "tx-harness/reproduce/v1",
+        "claim": "CL-03",
+        "runs": runs,
+        "byte_identical_across_three": byte_identical,
+        "semantic_identical_across_three": semantic_identical,
+        "r1_from_earlier_batch": True,
+    }
 
 
 def experiment_hash(claim) -> str:
@@ -194,6 +226,14 @@ def table_markdown(table):
     for row in table["calibration_rows"]:
         out.append(f"| {S.PRODUCT_LABELS[row['product_id']]} | `{row['run_id']}` | "
                    f"{row['verdict']} | {row['evidence_grade']} |\n")
+    out.append("\n## 重复批（同题多次，测稳定性，不加题量）\n\n")
+    out.append("| 产品 | 运行 | 题 | 裁定 | 产物分 | 证据等级 |\n|---|---|---|---|---:|---|\n")
+    for row in table["repeat_rows"]:
+        score = "—" if row["objective_score"] is None else f"{row['objective_score']:g}"
+        out.append(f"| {S.PRODUCT_LABELS[row['product_id']]} | `{row['run_id']}` | "
+                   f"{row['case_id']} | {row['verdict']} | {score} | {row['evidence_grade']} |\n")
+    out.append("\n重复批只用于回答“同一产品同一题重复跑是否稳定”，不增加题量、不改变上面的"
+               "五题汇总；结果见 [CL-03](../../ledger/conclusions/CL-03.json)。\n")
     out.append("\n校准未走通共享工具调用，按未知保留，不记产品失败，也不进入上面的比较表。\n")
     return "".join(out).encode("utf-8")
 
@@ -368,6 +408,8 @@ def write_manifest(records):
                       "harness_eval/core.py", "cases/T01/case.json", "cases/T02/case.json",
                       "cases/T03/case.json", "cases/T04/case.json", "cases/T05/case.json",
                       "public/supplements/gui-controls-v1/observations.json",
+                      "public/pilots/dsh-sdk-T01-r2/run-metadata.json",
+                      "public/pilots/dsh-sdk-T01-r3/run-metadata.json",
                       "reports/grader-audit-v3.json"})
     manifest = {
         "schema": "tx-harness/ledger-manifest/v1",
@@ -479,7 +521,7 @@ def check_records(audit, records):
             audit.require(record["verdict"]["score_for_aggregate"] is None,
                           f"{tag}: invalid run carries a score")
         if record["verdict"]["state"] in ("pass", "fail"):
-            if record["track"] == "formal_product_end_to_end":
+            if record["track"] in ("formal_product_end_to_end", "repeat_batch"):
                 audit.require(record["verdict"]["score_for_aggregate"] is not None,
                               f"{tag}: scored verdict without score")
             else:

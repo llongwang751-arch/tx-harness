@@ -181,7 +181,8 @@
     "comparison_excluded": 0,
     "controlled_contract": 4,
     "end_to_end": 25,
-    "product_runs": 39,
+    "product_runs": 41,
+    "repeat_batch": 2,
     "unknown_verdicts": 5
   },
   "generation_basis": "deterministic projection of ledger/runs.jsonl; no clock, no product run",
@@ -728,6 +729,42 @@
     "元宝专家模式: backend model identity unattested",
     "豆包工作任务模式: backend model identity unattested",
     "protocol state of the 25 end-to-end runs is draft_before_pilot, not a preregistered frozen protocol"
+  ],
+  "repeat_rows": [
+    {
+      "case_id": "T01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T01-r2",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T01-r3",
+      "table_eligible": true,
+      "verdict": "pass"
+    }
   ],
   "schema": "tx-harness/formal-comparison-table/v1"
 }

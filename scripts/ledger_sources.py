@@ -33,6 +33,7 @@ TRACKS = (
     "formal_controlled_contract",
     "adapter_calibration",
     "native_ui_probe",
+    "repeat_batch",
 )
 
 PRODUCT_LABELS = {
@@ -688,6 +689,7 @@ def build_table(records):
     main = [record for record in rows if record["track"] == "formal_product_end_to_end"]
     controlled = [record for record in rows if record["track"] == "formal_controlled_contract"]
     calibration = [record for record in rows if record["track"] == "adapter_calibration"]
+    repeat = [record for record in rows if record["track"] == "repeat_batch"]
 
     def compact(record):
         return {
@@ -755,6 +757,8 @@ def build_table(records):
             controlled, key=lambda item: item["run_id"])],
         "calibration_rows": [compact(record) for record in sorted(
             calibration, key=lambda item: item["run_id"])],
+        "repeat_rows": [compact(record) for record in sorted(
+            repeat, key=lambda item: item["run_id"])],
         "products": products,
         "ranking": None,
         "ranking_withheld_because": ranking_reasons,
@@ -763,6 +767,7 @@ def build_table(records):
             "end_to_end": len(main),
             "controlled_contract": len(controlled),
             "calibration": len(calibration),
+            "repeat_batch": len(repeat),
             "comparison_eligible": sum(1 for record in main + controlled
                                        if table_eligible(record)),
             "comparison_excluded": sum(1 for record in main + controlled
@@ -775,8 +780,125 @@ def build_table(records):
     }
 
 
+# ---------------------------------------------------------------------------
+# Repeat batch: the same task run three times on one product with the real
+# model, to measure output stability instead of adding new task coverage.
+# ---------------------------------------------------------------------------
+
+REPEAT_PACKAGES = ("dsh-sdk-T01-r2", "dsh-sdk-T01-r3")
+
+
+def repeat_runs():
+    return [repeat_record(name) for name in REPEAT_PACKAGES]
+
+
+def repeat_record(name):
+    folder = f"public/pilots/{name}"
+    metadata = load(f"{folder}/run-metadata.json")
+    verification = load(f"{folder}/deterministic-verification.json")
+    case = metadata["case_id"]
+    graded = {check["path"]: check["sha256"] for check in verification["checks"]
+              if check.get("sha256")}
+    outputs = []
+    for path in sorted((ROOT / folder / "outputs").rglob("*")):
+        if not path.is_file():
+            continue
+        key = path.relative_to(ROOT / folder / "outputs").as_posix()
+        reference = graded.get(key)
+        outputs.append({"path": rel(path), "sha256": sha_file(path),
+                        "graded_sha256": reference,
+                        "matches_graded": None if reference is None else reference == sha_file(path)})
+    graded_match = bool(graded) and any(item["matches_graded"] is True for item in outputs) \
+        and all(item["matches_graded"] is not False for item in outputs)
+    inputs_ok, inputs_basis = frozen_inputs_ok(case, folder)
+    passed = bool(verification.get("all_checks_passed"))
+    state = "pass" if passed else "fail"
+    score = verification.get("objective_score")
+    prompt_path = next((f"{folder}/{name_}" for name_ in PROMPT_CANDIDATES
+                        if exists(f"{folder}/{name_}")), None)
+    prompt_ok = False
+    prompt_basis = []
+    if prompt_path:
+        submitted = (ROOT / prompt_path).read_bytes()
+        template = (ROOT / f"cases/{case}/prompt.md").read_bytes().rstrip(b"\n")
+        prompt_ok = submitted.startswith(template)
+        prompt_basis.append(f"{prompt_path} starts with the frozen cases/{case}/prompt.md: "
+                            f"{prompt_ok}")
+    record = {
+        "schema": "tx-harness/run-record/v1",
+        "run_id": name,
+        "account": "product_run",
+        "track": "repeat_batch",
+        "task": {"case_id": case,
+                 "case_sha256": sha_file(f"cases/{case}/case.json"),
+                 "prompt_sha256": sha_file(f"cases/{case}/prompt.md"),
+                 "version_basis": "content hash of the frozen case and prompt"},
+        "product": {"product_id": "dsh", "label": PRODUCT_LABELS["dsh"],
+                    "version": metadata.get("installation_version"),
+                    "version_reason": None,
+                    "binary_sha256": None,
+                    "surface": f"desktop-bundled CLI ({metadata.get('profile')} profile)"},
+        "model": {"label": f"{metadata.get('requested_model')} (requested)",
+                  "attested": False,
+                  "visibility": metadata.get("model_visibility"),
+                  "reason": metadata.get("model_identity_note")},
+        "tools": {"state": "unknown", "items": [],
+                  "reason": "the public projection keeps tool names and results, not a complete "
+                            "tool inventory"},
+        "permissions": {"label": f"sandbox={metadata.get('sandbox')}; "
+                                 f"task_network_tool={metadata.get('task_network_tool')}",
+                        "source": f"{folder}/run-metadata.json",
+                        "reason": None},
+        "skill_state": {"label": metadata.get("skills"),
+                        "source": f"{folder}/run-metadata.json",
+                        "reason": None},
+        "timing": {"started_at": metadata.get("started_at"),
+                   "ended_at": metadata.get("finished_at"),
+                   "duration_seconds": metadata.get("elapsed_seconds"),
+                   "reason": None},
+        "evidence": {
+            "grade": classify_grade(["artifact_hashes", "verification_record",
+                                     "native_events", "independent_recompute"]),
+            "classes": ["artifact_hashes", "independent_recompute", "native_events",
+                        "verification_record"],
+            "files": sorted([source(f"{folder}/run-metadata.json"),
+                             source(f"{folder}/deterministic-verification.json"),
+                             source(f"{folder}/manifest.json"),
+                             source(f"{folder}/visible-events.jsonl")],
+                            key=lambda item: item["path"]),
+            "outputs": outputs,
+            "inputs": {"state": inputs_ok, "basis": inputs_basis},
+            "contamination": {"state": "none" if graded_match and inputs_ok is True else "unknown",
+                              "basis": ["collected output bytes hash to the graded bytes",
+                                        "retained input files still match the frozen inputs"]
+                              if graded_match and inputs_ok is True else []},
+        },
+        "gates": {},
+        "verdict": {"state": state,
+                    "reason": f"deterministic-verification all_checks_passed={passed}",
+                    "objective_score": score,
+                    "objective_max": verification.get("all_weight") and 60,
+                    "score_for_aggregate": score if state in ("pass", "fail") else None},
+        "attribution": {
+            "harness_attributable": False,
+            "reason": "a repeat measures output stability for one product; it carries no matched "
+                      "control, so it cannot separate Harness from model",
+            "controls": [],
+            "unexcluded": ["backend model identity", "sampling parameters", "server-side routing"],
+        },
+        "prompt_validity": {"ok": prompt_ok, "basis": prompt_basis},
+        "sources": [{"path": f"{folder}/run-metadata.json",
+                     "sha256": sha_file(f"{folder}/run-metadata.json"), "json_pointer": ""},
+                    {"path": f"{folder}/deterministic-verification.json",
+                     "sha256": sha_file(f"{folder}/deterministic-verification.json"),
+                     "json_pointer": "/all_checks_passed"}],
+    }
+    record["gates"] = run_gates(record)
+    return record
+
+
 def build_runs():
-    records = formal_runs() + registered_runs()
+    records = formal_runs() + registered_runs() + repeat_runs()
     seen = {}
     for record in records:
         if record["run_id"] in seen:
@@ -807,6 +929,8 @@ def build_accounts(records):
                 "five_product_end_to_end": len(end_to_end),
                 "native_desktop_tasks": len(native),
                 "fixed_local_fixture_sessions": len(fixture),
+                "repeat_batch_sessions": len([record for record in product_rows
+                                              if record["track"] == "repeat_batch"]),
                 "pass": sum(1 for record in product_rows if record["verdict"]["state"] == "pass"),
                 "fail": sum(1 for record in product_rows if record["verdict"]["state"] == "fail"),
                 "unknown": sum(1 for record in product_rows

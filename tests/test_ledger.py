@@ -128,7 +128,7 @@ class LedgerAggregation(unittest.TestCase):
 
 class LedgerArtifacts(unittest.TestCase):
     def test_conclusions_have_five_parts_and_replay(self):
-        for name in ("CL-01", "CL-02"):
+        for name in ("CL-01", "CL-02", "CL-03"):
             conclusion = sources.load(f"ledger/conclusions/{name}.json")
             with self.subTest(conclusion=name):
                 for part in ledger.FIVE_PARTS:
@@ -171,6 +171,28 @@ class LedgerArtifacts(unittest.TestCase):
         self.assertEqual(payload["total"], sum(item["tests"] for item in payload["modules"]))
         self.assertEqual(payload["errors"], 0)
         self.assertIsInstance(payload["failures"], int)
+
+    def test_repeat_batch_is_counted_but_stays_out_of_the_five_product_summary(self):
+        records = sources.build_runs()
+        repeats = [record for record in records if record["track"] == "repeat_batch"]
+        self.assertEqual(len(repeats), 2)
+        for record in repeats:
+            self.assertEqual(record["verdict"]["state"], "pass")
+            self.assertEqual(record["verdict"]["score_for_aggregate"], 60.0)
+        table = sources.build_table(records)
+        self.assertEqual(len(table["repeat_rows"]), 2)
+        self.assertTrue(all(row["case_id"] == "T01" for row in table["repeat_rows"]))
+        for product in table["products"]:
+            self.assertEqual(product["runs"], 5)
+
+    def test_repeat_stability_separates_bytes_from_semantics(self):
+        conclusion = sources.load("ledger/conclusions/CL-03.json")
+        self.assertEqual(ledger.experiment_hash("CL-03"),
+                         conclusion["reproducible_experiment"]["expected_output_sha256"])
+        projection = ledger.reproduce_cl03()
+        self.assertFalse(projection["byte_identical_across_three"]["exceptions.json"])
+        self.assertTrue(projection["semantic_identical_across_three"]["exceptions.json"])
+        self.assertTrue(projection["byte_identical_across_three"]["order_ledger.csv"])
 
     def test_generated_files_match_their_sources(self):
         problems = []

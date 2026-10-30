@@ -1,0 +1,7 @@
+order_id,customer_group,status,gross_cents,successful_refund_cents,net_cents,included
+O101,retail,paid,15000,2000,13000,true
+O102,retail,shipped,8800,2000,6800,true
+O103,business,cancelled,10000,0,0,false
+O104,business,paid,4500,0,4500,true
+O105,retail,pending,6500,0,0,false
+O106,business,shipped,22000,3000,19000,true

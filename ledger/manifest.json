@@ -1,27 +1,27 @@
 {
   "counts": {
-    "records": 39
+    "records": 41
   },
   "files": [
     {
-      "bytes": 175564,
+      "bytes": 184160,
       "path": "ledger/runs.jsonl",
-      "sha256": "3f19445a6afc587ca4a5cedd36baf3504e859c29b1219d1d327b23cf1ba8432c"
+      "sha256": "ca397d813989ecab180d96a35f75096304d607291d3668587bec08babfa02ed8"
     },
     {
-      "bytes": 18332,
+      "bytes": 19224,
       "path": "ledger/formal-table.json",
-      "sha256": "5a528e7dd7057a3aafb9aa2734f965240b324b1470a04f7ee10502a38677668a"
+      "sha256": "3501cd8284c6d7396baf746edfdb46c623493db5250e0332cfbc357d88b0cc54"
     },
     {
-      "bytes": 4293,
+      "bytes": 4327,
       "path": "ledger/accounts.json",
-      "sha256": "0c8ee9ea5478efa7fd87654e333b5666360fc9e954df6dd18698fecb5a546fc7"
+      "sha256": "247b56dd5baef74955c8ae98794aad272e3c1b4f0fdbce072dca979ce0996b42"
     },
     {
       "bytes": 2197,
       "path": "ledger/self-test.json",
-      "sha256": "046903a580078b86f701317a39d356f504519300806c99c0977dd43c62e75f6c"
+      "sha256": "28c961703ed7e8ce12efd0f04c02095caea47fd32bedc5eb59bae75c575381a4"
     },
     {
       "bytes": 8316,
@@ -29,14 +29,14 @@
       "sha256": "0a260c178234b3ff5700503e6f12e7d403a97be0bd8f6df0004e9dc15bb32e19"
     },
     {
-      "bytes": 5704,
+      "bytes": 5760,
       "path": "ledger/conclusions/CL-01.json",
-      "sha256": "04fcc706d6bc62cf269df02cde0ce4826a25dbe911357d97cac5d3e84b67ade1"
+      "sha256": "e57a0d3feeff3bcb4f8ebcf46140accdf43c2e58c56ab2085d5645621f0a2607"
     },
     {
       "bytes": 6341,
       "path": "ledger/conclusions/CL-02.json",
-      "sha256": "aacf8be84ff9e3a9b4ab046618c48fde9031a9776faf8e7ec110d6b64a42783b"
+      "sha256": "cc449d53a1ce90256241da98361e375a1d0644a58566b664e3f21b8aad0e23dc"
     },
     {
       "bytes": 13755,
@@ -164,6 +164,14 @@
     {
       "path": "harness_eval/core.py",
       "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20"
+    },
+    {
+      "path": "public/pilots/dsh-sdk-T01-r2/run-metadata.json",
+      "sha256": "3259985db0bb8adbecb545cfa9cf588bc0022088abc4d0fcca6efed28a92c1e1"
+    },
+    {
+      "path": "public/pilots/dsh-sdk-T01-r3/run-metadata.json",
+      "sha256": "9d7ee11ad78a21260e1dcad1ad0da793101f88ec8aa83812fcc9a34eabf55ae0"
     },
     {
       "path": "public/supplements/gui-controls-v1/observations.json",

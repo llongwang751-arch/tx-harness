@@ -1,0 +1,31 @@
+{
+  "private_source_sha256": "d6c6b581dc258ab2a454e1ba39e94d97e631f2c121576d65919b16627c78e991",
+  "source_projection_records": 42,
+  "published_projection_records": 42,
+  "skill_instruction_results_omitted": 0,
+  "nontext_assistant_blocks_excluded": 17,
+  "child_session_event_records_excluded": 0,
+  "native_parent_event_types_count": {
+    "permission/preset": 1,
+    "sandbox/mode": 1,
+    "approval/policy": 1,
+    "agent/inbox/spliced": 2,
+    "turn/start": 1,
+    "step/start": 6,
+    "system/message": 1,
+    "user/message": 3,
+    "request/header": 1,
+    "request/context": 1,
+    "session/title": 1,
+    "session-log-deepseek/delivery-accepted": 6,
+    "assistant/message": 6,
+    "tool/call": 11,
+    "job/registered": 3,
+    "job/settled": 3,
+    "tool/result": 11,
+    "step/end": 6,
+    "turn/end": 1
+  },
+  "operator_review": "Codex agent inspected projected records and artifacts for privacy; not an external human audit",
+  "hidden_context_public": false
+}
