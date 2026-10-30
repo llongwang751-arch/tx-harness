@@ -104,12 +104,12 @@
       "five_product_end_to_end": 25,
       "fixed_local_fixture_sessions": 10,
       "native_desktop_tasks": 4,
-      "pass": 31,
-      "repeat_batch_sessions": 2,
+      "pass": 35,
+      "repeat_batch_sessions": 6,
       "unknown": 5
     },
     "definition": "an actually submitted product task/session with its own configuration, start and end, and retained evidence",
-    "entries": 41,
+    "entries": 45,
     "recompute": {
       "artifact": "ledger/runs.jsonl",
       "expected": null,

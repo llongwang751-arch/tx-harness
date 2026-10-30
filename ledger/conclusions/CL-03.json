@@ -2,25 +2,10 @@
   "attribution": {
     "attributable_to": "none",
     "controls_used": [],
-    "counterfactual": "若三次字节全同，也只能说明该题在该配置下稳定，不能说明 Harness 贡献了多少",
+    "counterfactual": "即使三次完全一致，也只能说明该题在该配置下稳定，不能说明 Harness 贡献多少",
     "rule": "重复只回答稳定性，不回答归因；归因需要同模型同 Skill 的跨 Harness 对照"
   },
   "evidence": [
-    {
-      "json_pointer": "/all_checks_passed",
-      "path": "public/pilots/dsh-sdk-T01-r1/deterministic-verification.json",
-      "sha256": "a440d18d488d164aaba59990427dd48647a9f4e5accbef60924f5afd96c1ebd5"
-    },
-    {
-      "json_pointer": "/all_checks_passed",
-      "path": "public/pilots/dsh-sdk-T01-r2/deterministic-verification.json",
-      "sha256": "a440d18d488d164aaba59990427dd48647a9f4e5accbef60924f5afd96c1ebd5"
-    },
-    {
-      "json_pointer": "/all_checks_passed",
-      "path": "public/pilots/dsh-sdk-T01-r3/deterministic-verification.json",
-      "sha256": "e2469d82d5d1130d24b2f8e27b26185cca51b107c88e7c3e37afd2f6329a317d"
-    },
     {
       "json_pointer": "/requested_model",
       "path": "public/pilots/dsh-sdk-T01-r2/run-metadata.json",
@@ -30,6 +15,16 @@
       "json_pointer": "/requested_model",
       "path": "public/pilots/dsh-sdk-T01-r3/run-metadata.json",
       "sha256": "9d7ee11ad78a21260e1dcad1ad0da793101f88ec8aa83812fcc9a34eabf55ae0"
+    },
+    {
+      "json_pointer": "/requested_model",
+      "path": "public/pilots/dsh-sdk-T05-r2/run-metadata.json",
+      "sha256": "7285999c05a2982c63e1f4686c66c29d4370b43178c258fed8e3482aebf48904"
+    },
+    {
+      "json_pointer": "/requested_model",
+      "path": "public/pilots/dsh-sdk-T05-r3/run-metadata.json",
+      "sha256": "459d0c716877189ba66232a3df37eae22cd408247093127b49df8dfbcc2602c8"
     },
     {
       "json_pointer": "",
@@ -45,48 +40,93 @@
       "json_pointer": "",
       "path": "public/pilots/dsh-sdk-T01-r3/outputs/exceptions.json",
       "sha256": "2f3ab5605a3659c0301165c344b32ec3077e7237be4d25dcce59d4e0a8f7e11e"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T03-r1/outputs/change_log.json",
+      "sha256": "7e81f1343f537c4b848b59a5d443033a8f9cd235834f6e7fde7606476c4f0adf"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T03-r2/outputs/change_log.json",
+      "sha256": "7e81f1343f537c4b848b59a5d443033a8f9cd235834f6e7fde7606476c4f0adf"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T03-r3/outputs/change_log.json",
+      "sha256": "4ed54330f33dd62e0e6579e1ca582f39e04960ace4017f3fc96c6f9e1151301a"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T05-r1/outputs/invoice_ledger.csv",
+      "sha256": "4bd14adcf668018d274866f38e1f77446cd03c4ecd365615fcebcff0c00a504b"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T05-r2/outputs/invoice_ledger.csv",
+      "sha256": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T05-r3/outputs/invoice_ledger.csv",
+      "sha256": "ccacdc5442e37a070ce2dcf569abb59a62e55895c49072cd3b28ca51459e0682"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T05-r1/outputs/summary.json",
+      "sha256": "5f6fcf24199399a07e94f4de5c3f54bfeda6bd428b799aa0b00eed0385e9d791"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T05-r2/outputs/summary.json",
+      "sha256": "092896428cc5626fa488df2ef8fd174af01d2f58fb7a0f1675afd38006df0704"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T05-r3/outputs/summary.json",
+      "sha256": "bd6aa3ed050b280ed4cfaa780b4e1443bf2569309b01b19eb64a4b34467086e5"
     }
   ],
-  "explanation": "判分按契约结构比较（csv_rows 比列集与行集合，json_fields 比指定字段），所以排版差异不改分；这也正是为什么不能把“字节相同”当成稳定性的默认结论。r1 与 r2 字节相同、r3 不同，说明同一模型同一题的输出在同一格式决策上会漂移。凡在报告里写“逐字节相同”，必须写明是哪几次、哪几个文件、以及比较的是字节还是解析后的内容；本条的写法是：语义 3/3 一致，字节 2/3 一致（例外是 exceptions.json 的 r3）。",
+  "explanation": "分数层面分两种：T01、T03 三次全过，属稳定通过；T05 一次失败两次通过，属单次波动。字节层面比分数更不稳定：同分也可能排版不同（T01 的 exceptions.json、T03 的 change_log.json），所以报告里凡写“逐字节相同”都必须落到具体文件。方法上的含义很直接：n=1 的分差不能当能力差。正式表里 DSH 的 270/300 来自单次抽样，其中 T05 的 30 分缺口在两次重复中都没有出现；这一条只削弱“DSH 在 T05 会失分”的说法，不改变那次运行本身确实失分的事实，也不改变五题汇总的算术。",
   "id": "CL-03",
-  "observation": "DSH 在 T01 上跑了三次：r1 属于 10-13 批次，r2、r3 是 10-31 的复现批，三次都请求 deepseek-account / deepseek-flash / high。三次都是 8/8 检查通过、60/60。产物三个文件里，order_ledger.csv 与 aggregate.json 三次逐字节相同；exceptions.json 的 JSON 内容三次相同，但 r3 的字节与另外两次不同：它把三个数组展开成多行，字符数由 273 变为 301。",
+  "observation": "DSH 在 T01、T03、T05 上各跑三次（T01 为 r1 旧批 + r2/r3 今日批，T03/T05 同）。T01 三次 60/60；三个产物中 order_ledger.csv 与 aggregate.json 三次逐字节相同，exceptions.json 的 JSON 内容三次相同，但 r3 把数组展开成多行（273→301 字符）。T03 三次 60/60；五个交付文件中四个逐字节相同，change_log.json 在 r3 排版不同但 JSON 内容相同。T05 三次是 30/60、60/60、60/60：r2 与 r3 的 invoice_ledger.csv 与 summary.json 逐字节相同，r1 的这两个文件数值不同——即那次失分没有复现。",
   "pin_note": "哈希在第三周定稿时冻结；数据变化必须另记差异并更新 pinned_at，不得静默刷新。",
-  "pinned_against_run_file_sha256": "ca397d813989ecab180d96a35f75096304d607291d3668587bec08babfa02ed8",
+  "pinned_against_run_file_sha256": "57cf4acc6bb8d3bfd8183abececdd4bfed5e97db1bbcf334cd7c8e0cc848d6bc",
   "pinned_at": "2026-10-31",
-  "question": "同一产品、同一题、同一请求配置重复三次，产物是逐字节相同，还是只在语义上相同？",
+  "question": "同一产品、同一题、同一请求配置重复三次，分数与产物字节是否复现？",
   "reproducible_experiment": {
     "claim": "CL-03",
     "command": "python -X utf8 scripts/ledger.py reproduce CL-03",
-    "expected_output_sha256": "b2bde9de8cc3280c1efbbca6cee658d32f84597f2ac681d51b4c16f66f0ad0f7",
-    "what_it_does": "只读比较三次运行的三个产物哈希与 JSON 语义哈希，输出字节相同与语义相同的逐文件结论。"
+    "expected_output_sha256": "b25df422254dbcbbb6244440fa5443128f85497c300a6ab78f67fed257f4d393",
+    "what_it_does": "只读比较三道题各三次的产物哈希与 JSON 语义哈希，输出逐文件字节/语义一致性与每题裁定。"
   },
   "schema": "tx-harness/conclusion/v1",
-  "title": "同题三次：DSH 在 T01 上的产物稳定性",
+  "title": "同题三次：DSH 在三道题上的分数与字节稳定性",
   "unexcluded": [
     {
       "factor": "后端模型与采样参数",
       "impact": "三次是否真正跑在同一模型版本上缺少 attestation，温度与随机种子未记录",
-      "why": "产品只接受 requested-not-attested 的模型标签，复现批与前一批相隔 18 天"
+      "why": "产品只接受 requested-not-attested 的模型标签，r1 与 r2/r3 相隔 18 天"
     },
     {
       "factor": "样本量",
-      "impact": "n=3 只能看到一次格式漂移，估计不了失败率或尾部风险",
-      "why": "只登记了三次，且只有一题一款"
+      "impact": "n=3 只看到一次波动，估计不了失败率；T05 的 1/3 不能写成 33%",
+      "why": "只登记三次，且每款产品只测了这一款"
     },
     {
-      "factor": "任务难度",
-      "impact": "T01 是五题里最结构化的，稳定性结论不能外推到需要多步工具链的题",
-      "why": "只覆盖单轮、单工具、单文件产出的场景"
+      "factor": "题面难度差异",
+      "impact": "T01/T03 的稳定通过不能外推到多步工具链或长上下文场景",
+      "why": "三题都是单轮、单会话、结构化产物"
     },
     {
       "factor": "服务端状况",
-      "impact": "同一账号在同一时段串行运行，可能共享服务端缓存或限流状态",
-      "why": "协议要求串行、单会话，不控制服务端路由"
+      "impact": "同账号串行运行可能共享缓存或限流状态",
+      "why": "协议要求单会话串行，不控制服务端路由"
     }
   ],
   "verdict": {
-    "claim": "DSH 在 T01 上三次 60/60；语义 3/3 一致，字节 2/3 一致",
-    "confidence": "high for these three runs; none for general stability",
-    "scope": "一款产品、一道题、一种请求配置，三次串行"
+    "claim": "T01/T03 三次稳定通过；T05 一次失败未复现；字节稳定性按文件分化",
+    "confidence": "high for these nine runs; none for failure rates or general stability",
+    "scope": "一款产品、三道题、各三次串行；不含其他产品"
   }
 }

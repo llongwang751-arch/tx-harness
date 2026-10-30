@@ -4,7 +4,7 @@
 
 ## 2026-10-31
 
-- 补跑 DSH 在 T01 上的同题重复：第2、3次真实模型运行（deepseek-account / deepseek-flash / high 请求配置，24.5s 与 27.2s，退出码0），两次均 8/8 检查、60/60，公开包为 `public/pilots/dsh-sdk-T01-r2|r3`。三次对比：`order_ledger.csv` 与 `aggregate.json` 逐字节相同，`exceptions.json` 内容相同但第三次把数组展开成多行（273→301 字符），因此结论写成"语义 3/3 一致、字节 2/3 一致"，见[CL-03](ledger/conclusions/CL-03.json)。新增 `repeat_batch` 轨道，不并入五题汇总。
+- 补跑 DSH 在 T01、T03、T05 上的同题重复，共 6 次真实模型运行（deepseek-account / deepseek-flash / high；19–26s，退出码 0），六次全部 8/8 检查、60/60，公开包为 `public/pilots/dsh-sdk-T0{1,3,5}-r{2,3}`。三次对比：T01/T03 三次全过，9 个交付文件中 7 个逐字节相同，`exceptions.json` 与 `change_log.json` 只是排版不同（内容相同）。**T05 三次为 30/60、60/60、60/60：原来那次失分没有复现**，因此正式表里的 30 分只写成该次运行分数，不写成稳定能力缺口，见[CL-03](ledger/conclusions/CL-03.json)。新增 `repeat_batch` 轨道，不并入五题汇总。
 - 新增[结论先行页](reports/conclusion-2026-10-31.md)：把五款差异、产物分名次与理由压成一页；同一页写明"产物分排名成立、可归因排名不成立"两个结论并存，并给出每条判断的置信依据与复核命令。README 首屏改为按课题五项要求导航，先结论后全文。
 - 新增[纯文本邮件正文](reports/weekly/2026-10-31-邮件正文.txt)，可直接粘贴发送；周报索引同步登记发送状态。
 - 按第三周七条新要求落地[运行台账与归因定责规范](docs/ledger.md)：每条运行保留唯一ID、题目版本（内容哈希）、产品版本、模型、工具、权限、技能状态、运行时间、证据等级和最终裁定；字段缺失时写null并注明原因，不猜。

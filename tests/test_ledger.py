@@ -175,13 +175,13 @@ class LedgerArtifacts(unittest.TestCase):
     def test_repeat_batch_is_counted_but_stays_out_of_the_five_product_summary(self):
         records = sources.build_runs()
         repeats = [record for record in records if record["track"] == "repeat_batch"]
-        self.assertEqual(len(repeats), 2)
+        self.assertEqual(len(repeats), 6)
         for record in repeats:
             self.assertEqual(record["verdict"]["state"], "pass")
             self.assertEqual(record["verdict"]["score_for_aggregate"], 60.0)
         table = sources.build_table(records)
-        self.assertEqual(len(table["repeat_rows"]), 2)
-        self.assertTrue(all(row["case_id"] == "T01" for row in table["repeat_rows"]))
+        self.assertEqual(len(table["repeat_rows"]), 6)
+        self.assertEqual({row["case_id"] for row in table["repeat_rows"]}, {"T01", "T03", "T05"})
         for product in table["products"]:
             self.assertEqual(product["runs"], 5)
 
@@ -189,10 +189,15 @@ class LedgerArtifacts(unittest.TestCase):
         conclusion = sources.load("ledger/conclusions/CL-03.json")
         self.assertEqual(ledger.experiment_hash("CL-03"),
                          conclusion["reproducible_experiment"]["expected_output_sha256"])
-        projection = ledger.reproduce_cl03()
-        self.assertFalse(projection["byte_identical_across_three"]["exceptions.json"])
-        self.assertTrue(projection["semantic_identical_across_three"]["exceptions.json"])
-        self.assertTrue(projection["byte_identical_across_three"]["order_ledger.csv"])
+        projection = ledger.reproduce_cl03()["tasks"]
+        self.assertEqual(projection["T01"]["scores"], [60.0, 60.0, 60.0])
+        self.assertFalse(projection["T01"]["byte_identical_across_three"]["exceptions.json"])
+        self.assertTrue(projection["T01"]["semantic_identical_across_three"]["exceptions.json"])
+        self.assertFalse(projection["T03"]["byte_identical_across_three"]["change_log.json"])
+        self.assertTrue(projection["T03"]["semantic_identical_across_three"]["change_log.json"])
+        # The one T05 failure is a single draw: two repeats scored full marks.
+        self.assertEqual(projection["T05"]["scores"], [30.0, 60.0, 60.0])
+        self.assertFalse(projection["T05"]["all_passed"])
 
     def test_generated_files_match_their_sources(self):
         problems = []

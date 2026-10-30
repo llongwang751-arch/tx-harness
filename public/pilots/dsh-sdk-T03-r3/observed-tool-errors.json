@@ -1,0 +1,86 @@
+[
+  {
+    "source_stdout_line": 24,
+    "callId": "call_00_ET_YjlyGtrxu6zx1aEkXDkW1969",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 32,
+    "callId": "call_00_gcaQJ19uemaoXN7RBvi87242",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 46,
+    "callId": "call_00_j5f7bFraIXComMnWDQzI6986",
+    "tool": "pwsh",
+    "result": "Error: sandbox escalation to \"danger-full-access\" requires approval, but no approval channel is available"
+  },
+  {
+    "source_stdout_line": 76,
+    "callId": "call_00_83QBkn49nAWniwfdg3ul1447",
+    "tool": "pwsh",
+    "result": "Error: invalid escalation: sandbox_permissions requires a justification"
+  },
+  {
+    "source_stdout_line": 84,
+    "callId": "call_00_6N97UY3L4K5SUVgh27PQ1332",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 92,
+    "callId": "call_00_5SHW86imQMVbHbJtbKVw9537",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 118,
+    "callId": "call_00_XzndffAOm8phyiEaZ9RW8329",
+    "tool": "grep",
+    "result": "Error: grep search failed (exit 2): rg: the literal \"\\n\" is not allowed in a regex\n\nConsider enabling multiline mode with the --multiline flag (or -U for short).\nWhen multiline mode is enabled, new line characters can be matched."
+  },
+  {
+    "source_stdout_line": 120,
+    "callId": "call_01_9LMwDCw82SxqRUYA1iIW7861",
+    "tool": "grep",
+    "result": "Error: grep search failed (exit 2): rg: the literal \"\\n\" is not allowed in a regex\n\nConsider enabling multiline mode with the --multiline flag (or -U for short).\nWhen multiline mode is enabled, new line characters can be matched."
+  },
+  {
+    "source_stdout_line": 318,
+    "callId": "call_00_xDsZCylEbjlBmMZxOB4U0116",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 324,
+    "callId": "call_00_wt94uY8qADCWJJZQADTc4681",
+    "tool": "grep",
+    "result": "Error: grep search failed (exit 2): rg: the literal \"\\n\" is not allowed in a regex\n\nConsider enabling multiline mode with the --multiline flag (or -U for short).\nWhen multiline mode is enabled, new line characters can be matched."
+  },
+  {
+    "source_stdout_line": 326,
+    "callId": "call_01_qz4qnsJ4rbWrXlGB70Cj3221",
+    "tool": "grep",
+    "result": "Error: grep search failed (exit 2): rg: the literal \"\\n\" is not allowed in a regex\n\nConsider enabling multiline mode with the --multiline flag (or -U for short).\nWhen multiline mode is enabled, new line characters can be matched."
+  },
+  {
+    "source_stdout_line": 328,
+    "callId": "call_02_gVIlRW3ePid8LJeKNnjZ4555",
+    "tool": "grep",
+    "result": "Error: grep search failed (exit 2): rg: the literal \"\\n\" is not allowed in a regex\n\nConsider enabling multiline mode with the --multiline flag (or -U for short).\nWhen multiline mode is enabled, new line characters can be matched."
+  },
+  {
+    "source_stdout_line": 330,
+    "callId": "call_03_9GM516FLbsG77xsc6lcN3859",
+    "tool": "grep",
+    "result": "Error: grep search failed (exit 2): rg: the literal \"\\n\" is not allowed in a regex\n\nConsider enabling multiline mode with the --multiline flag (or -U for short).\nWhen multiline mode is enabled, new line characters can be matched."
+  },
+  {
+    "source_stdout_line": 417,
+    "callId": "call_00_CzlZama6t1XkmC43Xvjl4398",
+    "tool": "read",
+    "result": "Error: cannot read \"<participant_workspace>\\inputs\": not a regular file"
+  }
+]

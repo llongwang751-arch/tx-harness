@@ -1,0 +1,16 @@
+{
+  "source": "private sent.jsonl, actual SDK session/prompt frame",
+  "source_sent_sha256": "bb2cb55042a48c8c0fcc51b88d48b7a77b9e669e95f30a2c09a80e29139540ea",
+  "request_id": 2,
+  "sent_at": "2026-10-30T17:26:25.234451+00:00",
+  "session_id": "pilot-dsh-sdk-T05-631cf9dc-946d-45c2-84e3-a5bb0fc637d3",
+  "text_block_count": 1,
+  "encoding": "UTF-8",
+  "actual_content_file": "prompt.md",
+  "actual_content_sha256": "0af8d8f9938b9cccb414232f9164996c96bfb1e0dfb6bb41cae45246502313c5",
+  "recorded_file": "prompt-recorded-file.md",
+  "recorded_file_sha256": "8b81be21963160237d48ae9f1ce60e81b3ed29cc95ae360ea22b9e0e95ef05bf",
+  "actual_content_crlf_count": 0,
+  "recorded_file_crlf_count": 29,
+  "hash_scope": "decoded text block UTF-8 bytes; does not hash the whole JSON-RPC envelope"
+}

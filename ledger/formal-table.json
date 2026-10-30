@@ -181,8 +181,8 @@
     "comparison_excluded": 0,
     "controlled_contract": 4,
     "end_to_end": 25,
-    "product_runs": 41,
-    "repeat_batch": 2,
+    "product_runs": 45,
+    "repeat_batch": 6,
     "unknown_verdicts": 5
   },
   "generation_basis": "deterministic projection of ledger/runs.jsonl; no clock, no product run",
@@ -762,6 +762,74 @@
       "product_id": "dsh",
       "ranking_eligible": false,
       "run_id": "dsh-sdk-T01-r3",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T03",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T03-r2",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T03",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T03-r3",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T05",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T05-r2",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T05",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T05-r3",
       "table_eligible": true,
       "verdict": "pass"
     }

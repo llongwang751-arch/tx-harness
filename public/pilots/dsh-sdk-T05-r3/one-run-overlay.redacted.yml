@@ -1,0 +1,7 @@
+- id: skill-filesystem
+  config:
+    includeDefaultRoots: false
+    watch: false
+    bundledSkillDir: "<DSH_INSTALL>/resources/runtime/office-skills"
+- id: tool-web
+  disabled: true

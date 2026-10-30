@@ -140,35 +140,50 @@ REPRODUCE = {"CL-01": lambda: reproduce_cl01(S.build_runs(), S.build_table(S.bui
              "CL-03": lambda: reproduce_cl03()}
 
 
-REPEAT_DIRS = ("dsh-sdk-T01-r1", "dsh-sdk-T01-r2", "dsh-sdk-T01-r3")
+REPEAT_CASES = {
+    "T01": ("dsh-sdk-T01-r1", "dsh-sdk-T01-r2", "dsh-sdk-T01-r3"),
+    "T03": ("dsh-sdk-T03-r1", "dsh-sdk-T03-r2", "dsh-sdk-T03-r3"),
+    "T05": ("dsh-sdk-T05-r1", "dsh-sdk-T05-r2", "dsh-sdk-T05-r3"),
+}
 
 
 def reproduce_cl03():
-    runs = []
-    for name in REPEAT_DIRS:
-        base = ROOT / "public/pilots" / name / "outputs"
-        files = {}
-        for path in sorted(base.rglob("*")):
-            if path.is_file():
-                files[path.relative_to(base).as_posix()] = S.sha_file(path)
-        runs.append({"run_id": name, "files": files})
-    names = sorted({key for run in runs for key in run["files"]})
-    byte_identical = {name: len({run["files"][name] for run in runs}) == 1 for name in names}
-    semantic_identical = {}
-    for name in names:
-        if not name.endswith(".json"):
-            continue
-        digests = {S.sha_bytes(S.canonical(S.load(f"public/pilots/{run['run_id']}/outputs/{name}")))
-                   for run in runs}
-        semantic_identical[name] = len(digests) == 1
-    return {
-        "schema": "tx-harness/reproduce/v1",
-        "claim": "CL-03",
-        "runs": runs,
-        "byte_identical_across_three": byte_identical,
-        "semantic_identical_across_three": semantic_identical,
-        "r1_from_earlier_batch": True,
-    }
+    result = {"schema": "tx-harness/reproduce/v1", "claim": "CL-03", "tasks": {}}
+    for case, runs in REPEAT_CASES.items():
+        required = S.load(f"cases/{case}/case.json").get("required_outputs") or []
+        rows = []
+        for name in runs:
+            verification = S.load(f"public/pilots/{name}/deterministic-verification.json")
+            base = ROOT / "public/pilots" / name / "outputs"
+            files = {}
+            for path in sorted(base.rglob("*")):
+                key = path.relative_to(base).as_posix()
+                if path.is_file() and (not required or key in required):
+                    files[key] = S.sha_file(path)
+            rows.append({"run_id": name,
+                         "score": verification.get("objective_score"),
+                         "passed": bool(verification.get("all_checks_passed")),
+                         "checks": len(verification.get("checks", [])),
+                         "files": files})
+        names = sorted({key for row in rows for key in row["files"]})
+        byte_identical = {key: len({row["files"][key] for row in rows}) == 1 for key in names}
+        semantic_identical = {}
+        for key in names:
+            if not key.endswith(".json"):
+                continue
+            digests = set()
+            for row in rows:
+                data = S.load(f"public/pilots/{row['run_id']}/outputs/{key}")
+                digests.add(S.sha_bytes(S.canonical(data)))
+            semantic_identical[key] = len(digests) == 1
+        result["tasks"][case] = {
+            "runs": rows,
+            "scores": [row["score"] for row in rows],
+            "all_passed": all(row["passed"] for row in rows),
+            "byte_identical_across_three": byte_identical,
+            "semantic_identical_across_three": semantic_identical,
+        }
+    return result
 
 
 def experiment_hash(claim) -> str:

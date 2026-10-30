@@ -1,0 +1,80 @@
+[
+  {
+    "source_stdout_line": 44,
+    "callId": "call_00_O5SvpjK36CDrMKNPTRtj2565",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 52,
+    "callId": "call_00_1ujkxgQnNnp85NLd3HbY7608",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 66,
+    "callId": "call_00_ZIP6Lut5QhlBGXrjW9o37596",
+    "tool": "pwsh",
+    "result": "Error: sandbox escalation to \"danger-full-access\" requires approval, but no approval channel is available"
+  },
+  {
+    "source_stdout_line": 80,
+    "callId": "call_00_g3wZ5bOR6sIi1fQyqpON1194",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 172,
+    "callId": "call_02_mbHJu8vCd0Qem2F7qW5Z3987",
+    "tool": "grep",
+    "result": "Error: grep search failed (exit 2): rg: the literal \"\\n\" is not allowed in a regex\n\nConsider enabling multiline mode with the --multiline flag (or -U for short).\nWhen multiline mode is enabled, new line characters can be matched."
+  },
+  {
+    "source_stdout_line": 174,
+    "callId": "call_03_NXttnk6WTcKe0irPoUnc6597",
+    "tool": "grep",
+    "result": "Error: grep search failed (exit 2): rg: the literal \"\\n\" is not allowed in a regex\n\nConsider enabling multiline mode with the --multiline flag (or -U for short).\nWhen multiline mode is enabled, new line characters can be matched."
+  },
+  {
+    "source_stdout_line": 176,
+    "callId": "call_04_6d1Osx558MdFVUz6F2OY5313",
+    "tool": "grep",
+    "result": "Error: grep search failed (exit 2): rg: the literal \"\\n\" is not allowed in a regex\n\nConsider enabling multiline mode with the --multiline flag (or -U for short).\nWhen multiline mode is enabled, new line characters can be matched."
+  },
+  {
+    "source_stdout_line": 225,
+    "callId": "call_00_jYKHRFxrFBjip7cZsf0J9746",
+    "tool": "read",
+    "result": "Error: offset 2 is out of range for \"<participant_workspace>\\outputs\\.probe-eol.txt\" (1 lines)"
+  },
+  {
+    "source_stdout_line": 226,
+    "callId": "call_01_QggClGyOC1QctGIf4VUU5513",
+    "tool": "read",
+    "result": "Error: offset 2 is out of range for \"<participant_workspace>\\outputs\\.probe-noeol.txt\" (1 lines)"
+  },
+  {
+    "source_stdout_line": 295,
+    "callId": "call_00_4eCrsQ9tjPmeXodHrhcf6351",
+    "tool": "pwsh",
+    "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite(<participant_workspace>)"
+  },
+  {
+    "source_stdout_line": 301,
+    "callId": "call_00_JydUf8r6jYZUt1XsQPOV8481",
+    "tool": "edit",
+    "result": "Error: old_string and new_string must differ"
+  },
+  {
+    "source_stdout_line": 303,
+    "callId": "call_01_ZK55aRsY3WEzmKkYeHtX3173",
+    "tool": "edit",
+    "result": "Error: old_string and new_string must differ"
+  },
+  {
+    "source_stdout_line": 311,
+    "callId": "call_01_ehYHftCSAEWEtCc6smNM0212",
+    "tool": "edit",
+    "result": "Error: old_string was not found in \"<participant_workspace>\\outputs\\.probe-noeol.txt\""
+  }
+]

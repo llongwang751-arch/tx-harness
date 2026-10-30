@@ -1,22 +1,22 @@
 {
   "counts": {
-    "records": 41
+    "records": 45
   },
   "files": [
     {
-      "bytes": 184160,
+      "bytes": 204784,
       "path": "ledger/runs.jsonl",
-      "sha256": "ca397d813989ecab180d96a35f75096304d607291d3668587bec08babfa02ed8"
+      "sha256": "57cf4acc6bb8d3bfd8183abececdd4bfed5e97db1bbcf334cd7c8e0cc848d6bc"
     },
     {
-      "bytes": 19224,
+      "bytes": 20916,
       "path": "ledger/formal-table.json",
-      "sha256": "3501cd8284c6d7396baf746edfdb46c623493db5250e0332cfbc357d88b0cc54"
+      "sha256": "ef58e4a869a6daaa16da8461884f3926767f5c280e423f6809540f378a94797f"
     },
     {
       "bytes": 4327,
       "path": "ledger/accounts.json",
-      "sha256": "247b56dd5baef74955c8ae98794aad272e3c1b4f0fdbce072dca979ce0996b42"
+      "sha256": "ca0de59d9454d646cbaab1b4042621a1901ce748e95128b2d6f2b0d5668dbbda"
     },
     {
       "bytes": 2197,
@@ -31,12 +31,12 @@
     {
       "bytes": 5760,
       "path": "ledger/conclusions/CL-01.json",
-      "sha256": "e57a0d3feeff3bcb4f8ebcf46140accdf43c2e58c56ab2085d5645621f0a2607"
+      "sha256": "76e01e9c6f447de9ddedb30e52c8e5dace9c367dd8684b629c315b502954cf35"
     },
     {
       "bytes": 6341,
       "path": "ledger/conclusions/CL-02.json",
-      "sha256": "cc449d53a1ce90256241da98361e375a1d0644a58566b664e3f21b8aad0e23dc"
+      "sha256": "819cdff78890e0bacf620fd4d1062eb9a02c61f720d7c460e1584897424c23d5"
     },
     {
       "bytes": 13755,

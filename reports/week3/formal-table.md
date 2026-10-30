@@ -2,7 +2,7 @@
 
 本页由 `python -X utf8 scripts/ledger.py build` 从 `ledger/runs.jsonl` 直接生成，不手工编辑。纳入条件：`account=product_run` 且规则冻结、题面有效、证据有效、无污染。未知裁定不计分、不记失败，也不从已评部分折算满分。表内“产物分”是 0–60 的文件契约分，不含人工过程维度。
 
-- 产品运行记录：41（端到端 25、固定响应主臂 4、接入校准 6）
+- 产品运行记录：45（端到端 25、固定响应主臂 4、接入校准 6）
 - 通过四道门槛：29；被门槛挡下：0；未知裁定：5
 
 ## 五题端到端：逐产品汇总
@@ -84,6 +84,10 @@
 |---|---|---|---|---:|---|
 | DSH | `dsh-sdk-T01-r2` | T01 | pass | 60 | high |
 | DSH | `dsh-sdk-T01-r3` | T01 | pass | 60 | high |
+| DSH | `dsh-sdk-T03-r2` | T03 | pass | 60 | high |
+| DSH | `dsh-sdk-T03-r3` | T03 | pass | 60 | high |
+| DSH | `dsh-sdk-T05-r2` | T05 | pass | 60 | high |
+| DSH | `dsh-sdk-T05-r3` | T05 | pass | 60 | high |
 
 重复批只用于回答“同一产品同一题重复跑是否稳定”，不增加题量、不改变上面的五题汇总；结果见 [CL-03](../../ledger/conclusions/CL-03.json)。
 

@@ -785,7 +785,8 @@ def build_table(records):
 # model, to measure output stability instead of adding new task coverage.
 # ---------------------------------------------------------------------------
 
-REPEAT_PACKAGES = ("dsh-sdk-T01-r2", "dsh-sdk-T01-r3")
+REPEAT_PACKAGES = ("dsh-sdk-T01-r2", "dsh-sdk-T01-r3", "dsh-sdk-T03-r2", "dsh-sdk-T03-r3",
+                   "dsh-sdk-T05-r2", "dsh-sdk-T05-r3")
 
 
 def repeat_runs():
