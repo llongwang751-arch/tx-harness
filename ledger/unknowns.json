@@ -13,18 +13,28 @@
       "id": "U01",
       "question": "Can five-product differences be attributed to the Harness independently of model and Skill?",
       "state": "partially_resolved_controlled_component_track",
-      "known": "25 end-to-end runs and 4 controlled arms are registered. None of the five products attests its backend model. The controlled track (scripted model response, one frozen MCP tool, identical arguments) removes model and Skill text from generation, so its differences are attributable to the transport/orchestration layer only. No five-product causal ranking exists.",
+      "known": "27 end-to-end and repeat runs are registered. None of the five products attests its backend model. The controlled track (scripted model response, one frozen MCP tool, identical arguments) removes model and Skill text from generation, so its differences are attributable to the transport/orchestration layer only. On 10-31 the bare-model probe was attempted concretely: api.deepseek.com is reachable, but the credential stored by the local DSH install is an account-platform grant and the public API rejects it (HTTP 401), so no bare call was made. No five-product causal ranking exists.",
       "impact": "Blocks any ranking claim and any statement that a product's score difference is a Harness quality difference.",
-      "next_action": "Reopen only with a supported interface that discloses the backend model of a product, so that one product can be probed both inside and outside its Harness with the same model.",
+      "next_action": "Provide a public API key or a documented gateway that serves the same model outside the product, then run one bare arm on the same task. Without that, keep the account empty.",
       "stop_condition": "Stop after the controlled component track is complete and published. Do not repeat GUI preflights or WorkBuddy calibrations; do not infer a model from a UI label.",
       "scored": false,
       "denominator": "excluded",
       "review_by": "2026-11-07",
-      "run_ids": ["CA11-dsh-error", "CA12-codex-success", "CA13-dsh-success",
-                  "CA14-codex-error", "WBC00-workbuddy-calibration",
-                  "WBC01-workbuddy-calibration", "WBC02-workbuddy-calibration"],
-      "evidence": ["reports/attribution-boundaries.json", "reports/controlled-adapter-v1.json",
-                   "reports/controlled-workbuddy.json", "ledger/formal-table.json"]
+      "run_ids": [
+        "CA11-dsh-error",
+        "CA12-codex-success",
+        "CA13-dsh-success",
+        "CA14-codex-error",
+        "WBC00-workbuddy-calibration",
+        "WBC01-workbuddy-calibration",
+        "WBC02-workbuddy-calibration"
+      ],
+      "evidence": [
+        "reports/attribution-boundaries.json",
+        "reports/controlled-adapter-v1.json",
+        "reports/controlled-workbuddy.json",
+        "ledger/formal-table.json"
+      ]
     },
     {
       "id": "U02",
@@ -37,7 +47,10 @@
       "scored": false,
       "denominator": "excluded",
       "review_by": "2026-11-07",
-      "evidence": ["reports/evaluation-v2.json", "docs/evaluation-plan.md"]
+      "evidence": [
+        "reports/evaluation-v2.json",
+        "docs/evaluation-plan.md"
+      ]
     },
     {
       "id": "U03",
@@ -50,10 +63,16 @@
       "scored": false,
       "denominator": "excluded",
       "review_by": "2026-11-07",
-      "run_ids": ["WBC00-workbuddy-calibration", "WBC01-workbuddy-calibration",
-                  "WBC02-workbuddy-calibration"],
-      "evidence": ["reports/gui-interface-preflight.md", "reports/controlled-workbuddy.json",
-                   "public/supplements/gui-controls-v1/observations.json"]
+      "run_ids": [
+        "WBC00-workbuddy-calibration",
+        "WBC01-workbuddy-calibration",
+        "WBC02-workbuddy-calibration"
+      ],
+      "evidence": [
+        "reports/gui-interface-preflight.md",
+        "reports/controlled-workbuddy.json",
+        "public/supplements/gui-controls-v1/observations.json"
+      ]
     },
     {
       "id": "U04",
@@ -66,7 +85,10 @@
       "scored": false,
       "denominator": "excluded",
       "review_by": "2026-11-07",
-      "evidence": ["reports/week2/external-review-packet.md", "docs/ledger.md"]
+      "evidence": [
+        "reports/week2/external-review-packet.md",
+        "docs/ledger.md"
+      ]
     },
     {
       "id": "U05",
@@ -79,8 +101,11 @@
       "scored": false,
       "denominator": "excluded",
       "review_by": "2026-11-07",
-      "evidence": ["ledger/revisions/index.json", "ledger/revisions/independent-check.json",
-                   "reports/grader-audit-v3.json"]
+      "evidence": [
+        "ledger/revisions/index.json",
+        "ledger/revisions/independent-check.json",
+        "reports/grader-audit-v3.json"
+      ]
     },
     {
       "id": "U06",
@@ -93,9 +118,14 @@
       "scored": false,
       "denominator": "excluded",
       "review_by": "2026-11-07",
-      "run_ids": ["W02-window-reopen"],
-      "evidence": ["reports/window-reopen-v1.md", "reports/window-reopen-v2.md",
-                   "ledger/runs.jsonl"]
+      "run_ids": [
+        "W02-window-reopen"
+      ],
+      "evidence": [
+        "reports/window-reopen-v1.md",
+        "reports/window-reopen-v2.md",
+        "ledger/runs.jsonl"
+      ]
     },
     {
       "id": "U07",
@@ -108,8 +138,14 @@
       "scored": false,
       "denominator": "excluded",
       "review_by": "2026-11-07",
-      "run_ids": ["R01-reopen", "R02-control"],
-      "evidence": ["reports/window-reopen-v2.md", "ledger/runs.jsonl"]
+      "run_ids": [
+        "R01-reopen",
+        "R02-control"
+      ],
+      "evidence": [
+        "reports/window-reopen-v2.md",
+        "ledger/runs.jsonl"
+      ]
     }
   ]
 }

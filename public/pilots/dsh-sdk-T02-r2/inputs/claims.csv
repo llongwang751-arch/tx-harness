@@ -1,0 +1,8 @@
+claim_id,submitted_date,employee_group,category,amount_cents,receipt_state,nights
+Q001,2026-08-31,office,meal,6200,present,0
+Q002,2026-09-01,office,meal,8200,present,0
+Q003,2026-09-02,field,taxi,24000,present,0
+Q004,2026-09-02,office,taxi,24000,present,0
+Q005,2026-09-03,field,meal,2500,missing,0
+Q006,2026-09-03,office,lodging,130000,present,2
+Q007,2026-09-03,office,lodging,80000,present,4

@@ -142,6 +142,7 @@ REPRODUCE = {"CL-01": lambda: reproduce_cl01(S.build_runs(), S.build_table(S.bui
 
 REPEAT_CASES = {
     "T01": ("dsh-sdk-T01-r1", "dsh-sdk-T01-r2", "dsh-sdk-T01-r3"),
+    "T02": ("dsh-sdk-T02-r1", "dsh-sdk-T02-r2", "dsh-sdk-T02-r3"),
     "T03": ("dsh-sdk-T03-r1", "dsh-sdk-T03-r2", "dsh-sdk-T03-r3"),
     "T05": ("dsh-sdk-T05-r1", "dsh-sdk-T05-r2", "dsh-sdk-T05-r3"),
 }

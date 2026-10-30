@@ -87,17 +87,17 @@
       "sha256": "bd6aa3ed050b280ed4cfaa780b4e1443bf2569309b01b19eb64a4b34467086e5"
     }
   ],
-  "explanation": "分数层面分两种：T01、T03 三次全过，属稳定通过；T05 一次失败两次通过，属单次波动。字节层面比分数更不稳定：同分也可能排版不同（T01 的 exceptions.json、T03 的 change_log.json），所以报告里凡写“逐字节相同”都必须落到具体文件。方法上的含义很直接：n=1 的分差不能当能力差。正式表里 DSH 的 270/300 来自单次抽样，其中 T05 的 30 分缺口在两次重复中都没有出现；这一条只削弱“DSH 在 T05 会失分”的说法，不改变那次运行本身确实失分的事实，也不改变五题汇总的算术。",
+  "explanation": "分数层面分两种：T01、T02、T03 三次全过，属稳定通过；T05 一次失败两次通过，属单次波动。字节层面比分数更不稳定：同分也可能排版不同（T01 的 exceptions.json、T03 的 change_log.json），只有 T02 是四个文件三次全同。所以报告里凡写“逐字节相同”都必须落到具体文件。方法上的含义很直接：n=1 的分差不能当能力差。正式表里 DSH 的 270/300 来自单次抽样，其中 T05 的 30 分缺口在两次重复中都没有出现；这一条只削弱“DSH 在 T05 会失分”的说法，不改变那次运行本身确实失分的事实，也不改变五题汇总的算术。",
   "id": "CL-03",
-  "observation": "DSH 在 T01、T03、T05 上各跑三次（T01 为 r1 旧批 + r2/r3 今日批，T03/T05 同）。T01 三次 60/60；三个产物中 order_ledger.csv 与 aggregate.json 三次逐字节相同，exceptions.json 的 JSON 内容三次相同，但 r3 把数组展开成多行（273→301 字符）。T03 三次 60/60；五个交付文件中四个逐字节相同，change_log.json 在 r3 排版不同但 JSON 内容相同。T05 三次是 30/60、60/60、60/60：r2 与 r3 的 invoice_ledger.csv 与 summary.json 逐字节相同，r1 的这两个文件数值不同——即那次失分没有复现。",
+  "observation": "DSH 在 T01、T02、T03、T05 上各跑三次（r1 旧批 + r2/r3 今日批），共 12 次。T01 三次 60/60；三个产物中 order_ledger.csv 与 aggregate.json 三次逐字节相同，exceptions.json 的 JSON 内容三次相同，但 r3 把数组展开成多行（273→301 字符）。T02 三次 60/60，四个交付文件三次逐字节相同。T03 三次 60/60；五个交付文件中四个逐字节相同，change_log.json 在 r3 排版不同但 JSON 内容相同。T05 三次是 30/60、60/60、60/60：r2 与 r3 的 invoice_ledger.csv 与 summary.json 逐字节相同，r1 的这两个文件数值不同——即那次失分没有复现。T04 未纳入重复批。",
   "pin_note": "哈希在第三周定稿时冻结；数据变化必须另记差异并更新 pinned_at，不得静默刷新。",
-  "pinned_against_run_file_sha256": "57cf4acc6bb8d3bfd8183abececdd4bfed5e97db1bbcf334cd7c8e0cc848d6bc",
+  "pinned_against_run_file_sha256": "415bde6db143d72a64fe5ee535e946e0466bd0ca5aac0398ea06687cce719a7b",
   "pinned_at": "2026-10-31",
   "question": "同一产品、同一题、同一请求配置重复三次，分数与产物字节是否复现？",
   "reproducible_experiment": {
     "claim": "CL-03",
     "command": "python -X utf8 scripts/ledger.py reproduce CL-03",
-    "expected_output_sha256": "b25df422254dbcbbb6244440fa5443128f85497c300a6ab78f67fed257f4d393",
+    "expected_output_sha256": "7ffe278ceb4177b1b38ecc893d8c175cadf5e3bc3ea1d766aaa3ec43f6a4e81b",
     "what_it_does": "只读比较三道题各三次的产物哈希与 JSON 语义哈希，输出逐文件字节/语义一致性与每题裁定。"
   },
   "schema": "tx-harness/conclusion/v1",
@@ -115,8 +115,13 @@
     },
     {
       "factor": "题面难度差异",
-      "impact": "T01/T03 的稳定通过不能外推到多步工具链或长上下文场景",
-      "why": "三题都是单轮、单会话、结构化产物"
+      "impact": "T01/T02/T03 的稳定通过不能外推到多步工具链或长上下文场景",
+      "why": "这三题都是单轮、单会话、结构化产物"
+    },
+    {
+      "factor": "T04 未重复",
+      "impact": "五题里只有四题完成 n=3，T04 的两轮发布协议仍是单次观察",
+      "why": "T04 走独立的运行与发布链路，本轮没有接入重复批"
     },
     {
       "factor": "服务端状况",
@@ -125,8 +130,8 @@
     }
   ],
   "verdict": {
-    "claim": "T01/T03 三次稳定通过；T05 一次失败未复现；字节稳定性按文件分化",
-    "confidence": "high for these nine runs; none for failure rates or general stability",
-    "scope": "一款产品、三道题、各三次串行；不含其他产品"
+    "claim": "T01/T02/T03 三次稳定通过；T05 一次失败未复现；字节稳定性按文件分化",
+    "confidence": "high for these twelve runs; none for failure rates or general stability",
+    "scope": "一款产品、四道题各三次串行；T04 未重复；不含其他产品"
   }
 }

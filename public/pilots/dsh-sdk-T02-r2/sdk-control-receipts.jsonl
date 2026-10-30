@@ -1,0 +1,5 @@
+{"received_at": "2026-10-30T17:38:47.824599+00:00", "source_stdout_line": 2, "frame": {"jsonrpc": "2.0", "id": 1, "result": {"serverInfo": {"name": "deepseek-harness-sdk-runtime", "version": "0.0.1"}}}}
+{"received_at": "2026-10-30T17:38:47.858163+00:00", "source_stdout_line": 7, "frame": {"jsonrpc": "2.0", "method": "session.status", "params": {"sessionId": "pilot-dsh-sdk-T02-be489d22-0224-4ad7-87ac-1cb34a59f0cf", "status": "running"}}}
+{"received_at": "2026-10-30T17:38:47.862807+00:00", "source_stdout_line": 10, "frame": {"jsonrpc": "2.0", "id": 2, "result": {"messageId": "f5b57941-926a-4fe7-b038-0c344d07a273"}}}
+{"received_at": "2026-10-30T17:39:13.057213+00:00", "source_stdout_line": 89, "frame": {"jsonrpc": "2.0", "method": "session.status", "params": {"sessionId": "pilot-dsh-sdk-T02-be489d22-0224-4ad7-87ac-1cb34a59f0cf", "status": "idle"}}}
+{"received_at": "2026-10-30T17:39:13.064038+00:00", "source_stdout_line": 90, "frame": {"jsonrpc": "2.0", "id": 3, "result": {}}}

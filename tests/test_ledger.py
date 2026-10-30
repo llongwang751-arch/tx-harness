@@ -175,13 +175,14 @@ class LedgerArtifacts(unittest.TestCase):
     def test_repeat_batch_is_counted_but_stays_out_of_the_five_product_summary(self):
         records = sources.build_runs()
         repeats = [record for record in records if record["track"] == "repeat_batch"]
-        self.assertEqual(len(repeats), 6)
+        self.assertEqual(len(repeats), 8)
         for record in repeats:
             self.assertEqual(record["verdict"]["state"], "pass")
             self.assertEqual(record["verdict"]["score_for_aggregate"], 60.0)
         table = sources.build_table(records)
-        self.assertEqual(len(table["repeat_rows"]), 6)
-        self.assertEqual({row["case_id"] for row in table["repeat_rows"]}, {"T01", "T03", "T05"})
+        self.assertEqual(len(table["repeat_rows"]), 8)
+        self.assertEqual({row["case_id"] for row in table["repeat_rows"]},
+                         {"T01", "T02", "T03", "T05"})
         for product in table["products"]:
             self.assertEqual(product["runs"], 5)
 
@@ -193,6 +194,7 @@ class LedgerArtifacts(unittest.TestCase):
         self.assertEqual(projection["T01"]["scores"], [60.0, 60.0, 60.0])
         self.assertFalse(projection["T01"]["byte_identical_across_three"]["exceptions.json"])
         self.assertTrue(projection["T01"]["semantic_identical_across_three"]["exceptions.json"])
+        self.assertTrue(all(projection["T02"]["byte_identical_across_three"].values()))
         self.assertFalse(projection["T03"]["byte_identical_across_three"]["change_log.json"])
         self.assertTrue(projection["T03"]["semantic_identical_across_three"]["change_log.json"])
         # The one T05 failure is a single draw: two repeats scored full marks.

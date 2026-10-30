@@ -1,0 +1,32 @@
+{
+  "files": {
+    "adapter-source/run_dsh_multiturn_pilot.py": "0b2899b87a456df40cb72fd5130667ceec73e00354e4d85f05939d8224fbcb34",
+    "adapter-source/run_dsh_pilot.py": "b4fb519d8ce1f7fc26180ebb2591a1c301ba23afa85a41894933680b320479a0",
+    "adapter-source/run_dsh_sdk_pilot.py": "02bd67a75ae7c319ca2ee4f04dc0c2f6b20349b0d5ab590b3300bc7a46fe1cc8",
+    "case-prompt.md": "dfc66b38e8b907c296dbba7d1340b7c6f919707c0f4fc94daa0d2752be71f552",
+    "claims.json": "589d58e9bc8ca00d2f2df2b480e0745594b0e282aa7580f2c11cbb675d26af14",
+    "deterministic-verification.json": "0dfb719207c7b1a11f5efbf31ee0ae0b10b80cae9633fe00547d11f8db79d9a6",
+    "inputs/00_evaluation_contract.md": "2f1d7899ceebcc471f1d1d769da0923c9f99370caa899fafe8ac1bbd4e1d071b",
+    "inputs/01_finance_v2.md": "7d154bba07e3edc7bdc197da40b4e6f62b0b2fcf1a59e4b88690d60f9ed48f83",
+    "inputs/02_finance_v3.md": "f00b55f806270765f0a17ad26c89fbce20bfe8b2f866bf0b616efe1bbd57043e",
+    "inputs/03_operations_guide.md": "d3643eeda58a1662336e847eef2792f2b43fcd63e200b65b110e56d7b94cd36d",
+    "inputs/04_faq.md": "7e2612709f2b1a3cad43416cb97cf3a1efa79dabccb5b0d49e0cdad0d2f42e4a",
+    "inputs/05_finance_exception.md": "17c194b95fdd5913fcf7f1514d3bcd02e2ff0f19fc9facf4488b2de29ffb6e20",
+    "inputs/claims.csv": "c58b7839ff69122e28e94a6c505f9e1b038c1edaaa5962574314480b2e4d6da8",
+    "observed-tool-errors.json": "18fb73fe666524fc1848e98a2f6ae8a409d051b97d18ed250a207cf51836aecd",
+    "one-run-overlay.redacted.yml": "739be155337a8b7f7f135868554116e9ad5330a60f657e74b12d991723515487",
+    "outputs/conflicts.json": "a46add5c549db7843a039920904f05d81512b260e6bc65bff44b14bb672c39cb",
+    "outputs/decisions.csv": "337b8cf83c8cb17e7119e3fa2b31049880c79463a4a94e43588d8562942287de",
+    "outputs/evidence_index.json": "21093d0ace44a24d0c3a1d5a04510e1821a1d917d9cd1d863762f34385f236eb",
+    "outputs/summary.json": "a00dadd3d7daa9d9ca4a77f3b634e02a5dbd0ae875768b83633b9ca10ac01ee0",
+    "projection-receipt.json": "902de3348dda4723de2e1c21d4348400a77a62e8833335f7fc13ce76da528a91",
+    "prompt-recorded-file.md": "4d1b97e111a964f09dc26e856eb8be26296de06a291b841fe37daf779ce965e0",
+    "prompt.md": "fc1e3010c1e1f9127a15384211c0005336f21c4ec9e12581d75d947a51d2d60a",
+    "README.md": "2c26c382cb7bf2c5f12e89b8f872f2a8e6741eb7f23d33d8352660a2799a0b32",
+    "run-metadata.json": "f0e14bd2be38e705990ee6d40163e02838665751474f02fadc27b4ddd48b290f",
+    "sdk-control-receipts.jsonl": "da6b531d505e08b47f0aa9f0141a1cbf995ac5d004b1228bcaca0cf8a7feb679",
+    "sdk-sent.jsonl": "29eb916d2126d00fc5b9b76a591bcbf9a62ee1facd7ce98983a7bd4b1e1fd127",
+    "transmission-receipt.json": "edd8618c0885d06806ee71c52c387fa0b39a4ed9b29c9bca4e1d788972483d41",
+    "visible-events.jsonl": "b7656eef76be38288705896374fe1c4644233c5f40fb339830f3331c75132409"
+  }
+}

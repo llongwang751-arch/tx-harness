@@ -65,7 +65,7 @@
   "id": "CL-02",
   "observation": "四臂各自只发起 1 次工具调用、2 次模型请求，退出码均为 0。两个成功臂生成的产物逐字节相同（sha256 a21822b8…d530d，125 字节）；两个错误臂都没有产物，工具层各返回 1 次结构化错误。把两臂的行为写成签名（调用次数、模型请求数、是否有产物、错误次数）后，Codex 与 DSH 的签名相同，即这批刺激下没有观察到跨产品差异。",
   "pin_note": "哈希在第三周定稿时冻结。数据变化必须另记差异并更新 pinned_at，不得静默刷新；--check 会重跑实验并比对 expected_output_sha256。",
-  "pinned_against_run_file_sha256": "57cf4acc6bb8d3bfd8183abececdd4bfed5e97db1bbcf334cd7c8e0cc848d6bc",
+  "pinned_against_run_file_sha256": "415bde6db143d72a64fe5ee535e946e0466bd0ca5aac0398ea06687cce719a7b",
   "pinned_at": "2026-10-31",
   "question": "把模型响应换成同一脚本、工具参数冻结之后，Codex 与 DSH 在成功臂与错误臂上的剩余差异是否还能归给 Harness？",
   "reproducible_experiment": {

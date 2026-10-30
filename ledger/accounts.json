@@ -7,7 +7,7 @@
   },
   "bare_model_probe": {
     "definition": "the same model called without any product Harness, to separate model behaviour from Harness behaviour",
-    "empty_reason": "no attested shared model endpoint exists for the five products, so a bare probe cannot be matched to a product run; an unmatched probe would not change any five-product conclusion",
+    "empty_reason": "no attested shared model endpoint exists for the five products, so a bare probe cannot be matched to a product run; an unmatched probe would not change any five-product conclusion. 10-31 attempt: api.deepseek.com was reachable but the locally stored credential is an account-platform grant and the public API answered 401",
     "entries": 0,
     "stop_condition": "reopen only when one product's exact model is both disclosed and reachable outside its Harness"
   },
@@ -104,12 +104,12 @@
       "five_product_end_to_end": 25,
       "fixed_local_fixture_sessions": 10,
       "native_desktop_tasks": 4,
-      "pass": 35,
-      "repeat_batch_sessions": 6,
+      "pass": 37,
+      "repeat_batch_sessions": 8,
       "unknown": 5
     },
     "definition": "an actually submitted product task/session with its own configuration, start and end, and retained evidence",
-    "entries": 45,
+    "entries": 47,
     "recompute": {
       "artifact": "ledger/runs.jsonl",
       "expected": null,

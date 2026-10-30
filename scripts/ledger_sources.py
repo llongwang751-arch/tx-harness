@@ -785,8 +785,8 @@ def build_table(records):
 # model, to measure output stability instead of adding new task coverage.
 # ---------------------------------------------------------------------------
 
-REPEAT_PACKAGES = ("dsh-sdk-T01-r2", "dsh-sdk-T01-r3", "dsh-sdk-T03-r2", "dsh-sdk-T03-r3",
-                   "dsh-sdk-T05-r2", "dsh-sdk-T05-r3")
+REPEAT_PACKAGES = ("dsh-sdk-T01-r2", "dsh-sdk-T01-r3", "dsh-sdk-T02-r2", "dsh-sdk-T02-r3",
+                   "dsh-sdk-T03-r2", "dsh-sdk-T03-r3", "dsh-sdk-T05-r2", "dsh-sdk-T05-r3")
 
 
 def repeat_runs():
@@ -978,7 +978,9 @@ def build_accounts(records):
             "entries": 0,
             "empty_reason": "no attested shared model endpoint exists for the five products, so a "
                             "bare probe cannot be matched to a product run; an unmatched probe "
-                            "would not change any five-product conclusion",
+                            "would not change any five-product conclusion. 10-31 attempt: "
+                            "api.deepseek.com was reachable but the locally stored credential is an "
+                            "account-platform grant and the public API answered 401",
             "stop_condition": "reopen only when one product's exact model is both disclosed and "
                               "reachable outside its Harness",
         },

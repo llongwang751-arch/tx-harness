@@ -1,22 +1,22 @@
 {
   "counts": {
-    "records": 45
+    "records": 47
   },
   "files": [
     {
-      "bytes": 204784,
+      "bytes": 214316,
       "path": "ledger/runs.jsonl",
-      "sha256": "57cf4acc6bb8d3bfd8183abececdd4bfed5e97db1bbcf334cd7c8e0cc848d6bc"
+      "sha256": "415bde6db143d72a64fe5ee535e946e0466bd0ca5aac0398ea06687cce719a7b"
     },
     {
-      "bytes": 20916,
+      "bytes": 21762,
       "path": "ledger/formal-table.json",
-      "sha256": "ef58e4a869a6daaa16da8461884f3926767f5c280e423f6809540f378a94797f"
+      "sha256": "fc4602f71531944949032f2a6be2b790f9ee691287f0b10de87f8a5c7d3b4dec"
     },
     {
-      "bytes": 4327,
+      "bytes": 4469,
       "path": "ledger/accounts.json",
-      "sha256": "ca0de59d9454d646cbaab1b4042621a1901ce748e95128b2d6f2b0d5668dbbda"
+      "sha256": "bba46b24d992eef9ef4fd7668a8320d1cf5dc34c48885198b645a785fac5fbea"
     },
     {
       "bytes": 2197,
@@ -24,19 +24,19 @@
       "sha256": "28c961703ed7e8ce12efd0f04c02095caea47fd32bedc5eb59bae75c575381a4"
     },
     {
-      "bytes": 8316,
+      "bytes": 8751,
       "path": "ledger/unknowns.json",
-      "sha256": "0a260c178234b3ff5700503e6f12e7d403a97be0bd8f6df0004e9dc15bb32e19"
+      "sha256": "3a8c3f76c4c1c49b4e04ff4824259eb31d07cd6bd3f1cd16a4b4d5f03ada10b9"
     },
     {
       "bytes": 5760,
       "path": "ledger/conclusions/CL-01.json",
-      "sha256": "76e01e9c6f447de9ddedb30e52c8e5dace9c367dd8684b629c315b502954cf35"
+      "sha256": "50ce0764eddf738360bf4948070d5902dad0a4d10102b430958bb32fad1a4689"
     },
     {
       "bytes": 6341,
       "path": "ledger/conclusions/CL-02.json",
-      "sha256": "819cdff78890e0bacf620fd4d1062eb9a02c61f720d7c460e1584897424c23d5"
+      "sha256": "61218b5ac4703fa7e3af9a582e61cfe8979913d92ea72d658727cf7ff15451ac"
     },
     {
       "bytes": 13755,

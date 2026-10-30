@@ -181,8 +181,8 @@
     "comparison_excluded": 0,
     "controlled_contract": 4,
     "end_to_end": 25,
-    "product_runs": 45,
-    "repeat_batch": 6,
+    "product_runs": 47,
+    "repeat_batch": 8,
     "unknown_verdicts": 5
   },
   "generation_basis": "deterministic projection of ledger/runs.jsonl; no clock, no product run",
@@ -762,6 +762,40 @@
       "product_id": "dsh",
       "ranking_eligible": false,
       "run_id": "dsh-sdk-T01-r3",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T02",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T02-r2",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T02",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T02-r3",
       "table_eligible": true,
       "verdict": "pass"
     },

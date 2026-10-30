@@ -9,22 +9,22 @@
     {
       "json_pointer": "",
       "path": "ledger/runs.jsonl",
-      "sha256": "57cf4acc6bb8d3bfd8183abececdd4bfed5e97db1bbcf334cd7c8e0cc848d6bc"
+      "sha256": "415bde6db143d72a64fe5ee535e946e0466bd0ca5aac0398ea06687cce719a7b"
     },
     {
       "json_pointer": "/counts",
       "path": "ledger/formal-table.json",
-      "sha256": "ef58e4a869a6daaa16da8461884f3926767f5c280e423f6809540f378a94797f"
+      "sha256": "fc4602f71531944949032f2a6be2b790f9ee691287f0b10de87f8a5c7d3b4dec"
     },
     {
       "json_pointer": "/product_run",
       "path": "ledger/accounts.json",
-      "sha256": "ca0de59d9454d646cbaab1b4042621a1901ce748e95128b2d6f2b0d5668dbbda"
+      "sha256": "bba46b24d992eef9ef4fd7668a8320d1cf5dc34c48885198b645a785fac5fbea"
     },
     {
       "json_pointer": "",
       "path": "reports/week3/formal-table.md",
-      "sha256": "3967ae49de1a2c02a5b74046586d39ef66ab907321dfc3ac35195b88eac6ad48"
+      "sha256": "6b7449cb45ab361d68c9044d2cfa66af9579440003efa3cbba6536c1854d7ac7"
     },
     {
       "json_pointer": "/runs",
@@ -39,20 +39,20 @@
     {
       "json_pointer": "",
       "path": "tests/test_ledger.py",
-      "sha256": "a2b1e7b5217b0ca3288466529a9ff9747b87d4b7696996f23851da3267a052ff"
+      "sha256": "d1ca7b0feb059f8fc5ba2d95325a7e02165b535c5a5ac08436c3e146666c127b"
     }
   ],
   "explanation": "入选不是把门槛写松，而是每条记录都能把四件事重新算出来：题面与答案的哈希等于评测账引用的冻结来源；提交题面以冻结题面开头（桌面产品转为 CRLF 行尾时按行尾规范化比较，并在记录里写明）；证据文件与分级规则一致；输入副本与 cases/<题>/inputs 逐字节一致（T04 的补发附件按额外文件登记，不算篡改）。29 条都通过，说明这一批的记录缺口不在完整性，而在可控性——没有任何一款产品证实了后端模型，也没有一份协议是预注册冻结的，因此排名条件（入选门槛 + 模型证实 + 预注册协议）无人满足。门槛确实会拒绝：tests/test_ledger.py 分别植入改一个输出字节、换掉题面、制造污染状态、给未知裁定塞分数、复制运行号五种违规，五道检查各自报错。元宝 159/300 的差距来自交付内容本身（T01 42、T02 27、T03 0、T05 30，T04 60），是产物分数，不是 Harness 分数。",
   "id": "CL-01",
   "observation": "台账共 41 条产品运行：25 条五题端到端（5 款×5 题）、4 条固定响应工具契约主臂、6 条接入校准、4 条原生桌面任务、2 条同题重复（见 CL-03）。按四道门槛过滤后，29 条正式轨道记录（25 端到端 + 4 主臂）全部入选，0 条被门槛剔除；校准、原生轨道与重复批不参与五题比较。裁定分布为通过 26、失败 5、未知 5。五款产品在五题上各 5 条可判运行，无缺题、无未知：Codex 300/300、WorkBuddy 300/300、DSH 270/300（4 过 1 失）、元宝专家模式 159/300（1 过 4 失）、豆包工作任务模式 300/300。正式表仍不发布名次。",
   "pin_note": "哈希在第三周定稿时冻结。数据变化必须另记差异并更新 pinned_at，不得静默刷新；--check 会重跑实验并比对 expected_output_sha256。",
-  "pinned_against_run_file_sha256": "57cf4acc6bb8d3bfd8183abececdd4bfed5e97db1bbcf334cd7c8e0cc848d6bc",
+  "pinned_against_run_file_sha256": "415bde6db143d72a64fe5ee535e946e0466bd0ca5aac0398ea06687cce719a7b",
   "pinned_at": "2026-10-31",
   "question": "把模型与 Skill 的不确定性留在账外，只保留规则冻结、题面有效、证据有效、无污染的运行，五款产品各有几条可以进入正式比较表？",
   "reproducible_experiment": {
     "claim": "CL-01",
     "command": "python -X utf8 scripts/ledger.py reproduce CL-01",
-    "expected_output_sha256": "e40d6ddffeceb1e072dbb39d5861cf1a4e6119f573bf9996ead3c6d9e7919f47",
+    "expected_output_sha256": "0e951d1a3a3ba9e0cee0b64968ec8b79e78731f23f17c0415d2074226bdaa7ce",
     "what_it_does": "只读重算：重新生成全部运行记录、四道门槛、逐产品汇总与排名保留原因，不启动产品、不读 private。"
   },
   "schema": "tx-harness/conclusion/v1",

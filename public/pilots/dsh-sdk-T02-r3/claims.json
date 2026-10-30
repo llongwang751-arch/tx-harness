@@ -1,0 +1,60 @@
+[
+  {
+    "id": "C01",
+    "claim": "Frozen artifact checks: 7/7; objective 60.0/60.",
+    "confidence": "high",
+    "basis": [
+      "deterministic-verification.json",
+      "outputs/",
+      "manifest.json"
+    ],
+    "attribution": "unresolved",
+    "limits": "Only named artifact criteria, not a product total, Harness cause, or formal ranking."
+  },
+  {
+    "id": "C02",
+    "claim": "One real fresh-session native SDK attempt completed without timeout or forced termination.",
+    "confidence": "high",
+    "basis": [
+      "sdk-sent.jsonl",
+      "sdk-control-receipts.jsonl",
+      "visible-events.jsonl",
+      "run-metadata.json"
+    ],
+    "attribution": "observed native SDK lifecycle",
+    "limits": "Receipt alone is not completion; exit/completion is separate from artifact correctness."
+  },
+  {
+    "id": "C03",
+    "claim": "Initial input files remained byte-identical; all native outputs, including extra files, were copied without repairs.",
+    "confidence": "high",
+    "basis": [
+      "run-metadata.json:initial_files/final_files/outputs",
+      "manifest.json"
+    ],
+    "attribution": "artifact provenance",
+    "limits": "Hashes do not independently attest the private acquisition process."
+  },
+  {
+    "id": "C04",
+    "claim": "Native pwsh tool errors affected this SDK environment.",
+    "confidence": "high",
+    "basis": [
+      "observed-tool-errors.json",
+      "visible-events.jsonl"
+    ],
+    "attribution": "unresolved environment/Harness boundary",
+    "limits": "No permission repair or widening was performed; the experiment does not isolate the root cause."
+  },
+  {
+    "id": "C05",
+    "claim": "The model request was deepseek-account / deepseek-flash / high; backend identity is not independently attested.",
+    "confidence": "high for the request; unknown for backend identity",
+    "basis": [
+      "sdk-sent.jsonl:initialize",
+      "run-metadata.json:model_visibility"
+    ],
+    "attribution": "configuration only",
+    "limits": "Do not infer identity from the GUI catalog or another case."
+  }
+]
