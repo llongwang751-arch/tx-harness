@@ -1,0 +1,112 @@
+{
+  "command": "python -X utf8 -m unittest discover -s tests -v",
+  "errors": 0,
+  "failures": 0,
+  "modules": [
+    {
+      "module": "test_attribution_boundaries",
+      "tests": 13
+    },
+    {
+      "module": "test_contract_evidence_audit",
+      "tests": 11
+    },
+    {
+      "module": "test_contract_privacy",
+      "tests": 6
+    },
+    {
+      "module": "test_contract_v2",
+      "tests": 6
+    },
+    {
+      "module": "test_controlled_adapter_audit",
+      "tests": 13
+    },
+    {
+      "module": "test_controlled_model_fixture",
+      "tests": 12
+    },
+    {
+      "module": "test_controlled_probe_mcp",
+      "tests": 9
+    },
+    {
+      "module": "test_controlled_workbuddy_audit",
+      "tests": 8
+    },
+    {
+      "module": "test_controlled_workbuddy_host",
+      "tests": 7
+    },
+    {
+      "module": "test_controlled_workbuddy_v2",
+      "tests": 10
+    },
+    {
+      "module": "test_controlled_workbuddy_v3",
+      "tests": 11
+    },
+    {
+      "module": "test_evaluation",
+      "tests": 7
+    },
+    {
+      "module": "test_evaluation_v2",
+      "tests": 16
+    },
+    {
+      "module": "test_evidence",
+      "tests": 25
+    },
+    {
+      "module": "test_grader_v3",
+      "tests": 8
+    },
+    {
+      "module": "test_harness_observations",
+      "tests": 11
+    },
+    {
+      "module": "test_ledger",
+      "tests": 21
+    },
+    {
+      "module": "test_oracles",
+      "tests": 6
+    },
+    {
+      "module": "test_permission_pair_audit",
+      "tests": 5
+    },
+    {
+      "module": "test_public_pilots",
+      "tests": 1
+    },
+    {
+      "module": "test_week2_workbuddy_counting",
+      "tests": 4
+    },
+    {
+      "module": "test_window_reopen",
+      "tests": 5
+    },
+    {
+      "module": "test_window_reopen_evidence",
+      "tests": 7
+    },
+    {
+      "module": "test_window_reopen_v2",
+      "tests": 6
+    },
+    {
+      "module": "test_window_reopen_v2_publication",
+      "tests": 19
+    }
+  ],
+  "note": "captured artifact; re-run the command to reproduce the counts. It proves the suite passed at capture time, not that no other work happened.",
+  "python": "3.14.0",
+  "schema": "tx-harness/self-test/v1",
+  "skipped": 1,
+  "total": 247
+}

@@ -1,0 +1,111 @@
+{
+  "attribution": {
+    "attributable_to": "harness_transport_layer (bounded)",
+    "controls_used": [
+      "supplements/controlled-adapter-v1/protocol.json#runs 冻结四臂与参数",
+      "本地仅回环的确定性模型传输，无神经推理",
+      "同一 MCP 实现与同一冻结参数（arguments_sha256 3d013a1a…）"
+    ],
+    "counterfactual": "若两臂签名不同，差异可归给 Harness；本次签名相同，因此只能支持“均满足契约”，不支持排序",
+    "rule": "模型响应由脚本固定、工具与参数冻结，此时跨 Harness 的差异才可归给传输/编排层"
+  },
+  "evidence": [
+    {
+      "json_pointer": "/runs",
+      "path": "supplements/controlled-adapter-v1/protocol.json",
+      "sha256": "03e69bf4a3cd48878be5106be50785259c69d2e56191c02709852b293890be36"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/supplements/controlled-adapter-v1/CA11-dsh-error/execution.json",
+      "sha256": "668836aeaa15c27b461a7dd5a553b03d653488d624c924db7201c57caea733bc"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/supplements/controlled-adapter-v1/CA11-dsh-error/mcp-events.jsonl",
+      "sha256": "75022a53d1b596e81805af8dcb309d6cbe9bf466f5d84644bca4fc1a1e7425c6"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/supplements/controlled-adapter-v1/CA12-codex-success/execution.json",
+      "sha256": "babd9e460d83b27ffc07c0e27e28ce3c192e28ac939b9999d182feb6e1d95185"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/supplements/controlled-adapter-v1/CA12-codex-success/mcp-events.jsonl",
+      "sha256": "009e227954c3f4b61dfa3ade3456f6decacbc28bbeee674f19d3e9f1ba6a0eca"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/supplements/controlled-adapter-v1/CA13-dsh-success/execution.json",
+      "sha256": "0e6d4ccdf1ef0c54467270ef93d94877360f424d69682b323459fcb8fbff0a35"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/supplements/controlled-adapter-v1/CA13-dsh-success/mcp-events.jsonl",
+      "sha256": "2853e56dd2532b941c25cee32dc312cfe94124c01e12b71a855a808bbfad03bf"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/supplements/controlled-adapter-v1/CA14-codex-error/execution.json",
+      "sha256": "933d6584ece1d7d63d53a59f2667c6f24544fc8919c1ba91c1672988c6cce6de"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/supplements/controlled-adapter-v1/CA14-codex-error/mcp-events.jsonl",
+      "sha256": "417ec15e2c1680f6df3d082a0eb2376ecac9ec567f516c6ddc0862f8b8e10f1e"
+    },
+    {
+      "json_pointer": "",
+      "path": "reports/controlled-adapter-v1.json",
+      "sha256": "14a03c1a1c057d15063aba0a0e05d33c85d4d1a2b9170b2ce2db4d36782ebab0"
+    }
+  ],
+  "explanation": "这条轨道把模型换成本地脚本：脚本只按请求序号与自己的工具身份决定动作，从不解析任务或Skill 文本，因此模型与 Skill 不再能改变生成动作；工具参数、工具实现与回包都在冻结文件里。剩下的变量是产品的传输与编排层，所以这四臂的差异可以归给 Harness。四臂在六个可观察量上完全一致，结论只能是“两者都满足这份冻结契约”，而不是“Codex 优于 DSH”或相反。错误臂的退出码 0 表示 Harness 把它当作已处理的工具错误，不表示产品伪造了成功；产物缺失与工具层错误回包对应，两者一致。",
+  "id": "CL-02",
+  "observation": "四臂各自只发起 1 次工具调用、2 次模型请求，退出码均为 0。两个成功臂生成的产物逐字节相同（sha256 a21822b8…d530d，125 字节）；两个错误臂都没有产物，工具层各返回 1 次结构化错误。把两臂的行为写成签名（调用次数、模型请求数、是否有产物、错误次数）后，Codex 与 DSH 的签名相同，即这批刺激下没有观察到跨产品差异。",
+  "pin_note": "哈希在第三周定稿时冻结。数据变化必须另记差异并更新 pinned_at，不得静默刷新；--check 会重跑实验并比对 expected_output_sha256。",
+  "pinned_against_run_file_sha256": "3f19445a6afc587ca4a5cedd36baf3504e859c29b1219d1d327b23cf1ba8432c",
+  "pinned_at": "2026-10-31",
+  "question": "把模型响应换成同一脚本、工具参数冻结之后，Codex 与 DSH 在成功臂与错误臂上的剩余差异是否还能归给 Harness？",
+  "reproducible_experiment": {
+    "claim": "CL-02",
+    "command": "python -X utf8 scripts/ledger.py reproduce CL-02",
+    "expected_output_sha256": "1271c39624a0fa5f1273f304e18d69b7161b28d2ab9bb446795666b472505613",
+    "what_it_does": "只读解析四臂的 execution.json、mcp-events.jsonl、model-events.jsonl 与产物哈希，重算每臂签名并比较 Codex 与 DSH。"
+  },
+  "schema": "tx-harness/conclusion/v1",
+  "title": "固定响应下 Codex 与 DSH 的工具契约与错误呈现",
+  "unexcluded": [
+    {
+      "factor": "wire 协议不同",
+      "impact": "Codex 走 /v1/responses，DSH 走 /v1/chat/completions，请求体与上下文包装不同",
+      "why": "两侧请求体大小相差约 2.6 倍，无法排除包装差异带来的行为差异"
+    },
+    {
+      "factor": "系统上下文与工具 schema 包装",
+      "impact": "可用工具名与命名空间不同（probe_commit 与 mcp__contract__probe_commit）",
+      "why": "脚本已按名字匹配，但包装层仍可能影响真实模型的选择"
+    },
+    {
+      "factor": "刺激种类",
+      "impact": "只覆盖“一次调用后成功”与“工具返回错误”两类，未覆盖多步链、超时、部分成功",
+      "why": "本批只登记了这两个模式"
+    },
+    {
+      "factor": "重复次数",
+      "impact": "每臂一次，无法估计波动",
+      "why": "协议规定一次提交、不重试、不替换"
+    },
+    {
+      "factor": "沙箱与网络",
+      "impact": "可信宿主 MCP 不测沙箱边界，网络能力未在本次冻结中被验证",
+      "why": "受控轨道只覆盖工具契约"
+    }
+  ],
+  "verdict": {
+    "claim": "四臂均满足冻结工具契约；这两类刺激下未观察到 Codex 与 DSH 的 Harness 差异",
+    "confidence": "high for the four-arm contract; none for a ranking between the two products",
+    "scope": "S01 单工具契约，一次提交，两个模式；不外推到五题端到端或真实模型"
+  }
+}

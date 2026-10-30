@@ -1,0 +1,324 @@
+{
+  "audit_source": {
+    "path": "reports/grader-audit-v3.json",
+    "sha256": "46d1c65756b86dcb31497dfd4c2b7bc0289a2c5886e14a13a70f528c7c9f064b"
+  },
+  "counting_rule": "a revision, a synthetic answer and a product run are three different things and never share a denominator",
+  "revisions": [
+    {
+      "ablation": {
+        "checks": [
+          {
+            "accepted": true,
+            "disabled_rules": [
+              "CSV_STRICT"
+            ],
+            "example_id": "N6",
+            "expected_accepted": true,
+            "matches_expected": true
+          }
+        ],
+        "reading": "disabling only this rule restores acceptance, so the verdict is caused by this guard and not by a neighbouring check"
+      },
+      "after": {
+        "behavior": "legacy checks AND a strict quote-aware parse of every csv_rows target",
+        "code": {
+          "archived": "ledger/revisions/code/grader-v3.py",
+          "path": "evaluation_v3/grader.py",
+          "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+        },
+        "rules": {
+          "path": "supplements/grader-v3/rules.json",
+          "sha256": "62e6df2d57ba23bab045db79237dab41c8cf38900a7868917f8fc36899c1bc15",
+          "value": "All csv_rows targets must also parse with csv.reader(strict=True); unclosed quoted fields are invalid, while a missing final newline alone is allowed"
+        }
+      },
+      "archived_files": [
+        {
+          "archive": "ledger/revisions/GR-01/near-miss/example.json",
+          "bytes": 1183,
+          "sha256": "e96b72b11d43dfe802e66edd0d6f18eecedbcda8a8503000110c7cb49baee783",
+          "source": "public/grader-audit-v3/N6/example.json"
+        },
+        {
+          "archive": "ledger/revisions/GR-01/positive/example.json",
+          "bytes": 873,
+          "sha256": "46cc0ab63f14b6ad81ff536202a3250c4a4eb3027b959525df84eb517df79b16",
+          "source": "public/grader-audit-v3/G1/example.json"
+        },
+        {
+          "archive": "ledger/revisions/GR-01/near-miss/bundle/contacts.csv",
+          "bytes": 142,
+          "sha256": "e33d8585777251000acda02549592da7179960e04cff8a58cfefdd4e8c03b750",
+          "source": "public/grader-audit-v3/N6/outputs/bundle/contacts.csv"
+        }
+      ],
+      "before": {
+        "behavior": "legacy artifact checks only; a damaged CSV field was recovered by the default parser",
+        "code": {
+          "archived": "ledger/revisions/code/legacy-core.py",
+          "path": "harness_eval/core.py",
+          "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20"
+        },
+        "rule_snapshot": "absent: the legacy path has no validity guard for this condition"
+      },
+      "files": [
+        "ledger/revisions/code/legacy-core.py",
+        "ledger/revisions/code/grader-v3.py",
+        "ledger/revisions/independent-check.json",
+        "ledger/revisions/GR-01/near-miss/example.json",
+        "ledger/revisions/GR-01/positive/example.json",
+        "ledger/revisions/GR-01/near-miss/bundle/contacts.csv"
+      ],
+      "historical_recompute_impact": {
+        "newly_rejected": 0,
+        "reading": "no published run changes acceptance state under this guard; old scores stay sealed",
+        "recomputed": 25,
+        "run_ids": []
+      },
+      "id": "GR-01",
+      "independent_acceptance": {
+        "agrees": true,
+        "artifact": "ledger/revisions/independent-check.json",
+        "disagreements": [],
+        "examples": 22,
+        "guard_verdicts_compared": 36,
+        "method": "independent re-implementation outside harness_eval and evaluation_v3: hand-written CSV state machine, oracle key-set comparison, single re-serialisation search. Compares guard verdicts, not legacy check scores.",
+        "sha256": "6260d71e2e2e40d5195c58fad2f3cb9c9679a86a656c3ada22333bdac52ce138"
+      },
+      "near_miss": {
+        "case_id": "T03",
+        "example": "N6",
+        "expected_accepted": false,
+        "legacy_accepted": true,
+        "mutation": "csv_unclosed_quote",
+        "note": "the answer is correct except for the one condition this revision guards",
+        "v3_accepted": false
+      },
+      "positive_control": {
+        "case_id": "T01",
+        "example": "G1",
+        "expected_accepted": true,
+        "legacy_accepted": true,
+        "note": "the same correct answer is still accepted after the revision",
+        "v3_accepted": true
+      },
+      "registered_on": "2026-10-21",
+      "rule_id": "CSV_STRICT",
+      "rule_text": "All csv_rows targets must also parse with csv.reader(strict=True); unclosed quoted fields are invalid, while a missing final newline alone is allowed",
+      "scope": "artifact validity guard; no new weighted score, no sealed score rewritten"
+    },
+    {
+      "ablation": {
+        "checks": [
+          {
+            "accepted": true,
+            "disabled_rules": [
+              "T03_CHANGELOG_KEYS"
+            ],
+            "example_id": "N7",
+            "expected_accepted": true,
+            "matches_expected": true
+          }
+        ],
+        "reading": "disabling only this rule restores acceptance, so the verdict is caused by this guard and not by a neighbouring check"
+      },
+      "after": {
+        "behavior": "the change log top-level key set must equal the two required sections",
+        "code": {
+          "archived": "ledger/revisions/code/grader-v3.py",
+          "path": "evaluation_v3/grader.py",
+          "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+        },
+        "rules": {
+          "path": "supplements/grader-v3/rules.json",
+          "sha256": "62e6df2d57ba23bab045db79237dab41c8cf38900a7868917f8fc36899c1bc15",
+          "value": "T03 prompt requires exactly two top-level keys in change_log.json: changes and unchanged_paths"
+        }
+      },
+      "archived_files": [
+        {
+          "archive": "ledger/revisions/GR-02/near-miss/example.json",
+          "bytes": 1184,
+          "sha256": "7456b98263f1ac31819c622e680ee1773bbb6605e051f176eae8c61e7976c057",
+          "source": "public/grader-audit-v3/N7/example.json"
+        },
+        {
+          "archive": "ledger/revisions/GR-02/positive/example.json",
+          "bytes": 1170,
+          "sha256": "b0be4eaf4e4e70906f8d6b3ddd00e4be9096f478a1510491e42ec5696392e419",
+          "source": "public/grader-audit-v3/G3/example.json"
+        },
+        {
+          "archive": "ledger/revisions/GR-02/near-miss/change_log.json",
+          "bytes": 538,
+          "sha256": "3fcc6769a82c5dd30554f4696d56ea19d3bdcfabd4ef6b094cb9defee443f93f",
+          "source": "public/grader-audit-v3/N7/outputs/change_log.json"
+        }
+      ],
+      "before": {
+        "behavior": "legacy sub-set comparison accepted an extra top-level key",
+        "code": {
+          "archived": "ledger/revisions/code/legacy-core.py",
+          "path": "harness_eval/core.py",
+          "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20"
+        },
+        "rule_snapshot": "absent: the legacy path has no validity guard for this condition"
+      },
+      "files": [
+        "ledger/revisions/code/legacy-core.py",
+        "ledger/revisions/code/grader-v3.py",
+        "ledger/revisions/independent-check.json",
+        "ledger/revisions/GR-02/near-miss/example.json",
+        "ledger/revisions/GR-02/positive/example.json",
+        "ledger/revisions/GR-02/near-miss/change_log.json"
+      ],
+      "historical_recompute_impact": {
+        "newly_rejected": 0,
+        "reading": "no published run changes acceptance state under this guard; old scores stay sealed",
+        "recomputed": 25,
+        "run_ids": []
+      },
+      "id": "GR-02",
+      "independent_acceptance": {
+        "agrees": true,
+        "artifact": "ledger/revisions/independent-check.json",
+        "disagreements": [],
+        "examples": 22,
+        "guard_verdicts_compared": 36,
+        "method": "independent re-implementation outside harness_eval and evaluation_v3: hand-written CSV state machine, oracle key-set comparison, single re-serialisation search. Compares guard verdicts, not legacy check scores.",
+        "sha256": "6260d71e2e2e40d5195c58fad2f3cb9c9679a86a656c3ada22333bdac52ce138"
+      },
+      "near_miss": {
+        "case_id": "T03",
+        "example": "N7",
+        "expected_accepted": false,
+        "legacy_accepted": true,
+        "mutation": "changelog_extra_key",
+        "note": "the answer is correct except for the one condition this revision guards",
+        "v3_accepted": false
+      },
+      "positive_control": {
+        "case_id": "T03",
+        "example": "G3",
+        "expected_accepted": true,
+        "legacy_accepted": true,
+        "note": "the same correct answer is still accepted after the revision",
+        "v3_accepted": true
+      },
+      "registered_on": "2026-10-21",
+      "rule_id": "T03_CHANGELOG_KEYS",
+      "rule_text": "T03 prompt requires exactly two top-level keys in change_log.json: changes and unchanged_paths",
+      "scope": "artifact validity guard; no new weighted score, no sealed score rewritten"
+    },
+    {
+      "ablation": {
+        "checks": [
+          {
+            "accepted": true,
+            "disabled_rules": [
+              "DECODED_FORBIDDEN_TEXT"
+            ],
+            "example_id": "N8",
+            "expected_accepted": true,
+            "matches_expected": true
+          }
+        ],
+        "reading": "disabling only this rule restores acceptance, so the verdict is caused by this guard and not by a neighbouring check"
+      },
+      "after": {
+        "behavior": "decoded JSON strings and keys are inspected in addition to the raw text",
+        "code": {
+          "archived": "ledger/revisions/code/grader-v3.py",
+          "path": "evaluation_v3/grader.py",
+          "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+        },
+        "rules": {
+          "path": "supplements/grader-v3/rules.json",
+          "sha256": "62e6df2d57ba23bab045db79237dab41c8cf38900a7868917f8fc36899c1bc15",
+          "value": "For JSON text_excludes targets, inspect decoded JSON strings including keys, in addition to legacy raw-text inspection"
+        }
+      },
+      "archived_files": [
+        {
+          "archive": "ledger/revisions/GR-03/near-miss/example.json",
+          "bytes": 1109,
+          "sha256": "1bbeb40d9b5cbc0aa76d02827f1a1efcdcdf9fe2997d23d251503989abb8efa9",
+          "source": "public/grader-audit-v3/N8/example.json"
+        },
+        {
+          "archive": "ledger/revisions/GR-03/positive/example.json",
+          "bytes": 1094,
+          "sha256": "c6bd5ae37a6f1573e25eb6d855e07791f5f78028b04d314c5382d18fef92feba",
+          "source": "public/grader-audit-v3/G5/example.json"
+        },
+        {
+          "archive": "ledger/revisions/GR-03/near-miss/summary.json",
+          "bytes": 353,
+          "sha256": "fd148bfa06e9e1cbc4c0affc15ded7d87bfaeb25b03b3efba23a1dd9842551ec",
+          "source": "public/grader-audit-v3/N8/outputs/summary.json"
+        }
+      ],
+      "before": {
+        "behavior": "a raw-text search missed a marker written as a JSON unicode escape",
+        "code": {
+          "archived": "ledger/revisions/code/legacy-core.py",
+          "path": "harness_eval/core.py",
+          "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20"
+        },
+        "rule_snapshot": "absent: the legacy path has no validity guard for this condition"
+      },
+      "files": [
+        "ledger/revisions/code/legacy-core.py",
+        "ledger/revisions/code/grader-v3.py",
+        "ledger/revisions/independent-check.json",
+        "ledger/revisions/GR-03/near-miss/example.json",
+        "ledger/revisions/GR-03/positive/example.json",
+        "ledger/revisions/GR-03/near-miss/summary.json"
+      ],
+      "historical_recompute_impact": {
+        "newly_rejected": 0,
+        "reading": "no published run changes acceptance state under this guard; old scores stay sealed",
+        "recomputed": 25,
+        "run_ids": []
+      },
+      "id": "GR-03",
+      "independent_acceptance": {
+        "agrees": true,
+        "artifact": "ledger/revisions/independent-check.json",
+        "disagreements": [],
+        "examples": 22,
+        "guard_verdicts_compared": 36,
+        "method": "independent re-implementation outside harness_eval and evaluation_v3: hand-written CSV state machine, oracle key-set comparison, single re-serialisation search. Compares guard verdicts, not legacy check scores.",
+        "sha256": "6260d71e2e2e40d5195c58fad2f3cb9c9679a86a656c3ada22333bdac52ce138"
+      },
+      "near_miss": {
+        "case_id": "T05",
+        "example": "N8",
+        "expected_accepted": false,
+        "legacy_accepted": true,
+        "mutation": "escaped_marker_value",
+        "note": "the answer is correct except for the one condition this revision guards",
+        "v3_accepted": false
+      },
+      "positive_control": {
+        "case_id": "T05",
+        "example": "G5",
+        "expected_accepted": true,
+        "legacy_accepted": true,
+        "note": "the same correct answer is still accepted after the revision",
+        "v3_accepted": true
+      },
+      "registered_on": "2026-10-21",
+      "rule_id": "DECODED_FORBIDDEN_TEXT",
+      "rule_text": "For JSON text_excludes targets, inspect decoded JSON strings including keys, in addition to legacy raw-text inspection",
+      "scope": "artifact validity guard; no new weighted score, no sealed score rewritten"
+    }
+  ],
+  "rule_source": {
+    "path": "supplements/grader-v3/rules.json",
+    "schema": "artifact-validity-rules/v3.0",
+    "sha256": "62e6df2d57ba23bab045db79237dab41c8cf38900a7868917f8fc36899c1bc15"
+  },
+  "schema": "tx-harness/grader-revision-archive/v1"
+}

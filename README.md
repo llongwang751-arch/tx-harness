@@ -2,6 +2,8 @@
 
 作者：李明远。个人开源仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。比较对象为Codex、WorkBuddy、DeepSeek Harness（DSH）、元宝专家模式、豆包工作任务模式；用户已确认公告中的“豆包办公”指工作任务模式。
 
+2026-10-31整理第三周交付（统计窗口10月25日至31日）：本周新增产品任务0次，交付的是记账方式与一个闭环。39条既有运行按唯一ID和十个字段登记进[运行台账](ledger/runs.jsonl)，产品运行、自测、离线复算、判卷回归、裸模型探针、接口预检拆成[六本互不相加的账](ledger/accounts.json)；[正式比较表](reports/week3/formal-table.md)只纳入规则冻结、题面有效、证据有效、无污染的运行，29条正式轨道记录全部入选、0条被剔除，五款各有5条可判运行，但因模型未证实、协议为草案，表内给分不给名次。判卷三道守卫补[修订档案](ledger/revisions/index.json)（修前/修后代码、正例、近似错误例、独立验收、历史复算影响），并用[另一套实现](scripts/independent_check.py)复核22例36个判定、0分歧。规范与复核命令见[台账与归因规范](docs/ledger.md)，过程与结论见[第三周阶段报告](reports/week3/stage-report.md)和[10月31日文字周报](reports/weekly/2026-10-31-draft.md)；周报仍由本人发送，未发送不写成已交付。
+
 2026-10-25整理第二周交付（统计窗口10月18日至24日）：新增已接受任务14次，有效9、失败0、未知5。其中真实模型WorkBuddy任务4次，Codex/DSH固定响应任务7次，WorkBuddy固定响应校准3次；后10次没有神经模型推理。两次接受前配置拒绝另列，界面预检计零任务。[文字周报草稿](reports/weekly/2026-10-24-draft.md)、[逐次运行登记](supplements/week2/executions.json)、[阶段报告](reports/week2/stage-report.md)已同步，尚未发邮件，由本人发送。
 
 24日[Codex/DSH四次正式固定动作对照](reports/controlled-adapter-v1.md)均通过成功文件或预期错误契约；[WorkBuddy三次接入校准](reports/controlled-workbuddy.md)均未走通，保留为未知，不给产品判负。[三款GUI接口预检](reports/gui-interface-preflight.md)保留版本、界面原图和入口限制。当前只控制指定工具链路的生成动作，未完成五产品全部统一模型或完整Skill消融，旧分不改。
@@ -35,7 +37,10 @@
 | 表现现场 | public/pilots、public/supplements/contracts-v2 | 旧31个包及25/25组合、新21/21补测；失败、诊断和预算局限保留 |
 | 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 26次逐项审阅；缺证项保留null及范围 |
 | 书面竞品报告 | reports/report.md、reports/evaluation-v2.json、reports/permission-pairs-v2.json | Harness边界为主，业务及旧分辅助；三组实际许可对照与条件核对单列 |
-| 每周六个人周报邮件 | reports/weekly/README.md、reports/weekly/2026-10-17.md、reports/weekly-template.md | 10月17日周报已发送，正文已按本人确认版本以Markdown归档 |
+| 每周六个人周报邮件 | reports/weekly/README.md、reports/weekly/2026-10-17.md、reports/weekly/2026-10-31-draft.md、reports/weekly-template.md | 10月17日周报已发送；10月31日正文已写完待本人发送 |
+| 运行台账与归因定责 | ledger/runs.jsonl、ledger/accounts.json、ledger/unknowns.json、docs/ledger.md | 39条运行十字段登记；六账分列；七项未知各带影响/下一步/停止条件 |
+| 正式比较表与门槛 | reports/week3/formal-table.md、ledger/formal-table.json | 四道门槛逐行校验；排名门槛无人满足，名次保留为null |
+| 判卷修订留档 | ledger/revisions/index.json、scripts/independent_check.py | 三条修订六件套齐全；独立实现复核22例36判定、0分歧 |
 | 个人开源GitHub链接 | https://github.com/llongwang751-arch/tx-harness，MIT | 公开方案、代码、真实预试与报告 |
 
 ## 快速开始
@@ -57,8 +62,14 @@ python scripts/audit_controlled_adapter.py --check
 python scripts/audit_controlled_workbuddy.py --output reports/controlled-workbuddy.json --check
 python scripts/verify_gui_controls.py
 python scripts/analyze_permission_pairs_v2.py --check
+python scripts/ledger.py --check
+python scripts/ledger.py reproduce CL-01
+python scripts/ledger.py reproduce CL-02
+python scripts/independent_check.py
 python -m harness_eval --help
 ```
+
+台账相关命令只读公开文件：`ledger.py --check` 重算 39 条运行记录、四道门槛、六本账、结论哈希与修订档案；`reproduce` 重跑对应结论并打印可比较的输出；`independent_check.py` 用另一套实现复核判卷守卫。
 
 后续新产物的有效性验收入口见[evaluation_v3](evaluation_v3/README.md)，例如`python -m evaluation_v3.grader --case T03 --outputs <产物目录>`。新版看`accepted`，旧数值明确置于legacy_artifact_result中，不把旧60分误读成新增契约通过；新批次须先登记规则和代码版本。
 
@@ -79,6 +90,7 @@ cases/          五套任务、原始输入、仅供评测员使用的答案
 harness_eval/   标准库CLI：准备、记录、核验、封存、打分、汇总
 evaluation_v3/  新增验收门槛；保留旧判卷与分数，不另计综合分
 tests/          验收判定与证据门槛的回归测试
+ledger/         第三周运行台账：39条运行、六本账、正式比较表、未知登记、结论与判卷修订档案
 reports/        完整探索性报告、逐项评分、周报与确认性草案
 reports/weekly/ 已发送邮件周报的Markdown归档与索引
 supplements/    新补测预登记协议、变体输入与提示词

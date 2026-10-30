@@ -1,0 +1,733 @@
+{
+  "admission_rule": "account=product_run and rule_frozen and prompt_valid and evidence_valid and uncontaminated",
+  "calibration_rows": [
+    {
+      "case_id": "S01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": null,
+      "objective_score": null,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "CA00-dsh-calibration",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "S01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": null,
+      "objective_score": null,
+      "product_id": "codex",
+      "ranking_eligible": false,
+      "run_id": "CA02-codex-calibration",
+      "table_eligible": true,
+      "verdict": "unknown"
+    },
+    {
+      "case_id": "S01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": null,
+      "objective_score": null,
+      "product_id": "codex",
+      "ranking_eligible": false,
+      "run_id": "CA03-codex-calibration",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "S01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": null,
+      "objective_score": null,
+      "product_id": "workbuddy",
+      "ranking_eligible": false,
+      "run_id": "WBC00-workbuddy-calibration",
+      "table_eligible": true,
+      "verdict": "unknown"
+    },
+    {
+      "case_id": "S01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": null,
+      "objective_score": null,
+      "product_id": "workbuddy",
+      "ranking_eligible": false,
+      "run_id": "WBC01-workbuddy-calibration",
+      "table_eligible": true,
+      "verdict": "unknown"
+    },
+    {
+      "case_id": "S01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": null,
+      "objective_score": null,
+      "product_id": "workbuddy",
+      "ranking_eligible": false,
+      "run_id": "WBC02-workbuddy-calibration",
+      "table_eligible": true,
+      "verdict": "unknown"
+    }
+  ],
+  "controlled_rows": [
+    {
+      "case_id": "S01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": null,
+      "objective_score": null,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "CA11-dsh-error",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "S01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": null,
+      "objective_score": null,
+      "product_id": "codex",
+      "ranking_eligible": false,
+      "run_id": "CA12-codex-success",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "S01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": null,
+      "objective_score": null,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "CA13-dsh-success",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "S01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": null,
+      "objective_score": null,
+      "product_id": "codex",
+      "ranking_eligible": false,
+      "run_id": "CA14-codex-error",
+      "table_eligible": true,
+      "verdict": "pass"
+    }
+  ],
+  "counts": {
+    "calibration": 6,
+    "calibration_unknown": 4,
+    "comparison_eligible": 29,
+    "comparison_excluded": 0,
+    "controlled_contract": 4,
+    "end_to_end": 25,
+    "product_runs": 39,
+    "unknown_verdicts": 5
+  },
+  "generation_basis": "deterministic projection of ledger/runs.jsonl; no clock, no product run",
+  "main_rows": [
+    {
+      "case_id": "T01",
+      "evidence_grade": "medium",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "codex",
+      "ranking_eligible": false,
+      "run_id": "codex-T01-r1-attempt02",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T02",
+      "evidence_grade": "medium",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "codex",
+      "ranking_eligible": false,
+      "run_id": "codex-T02-r1-attempt01",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T03",
+      "evidence_grade": "medium",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "codex",
+      "ranking_eligible": false,
+      "run_id": "codex-T03-r1-attempt01",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T04",
+      "evidence_grade": "medium",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "codex",
+      "ranking_eligible": false,
+      "run_id": "codex-T04-r1-attempt02",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T05",
+      "evidence_grade": "medium",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "codex",
+      "ranking_eligible": false,
+      "run_id": "codex-T05-r1-attempt01",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "doubao",
+      "ranking_eligible": false,
+      "run_id": "doubao-T01-desktop-r2",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T02",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "doubao",
+      "ranking_eligible": false,
+      "run_id": "doubao-T02-desktop-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T03",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "doubao",
+      "ranking_eligible": false,
+      "run_id": "doubao-T03-desktop-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T04",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "doubao",
+      "ranking_eligible": false,
+      "run_id": "doubao-T04-desktop-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T05",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "doubao",
+      "ranking_eligible": false,
+      "run_id": "doubao-T05-desktop-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T01-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T02",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T02-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T03",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T03-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T04",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-T04-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T05",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 30,
+      "product_id": "dsh",
+      "ranking_eligible": false,
+      "run_id": "dsh-sdk-T05-r1",
+      "table_eligible": true,
+      "verdict": "fail"
+    },
+    {
+      "case_id": "T01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "workbuddy",
+      "ranking_eligible": false,
+      "run_id": "workbuddy-T01-desktop-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T02",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "workbuddy",
+      "ranking_eligible": false,
+      "run_id": "workbuddy-T02-desktop-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T03",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "workbuddy",
+      "ranking_eligible": false,
+      "run_id": "workbuddy-T03-desktop-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T04",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "workbuddy",
+      "ranking_eligible": false,
+      "run_id": "workbuddy-T04-desktop-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T05",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60,
+      "product_id": "workbuddy",
+      "ranking_eligible": false,
+      "run_id": "workbuddy-T05-desktop-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T01",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 42,
+      "product_id": "yuanbao",
+      "ranking_eligible": false,
+      "run_id": "yuanbao-T01-desktop-r1",
+      "table_eligible": true,
+      "verdict": "fail"
+    },
+    {
+      "case_id": "T02",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 27,
+      "product_id": "yuanbao",
+      "ranking_eligible": false,
+      "run_id": "yuanbao-T02-desktop-r1",
+      "table_eligible": true,
+      "verdict": "fail"
+    },
+    {
+      "case_id": "T03",
+      "evidence_grade": "medium",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 0,
+      "product_id": "yuanbao",
+      "ranking_eligible": false,
+      "run_id": "yuanbao-T03-desktop-r1",
+      "table_eligible": true,
+      "verdict": "fail"
+    },
+    {
+      "case_id": "T04",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 60.0,
+      "product_id": "yuanbao",
+      "ranking_eligible": false,
+      "run_id": "yuanbao-T04-desktop-r1",
+      "table_eligible": true,
+      "verdict": "pass"
+    },
+    {
+      "case_id": "T05",
+      "evidence_grade": "high",
+      "gates": {
+        "evidence_valid": true,
+        "prompt_valid": true,
+        "rule_frozen": true,
+        "uncontaminated": true
+      },
+      "objective_max": 60,
+      "objective_score": 30.0,
+      "product_id": "yuanbao",
+      "ranking_eligible": false,
+      "run_id": "yuanbao-T05-desktop-r1",
+      "table_eligible": true,
+      "verdict": "fail"
+    }
+  ],
+  "products": [
+    {
+      "cases_scored": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "excluded_by_gate": 0,
+      "fail": 0,
+      "label": "Codex",
+      "missing_cases": [],
+      "objective_maximum": 300,
+      "objective_points": 300,
+      "pass": 5,
+      "product_id": "codex",
+      "ranking": null,
+      "runs": 5,
+      "scored": 5,
+      "unknown": 0
+    },
+    {
+      "cases_scored": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "excluded_by_gate": 0,
+      "fail": 0,
+      "label": "WorkBuddy",
+      "missing_cases": [],
+      "objective_maximum": 300,
+      "objective_points": 300,
+      "pass": 5,
+      "product_id": "workbuddy",
+      "ranking": null,
+      "runs": 5,
+      "scored": 5,
+      "unknown": 0
+    },
+    {
+      "cases_scored": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "excluded_by_gate": 0,
+      "fail": 1,
+      "label": "DSH",
+      "missing_cases": [],
+      "objective_maximum": 300,
+      "objective_points": 270,
+      "pass": 4,
+      "product_id": "dsh",
+      "ranking": null,
+      "runs": 5,
+      "scored": 5,
+      "unknown": 0
+    },
+    {
+      "cases_scored": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "excluded_by_gate": 0,
+      "fail": 4,
+      "label": "元宝专家模式",
+      "missing_cases": [],
+      "objective_maximum": 300,
+      "objective_points": 159.0,
+      "pass": 1,
+      "product_id": "yuanbao",
+      "ranking": null,
+      "runs": 5,
+      "scored": 5,
+      "unknown": 0
+    },
+    {
+      "cases_scored": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "excluded_by_gate": 0,
+      "fail": 0,
+      "label": "豆包工作任务模式",
+      "missing_cases": [],
+      "objective_maximum": 300,
+      "objective_points": 300.0,
+      "pass": 5,
+      "product_id": "doubao",
+      "ranking": null,
+      "runs": 5,
+      "scored": 5,
+      "unknown": 0
+    }
+  ],
+  "ranking": null,
+  "ranking_rule": "admission plus attested backend model and a preregistered frozen protocol",
+  "ranking_withheld_because": [
+    "Codex: backend model identity unattested",
+    "WorkBuddy: backend model identity unattested",
+    "DSH: backend model identity unattested",
+    "元宝专家模式: backend model identity unattested",
+    "豆包工作任务模式: backend model identity unattested",
+    "protocol state of the 25 end-to-end runs is draft_before_pilot, not a preregistered frozen protocol"
+  ],
+  "schema": "tx-harness/formal-comparison-table/v1"
+}

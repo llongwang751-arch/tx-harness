@@ -1,0 +1,189 @@
+{
+  "counts": {
+    "records": 39
+  },
+  "files": [
+    {
+      "bytes": 175564,
+      "path": "ledger/runs.jsonl",
+      "sha256": "3f19445a6afc587ca4a5cedd36baf3504e859c29b1219d1d327b23cf1ba8432c"
+    },
+    {
+      "bytes": 18332,
+      "path": "ledger/formal-table.json",
+      "sha256": "5a528e7dd7057a3aafb9aa2734f965240b324b1470a04f7ee10502a38677668a"
+    },
+    {
+      "bytes": 4293,
+      "path": "ledger/accounts.json",
+      "sha256": "0c8ee9ea5478efa7fd87654e333b5666360fc9e954df6dd18698fecb5a546fc7"
+    },
+    {
+      "bytes": 2197,
+      "path": "ledger/self-test.json",
+      "sha256": "046903a580078b86f701317a39d356f504519300806c99c0977dd43c62e75f6c"
+    },
+    {
+      "bytes": 8316,
+      "path": "ledger/unknowns.json",
+      "sha256": "0a260c178234b3ff5700503e6f12e7d403a97be0bd8f6df0004e9dc15bb32e19"
+    },
+    {
+      "bytes": 5704,
+      "path": "ledger/conclusions/CL-01.json",
+      "sha256": "04fcc706d6bc62cf269df02cde0ce4826a25dbe911357d97cac5d3e84b67ade1"
+    },
+    {
+      "bytes": 6341,
+      "path": "ledger/conclusions/CL-02.json",
+      "sha256": "aacf8be84ff9e3a9b4ab046618c48fde9031a9776faf8e7ec110d6b64a42783b"
+    },
+    {
+      "bytes": 13755,
+      "path": "ledger/revisions/index.json",
+      "sha256": "b0efe2b66ef9792762d180419365a1e9712f9bcb962d7bfa8c5c690daf3982ec"
+    },
+    {
+      "bytes": 19539,
+      "path": "ledger/revisions/code/legacy-core.py",
+      "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20"
+    },
+    {
+      "bytes": 4096,
+      "path": "ledger/revisions/code/grader-v3.py",
+      "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+    },
+    {
+      "bytes": 516,
+      "path": "ledger/revisions/independent-check.json",
+      "sha256": "6260d71e2e2e40d5195c58fad2f3cb9c9679a86a656c3ada22333bdac52ce138"
+    },
+    {
+      "bytes": 1183,
+      "path": "ledger/revisions/GR-01/near-miss/example.json",
+      "sha256": "e96b72b11d43dfe802e66edd0d6f18eecedbcda8a8503000110c7cb49baee783"
+    },
+    {
+      "bytes": 873,
+      "path": "ledger/revisions/GR-01/positive/example.json",
+      "sha256": "46cc0ab63f14b6ad81ff536202a3250c4a4eb3027b959525df84eb517df79b16"
+    },
+    {
+      "bytes": 142,
+      "path": "ledger/revisions/GR-01/near-miss/bundle/contacts.csv",
+      "sha256": "e33d8585777251000acda02549592da7179960e04cff8a58cfefdd4e8c03b750"
+    },
+    {
+      "bytes": 19539,
+      "path": "ledger/revisions/code/legacy-core.py",
+      "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20"
+    },
+    {
+      "bytes": 4096,
+      "path": "ledger/revisions/code/grader-v3.py",
+      "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+    },
+    {
+      "bytes": 516,
+      "path": "ledger/revisions/independent-check.json",
+      "sha256": "6260d71e2e2e40d5195c58fad2f3cb9c9679a86a656c3ada22333bdac52ce138"
+    },
+    {
+      "bytes": 1184,
+      "path": "ledger/revisions/GR-02/near-miss/example.json",
+      "sha256": "7456b98263f1ac31819c622e680ee1773bbb6605e051f176eae8c61e7976c057"
+    },
+    {
+      "bytes": 1170,
+      "path": "ledger/revisions/GR-02/positive/example.json",
+      "sha256": "b0be4eaf4e4e70906f8d6b3ddd00e4be9096f478a1510491e42ec5696392e419"
+    },
+    {
+      "bytes": 538,
+      "path": "ledger/revisions/GR-02/near-miss/change_log.json",
+      "sha256": "3fcc6769a82c5dd30554f4696d56ea19d3bdcfabd4ef6b094cb9defee443f93f"
+    },
+    {
+      "bytes": 19539,
+      "path": "ledger/revisions/code/legacy-core.py",
+      "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20"
+    },
+    {
+      "bytes": 4096,
+      "path": "ledger/revisions/code/grader-v3.py",
+      "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+    },
+    {
+      "bytes": 516,
+      "path": "ledger/revisions/independent-check.json",
+      "sha256": "6260d71e2e2e40d5195c58fad2f3cb9c9679a86a656c3ada22333bdac52ce138"
+    },
+    {
+      "bytes": 1109,
+      "path": "ledger/revisions/GR-03/near-miss/example.json",
+      "sha256": "1bbeb40d9b5cbc0aa76d02827f1a1efcdcdf9fe2997d23d251503989abb8efa9"
+    },
+    {
+      "bytes": 1094,
+      "path": "ledger/revisions/GR-03/positive/example.json",
+      "sha256": "c6bd5ae37a6f1573e25eb6d855e07791f5f78028b04d314c5382d18fef92feba"
+    },
+    {
+      "bytes": 353,
+      "path": "ledger/revisions/GR-03/near-miss/summary.json",
+      "sha256": "fd148bfa06e9e1cbc4c0affc15ded7d87bfaeb25b03b3efba23a1dd9842551ec"
+    }
+  ],
+  "generation_basis": "deterministic offline derivation; no clock, no product run, no private collection directory",
+  "schema": "tx-harness/ledger-manifest/v1",
+  "sources": [
+    {
+      "path": "cases/T01/case.json",
+      "sha256": "6dbae444cb341af4ef5dd90c96277495007a972fb51fd967a457ea61466548d3"
+    },
+    {
+      "path": "cases/T02/case.json",
+      "sha256": "248e0ec491115a4c3ef696923f7ca2fc3e51b8153e88ed07fd574e833672c52b"
+    },
+    {
+      "path": "cases/T03/case.json",
+      "sha256": "b1b1df3f0fc1e075a9bdde74edf07405124b463f3442e9166e56c49c3ae68a83"
+    },
+    {
+      "path": "cases/T04/case.json",
+      "sha256": "bb4b9f288f224c445ee1db2a4844e9b269d7cef7b6e333921fd758e2cbfc4aaf"
+    },
+    {
+      "path": "cases/T05/case.json",
+      "sha256": "230de63836f2a5935d521c032afea8d6d4fbb0756e546ae856e4acfa7561bef2"
+    },
+    {
+      "path": "evaluation_v3/grader.py",
+      "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+    },
+    {
+      "path": "harness_eval/core.py",
+      "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20"
+    },
+    {
+      "path": "public/supplements/gui-controls-v1/observations.json",
+      "sha256": "0c379dab0395744cf8799ed129483d912899c54d7e2ef645d54e2ca5d72863dc"
+    },
+    {
+      "path": "reports/evaluation-v2.json",
+      "sha256": "0483070aa554d90bd984a366c8584dbc0e5efbe97bc1a3733e7a8bb05f09bb7f"
+    },
+    {
+      "path": "reports/grader-audit-v3.json",
+      "sha256": "46d1c65756b86dcb31497dfd4c2b7bc0289a2c5886e14a13a70f528c7c9f064b"
+    },
+    {
+      "path": "supplements/grader-v3/rules.json",
+      "sha256": "62e6df2d57ba23bab045db79237dab41c8cf38900a7868917f8fc36899c1bc15"
+    },
+    {
+      "path": "supplements/week2/executions.json",
+      "sha256": "80fb1e13ba15d6665537b98fe9b817e878f29451d9ab378ab05af7a134484210"
+    }
+  ]
+}

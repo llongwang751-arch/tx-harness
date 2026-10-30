@@ -1,0 +1,9 @@
+{
+  "agrees": true,
+  "disagreements": [],
+  "examples": 22,
+  "guard_verdicts_compared": 36,
+  "limits": "Covers the 22 published synthetic examples only; not a proof over all CSV dialects, all JSON encodings, or any product output.",
+  "method": "independent re-implementation outside harness_eval and evaluation_v3: hand-written CSV state machine, oracle key-set comparison, single re-serialisation search. Compares guard verdicts, not legacy check scores.",
+  "schema": "tx-harness/independent-guard-check/v1"
+}

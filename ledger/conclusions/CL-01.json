@@ -1,0 +1,92 @@
+{
+  "attribution": {
+    "attributable_to": "none",
+    "controls_used": [],
+    "counterfactual": "缺少同模型、同 Skill 的跨 Harness 对照，本结论不给出任何产品的 Harness 优劣",
+    "rule": "只有同一模型、同一 Skill 条件下仅 Harness 变化时观察到的差异才计入 Harness；否则只记录该配置下的端到端表现"
+  },
+  "evidence": [
+    {
+      "json_pointer": "",
+      "path": "ledger/runs.jsonl",
+      "sha256": "3f19445a6afc587ca4a5cedd36baf3504e859c29b1219d1d327b23cf1ba8432c"
+    },
+    {
+      "json_pointer": "/counts",
+      "path": "ledger/formal-table.json",
+      "sha256": "5a528e7dd7057a3aafb9aa2734f965240b324b1470a04f7ee10502a38677668a"
+    },
+    {
+      "json_pointer": "/product_run",
+      "path": "ledger/accounts.json",
+      "sha256": "0c8ee9ea5478efa7fd87654e333b5666360fc9e954df6dd18698fecb5a546fc7"
+    },
+    {
+      "json_pointer": "",
+      "path": "reports/week3/formal-table.md",
+      "sha256": "6c8f2185059c77b6b0cb527a6aae4714e0a42e071cfab5bdffc4e27340179cb7"
+    },
+    {
+      "json_pointer": "/runs",
+      "path": "reports/evaluation-v2.json",
+      "sha256": "0483070aa554d90bd984a366c8584dbc0e5efbe97bc1a3733e7a8bb05f09bb7f"
+    },
+    {
+      "json_pointer": "/entries",
+      "path": "supplements/week2/executions.json",
+      "sha256": "80fb1e13ba15d6665537b98fe9b817e878f29451d9ab378ab05af7a134484210"
+    },
+    {
+      "json_pointer": "",
+      "path": "tests/test_ledger.py",
+      "sha256": "a9959bc9fc6ba20a60c4dd4dae01bfa286b112bc4d1329bc5105cbf4ba0de437"
+    }
+  ],
+  "explanation": "入选不是把门槛写松，而是每条记录都能把四件事重新算出来：题面与答案的哈希等于评测账引用的冻结来源；提交题面以冻结题面开头（桌面产品转为 CRLF 行尾时按行尾规范化比较，并在记录里写明）；证据文件与分级规则一致；输入副本与 cases/<题>/inputs 逐字节一致（T04 的补发附件按额外文件登记，不算篡改）。29 条都通过，说明这一批的记录缺口不在完整性，而在可控性——没有任何一款产品证实了后端模型，也没有一份协议是预注册冻结的，因此排名条件（入选门槛 + 模型证实 + 预注册协议）无人满足。门槛确实会拒绝：tests/test_ledger.py 分别植入改一个输出字节、换掉题面、制造污染状态、给未知裁定塞分数、复制运行号五种违规，五道检查各自报错。元宝 159/300 的差距来自交付内容本身（T01 42、T02 27、T03 0、T05 30，T04 60），是产物分数，不是 Harness 分数。",
+  "id": "CL-01",
+  "observation": "台账共 39 条产品运行：25 条五题端到端（5 款×5 题）、4 条固定响应工具契约主臂、6 条接入校准、4 条原生桌面任务。按四道门槛过滤后，29 条正式轨道记录（25 端到端 + 4 主臂）全部入选，0 条被门槛剔除；校准与原生轨道不作比较。裁定分布为通过 24、失败 5、未知 5。五款产品在五题上各 5 条可判运行，无缺题、无未知：Codex 300/300、WorkBuddy 300/300、DSH 270/300（4 过 1 失）、元宝专家模式 159/300（1 过 4 失）、豆包工作任务模式 300/300。正式表仍不发布名次。",
+  "pin_note": "哈希在第三周定稿时冻结。数据变化必须另记差异并更新 pinned_at，不得静默刷新；--check 会重跑实验并比对 expected_output_sha256。",
+  "pinned_against_run_file_sha256": "3f19445a6afc587ca4a5cedd36baf3504e859c29b1219d1d327b23cf1ba8432c",
+  "pinned_at": "2026-10-31",
+  "question": "把模型与 Skill 的不确定性留在账外，只保留规则冻结、题面有效、证据有效、无污染的运行，五款产品各有几条可以进入正式比较表？",
+  "reproducible_experiment": {
+    "claim": "CL-01",
+    "command": "python -X utf8 scripts/ledger.py reproduce CL-01",
+    "expected_output_sha256": "6abb37ee1eda452543fa2cba8b76e992c0a40d11845fd63168ceeae314fbf985",
+    "what_it_does": "只读重算：重新生成全部运行记录、四道门槛、逐产品汇总与排名保留原因，不启动产品、不读 private。"
+  },
+  "schema": "tx-harness/conclusion/v1",
+  "title": "四道门槛之后，五题端到端还剩多少条可比运行",
+  "unexcluded": [
+    {
+      "factor": "后端模型身份",
+      "impact": "五款产品的公开摘录都只有界面标签，分数差不能归因到 Harness",
+      "why": "没有一款产品提供可校验的模型 attestation"
+    },
+    {
+      "factor": "内置 Skill 状态",
+      "impact": "Skill 是否参与生成未知，端到端分数含 Skill 效应",
+      "why": "只有 DSH 的 r2/r3 与 Codex 的部分配置有实际调用记录，GUI 三款无法确认"
+    },
+    {
+      "factor": "操作方差异",
+      "impact": "GUI 三款由人工 CUA 操作，速度与失误不同源",
+      "why": "单操作方、AI 辅助采集，没有第二观察者"
+    },
+    {
+      "factor": "判卷范围",
+      "impact": "分数只覆盖文件契约，不覆盖过程恢复与交互成本",
+      "why": "本次入选表只用产物检查分，人工维度仍为未评"
+    },
+    {
+      "factor": "重复次数",
+      "impact": "每题仅一次，无法区分波动",
+      "why": "预算内只登记一次，重复会新增题量而非提高结论质量"
+    }
+  ],
+  "verdict": {
+    "claim": "四道门槛下 29 条正式记录全部入选；五款各 5 题可判；名次不成立",
+    "confidence": "high for counts, gate outcomes and artifact scores; none for a product ranking",
+    "scope": "25 条端到端 + 4 条固定响应主臂；不含校准与原生补测；不含人工过程维度"
+  }
+}

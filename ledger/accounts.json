@@ -1,0 +1,131 @@
+{
+  "_rules": {
+    "no_cross_account_sum": "the six ledgers must never be added into one workload number",
+    "product_only_for_table": "only the product_run ledger can feed the formal comparison table",
+    "recompute": "every number above is re-read from its frozen artifact by JSON pointer",
+    "unknown_never_scored": "an unknown verdict keeps score_for_aggregate null and is excluded from both numerator and denominator"
+  },
+  "bare_model_probe": {
+    "definition": "the same model called without any product Harness, to separate model behaviour from Harness behaviour",
+    "empty_reason": "no attested shared model endpoint exists for the five products, so a bare probe cannot be matched to a product run; an unmatched probe would not change any five-product conclusion",
+    "entries": 0,
+    "stop_condition": "reopen only when one product's exact model is both disclosed and reachable outside its Harness"
+  },
+  "grader_regression": {
+    "definition": "synthetic answers used to test the judge; never product output",
+    "entries": 5,
+    "items": [
+      {
+        "artifact": "reports/grader-audit-v3.json",
+        "expected": 22,
+        "kind": "value",
+        "label": "合成答案",
+        "pointer": "/counts/synthetic_examples"
+      },
+      {
+        "artifact": "reports/grader-audit-v3.json",
+        "expected": 20,
+        "kind": "value",
+        "label": "守卫开关核查",
+        "pointer": "/counts/ablation_checks"
+      },
+      {
+        "artifact": "reports/grader-audit-v3.json",
+        "expected": 4,
+        "kind": "value",
+        "label": "旧版误接受",
+        "pointer": "/counts/legacy_false_accepts"
+      },
+      {
+        "artifact": "reports/grader-audit-v3.json",
+        "expected": 0,
+        "kind": "value",
+        "label": "v3误接受",
+        "pointer": "/counts/v3_false_accepts"
+      },
+      {
+        "artifact": "reports/grader-audit-v3.json",
+        "expected": 0,
+        "kind": "value",
+        "label": "v3误拒绝",
+        "pointer": "/counts/v3_false_rejects"
+      }
+    ]
+  },
+  "interface_preflight": {
+    "definition": "reading configuration surfaces and endpoints; counts zero product tasks",
+    "entries": 3,
+    "recompute": {
+      "artifact": "public/supplements/gui-controls-v1/observations.json",
+      "expected": 3,
+      "kind": "length",
+      "label": "预检产品数",
+      "pointer": "/products"
+    },
+    "tasks_counted": 0
+  },
+  "offline_recompute": {
+    "definition": "recomputation of already published bytes; produces no new product run",
+    "entries": 4,
+    "items": [
+      {
+        "artifact": "reports/attribution-boundaries.json",
+        "expected": 0,
+        "kind": "value",
+        "label": "归因边界复核的新增产品运行",
+        "pointer": "/new_independent_product_runs"
+      },
+      {
+        "artifact": "reports/grader-audit-v3.json",
+        "expected": 25,
+        "kind": "value",
+        "label": "旧现场判卷复算",
+        "pointer": "/counts/historical_artifact_rechecks"
+      },
+      {
+        "artifact": "reports/evaluation-v2.json",
+        "expected": 25,
+        "kind": "length",
+        "label": "旧五题评分派生行数",
+        "pointer": "/runs"
+      },
+      {
+        "artifact": "reports/permission-pairs-v2.json",
+        "expected": null,
+        "kind": "length",
+        "label": "许可配对复核",
+        "pointer": "/pairs"
+      }
+    ]
+  },
+  "product_run": {
+    "breakdown": {
+      "fail": 5,
+      "five_product_end_to_end": 25,
+      "fixed_local_fixture_sessions": 10,
+      "native_desktop_tasks": 4,
+      "pass": 29,
+      "unknown": 5
+    },
+    "definition": "an actually submitted product task/session with its own configuration, start and end, and retained evidence",
+    "entries": 39,
+    "recompute": {
+      "artifact": "ledger/runs.jsonl",
+      "expected": null,
+      "kind": "lines",
+      "label": "run file length",
+      "pointer": ""
+    }
+  },
+  "self_test": {
+    "artifact": "ledger/self-test.json",
+    "definition": "offline regression suite over the evaluation kit; runs no product",
+    "recompute": {
+      "artifact": "ledger/self-test.json",
+      "expected": null,
+      "kind": "value",
+      "label": "suite total",
+      "pointer": "/total"
+    }
+  }
+}
