@@ -97,6 +97,12 @@ python -X utf8 scripts/independent_check.py       # 独立重写三道判卷守�
 
 每条运行的 `attribution` 字段记录了三件事：`harness_attributable`（布尔或 null）、`controls`（用了哪些对照）、`unexcluded`（还剩哪些没排除的变量）。`harness_attributable=true` 只出现在受控组件轨道的四条主臂上，其余一律 `false`。
 
+按模型标签再把五款分成两组，机器可读版见 [groups.json](../../ledger/groups.json)：
+
+- **A 组（有可对齐的标签）**：Codex（`gpt-6.1-sol`，其余运行未披露）、WorkBuddy（`Deepseek-V4.1-Flash`）、DSH（`deepseek-flash`，requested）。
+- **B 组（默认/封闭）**：元宝专家模式（无标签）、豆包工作任务模式（只有“自动 低”）。
+- 规则：B 组与 A 组之间、B 组内部产品之间都不做 Harness 归因；A 组内部也只有受控轨道（脚本模型 + 冻结参数）可以归因。“同标签”只说明请求或界面标签一致，不是后端 attestation。
+
 ## 八、这套东西能证明什么，不能证明什么
 
 - 能证明：每个数字都能从公开字节重算；门槛真的会拒绝；判卷守卫有独立实现复核；结论有可重跑的哈希。

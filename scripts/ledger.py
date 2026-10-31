@@ -229,7 +229,7 @@ def experiment_hash(claim) -> str:
 # Markdown projection for the written report.
 # ---------------------------------------------------------------------------
 
-def table_markdown(table):
+def table_markdown(table, groups=None):
     out = []
     out.append("# 正式比较表（由台账生成）\n\n")
     out.append("本页由 `python -X utf8 scripts/ledger.py build` 从 `ledger/runs.jsonl` 直接生成，"
@@ -286,6 +286,18 @@ def table_markdown(table):
     out.append("\n重复批只用于回答“同一产品同一题重复跑是否稳定”，不增加题量、不改变上面的"
                "五题汇总；结果见 [CL-03](../../ledger/conclusions/CL-03.json)。\n")
     out.append("\n校准未走通共享工具调用，按未知保留，不记产品失败，也不进入上面的比较表。\n")
+    if groups:
+        out.append("\n## 模型分组（A / B）\n\n")
+        out.append(f"{groups['rule']}。{groups['cross_group_rule']}。\n\n")
+        out.append("| 组 | 产品 | 运行记录里出现过的模型标签 | 模型经证实 | 五题运行 |\n")
+        out.append("|---|---|---|---|---:|\n")
+        for group in groups["groups"]:
+            for product in group["products"]:
+                seen = "、".join(product["labels_seen"]) or "（无）"
+                out.append(f"| {group['id']} | {product['label']} | {seen} | "
+                           f"{'是' if product['attested'] else '否'} | "
+                           f"{product['end_to_end_runs']} |\n")
+        out.append(f"\n{groups['limits']}。\n")
     return "".join(out).encode("utf-8")
 
 
@@ -432,10 +444,12 @@ def build():
     records = S.build_runs()
     table = S.build_table(records)
     accounts = S.build_accounts(records)
+    groups = S.build_groups(records)
     write(LEDGER / "runs.jsonl", b"".join(line(record) for record in records))
     write(LEDGER / "formal-table.json", S.canonical(table))
     write(LEDGER / "accounts.json", S.canonical(accounts))
-    write(TABLE_MD, table_markdown(table))
+    write(LEDGER / "groups.json", S.canonical(groups))
+    write(TABLE_MD, table_markdown(table, groups))
     build_revisions()
     write_manifest(records)
     print(f"records={len(records)} eligible={table['counts']['comparison_eligible']} "
@@ -451,7 +465,7 @@ def write_manifest(records):
             raise SystemExit("missing curated ledger file: " + relative)
     revisions = S.load("ledger/revisions/index.json")
     files = ["ledger/runs.jsonl", "ledger/formal-table.json", "ledger/accounts.json",
-             "ledger/self-test.json", *curated]
+             "ledger/groups.json", "ledger/self-test.json", *curated]
     for item in revisions["revisions"]:
         files.extend(item["files"])
     sources = sorted({"reports/evaluation-v2.json", "supplements/week2/executions.json",
@@ -503,7 +517,8 @@ def check():
         "ledger/runs.jsonl": b"".join(line(record) for record in records),
         "ledger/formal-table.json": S.canonical(table),
         "ledger/accounts.json": S.canonical(accounts),
-        "reports/week3/formal-table.md": table_markdown(table),
+        "ledger/groups.json": S.canonical(S.build_groups(records)),
+        "reports/week3/formal-table.md": table_markdown(table, S.build_groups(records)),
     }
     revisions = revision_index()
     expected["ledger/revisions/index.json"] = S.canonical(revisions)

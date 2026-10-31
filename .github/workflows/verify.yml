@@ -27,5 +27,6 @@ jobs:
       - run: python scripts/audit_controlled_workbuddy.py --output reports/controlled-workbuddy.json --check
       - run: python scripts/verify_gui_controls.py
       - run: python scripts/ledger.py --check
+      - run: python scripts/audit_case_gates.py --check
       - run: python scripts/independent_check.py
       - run: python -m unittest discover -s tests -v

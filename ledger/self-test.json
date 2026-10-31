@@ -69,7 +69,7 @@
     },
     {
       "module": "test_ledger",
-      "tests": 24
+      "tests": 26
     },
     {
       "module": "test_oracles",
@@ -108,5 +108,5 @@
   "python": "3.14.0",
   "schema": "tx-harness/self-test/v1",
   "skipped": 1,
-  "total": 250
+  "total": 252
 }

@@ -1,0 +1,71 @@
+{
+  "cross_group_rule": "B 组与 A 组之间、B 组内部产品之间，都不得做 Harness 归因；A 组内部也只有受控轨道（脚本模型、冻结参数）可以归因",
+  "groups": [
+    {
+      "id": "A",
+      "products": [
+        {
+          "assignment_reason": "界面/原生会话里出现过 gpt-6.1-sol 标签（T04），其余运行写未披露",
+          "attested": false,
+          "end_to_end_runs": 5,
+          "label": "Codex",
+          "labels_seen": [
+            "gpt-6.1-sol",
+            "not_disclosed_clean_cli_default"
+          ],
+          "product_id": "codex"
+        },
+        {
+          "assignment_reason": "界面标签 Deepseek-V4.1-Flash",
+          "attested": false,
+          "end_to_end_runs": 5,
+          "label": "WorkBuddy",
+          "labels_seen": [
+            "Deepseek-V4.1-Flash"
+          ],
+          "product_id": "workbuddy"
+        },
+        {
+          "assignment_reason": "请求标签 deepseek-flash（requested-not-attested）",
+          "attested": false,
+          "end_to_end_runs": 5,
+          "label": "DSH",
+          "labels_seen": [
+            "deepseek-flash (requested)"
+          ],
+          "product_id": "dsh"
+        }
+      ],
+      "title": "有模型标签（可对齐请求）"
+    },
+    {
+      "id": "B",
+      "products": [
+        {
+          "assignment_reason": "只有“自动”类标签或空标签",
+          "attested": false,
+          "end_to_end_runs": 5,
+          "label": "元宝专家模式",
+          "labels_seen": [],
+          "product_id": "yuanbao"
+        },
+        {
+          "assignment_reason": "只有“自动 低”标签",
+          "attested": false,
+          "end_to_end_runs": 5,
+          "label": "豆包工作任务模式",
+          "labels_seen": [
+            "低 before submit; 自动 低 in subsequent wider ordinary UI",
+            "低 during initial attachment observation; 自动 低 before actual submit and terminal",
+            "自动 低"
+          ],
+          "product_id": "doubao"
+        }
+      ],
+      "title": "默认/封闭模型（无可用标签）"
+    }
+  ],
+  "limits": "五款产品都没有后端模型 attestation；“同标签”只说明请求或界面标签一致，不说明后端一致，也不说明 Skill 状态一致",
+  "rule": "A 组：运行记录里出现过可对齐的模型标签；B 组：只有“自动”类或空标签",
+  "schema": "tx-harness/model-groups/v1"
+}

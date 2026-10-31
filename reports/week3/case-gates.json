@@ -1,0 +1,113 @@
+{
+  "cases": [
+    {
+      "accepted": false,
+      "all_checks_passed": false,
+      "arm": "no_op_empty_outputs",
+      "case_id": "T01",
+      "guards_passed": false,
+      "objective_max": 60.0,
+      "objective_score": 0.0,
+      "outputs": "<empty temporary directory>"
+    },
+    {
+      "accepted": true,
+      "all_checks_passed": true,
+      "arm": "reference_answer",
+      "case_id": "T01",
+      "guards_passed": true,
+      "objective_max": 60.0,
+      "objective_score": 60.0,
+      "outputs": "public/grader-audit-v3/G1/outputs"
+    },
+    {
+      "accepted": false,
+      "all_checks_passed": false,
+      "arm": "no_op_empty_outputs",
+      "case_id": "T02",
+      "guards_passed": false,
+      "objective_max": 60.0,
+      "objective_score": 0.0,
+      "outputs": "<empty temporary directory>"
+    },
+    {
+      "accepted": true,
+      "all_checks_passed": true,
+      "arm": "reference_answer",
+      "case_id": "T02",
+      "guards_passed": true,
+      "objective_max": 60.0,
+      "objective_score": 60.0,
+      "outputs": "public/grader-audit-v3/G2/outputs"
+    },
+    {
+      "accepted": false,
+      "all_checks_passed": false,
+      "arm": "no_op_empty_outputs",
+      "case_id": "T03",
+      "guards_passed": false,
+      "objective_max": 60.0,
+      "objective_score": 0.0,
+      "outputs": "<empty temporary directory>"
+    },
+    {
+      "accepted": true,
+      "all_checks_passed": true,
+      "arm": "reference_answer",
+      "case_id": "T03",
+      "guards_passed": true,
+      "objective_max": 60.0,
+      "objective_score": 60.0,
+      "outputs": "public/grader-audit-v3/G3/outputs"
+    },
+    {
+      "accepted": false,
+      "all_checks_passed": false,
+      "arm": "no_op_empty_outputs",
+      "case_id": "T04",
+      "guards_passed": false,
+      "objective_max": 60.0,
+      "objective_score": 0.0,
+      "outputs": "<empty temporary directory>"
+    },
+    {
+      "accepted": true,
+      "all_checks_passed": true,
+      "arm": "reference_answer",
+      "case_id": "T04",
+      "guards_passed": true,
+      "objective_max": 60.0,
+      "objective_score": 60.0,
+      "outputs": "public/grader-audit-v3/G4/outputs"
+    },
+    {
+      "accepted": false,
+      "all_checks_passed": false,
+      "arm": "no_op_empty_outputs",
+      "case_id": "T05",
+      "guards_passed": false,
+      "objective_max": 60.0,
+      "objective_score": 0.0,
+      "outputs": "<empty temporary directory>"
+    },
+    {
+      "accepted": true,
+      "all_checks_passed": true,
+      "arm": "reference_answer",
+      "case_id": "T05",
+      "guards_passed": true,
+      "objective_max": 60.0,
+      "objective_score": 60.0,
+      "outputs": "public/grader-audit-v3/G5/outputs"
+    }
+  ],
+  "counts": {
+    "cases": 5,
+    "no_op_zero": 5,
+    "reference_full": 5
+  },
+  "limits": "Artifact-level admission only. It shows the task cannot be passed with no work and can be passed with the frozen answer; it says nothing about a product's behaviour.",
+  "passed": true,
+  "rule": "an empty run must score 0 and the reference answer must reach full marks; otherwise the case is not admissible for scoring",
+  "schema": "tx-harness/case-admission-gates/v1"
+}

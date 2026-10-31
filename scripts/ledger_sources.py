@@ -910,6 +910,53 @@ def build_runs():
     return sorted(records, key=lambda item: item["run_id"])
 
 
+GROUP_ASSIGNMENT = {
+    "codex": ("A", "界面/原生会话里出现过 gpt-6.1-sol 标签（T04），其余运行写未披露"),
+    "dsh": ("A", "请求标签 deepseek-flash（requested-not-attested）"),
+    "workbuddy": ("A", "界面标签 Deepseek-V4.1-Flash"),
+    "yuanbao": ("B", "只有“自动”类标签或空标签"),
+    "doubao": ("B", "只有“自动 低”标签"),
+}
+
+
+def build_groups(records):
+    """Model groups: labels that can be aligned vs default/closed labels.
+
+    The split is a documented judgement, not a regex: for every product the
+    labels actually seen are quoted, so a reader can disagree with the split
+    without having to trust it.
+    """
+    groups = {"A": [], "B": []}
+    noise = {"deterministic_local_transport_fixture"}
+    for product in PRODUCTS:
+        owned = [record for record in records
+                 if record["product"]["product_id"] == product]
+        end_to_end = [record for record in owned
+                      if record["track"] == "formal_product_end_to_end"]
+        labels = sorted({str(record["model"]["label"]) for record in owned
+                         if record["model"]["label"] not in (None, "")
+                         and str(record["model"]["label"]) not in noise})
+        group, reason = GROUP_ASSIGNMENT[product]
+        groups[group].append({
+            "product_id": product,
+            "label": PRODUCT_LABELS[product],
+            "labels_seen": labels,
+            "attested": any(record["model"]["attested"] for record in owned),
+            "end_to_end_runs": len(end_to_end),
+            "assignment_reason": reason,
+        })
+    return {
+        "schema": "tx-harness/model-groups/v1",
+        "rule": "A 组：运行记录里出现过可对齐的模型标签；B 组：只有“自动”类或空标签",
+        "groups": [{"id": "A", "title": "有模型标签（可对齐请求）", "products": groups["A"]},
+                   {"id": "B", "title": "默认/封闭模型（无可用标签）", "products": groups["B"]}],
+        "cross_group_rule": "B 组与 A 组之间、B 组内部产品之间，都不得做 Harness 归因；"
+                            "A 组内部也只有受控轨道（脚本模型、冻结参数）可以归因",
+        "limits": "五款产品都没有后端模型 attestation；“同标签”只说明请求或界面标签一致，"
+                  "不说明后端一致，也不说明 Skill 状态一致",
+    }
+
+
 def build_accounts(records):
     """Six ledgers that are never added together."""
     product_rows = [record for record in records if record["account"] == "product_run"]

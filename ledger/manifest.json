@@ -19,9 +19,14 @@
       "sha256": "bba46b24d992eef9ef4fd7668a8320d1cf5dc34c48885198b645a785fac5fbea"
     },
     {
+      "bytes": 2466,
+      "path": "ledger/groups.json",
+      "sha256": "0c8de7985a66eceaaf6b23207364ccf3b929631362b67ed463f36aa4806ccf5e"
+    },
+    {
       "bytes": 2197,
       "path": "ledger/self-test.json",
-      "sha256": "7095acc5d477db9365ab4d77e043c52a19a156f2ef6ffb2e85dbe10b981f9f83"
+      "sha256": "3f1a624cd75f8e874fc1f47b8b08ba729c68300fd112564b3de22118cebdc853"
     },
     {
       "bytes": 8751,
@@ -31,7 +36,7 @@
     {
       "bytes": 5760,
       "path": "ledger/conclusions/CL-01.json",
-      "sha256": "8819e3373e34e9d640289bc39088409496efb6555e7569937faf8d2020c3099a"
+      "sha256": "0e376e9c976bc1f36b2e53132d6a8a7c22072c6d948b255333024f179833d9e4"
     },
     {
       "bytes": 6341,

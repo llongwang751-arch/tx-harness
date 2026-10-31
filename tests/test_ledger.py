@@ -209,6 +209,28 @@ class LedgerArtifacts(unittest.TestCase):
         self.assertTrue(projection["runs"]["r2"]["summary_equals_own_ledger"])
         self.assertTrue(projection["only_r1_differs"])
 
+    def test_model_groups_cover_every_product_and_forbid_cross_group_claims(self):
+        groups = sources.build_groups(sources.build_runs())
+        ids = {product["product_id"] for group in groups["groups"]
+               for product in group["products"]}
+        self.assertEqual(ids, set(sources.PRODUCTS))
+        by_id = {group["id"]: group for group in groups["groups"]}
+        self.assertEqual({product["product_id"] for product in by_id["A"]["products"]},
+                         {"codex", "dsh", "workbuddy"})
+        self.assertEqual({product["product_id"] for product in by_id["B"]["products"]},
+                         {"yuanbao", "doubao"})
+        self.assertIn("不得做 Harness 归因", groups["cross_group_rule"])
+        self.assertTrue(all(product["attested"] is False
+                            for group in groups["groups"] for product in group["products"]))
+
+    def test_case_admission_gates_hold_for_all_five_tasks(self):
+        from scripts import audit_case_gates
+        fresh = audit_case_gates.build()
+        self.assertTrue(fresh["passed"])
+        self.assertEqual(fresh["counts"]["no_op_zero"], 5)
+        self.assertEqual(fresh["counts"]["reference_full"], 5)
+        self.assertEqual(sources.load("reports/week3/case-gates.json"), fresh)
+
     def test_generated_files_match_their_sources(self):
         problems = []
         records = sources.build_runs()

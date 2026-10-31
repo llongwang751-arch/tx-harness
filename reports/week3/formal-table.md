@@ -94,3 +94,17 @@
 重复批只用于回答“同一产品同一题重复跑是否稳定”，不增加题量、不改变上面的五题汇总；结果见 [CL-03](../../ledger/conclusions/CL-03.json)。
 
 校准未走通共享工具调用，按未知保留，不记产品失败，也不进入上面的比较表。
+
+## 模型分组（A / B）
+
+A 组：运行记录里出现过可对齐的模型标签；B 组：只有“自动”类或空标签。B 组与 A 组之间、B 组内部产品之间，都不得做 Harness 归因；A 组内部也只有受控轨道（脚本模型、冻结参数）可以归因。
+
+| 组 | 产品 | 运行记录里出现过的模型标签 | 模型经证实 | 五题运行 |
+|---|---|---|---|---:|
+| A | Codex | gpt-6.1-sol、not_disclosed_clean_cli_default | 否 | 5 |
+| A | WorkBuddy | Deepseek-V4.1-Flash | 否 | 5 |
+| A | DSH | deepseek-flash (requested) | 否 | 5 |
+| B | 元宝专家模式 | （无） | 否 | 5 |
+| B | 豆包工作任务模式 | 低 before submit; 自动 低 in subsequent wider ordinary UI、低 during initial attachment observation; 自动 低 before actual submit and terminal、自动 低 | 否 | 5 |
+
+五款产品都没有后端模型 attestation；“同标签”只说明请求或界面标签一致，不说明后端一致，也不说明 Skill 状态一致。
