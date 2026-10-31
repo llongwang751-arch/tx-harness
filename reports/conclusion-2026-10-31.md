@@ -23,6 +23,8 @@
 
 **一条必须跟上的更正（重复批的结论）**：DSH 的 T05 那次 30/60 并不稳定。同题又跑两次，都是 60/60（[CL-03](../../ledger/conclusions/CL-03.json)），`invoice_ledger.csv` 与 `summary.json` 两次逐字节相同、与第一次不同。所以这张表里的 30 分是**该次运行的真实分数**，但不能据此说"DSH 在 T05 上有稳定缺口"；同理，270/300 与 300/300 之间那 30 分，不能当作稳定的能力差。
 
+**那次 30 分的原因也查到了**（[CL-04](../../ledger/conclusions/CL-04.json)）：就两处数值错误——B001 的净额算成 10200（10000+200，折扣与退款都没减），以及汇总比它自己的台账还多 10000/8000；两次重复的汇总都与自身台账完全自洽。后者说明它没有把汇总从台账推出来，也没做一次自洽检查。
+
 **理由（逐项可复核，证据是各包的 `verification.json` / `deterministic-verification.json` 里逐项 `passed=false`）**：
 
 | 运行 | 失分项 | 失分性质 |
@@ -66,6 +68,7 @@ python -X utf8 scripts/ledger.py --check           # 重算 47 条运行、四�
 python -X utf8 scripts/ledger.py reproduce CL-01   # 重算第二节的计数与逐产品汇总
 python -X utf8 scripts/ledger.py reproduce CL-02   # 重算第三节的四臂签名
 python -X utf8 scripts/ledger.py reproduce CL-03   # 重算同题三次的稳定性
+python -X utf8 scripts/ledger.py reproduce CL-04   # 重算 T05 单次失分的具体数值
 python -X utf8 scripts/verify_public_pilots.py     # 重算 31 个公开包的产物分
 ```
 

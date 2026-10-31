@@ -128,7 +128,7 @@ class LedgerAggregation(unittest.TestCase):
 
 class LedgerArtifacts(unittest.TestCase):
     def test_conclusions_have_five_parts_and_replay(self):
-        for name in ("CL-01", "CL-02", "CL-03"):
+        for name in ("CL-01", "CL-02", "CL-03", "CL-04"):
             conclusion = sources.load(f"ledger/conclusions/{name}.json")
             with self.subTest(conclusion=name):
                 for part in ledger.FIVE_PARTS:
@@ -200,6 +200,14 @@ class LedgerArtifacts(unittest.TestCase):
         # The one T05 failure is a single draw: two repeats scored full marks.
         self.assertEqual(projection["T05"]["scores"], [30.0, 60.0, 60.0])
         self.assertFalse(projection["T05"]["all_passed"])
+
+    def test_single_t05_failure_has_a_verified_cause(self):
+        projection = ledger.reproduce_cl04()
+        self.assertEqual(projection["runs"]["r1"]["b001_net_cents"], 10200)
+        self.assertEqual(projection["runs"]["r2"]["b001_net_cents"], 8200)
+        self.assertFalse(projection["runs"]["r1"]["summary_equals_own_ledger"])
+        self.assertTrue(projection["runs"]["r2"]["summary_equals_own_ledger"])
+        self.assertTrue(projection["only_r1_differs"])
 
     def test_generated_files_match_their_sources(self):
         problems = []

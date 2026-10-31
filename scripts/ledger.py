@@ -135,9 +135,43 @@ def jsonl(relative):
     return [json.loads(text) for text in path.read_text(encoding="utf-8").splitlines() if text.strip()]
 
 
-REPRODUCE = {"CL-01": lambda: reproduce_cl01(S.build_runs(), S.build_table(S.build_runs())),
-             "CL-02": reproduce_cl02,
-             "CL-03": lambda: reproduce_cl03()}
+def reproduce_cl04():
+    import csv
+    runs = {}
+    for replicate in (1, 2, 3):
+        folder = f"public/pilots/dsh-sdk-T05-r{replicate}"
+        with open(ROOT / folder / "outputs/invoice_ledger.csv", encoding="utf-8", newline="") as handle:
+            rows = list(csv.DictReader(handle))
+        included = [row for row in rows if row["included"].lower() == "true"]
+        summary = S.load(f"{folder}/outputs/summary.json")
+        first = next(row for row in rows if row["order_id"] == "B001")
+        runs[f"r{replicate}"] = {
+            "b001_net_cents": int(first["net_cents"]),
+            "included_rows": len(included),
+            "included_gross_cents": sum(int(row["gross_cents"]) for row in included),
+            "included_net_cents": sum(int(row["net_cents"]) for row in included),
+            "summary_gross_cents": summary.get("gross_cents"),
+            "summary_net_cents": summary.get("net_cents"),
+        }
+    for value in runs.values():
+        value["summary_equals_own_ledger"] = (
+            value["summary_gross_cents"] == value["included_gross_cents"]
+            and value["summary_net_cents"] == value["included_net_cents"])
+    return {
+        "schema": "tx-harness/reproduce/v1",
+        "claim": "CL-04",
+        "expected_b001_net_cents": 8200,
+        "runs": runs,
+        "only_r1_differs": runs["r2"] == runs["r3"] and runs["r1"] != runs["r2"],
+    }
+
+
+REPRODUCE = {
+    "CL-01": lambda: reproduce_cl01(S.build_runs(), S.build_table(S.build_runs())),
+    "CL-02": reproduce_cl02,
+    "CL-03": lambda: reproduce_cl03(),
+    "CL-04": reproduce_cl04,
+}
 
 
 REPEAT_CASES = {

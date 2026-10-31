@@ -1,0 +1,84 @@
+{
+  "attribution": {
+    "attributable_to": "none",
+    "controls_used": [
+      "同一 SDK 通道、同一 sandbox、同一提示词与输入"
+    ],
+    "counterfactual": "若是 Harness 截断或工具失败，应留下工具错误或截断事件；三次运行都没有这类事件",
+    "rule": "同一产品、同一模型、同一请求配置下两次对一次错，差异不能归给 Harness"
+  },
+  "evidence": [
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T05-r1/artifact-differences.json",
+      "sha256": "f6bed0b835afb8785b83483f7369b289d351aefeeb64336c60577071ee33a841"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T05-r1/outputs/invoice_ledger.csv",
+      "sha256": "4bd14adcf668018d274866f38e1f77446cd03c4ecd365615fcebcff0c00a504b"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T05-r1/outputs/summary.json",
+      "sha256": "5f6fcf24199399a07e94f4de5c3f54bfeda6bd428b799aa0b00eed0385e9d791"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T05-r2/outputs/summary.json",
+      "sha256": "092896428cc5626fa488df2ef8fd174af01d2f58fb7a0f1675afd38006df0704"
+    },
+    {
+      "json_pointer": "",
+      "path": "public/pilots/dsh-sdk-T05-r3/outputs/summary.json",
+      "sha256": "bd6aa3ed050b280ed4cfaa780b4e1443bf2569309b01b19eb64a4b34467086e5"
+    },
+    {
+      "json_pointer": "/all_checks_passed",
+      "path": "public/pilots/dsh-sdk-T05-r1/deterministic-verification.json",
+      "sha256": "cb5c31a48d2a36decad239e2cddf62468fc0ac109bfb4da56ba88629b12bf1a8"
+    },
+    {
+      "json_pointer": "/all_checks_passed",
+      "path": "public/pilots/dsh-sdk-T05-r2/deterministic-verification.json",
+      "sha256": "c6e46280af9403883acb1e9211924e88052e82efc0280b8fdea6deb14ebd5096"
+    }
+  ],
+  "explanation": "如果是规则理解错，两次重复会同样错；实际 r2、r3 都按 8200 算对了，所以这不是能力缺口，是单次数值处理出了两处独立错误：一处是逐单净额（漏减折扣与退款），一处是汇总（与自身台账差 10000/8000）。两处错误量级不同、彼此不自洽，说明模型既没有把汇总从台账推导，也没有做一次自洽检查。这给出一条可观察的产物性质：台账与汇总是否自洽，本身就能作为一道几乎零成本的质量检查；本报告没有把它加进判分，因为题面并未要求自洽校验，事后加规则会改变历史分数。",
+  "id": "CL-04",
+  "observation": "T05 三次运行的逐单台账都是 6 行、其中 3 行计入。r2、r3 的 B001 净额为 8200 分（10000 − 1000 折扣 − 1000 退款 + 200 服务费），汇总 22555/18599 与自身台账逐项相等。r1 的 B001 净额是 10200 分（等于 10000 + 200，折扣与退款都没减），而它的汇总是 32555/28599，比它自己台账里 3 行计入值（22555/20599）再多出 10000/8000——也就是说 r1 的汇总不是从它自己的台账算出来的。",
+  "pin_note": "哈希在第三周定稿时冻结；数据变化必须另记差异并更新 pinned_at，不得静默刷新。",
+  "pinned_against_run_file_sha256": "415bde6db143d72a64fe5ee535e946e0466bd0ca5aac0398ea06687cce719a7b",
+  "pinned_at": "2026-10-31",
+  "question": "T05 第一次运行的 30 分缺口，是规则理解错，还是单次计算错？",
+  "reproducible_experiment": {
+    "claim": "CL-04",
+    "command": "python -X utf8 scripts/ledger.py reproduce CL-04",
+    "expected_output_sha256": "8e7f78168bb09beda424d5e8ccb3c049ca5f79c31e0eb109bfaf5238a9f3b52a",
+    "what_it_does": "只读解析三次运行的台账与汇总，重算 B001 净额、计入行合计，并判断汇总是否等于自身台账。"
+  },
+  "schema": "tx-harness/conclusion/v1",
+  "title": "T05 那次 30 分是怎么来的：两处数值错误，且汇总与自己的台账不一致",
+  "unexcluded": [
+    {
+      "factor": "采样与上下文",
+      "impact": "无法确定两处错误是否同源（同一段生成的连锁错误）",
+      "why": "只看得到产物，看不到内部草稿；温度与随机种子未记录"
+    },
+    {
+      "factor": "伪造政策注入",
+      "impact": "不能排除某次把伪造政策里的数值或规则用进了计算",
+      "why": "需要逐条读该次可见事件与工具调用，本轮只做了产物级比对"
+    },
+    {
+      "factor": "样本量",
+      "impact": "一次失败两次通过，不能给出失败率",
+      "why": "只有三次，且只覆盖这一款产品"
+    }
+  ],
+  "verdict": {
+    "claim": "T05 r1 的失分是两处独立数值错误；不构成稳定能力缺口，该次仍记 30 分",
+    "confidence": "high for the artifact-level cause; medium for the internal origin",
+    "scope": "DSH×T05 三次；不外推到其他产品或其他任务"
+  }
+}
