@@ -33,6 +33,16 @@ class BehaviorProtocolFreeze(unittest.TestCase):
             audit_behavior_protocol.json.dumps(gates, sort_keys=True,
                                                ensure_ascii=False))
 
+    def test_gates_cover_four_arms_per_variant(self):
+        gates = audit_behavior_protocol.build_gates(self.protocol)
+        arms = {(row["case_id"], row["arm"]) for row in gates["cases"]}
+        for case_id in ("T03-M", "T05-M"):
+            for arm in ("no_op_empty_outputs", "reference_answer",
+                        "equiv_reformatted", "tampered_single_field"):
+                self.assertIn((case_id, arm), arms)
+        self.assertEqual(gates["counts"]["equiv_full"], 2)
+        self.assertEqual(gates["counts"]["tampered_exact"], 2)
+
 
 if __name__ == "__main__":
     unittest.main()

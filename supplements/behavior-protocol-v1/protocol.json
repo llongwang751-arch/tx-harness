@@ -92,9 +92,9 @@
   ],
   "case_gates": {
     "script": "scripts/audit_behavior_protocol.py",
-    "rule": "空输出 0 分、参考解 60/60",
+    "rule": "四臂闸门：空输出 0 分；参考解 60/60；语义等效重构（JSON 键序缩进重排、CSV 行序重排、字节契约文件原样）仍须 60/60——检查器不得因排版误杀；单点篡改（改一个 ASCII 字节）必须恰好失去被命中检查的权重（60分制即 0.6×权重）、其余检查全部不受影响",
     "reference_outputs": "supplements/behavior-protocol-v1/reference-outputs（合成参考解，不当作产品运行）",
-    "status_at_freeze": "见 gates.json 的 passed 字段"
+    "status_at_freeze": "见 gates.json 的 passed 字段（四臂全过）"
   },
   "no_total_score": true,
   "no_ranking": true,

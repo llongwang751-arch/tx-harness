@@ -9,6 +9,10 @@
       "tests": 13
     },
     {
+      "module": "test_behavior_protocol",
+      "tests": 4
+    },
+    {
       "module": "test_contract_evidence_audit",
       "tests": 11
     },
@@ -109,5 +113,5 @@
   "python": "3.14.0",
   "schema": "tx-harness/self-test/v1",
   "skipped": 1,
-  "total": 252
+  "total": 256
 }

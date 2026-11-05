@@ -35,7 +35,7 @@
 | 产物 | 说明 |
 |---|---|
 | [protocol.json](protocol.json) | 冻结的预登记协议（行为类别、可控范围、运行数形状、停止条件、失败定义、防挑刺激） |
-| [gates.json](gates.json) | 两变体的双闸门结果（空跑 0、参考解 60/60） |
+| [gates.json](gates.json) | 两变体的四臂闸门结果：空跑 0、参考解 60/60、等效重构 60/60（不因排版误杀）、单点篡改精确失去被命中检查的权重（不放过真实违约、不波及相邻检查） |
 | [reference-outputs/](reference-outputs) | 合成参考解（由审计脚本可确定性重建，逐字节一致；不是产品运行） |
 | cases/T03-M、cases/T05-M | 冻结的题面、输入、oracle、expected |
 | scripts/audit_behavior_protocol.py | 五项审计：协议字段、检查类型与权重、继承来源哈希、参考解重建一致性、双闸门 |

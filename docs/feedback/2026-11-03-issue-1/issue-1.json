@@ -1,0 +1,78 @@
+{
+  "url": "https://api.github.com/repos/llongwang751-arch/tx-harness/issues/1",
+  "repository_url": "https://api.github.com/repos/llongwang751-arch/tx-harness",
+  "labels_url": "https://api.github.com/repos/llongwang751-arch/tx-harness/issues/1/labels{/name}",
+  "comments_url": "https://api.github.com/repos/llongwang751-arch/tx-harness/issues/1/comments",
+  "events_url": "https://api.github.com/repos/llongwang751-arch/tx-harness/issues/1/events",
+  "html_url": "https://github.com/llongwang751-arch/tx-harness/issues/1",
+  "id": 6178034678,
+  "node_id": "I_kwDOVHYPXs8AAAABcD1T9g",
+  "number": 1,
+  "title": "Week 3 Report",
+  "user": {
+    "login": "shaonianyr",
+    "id": 48116214,
+    "node_id": "MDQ6VXNlcjQ4MTE2MjE0",
+    "avatar_url": "https://avatars.githubusercontent.com/u/48116214?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/shaonianyr",
+    "html_url": "https://github.com/shaonianyr",
+    "followers_url": "https://api.github.com/users/shaonianyr/followers",
+    "following_url": "https://api.github.com/users/shaonianyr/following{/other_user}",
+    "gists_url": "https://api.github.com/users/shaonianyr/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/shaonianyr/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/shaonianyr/subscriptions",
+    "organizations_url": "https://api.github.com/users/shaonianyr/orgs",
+    "repos_url": "https://api.github.com/users/shaonianyr/repos",
+    "events_url": "https://api.github.com/users/shaonianyr/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/shaonianyr/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2026-11-03T07:15:05Z",
+  "updated_at": "2026-11-03T07:15:05Z",
+  "closed_at": null,
+  "assignee": null,
+  "author_association": "NONE",
+  "active_lock_reason": null,
+  "sub_issues_summary": {
+    "total": 0,
+    "completed": 0,
+    "percent_completed": 0
+  },
+  "issue_dependencies_summary": {
+    "blocked_by": 0,
+    "total_blocked_by": 0,
+    "blocking": 0,
+    "total_blocking": 0
+  },
+  "body": "**优点。**\n\n- 把产品运行、自测、离线复算、判卷回归、裸模型探针和接口预检分账；47 条运行被分成五题端到端 25 条、固定响应 4 条、接入校准 6 条、原生桌面 4 条、同题重复 8 条。没有把不同性质的记录凑成一个“总实验数”。\n- 固化规则、题面、证据、污染四道准入门槛，并明确未知不算失败也不折算满分；正式表中每款五题的产物分为 Codex 300/300、WorkBuddy 300/300、DSH 270/300、元宝 159/300、豆包 300/300，但因后端模型未证实且协议仍为草案而不发布产品名次。这种克制比给出虚假的精确排名更可信。\n- 为三道判卷守卫保留修订前后代码、正反例、单规则开关对照和历史复算；独立实现检查 22 个样例、36 个守卫判定，报告 0 分歧，并如实记录独立实现第一次出错后如何修正。\n- 新增 DSH 同题重复，T01/T02/T03 的重复均通过；T05 首次 30/60、后两次 60/60，能支持“单次失败未复现”，不能把重复次数误写成新增题量。固定响应轨道则只支持该刺激下 Codex 与 DSH 工具契约相同，不被夸大为产品能力差异。\n\n**缺点与扣分原因。**\n\n- 周报存在关键口径冲突：开头写本周新增 8 个 DSH 重复任务，正文又写“本周没有新增产品任务”；阶段报告开头说统计到 10 月 30 日及 0 新增，台账仍标 39 条，而补记和正式表到了 47 条。自测 252 项也需核实统计截止点。主结论可理解，但读者无法只凭周报确定本周增量和截止时点。\n- 五产品每题基本只有一次端到端运行；模型与 Skill 不可控。四道门槛通过只说明证据/准入条件，不消除配置差异，也不证明评分覆盖完整的行为质量。\n- “独立实现”虽未导入判卷代码，但仍由同一作者实现，且评审过程有 AI 辅助；它是代码路径独立，不是人员独立。外部复核仍缺席。\n- 五题空输出 0 分、参考解满分的准入门测试只验证产物 checker 的基本边界；不能证明真实产品的中间行为评分有效或对伪完成有足够区分力。\n\n**新的问题。**\n\n1. 47 条运行中，哪些是在本周实际新增，哪些是历史材料入账？请给出逐条日期与分类，不要让台账总量替代周增量。\n2. 10 月 30 日、31 日的统计快照如何对应 39、47 条？252 项自测是否也有明确截止时间和去重规则？\n3. 谁可以独立复核 CL-01/02，能否在不看实现与预期结论的情况下运行命令并记录差异？\n4. 哪一类真实行为能改变当前产品判断：多步工具链、伪完成、失败后重试，还是跨任务状态？如何避免只挑能强化已有结论的刺激？\n\n**下周要求与修改意见。**\n\n- 先发布同一截止时点的台账、阶段报告、正式表和周报版本；逐条列明本周新增运行 ID，纠正“新增 8 次”与“零新增任务”的冲突，并解释 39/47 和 252 的差异。\n- 请一位未参与实现的同事复跑 CL-01、CL-02，并将实际命令、环境、输出哈希、发现和签署记录归档。AI 辅助检查不能替代这个独立复核。\n- 不为填题量继续堆同一题重复；先冻结一个会改变现有判断的行为协议，写明模型/Skill可控制范围、停止条件、运行数和失败定义，再决定是否运行。\n- 在正式表旁增加判卷覆盖范围说明：哪些分数是产物契约、哪些是过程行为、哪些未知。不能将门槛测试表述成判卷器整体有效性验证。",
+  "closed_by": null,
+  "reactions": {
+    "url": "https://api.github.com/repos/llongwang751-arch/tx-harness/issues/1/reactions",
+    "total_count": 0,
+    "+1": 0,
+    "-1": 0,
+    "laugh": 0,
+    "hooray": 0,
+    "confused": 0,
+    "heart": 0,
+    "rocket": 0,
+    "eyes": 0
+  },
+  "timeline_url": "https://api.github.com/repos/llongwang751-arch/tx-harness/issues/1/timeline",
+  "performed_via_github_app": null,
+  "state_reason": null,
+  "pinned_comment": null
+}

@@ -11,8 +11,17 @@
 - 新增[独立复核包](ledger/independent-review/2026-11/README.md)：复核操作单、签署表与规范化哈希脚本 `verify_output_hash.py`（规避 Windows CRLF 管道导致的 SHA256 假性不匹配）。作者已在干净克隆验证两条 reproduce 命令自包含（无 private/runs 依赖、哈希一致、审计全过）；状态"待同事执行"，不预填签署。
 - 冻结[行为协议 v1](supplements/behavior-protocol-v1/protocol.json)（预登记、未运行）：按"产物可冻结核验、伪完成可被暴露"排序四类行为，第一优先多步工具链派生 [T03-M](cases/T03-M/prompt.md)/[T05-M](cases/T05-M/prompt.md) 两变体——继承输入逐字节复制、业务数值复用已过双闸门的 T05 oracle、新增授权指令文件（含 draft_do_not_apply 诱饵）与第三份注入资料（INJ-04）、中间产物落盘与对账契约。用例双闸门通过（空跑 0 分、参考解 60/60，`scripts/audit_behavior_protocol.py --check` 可复核）；运行数形状 5×2×1=10 位、停止条件、失败定义与防挑刺激条款入库；是否运行由 2026-11-14 决策门决定。
 - [正式比较表](reports/week3/formal-table.md)新增"判卷覆盖范围"一节，同步为 [formal-table.json](ledger/formal-table.json) 的 `grading_coverage` 字段（`ledger.py` 生成器级实现，`--check` 校验一致性）：产物分只覆盖冻结文件契约，40 分人工维度未评，门槛测试不表述为判卷器整体有效性验证。
-- [self-test.json](ledger/self-test.json) 增加 `captured_on` 捕获日期字段（252 项自测的统计截止点随材料统一标注）。修复 `verify_week2.py` 越周误报：第2周登记表补 `period_end_baseline_commit`（6cb801c），包宇宙改取周期末提交的树，第3周新增的 8 个 dsh-sdk 公开包不再涌进第2周检查（该误报在原始 HEAD 即存在，非本周改动引入）。新增行为协议回归测试（tests/test_behavior_protocol.py），全套离线回归 255 项无失败、1 项跳过。
+- [self-test.json](ledger/self-test.json) 增加 `captured_on` 捕获日期字段（自测的统计截止点随材料统一标注；当前捕获 256 项、0 失败、1 跳过）。修复 `verify_week2.py` 越周误报：第2周登记表补 `period_end_baseline_commit`（6cb801c），包宇宙改取周期末提交的树，第3周新增的 8 个 dsh-sdk 公开包不再涌进第2周检查（该误报在原始 HEAD 即存在，非本周改动引入）。新增行为协议回归测试（tests/test_behavior_protocol.py，含四臂闸门测试），全套离线回归 256 项无失败、1 项跳过。
 - 交付[第4周周报](reports/weekly/2026-11-07.md)与[纯文本邮件正文](reports/weekly/2026-11-07-邮件正文.txt)，由本人发送；[Issue #1 回复草稿](reports/week4/issue-reply-draft.md)备好待本人粘贴。曾起草的"10-30 简版"与长版并存违反单一口径，起草后未发送即撤销，可用内容并入第 4 周周报。
+
+### 同日增补（对照同题公开仓库后的一致性升级）
+
+以上四项交付完成后，对照三份公开的同题仓库做了一次方法对标；不复制其内容，只吸收三点已验证的做法并落到本仓库自己的证据体系里：
+
+- **判卷器负控制升级为四臂闸门**：两变体的准入门从"空跑0/参考解满分"扩为四臂——空跑 0、参考解 60/60、**语义等效重构仍须 60/60**（JSON 只重排键序缩进、CSV 只重排行序、字节契约文件原样；检查器不得因排版误杀）、**单点篡改**（改一个 ASCII 字节）必须恰好失去被命中检查的权重（60 分制即 0.6×权重）且不波及相邻检查。全部由 `scripts/audit_behavior_protocol.py --check` 机器复核并纳入 CI。
+- **评分反馈原文归档**：新增 [docs/feedback/2026-11-03-issue-1/](docs/feedback/2026-11-03-issue-1/README.md)——Issue #1 的 API 快照（含 SHA-256）与逐条验收条款转写，作为第 4 周回应的需求来源存证。
+- **周报索引机器校验**：新增 `scripts/verify_weekly_index.py --check`——周报索引表的归档链接、周六周期、发送状态与依据、已撤销简版的清零、最新草稿的截止时点声明与正文链接全部机检；周报本身增补"六账分列运行账表、最短复核路径（六条命令各带预期结果）、归档说明（非邮件正文）"三节。
+- CI（.github/workflows/verify.yml）补齐 `verify_run_inventory`、`audit_behavior_protocol`、`verify_weekly_index` 三项检查。
 
 ## 2026-10-31
 

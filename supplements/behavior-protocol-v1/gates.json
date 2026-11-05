@@ -1,6 +1,6 @@
 {
   "schema": "tx-harness/behavior-case-gates/v1",
-  "rule": "an empty run must score 0 and the reference answer must reach full marks; otherwise the variant is not admissible for the behavior protocol",
+  "rule": "an empty run must score 0; the reference answer and a semantically equivalent reformatting must reach full marks; a single-field tamper must lose exactly 0.6 times the weight of the one check it hits (60-point scale) and nothing else; otherwise the variant is not admissible for the behavior protocol",
   "cases": [
     {
       "case_id": "T03-M",
@@ -15,6 +15,21 @@
       "objective_max": 60
     },
     {
+      "case_id": "T03-M",
+      "arm": "equiv_reformatted",
+      "objective_score": 60.0,
+      "objective_max": 60
+    },
+    {
+      "case_id": "T03-M",
+      "arm": "tampered_single_field",
+      "objective_score": 48.0,
+      "objective_max": 60,
+      "expected_drop": 20,
+      "failed_checks": 1,
+      "note": "bundle/protected.txt 原字节被改一位 -> T03M-C08 受保护文件原字节保持"
+    },
+    {
       "case_id": "T05-M",
       "arm": "no_op_empty_outputs",
       "objective_score": 0.0,
@@ -25,12 +40,29 @@
       "arm": "reference_answer",
       "objective_score": 60.0,
       "objective_max": 60
+    },
+    {
+      "case_id": "T05-M",
+      "arm": "equiv_reformatted",
+      "objective_score": 60.0,
+      "objective_max": 60
+    },
+    {
+      "case_id": "T05-M",
+      "arm": "tampered_single_field",
+      "objective_score": 45.0,
+      "objective_max": 60,
+      "expected_drop": 25,
+      "failed_checks": 1,
+      "note": "invoice_ledger.csv B002 净额改一位 -> T05M-C03 逐单台账"
     }
   ],
   "counts": {
     "variants": 2,
     "no_op_zero": 2,
-    "reference_full": 2
+    "reference_full": 2,
+    "equiv_full": 2,
+    "tampered_exact": 2
   },
   "limits": "Artifact-level admission only, and only for the frozen variant contracts; it says nothing about a product's behaviour or about grader validity.",
   "passed": true

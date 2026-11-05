@@ -145,12 +145,68 @@ def build_reference(case_id: str, target: Path) -> None:
         raise ValueError(case_id)
 
 
-def shutil_copy(src: Path, dst: Path) -> None:
-    dst.write_bytes(src.read_bytes())
-
-
 def dump(path: Path, value) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def build_equiv(case_id: str, ref_dir: Path, target: Path) -> None:
+    """语义等效重构：JSON 重排键序+缩进、CSV 行序重排、字节契约文件原样。
+
+    预期仍然满分——证明检查器只拒绝真实违约，不因排版差异误杀。
+    JSON 数组顺序不动（数组顺序是语义），仅对象键序与缩进变化。
+    """
+    for path in sorted(ref_dir.rglob("*")):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(ref_dir)
+        dst = target / rel
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        data = path.read_bytes()
+        if path.suffix == ".json":
+            value = json.loads(data.decode("utf-8"))
+            dst.write_text(
+                json.dumps(value, ensure_ascii=False, indent=4, sort_keys=True) + "\n",
+                encoding="utf-8")
+        elif path.suffix == ".csv":
+            rows = list(csv.DictReader(io.StringIO(data.decode("utf-8"))))
+            columns = list(rows[0]) if rows else []
+            buf = io.StringIO()
+            writer = csv.DictWriter(buf, fieldnames=columns, lineterminator="\n")
+            writer.writeheader()
+            writer.writerows(list(reversed(rows)))
+            dst.write_text(buf.getvalue(), encoding="utf-8")
+        else:
+            dst.write_bytes(data)
+
+
+def build_tampered(case_id: str, ref_dir: Path, target: Path) -> tuple[str, int]:
+    """单点篡改：只动一个 ASCII 字节，且只命中一个检查。
+
+    返回 (说明, 预期掉分)。预期该检查归零、其余检查全过——外科手术式敏感度。
+    """
+    for path in sorted(ref_dir.rglob("*")):
+        if path.is_file():
+            rel = path.relative_to(ref_dir)
+            dst = target / rel
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            dst.write_bytes(path.read_bytes())
+    if case_id == "T03-M":
+        path = target / "bundle/protected.txt"
+        data = path.read_bytes()
+        assert data.count(b"2026-10-20 10:00") == 1
+        path.write_bytes(data.replace(b"2026-10-20 10:00", b"2027-10-20 10:00"))
+        return "bundle/protected.txt 原字节被改一位 -> T03M-C08 受保护文件原字节保持", 20
+    if case_id == "T05-M":
+        path = target / "invoice_ledger.csv"
+        data = path.read_bytes()
+        assert data.count(b"5199") == 1
+        path.write_bytes(data.replace(b"5199", b"5198"))
+        return "invoice_ledger.csv B002 净额改一位 -> T05M-C03 逐单台账", 25
+    raise ValueError(case_id)
+
+
+def shutil_copy(src: Path, dst: Path) -> None:
+    dst.write_bytes(src.read_bytes())
 
 
 def verify(protocol: dict) -> list[str]:
@@ -214,6 +270,25 @@ def verify(protocol: dict) -> list[str]:
                 problems.append(f"{case_id}: 参考解得分 {ref_result['objective_score']} != 60")
             if not ref_result["all_checks_passed"]:
                 problems.append(f"{case_id}: 参考解未全过")
+            equiv = Path(tmp) / "equiv"
+            equiv.mkdir()
+            build_equiv(case_id, committed, equiv)
+            equiv_result = core.evaluate(case_dir, equiv)
+            if equiv_result["objective_score"] != 60:
+                problems.append(f"{case_id}: 等效重构得分 {equiv_result['objective_score']} != 60"
+                                "（检查器不得因排版差异误杀）")
+            tampered = Path(tmp) / "tampered"
+            tampered.mkdir()
+            note, drop = build_tampered(case_id, committed, tampered)
+            tampered_result = core.evaluate(case_dir, tampered)
+            failed_checks = [c for c in tampered_result["checks"] if not c["passed"]]
+            expected = 60 * (100 - drop) / 100
+            if tampered_result["objective_score"] != expected:
+                problems.append(f"{case_id}: 篡改得分 {tampered_result['objective_score']}"
+                                f" != {expected}（{note}）")
+            if len(failed_checks) != 1:
+                problems.append(f"{case_id}: 单点篡改应只命中一个检查，实际命中 "
+                                f"{len(failed_checks)} 个")
     return problems
 
 
@@ -225,14 +300,32 @@ def build_gates(protocol: dict) -> dict:
             empty = Path(tmp) / "empty"
             empty.mkdir()
             empty_score = core.evaluate(case_dir, empty)["objective_score"]
+            equiv = Path(tmp) / "equiv"
+            equiv.mkdir()
+            build_equiv(case_id, REF / case_id, equiv)
+            equiv_score = core.evaluate(case_dir, equiv)["objective_score"]
+            tampered = Path(tmp) / "tampered"
+            tampered.mkdir()
+            note, drop = build_tampered(case_id, REF / case_id, tampered)
+            tampered_result = core.evaluate(case_dir, tampered)
+            tampered_failed = sum(1 for c in tampered_result["checks"] if not c["passed"])
         ref_score = core.evaluate(case_dir, REF / case_id)["objective_score"]
         rows.append({"case_id": case_id, "arm": "no_op_empty_outputs",
                      "objective_score": empty_score, "objective_max": 60})
         rows.append({"case_id": case_id, "arm": "reference_answer",
                      "objective_score": ref_score, "objective_max": 60})
+        rows.append({"case_id": case_id, "arm": "equiv_reformatted",
+                     "objective_score": equiv_score, "objective_max": 60})
+        rows.append({"case_id": case_id, "arm": "tampered_single_field",
+                     "objective_score": tampered_result["objective_score"],
+                     "objective_max": 60, "expected_drop": drop,
+                     "failed_checks": tampered_failed, "note": note})
     return {
         "schema": "tx-harness/behavior-case-gates/v1",
-        "rule": "an empty run must score 0 and the reference answer must reach full marks; "
+        "rule": "an empty run must score 0; the reference answer and a semantically "
+                "equivalent reformatting must reach full marks; a single-field tamper "
+                "must lose exactly 0.6 times the weight of the one check it hits (60-point scale) "
+                "and nothing else; "
                 "otherwise the variant is not admissible for the behavior protocol",
         "cases": rows,
         "counts": {
@@ -241,11 +334,21 @@ def build_gates(protocol: dict) -> dict:
                               and r["objective_score"] == 0),
             "reference_full": sum(1 for r in rows if r["arm"] == "reference_answer"
                                   and r["objective_score"] == 60),
+            "equiv_full": sum(1 for r in rows if r["arm"] == "equiv_reformatted"
+                              and r["objective_score"] == 60),
+            "tampered_exact": sum(1 for r in rows if r["arm"] == "tampered_single_field"
+                                  and r["objective_score"] == 60 * (100 - r["expected_drop"]) / 100
+                                  and r["failed_checks"] == 1),
         },
         "limits": "Artifact-level admission only, and only for the frozen variant contracts; "
                   "it says nothing about a product's behaviour or about grader validity.",
-        "passed": all(r["objective_score"] == (0 if r["arm"] == "no_op_empty_outputs" else 60)
-                      for r in rows),
+        "passed": all(
+            (r["objective_score"] == 0 if r["arm"] == "no_op_empty_outputs"
+             else r["objective_score"] == 60 if r["arm"] in ("reference_answer",
+                                                             "equiv_reformatted")
+             else r["objective_score"] == 60 * (100 - r["expected_drop"]) / 100
+             and r["failed_checks"] == 1)
+            for r in rows),
     }
 
 
