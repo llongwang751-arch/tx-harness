@@ -1,0 +1,37 @@
+{
+  "schema": "tx-harness/behavior-case-gates/v1",
+  "rule": "an empty run must score 0 and the reference answer must reach full marks; otherwise the variant is not admissible for the behavior protocol",
+  "cases": [
+    {
+      "case_id": "T03-M",
+      "arm": "no_op_empty_outputs",
+      "objective_score": 0.0,
+      "objective_max": 60
+    },
+    {
+      "case_id": "T03-M",
+      "arm": "reference_answer",
+      "objective_score": 60.0,
+      "objective_max": 60
+    },
+    {
+      "case_id": "T05-M",
+      "arm": "no_op_empty_outputs",
+      "objective_score": 0.0,
+      "objective_max": 60
+    },
+    {
+      "case_id": "T05-M",
+      "arm": "reference_answer",
+      "objective_score": 60.0,
+      "objective_max": 60
+    }
+  ],
+  "counts": {
+    "variants": 2,
+    "no_op_zero": 2,
+    "reference_full": 2
+  },
+  "limits": "Artifact-level admission only, and only for the frozen variant contracts; it says nothing about a product's behaviour or about grader validity.",
+  "passed": true
+}

@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 import argparse
+import datetime
 import io
 import json
 from pathlib import Path
@@ -229,6 +230,73 @@ def experiment_hash(claim) -> str:
 # Markdown projection for the written report.
 # ---------------------------------------------------------------------------
 
+def grading_coverage(table):
+    """判卷覆盖范围：明确哪些分数是产物契约、哪些是过程行为、哪些未知。
+
+    按 Issue #1 要求，本块同时进入 ledger/formal-table.json 与 formal-table.md，
+    并声明门槛测试不等于判卷器整体有效性验证。
+    """
+    return {
+        "schema": "tx-harness/grading-coverage/v1",
+        "artifact_contract": {
+            "covered": True,
+            "scale": "0-60 per run",
+            "checks": "case-frozen binary file-contract checks "
+                      "(bytes_equal/exact_json/csv_rows/json_fields/text_excludes)",
+            "aggregation": "产品300分汇总只来自五题端到端（5×60）；重复批分数只用于稳定性"
+                           "（CL-03），固定响应轨道只比较契约异同（CL-02），都不并入产品总分",
+            "recheck": "每项判定可由 evaluation_v3.grader 与公开包复核器独立重算",
+        },
+        "process_behavior": {
+            "covered": False,
+            "manual_dimensions_unrated": {"delivery": 15, "process": 10,
+                                          "boundary": 10, "interaction": 5},
+            "note": "config/rubric.json 的40分人工维度（文件交付/执行反馈/约束边界/操作负担）"
+                    "在正式表一律未评；历史人工分仅存于旧报告，不进入正式比较，也不从缺失折算",
+        },
+        "gate_tests": {
+            "admission_gates": "四道门槛（规则冻结/题面有效/证据有效/无污染）只保证纳入条件"
+                               "确实被执行、能拒绝不合格记录，不评判运行质量",
+            "case_gates": "空跑0分/参考解满分的用例双闸门只验证产物检查器的边界行为"
+                          "（能拒绝空产物、能接受正确产物）",
+            "validity_claim_limit": "本仓库不把门槛测试表述为判卷器整体有效性验证；"
+                                    "判卷器对真实产品中间行为与伪完成的区分力未验证，属待验证项",
+        },
+        "unknowns": {
+            "count": table["counts"]["unknown_verdicts"],
+            "policy": "未知不计分、不记失败、不折算满分",
+            "pointer": "ledger/unknowns.json",
+        },
+    }
+
+
+def covered_table(records):
+    table = S.build_table(records)
+    table["grading_coverage"] = grading_coverage(table)
+    return table
+
+
+def coverage_markdown(table):
+    cov = table["grading_coverage"]
+    manual = cov["process_behavior"]["manual_dimensions_unrated"]
+    unknown = cov["unknowns"]["count"]
+    return ("\n## 判卷覆盖范围\n\n"
+            "| 口径 | 覆盖什么 | 不能由此声称 |\n"
+            "|---|---|---|\n"
+            "| 产物分（0–60/次） | 冻结的产物文件契约逐项二值判定；300分汇总只来自"
+            "五题端到端（5×60） | 不含人工过程维度，不评中间行为 |\n"
+            "| 四道准入门槛 | 纳入条件确实被执行，能拒绝不合格记录 | 不评判运行质量，"
+            "不等于判卷有效性 |\n"
+            "| 用例双闸门（空跑0/参考解60） | 产物检查器的边界行为 | 不证明对真实中间"
+            "行为或伪完成有区分力 |\n"
+            f"| 人工40分维度（交付{manual['delivery']}/过程{manual['process']}"
+            f"/边界{manual['boundary']}/负担{manual['interaction']}） | 规则已定义于"
+            "config/rubric.json | 本表一律未评，不用于正式比较 |\n\n"
+            f"未知裁定 {unknown} 条：不计分、不记失败、不折算满分，逐条见 "
+            "[unknowns](../../ledger/unknowns.json)。机器可读版见 "
+            "`ledger/formal-table.json` 的 `grading_coverage` 字段。\n")
+
+
 def table_markdown(table, groups=None):
     out = []
     out.append("# 正式比较表（由台账生成）\n\n")
@@ -298,6 +366,7 @@ def table_markdown(table, groups=None):
                            f"{'是' if product['attested'] else '否'} | "
                            f"{product['end_to_end_runs']} |\n")
         out.append(f"\n{groups['limits']}。\n")
+    out.append(coverage_markdown(table))
     return "".join(out).encode("utf-8")
 
 
@@ -442,7 +511,7 @@ def planned_archive(source_path, archive_path):
 
 def build():
     records = S.build_runs()
-    table = S.build_table(records)
+    table = covered_table(records)
     accounts = S.build_accounts(records)
     groups = S.build_groups(records)
     write(LEDGER / "runs.jsonl", b"".join(line(record) for record in records))
@@ -510,7 +579,7 @@ class Audit:
 def check():
     audit = Audit()
     records = S.build_runs()
-    table = S.build_table(records)
+    table = covered_table(records)
     accounts = S.build_accounts(records)
 
     expected = {
@@ -857,6 +926,7 @@ def selftest():
         "failures": len(result.failures),
         "errors": len(result.errors),
         "skipped": len(result.skipped),
+        "captured_on": datetime.date.today().isoformat(),
         "modules": [{"module": name, "tests": count} for name, count in sorted(modules.items())],
         "note": "captured artifact; re-run the command to reproduce the counts. It proves the "
                 "suite passed at capture time, not that no other work happened.",

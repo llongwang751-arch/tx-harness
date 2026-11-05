@@ -14,7 +14,7 @@
     {
       "json_pointer": "/counts",
       "path": "ledger/formal-table.json",
-      "sha256": "6e862a0e25f4a24e1cc70d0ee1f1f6fd67f483efd83a61f91060ce933d9ea961"
+      "sha256": "b85cd47d8be7ec5c860f42e98ca799c05b924f3df1d162c34ffd1679c0f7561e"
     },
     {
       "json_pointer": "/product_run",
@@ -24,7 +24,7 @@
     {
       "json_pointer": "",
       "path": "reports/week3/formal-table.md",
-      "sha256": "7a2e551cf3e382b90a754b36d9f231352a6193345e6699f02e61bc303cedf5db"
+      "sha256": "160c33d5d44a76408a26b9aecd3b015f30d49d520c53905207b8684a09babdfa"
     },
     {
       "json_pointer": "/runs",
@@ -34,20 +34,20 @@
     {
       "json_pointer": "/entries",
       "path": "supplements/week2/executions.json",
-      "sha256": "80fb1e13ba15d6665537b98fe9b817e878f29451d9ab378ab05af7a134484210"
+      "sha256": "f6c2c7d1b604fac59074fb27cfaba663904cf7785317ec272e5ff0038e7cd8c7"
     },
     {
       "json_pointer": "",
       "path": "tests/test_ledger.py",
-      "sha256": "62cd9e729da0997f9dc0112ab70d08f66b91e33737970461dd0279af08706bc1"
+      "sha256": "2308f4d88f3134720210283f86b9bc415657cd5616af890682be630ac300379f"
     }
   ],
   "explanation": "入选不是把门槛写松，而是每条记录都能把四件事重新算出来：题面与答案的哈希等于评测账引用的冻结来源；提交题面以冻结题面开头（桌面产品转为 CRLF 行尾时按行尾规范化比较，并在记录里写明）；证据文件与分级规则一致；输入副本与 cases/<题>/inputs 逐字节一致（T04 的补发附件按额外文件登记，不算篡改）。29 条都通过，说明这一批的记录缺口不在完整性，而在可控性——没有任何一款产品证实了后端模型，也没有一份协议是预注册冻结的，因此排名条件（入选门槛 + 模型证实 + 预注册协议）无人满足。门槛确实会拒绝：tests/test_ledger.py 分别植入改一个输出字节、换掉题面、制造污染状态、给未知裁定塞分数、复制运行号五种违规，五道检查各自报错。元宝 159/300 的差距来自交付内容本身（T01 42、T02 27、T03 0、T05 30，T04 60），是产物分数，不是 Harness 分数。",
   "id": "CL-01",
-  "observation": "台账共 41 条产品运行：25 条五题端到端（5 款×5 题）、4 条固定响应工具契约主臂、6 条接入校准、4 条原生桌面任务、2 条同题重复（见 CL-03）。按四道门槛过滤后，29 条正式轨道记录（25 端到端 + 4 主臂）全部入选，0 条被门槛剔除；校准、原生轨道与重复批不参与五题比较。裁定分布为通过 26、失败 5、未知 5。五款产品在五题上各 5 条可判运行，无缺题、无未知：Codex 300/300、WorkBuddy 300/300、DSH 270/300（4 过 1 失）、元宝专家模式 159/300（1 过 4 失）、豆包工作任务模式 300/300。正式表仍不发布名次。",
-  "pin_note": "哈希在第三周定稿时冻结。数据变化必须另记差异并更新 pinned_at，不得静默刷新；--check 会重跑实验并比对 expected_output_sha256。",
+  "observation": "台账共 47 条产品运行：25 条五题端到端（5 款×5 题）、4 条固定响应工具契约主臂、6 条接入校准、4 条原生桌面任务、8 条同题重复（见 CL-03）。按四道门槛过滤后，29 条正式轨道记录（25 端到端 + 4 主臂）全部入选，0 条被门槛剔除；校准、原生轨道与重复批不参与五题比较。裁定分布为通过 37、失败 5、未知 5。五款产品在五题上各 5 条可判运行，无缺题、无未知：Codex 300/300、WorkBuddy 300/300、DSH 270/300（4 过 1 失）、元宝专家模式 159/300（1 过 4 失）、豆包工作任务模式 300/300。正式表仍不发布名次。差异记录（2026-11-07）：本结论 pin 于 2026-10-31 台账 41 条、同题重复 2 条时，当时\"通过 26\"与 41 条总数不符（按台账重算为 31 过/5 败/5 未知，已修正）。台账增长序列为 39（0e658db 首刊）→41（18fadd3）→45（a3c88b0）→47（b5e8f7b），新增 6 条均为 10-30 的 DSH 同题重复（T02/T03/T05），不改变四道门槛过滤结果。逐条日期与窗口归属见 ledger/run-inventory.md。",
+  "pin_note": "哈希在第三周定稿时冻结。数据变化必须另记差异并更新 pinned_at，不得静默刷新；--check 会重跑实验并比对 expected_output_sha256。2026-11-07 差异修订（含对既往违规的更正）：本实验输出内嵌全部运行记录行，预期哈希实随每次台账入账而变化——6abb37ee（0e658db，39条）→a8f25119（18fadd3，41条）→e40d6ddf（a3c88b0，45条）→0e951d1a（b5e8f7b，47条）→3c9eeb8e（5eea693，字段扩展），其间只有部分提交同步更新了本文件与阶段报告（observation 曾滞后于 41 条、阶段报告曾引用首刊哈希），未做到\"另记差异\"，此处补记。本次修订只同步证据文件哈希（formal-table.json/md 新增 grading_coverage、test_ledger.py 改经 covered_table）与观察文字；今日重放 3c9eeb8e 与登记值一致，两次运行逐字节稳定。逐条日期与窗口归属见 ledger/run-inventory.md。同日二次修订：tests/test_ledger.py 生成文件比对改经 ledger.covered_table；supplements/week2/executions.json 补登记 period_end_baseline_commit（6cb801c），修复 verify_week2 对第3周新增公开包的越周误报——两个证据文件哈希随之更新。",
   "pinned_against_run_file_sha256": "415bde6db143d72a64fe5ee535e946e0466bd0ca5aac0398ea06687cce719a7b",
-  "pinned_at": "2026-10-31",
+  "pinned_at": "2026-11-07",
   "question": "把模型与 Skill 的不确定性留在账外，只保留规则冻结、题面有效、证据有效、无污染的运行，五款产品各有几条可以进入正式比较表？",
   "reproducible_experiment": {
     "claim": "CL-01",

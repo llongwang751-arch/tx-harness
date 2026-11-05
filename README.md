@@ -9,13 +9,15 @@
 | 课题要求 | 入口 | 当前状态 |
 |---|---|---|
 | 评测方案 | [已执行方案](docs/evaluation-plan.md)、[台账与归因规范](docs/ledger.md)、[补测协议](supplements/contracts-v2/protocol.json) | 25 个选定组合 + 21 轮补测分别统计；归因规则与分账方式成文 |
-| 用例：任务、输入、完成条件 | [cases/T01–T05](cases)、[压力层固定契约](supplements/contracts-v2/fixtures) | 题面、输入、答案冻结，可离线核验 |
+| 用例：任务、输入、完成条件 | [cases/T01–T05](cases)、[变体 T03-M/T05-M](supplements/behavior-protocol-v1/README.md)、[压力层固定契约](supplements/contracts-v2/fixtures) | 原题面、输入、答案冻结，可离线核验；两变体已冻结未运行 |
 | 表现现场 | [公开现场包](public/pilots)、[补测现场](public/supplements)、[运行台账](ledger/runs.jsonl) | 47 条运行记录（25 端到端 + 4 主臂 + 6 校准 + 4 原生 + 8 同题重复）+ 31 个公开包 |
 | 打分细则与赋分 | [原评分细则](docs/rubric.md)、[判卷修订档案](ledger/revisions/index.json)、[正式比较表](reports/week3/formal-table.md) | 机器检查 60 分逐项；三道守卫有修前/修后与独立验收 |
 | 书面竞品评测报告 | [结论先行](reports/conclusion-2026-10-31.md)、[完整报告 v2](reports/report.md) | 先结论后全文；每项判断标置信依据 |
-| 每周六个人周报 | [周报索引](reports/weekly/README.md)、[10月31日正文](reports/weekly/2026-10-31-draft.md) | 10月17日已发；10月31日正文就绪，待本人发送 |
+| 每周六个人周报 | [周报索引](reports/weekly/README.md)、[11月7日正文](reports/weekly/2026-11-07.md) | 10月17日已发；11月7日正文就绪，待本人发送 |
 
-2026-10-31整理第三周交付（统计窗口10月25日至31日）：本周新增产品任务8次（DSH 在 T01/T02/T03/T05 各重复两次，八次全部 60/60），另交付记账方式与一个闭环。重复批还改了两处判断：T05 那次 30/60 在两次重复里没有复现（60/60、60/60），只能算单次抽样；其原因也查到了具体两处数值错误（B001 净额 10200 而非 8200，汇总与自身台账差 10000/8000），见[CL-04](ledger/conclusions/CL-04.json)。47条运行按唯一ID和十个字段登记进[运行台账](ledger/runs.jsonl)，产品运行、自测、离线复算、判卷回归、裸模型探针、接口预检拆成[六本互不相加的账](ledger/accounts.json)；[正式比较表](reports/week3/formal-table.md)只纳入规则冻结、题面有效、证据有效、无污染的运行，29条正式轨道记录全部入选、0条被剔除，五款各有5条可判运行，但因模型未证实、协议为草案，表内给分不给名次。判卷三道守卫补[修订档案](ledger/revisions/index.json)（修前/修后代码、正例、近似错误例、独立验收、历史复算影响），并用[另一套实现](scripts/independent_check.py)复核22例36个判定、0分歧。规范与复核命令见[台账与归因规范](docs/ledger.md)，过程与结论见[第三周阶段报告](reports/week3/stage-report.md)和[10月31日文字周报](reports/weekly/2026-10-31-draft.md)；周报仍由本人发送，未发送不写成已交付。
+2026-11-07整理第四周交付（统计窗口11月1日至7日，统一截止时点2026-11-07 09:00 UTC+8）：本周**没有新增产品运行**，四条交付全部回应[第三周评分反馈](https://github.com/llongwang751-arch/tx-harness/issues/1)。①口径对齐：[运行逐条清单](ledger/run-inventory.md)按发生日期与入账提交逐条给出47条运行的窗口归属（历史入账39、第3周新增8），台账增长序列39→41→45→47连同CL-01预期哈希的演化一并补记差异；阶段报告首刊时的三处口径冲突已修正并留修订记录。[自测252项](ledger/self-test.json)补捕获日期。②独立复核：[复核操作单与签署表](ledger/independent-review/2026-11/README.md)已备好（含规范化哈希脚本，规避Windows CRLF坑），待未参与实现的同事执行签署。③行为协议：[多步工具链变体协议v1](supplements/behavior-protocol-v1/README.md)冻结未运行——T03-M/T05-M从既有用例确定性派生（诱饵、注入、中间产物对账全部预登记），双闸门通过（空跑0分、参考解60/60），是否运行由11月14日决策门决定。④判卷覆盖范围：[正式比较表](reports/week3/formal-table.md)新增"判卷覆盖范围"一节并同步进[formal-table.json](ledger/formal-table.json)的`grading_coverage`字段，明确门槛测试不等于判卷器整体有效性验证。周报正文见[第4周文字周报](reports/weekly/2026-11-07.md)，由本人发送。
+
+2026-10-31整理第三周交付（统计窗口10月25日至31日）：本周新增产品运行8次（DSH 在 T01/T02/T03/T05 各重复两次，八次全部 60/60），另交付记账方式与一个闭环。重复批还改了两处判断：T05 那次 30/60 在两次重复里没有复现（60/60、60/60），只能算单次抽样；其原因也查到了具体两处数值错误（B001 净额 10200 而非 8200，汇总与自身台账差 10000/8000），见[CL-04](ledger/conclusions/CL-04.json)。47条运行按唯一ID和十个字段登记进[运行台账](ledger/runs.jsonl)，产品运行、自测、离线复算、判卷回归、裸模型探针、接口预检拆成[六本互不相加的账](ledger/accounts.json)；[正式比较表](reports/week3/formal-table.md)只纳入规则冻结、题面有效、证据有效、无污染的运行，29条正式轨道记录全部入选、0条被剔除，五款各有5条可判运行，但因模型未证实、协议为草案，表内给分不给名次。判卷三道守卫补[修订档案](ledger/revisions/index.json)（修前/修后代码、正例、近似错误例、独立验收、历史复算影响），并用[另一套实现](scripts/independent_check.py)复核22例36个判定、0分歧。规范与复核命令见[台账与归因规范](docs/ledger.md)，过程与结论见[第三周阶段报告](reports/week3/stage-report.md)和[10月31日文字周报](reports/weekly/2026-10-31-draft.md)；周报仍由本人发送，未发送不写成已交付。
 
 2026-10-25整理第二周交付（统计窗口10月18日至24日）：新增已接受任务14次，有效9、失败0、未知5。其中真实模型WorkBuddy任务4次，Codex/DSH固定响应任务7次，WorkBuddy固定响应校准3次；后10次没有神经模型推理。两次接受前配置拒绝另列，界面预检计零任务。[文字周报草稿](reports/weekly/2026-10-24-draft.md)、[逐次运行登记](supplements/week2/executions.json)、[阶段报告](reports/week2/stage-report.md)已同步，尚未发邮件，由本人发送。
 
@@ -51,7 +53,7 @@
 | 赋分、标准、理由 | config/rubric.json、docs/rubric.md、reports/exploratory-score-review.json | 26次逐项审阅；缺证项保留null及范围 |
 | 书面竞品报告 | reports/report.md、reports/evaluation-v2.json、reports/permission-pairs-v2.json | Harness边界为主，业务及旧分辅助；三组实际许可对照与条件核对单列 |
 | 每周六个人周报邮件 | reports/weekly/README.md、reports/weekly/2026-10-17.md、reports/weekly/2026-10-31-draft.md、reports/weekly-template.md | 10月17日周报已发送；10月31日正文已写完待本人发送 |
-| 运行台账与归因定责 | ledger/runs.jsonl、ledger/accounts.json、ledger/unknowns.json、docs/ledger.md | 39条运行十字段登记；六账分列；七项未知各带影响/下一步/停止条件 |
+| 运行台账与归因定责 | ledger/runs.jsonl、ledger/accounts.json、ledger/unknowns.json、ledger/run-inventory.md、docs/ledger.md | 47条运行十字段登记；逐条日期与窗口归属见[运行逐条清单](ledger/run-inventory.md)；六账分列；七项未知各带影响/下一步/停止条件 |
 | 正式比较表与门槛 | reports/week3/formal-table.md、ledger/formal-table.json | 四道门槛逐行校验；排名门槛无人满足，名次保留为null |
 | 判卷修订留档 | ledger/revisions/index.json、scripts/independent_check.py | 三条修订六件套齐全；独立实现复核22例36判定、0分歧 |
 | 个人开源GitHub链接 | https://github.com/llongwang751-arch/tx-harness，MIT | 公开方案、代码、真实预试与报告 |
@@ -76,6 +78,8 @@ python scripts/audit_controlled_workbuddy.py --output reports/controlled-workbud
 python scripts/verify_gui_controls.py
 python scripts/analyze_permission_pairs_v2.py --check
 python scripts/ledger.py --check
+python scripts/verify_run_inventory.py --check
+python scripts/audit_behavior_protocol.py --check
 python scripts/ledger.py reproduce CL-01
 python scripts/ledger.py reproduce CL-02
 python scripts/independent_check.py
@@ -99,14 +103,14 @@ python -m harness_eval prepare --product codex --case T01 --replicate 1 --track 
 ```text
 config/         协议、评分权重、产品入口登记
 docs/           方法、归因、采集、评分与提交说明
-cases/          五套任务、原始输入、仅供评测员使用的答案
+cases/          五套任务、两个行为变体（T03-M/T05-M，冻结未运行）、原始输入、仅供评测员使用的答案
 harness_eval/   标准库CLI：准备、记录、核验、封存、打分、汇总
 evaluation_v3/  新增验收门槛；保留旧判卷与分数，不另计综合分
 tests/          验收判定与证据门槛的回归测试
-ledger/         第三周运行台账：47条运行、六本账、正式比较表、未知登记、结论与判卷修订档案
+ledger/         运行台账：47条运行、逐条清单、六本账、正式比较表、未知登记、结论与判卷修订档案、独立复核包
 reports/        完整探索性报告、逐项评分、周报与确认性草案
 reports/weekly/ 已发送邮件周报的Markdown归档与索引
-supplements/    新补测预登记协议、变体输入与提示词
+supplements/    新补测预登记协议、变体输入与提示词、行为协议v1
 runs/           本地采集包（Git忽略）
 public/pilots/  原31个公开现场包
 public/supplements/  新21轮补测现场、原件与分母

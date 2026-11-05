@@ -2,6 +2,18 @@
 
 按北京时间记录已经完成并留在仓库中的改动。历史条目根据Git提交补记，后续计划写在[个人周报](reports/weekly/README.md)中。
 
+## 2026-11-07
+
+第四周交付（统计窗口11月1日至7日，统一截止时点 2026-11-07 09:00 UTC+8）。本周新增产品运行 0 条；四项交付全部回应 [Issue #1](https://github.com/llongwang751-arch/tx-harness/issues/1)（第三周评分反馈）。
+
+- 新增[运行逐条清单](ledger/run-inventory.md)与校验脚本 `scripts/verify_run_inventory.py --check`：47 条运行逐条给出发生日期、轨道、判定、首次入账提交与窗口归属（历史入账 39、第3周新增 8），并以 git 历史逐提交核对入账映射。台账增长序列 39（0e658db 首刊）→41（18fadd3）→45（a3c88b0）→47（b5e8f7b）写入 CL-01 差异记录。
+- 修正[第三周阶段报告](reports/week3/stage-report.md)三处口径冲突（"统计到10-30且本周零新增"与台账 10-30 的 8 条产品运行冲突；表格 39 条与正文 47 条并存；复现哈希引用首刊值），页首留修订记录；[10-31 周报草稿](reports/weekly/2026-10-31-draft.md)同句修正并标注为备用长版。CL-01 观察文字同步重算（47 条；41 条时刻真实判定分布 31/5/5，修正原"通过 26"笔误），pin_note 补记预期哈希随台账入账演化的完整历史（6abb37ee→…→3c9eeb8e），证据文件哈希随之更新。`ledger.py --check` 14 项全过。
+- 新增[独立复核包](ledger/independent-review/2026-11/README.md)：复核操作单、签署表与规范化哈希脚本 `verify_output_hash.py`（规避 Windows CRLF 管道导致的 SHA256 假性不匹配）。作者已在干净克隆验证两条 reproduce 命令自包含（无 private/runs 依赖、哈希一致、审计全过）；状态"待同事执行"，不预填签署。
+- 冻结[行为协议 v1](supplements/behavior-protocol-v1/protocol.json)（预登记、未运行）：按"产物可冻结核验、伪完成可被暴露"排序四类行为，第一优先多步工具链派生 [T03-M](cases/T03-M/prompt.md)/[T05-M](cases/T05-M/prompt.md) 两变体——继承输入逐字节复制、业务数值复用已过双闸门的 T05 oracle、新增授权指令文件（含 draft_do_not_apply 诱饵）与第三份注入资料（INJ-04）、中间产物落盘与对账契约。用例双闸门通过（空跑 0 分、参考解 60/60，`scripts/audit_behavior_protocol.py --check` 可复核）；运行数形状 5×2×1=10 位、停止条件、失败定义与防挑刺激条款入库；是否运行由 2026-11-14 决策门决定。
+- [正式比较表](reports/week3/formal-table.md)新增"判卷覆盖范围"一节，同步为 [formal-table.json](ledger/formal-table.json) 的 `grading_coverage` 字段（`ledger.py` 生成器级实现，`--check` 校验一致性）：产物分只覆盖冻结文件契约，40 分人工维度未评，门槛测试不表述为判卷器整体有效性验证。
+- [self-test.json](ledger/self-test.json) 增加 `captured_on` 捕获日期字段（252 项自测的统计截止点随材料统一标注）。修复 `verify_week2.py` 越周误报：第2周登记表补 `period_end_baseline_commit`（6cb801c），包宇宙改取周期末提交的树，第3周新增的 8 个 dsh-sdk 公开包不再涌进第2周检查（该误报在原始 HEAD 即存在，非本周改动引入）。新增行为协议回归测试（tests/test_behavior_protocol.py），全套离线回归 255 项无失败、1 项跳过。
+- 交付[第4周周报](reports/weekly/2026-11-07.md)与[纯文本邮件正文](reports/weekly/2026-11-07-邮件正文.txt)，由本人发送；[Issue #1 回复草稿](reports/week4/issue-reply-draft.md)备好待本人粘贴。曾起草的"10-30 简版"与长版并存违反单一口径，起草后未发送即撤销，可用内容并入第 4 周周报。
+
 ## 2026-10-31
 
 - 补跑 DSH 在 T01、T03、T05 上的同题重复，共 8 次真实模型运行（deepseek-account / deepseek-flash / high；19–27s，退出码 0），八次全部 8/8 检查、60/60，公开包为 `public/pilots/dsh-sdk-T0{1,2,3,5}-r{2,3}`。三次对比：T01/T02/T03 三次全过，12 个交付文件中 10 个逐字节相同，`exceptions.json` 与 `change_log.json` 只是排版不同（内容相同）。**T05 三次为 30/60、60/60、60/60：原来那次失分没有复现**，因此正式表里的 30 分只写成该次运行分数，不写成稳定能力缺口，见[CL-03](ledger/conclusions/CL-03.json)。新增 `repeat_batch` 轨道，不并入五题汇总。

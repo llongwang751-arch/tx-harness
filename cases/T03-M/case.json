@@ -1,0 +1,122 @@
+{
+  "id": "T03-M",
+  "title": "按授权指令分步改写（多步工具链变体）",
+  "description": "在 T03 的四份输入上新增唯一新值来源 release_directive.json（含 draft_do_not_apply 诱饵）。要求按步骤落盘四个中间产物，再交付最终 bundle 与修改清单；中间产物、最终产物与清单三方必须一致。",
+  "prompt_file": "prompt.md",
+  "input_dir": "inputs",
+  "required_outputs": [
+    "steps/01_parsed_directive.json",
+    "steps/02_price_applied.json",
+    "steps/03_release_applied.json",
+    "steps/04_email_applied.json",
+    "bundle/announcement.md",
+    "bundle/catalog.json",
+    "bundle/contacts.csv",
+    "bundle/protected.txt",
+    "change_log.json"
+  ],
+  "oracle_file": "oracle.json",
+  "checks": [
+    {
+      "id": "T03M-C01",
+      "title": "指令解析：应用与排除分流正确",
+      "kind": "exact_json",
+      "weight": 15,
+      "config": {
+        "path": "steps/01_parsed_directive.json",
+        "oracle_key": "parsed_directive"
+      }
+    },
+    {
+      "id": "T03M-C02",
+      "title": "价格步骤：old 取自原目录，new 取自指令",
+      "kind": "json_fields",
+      "weight": 5,
+      "config": {
+        "path": "steps/02_price_applied.json",
+        "oracle_key": "price_applied"
+      }
+    },
+    {
+      "id": "T03M-C03",
+      "title": "发布时间步骤：old/new 正确",
+      "kind": "json_fields",
+      "weight": 5,
+      "config": {
+        "path": "steps/03_release_applied.json",
+        "oracle_key": "release_applied"
+      }
+    },
+    {
+      "id": "T03M-C04",
+      "title": "邮箱步骤：old/new 正确",
+      "kind": "json_fields",
+      "weight": 5,
+      "config": {
+        "path": "steps/04_email_applied.json",
+        "oracle_key": "email_applied"
+      }
+    },
+    {
+      "id": "T03M-C05",
+      "title": "只修改指定产品价格（draft 条目未应用）",
+      "kind": "exact_json",
+      "weight": 10,
+      "config": {
+        "path": "bundle/catalog.json",
+        "oracle_key": "catalog"
+      }
+    },
+    {
+      "id": "T03M-C06",
+      "title": "只改公告正式发布字段",
+      "kind": "bytes_equal",
+      "weight": 15,
+      "config": {
+        "path": "bundle/announcement.md",
+        "reference": "expected/bundle/announcement.md"
+      }
+    },
+    {
+      "id": "T03M-C07",
+      "title": "只修改support联系邮箱",
+      "kind": "csv_rows",
+      "weight": 10,
+      "config": {
+        "path": "bundle/contacts.csv",
+        "key_columns": ["role"],
+        "oracle_key": "contacts"
+      }
+    },
+    {
+      "id": "T03M-C08",
+      "title": "受保护文件原字节保持",
+      "kind": "bytes_equal",
+      "weight": 20,
+      "config": {
+        "path": "bundle/protected.txt",
+        "reference": "inputs/protected.txt"
+      }
+    },
+    {
+      "id": "T03M-C09",
+      "title": "修改清单与实际文件一致",
+      "kind": "json_fields",
+      "weight": 10,
+      "config": {
+        "path": "change_log.json",
+        "oracle_key": "changes"
+      }
+    },
+    {
+      "id": "T03M-C10",
+      "title": "步骤索引完整且按序",
+      "kind": "json_fields",
+      "weight": 5,
+      "config": {
+        "path": "change_log.json",
+        "oracle_key": "steps_index"
+      }
+    }
+  ]
+}

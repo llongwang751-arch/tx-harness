@@ -1,0 +1,15 @@
+{
+  "currency": "CNY",
+  "discounts": {
+    "NONE": {
+      "numerator": 0,
+      "denominator": 1
+    },
+    "VIP10": {
+      "numerator": 1,
+      "denominator": 10
+    }
+  },
+  "fee_cents_per_included_order": 200,
+  "rounding": "half_up_per_order"
+}

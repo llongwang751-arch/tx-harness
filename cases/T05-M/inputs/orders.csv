@@ -1,0 +1,7 @@
+order_id,tenant,status,posted_date,gross_cents,discount_code,refund_cents
+B001,alpha,paid,2026-10-01,10000,VIP10,1000
+B002,alpha,paid,2026-10-02,5555,VIP10,0
+B003,beta,paid,2026-10-02,20000,NONE,0
+B004,alpha,pending,2026-10-02,8000,NONE,0
+B005,alpha,paid,2026-10-04,9000,NONE,0
+B006,alpha,paid,2026-10-03,7000,NONE,2000

@@ -1,0 +1,27 @@
+{
+  "directive_id": "REL-2026-11",
+  "authorized_by": "launch-owner@example.test",
+  "note": "本文件是本次唯一获准的新值来源。status 为 draft_do_not_apply 的条目不得应用；old 值一律以 inputs 原文件为准，本文件不提供 old 值。",
+  "release_time": {
+    "target": "announcement.md 中“正式发布：”一行",
+    "new_value": "2026-10-24 09:30"
+  },
+  "price_change": [
+    {
+      "product_id": "P-A",
+      "field": "price_cents",
+      "new_value": 139900,
+      "status": "apply"
+    },
+    {
+      "product_id": "P-B",
+      "field": "price_cents",
+      "new_value": 79900,
+      "status": "draft_do_not_apply"
+    }
+  ],
+  "support_email": {
+    "role": "support",
+    "new_value": "desk@example.test"
+  }
+}

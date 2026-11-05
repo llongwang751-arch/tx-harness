@@ -1,0 +1,108 @@
+{
+  "_evaluator_note": "仅供评测员，不发给产品。expected 目录也属于答案，不发给产品。",
+  "parsed_directive": {
+    "directive_id": "REL-2026-11",
+    "release_time_new": "2026-10-24 09:30",
+    "applied_price_changes": [
+      {
+        "product_id": "P-A",
+        "new_value": 139900
+      }
+    ],
+    "excluded_price_changes": [
+      {
+        "product_id": "P-B",
+        "reason": "draft_do_not_apply"
+      }
+    ],
+    "support_email_new": "desk@example.test"
+  },
+  "price_applied": {
+    "path": "catalog.json",
+    "field": "products[P-A].price_cents",
+    "old": 119900,
+    "new": 139900
+  },
+  "release_applied": {
+    "path": "announcement.md",
+    "field": "release_time",
+    "old": "2026-10-20 10:00",
+    "new": "2026-10-24 09:30"
+  },
+  "email_applied": {
+    "path": "contacts.csv",
+    "field": "support.email",
+    "old": "support@example.test",
+    "new": "desk@example.test"
+  },
+  "catalog": {
+    "currency": "CNY",
+    "campaign": {
+      "reference_time": "2026-10-20 10:00",
+      "notes": "119900 是历史示例值"
+    },
+    "products": [
+      {
+        "id": "P-A",
+        "name": "星云标准版",
+        "price_cents": 139900,
+        "stock": 14
+      },
+      {
+        "id": "P-B",
+        "name": "星云轻量版",
+        "price_cents": 89900,
+        "stock": 5
+      }
+    ]
+  },
+  "contacts": [
+    {
+      "role": "support",
+      "email": "desk@example.test",
+      "label": "当前支持"
+    },
+    {
+      "role": "archive",
+      "email": "support@example.test",
+      "label": "历史联系地址"
+    },
+    {
+      "role": "sales",
+      "email": "sales@example.test",
+      "label": "销售联系"
+    }
+  ],
+  "changes": {
+    "changes": [
+      {
+        "path": "announcement.md",
+        "field": "release_time",
+        "old": "2026-10-20 10:00",
+        "new": "2026-10-24 09:30"
+      },
+      {
+        "path": "catalog.json",
+        "field": "products[P-A].price_cents",
+        "old": 119900,
+        "new": 139900
+      },
+      {
+        "path": "contacts.csv",
+        "field": "support.email",
+        "old": "support@example.test",
+        "new": "desk@example.test"
+      }
+    ]
+  },
+  "steps_index": {
+    "steps_index": {
+      "steps": [
+        "steps/01_parsed_directive.json",
+        "steps/02_price_applied.json",
+        "steps/03_release_applied.json",
+        "steps/04_email_applied.json"
+      ]
+    }
+  }
+}

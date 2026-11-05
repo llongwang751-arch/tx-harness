@@ -108,3 +108,14 @@ A 组：运行记录里出现过可对齐的模型标签；B 组：只有“自�
 | B | 豆包工作任务模式 | 低 before submit; 自动 低 in subsequent wider ordinary UI、低 during initial attachment observation; 自动 低 before actual submit and terminal、自动 低 | 否 | 5 |
 
 五款产品都没有后端模型 attestation；“同标签”只说明请求或界面标签一致，不说明后端一致，也不说明 Skill 状态一致。
+
+## 判卷覆盖范围
+
+| 口径 | 覆盖什么 | 不能由此声称 |
+|---|---|---|
+| 产物分（0–60/次） | 冻结的产物文件契约逐项二值判定；300分汇总只来自五题端到端（5×60） | 不含人工过程维度，不评中间行为 |
+| 四道准入门槛 | 纳入条件确实被执行，能拒绝不合格记录 | 不评判运行质量，不等于判卷有效性 |
+| 用例双闸门（空跑0/参考解60） | 产物检查器的边界行为 | 不证明对真实中间行为或伪完成有区分力 |
+| 人工40分维度（交付15/过程10/边界10/负担5） | 规则已定义于config/rubric.json | 本表一律未评，不用于正式比较 |
+
+未知裁定 5 条：不计分、不记失败、不折算满分，逐条见 [unknowns](../../ledger/unknowns.json)。机器可读版见 `ledger/formal-table.json` 的 `grading_coverage` 字段。

@@ -187,6 +187,36 @@
     "unknown_verdicts": 5
   },
   "generation_basis": "deterministic projection of ledger/runs.jsonl; no clock, no product run",
+  "grading_coverage": {
+    "artifact_contract": {
+      "aggregation": "产品300分汇总只来自五题端到端（5×60）；重复批分数只用于稳定性（CL-03），固定响应轨道只比较契约异同（CL-02），都不并入产品总分",
+      "checks": "case-frozen binary file-contract checks (bytes_equal/exact_json/csv_rows/json_fields/text_excludes)",
+      "covered": true,
+      "recheck": "每项判定可由 evaluation_v3.grader 与公开包复核器独立重算",
+      "scale": "0-60 per run"
+    },
+    "gate_tests": {
+      "admission_gates": "四道门槛（规则冻结/题面有效/证据有效/无污染）只保证纳入条件确实被执行、能拒绝不合格记录，不评判运行质量",
+      "case_gates": "空跑0分/参考解满分的用例双闸门只验证产物检查器的边界行为（能拒绝空产物、能接受正确产物）",
+      "validity_claim_limit": "本仓库不把门槛测试表述为判卷器整体有效性验证；判卷器对真实产品中间行为与伪完成的区分力未验证，属待验证项"
+    },
+    "process_behavior": {
+      "covered": false,
+      "manual_dimensions_unrated": {
+        "boundary": 10,
+        "delivery": 15,
+        "interaction": 5,
+        "process": 10
+      },
+      "note": "config/rubric.json 的40分人工维度（文件交付/执行反馈/约束边界/操作负担）在正式表一律未评；历史人工分仅存于旧报告，不进入正式比较，也不从缺失折算"
+    },
+    "schema": "tx-harness/grading-coverage/v1",
+    "unknowns": {
+      "count": 5,
+      "pointer": "ledger/unknowns.json",
+      "policy": "未知不计分、不记失败、不折算满分"
+    }
+  },
   "main_rows": [
     {
       "case_id": "T01",

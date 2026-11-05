@@ -100,20 +100,31 @@ def product_manifest(name):
 def weekly_counts():
     registry = core.read_json(BASE / 'executions.json')
     counts = count_executions(registry['entries'])
+    scan_dirs = ['public/pilots', 'public/supplements/contracts-v2',
+                 'public/supplements/window-reopen-v1',
+                 'public/supplements/window-reopen-v2', 'public/supplements/controlled-adapter-v1',
+                 'public/supplements/controlled-workbuddy-v1', 'public/supplements/controlled-workbuddy-v2',
+                 'public/supplements/controlled-workbuddy-v3']
     old = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only',
-        registry['previous_week_baseline_commit'], '--', 'public/pilots',
-        'public/supplements/contracts-v2', 'public/supplements/window-reopen-v1',
-        'public/supplements/window-reopen-v2', 'public/supplements/controlled-adapter-v1',
-        'public/supplements/controlled-workbuddy-v1', 'public/supplements/controlled-workbuddy-v2',
-        'public/supplements/controlled-workbuddy-v3'], cwd=ROOT, text=True).splitlines()
+        registry['previous_week_baseline_commit'], '--', *scan_dirs],
+        cwd=ROOT, text=True).splitlines()
     old = {name for name in old if product_manifest(name)}
-    current = {path.relative_to(ROOT).as_posix() for directory, pattern in [
-        ('public/pilots', '*/manifest.json'), ('public/supplements/contracts-v2', 'S*/manifest.json'),
-        ('public/supplements/window-reopen-v1', 'W*/manifest.json'),
-        ('public/supplements/window-reopen-v2', 'R*/manifest.json'),
-        ('public/supplements/controlled-adapter-v1','CA*/manifest.json'),
-        *[(f'public/supplements/controlled-workbuddy-v{i}', 'WBC*/manifest.json') for i in (1, 2, 3)]]
-        for path in (ROOT / directory).glob(pattern) if product_manifest(path.relative_to(ROOT).as_posix())}
+    # 本登记表冻结于其统计周期：包宇宙取周期末基线提交的树，而非活文件系统。
+    # 之后各周新增的公开包（如第3周的 dsh-sdk 重复批）由各自的台账负责，
+    # 不应再涌进这一周的检查；未登记 period_end_baseline_commit 时按旧口径回退。
+    end_commit = registry.get('period_end_baseline_commit')
+    if end_commit:
+        current = {name for name in subprocess.check_output(['git', 'ls-tree', '-r', '--name-only',
+            end_commit, '--', *scan_dirs], cwd=ROOT, text=True).splitlines()
+            if product_manifest(name)}
+    else:
+        current = {path.relative_to(ROOT).as_posix() for directory, pattern in [
+            ('public/pilots', '*/manifest.json'), ('public/supplements/contracts-v2', 'S*/manifest.json'),
+            ('public/supplements/window-reopen-v1', 'W*/manifest.json'),
+            ('public/supplements/window-reopen-v2', 'R*/manifest.json'),
+            ('public/supplements/controlled-adapter-v1','CA*/manifest.json'),
+            *[(f'public/supplements/controlled-workbuddy-v{i}', 'WBC*/manifest.json') for i in (1, 2, 3)]]
+            for path in (ROOT / directory).glob(pattern) if product_manifest(path.relative_to(ROOT).as_posix())}
     added = current - old
     registered = set()
     for entry in registry['entries']:

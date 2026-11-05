@@ -1,0 +1,6 @@
+{
+  "path": "contacts.csv",
+  "field": "support.email",
+  "old": "support@example.test",
+  "new": "desk@example.test"
+}

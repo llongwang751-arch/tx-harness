@@ -1,0 +1,12 @@
+{
+  "included_order_ids": [
+    "B001",
+    "B002",
+    "B006"
+  ],
+  "excluded_order_ids": [
+    "B003",
+    "B004",
+    "B005"
+  ]
+}

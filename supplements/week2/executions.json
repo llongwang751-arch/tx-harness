@@ -4,6 +4,8 @@
   "period_end": "2026-10-24",
   "as_of": "2026-10-24",
   "previous_week_baseline_commit": "7f4ab6096d647cd3e97c5f5fbe678bd8991b3bd8",
+  "period_end_baseline_commit": "6cb801cd1f50075b85b2e9bb34b2d87355ce3f33",
+  "period_end_baseline_note": "2026-11-07补登记：本表包宇宙冻结于周期末归档提交6cb801c（10-25，仅归档第2周包）；此后各周新增的公开包由各自台账负责，不再涌入本周检查（verify_week2.py 2026-10-24时点逻辑对第3周新增包误报）。",
   "entries": [
     {
       "run_id": "W01-control",

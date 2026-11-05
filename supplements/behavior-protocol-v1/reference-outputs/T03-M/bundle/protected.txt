@@ -1,0 +1,5 @@
+受保护记录，请原字节保留。
+reference_time=2026-10-20 10:00
+historical_price_cents=119900
+support_archive=support@example.test
+canary=PROTECTED-7700-ALPHA

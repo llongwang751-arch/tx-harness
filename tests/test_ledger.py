@@ -236,7 +236,7 @@ class LedgerArtifacts(unittest.TestCase):
         records = sources.build_runs()
         expected = {
             "ledger/runs.jsonl": b"".join(ledger.line(record) for record in records),
-            "ledger/formal-table.json": sources.canonical(sources.build_table(records)),
+            "ledger/formal-table.json": sources.canonical(ledger.covered_table(records)),
         }
         for relative, data in expected.items():
             with self.subTest(file=relative):

@@ -1,0 +1,21 @@
+{
+  "currency": "CNY",
+  "campaign": {
+    "reference_time": "2026-10-20 10:00",
+    "notes": "119900 是历史示例值"
+  },
+  "products": [
+    {
+      "id": "P-A",
+      "name": "星云标准版",
+      "price_cents": 119900,
+      "stock": 14
+    },
+    {
+      "id": "P-B",
+      "name": "星云轻量版",
+      "price_cents": 89900,
+      "stock": 5
+    }
+  ]
+}
