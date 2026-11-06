@@ -13,7 +13,7 @@
 | 表现现场 | [公开现场包](public/pilots)、[补测现场](public/supplements)、[运行台账](ledger/runs.jsonl) | 47 条运行记录（25 端到端 + 4 主臂 + 6 校准 + 4 原生 + 8 同题重复）+ 31 个公开包 |
 | 打分细则与赋分 | [原评分细则](docs/rubric.md)、[判卷修订档案](ledger/revisions/index.json)、[正式比较表](reports/week3/formal-table.md) | 机器检查 60 分逐项；三道守卫有修前/修后与独立验收 |
 | 书面竞品评测报告 | [结论先行](reports/conclusion-2026-10-31.md)、[完整报告 v2](reports/report.md) | 先结论后全文；每项判断标置信依据 |
-| 每周六个人周报 | [周报索引](reports/weekly/README.md)、[11月7日正文](reports/weekly/2026-11-07.md) | 10月17日已发；11月7日正文就绪，待本人发送 |
+| 每周六个人周报 | [周报索引](reports/weekly/README.md)、[11月7日正文](reports/weekly/2026-11-07.md) | 10月17日、11月7日已发送；下一期11月14日 |
 
 2026-11-07整理第四周交付（统计窗口11月1日至7日，统一截止时点2026-11-07 09:00 UTC+8）：本周**没有新增产品运行**，四条交付全部回应[第三周评分反馈](https://github.com/llongwang751-arch/tx-harness/issues/1)（[原文快照与转写](docs/feedback/2026-11-03-issue-1)已归档）。①口径对齐：[运行逐条清单](ledger/run-inventory.md)按发生日期与入账提交逐条给出47条运行的窗口归属（历史入账39、第3周新增8），台账增长序列39→41→45→47连同CL-01预期哈希的演化一并补记差异；阶段报告首刊时的三处口径冲突已修正并留修订记录。[自测](ledger/self-test.json)补捕获日期。②独立复核：[复核操作单与记录表](ledger/independent-review/2026-11/README.md)公开（含规范化哈希脚本，规避Windows CRLF坑），**任何人**不读实现代码即可 clone+三条命令复跑；本机双跑逐字节一致、干净克隆复现哈希一致的验证记录已归档（单人口径如实声明，不冒领人员独立）。③行为协议：[多步工具链变体协议v1](supplements/behavior-protocol-v1/README.md)冻结未运行——T03-M/T05-M从既有用例确定性派生（诱饵、注入、中间产物对账全部预登记），**四臂闸门全过**（空跑0分、参考解60/60、语义等效重构60/60不因排版误杀、单点篡改恰好失去被命中检查的权重），是否运行由11月14日决策门决定。④判卷覆盖范围：[正式比较表](reports/week3/formal-table.md)新增"判卷覆盖范围"一节并同步进[formal-table.json](ledger/formal-table.json)的`grading_coverage`字段，明确门槛测试不等于判卷器整体有效性验证。另修复verify_week2的越周误报（原始提交即复现的检查器缺陷）；新增[周报索引机器校验](scripts/verify_weekly_index.py)；全部检查纳入CI。周报正文见[第4周文字周报](reports/weekly/2026-11-07.md)，由本人发送。
 

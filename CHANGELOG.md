@@ -22,6 +22,7 @@
 - **评分反馈原文归档**：新增 [docs/feedback/2026-11-03-issue-1/](docs/feedback/2026-11-03-issue-1/README.md)——Issue #1 的 API 快照（含 SHA-256）与逐条验收条款转写，作为第 4 周回应的需求来源存证。
 - **周报索引机器校验**：新增 `scripts/verify_weekly_index.py --check`——周报索引表的归档链接、周六周期、发送状态与依据、已撤销简版的清零、最新草稿的截止时点声明与正文链接全部机检；周报本身增补"六账分列运行账表、最短复核路径（六条命令各带预期结果）、归档说明（非邮件正文）"三节。
 - CI（.github/workflows/verify.yml）补齐 `verify_run_inventory`、`audit_behavior_protocol`、`verify_weekly_index` 三项检查。
+- **2026-11-07 闭环**：[第4周周报](reports/weekly/2026-11-07.md)已由本人发送、[Issue #1 回复](https://github.com/llongwang751-arch/tx-harness/issues/1)已由本人粘贴评论（均经本人确认；实际发送时间未单独记录）。周报索引与状态依据同步更新；`verify_weekly_index.py` 的待发检查改为作用于最近一个周六的周报（已发送则只校验正文链接），避免拿历史备用草稿误报。
 
 ## 2026-10-31
 

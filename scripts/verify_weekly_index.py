@@ -34,7 +34,9 @@ def problems() -> list[str]:
     rows = ROW.findall(text)
     if not rows:
         return ["索引表中没有解析到任何周报行"]
-    newest_draft: Path | None = None
+    today = dt.date.today()
+    current_saturday = today - dt.timedelta(days=(today.weekday() - 4) % 7)
+    current_row = None
     for date, status, archive, basis in rows:
         weekday = dt.date.fromisoformat(date).weekday()
         if weekday != 5:
@@ -49,26 +51,30 @@ def problems() -> list[str]:
                 found.append(f"{date}: 归档链接不存在 {target}")
             elif path.stat().st_size == 0:
                 found.append(f"{date}: 归档文件为空 {target}")
-        if re.fullmatch(r"(草稿|长版草稿|正文已完成，待本人发送).*", status.strip()):
-            draft = WEEKLY / f"{date}.md"
-            if draft.is_file() and (newest_draft is None or draft.name > newest_draft.name):
-                newest_draft = draft
+        if date == current_saturday.isoformat():
+            current_row = (date, status)
     for leftover in WEEKLY.glob("2026-10-30*"):
         found.append(f"存在已撤销的 2026-10-30 简版残留 {leftover.name}")
-    if newest_draft is None:
-        found.append("没有任何待发送草稿行")
-    else:
-        body = newest_draft.read_text(encoding="utf-8")
-        if "统一截止时点" not in body:
-            found.append(f"{newest_draft.name}: 缺统一截止时点声明")
-        if "待本人发送" not in body:
-            found.append(f"{newest_draft.name}: 状态未标'待本人发送'")
-        for target in LINK.findall(body):
-            if target.startswith(("http://", "https://", "#")):
-                continue
-            path = (WEEKLY / target.strip()).resolve()
-            if not path.is_file():
-                found.append(f"{newest_draft.name}: 正文链接不存在 {target}")
+    # 本周期（最近一个周六）的周报无论发送与否都校验正文链接；
+    # 若仍是待发草稿，还必须带统一截止时点声明与"待本人发送"状态。
+    if current_row:
+        date, status = current_row
+        draft = WEEKLY / f"{date}.md"
+        if not draft.is_file():
+            found.append(f"{date}: 本周期周报文件缺失")
+        else:
+            body = draft.read_text(encoding="utf-8")
+            for target in LINK.findall(body):
+                if target.startswith(("http://", "https://", "#")):
+                    continue
+                path = (WEEKLY / target.strip()).resolve()
+                if not path.is_file():
+                    found.append(f"{date}.md: 正文链接不存在 {target}")
+            if not status.strip().startswith("已发送"):
+                if "统一截止时点" not in body:
+                    found.append(f"{date}.md: 缺统一截止时点声明")
+                if "待本人发送" not in body:
+                    found.append(f"{date}.md: 状态未标'待本人发送'")
     return found
 
 
