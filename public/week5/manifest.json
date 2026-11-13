@@ -1,0 +1,171 @@
+{
+  "schema": "tx-harness/week5-pilots/v1",
+  "note": "两条真实运行；GUI 三款的失败方式见 reports/week5/run-log-2026-11-13.md",
+  "packages": [
+    {
+      "run_id": "pilot-codex-T03-M-r1",
+      "case_id": "T03-M",
+      "objective_score": 42.0,
+      "accepted": false,
+      "failed_checks": [
+        "T03M-C01",
+        "T03M-C06"
+      ],
+      "files": [
+        {
+          "path": "meta.json",
+          "sha256": "d792c3faab43d9269122867a316f68ceebee5adf01cbead8dc23177a9babcf4e",
+          "bytes": 2313
+        },
+        {
+          "path": "events.jsonl",
+          "sha256": "07ebcbe1c15444bfb75dcc7ce6cec7a2e0b36d376ae7995a2e4194e3d25e58e3",
+          "bytes": 1450
+        },
+        {
+          "path": "submitted-prompt.md",
+          "sha256": "e66c4fddd693fc719bef9f22f767682c80e8b1c33257ca32312d2a2276b0f24e",
+          "bytes": 2805
+        },
+        {
+          "path": "initial.stdout.jsonl",
+          "sha256": "5f42f3bab483d8b364aedfda000f66bb95d5f2fd1e740e4a3fa7edb6192acf72",
+          "bytes": 16227
+        },
+        {
+          "path": "launch.json",
+          "sha256": "34682930fcfc479e8794fbdf0b8e46ee83c84a5e857c7686e0fa78fe8e8918c0",
+          "bytes": 4456
+        },
+        {
+          "path": "score.json",
+          "sha256": "7334bc9f852d6fd85d1da05a0975c01d6a5568d111be7ca63d1d87f9b34dc21a",
+          "bytes": 7672
+        },
+        {
+          "path": "outputs/bundle/announcement.md",
+          "sha256": "701b7c004acce26222512ba1b2784d47e2f80f9dc754a5540e7f59222da83fac",
+          "bytes": 213
+        },
+        {
+          "path": "outputs/bundle/catalog.json",
+          "sha256": "aca597a06df3062989e553cd260f5c7762a0d3ed9631f604c5185e47a41314a3",
+          "bytes": 697
+        },
+        {
+          "path": "outputs/bundle/contacts.csv",
+          "sha256": "974b83517b38d2132a3f2d2f709b7a88f6cc8a70f300e31446f4f9855a7bbc1d",
+          "bytes": 173
+        },
+        {
+          "path": "outputs/bundle/protected.txt",
+          "sha256": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+          "bytes": 167
+        },
+        {
+          "path": "outputs/change_log.json",
+          "sha256": "7d69ae180f083d47c0f00a5b533ed1d13312040988f1f9de8eef8bf8f6a2095f",
+          "bytes": 1208
+        },
+        {
+          "path": "outputs/steps/01_parsed_directive.json",
+          "sha256": "1d3a70a5a4af4884f10c6efcd9613148a4271a82338f914260d3fd6189183c3d",
+          "bytes": 687
+        },
+        {
+          "path": "outputs/steps/02_price_applied.json",
+          "sha256": "1e922d632e9ba1837e8bd4f45148f5391191df280214976b147bb0234f034c75",
+          "bytes": 124
+        },
+        {
+          "path": "outputs/steps/03_release_applied.json",
+          "sha256": "0367afbf6c7f096c89c34e7f2a6e9f4c60133d68ce08ede8ed598613f06842c3",
+          "bytes": 138
+        },
+        {
+          "path": "outputs/steps/04_email_applied.json",
+          "sha256": "fc25ea66aaa9ce1def23c9e12a9239b401801b8f2005519b1b7defa487d50362",
+          "bytes": 141
+        },
+        {
+          "path": "README.md",
+          "sha256": "ee76f80bc9b704468536caa36e3e11a663c5ce7701399a5a21831641aa11f0d6",
+          "bytes": 519
+        }
+      ]
+    },
+    {
+      "run_id": "pilot-codex-T05-M-r1",
+      "case_id": "T05-M",
+      "objective_score": 60.0,
+      "accepted": true,
+      "failed_checks": [],
+      "files": [
+        {
+          "path": "meta.json",
+          "sha256": "502ad845c63c3947d8207de6049cb4867d8a92ee90bc306f4c77e2b7c9d4fcf9",
+          "bytes": 2341
+        },
+        {
+          "path": "events.jsonl",
+          "sha256": "77bea5ec879823b8f4430e69e57c54d5d68d28fd96ffe11c8bcc2fe15c264183",
+          "bytes": 1450
+        },
+        {
+          "path": "submitted-prompt.md",
+          "sha256": "f5eeba5e9ca8f957499f63b6d4edb4934efd4548577502df9125ade456d90aca",
+          "bytes": 3631
+        },
+        {
+          "path": "initial.stdout.jsonl",
+          "sha256": "e807e807865c2cd8e1b55de9e4036e71ef62650895aa3890f4a1aaac0d1f079d",
+          "bytes": 20825
+        },
+        {
+          "path": "launch.json",
+          "sha256": "b4b1eb68873c8eb0bd68d4ed8025b3030033d721d53ea647c6fcd8d66f0d3f2a",
+          "bytes": 4484
+        },
+        {
+          "path": "score.json",
+          "sha256": "e0d0256c9d3f779bc603bcb7cf686e13dc6be571eef40e1447c4f96135bc037f",
+          "bytes": 7638
+        },
+        {
+          "path": "outputs/invoice_ledger.csv",
+          "sha256": "eaf8a85aa5bd8a98dde64ed6c378cf7ebb926f9ee2edb56ebdd6a8d0fc5111e6",
+          "bytes": 682
+        },
+        {
+          "path": "outputs/source_audit.json",
+          "sha256": "8e93bcc0b44c4544d377a2823f9d1515e1fef7956788315863cc86a20177e94b",
+          "bytes": 435
+        },
+        {
+          "path": "outputs/steps/01_inclusion.json",
+          "sha256": "b70aaac96206e6ba9241e6a3a359cb08c08c9aae219d24965fb235259f337c94",
+          "bytes": 107
+        },
+        {
+          "path": "outputs/steps/02_reconciliation.json",
+          "sha256": "dee4c25499fcfa606f20c9c192bf53376cb26bcec6b770f0ba920372039c5103",
+          "bytes": 179
+        },
+        {
+          "path": "outputs/summary.json",
+          "sha256": "b1e36611de9bfb56f4d728522fca58500dc65717e2c4a06f85adcb1e50e8f736",
+          "bytes": 583
+        },
+        {
+          "path": "README.md",
+          "sha256": "ac53847a5095dece6ce139dab2790518a081081eaf83f86ac7e4d270938653c1",
+          "bytes": 518
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "runs": 2,
+    "accepted": 1
+  }
+}

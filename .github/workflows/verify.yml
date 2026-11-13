@@ -31,6 +31,7 @@ jobs:
       - run: python scripts/audit_behavior_protocol.py --check
       - run: python scripts/audit_adversarial_artifacts.py --check
       - run: python scripts/verify_conclusion_snapshots.py --check
+      - run: python scripts/week5_pilots.py --check
       - run: python scripts/audit_case_gates.py --check
       - run: python scripts/independent_check.py
       - run: python -m unittest discover -s tests -v

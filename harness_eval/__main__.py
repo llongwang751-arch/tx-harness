@@ -75,9 +75,25 @@ def command_plan(args):
     print(f"已写入{len(slots)}个待执行实验位: {path.resolve()}")
 
 
+def registered_case_ids(protocol):
+    """主协议的五题，加上行为协议 v1 里预登记的两个变体。
+
+    变体不进 75 轮草案矩阵（那五题是另一套协议），但 prepare 要能创建它们的运行包，
+    因此按“[behavior-protocol-v1](../../supplements/behavior-protocol-v1/protocol.json)
+    的 variants 键”单独登记，不写进 config/protocol.json 的 case_ids。
+    """
+    ids = list(protocol["case_ids"])
+    behavior = ROOT / "supplements/behavior-protocol-v1/protocol.json"
+    if behavior.is_file():
+        for case_id in read_json(behavior).get("variants", {}):
+            if case_id not in ids:
+                ids.append(case_id)
+    return ids
+
+
 def command_prepare(args):
     protocol = read_json(ROOT / "config/protocol.json")
-    if args.product not in protocol["product_ids"] or args.case not in protocol["case_ids"]:
+    if args.product not in protocol["product_ids"] or args.case not in registered_case_ids(protocol):
         raise ValueError("未知产品或任务")
     if not 1 <= args.replicate <= protocol["replicates"]:
         raise ValueError("重复序号超出范围")
