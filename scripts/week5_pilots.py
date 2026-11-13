@@ -23,7 +23,6 @@ from evaluation_v3.grader import adjudicate  # noqa: E402
 RUNS = [
     ("pilot-codex-T03-M-r1", "T03-M", ROOT / "private/codex-pilot/pilot-codex-T03-M-r1"),
     ("pilot-codex-T05-M-r1", "T05-M", ROOT / "private/codex-pilot/pilot-codex-T05-M-r1"),
-    ("pilot-doubao-T03-M-r1", "T03-M", ROOT / "private/runs-week5/pilot-doubao-T03-M-r1"),
 ]
 PUBLIC = ROOT / "public/week5"
 SCORES = ROOT / "reports/scores"

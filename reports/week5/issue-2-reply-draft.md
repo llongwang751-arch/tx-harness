@@ -32,7 +32,7 @@
 
 如实说：现在没有独立意见。新增的[自证边界](../blob/codex/evaluation/reports/week5/self-verification-boundary.md)列了自证能回答的四件事（确定性、自包含、内部一致、算术）和回答不了的五件事，其中第 2 条（步骤是否发生）与第 5 条（后端模型是否与标签一致）本轮已拿到实证：前者由对抗审计证明可伪造，后者五款均无 attestation。第 3、4 条（判卷器对近似正确的判断、题面与标签）仍只能靠外部意见。
 
-**P0（决策门）**：[decision-gate-2026-11-14.md](../blob/codex/evaluation/reports/week5/decision-gate-2026-11-14.md) + [decision-gate.json](../blob/codex/evaluation/reports/week5/decision-gate.json)：决定、阻塞、预期信息增益、停止条件（协议四条均未触发）、重开条件。**当晚增补**：拿到可用入口后没有停在决定上，实际跑出三条——[Codex T05-M 60/60、Codex T03-M 42/60、豆包工作任务模式 T03-M 60/60](../blob/codex/evaluation/reports/week5/run-log-2026-11-13.md)，证据包在 [public/week5](../blob/codex/evaluation/public/week5/manifest.json) 逐文件带哈希。**一并更正**：先前"豆包不落盘"是跑在「对话」页的结论，被测入口应是「工作」页；切对入口后豆包九个文件全交付、十项全过。这属于入口错配，不是产品能力结论，已撤回。元宝记环境无效（Linux 沙箱读不到本机目录），WorkBuddy 记未运行（合成文本输入被拒）。10 个位实际完成 3 个，`slots` 不虚报。
+**P0（决策门）**：[decision-gate-2026-11-14.md](../blob/codex/evaluation/reports/week5/decision-gate-2026-11-14.md) + [decision-gate.json](../blob/codex/evaluation/reports/week5/decision-gate.json)：决定、阻塞、预期信息增益、停止条件（协议四条均未触发）、重开条件。**当晚增补**：拿到可用入口后没有停在决定上，实际跑出两条——[Codex T05-M 60/60、Codex T03-M 42/60](../blob/codex/evaluation/reports/week5/run-log-2026-11-13.md)，证据包在 [public/week5](../blob/codex/evaluation/public/week5/manifest.json) 逐文件带哈希。另有豆包工作模式一条一度 60/60，复核后**整条撤回**：它的工作区没有 `inputs/`，而 `bundle/announcement.md` 与 oracle 逐字节相同——刺激不对、证据不可信，按采集事故处理而不是产品结论。元宝记环境无效（Linux 沙箱读不到本机目录），WorkBuddy 记未运行（合成文本输入被拒）。10 个位实际完成 2 个，`slots` 不虚报。
 
 **P1（对抗性产物）**：见问题2；六条臂全部由脚本从冻结输入确定性构造，不是产品运行，不进台账、不改五题分数。
 
