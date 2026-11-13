@@ -240,12 +240,33 @@ def grading_coverage(table):
         "schema": "tx-harness/grading-coverage/v1",
         "artifact_contract": {
             "covered": True,
+            "name": "产物一致性分（artifact consistency）",
             "scale": "0-60 per run",
             "checks": "case-frozen binary file-contract checks "
                       "(bytes_equal/exact_json/csv_rows/json_fields/text_excludes)",
             "aggregation": "产品300分汇总只来自五题端到端（5×60）；重复批分数只用于稳定性"
                            "（CL-03），固定响应轨道只比较契约异同（CL-02），都不并入产品总分",
             "recheck": "每项判定可由 evaluation_v3.grader 与公开包复核器独立重算",
+            "what_it_certifies": "交付文件与冻结答案逐项一致；同一份答案换排版、换键序仍满分",
+            "what_it_does_not_certify": "中间步骤是否真的按序发生。T03-M/T05-M 的步骤文件是"
+                                        "普通 JSON，可由最终产物事后反推；对抗审计里该臂 60/60，"
+                                        "与真按步骤做的产物逐项相同",
+            "adversarial_evidence": "reports/week5/adversarial-artifacts.json",
+        },
+        "step_evidence": {
+            "covered": False,
+            "finding": "跳步但补写步骤文件可拿满分（T03-M 60/60、T05-M 60/60）；整目录缺席才掉分"
+                       "（42/60、45/60）。判卷器不看写入顺序、时间戳或调用轨迹",
+            "caught": "自洽但错值不会满分：一个业务值改错并三处同步，仍精确失去绑定该值的检查"
+                      "（T03-M 45/60，T05-M 27/60）",
+            "limit": "产物层无法证明过程发生过；步骤文件只能当“申报”，不能当“证据”",
+        },
+        "native_call_evidence": {
+            "covered": False,
+            "state": "not_obtained",
+            "note": "五款产品都没有可核验的工具调用/请求事件；这一维度不并入产物一致性分，"
+                    "不计分也不作扣分，单列为待取得证据。取得条件：产品侧事件流或带时序的"
+                    "调用轨迹（含错误回传与重试），且能证明未被事后编辑",
         },
         "process_behavior": {
             "covered": False,
@@ -283,8 +304,12 @@ def coverage_markdown(table):
     return ("\n## 判卷覆盖范围\n\n"
             "| 口径 | 覆盖什么 | 不能由此声称 |\n"
             "|---|---|---|\n"
-            "| 产物分（0–60/次） | 冻结的产物文件契约逐项二值判定；300分汇总只来自"
-            "五题端到端（5×60） | 不含人工过程维度，不评中间行为 |\n"
+            "| 产物一致性分（0–60/次） | 冻结的产物文件契约逐项二值判定；300分汇总只来自"
+            "五题端到端（5×60） | 不含人工过程维度，不证明中间步骤真的发生过 |\n"
+            "| 步骤文件（T03-M/T05-M） | 中间产物是否“申报”齐全、与最终产物自洽 | "
+            "可事后补写：对抗审计里补写臂 60/60，只有整目录缺席才掉分 |\n"
+            "| 原生调用证据 | 本表未取得，单列不并入分数 | 五款均无工具调用/请求事件，"
+            "不因此扣分，也不能用产物分代替 |\n"
             "| 四道准入门槛 | 纳入条件确实被执行，能拒绝不合格记录 | 不评判运行质量，"
             "不等于判卷有效性 |\n"
             "| 用例双闸门（空跑0/参考解60） | 产物检查器的边界行为 | 不证明对真实中间"
@@ -294,7 +319,8 @@ def coverage_markdown(table):
             "config/rubric.json | 本表一律未评，不用于正式比较 |\n\n"
             f"未知裁定 {unknown} 条：不计分、不记失败、不折算满分，逐条见 "
             "[unknowns](../../ledger/unknowns.json)。机器可读版见 "
-            "`ledger/formal-table.json` 的 `grading_coverage` 字段。\n")
+            "`ledger/formal-table.json` 的 `grading_coverage` 字段；"
+            "对抗审计见 [adversarial-artifacts](../week5/adversarial-artifacts.md)。\n")
 
 
 def table_markdown(table, groups=None):

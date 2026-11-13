@@ -1,0 +1,60 @@
+{
+  "schema": "tx-harness/decision-gate/v1",
+  "gate_date": "2026-11-14",
+  "recorded_on": "2026-11-13",
+  "protocol": "supplements/behavior-protocol-v1/protocol.json",
+  "protocol_status": "preregistered_frozen_not_yet_run",
+  "decision": "do_not_start_product_runs",
+  "slots_planned": 10,
+  "slots_filled": 0,
+  "run_records_added": 0,
+  "executed_instead": [
+    {
+      "item": "adversarial_artifact_audit",
+      "result": "6 arms; steps_backfilled 60/60 on both variants; steps_omitted 42/60 and 45/60; self_consistent_wrong_value 45/60 and 27/60",
+      "evidence": "reports/week5/adversarial-artifacts.json"
+    },
+    {
+      "item": "conclusion_snapshot_gate",
+      "result": "4 conclusions bound to text hash, evidence hashes and git blob; a silent edit is rejected by --check",
+      "evidence": "ledger/conclusions/index.json"
+    },
+    {
+      "item": "grading_scope_rename",
+      "result": "60-point score renamed to artifact consistency; native-call evidence listed as a separate not-obtained dimension",
+      "evidence": "reports/week3/formal-table.md"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "B1",
+      "name": "product_access",
+      "fact": "五款产品均为外部商业应用；本机没有可用的产品会话、账号或 GUI 自动化通道",
+      "effect": "10 个实验位无法产生真实运行；合成产物不能登记为产品运行"
+    },
+    {
+      "id": "B2",
+      "name": "verifiable_event_stream",
+      "fact": "五款均无工具调用/请求事件；DSH 与 Codex 的受控事件不覆盖 T03-M/T05-M",
+      "effect": "即使跑完，步骤是否真的发生仍不可证"
+    },
+    {
+      "id": "B3",
+      "name": "model_and_skill_control",
+      "fact": "五款后端模型均未证实；GUI 三款 Skill 状态未知",
+      "effect": "结果不能进入 Harness 因果结论"
+    }
+  ],
+  "expected_information_gain": {
+    "gain": "五款在两条更长任务链上的产物一致性读数",
+    "not_gained": ["过程真实性", "Harness 归因", "产品排名"],
+    "reason": "对抗审计显示同一份正确答案无论真做还是补写都是 60/60，最关键未知不会被这 10 次运行回答"
+  },
+  "stop_conditions_triggered": [],
+  "reopen_requires": [
+    "至少一款产品的可复现入口（隔离工作区、可用账号、可重复启动路径）",
+    "该产品可核验的调用/请求事件（含时间戳与错误回传），或能证明产物未被事后编辑"
+  ],
+  "reopen_process": "protocol.json 的四步预登记（case_ids 入册、v3 守卫映射、双闸门复验、逐条登记），并另写新的决策记录",
+  "limits": "本记录只说明本轮不启动；不说明产品会或不会跳步，也不改变任何既有产品分数"
+}

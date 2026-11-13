@@ -1,0 +1,101 @@
+{
+  "schema": "tx-harness/adversarial-artifact-audit/v1",
+  "question": "跳步但伪造证据（最终文件自洽、步骤文件事后补写）能否通过 T03-M/T05-M 的冻结判卷器？",
+  "answer": "能。步骤文件是普通 JSON，可由最终产物反推；判卷器不看写入顺序、时间戳或调用轨迹，所以“先做最终产物、再补步骤”与“真按步骤做”在产物层无法区分，两臂同为 60/60。但伪造者仍不能靠自洽拿满分：一个业务值改错（三方自洽）会精确失去绑定该值的检查。因此这 60 分只能称“产物一致性分”，不是过程真实性，也不能替代原生调用证据。",
+  "arms": [
+    {
+      "case_id": "T03-M",
+      "arm": "steps_omitted",
+      "objective_score": 42.0,
+      "objective_max": 60,
+      "failed_checks": [
+        "T03M-C01",
+        "T03M-C02",
+        "T03M-C03",
+        "T03M-C04"
+      ],
+      "failed_weight": 30,
+      "matches_expected_failures": null
+    },
+    {
+      "case_id": "T03-M",
+      "arm": "steps_backfilled",
+      "objective_score": 60.0,
+      "objective_max": 60,
+      "failed_checks": [],
+      "failed_weight": 0,
+      "matches_expected_failures": null
+    },
+    {
+      "case_id": "T03-M",
+      "arm": "self_consistent_wrong_value",
+      "objective_score": 45.0,
+      "objective_max": 60,
+      "failed_checks": [
+        "T03M-C02",
+        "T03M-C05",
+        "T03M-C09"
+      ],
+      "failed_weight": 25,
+      "expected_failed_checks": [
+        "T03M-C02",
+        "T03M-C05",
+        "T03M-C09"
+      ],
+      "matches_expected_failures": true,
+      "note": "P-A 价格 139900 改成 139800，catalog / 步骤 02 / change_log 三处自洽"
+    },
+    {
+      "case_id": "T05-M",
+      "arm": "steps_omitted",
+      "objective_score": 45.0,
+      "objective_max": 60,
+      "failed_checks": [
+        "T05M-C01",
+        "T05M-C02"
+      ],
+      "failed_weight": 25,
+      "matches_expected_failures": null
+    },
+    {
+      "case_id": "T05-M",
+      "arm": "steps_backfilled",
+      "objective_score": 60.0,
+      "objective_max": 60,
+      "failed_checks": [],
+      "failed_weight": 0,
+      "matches_expected_failures": null
+    },
+    {
+      "case_id": "T05-M",
+      "arm": "self_consistent_wrong_value",
+      "objective_score": 27.0,
+      "objective_max": 60,
+      "failed_checks": [
+        "T05M-C02",
+        "T05M-C03",
+        "T05M-C04"
+      ],
+      "failed_weight": 55,
+      "expected_failed_checks": [
+        "T05M-C02",
+        "T05M-C03",
+        "T05M-C04"
+      ],
+      "matches_expected_failures": true,
+      "note": "B002 净额 5199 改成 5198，台账 / 汇总 / 对账三处自洽"
+    }
+  ],
+  "checks": {
+    "omitted_loses_process_checks": true,
+    "backfilled_reaches_full_marks": true,
+    "consistent_wrong_value_loses_exact_value_checks": true
+  },
+  "native_call_evidence": {
+    "state": "not_obtained",
+    "would_require": "产品侧工具调用/请求事件或可核验的执行轨迹（时间戳、调用序号、错误回传）",
+    "current_products": "五款均未取得；仅 DSH 与 Codex 在固定响应轨道有受控事件，且不覆盖这两条变体"
+  },
+  "limits": "只测两条冻结契约、只测产物层；三条臂均由脚本从冻结输入确定性构造，不是产品运行。本审计不能证明真实产品会或不会跳步，只能界定这套判卷器能区分什么。",
+  "passed": true
+}

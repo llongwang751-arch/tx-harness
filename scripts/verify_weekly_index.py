@@ -27,6 +27,11 @@ ROW = re.compile(r"^\|\s*(\d{4}-\d{2}-\d{2})\s*\|(.*?)\|(.*?)\|(.*?)\|\s*$", re.
 LINK = re.compile(r"\(([^()]+)\)")
 
 
+def most_recent_saturday(today: dt.date) -> dt.date:
+    """本周周期的周六：周六当天返回当天，其余日子返回最近一个已过的周六。"""
+    return today - dt.timedelta(days=(today.weekday() - 5) % 7)
+
+
 def problems() -> list[str]:
     found: list[str] = []
     index = WEEKLY / "README.md"
@@ -35,7 +40,7 @@ def problems() -> list[str]:
     if not rows:
         return ["索引表中没有解析到任何周报行"]
     today = dt.date.today()
-    current_saturday = today - dt.timedelta(days=(today.weekday() - 4) % 7)
+    current_saturday = most_recent_saturday(today)
     current_row = None
     for date, status, archive, basis in rows:
         weekday = dt.date.fromisoformat(date).weekday()
@@ -57,6 +62,11 @@ def problems() -> list[str]:
         found.append(f"存在已撤销的 2026-10-30 简版残留 {leftover.name}")
     # 本周期（最近一个周六）的周报无论发送与否都校验正文链接；
     # 若仍是待发草稿，还必须带统一截止时点声明与"待本人发送"状态。
+    # 周期内还没有当周行时，退回到索引里最新的一行（提前起草的下一期），
+    # 避免"检查器永远匹配不到当前周六"这种空转。
+    if not current_row:
+        current_row = max(((date, status) for date, status, _, _ in rows),
+                          key=lambda item: item[0], default=None)
     if current_row:
         date, status = current_row
         draft = WEEKLY / f"{date}.md"

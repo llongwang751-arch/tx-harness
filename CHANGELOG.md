@@ -2,6 +2,16 @@
 
 按北京时间记录已经完成并留在仓库中的改动。历史条目根据Git提交补记，后续计划写在[个人周报](reports/weekly/README.md)中。
 
+## 2026-11-13
+
+第五周交付（统计窗口11月8日至14日，决策门 2026-11-14）。本周新增产品运行 0 条；四项回应 [Issue #2](https://github.com/llongwang751-arch/tx-harness/issues/2)（第四周评分反馈，[原文快照](docs/feedback/2026-11-13-issue-2/README.md)已归档）。
+
+- **决策门（P0）**：[决策记录](reports/week5/decision-gate-2026-11-14.md)与 [JSON](reports/week5/decision-gate.json)：不启动 10 个实验位（`slots` 保持为空），写明三条阻塞（无产品入口、无可核验事件流、模型与Skill未控）、预期信息增益（产物一致性读数得到，过程真实性/归因/排名得不到）、四条停止条件（均未触发）与两条重开条件。台账新增 0 条运行。
+- **对抗审计（P1）**：新增 `scripts/audit_adversarial_artifacts.py` 与[报告](reports/week5/adversarial-artifacts.md)。每条变体三条臂：步骤整目录缺席 42/60 与 45/60；**先做最终产物再反推补写步骤 60/60 与 60/60**；一个业务值改错但三方自洽 45/60 与 27/60。结论：步骤文件可由最终产物反推，判卷器不看写入顺序/时间戳/调用轨迹，步骤文件是"申报"不是"证据"；据此 60 分改称[产物一致性分](docs/grading-scope.md)，另设原生调用证据维度（五款 `not_obtained`，不并入、不扣分），并同步进正式表的 `grading_coverage`。
+- **结论快照门（P1）**：新增 [ledger/conclusions/index.json](ledger/conclusions/index.json) 与 `scripts/verify_conclusion_snapshots.py`——四条结论的文本哈希、证据清单与 Git blob 绑定；改动未记录时 `--check` 失败，`--record --reason` 才放行；旧快照按 blob 可取回。本次 CL-01 证据哈希随正式表更新，按新流程走完（改动→检查失败→留差异记录）。CI 增加该检查。
+- **自证边界（P1）**：[文档](reports/week5/self-verification-boundary.md)列出自证能回答的四件事与回答不了的五件事；第 2 条（步骤是否发生）与第 5 条（后端模型是否与标签一致）本轮已拿到实证。外部复核仍缺，操作单公开待回填。
+- 新增[Issue #2 回复草稿](reports/week5/issue-2-reply-draft.md)，由本人粘贴，不代发。
+
 ## 2026-11-07
 
 第四周交付（统计窗口11月1日至7日，统一截止时点 2026-11-07 09:00 UTC+8）。本周新增产品运行 0 条；四项交付全部回应 [Issue #1](https://github.com/llongwang751-arch/tx-harness/issues/1)（第三周评分反馈）。
