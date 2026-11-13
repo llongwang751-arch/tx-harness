@@ -1,0 +1,103 @@
+{
+  "schema": "tx-harness/behavior-run-register/v1",
+  "protocol": "supplements/behavior-protocol-v1/protocol.json",
+  "registered_at": "2026-11-13",
+  "registration_kind": "post_hoc",
+  "registration_note": "协议要求运行前填写 slots；本轮两条 Codex 运行实际是先跑后登记。此文件如实标为补登记，不冒充预登记，也不把未跑的位写成已跑。",
+  "planned_shape": "5 产品 × 2 变体 × 1 次 = 10 个位",
+  "slots": [
+    {
+      "slot_id": "pilot-codex-T03-M-r1",
+      "product_id": "codex",
+      "case_id": "T03-M",
+      "status": "completed",
+      "objective_score": 42.0,
+      "failed_checks": [
+        "T03M-C01",
+        "T03M-C06"
+      ],
+      "evidence": "public/week5/pilot-codex-T03-M-r1"
+    },
+    {
+      "slot_id": "pilot-codex-T05-M-r1",
+      "product_id": "codex",
+      "case_id": "T05-M",
+      "status": "completed",
+      "objective_score": 60.0,
+      "failed_checks": [],
+      "evidence": "public/week5/pilot-codex-T05-M-r1"
+    },
+    {
+      "slot_id": "pilot-doubao-T03-M-r1",
+      "product_id": "doubao",
+      "case_id": "T03-M",
+      "status": "invalid_run",
+      "reason": "工作区缺 inputs/；产物 bundle/announcement.md 与 cases/T03-M/expected 逐字节相同（SHA-256 一致），属采集事故，已整条撤回",
+      "evidence": "reports/week5/run-log-2026-11-13.md"
+    },
+    {
+      "slot_id": "pilot-doubao-T05-M-r1",
+      "product_id": "doubao",
+      "case_id": "T05-M",
+      "status": "not_run",
+      "reason": "右键菜单能弹出但合成点击落不到菜单项，无法灌入提示词；该项入口本身可用，属工具限制而非产品结论",
+      "evidence": "reports/week5/run-log-2026-11-13.md"
+    },
+    {
+      "slot_id": "pilot-yuanbao-T03-M-r1",
+      "product_id": "yuanbao",
+      "case_id": "T03-M",
+      "status": "environment_invalid",
+      "reason": "产品自述 inputs/ 在其沙盒中映射为 /data/inputs 且为空——执行环境是 Linux 沙箱，读不到本机 Windows 工作区；未找到本地文件入口",
+      "evidence": "reports/week5/run-log-2026-11-13.md"
+    },
+    {
+      "slot_id": "pilot-yuanbao-T05-M-r1",
+      "product_id": "yuanbao",
+      "case_id": "T05-M",
+      "status": "environment_invalid",
+      "reason": "同上，入口不兼容未解决，不重复计入",
+      "evidence": "reports/week5/run-log-2026-11-13.md"
+    },
+    {
+      "slot_id": "pilot-workbuddy-T03-M-r1",
+      "product_id": "workbuddy",
+      "case_id": "T03-M",
+      "status": "not_run",
+      "reason": "窗口可用、点击有效，但输入框拒收合成文本：Ctrl+V / SendKeys / WM_PASTE / 右键菜单四种方式均无效",
+      "evidence": "reports/week5/run-log-2026-11-13.md"
+    },
+    {
+      "slot_id": "pilot-workbuddy-T05-M-r1",
+      "product_id": "workbuddy",
+      "case_id": "T05-M",
+      "status": "not_run",
+      "reason": "同上",
+      "evidence": "reports/week5/run-log-2026-11-13.md"
+    },
+    {
+      "slot_id": "pilot-dsh-T03-M-r1",
+      "product_id": "dsh",
+      "case_id": "T03-M",
+      "status": "not_run",
+      "reason": "本机安装把 app.asar 打包，scripts/run_dsh_sdk_pilot.py 依赖的 dsh-desktop-host/lib/cli.js 路径不存在，SDK 入口不可用",
+      "evidence": "reports/week5/run-log-2026-11-13.md"
+    },
+    {
+      "slot_id": "pilot-dsh-T05-M-r1",
+      "product_id": "dsh",
+      "case_id": "T05-M",
+      "status": "not_run",
+      "reason": "同上",
+      "evidence": "reports/week5/run-log-2026-11-13.md"
+    }
+  ],
+  "counts": {
+    "planned": 10,
+    "completed": 2,
+    "invalid_run": 1,
+    "environment_invalid": 2,
+    "not_run": 5
+  },
+  "limits": "两条 completed 是 pilot（formal_eligible=false）；其余位按各自原因记，不折算成分数，也不把未跑写成已跑。GUI 三款在“本地电脑”权限下无法与评测仓库隔离，这是继续跑之前必须先解决的问题。"
+}

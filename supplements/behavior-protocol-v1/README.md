@@ -30,6 +30,12 @@
 
 见 protocol.json 的 `pre_run_registration`：case_ids 入册、v3 守卫映射补录（走修订档案）、双闸门复验、逐条运行登记。是否运行由 2026-11-14 决策门决定——本周只冻结，不运行，这是 Issue #1 的明确要求。
 
+## 运行登记（补登记）
+
+[run-register.json](run-register.json) 把 10 个位逐位登记：2 个完成（Codex 两条）、1 个无效运行（豆包，工作区缺输入）、2 个环境无效（元宝）、5 个未运行（豆包 T05-M 与 WorkBuddy 两个位是输入通道问题，DSH 两个位是 SDK 入口缺失）。python -X utf8 scripts/verify_behavior_runs.py --check 会校验矩阵完整性、状态与原因、以及分数与公开包是否一致。
+
+登记标为 post_hoc：本轮是先跑后登记，不冒充预登记。
+
 ## 机器可核清单
 
 | 产物 | 说明 |
