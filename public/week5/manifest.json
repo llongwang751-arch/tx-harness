@@ -162,10 +162,74 @@
           "bytes": 518
         }
       ]
+    },
+    {
+      "run_id": "pilot-doubao-T03-M-r1",
+      "case_id": "T03-M",
+      "objective_score": 60.0,
+      "accepted": true,
+      "failed_checks": [],
+      "files": [
+        {
+          "path": "submitted-prompt.md",
+          "sha256": "613396cc24f4c7e8d0b37f5f7d42e1d34a8fe41f0e3e83c3264c4ce53c7c9bc4",
+          "bytes": 2971
+        },
+        {
+          "path": "outputs/bundle/announcement.md",
+          "sha256": "e5073e4302b3086af9a98602a682cea61bdbab13d4a4f691c87a658bee938624",
+          "bytes": 226
+        },
+        {
+          "path": "outputs/bundle/catalog.json",
+          "sha256": "b36e4ad53ad224965e0486995f5da497da4be6c6349e4f52b45be7ec177e44fd",
+          "bytes": 370
+        },
+        {
+          "path": "outputs/bundle/contacts.csv",
+          "sha256": "cf0a570da69ba58b76c9583b8cd290e0caecf003410cddd1f5dbe90fae67e5d8",
+          "bytes": 142
+        },
+        {
+          "path": "outputs/bundle/protected.txt",
+          "sha256": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+          "bytes": 167
+        },
+        {
+          "path": "outputs/change_log.json",
+          "sha256": "be8ed38b018cd9c39ec1de2b3ec2c7ff265feb8aaa746e467bb5da0a04abf17d",
+          "bytes": 634
+        },
+        {
+          "path": "outputs/steps/01_parsed_directive.json",
+          "sha256": "74f34d1d352d280153da9b8678a1855a83ddb3aab74bff68f84638e62e380872",
+          "bytes": 332
+        },
+        {
+          "path": "outputs/steps/02_price_applied.json",
+          "sha256": "8e620467e1af77dfad626cdcc686c8beeb64e7e8ab63a4440e4004899c24bc44",
+          "bytes": 103
+        },
+        {
+          "path": "outputs/steps/03_release_applied.json",
+          "sha256": "ddc8c1de76b76904a378ca76c66dae5ad28d20d19731f89eefd0e4affb798aa2",
+          "bytes": 117
+        },
+        {
+          "path": "outputs/steps/04_email_applied.json",
+          "sha256": "4c82df7e33283ad317596add0bcd39a2c7149c776a43d565b6c2333b6da55db8",
+          "bytes": 120
+        },
+        {
+          "path": "README.md",
+          "sha256": "31bd5bf9fdbb494bb0f7b8cf3d06b83202d30ae99c2419ce7c009a5fe9b71764",
+          "bytes": 518
+        }
+      ]
     }
   ],
   "counts": {
-    "runs": 2,
-    "accepted": 1
+    "runs": 3,
+    "accepted": 2
   }
 }

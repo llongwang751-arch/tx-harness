@@ -20,10 +20,11 @@ sys.path.insert(0, str(ROOT))
 
 from evaluation_v3.grader import adjudicate  # noqa: E402
 
-RUNS = {
-    "T03-M": ROOT / "private/codex-pilot/pilot-codex-T03-M-r1",
-    "T05-M": ROOT / "private/codex-pilot/pilot-codex-T05-M-r1",
-}
+RUNS = [
+    ("pilot-codex-T03-M-r1", "T03-M", ROOT / "private/codex-pilot/pilot-codex-T03-M-r1"),
+    ("pilot-codex-T05-M-r1", "T05-M", ROOT / "private/codex-pilot/pilot-codex-T05-M-r1"),
+    ("pilot-doubao-T03-M-r1", "T03-M", ROOT / "private/runs-week5/pilot-doubao-T03-M-r1"),
+]
 PUBLIC = ROOT / "public/week5"
 SCORES = ROOT / "reports/scores"
 
@@ -36,6 +37,7 @@ def payload(run: Path) -> list[tuple[Path, str]]:
     items = [(run / "meta.json", "meta.json"),
              (run / "events.jsonl", "events.jsonl"),
              (run / "evidence/submitted-prompt.md", "submitted-prompt.md"),
+             (run / "workspace/submitted-prompt.md", "submitted-prompt.md"),
              (run / "evidence/initial.stdout.jsonl", "initial.stdout.jsonl"),
              (run / "evidence/launch.json", "launch.json")]
     scored = SCORES / f"{run.name}.json"
@@ -81,7 +83,7 @@ def build(case_id: str, run: Path) -> dict:
 
 
 def build_all() -> dict:
-    packages = [build(case, run) for case, run in RUNS.items()]
+    packages = [build(case, run) for _, case, run in RUNS]
     manifest = {
         "schema": "tx-harness/week5-pilots/v1",
         "note": "两条真实运行；GUI 三款的失败方式见 reports/week5/run-log-2026-11-13.md",

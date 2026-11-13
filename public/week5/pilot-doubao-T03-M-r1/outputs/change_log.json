@@ -1,0 +1,30 @@
+{
+  "changes": [
+    {
+      "path": "announcement.md",
+      "field": "release_time",
+      "old": "2026-10-20 10:00",
+      "new": "2026-10-24 09:30"
+    },
+    {
+      "path": "catalog.json",
+      "field": "products[P-A].price_cents",
+      "old": 119900,
+      "new": 139900
+    },
+    {
+      "path": "contacts.csv",
+      "field": "support.email",
+      "old": "support@example.test",
+      "new": "desk@example.test"
+    }
+  ],
+  "steps_index": {
+    "steps": [
+      "steps/01_parsed_directive.json",
+      "steps/02_price_applied.json",
+      "steps/03_release_applied.json",
+      "steps/04_email_applied.json"
+    ]
+  }
+}

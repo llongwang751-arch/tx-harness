@@ -1,0 +1,17 @@
+{
+  "directive_id": "REL-2026-11",
+  "release_time_new": "2026-10-24 09:30",
+  "applied_price_changes": [
+    {
+      "product_id": "P-A",
+      "new_value": 139900
+    }
+  ],
+  "excluded_price_changes": [
+    {
+      "product_id": "P-B",
+      "reason": "draft_do_not_apply"
+    }
+  ],
+  "support_email_new": "desk@example.test"
+}
