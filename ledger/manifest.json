@@ -46,7 +46,7 @@
     {
       "bytes": 13755,
       "path": "ledger/revisions/index.json",
-      "sha256": "b0efe2b66ef9792762d180419365a1e9712f9bcb962d7bfa8c5c690daf3982ec"
+      "sha256": "564dc0268ee15d5bd9d15a3f2da57c7aed2031d216e1201ffb4cd3057ed6d741"
     },
     {
       "bytes": 19539,
@@ -54,9 +54,9 @@
       "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20"
     },
     {
-      "bytes": 4096,
+      "bytes": 4418,
       "path": "ledger/revisions/code/grader-v3.py",
-      "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+      "sha256": "60f88667e8ccc8a608231b796482ae4f22b7cc87cd615121ee51483042a1da8c"
     },
     {
       "bytes": 516,
@@ -84,9 +84,9 @@
       "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20"
     },
     {
-      "bytes": 4096,
+      "bytes": 4418,
       "path": "ledger/revisions/code/grader-v3.py",
-      "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+      "sha256": "60f88667e8ccc8a608231b796482ae4f22b7cc87cd615121ee51483042a1da8c"
     },
     {
       "bytes": 516,
@@ -114,9 +114,9 @@
       "sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20"
     },
     {
-      "bytes": 4096,
+      "bytes": 4418,
       "path": "ledger/revisions/code/grader-v3.py",
-      "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+      "sha256": "60f88667e8ccc8a608231b796482ae4f22b7cc87cd615121ee51483042a1da8c"
     },
     {
       "bytes": 516,
@@ -164,7 +164,7 @@
     },
     {
       "path": "evaluation_v3/grader.py",
-      "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+      "sha256": "60f88667e8ccc8a608231b796482ae4f22b7cc87cd615121ee51483042a1da8c"
     },
     {
       "path": "harness_eval/core.py",

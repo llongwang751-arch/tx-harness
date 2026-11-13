@@ -23,12 +23,21 @@ def decoded_strings(value):
             yield from decoded_strings(item)
 
 
+def known_case_ids():
+    """五题主协议 + 行为协议 v1 预登记的变体（T03-M/T05-M）。"""
+    ids = set(core.read_json(core.ROOT / 'config/protocol.json')['case_ids'])
+    behavior = core.ROOT / 'supplements/behavior-protocol-v1/protocol.json'
+    if behavior.is_file():
+        ids |= set(core.read_json(behavior).get('variants', {}))
+    return ids
+
+
 def adjudicate(case_id, outputs, *, disabled_rules=()):
     rules = core.read_json(RULE_FILE)
     disabled = set(disabled_rules)
     if not disabled <= set(rules['rules']):
         raise ValueError('Unknown ablation rule')
-    if case_id not in core.read_json(core.ROOT / 'config/protocol.json')['case_ids']:
+    if case_id not in known_case_ids():
         raise ValueError('Unknown case')
     outputs = Path(outputs)
     case_dir = core.ROOT / 'cases' / case_id

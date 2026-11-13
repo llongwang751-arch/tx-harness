@@ -25,7 +25,7 @@
         "code": {
           "archived": "ledger/revisions/code/grader-v3.py",
           "path": "evaluation_v3/grader.py",
-          "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+          "sha256": "60f88667e8ccc8a608231b796482ae4f22b7cc87cd615121ee51483042a1da8c"
         },
         "rules": {
           "path": "supplements/grader-v3/rules.json",
@@ -128,7 +128,7 @@
         "code": {
           "archived": "ledger/revisions/code/grader-v3.py",
           "path": "evaluation_v3/grader.py",
-          "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+          "sha256": "60f88667e8ccc8a608231b796482ae4f22b7cc87cd615121ee51483042a1da8c"
         },
         "rules": {
           "path": "supplements/grader-v3/rules.json",
@@ -231,7 +231,7 @@
         "code": {
           "archived": "ledger/revisions/code/grader-v3.py",
           "path": "evaluation_v3/grader.py",
-          "sha256": "6cfbc194a60d229acc4e0e1b788ae5ec46aad2d15ca45d6f061af47448494b9b"
+          "sha256": "60f88667e8ccc8a608231b796482ae4f22b7cc87cd615121ee51483042a1da8c"
         },
         "rules": {
           "path": "supplements/grader-v3/rules.json",
