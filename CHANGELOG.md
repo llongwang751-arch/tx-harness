@@ -10,6 +10,7 @@
 - **对抗审计（P1）**：新增 `scripts/audit_adversarial_artifacts.py` 与[报告](reports/week5/adversarial-artifacts.md)。每条变体三条臂：步骤整目录缺席 42/60 与 45/60；**先做最终产物再反推补写步骤 60/60 与 60/60**；一个业务值改错但三方自洽 45/60 与 27/60。结论：步骤文件可由最终产物反推，判卷器不看写入顺序/时间戳/调用轨迹，步骤文件是"申报"不是"证据"；据此 60 分改称[产物一致性分](docs/grading-scope.md)，另设原生调用证据维度（五款 `not_obtained`，不并入、不扣分），并同步进正式表的 `grading_coverage`。
 - **结论快照门（P1）**：新增 [ledger/conclusions/index.json](ledger/conclusions/index.json) 与 `scripts/verify_conclusion_snapshots.py`——四条结论的文本哈希、证据清单与 Git blob 绑定；改动未记录时 `--check` 失败，`--record --reason` 才放行；旧快照按 blob 可取回。本次 CL-01 证据哈希随正式表更新，按新流程走完（改动→检查失败→留差异记录）。CI 增加该检查。
 - **自证边界（P1）**：[文档](reports/week5/self-verification-boundary.md)列出自证能回答的四件事与回答不了的五件事；第 2 条（步骤是否发生）与第 5 条（后端模型是否与标签一致）本轮已拿到实证。外部复核仍缺，操作单公开待回填。
+- **实跑（当晚增补）**：Codex CLI 两条变体真跑出分——[T05-M 60/60、T03-M 42/60](reports/week5/run-log-2026-11-13.md)，T03-M 失分在指令分流（C01）与公告逐字节一致（C06）。GUI 三款各自记录失败方式：元宝 Linux 沙箱读不到本机目录（环境无效）、豆包不落盘（交付失败）、WorkBuddy 启动即退出（未运行）。两条 Codex 运行已 seal 并出产物分，人工 40 分维度按口径未评（总分 None），不进五题正式表。
 - 新增[Issue #2 回复草稿](reports/week5/issue-2-reply-draft.md)，由本人粘贴，不代发。
 
 ## 2026-11-07

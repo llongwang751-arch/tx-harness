@@ -37,7 +37,7 @@ from harness_eval.__main__ import (append_event, command_finalize, command_prepa
                                   command_release)
 from harness_eval.core import inventory, read_json, sha256, write_json
 
-CASES = ("T01", "T02", "T03", "T04", "T05")
+CASES = ("T01", "T02", "T03", "T04", "T05", "T03-M", "T05-M")
 DELIVERY_SUFFIX = "将交付文件写入 outputs/，不要修改 inputs/。"
 ENV_NAMES = {"PATH", "SYSTEMROOT", "SYSTEMDRIVE", "WINDIR", "COMSPEC", "PATHEXT",
              "USERPROFILE", "APPDATA", "LOCALAPPDATA", "TEMP", "TMP", "USERNAME",
@@ -108,6 +108,7 @@ def command(executable, workspace, model, *, session_id=None, persist_session=Fa
         "approval_policy": "never",
         "web_search": "disabled",
         "project_doc_max_bytes": 0,
+        "model_reasoning_effort": "low",
         "features.skip_host_skill_discovery": True,
         "features.prefer_mxc": True,
         "features.plugins": False,

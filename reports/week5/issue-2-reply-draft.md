@@ -32,7 +32,7 @@
 
 如实说：现在没有独立意见。新增的[自证边界](../blob/codex/evaluation/reports/week5/self-verification-boundary.md)列了自证能回答的四件事（确定性、自包含、内部一致、算术）和回答不了的五件事，其中第 2 条（步骤是否发生）与第 5 条（后端模型是否与标签一致）本轮已拿到实证：前者由对抗审计证明可伪造，后者五款均无 attestation。第 3、4 条（判卷器对近似正确的判断、题面与标签）仍只能靠外部意见。
 
-**P0（决策门）**：[decision-gate-2026-11-14.md](../blob/codex/evaluation/reports/week5/decision-gate-2026-11-14.md) + [decision-gate.json](../blob/codex/evaluation/reports/week5/decision-gate.json)：决定、阻塞、预期信息增益、停止条件（协议四条均未触发）、重开条件。台账本轮新增 0 条运行，`slots` 保持为空。
+**P0（决策门）**：[decision-gate-2026-11-14.md](../blob/codex/evaluation/reports/week5/decision-gate-2026-11-14.md) + [decision-gate.json](../blob/codex/evaluation/reports/week5/decision-gate.json)：决定、阻塞、预期信息增益、停止条件（协议四条均未触发）、重开条件。**当晚增补**：拿到可用入口后没有停在决定上，Codex 两条变体真跑出分——[T05-M 60/60、T03-M 42/60](../blob/codex/evaluation/reports/week5/run-log-2026-11-13.md)，T03-M 失分在指令分流与公告逐字节一致；三款 GUI 分别记为环境无效（元宝的 Linux 沙箱读不到本机目录）、交付失败（豆包不落盘）、未运行（WorkBuddy 启动即退出）。10 个位实际完成 2 个，`slots` 不虚报。
 
 **P1（对抗性产物）**：见问题2；六条臂全部由脚本从冻结输入确定性构造，不是产品运行，不进台账、不改五题分数。
 
