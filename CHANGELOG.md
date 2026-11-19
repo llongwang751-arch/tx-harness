@@ -4,6 +4,7 @@
 
 ## 2026-11-19
 
+- [Codex 首场正式实测准备](reports/behavior-formal/codex-t03m-readiness.md)：真实命令工具核对 5 份输入和提示词，原生沙箱对 4 份评测文件返回 `0x80070005`。预登记 T03-M 一场，正式启动已接入实际工作区的权限复检，独立判卷抽查仍待回收。权限诊断未提交业务任务。
 - 回应 [Week 5 反馈 #3](https://github.com/llongwang751-arch/tx-harness/issues/3)。将豆包撤回现场的九份输出与提示词按原字节保留并绑定 Git 对象，公开[事故登记](reports/week6/incidents/doubao-t03-m.json)。判定为“输入准备失败，来源未证，运行无效”。
 - 为 T03-M/T05-M 增加准备和启动检查，核对输入清单、哈希及事前登记。产品权限拒绝证据和独立判卷抽查尚缺，[第六周决定](reports/week6/artifact-audit.md)为交付产物审计，新增产品任务 0 次。T03-M 的公告标签丢失和分流理由精确字符串失分分别解释，历史 pilot 分数保留。
 - 提交[第六期文字周报草稿](reports/weekly/2026-11-21.md)，统计截至 11 月 19 日，待本人发送。

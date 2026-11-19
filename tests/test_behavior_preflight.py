@@ -7,6 +7,7 @@ import unittest
 from unittest.mock import patch
 
 from scripts import behavior_preflight as gate
+from scripts import behavior_codex_access as access
 from scripts import run_codex_pilot
 
 
@@ -83,6 +84,28 @@ class BehaviorPreflightTests(unittest.TestCase):
                               cwd=gate.ROOT, capture_output=True)
         self.assertEqual(proc.returncode, 2)
         self.assertIn(b"committed prospective", proc.stderr)
+
+    def test_access_receipt_requires_all_denials_and_exact_input_bytes(self):
+        expected = {"inputs/announcement.md": "0123456789"}
+        observation = {"schema": "codex-access-check/v1", "input_sha256": expected,
+                       "protected_open": {"oracle": "denied:80070005", "grader": "denied:80070005"}}
+        access.validate_observation(observation, expected, {"oracle", "grader"})
+        for invalid in ("readable", "FileNotFoundException", "denied:80004005"):
+            with self.subTest(invalid=invalid), self.assertRaises(ValueError):
+                access.validate_observation({**observation, "protected_open": {
+                    "oracle": "denied:80070005", "grader": invalid}}, expected, {"oracle", "grader"})
+        with self.assertRaises(ValueError):
+            access.validate_observation({**observation, "input_sha256": {}}, expected, {"oracle", "grader"})
+
+    def test_valid_registration_stays_closed_without_independent_review(self):
+        with patch.object(gate, "check_registration", return_value={"attempt": 1, "requested_model": None}), \
+                patch.object(gate, "check_formal_readiness"), \
+                patch.object(gate, "REVIEW", "reports/behavior-formal/no-review-fixture.json"), \
+                patch.object(run_codex_pilot, "native_codex") as executable:
+            with self.assertRaisesRegex(ValueError, "awaits the independent"):
+                run_codex_pilot.main(["--case", "T03-M", "--track", "product_default", "--replicate", "2",
+                                      "--registration-commit", "a" * 40, "--execute"])
+            executable.assert_not_called()
 
 
 if __name__ == "__main__":

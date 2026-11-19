@@ -15,16 +15,24 @@ from harness_eval.core import inside, inventory, load_case, read_json, sha256
 
 CASES = ("T03-M", "T05-M")
 REGISTER = "supplements/behavior-protocol-v2/run-register.json"
+FORMAL_REGISTER = "supplements/behavior-protocol-v3/run-register.json"
+FORMAL_ACCESS = "public/behavior-formal/codex-t03m-access.json"
+FORMAL_ACCESS_STDOUT = "public/behavior-formal/codex-t03m-sandbox.stdout.jsonl"
+REVIEW = "reports/behavior-formal/review/T03-M.json"
 GATE_FILES = (
     "config/protocol.json",
     "harness_eval/core.py",
     "harness_eval/__main__.py",
     "scripts/behavior_preflight.py",
+    "scripts/behavior_codex_access.py",
+    "scripts/probe_behavior_codex.py",
     "scripts/run_codex_pilot.py",
     "evaluation_v3/grader.py",
     "supplements/grader-v3/rules.json",
     "supplements/behavior-protocol-v1/protocol.json",
     "supplements/behavior-protocol-v1/gates.json",
+    FORMAL_ACCESS,
+    FORMAL_ACCESS_STDOUT,
 )
 
 
@@ -36,17 +44,15 @@ def check_registration(commit, run_id, product, case):
     if not commit or not re.fullmatch(r"[0-9a-f]{40}", commit):
         raise ValueError("A full committed prospective registration is required.")
     git("merge-base", "--is-ancestor", commit, "HEAD")
-    raw = git("show", f"{commit}:{REGISTER}")
-    if raw != (ROOT / REGISTER).read_bytes():
+    raw = git("show", f"{commit}:{FORMAL_REGISTER}")
+    if raw != (ROOT / FORMAL_REGISTER).read_bytes():
         raise ValueError("The working registration differs from the committed version.")
-    register = read_json(ROOT / REGISTER)
+    register = read_json(ROOT / FORMAL_REGISTER)
     if register["registration_kind"] != "prospective":
         raise ValueError("Post-hoc registrations cannot authorize a new run.")
     if any(r["slot_id"] == run_id for r in read_json(
             ROOT / "supplements/behavior-protocol-v1/run-register.json")["slots"]):
         raise ValueError("A Week 5 slot ID cannot be reused.")
-    if register["decision"] != "allow_registered_runs":
-        raise ValueError("The prospective register has no approved execution.")
     rows = [r for r in register["slots"] if r["run_id"] == run_id]
     if len(rows) != 1 or (rows[0]["product_id"], rows[0]["case_id"]) != (product, case):
         raise ValueError("No unique committed registration matches this run, product and case.")
@@ -60,6 +66,7 @@ def check_registration(commit, run_id, product, case):
     for name in sorted(names):
         if git("show", f"{commit}:{name}") != (ROOT / name).read_bytes():
             raise ValueError(f"Frozen file differs from registration commit: {name}")
+    return rows[0]
 
 
 def stage_workspace(case_dir, workspace, create):
@@ -102,28 +109,91 @@ def check_access(workspace, expected, protected_files):
         raise ValueError(f"Protected scoring data is readable: {path.name}")
 
 
-def authorize_codex(run_id, case, commit):
-    check_registration(commit, run_id, "codex", case)
-    # A check in this evaluator process cannot stand in for the product sandbox.
-    # Keep the launcher closed until the native adapter can make and bind that check.
-    raise ValueError("No verified same-boundary access check is wired to this native launcher.")
+def check_independent_review(registration):
+    path = ROOT / REVIEW
+    if not path.is_file():
+        raise ValueError("Formal submission awaits the independent T03-M judging spot-check.")
+    if git("show", f"HEAD:{REVIEW}") != path.read_bytes():
+        raise ValueError("The independent review must be recorded in Git before submission.")
+    data = read_json(path)
+    if (data.get('schema') != 'tx-harness/independent-judge-review/v1'
+            or data.get('reviewed_commit') != registration['review_source_commit']
+            or data.get('participated_in_grader_implementation') is not False):
+        raise ValueError("The review lacks an independent role declaration or matching source version.")
+    for field in ('reviewer_label', 'role', 'reviewed_on', 'environment', 'command', 'decision_basis'):
+        if not isinstance(data.get(field), str) or not data[field].strip():
+            raise ValueError(f"Independent review field is missing: {field}")
+    checks = data.get('checks', {})
+    if set(checks) != {'T03M-C01', 'T03M-C06'} or any(
+            not checks[key].get('blind_observation') or not checks[key].get('recomputed_observation')
+            for key in checks):
+        raise ValueError("Independent review needs a blind judgment and a recomputation for both checks.")
+    if data.get('decision') != 'accept_frozen_grader_with_documented_limits':
+        raise ValueError("Resolve the recorded judging disagreement before using this frozen protocol.")
+    return {'git_commit': git('rev-parse', 'HEAD').decode().strip(), 'sha256': sha256(path)}
+
+
+def authorize_codex(run_id, case, commit, *, attempt=1, model=None):
+    row = check_registration(commit, run_id, 'codex', case)
+    if row['attempt'] != attempt or row['requested_model'] != model:
+        raise ValueError('Attempt or requested model differs from the prospective registration.')
+    check_formal_readiness()
+    review = check_independent_review(row)
+    return row, review
+
+
+def check_formal_readiness():
+    from scripts.behavior_codex_access import protected_files, validate_observation
+
+    register = read_json(ROOT / FORMAL_REGISTER)
+    if register.get('registration_kind') != 'prospective' or len(register['slots']) != 1:
+        raise ValueError('Expected one prospectively registered Codex CLI case.')
+    row, = register['slots']
+    if (row.get('product_id'), row.get('case_id'), row.get('attempt')) != ('codex', 'T03-M', 1):
+        raise ValueError('Unexpected scope: only Codex T03-M attempt 1 is registered.')
+    proof = read_json(ROOT / FORMAL_ACCESS)
+    stdout = ROOT / FORMAL_ACCESS_STDOUT
+    if sha256(stdout) != proof['stdout_sha256'] or read_json(stdout) != proof['observation']:
+        raise ValueError('The public native sandbox output differs from the access receipt.')
+    case_dir = ROOT / 'cases/T03-M'
+    expected = {'prompt.md': sha256(case_dir / 'prompt.md'), **{
+        f'inputs/{name}': digest_value for name, digest_value in inventory(case_dir / 'inputs').items()}}
+    targets = protected_files('T03-M')
+    validate_observation(proof['observation'], expected, targets)
+    if proof['protected_files'] != {label: {'path': path.relative_to(ROOT).as_posix(), 'host_sha256': sha256(path)}
+                                    for label, path in targets.items()}:
+        raise ValueError('Protected-file receipt no longer matches the registered files.')
+    if (proof['exit_code'] != 0 or proof['business_task_submitted'] is not False
+            or proof['codex_version'] != row['cli_version']
+            or proof['executable_sha256'] != row['cli_binary_sha256']):
+        raise ValueError('Access receipt differs from the registered binary or task boundary.')
+    if proof['native_turn']['exit_code'] != 0 or proof['native_turn']['matched_shell_input_sha256'] != expected:
+        raise ValueError('Native tool positive observation differs from the registered files.')
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check-closed-register", action="store_true", required=True)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument("--check-closed-register", action="store_true")
+    mode.add_argument("--check-formal-readiness", action="store_true")
     parser.add_argument("--incident", action="store_true")
     args = parser.parse_args(argv)
     try:
-        register = read_json(ROOT / REGISTER)
-        if register["registration_kind"] != "prospective" or register["decision"] != "artifact_audit_only" or register["slots"]:
-            raise ValueError("The artifact-only decision requires an empty prospective register.")
+        if args.check_closed_register:
+            register = read_json(ROOT / REGISTER)
+            if register["registration_kind"] != "prospective" or register["decision"] != "artifact_audit_only" or register["slots"]:
+                raise ValueError("The historical artifact-only decision requires an empty prospective register.")
+        else:
+            check_formal_readiness()
         if args.incident:
             check_incident()
     except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as exc:
         print(f"Preflight check failed: {exc}", file=sys.stderr)
         return 2
-    print("Behavior preflight: artifact audit only; zero authorized runs.")
+    if args.check_closed_register:
+        print("Behavior preflight: historical artifact-only registration intact.")
+    else:
+        print("Behavior preflight: one candidate and its access receipt match; this check does not certify judging.")
     return 0
 
 

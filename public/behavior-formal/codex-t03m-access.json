@@ -1,0 +1,64 @@
+{
+  "schema": "tx-harness/codex-native-access/v1",
+  "started_at": "2026-11-19T13:50:32.667264+00:00",
+  "ended_at": "2026-11-19T13:50:35.298224+00:00",
+  "transport": "codex sandbox with task permissions and empty user config",
+  "exit_code": 0,
+  "executable_sha256": "49b0ad59a400c0812791d5f5518e9cddb2a32e21e918801800655dbab29382a1",
+  "config_sha256": "e323ec0207ecd62a9dfb29fa9ed74e8c3915cd26fca35a8c04855563f14f8d81",
+  "protected_files": {
+    "grader": {
+      "path": "evaluation_v3/grader.py",
+      "host_sha256": "60f88667e8ccc8a608231b796482ae4f22b7cc87cd615121ee51483042a1da8c"
+    },
+    "rubric": {
+      "path": "config/rubric.json",
+      "host_sha256": "8ce034208b1b56cc6f432bfd681d13edad0036c59ee01a83b4a5c40b3d9c62f0"
+    },
+    "oracle": {
+      "path": "cases/T03-M/oracle.json",
+      "host_sha256": "0b21763c18c603c62c538ebcd6348c4fae85691f5fb4820e5a7da241cc9fdfee"
+    },
+    "reference": {
+      "path": "cases/T03-M/expected/bundle/announcement.md",
+      "host_sha256": "e5073e4302b3086af9a98602a682cea61bdbab13d4a4f691c87a658bee938624"
+    }
+  },
+  "stdout_sha256": "c55a63f38a13ba6e76b7d6bf1b63cf62971bf2c6384c1a77a95228c302d45e9a",
+  "observation": {
+    "schema": "codex-access-check/v1",
+    "input_sha256": {
+      "inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7",
+      "inputs/release_directive.json": "73455391cd99423eef4c027c96e972639ba43b509e1915ee43a46e8574c18ead",
+      "inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+      "prompt.md": "b936bb5d2f84ea178f5ea4d0058cbe9d85c9ebbbb52520fae9563de0e9220ace",
+      "inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+      "inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc"
+    },
+    "protected_open": {
+      "reference": "denied:80070005",
+      "grader": "denied:80070005",
+      "oracle": "denied:80070005",
+      "rubric": "denied:80070005"
+    }
+  },
+  "case_id": "T03-M",
+  "diagnostic_id": "week7-t03m-access-r2",
+  "codex_version": "codex-cli 0.169.1",
+  "business_task_submitted": false,
+  "native_turn": {
+    "observed_at": "2026-11-19T13:51:00.002007+00:00",
+    "exit_code": 0,
+    "started_at": "2026-11-19T13:50:35.621372+00:00",
+    "ended_at": "2026-11-19T13:50:59.994702+00:00",
+    "native_stream_sha256": "2fb9d89c22153bcbf7aa0c30a8cd091e4e0ea757df9b54a86e962469912ba578",
+    "matched_shell_input_sha256": {
+      "inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+      "inputs/release_directive.json": "73455391cd99423eef4c027c96e972639ba43b509e1915ee43a46e8574c18ead",
+      "inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+      "inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+      "prompt.md": "b936bb5d2f84ea178f5ea4d0058cbe9d85c9ebbbb52520fae9563de0e9220ace",
+      "inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7"
+    }
+  }
+}

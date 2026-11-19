@@ -37,6 +37,7 @@ from harness_eval.__main__ import (append_event, command_finalize, command_prepa
                                   command_release)
 from harness_eval.core import inventory, read_json, sha256, write_json
 from scripts.behavior_preflight import CASES as BEHAVIOR_CASES, authorize_codex
+from scripts.behavior_codex_access import probe as native_access_probe
 
 CASES = ("T01", "T02", "T03", "T04", "T05", "T03-M", "T05-M")
 DELIVERY_SUFFIX = "将交付文件写入 outputs/，不要修改 inputs/。"
@@ -317,9 +318,11 @@ def main(argv=None):
     mode.add_argument("--execute", action="store_true", help="Explicitly start a real product run")
     mode.add_argument("--dry-run", action="store_true", help="Default: show the plan without writing files")
     options = parser.parse_args(argv)
+    formal_slot = independent_review = None
     if options.execute and options.case in BEHAVIOR_CASES:
         run_id = f"{options.track}-codex-{options.case}-r{options.replicate}"
-        authorize_codex(run_id, options.case, options.registration_commit)
+        formal_slot, independent_review = authorize_codex(
+            run_id, options.case, options.registration_commit, attempt=options.attempt, model=options.model)
     executable = native_codex(options.codex)
     # Attempt number belongs to the storage path, not the evaluator's closed
     # track vocabulary. The early attempt02 naming error is preserved in its
@@ -353,12 +356,14 @@ def main(argv=None):
     if not options.execute:
         print(json.dumps(plan, ensure_ascii=False, indent=2))
         return 0
-    if track == "product_default" and protocol["status"] != "preregistered":
+    if track == "product_default" and formal_slot is None and protocol["status"] != "preregistered":
         raise ValueError("Formal execution requires protocol.status=preregistered; no run was created.")
     if run.exists() or workspace.exists():
         raise ValueError("Run or participant workspace already exists; cannot overwrite or rerun selectively.")
     version = subprocess.run([str(executable), "--version"], capture_output=True, text=True,
                              encoding="utf-8", env=safe_env(), timeout=30, check=True).stdout.strip()
+    if formal_slot and (version != formal_slot['cli_version'] or sha256(executable) != formal_slot['cli_binary_sha256']):
+        raise ValueError('Installed Codex executable differs from the prospective registration.')
     status = subprocess.run([str(executable), "login", "status"], capture_output=True,
                             env=safe_env(), timeout=30)
     if status.returncode != 0:
@@ -370,6 +375,16 @@ def main(argv=None):
     case = read_json(ROOT / "cases" / options.case / "case.json")
     evidence = run / "evidence"
     initial_hashes = inventory(workspace)
+    if formal_slot:
+        prepared_hashes = read_json(run / "meta.json")["participant_input_hashes"]
+        if initial_hashes != prepared_hashes or next((workspace / "outputs").iterdir(), None) is not None:
+            raise ValueError('The actual participant workspace differs from verified preparation.')
+        native_access_probe(executable, args, workspace, prepared_hashes, options.case, evidence, safe_env())
+        if inventory(workspace) != prepared_hashes or next((workspace / "outputs").iterdir(), None) is not None:
+            raise ValueError('The access check changed the prepared workspace.')
+        plan.update(protocol_status='prospectively_registered_behavior_v3',
+                    registration_commit=options.registration_commit,
+                    independent_review=independent_review, access_evidence_sha256=sha256(evidence / 'access.json'))
     shutil.copyfile(Path(__file__), evidence / "runner-source.py")
     original_prompt = (workspace / "prompt.md").read_text(encoding="utf-8")
     submitted_prompt = original_prompt.rstrip() + "\n\n" + DELIVERY_SUFFIX + "\n"

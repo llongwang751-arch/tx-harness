@@ -1,0 +1,33 @@
+{
+  "schema": "tx-harness/behavior-run-register/v3",
+  "registration_kind": "prospective",
+  "recorded_on": "2026-11-19",
+  "feedback": "https://github.com/llongwang751-arch/tx-harness/issues/3",
+  "decision": "one_slot_held_until_independent_review_and_actual_workspace_access_check",
+  "access_receipt": "public/behavior-formal/codex-t03m-access.json",
+  "slots": [
+    {
+      "run_id": "product_default-codex-T03-M-r2",
+      "product_id": "codex",
+      "case_id": "T03-M",
+      "replicate": 2,
+      "attempt": 1,
+      "existing_evidence_role": "unscored access qualification, not a prior business attempt",
+      "requested_model": null,
+      "model_selection": "clean CLI service default; backend identity not independently known",
+      "surface": "native Codex exec on Windows; named harness_pilot permission profile",
+      "cli_version": "codex-cli 0.169.1",
+      "cli_binary_sha256": "49b0ad59a400c0812791d5f5518e9cddb2a32e21e918801800655dbab29382a1",
+      "total_time_budget_seconds": 1200,
+      "review_source_commit": "a6bb1d21d3d93535b32636c04a6473631757f835",
+      "review_record": "reports/behavior-formal/review/T03-M.json",
+      "score_scope": "0-60 artifact consistency against the frozen case. No manual process score and no causal ranking.",
+      "stop_conditions": [
+        "Missing or dissenting independent judging spot-check.",
+        "Wrong binary, stale registration, dirty protocol/stimulus, existing workspace or wrong input bytes.",
+        "Any required negative path is readable or returns a result other than Windows access denied.",
+        "Native session timeout, pre-submission failure, or capture integrity gap. Preserve the outcome and stop without running another product."
+      ]
+    }
+  ]
+}
