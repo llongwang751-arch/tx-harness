@@ -4,6 +4,7 @@
 
 ## 2026-11-19 五款文件收发实测
 
+- 补测 WorkBuddy、DSH、元宝和豆包的文件权限。新增五次有效诊断，输入均读到。WorkBuddy 默认权限、DSH SDK 和 DSH 桌面均返回合成评分标记。元宝回复未执行读取，豆包报告路径校验错误，两场均缺系统拒绝证据。正式判卷抽查仍待回收。[五款权限准入核对](reports/behavior-formal/surface-access-2026-11-19.md)
 - 另登记并执行一次 DSH SDK 对照。同一文件使用原生文件工具可以写入及回读，PowerShell 只读调用仍报 Win32 5，原生事件定位至 `grantWrite`。补齐独立判卷的固定资料版本和回传格式。[DSH 对照现场](reports/behavior-formal/dsh-shell-diagnostic-2026-11-19.md) · [独立判卷操作单](reports/week6/judge-spot-check.md)
 - 同一 CSV 先登记后实跑，依次完成 WorkBuddy、DeepSeek Harness、Codex、元宝专家模式和豆包工作任务云电脑。5 次接受，5 次有效通过。保留五份原件、现场及判定，DSH 使用安装包自带 SDK。加入复算命令和契约正反例。[专项报告](reports/behavior-formal/five-surface-transfer-2026-11-19.md)
 - 优先补查豆包新任务的实际附件与下载，在提交前核对云电脑与文件，再从原生卡片导出。旧无效场的输出来源仍未证实，正式 T03-M 仍等待独立抽查。[第六周产物审计](reports/week6/artifact-audit.md) · [第六期文字周报](reports/weekly/2026-11-21.md)

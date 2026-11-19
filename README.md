@@ -8,6 +8,8 @@
 
 Codex 首场正式实测已作[前瞻登记和权限验证](reports/behavior-formal/codex-t03m-readiness.md)。真实工具读到了冻结输入，原生沙箱拒绝了四份评测文件，独立判卷抽查仍待落实。
 
+[五款权限准入核对](reports/behavior-formal/surface-access-2026-11-19.md)新增另外四款的五个诊断现场。WorkBuddy 默认权限、DSH SDK 和 DSH 桌面能读取合成评分文件，元宝与豆包未取得系统拒绝证据。
+
 ## 30 秒看懂
 
 **结论先读[结论先行](reports/conclusion-2026-10-31.md)**：在“固定配置、单次、只判产物契约”的条件下，产物分 Codex = WorkBuddy = 豆包（各 300/300）> DSH（270/300）> 元宝专家模式（159/300）；在“可归因到 Harness”的条件下没有排名，因为受控轨道只覆盖 Codex/DSH 且两臂无差异。两条结论同时成立，证据与理由在那一页。

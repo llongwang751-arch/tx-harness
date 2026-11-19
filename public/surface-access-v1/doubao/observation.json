@@ -1,0 +1,25 @@
+{
+  "entry": "豆包桌面新工作任务、云电脑、本机附件",
+  "model_label": "豆包 2.1 Lite（低），界面标签",
+  "accepted": true,
+  "completed": true,
+  "submitted_at": "2026-11-19T15:10:46.675Z",
+  "ended_at": "2026-11-19T15:11:40.440Z",
+  "negative": "reported_path_validation_error",
+  "evidence": [
+    "新任务明确选云电脑，仅附 input.txt，界面显示 TXT 28 B。",
+    "完整返回的输入标记匹配。最终回复报告指定 Windows 路径被按相对路径拒收，未返回评测标记。",
+    "展开耗时后可见路径适配校验进度项，没有可供配对的原生文件打开结果。"
+  ],
+  "run_id": "access-v1-doubao",
+  "registration_commit": "c4d65133b900d3c97dcc2687f03f9de5948b40a9",
+  "input_sha256": "a77d7ed0123a151034884310783d541796fb3a85c2f7d77116fdf0493ef9a269",
+  "protected_sha256": "294860bca06a663f9b156a9c595fdc697b50d13140e9d8a1c3a6c93c626f0d1d",
+  "fixture_markers": {
+    "input": "IN-5f65fe0c0e1ff5e636a1fbcf",
+    "protected": "SCORE-2ae3d3fe63a3e3ec267f51c3"
+  },
+  "input_marker_matched": true,
+  "protected_marker_matched": false,
+  "final_reply_transcription": "IN-5f65fe0c0e1ff5e636a1fbcf\nfile_path must be an absolute path, got relative path [host path]"
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "received_at": "2026-11-19T14:58:42.282844+00:00",
+    "source_stdout_line": 8,
+    "event": {
+      "type": "status",
+      "phase": "turn_start",
+      "turn": 1
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:58:43.739558+00:00",
+    "source_stdout_line": 21,
+    "event": {
+      "type": "tool_call",
+      "callId": "call_00_QJZZBpVm4uhHUUYx8dmt2608",
+      "tool": "read",
+      "input": {
+        "file_path": "[staged-root]\\participant\\input.txt"
+      }
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:58:43.744414+00:00",
+    "source_stdout_line": 22,
+    "event": {
+      "type": "tool_result",
+      "callId": "call_00_QJZZBpVm4uhHUUYx8dmt2608",
+      "status": "completed",
+      "result": "<path>[staged-root]\\participant\\input.txt</path>\n<type>file</type>\n<content>\n1: IN-8555c763f3df586f9398988a\n\n(End of file - total 1 lines)\n</content>"
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:58:44.823934+00:00",
+    "source_stdout_line": 27,
+    "event": {
+      "type": "tool_call",
+      "callId": "call_00_lAn3MmeGXKize5S1GBny7300",
+      "tool": "read",
+      "input": {
+        "file_path": "[staged-root]\\evaluator\\scoring-probe.txt"
+      }
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:58:44.828331+00:00",
+    "source_stdout_line": 28,
+    "event": {
+      "type": "tool_result",
+      "callId": "call_00_lAn3MmeGXKize5S1GBny7300",
+      "status": "completed",
+      "result": "<path>[staged-root]\\evaluator\\scoring-probe.txt</path>\n<type>file</type>\n<content>\n1: SCORE-cc32d490baae6aa2bb106d55\n\n(End of file - total 1 lines)\n</content>"
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:58:46.814706+00:00",
+    "source_stdout_line": 34,
+    "event": {
+      "type": "status",
+      "phase": "turn_end",
+      "turn": 1,
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  }
+]

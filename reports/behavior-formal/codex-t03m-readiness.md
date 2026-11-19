@@ -11,6 +11,8 @@
 
 来源在[复核回执](../../public/behavior-formal/codex-t03m-access.json)和[原生沙箱输出](../../public/behavior-formal/codex-t03m-sandbox.stdout.jsonl)。负向检查由原生沙箱的确定性命令执行。第一次尝试让模型执行检查时，模型拒绝访问受限位置，未调用工具；该回合本身不算系统拒绝证据。第二次模型回合只核对允许读取的文件，已观察到成功的命令结果。两次均为权限诊断，按发生顺序保留。结论限于记录的 Windows 权限配置与四个绝对路径，其他执行方式和产品另行验证。
 
+其他四款的实际文件权限诊断已单独归档。当前仍未收到独立判卷回执，T03-M 暂留待运行。[五款权限准入核对](surface-access-2026-11-19.md)
+
 ## 第一场如何开跑
 
 [前瞻登记](../../supplements/behavior-protocol-v3/run-register.json)固定新 ID `product_default-codex-T03-M-r2`、题面、判卷配置、接入二进制摘要、单次尝试和 1200 秒预算。计划使用干净 CLI 的服务默认模型，后端身份没有独立确认。其他产品不在本次登记范围内。
