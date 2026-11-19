@@ -1,0 +1,1 @@
+请只使用本次任务随附的 input.csv。请读取原文件，以原顺序列出 state 为 settled 的 record，并合计这些行的 amount_cents（整数）。创建可下载或写入工作区的 receipt.json，顶层恰好是 records（字符串数组）和 total_cents（整数）。也请在最终回复中输出同一份 JSON，便于核对文件和回复。若没有收到 input.csv，直接说“缺少输入”，不要猜测。无需联网。

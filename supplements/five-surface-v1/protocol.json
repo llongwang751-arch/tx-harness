@@ -1,0 +1,18 @@
+{
+  "schema": "tx-harness/five-surface-transfer/v1",
+  "registered_on": "2026-11-19",
+  "scope": "One input-delivery and artifact check per product, engineering track; T03-M formal admission is unchanged.",
+  "run_ids": {
+    "workbuddy": "transfer-20261119-workbuddy-r1",
+    "dsh": "transfer-20261119-dsh-r1",
+    "yuanbao": "transfer-20261119-yuanbao-r1",
+    "doubao": "transfer-20261119-doubao-r1",
+    "codex": "transfer-20261119-codex-r1"
+  },
+  "allowed_modes": "Native client work surface or official CLI. Any fallback surface is labeled and its local/cloud boundary remains separate.",
+  "input": "input.csv bytes as an attachment or at the root of a fresh external workspace; do not inline values.",
+  "prompt": "Unchanged prompt.txt",
+  "success": "Parse receipt.json or native final response JSON independently. Exact expected type and values against input CSV. Chat and artifact recorded separately. No result or no trace is unknown.",
+  "timing": "Target 180 seconds per product after admission; keep each product session serial.",
+  "formal_rank": false
+}
