@@ -9,14 +9,17 @@ from run_transfer_cli import ROOT, dsh, now, sha256, write_json
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('product', choices=('dsh', 'workbuddy', 'yuanbao', 'doubao'))
+    parser.add_argument('product', choices=('dsh', 'dsh-desktop', 'workbuddy', 'yuanbao', 'doubao'))
     parser.add_argument('--registration-commit', required=True)
     parser.add_argument('--execute', action='store_true')
     args = parser.parse_args()
     if args.execute and args.product != 'dsh':
         parser.error('Desktop runs must be submitted through their native UI.')
     folder = 'supplements/surface-access-v1'
-    for name in ('protocol.md', 'prompt.txt'):
+    names = ('protocol.md', 'prompt.txt')
+    if args.product == 'dsh-desktop':
+        names += ('dsh-desktop.md',)
+    for name in names:
         path = f'{folder}/{name}'
         frozen = subprocess.check_output(['git', 'show', f'{args.registration_commit}:{path}'], cwd=ROOT)
         if (ROOT / path).read_bytes() != frozen:
