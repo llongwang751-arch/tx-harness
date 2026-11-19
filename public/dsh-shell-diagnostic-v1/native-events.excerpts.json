@@ -1,0 +1,92 @@
+[
+  {
+    "received_at": "2026-11-19T14:30:08.006512+00:00",
+    "source_stdout_line": 8,
+    "event": {
+      "type": "status",
+      "phase": "turn_start",
+      "turn": 1
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:30:11.279499+00:00",
+    "source_stdout_line": 21,
+    "event": {
+      "type": "tool_call",
+      "callId": "call_00_V2H8BNn3ZBVPBcVvJvM41631",
+      "tool": "write",
+      "input": {
+        "file_path": "probe.txt",
+        "content": "DSH-TOOL-CONTROL-741\n"
+      }
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:30:11.296674+00:00",
+    "source_stdout_line": 22,
+    "event": {
+      "type": "tool_result",
+      "callId": "call_00_V2H8BNn3ZBVPBcVvJvM41631",
+      "status": "completed",
+      "result": "<path>[workspace]/probe.txt</path>\n<type>file</type>\n<content>\nCreated file\n</content>"
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:30:12.164994+00:00",
+    "source_stdout_line": 27,
+    "event": {
+      "type": "tool_call",
+      "callId": "call_00_MvTBMTVKkaJVRHuUQdum0914",
+      "tool": "read",
+      "input": {
+        "file_path": "probe.txt"
+      }
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:30:12.171046+00:00",
+    "source_stdout_line": 28,
+    "event": {
+      "type": "tool_result",
+      "callId": "call_00_MvTBMTVKkaJVRHuUQdum0914",
+      "status": "completed",
+      "result": "<path>[workspace]/probe.txt</path>\n<type>file</type>\n<content>\n1: DSH-TOOL-CONTROL-741\n\n(End of file - total 1 lines)\n</content>"
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:30:13.390277+00:00",
+    "source_stdout_line": 33,
+    "event": {
+      "type": "tool_call",
+      "callId": "call_00_wzZzpESCkLwYOcNm38xX9013",
+      "tool": "pwsh",
+      "input": {
+        "description": "Read probe.txt with Get-Content",
+        "command": "Get-Content -Raw -LiteralPath './probe.txt'",
+        "workdir": "[workspace]"
+      }
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:30:13.413861+00:00",
+    "source_stdout_line": 36,
+    "event": {
+      "type": "tool_result",
+      "callId": "call_00_wzZzpESCkLwYOcNm38xX9013",
+      "status": "error",
+      "result": "Error: SetNamedSecurityInfoW failed (Win32 5): grantWrite([workspace])"
+    }
+  },
+  {
+    "received_at": "2026-11-19T14:30:16.146571+00:00",
+    "source_stdout_line": 42,
+    "event": {
+      "type": "status",
+      "phase": "turn_end",
+      "turn": 1,
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  }
+]

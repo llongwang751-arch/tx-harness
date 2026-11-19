@@ -19,7 +19,7 @@
 
 ```powershell
 python -B -X utf8 scripts/behavior_preflight.py --check-formal-readiness
-python -B -X utf8 scripts/run_codex_pilot.py --track product_default --case T03-M --replicate 2 --registration-commit <首次提交v3登记的完整SHA> --execute
+python -B -X utf8 scripts/run_codex_pilot.py --track product_default --case T03-M --replicate 2 --registration-commit 93fe268f6c5b16c6431e66211885376351e0da42 --execute
 ```
 
 复核人先按[操作单](../week6/judge-spot-check.md)盲判 C01、C06，再复算。记录复核日期、身份关系、Git 提交、命令、每项观察、理由及是否同意按冻结口径运行。复核意见由操作者归档，实施者不能代签。若复核对判分口径有实质异议，先修订和重新冻结协议。正式场产物分按 60 分制记录，模型演绎过程和五款因果排名不由这项测试给出。

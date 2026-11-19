@@ -1,0 +1,20 @@
+{
+  "run_id": "diag-20261119-dsh-file-vs-shell-r1",
+  "registration_commit": "be41734e820f0bcfb74130fe01083f4e7da60935",
+  "started_at": "2026-11-19T14:30:05.198072+00:00",
+  "submitted_at": "2026-11-19T14:30:07.950116+00:00",
+  "ended_at": "2026-11-19T14:30:16.211462+00:00",
+  "accepted": true,
+  "completed": true,
+  "model": "deepseek-flash",
+  "exit_code": 0,
+  "prompt_sha256": "9c728a209df8e24f779c2ecec5a1a60817ed1abf89da1bdc8bf70d431377891c",
+  "probe_sha256": "ffa965d632f9ce05088715c4e0719caa95b4c5c24e18115a2019462e25cd011a",
+  "shell_error_reproduced": true,
+  "raw_event_stream_sha256": "c4ba0f16fee0f20759817c2841567cef95fc097685b2a022dff3431d08666948",
+  "path_redactions": [
+    "absolute file paths",
+    "workdir",
+    "grantWrite target"
+  ]
+}
