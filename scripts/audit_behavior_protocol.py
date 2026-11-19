@@ -32,6 +32,9 @@ from harness_eval import core  # noqa: E402
 PROTOCOL = ROOT / "supplements/behavior-protocol-v1/protocol.json"
 GATES = ROOT / "supplements/behavior-protocol-v1/gates.json"
 REF = ROOT / "supplements/behavior-protocol-v1/reference-outputs"
+# The published generated JSON and CSV were frozen with CRLF. Inherited
+# files keep their original bytes, independently of the operating system.
+REFERENCE_NEWLINE = "\r\n"
 
 REQUIRED_PROTOCOL_KEYS = (
     "schema", "registered_at", "status", "prior_evidence_commit", "motivation",
@@ -70,7 +73,8 @@ def build_reference(case_id: str, target: Path) -> None:
             if product["id"] == "P-A":
                 product["price_cents"] = 139900
         dump(target / "bundle/catalog.json", catalog)
-        rows = list(csv.DictReader((base / "contacts.csv").open(encoding="utf-8", newline="")))
+        with (base / "contacts.csv").open(encoding="utf-8", newline="") as handle:
+            rows = list(csv.DictReader(handle))
         for row in rows:
             if row["role"] == "support":
                 row["email"] = "desk@example.test"
@@ -78,7 +82,7 @@ def build_reference(case_id: str, target: Path) -> None:
         writer = csv.DictWriter(buf, fieldnames=["role", "email", "label"], lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
-        (target / "bundle/contacts.csv").write_text(buf.getvalue(), encoding="utf-8")
+        (target / "bundle/contacts.csv").write_text(buf.getvalue(), encoding="utf-8", newline=REFERENCE_NEWLINE)
         dump(target / "change_log.json", {
             "changes": [
                 {"path": "announcement.md", "field": "release_time",
@@ -124,7 +128,7 @@ def build_reference(case_id: str, target: Path) -> None:
         writer.writeheader()
         for row in oracle["ledger"]:
             writer.writerow({c: row[c] for c in columns})
-        (target / "invoice_ledger.csv").write_text(buf.getvalue(), encoding="utf-8")
+        (target / "invoice_ledger.csv").write_text(buf.getvalue(), encoding="utf-8", newline=REFERENCE_NEWLINE)
         dump(target / "summary.json", {"currency": "CNY", **oracle["summary_amounts"],
                                        **oracle["summary_selection"]})
         dump(target / "steps/02_reconciliation.json", {
@@ -146,7 +150,8 @@ def build_reference(case_id: str, target: Path) -> None:
 
 
 def dump(path: Path, value) -> None:
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8", newline=REFERENCE_NEWLINE)
 
 
 def build_equiv(case_id: str, ref_dir: Path, target: Path) -> None:
