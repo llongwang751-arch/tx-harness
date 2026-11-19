@@ -1,0 +1,24 @@
+{
+  "run_id": "transfer-20261119-workbuddy-r1",
+  "product": "workbuddy",
+  "input_sha256": "e7ef1c178360f870b2704dd2e4642d0834b60acd29537f16002bce11d87992a3",
+  "accepted": true,
+  "completed": true,
+  "submitted_at": "2026-11-19T13:59:53.815Z",
+  "ended_at": "2026-11-19T14:00:22.949Z",
+  "artifact_observed": true,
+  "surface": "WorkBuddy 5.11.3 新任务（Computer Use）",
+  "model": "DeepSeek-V4.1-Flash，仅界面标签",
+  "condition": "开跑前取消允许完全访问，确认默认权限，并附上本地 CSV。默认权限标签未作 OS 级拒绝验证。",
+  "reply_source": "Operator transcription of visible final JSON code block. Native AX independently showed record labels and the total.",
+  "artifact_source": "Native file card, preview and Save As confirmation. Exported raw bytes, no evaluator edit.",
+  "timeline": [
+    "新任务中添加本地 input.csv，界面确认文件名后提交。",
+    "最终回复中出现 JSON，原生文件卡出现 receipt.json。",
+    "预览并用另存为导出原件，界面显示另存为成功。确认取得文件后关闭测试窗口。"
+  ],
+  "final_reply": "{\"records\":[\"VIOLET-74\",\"TERRA-06\",\"SKY-55\"],\"total_cents\":1265}",
+  "artifact_sha256": "95b2617485bce5c88eb5e5f6ff8ba6014f481e1b8d3fe5beaddf241157889018",
+  "artifact_bytes": 92,
+  "operator_record_sha256": "95cce40925bbbe05d6464189f5fcd0d9e51517a03bf341b6e1df18577aa3d58e"
+}

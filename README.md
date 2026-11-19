@@ -2,7 +2,9 @@
 
 作者：李明远。个人开源仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。比较对象为Codex、WorkBuddy、DeepSeek Harness（DSH）、元宝专家模式、豆包工作任务模式；用户已确认公告中的“豆包办公”指工作任务模式。
 
-2026-11-19：按 [Week 5 反馈 #3](https://github.com/llongwang751-arch/tx-harness/issues/3)补归档豆包无效场、修正来源归因并关闭新变体投递，见[第六周产物审计](reports/week6/artifact-audit.md)和[周报草稿](reports/weekly/2026-11-21.md)。本期截至 19 日新增产品运行 0 次。
+2026-11-19 完成五款文件收发实测。每款各一次，5 次有效通过，回复及原始文件均可复算，T03-M 正式任务新增 0 次。[专项报告和五条现场](reports/behavior-formal/five-surface-transfer-2026-11-19.md) · [第六期周报草稿](reports/weekly/2026-11-21.md)
+
+按 Week 5 反馈补归档了豆包旧无效场，修正了对输出来源的判断，并接入新变体投递前的准入检查。[Week 5 反馈 #3](https://github.com/llongwang751-arch/tx-harness/issues/3) · [第六周产物审计](reports/week6/artifact-audit.md)
 
 Codex 首场正式实测已作[前瞻登记和权限验证](reports/behavior-formal/codex-t03m-readiness.md)。真实工具读到了冻结输入，原生沙箱拒绝了四份评测文件，独立判卷抽查仍待落实。
 

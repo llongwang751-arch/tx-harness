@@ -1,0 +1,28 @@
+{
+  "run_id": "transfer-20261119-dsh-r1",
+  "product": "dsh",
+  "input_sha256": "e7ef1c178360f870b2704dd2e4642d0834b60acd29537f16002bce11d87992a3",
+  "accepted": true,
+  "completed": true,
+  "submitted_at": "2026-11-19T14:02:16.948141+00:00",
+  "ended_at": "2026-11-19T14:02:27.492068+00:00",
+  "artifact_observed": true,
+  "model": "deepseek-flash，SDK 请求值",
+  "exit_code": 0,
+  "surface": "DeepSeek Harness 安装包自带 SDK（真实账户）",
+  "reply_source": "原生 SDK 第 50 行 text 事件中的 JSON 代码块。",
+  "artifact_source": "SDK 原生 write 工具写入新工作目录，按原始字节归档。",
+  "condition": "桌面工具在提交前两次报告窗口不可用，改用自带 SDK。workspace-write、关闭工具侧 Web、保留随包 Skill，未与其他产品统一。",
+  "timeline": [
+    "原生事件第 8 行 turn_start，第 21–22 行查找 input.csv，第 29–30 行打开并返回 CSV。",
+    "第 35–36 行写 receipt.json；第 41–42 行用文件工具回读同一产物。",
+    "随后第 46 行 shell 校验返回 SetNamedSecurityInfoW failed (Win32 5)，失败环节是 grantWrite；此前写入与回读成功。",
+    "第 50 行最终回复、第 52 行 turn_end，进程退出码 0。评分另用落盘原件复算。"
+  ],
+  "final_reply": "{\n  \"records\": [\n    \"VIOLET-74\",\n    \"TERRA-06\",\n    \"SKY-55\"\n  ],\n  \"total_cents\": 1265\n}",
+  "artifact_sha256": "95b2617485bce5c88eb5e5f6ff8ba6014f481e1b8d3fe5beaddf241157889018",
+  "artifact_bytes": 92,
+  "operator_record_sha256": "ce2db784738617d1a061ad950fcda171698eb515ad8c165c025199dee9194317",
+  "raw_event_stream_sha256": "bdcef66df5a586cac551a04e299a9154f6299c9e4e695f1ebe074955807c7769",
+  "public_excerpt_sha256": "8e864b1f1c6fb9864566df02255a843f92fc1ea4ec2b4a600d7c7f46cfd04f95"
+}

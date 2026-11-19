@@ -35,6 +35,7 @@ jobs:
       - run: python scripts/verify_behavior_runs.py --check
       - run: python scripts/behavior_preflight.py --check-closed-register --incident
       - run: python scripts/behavior_preflight.py --check-formal-readiness
+      - run: python scripts/audit_five_surface_transfer.py --check
       - run: python scripts/audit_case_gates.py --check
       - run: python scripts/independent_check.py
       - run: python -m unittest discover -s tests -v

@@ -2,6 +2,11 @@
 
 按北京时间记录已经完成并留在仓库中的改动。历史条目根据Git提交补记，后续计划写在[个人周报](reports/weekly/README.md)中。
 
+## 2026-11-19 五款文件收发实测
+
+- 同一 CSV 先登记后实跑，依次完成 WorkBuddy、DeepSeek Harness、Codex、元宝专家模式和豆包工作任务云电脑。5 次接受，5 次有效通过。保留五份原件、现场及判定，DSH 使用安装包自带 SDK。加入复算命令和契约正反例。[专项报告](reports/behavior-formal/five-surface-transfer-2026-11-19.md)
+- 优先补查豆包新任务的实际附件与下载，在提交前核对云电脑与文件，再从原生卡片导出。旧无效场的输出来源仍未证实，正式 T03-M 仍等待独立抽查。[第六周产物审计](reports/week6/artifact-audit.md) · [第六期文字周报](reports/weekly/2026-11-21.md)
+
 ## 2026-11-19
 
 - [Codex 首场正式实测准备](reports/behavior-formal/codex-t03m-readiness.md)：真实命令工具核对 5 份输入和提示词，原生沙箱对 4 份评测文件返回 `0x80070005`。预登记 T03-M 一场，正式启动已接入实际工作区的权限复检，独立判卷抽查仍待回收。权限诊断未提交业务任务。

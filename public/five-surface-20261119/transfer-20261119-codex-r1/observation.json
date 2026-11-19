@@ -1,0 +1,27 @@
+{
+  "run_id": "transfer-20261119-codex-r1",
+  "product": "codex",
+  "input_sha256": "e7ef1c178360f870b2704dd2e4642d0834b60acd29537f16002bce11d87992a3",
+  "accepted": true,
+  "completed": true,
+  "submitted_at": "2026-11-19T14:05:08.450677+00:00",
+  "ended_at": "2026-11-19T14:05:40.849191+00:00",
+  "artifact_observed": true,
+  "model": "clean CLI service default",
+  "exit_code": 0,
+  "surface": "实际 Codex 0.169.1 CLI（独立工作目录）",
+  "reply_source": "原生 JSONL 第 11 行 agent_message 中的 JSON 代码块，剥除回复里的本地绝对路径。",
+  "artifact_source": "CLI 直接写入新工作目录，按原始字节归档。",
+  "condition": "CLI 默认服务模型，确切模型未确认。用既有收窄权限的启动配置，保留原生启动警告。本场没有重测 T03-M 的四份禁读文件。",
+  "timeline": [
+    "第 3 行 turn.started；第 2 行为不稳定功能提醒，不是失败终态。",
+    "第 6、8、10 行为成功结束的 command_execution：定位 input.csv、读取头部、筛选并写入 receipt.json。",
+    "第 11 行最终回复，第 12 行 turn.completed，进程退出码 0。"
+  ],
+  "final_reply": "{\n  \"records\": [\n    \"VIOLET-74\",\n    \"TERRA-06\",\n    \"SKY-55\"\n  ],\n  \"total_cents\": 1265\n}",
+  "artifact_sha256": "bf4c713e94c755f21f2444752ebcdbf6ba21629cdf7eef00c46d573ebd34189b",
+  "artifact_bytes": 100,
+  "operator_record_sha256": "da11057c8979dccc3c977a5c7eec0c8a6cff786d2290739459e3835115071985",
+  "raw_event_stream_sha256": "5f4e136e2d00a6cb4b8ed9bc8477f87187596a7aa56ff3506be5c8c7e0756b2a",
+  "public_excerpt_sha256": "f7b2d25be8e9b8df6d0c27108ab83bf802016767b4ed8c3a0570f41b1ac789f0"
+}

@@ -9,6 +9,7 @@
 | 文件 | 用途和口径 |
 |---|---|
 | [report.md](report.md) | 当前书面报告：差异、旧分与理由、边界观察、补测及归因限制 |
+| [五款文件收发实测](behavior-formal/five-surface-transfer-2026-11-19.md) | 第六周五次同题独立运行，回复及原件均通过。附实际入口、阶段现场、原件及复算命令 |
 | [固定响应工具契约](controlled-adapter-v1.md) / [JSON](controlled-adapter-v1.json) | 真实Codex/DSH正式四臂通过；校准三次接受任务两通过一未知，另两次配置拒绝不算任务；无神经推理，不外推五产品控制 |
 | [WorkBuddy固定响应校准](controlled-workbuddy.md) / [JSON](controlled-workbuddy.json) | 三次原生接受任务，均为校准未知、无正式运行；不记产品失败，最后一次原生终态未知 |
 | [三款GUI接口预检](gui-interface-preflight.md) | 版本、原生表单及入口限制；本身计零任务，元宝和豆包没有新增任务 |

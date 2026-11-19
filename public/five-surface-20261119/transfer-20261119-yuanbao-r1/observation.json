@@ -1,0 +1,24 @@
+{
+  "run_id": "transfer-20261119-yuanbao-r1",
+  "product": "yuanbao",
+  "input_sha256": "e7ef1c178360f870b2704dd2e4642d0834b60acd29537f16002bce11d87992a3",
+  "accepted": true,
+  "completed": true,
+  "submitted_at": "2026-11-19T14:07:01.341Z",
+  "ended_at": "2026-11-19T14:07:52.186Z",
+  "artifact_observed": true,
+  "surface": "桌面客户端 → 专家模式（Computer Use）",
+  "model": "专家模式为可见模式，具体模型未验证",
+  "condition": "新会话，专家模式、本地文件附件。未观察云端真实文件访问策略或内置 Skill 配置。",
+  "timeline": [
+    "新会话选中专家模式，通过本地文件对话框附上 input.csv，界面显示 CSV 105 B。",
+    "发送后出现最终回复和 receipt.json 文件卡片。",
+    "从文件预览下载到本地。确认取得文件后关闭测试窗口。"
+  ],
+  "reply_source": "操作者转录最终回复中可见的 JSON",
+  "artifact_source": "原生文件卡 → 打开预览 → 下载到本地 → 指定新目录。界面显示下载成功。",
+  "final_reply": "{\"records\":[\"VIOLET-74\",\"TERRA-06\",\"SKY-55\"],\"total_cents\":1265}",
+  "artifact_sha256": "8d9469c4c12b40e788fd4e7ee9a4ddaaf04d32c846ffc10305c90cdaadd29f8e",
+  "artifact_bytes": 64,
+  "operator_record_sha256": "971b6cc106dfa4501ac4aa7b7fadaccdab135aa5d06499078966686f42308132"
+}

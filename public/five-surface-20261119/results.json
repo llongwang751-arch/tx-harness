@@ -1,0 +1,54 @@
+{
+  "schema": "tx-harness/five-surface-transfer-result/v1",
+  "registration_commit": "7876f914bdbee57c6b19a1d1bfa53f1190bdd77d",
+  "input_sha256": "e7ef1c178360f870b2704dd2e4642d0834b60acd29537f16002bce11d87992a3",
+  "prompt_sha256": "7b9c76177c81f6139561a5cb7fb19a25422724e35a0750b144ad6bccb55e166f",
+  "counts": {
+    "accepted": 5,
+    "valid_pass": 5,
+    "valid_fail": 0,
+    "unknown": 0
+  },
+  "results": {
+    "workbuddy": {
+      "run_id": "transfer-20261119-workbuddy-r1",
+      "accepted": true,
+      "completed": true,
+      "reply": "pass",
+      "artifact": "pass",
+      "evidence_sha256": "2a3555f24e1d130871f7b77d7c0261d62c9ec198fe80aca81990b1defcb7bc20"
+    },
+    "dsh": {
+      "run_id": "transfer-20261119-dsh-r1",
+      "accepted": true,
+      "completed": true,
+      "reply": "pass",
+      "artifact": "pass",
+      "evidence_sha256": "9e55814eb4accc8e5b09a2824150cb56c2c810a24f4c1deb4fb7588fd63a01e8"
+    },
+    "yuanbao": {
+      "run_id": "transfer-20261119-yuanbao-r1",
+      "accepted": true,
+      "completed": true,
+      "reply": "pass",
+      "artifact": "pass",
+      "evidence_sha256": "fb55a41c5dd8909aadec760ca6fecd97daccf2d0205fb5646016ffbfa58ab05f"
+    },
+    "doubao": {
+      "run_id": "transfer-20261119-doubao-r1",
+      "accepted": true,
+      "completed": true,
+      "reply": "pass",
+      "artifact": "pass",
+      "evidence_sha256": "33ae9bc0198c7662a81b3ce532606ad6bdce1ee4192bf3ddf4dbc12a5b67f283"
+    },
+    "codex": {
+      "run_id": "transfer-20261119-codex-r1",
+      "accepted": true,
+      "completed": true,
+      "reply": "pass",
+      "artifact": "pass",
+      "evidence_sha256": "dd3de48838766741f3155457559f12bb9996cb6396a46291a8ecf202e296bca5"
+    }
+  }
+}

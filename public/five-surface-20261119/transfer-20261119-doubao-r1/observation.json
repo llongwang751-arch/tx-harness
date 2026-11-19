@@ -1,0 +1,24 @@
+{
+  "run_id": "transfer-20261119-doubao-r1",
+  "product": "doubao",
+  "input_sha256": "e7ef1c178360f870b2704dd2e4642d0834b60acd29537f16002bce11d87992a3",
+  "accepted": true,
+  "completed": true,
+  "submitted_at": "2026-11-19T14:12:12.055Z",
+  "ended_at": "2026-11-19T14:12:59.595Z",
+  "artifact_observed": true,
+  "surface": "桌面客户端 → 新工作任务 → 云电脑（Computer Use）",
+  "model": "豆包 2.1 Lite（低），仅界面标签",
+  "condition": "新云电脑任务且附上本地 CSV。未选择本地工作区、用户 Skill 或额外插件。可见入口不能证明云端访问策略或内置 Skill 配置。",
+  "timeline": [
+    "发送前同屏出现云电脑、豆包 2.1 Lite（低）和 input.csv（105B）。",
+    "提交后任务显示正在读取 input.csv，随后出现最终回复和 receipt.json 卡片。",
+    "打开原件预览，点击下载，界面显示下载完成。确认取得文件后关闭测试窗口。"
+  ],
+  "reply_source": "操作者转录最终回复中可见的 JSON",
+  "artifact_source": "原生文件卡 → 预览 → 下载。界面显示下载完成，与下载目录新文件的时间及内容对上，原字节复制到取证目录。",
+  "final_reply": "{\"records\":[\"VIOLET-74\",\"TERRA-06\",\"SKY-55\"],\"total_cents\":1265}",
+  "artifact_sha256": "b7b5786d9564655e7e6032f4e26b2e3207baea6d465345cfc9cb7b5220b1a88f",
+  "artifact_bytes": 91,
+  "operator_record_sha256": "2204d0fd5bc87c12084e19165fe2694f3d1e6ef0fd47d82115326f09f5a0c338"
+}

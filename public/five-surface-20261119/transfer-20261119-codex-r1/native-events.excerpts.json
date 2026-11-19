@@ -1,0 +1,40 @@
+[
+  {
+    "source_stdout_line": 3,
+    "type": "turn.started"
+  },
+  {
+    "source_stdout_line": 6,
+    "type": "item.completed",
+    "item": {
+      "type": "command_execution",
+      "status": "completed",
+      "exit_code": 0,
+      "aggregated_output": "input.csv\n"
+    }
+  },
+  {
+    "source_stdout_line": 8,
+    "type": "item.completed",
+    "item": {
+      "type": "command_execution",
+      "status": "completed",
+      "exit_code": 0,
+      "aggregated_output": "\r\nLength\r\n------\r\n   105\r\nrecord,amount_cents,state\r\n\r\n"
+    }
+  },
+  {
+    "source_stdout_line": 10,
+    "type": "item.completed",
+    "item": {
+      "type": "command_execution",
+      "status": "completed",
+      "exit_code": 0,
+      "aggregated_output": "{\r\n  \"records\": [\r\n    \"VIOLET-74\",\r\n    \"TERRA-06\",\r\n    \"SKY-55\"\r\n  ],\r\n  \"total_cents\": 1265\r\n}\r\n\r\n"
+    }
+  },
+  {
+    "source_stdout_line": 12,
+    "type": "turn.completed"
+  }
+]
