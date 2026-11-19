@@ -15,6 +15,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from harness_eval import core
+from scripts.audit_grader_v3 import original_source
 
 BASE = ROOT / 'supplements/week2'
 REPORTS = ROOT / 'reports/week2'
@@ -189,7 +190,7 @@ def weekly_counts():
 def make_claims():
     grader = core.read_json(ROOT / GRADER_AUDIT)
     rules = 'supplements/grader-v3/rules.json'
-    config = [reference('evaluation_v3/grader.py'), reference('harness_eval/core.py'), reference(rules)]
+    config = [original_source('evaluation_v3/grader.py'), reference('harness_eval/core.py'), reference(rules)]
     claims = []
     for claim_id, example_id, rule, phenomenon, clue, verified, limits in [
         ('C01', 'N6', 'CSV_STRICT', '缺闭引号的T03 CSV仍被旧判卷接受',

@@ -2,6 +2,8 @@
 
 作者：李明远。个人开源仓库：[llongwang751-arch/tx-harness](https://github.com/llongwang751-arch/tx-harness)。比较对象为Codex、WorkBuddy、DeepSeek Harness（DSH）、元宝专家模式、豆包工作任务模式；用户已确认公告中的“豆包办公”指工作任务模式。
 
+2026-11-19：按 [Week 5 反馈 #3](https://github.com/llongwang751-arch/tx-harness/issues/3)补归档豆包无效场、修正来源归因并关闭新变体投递，见[第六周产物审计](reports/week6/artifact-audit.md)和[周报草稿](reports/weekly/2026-11-21.md)。本期截至 19 日新增产品运行 0 次。
+
 ## 30 秒看懂
 
 **结论先读[结论先行](reports/conclusion-2026-10-31.md)**：在“固定配置、单次、只判产物契约”的条件下，产物分 Codex = WorkBuddy = 豆包（各 300/300）> DSH（270/300）> 元宝专家模式（159/300）；在“可归因到 Harness”的条件下没有排名，因为受控轨道只覆盖 Codex/DSH 且两臂无差异。两条结论同时成立，证据与理由在那一页。

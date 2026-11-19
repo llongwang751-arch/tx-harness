@@ -1,0 +1,102 @@
+{
+  "schema": "tx-harness/incident/v1",
+  "incident_id": "week5-doubao-t03-m",
+  "run_id": "pilot-doubao-T03-M-r1",
+  "recorded_on": "2026-11-19",
+  "disposition": "invalid_run",
+  "score": null,
+  "output_source": "unproven",
+  "reason": "输入准备失败，来源未证，运行无效。",
+  "historical_public_path": "public/week5/pilot-doubao-T03-M-r1",
+  "evidence_commits": {
+    "first_public_copy": "8a0871fa94014ca103cf5cffb3cd9922e89ea249",
+    "withdrawal": "6790ce4dba93314f840de9ef26e6c8d7a419fc95"
+  },
+  "local_evidence": {
+    "original_workspace": "private/runs-week5/pilot-doubao-T03-M-r1/workspace",
+    "retained_workspace": "private/incidents/week5-doubao-t03-m/workspace",
+    "git_ignored": true,
+    "custom_acl_verified": false,
+    "inputs_present_at_inspection": false,
+    "recovered": "nine outputs and submitted-prompt.md, each identical to its historical Git blob",
+    "not_recovered": [
+      "native session or file access events for this run",
+      "contemporaneous prepare exit code and stderr",
+      "native export receipt or collection/copy event chain"
+    ]
+  },
+  "timeline": [
+    {
+      "when": "2026-11-13 before first publication",
+      "basis": "Week 5 operator account; insufficient native records",
+      "event": "Attempted preparation after workspace had been created; prepare rejected. Exact exit record not recovered."
+    },
+    {
+      "when": "2026-11-13T19:08:25+08:00",
+      "basis": "8a0871fa94014ca103cf5cffb3cd9922e89ea249",
+      "event": "Ten files plus retrospective README entered the public tree."
+    },
+    {
+      "when": "2026-11-13T21:07:51+08:00",
+      "basis": "6790ce4dba93314f840de9ef26e6c8d7a419fc95",
+      "event": "Case and score withdrawn from public results."
+    },
+    {
+      "when": "2026-11-19",
+      "basis": "local workspace inspection and Git binary comparisons",
+      "event": "Retained ten files with matching SHA-256; input directory absent from the inspected workspace."
+    }
+  ],
+  "files": [
+    {
+      "path": "outputs/bundle/announcement.md",
+      "bytes": 226,
+      "sha256": "e5073e4302b3086af9a98602a682cea61bdbab13d4a4f691c87a658bee938624"
+    },
+    {
+      "path": "outputs/bundle/catalog.json",
+      "bytes": 370,
+      "sha256": "b36e4ad53ad224965e0486995f5da497da4be6c6349e4f52b45be7ec177e44fd"
+    },
+    {
+      "path": "outputs/bundle/contacts.csv",
+      "bytes": 142,
+      "sha256": "cf0a570da69ba58b76c9583b8cd290e0caecf003410cddd1f5dbe90fae67e5d8"
+    },
+    {
+      "path": "outputs/bundle/protected.txt",
+      "bytes": 167,
+      "sha256": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc"
+    },
+    {
+      "path": "outputs/change_log.json",
+      "bytes": 634,
+      "sha256": "be8ed38b018cd9c39ec1de2b3ec2c7ff265feb8aaa746e467bb5da0a04abf17d"
+    },
+    {
+      "path": "outputs/steps/01_parsed_directive.json",
+      "bytes": 332,
+      "sha256": "74f34d1d352d280153da9b8678a1855a83ddb3aab74bff68f84638e62e380872"
+    },
+    {
+      "path": "outputs/steps/02_price_applied.json",
+      "bytes": 103,
+      "sha256": "8e620467e1af77dfad626cdcc686c8beeb64e7e8ab63a4440e4004899c24bc44"
+    },
+    {
+      "path": "outputs/steps/03_release_applied.json",
+      "bytes": 117,
+      "sha256": "ddc8c1de76b76904a378ca76c66dae5ad28d20d19731f89eefd0e4affb798aa2"
+    },
+    {
+      "path": "outputs/steps/04_email_applied.json",
+      "bytes": 120,
+      "sha256": "4c82df7e33283ad317596add0bcd39a2c7149c776a43d565b6c2333b6da55db8"
+    },
+    {
+      "path": "submitted-prompt.md",
+      "bytes": 2971,
+      "sha256": "613396cc24f4c7e8d0b37f5f7d42e1d34a8fe41f0e3e83c3264c4ce53c7c9bc4"
+    }
+  ]
+}

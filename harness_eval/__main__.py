@@ -104,12 +104,20 @@ def command_prepare(args):
     if run.exists():
         raise ValueError("实验目录已存在，禁止覆盖或挑选较好的结果")
     frozen = snapshot()
-    run.mkdir(parents=True)
     workspace = run / "workspace"
-    workspace.mkdir()
-    shutil.copytree(inside(case_dir, case["input_dir"]), workspace / "inputs")
-    shutil.copyfile(inside(case_dir, case["prompt_file"]), workspace / "prompt.md")
-    (workspace / "outputs").mkdir()
+
+    def create_workspace():
+        run.mkdir(parents=True)
+        workspace.mkdir()
+        shutil.copytree(inside(case_dir, case["input_dir"]), workspace / "inputs")
+        shutil.copyfile(inside(case_dir, case["prompt_file"]), workspace / "prompt.md")
+        (workspace / "outputs").mkdir()
+
+    if args.case in ("T03-M", "T05-M"):
+        from scripts.behavior_preflight import stage_workspace
+        stage_workspace(case_dir, workspace, create_workspace)
+    else:
+        create_workspace()
     (run / "evidence").mkdir()
     (run / "events.jsonl").write_text("", encoding="utf-8")
     write_json(run / "manual.json", manual_template())
@@ -131,7 +139,10 @@ def command_prepare(args):
         "released_files": {}
     })
     print(f"待采集实验包: {run.resolve()}")
-    print(f"仅将这个目录交给产品: {workspace.resolve()}")
+    if args.case in ("T03-M", "T05-M"):
+        print(f"仅完成暂存，未授权投递: {workspace.resolve()}")
+    else:
+        print(f"仅将这个目录交给产品: {workspace.resolve()}")
 
 
 def append_event(run, kind, summary, evidence, at=None):

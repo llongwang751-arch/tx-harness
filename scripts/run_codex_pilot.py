@@ -36,6 +36,7 @@ if hasattr(sys.stdout, "reconfigure"):
 from harness_eval.__main__ import (append_event, command_finalize, command_prepare,
                                   command_release)
 from harness_eval.core import inventory, read_json, sha256, write_json
+from scripts.behavior_preflight import CASES as BEHAVIOR_CASES, authorize_codex
 
 CASES = ("T01", "T02", "T03", "T04", "T05", "T03-M", "T05-M")
 DELIVERY_SUFFIX = "将交付文件写入 outputs/，不要修改 inputs/。"
@@ -310,11 +311,15 @@ def main(argv=None):
     parser.add_argument("--participant-root", type=Path, default=ROOT.parent / "tx-harness-participants")
     parser.add_argument("--codex", help="Native codex.exe or its official npm codex.ps1 shim")
     parser.add_argument("--model", help="Optional preselected model; omitted uses this clean CLI's default")
+    parser.add_argument("--registration-commit", help="Committed prospective registration for behavior variants")
     parser.add_argument("--operator", default="automated_native_cli_adapter")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--execute", action="store_true", help="Explicitly start a real product run")
     mode.add_argument("--dry-run", action="store_true", help="Default: show the plan without writing files")
     options = parser.parse_args(argv)
+    if options.execute and options.case in BEHAVIOR_CASES:
+        run_id = f"{options.track}-codex-{options.case}-r{options.replicate}"
+        authorize_codex(run_id, options.case, options.registration_commit)
     executable = native_codex(options.codex)
     # Attempt number belongs to the storage path, not the evaluator's closed
     # track vocabulary. The early attempt02 naming error is preserved in its

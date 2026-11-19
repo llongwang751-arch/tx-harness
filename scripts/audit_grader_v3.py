@@ -8,10 +8,12 @@ from __future__ import annotations
 import argparse
 import copy
 import csv
+import hashlib
 import io
 import json
 from pathlib import Path
 import shutil
+import subprocess
 import sys
 import tempfile
 
@@ -22,6 +24,7 @@ from evaluation_v3.grader import adjudicate, RULE_FILE
 
 PUBLIC = ROOT / 'public/grader-audit-v3'
 REPORT = ROOT / 'reports/grader-audit-v3.json'
+ORIGINAL_AUDIT_COMMIT = '6cb801cd1f50075b85b2e9bb34b2d87355ce3f33'
 RULES = ('CSV_STRICT', 'T03_CHANGELOG_KEYS', 'DECODED_FORBIDDEN_TEXT')
 SPECS = [(f'G{i}', f'T0{i}', 'golden', True) for i in range(1, 6)] + [
     ('P1', 'T03', 'csv_valid_quotes', True),
@@ -159,6 +162,12 @@ def reference(path, pointer=''):
             'sha256': core.sha256(path), 'json_pointer': pointer}
 
 
+def original_source(name):
+    """Attribute the archived audit to the code that produced it, not today's runner."""
+    data = subprocess.check_output(['git', 'show', f'{ORIGINAL_AUDIT_COMMIT}:{name}'], cwd=ROOT)
+    return {'path': name, 'sha256': hashlib.sha256(data).hexdigest(), 'json_pointer': ''}
+
+
 def make_examples(target):
     for example_id, case_id, mutation, expected in SPECS:
         folder = target / example_id
@@ -218,7 +227,7 @@ def build():
             'sources': [reference(package / 'manifest.json'), old['historical_objective']['verification_source']]})
     return {'schema': 'grader-v3-offline-audit', 'audit_date': '2026-10-21',
         'sources': [reference(RULE_FILE), reference(Path(core.__file__)),
-                    reference(ROOT / 'evaluation_v3/grader.py'), reference(Path(__file__)),
+                    original_source('evaluation_v3/grader.py'), original_source('scripts/audit_grader_v3.py'),
                     reference(ROOT / 'tests/test_oracles.py'),
                     reference(PUBLIC / 'manifest.json')],
         'counts': {'synthetic_examples': len(rows),

@@ -1,0 +1,9 @@
+{
+  "schema": "tx-harness/behavior-run-register/v2",
+  "registration_kind": "prospective",
+  "decision": "artifact_audit_only",
+  "as_of": "2026-11-19",
+  "feedback": "https://github.com/llongwang751-arch/tx-harness/issues/3",
+  "slots": [],
+  "reason": "No native launcher has established a same-boundary protected-file access denial or received an independent scoring spot-check. All Week 5 runs remain historical."
+}
