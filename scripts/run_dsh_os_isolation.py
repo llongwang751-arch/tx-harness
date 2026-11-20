@@ -58,10 +58,11 @@ def outer(workspace, installed, for_child):
     return [*command, '--']
 
 
-def arm(variant, commit):
-    run = 'dsh-os-isolation-' + variant + '-r1'
-    root = ROOT.parent / 'tx-harness-participants' / 'dsh-os-isolation-v1' / variant
-    logs = ROOT / 'private' / 'dsh-os-isolation-v1' / variant
+def arm(variant, commit, replicate):
+    run = f'dsh-os-isolation-{variant}-r{replicate}'
+    directory = 'dsh-os-isolation-v1' if replicate == 1 else 'dsh-os-isolation-v1-r2'
+    root = ROOT.parent / 'tx-harness-participants' / directory / variant
+    logs = ROOT / 'private' / directory / variant
     workspace, examiner = root / 'participant', root / 'evaluator'
     workspace.mkdir(parents=True)
     examiner.mkdir()
@@ -80,6 +81,8 @@ def arm(variant, commit):
             exe, args, env, patch = dsh_launch(workspace, workspace, allowed, 'unused', logs / 'unused.jsonl', model.base_url)
             save(workspace / 'single-run.patch.yml', patch[:-1])  # Use native read, with no MCP replacement.
             env.update(DSH_PERMISSION_MODE='workspace-write', TEMP=str(workspace / 'temp'), TMP=str(workspace / 'temp'))
+            if replicate == 2:
+                args[1:1] = ['--preserve-symlinks', '--preserve-symlinks-main']
             if variant == 'restricted':
                 prefix = outer(workspace, exe.parent, env)
                 env['CODEX_HOME'] = str(workspace / 'codex-home')
@@ -114,12 +117,16 @@ def arm(variant, commit):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--registration-commit', required=True)
+    parser.add_argument('--replicate', type=int, choices=(1, 2), default=1)
     args = parser.parse_args()
-    name = 'supplements/dsh-os-isolation-v1/protocol.md'
-    if subprocess.check_output(['git', 'show', f'{args.registration_commit}:{name}'], cwd=ROOT) != (ROOT / name).read_bytes():
-        raise ValueError('Protocol differs from the registered version.')
+    names = ['protocol.md'] + (['retry.md'] if args.replicate == 2 else [])
+    for filename in names:
+        name = f'supplements/dsh-os-isolation-v1/{filename}'
+        frozen = subprocess.check_output(['git', 'show', f'{args.registration_commit}:{name}'], cwd=ROOT)
+        if frozen != (ROOT / name).read_bytes():
+            raise ValueError('Protocol differs from the registered version.')
     for variant in ('control', 'restricted'):
-        arm(variant, args.registration_commit)
+        arm(variant, args.registration_commit, args.replicate)
 
 
 if __name__ == '__main__':
