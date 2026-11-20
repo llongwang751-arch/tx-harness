@@ -19,6 +19,8 @@
 
 2026-11-21 已备齐新版题面和 8 个正反例，固定判卷器复算全部符合预期。新题面及样例等待复核确认，新版正式运行 ID 待登记。[新版审阅材料](../../supplements/t03m-prompt-review-v1/README.md)
 
+新版收到一份署名 Codex 的辅助复核，建议采用补充条款，并再次复算了 8 个样例。回执说明已看过旧版结果。独立确认和旧版盲判均待回收。[新版辅助复核回执](review/T03-M-draft-assisted-2026-11-21.md)
+
 ## 第一场如何开跑
 
 [前瞻登记](../../supplements/behavior-protocol-v3/run-register.json)固定新 ID `product_default-codex-T03-M-r2`、题面、判卷配置、接入二进制摘要、单次尝试和 1200 秒预算。计划使用干净 CLI 的服务默认模型，后端身份没有独立确认。其他产品不在本次登记范围内。
