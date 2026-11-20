@@ -7,6 +7,7 @@
 - 在新工作区验证原生沙箱可读输入，拒绝四条评分路径，随后提交合成交易题。原件三项判卷 3/3，权限回执、执行现场及复算命令已归档。T03-M 正式场仍待独立判卷。[预演记录](reports/behavior-formal/codex-flow-rehearsal-2026-11-21.md)
 - DSH SDK 验证外层 Windows 隔离。两次原生对照均读到内外两份测试文件，两次受限探针均确认系统拒绝外部评分文件，SDK 均因 Electron 根路径检查失败而未进入任务。[对照与报错凭证](reports/behavior-formal/dsh-os-isolation-2026-11-21.md)
 - DSH 改用 Windows 低完整性配置后成功启动。新配对共完成 2 次，受限场输入可读，原生评分文件读取返回 `EPERM`，与 Windows 预检 Win32 5 一致。旧目录的 2 次标签设置失败单列。[新配置与复算](reports/behavior-formal/dsh-mic-isolation-2026-11-21.md)
+- 归档 T03-M 的 Codex 辅助复核，按固定提交复算 C01 和 C06 并验证单处修改的影响。补充 `reason` 取输入状态原值的题面候选，正式投递仍待独立意见。[辅助复核与条款](reports/behavior-formal/review/T03-M-assisted-2026-11-21.md)
 
 ## 2026-11-19 五款文件收发实测
 

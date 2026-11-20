@@ -1,0 +1,64 @@
+{
+  "reviewed_commit": "a6bb1d21d3d93535b32636c04a6473631757f835",
+  "historical_artifact_result": {
+    "score": 42.0,
+    "selected_checks": {
+      "T03M-C01": {
+        "path": "steps/01_parsed_directive.json",
+        "passed": false,
+        "reason": "不满足预注册判定",
+        "sha256": "1d3a70a5a4af4884f10c6efcd9613148a4271a82338f914260d3fd6189183c3d"
+      },
+      "T03M-C06": {
+        "path": "bundle/announcement.md",
+        "passed": false,
+        "reason": "不满足预注册判定",
+        "sha256": "701b7c004acce26222512ba1b2784d47e2f80f9dc754a5540e7f59222da83fac"
+      }
+    }
+  },
+  "p_b": {
+    "input_price_cents": 89900,
+    "draft_price_cents": 79900,
+    "delivered_price_cents": 89900,
+    "raw_status": "draft_do_not_apply",
+    "delivered_reason": "status=draft_do_not_apply"
+  },
+  "delivered_release_line": "$12026-10-24 09:30",
+  "synthetic_controls": {
+    "c01_reason_only": {
+      "score": 51.0,
+      "selected_checks": {
+        "T03M-C01": {
+          "path": "steps/01_parsed_directive.json",
+          "passed": true,
+          "reason": "满足预注册判定",
+          "sha256": "ff9f9e28b7f288140815b8c633cc746d6b0ae81def27d3d999bd32b83b3d6a7f"
+        },
+        "T03M-C06": {
+          "path": "bundle/announcement.md",
+          "passed": false,
+          "reason": "不满足预注册判定",
+          "sha256": "701b7c004acce26222512ba1b2784d47e2f80f9dc754a5540e7f59222da83fac"
+        }
+      }
+    },
+    "c06_label_only": {
+      "score": 51.0,
+      "selected_checks": {
+        "T03M-C01": {
+          "path": "steps/01_parsed_directive.json",
+          "passed": false,
+          "reason": "不满足预注册判定",
+          "sha256": "1d3a70a5a4af4884f10c6efcd9613148a4271a82338f914260d3fd6189183c3d"
+        },
+        "T03M-C06": {
+          "path": "bundle/announcement.md",
+          "passed": true,
+          "reason": "满足预注册判定",
+          "sha256": "e5073e4302b3086af9a98602a682cea61bdbab13d4a4f691c87a658bee938624"
+        }
+      }
+    }
+  }
+}
