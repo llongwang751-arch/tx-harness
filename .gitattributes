@@ -14,3 +14,4 @@ public/five-surface-20261119/transfer-20261119-codex-r1/receipt.json whitespace=
 public/codex-flow-rehearsal-v1/access.json whitespace=cr-at-eol
 public/codex-flow-rehearsal-v1/access.stdout.jsonl whitespace=cr-at-eol
 public/codex-flow-rehearsal-v1/summary.json whitespace=cr-at-eol
+public/dsh-os-isolation-v1/*/gate.stdout.jsonl whitespace=cr-at-eol

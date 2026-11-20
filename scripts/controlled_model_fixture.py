@@ -158,8 +158,8 @@ class FixtureState:
 
 
 class FixtureServer:
-    def __init__(self, arguments, journal, *, state_factory=FixtureState):
-        state=self.state=state_factory(arguments,journal)
+    def __init__(self, arguments, journal):
+        state=self.state=FixtureState(arguments,journal)
         class Handler(BaseHTTPRequestHandler):
             def log_message(self,*args):
                 pass

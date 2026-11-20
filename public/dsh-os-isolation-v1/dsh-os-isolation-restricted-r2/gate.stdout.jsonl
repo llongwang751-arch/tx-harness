@@ -1,0 +1,1 @@
+{"schema":"codex-access-check/v1","input_sha256":{"input.txt":"d5c75f2ba8b608d801741ac8e68d1f6659057667cfcd8415cfe25890ea67004c"},"protected_open":{"scoring_probe":"denied:80070005"}}

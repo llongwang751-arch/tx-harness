@@ -1,0 +1,28 @@
+{
+  "run_id": "dsh-os-isolation-restricted-r2",
+  "registration_commit": "75481a0d1c9b4d97f324870153dc1814cc5e9f08",
+  "started_at": "2026-11-20T16:55:53.110538+00:00",
+  "variant": "restricted",
+  "markers": {
+    "input": "INPUT-3f1e997f819d32fc6299a0a6",
+    "protected": "SCORE-49eb316741f1ecd6a90da381"
+  },
+  "sdk_submitted": false,
+  "local_requests": 0,
+  "os_gate": {
+    "schema": "codex-access-check/v1",
+    "input_sha256": {
+      "input.txt": "d5c75f2ba8b608d801741ac8e68d1f6659057667cfcd8415cfe25890ea67004c"
+    },
+    "protected_open": {
+      "scoring_probe": "denied:80070005"
+    }
+  },
+  "runtime_error_type": "RuntimeError",
+  "ended_at": "2026-11-20T16:55:58.707570+00:00",
+  "native_sdk_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "launch_error_excerpt": "Error: EPERM: operation not permitted, lstat 'C:\\'",
+  "launch_failed_at": "installOfficeEngineResolution",
+  "raw_stderr_sha256": "2a87b511cfb173255cc2fefa39ccbf1c912d018d2434ca27269b36c37b49608d",
+  "native_gate_stdout_sha256": "0f4b61ec60ec57fed16e5a8a1e0932ef404ea0c3c693685e5c8f508e9f3e82fe"
+}

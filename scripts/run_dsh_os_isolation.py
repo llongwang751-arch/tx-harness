@@ -8,6 +8,7 @@ from pathlib import Path
 import secrets
 import subprocess
 import time
+from unittest.mock import patch as patched
 
 from controlled_model_fixture import FixtureServer, FixtureState, MODEL, encoded, result_items, sha
 from run_controlled_adapter import ROOT, dsh_launch, dsh_turn, save
@@ -77,7 +78,10 @@ def arm(variant, commit, replicate):
     receipt = {'run_id': run, 'registration_commit': commit, 'started_at': now(), 'variant': variant,
                'markers': markers, 'sdk_submitted': False, 'local_requests': 0}
     try:
-        with FixtureServer([allowed, protected], logs / 'model-events.jsonl', state_factory=ReadSequence) as model:
+        # Keep the earlier benchmark's pinned transport file byte-for-byte intact.
+        with patched('controlled_model_fixture.FixtureState', ReadSequence):
+            fixture = FixtureServer([allowed, protected], logs / 'model-events.jsonl')
+        with fixture as model:
             exe, args, env, patch = dsh_launch(workspace, workspace, allowed, 'unused', logs / 'unused.jsonl', model.base_url)
             save(workspace / 'single-run.patch.yml', patch[:-1])  # Use native read, with no MCP replacement.
             env.update(DSH_PERMISSION_MODE='workspace-write', TEMP=str(workspace / 'temp'), TMP=str(workspace / 'temp'))

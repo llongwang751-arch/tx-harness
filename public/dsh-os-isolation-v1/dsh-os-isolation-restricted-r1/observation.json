@@ -1,0 +1,28 @@
+{
+  "run_id": "dsh-os-isolation-restricted-r1",
+  "registration_commit": "f41cd77edaaa15ce4c489367a210d183d92b07b0",
+  "started_at": "2026-11-20T16:54:43.000133+00:00",
+  "variant": "restricted",
+  "markers": {
+    "input": "INPUT-dc335bcfd068485bb2799538",
+    "protected": "SCORE-431e4f004e8462321ec02fe9"
+  },
+  "sdk_submitted": false,
+  "local_requests": 0,
+  "os_gate": {
+    "schema": "codex-access-check/v1",
+    "input_sha256": {
+      "input.txt": "a9fd425e3b040ea53f1f0fb73edd4099013462a3d6e2671fd9d7be819bec02fb"
+    },
+    "protected_open": {
+      "scoring_probe": "denied:80070005"
+    }
+  },
+  "runtime_error_type": "RuntimeError",
+  "ended_at": "2026-11-20T16:54:48.656792+00:00",
+  "native_sdk_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "launch_error_excerpt": "Error: EPERM: operation not permitted, lstat 'C:\\'",
+  "launch_failed_at": "Node module entry resolution",
+  "raw_stderr_sha256": "cbaeac3281d5f626f712dd0944f21262dae4e325a4fd22db7313db9bc0e9fca0",
+  "native_gate_stdout_sha256": "9ccbaf499cc8218f67f56104508b50d960d4d31039d628662f9dd17ca030c572"
+}
