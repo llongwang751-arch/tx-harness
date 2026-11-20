@@ -6,6 +6,7 @@ from pathlib import Path
 import secrets
 import subprocess
 import sys
+import tempfile
 import time
 from unittest.mock import patch as patched
 
@@ -16,18 +17,26 @@ from run_codex_pilot import now
 from windows_low_integrity import current_process, integrity_rid, set_mandatory_label
 
 
-def one_arm(arm, pin):
-    run_id = f'dsh-mic-{arm}-r1'
-    directory = ROOT.parent / 'tx-harness-participants' / 'dsh-mic-isolation-v1' / arm
-    logs = ROOT / 'private' / 'dsh-mic-isolation-v1' / arm
+def one_arm(arm, pin, replicate):
+    run_id = f'dsh-mic-{arm}-r{replicate}'
+    if replicate == 1:
+        directory = ROOT.parent / 'tx-harness-participants' / 'dsh-mic-isolation-v1' / arm
+        logs = ROOT / 'private' / 'dsh-mic-isolation-v1' / arm
+    else:
+        logs = ROOT / 'private' / 'dsh-mic-isolation-v1-r2' / arm
+        if logs.exists():
+            raise ValueError('The registered evidence directory already exists.')
+        directory = Path(tempfile.mkdtemp(prefix=f'tx-{run_id}-'))
     workspace, held = directory / 'participant', directory / 'evaluator'
     workspace.mkdir(parents=True)
     held.mkdir()
     logs.mkdir(parents=True)
     record = {'run_id': run_id, 'registration_commit': pin, 'arm': arm, 'started_at': now(),
               'sdk_submitted': False, 'local_requests': 0}
+    stage = 'label_participant_directory'
     try:
         set_mandatory_label(workspace, 'S:(ML;OICI;NW;;;LW)')
+        stage = 'prepare_synthetic_files'
         for name in ('dsh-home', 'agents-home', 'temp', 'profile'):
             (workspace / name).mkdir()
         allowed, protected = workspace / 'input.txt', held / 'scoring-probe.txt'
@@ -42,6 +51,7 @@ def one_arm(arm, pin):
         launch = helper if arm == 'restricted' else []
         expected_rid = 4096 if launch else integrity_rid(current_process())
         expected_error = 5 if launch else 0
+        stage = 'windows_access_probe'
         check = subprocess.run([*launch, *helper, '--probe', str(allowed), str(protected)], cwd=workspace,
                                input=b'', capture_output=True, timeout=30)
         (logs / 'gate.stdout.jsonl').write_bytes(check.stdout)
@@ -55,6 +65,7 @@ def one_arm(arm, pin):
 
         with patched('controlled_model_fixture.FixtureState', ReadSequence):
             fixture = FixtureServer([allowed, protected], logs / 'model-events.jsonl')
+        stage = 'dsh_sdk'
         with fixture as model:
             _, args, env, patch = dsh_launch(workspace, workspace, allowed, 'unused', logs / 'unused.jsonl', model.base_url)
             save(workspace / 'single-run.patch.yml', patch[:-1])  # Keep DSH's own read tool.
@@ -69,6 +80,7 @@ def one_arm(arm, pin):
                 record['local_requests'] = model.state.requests
     except Exception as error:
         record['runtime_error_type'] = type(error).__name__
+        record['failed_stage'] = stage
         save(logs / 'error.json', {'message': str(error)})
     finally:
         record['ended_at'] = now()
@@ -79,13 +91,16 @@ def one_arm(arm, pin):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--registration-commit', required=True)
+    parser.add_argument('--replicate', type=int, choices=(1, 2), default=1)
     args = parser.parse_args()
-    path = 'supplements/dsh-mic-isolation-v1/protocol.md'
-    frozen = subprocess.check_output(['git', 'show', f'{args.registration_commit}:{path}'], cwd=ROOT)
-    if frozen != (ROOT / path).read_bytes():
-        raise ValueError('Protocol differs from the registered version.')
+    names = ('protocol.md', 'temp-retry.md') if args.replicate == 2 else ('protocol.md',)
+    for name in names:
+        path = f'supplements/dsh-mic-isolation-v1/{name}'
+        frozen = subprocess.check_output(['git', 'show', f'{args.registration_commit}:{path}'], cwd=ROOT)
+        if frozen != (ROOT / path).read_bytes():
+            raise ValueError('Protocol differs from the registered version.')
     for arm in ('control', 'restricted'):
-        one_arm(arm, args.registration_commit)
+        one_arm(arm, args.registration_commit, args.replicate)
 
 
 if __name__ == '__main__':
