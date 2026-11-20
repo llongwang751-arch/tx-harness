@@ -1,0 +1,6 @@
+id,gross_cents,refund_cents,status
+TX-E4,1200,120,settled
+TX-R8,870,0,void
+TX-F2,530,0,settled
+TX-D7,900,50,pending
+TX-G5,1600,175,settled
