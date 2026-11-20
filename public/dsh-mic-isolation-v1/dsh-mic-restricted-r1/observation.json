@@ -1,0 +1,12 @@
+{
+  "run_id": "dsh-mic-restricted-r1",
+  "registration_commit": "163a5d4ccbf2b6c9c5f4ba8e8325fc212be8957a",
+  "arm": "restricted",
+  "started_at": "2026-11-20T17:09:45.953974+00:00",
+  "sdk_submitted": false,
+  "local_requests": 0,
+  "runtime_error_type": "PermissionError",
+  "ended_at": "2026-11-20T17:09:45.954874+00:00",
+  "observed_stage": "label_participant_directory",
+  "win32_error": 5
+}

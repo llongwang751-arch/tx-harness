@@ -15,3 +15,4 @@ public/codex-flow-rehearsal-v1/access.json whitespace=cr-at-eol
 public/codex-flow-rehearsal-v1/access.stdout.jsonl whitespace=cr-at-eol
 public/codex-flow-rehearsal-v1/summary.json whitespace=cr-at-eol
 public/dsh-os-isolation-v1/*/gate.stdout.jsonl whitespace=cr-at-eol
+public/dsh-mic-isolation-v1/*/gate.stdout.jsonl whitespace=cr-at-eol

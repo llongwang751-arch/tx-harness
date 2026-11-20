@@ -12,3 +12,5 @@
 | R2 外层隔离 | 原生权限命令再次得到输入可读和评分文件拒绝。SDK 推进到 `installOfficeEngineResolution`，仍对 `C:\` 执行 `lstat` 并返回 EPERM | [权限命令与启动回执](../../public/dsh-os-isolation-v1/dsh-os-isolation-restricted-r2/observation.json) |
 
 原生对照固定了工具和读取顺序，SDK 事件能够配对。两个受限场的 `gate.stdout.jsonl` 来自同配置下的原生权限检查，两场均没有 SDK 模型请求和工具调用。启动失败可定位到 Electron 的路径解析，尚缺 DSH 自身在同一受限入口返回文件拒绝的证据。下一次重开条件为能在只映射测试文件和运行时的隔离环境中启动 SDK。独立判卷仍由未参与实现人员完成。[T03-M 准入记录](codex-t03m-readiness.md)
+
+同日另测 Windows 低完整性配置。SDK 已在该新配置启动并原生返回合成评分文件拒绝。[新环境结果](dsh-mic-isolation-2026-11-21.md)
