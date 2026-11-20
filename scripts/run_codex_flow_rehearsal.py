@@ -3,8 +3,7 @@ import argparse
 from pathlib import Path
 import subprocess
 
-from behavior_codex_access import probe
-from run_codex_pilot import ROOT, command, inventory, native_codex, now, safe_env
+from run_codex_pilot import ROOT, command, inventory, native_access_probe, native_codex, now, safe_env
 from run_transfer_cli import codex, sha256, write_json
 
 
@@ -36,7 +35,7 @@ def main():
     record = {'run_id': run_id, 'registration_commit': options.registration_commit, 'started_at': now(),
               'mode': 'engineering_rehearsal', 'accepted': False, 'completed': False}
     try:
-        probe(executable, args, workspace, expected, 'T03-M', evidence, safe_env())
+        native_access_probe(executable, args, workspace, expected, 'T03-M', evidence, safe_env())
         if inventory(workspace) != expected or next((workspace / 'outputs').iterdir(), None) is not None:
             raise ValueError('Participant workspace changed after admission.')
         record['native_access_receipt_sha256'] = sha256(evidence / 'access.json')
