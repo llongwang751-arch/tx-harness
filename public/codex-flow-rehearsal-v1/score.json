@@ -1,0 +1,10 @@
+{
+  "status": "scored",
+  "score": 3,
+  "max_score": 3,
+  "checks": {
+    "schema": true,
+    "ordered_ids": true,
+    "net_integer": true
+  }
+}

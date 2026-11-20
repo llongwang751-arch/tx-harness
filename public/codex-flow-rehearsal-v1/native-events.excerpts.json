@@ -1,0 +1,30 @@
+[
+  {
+    "source_stdout_line": 3,
+    "type": "turn.started"
+  },
+  {
+    "source_stdout_line": 6,
+    "type": "item.completed",
+    "item": {
+      "type": "command_execution",
+      "status": "completed",
+      "exit_code": 0,
+      "aggregated_output": "id,gross_cents,refund_cents,status\r\nTX-E4,1200,120,settled\r\nTX-R8,870,0,void\r\nTX-F2,530,0,settled\r\nTX-D7,900,50,pending\r\nTX-G5,1600,175,settled\r\ninputs\r\noutputs\r\nprompt.md\r\n"
+    }
+  },
+  {
+    "source_stdout_line": 8,
+    "type": "item.completed",
+    "item": {
+      "type": "command_execution",
+      "status": "completed",
+      "exit_code": 0,
+      "aggregated_output": ""
+    }
+  },
+  {
+    "source_stdout_line": 10,
+    "type": "turn.completed"
+  }
+]

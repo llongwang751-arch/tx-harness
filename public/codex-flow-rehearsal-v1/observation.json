@@ -1,0 +1,16 @@
+{
+  "run_id": "codex-flow-rehearsal-20261121-r1",
+  "registration_commit": "5e9ab0f034d3eeb4861ef2ca1598fdc88241eab8",
+  "started_at": "2026-11-20T16:46:38.770510+00:00",
+  "mode": "engineering_rehearsal",
+  "accepted": true,
+  "completed": true,
+  "native_access_receipt_sha256": "476be5f61a5c4c8e9b47221c906ca7244564092d2aec33e5d71ffaf0a7ab256f",
+  "cli_version": "codex-cli 0.169.1",
+  "model": "clean CLI service default",
+  "submitted_at": "2026-11-20T16:46:44.869202+00:00",
+  "exit_code": 0,
+  "ended_at": "2026-11-20T16:47:09.201320+00:00",
+  "artifact_sha256": "29498d26cfa0d5212717fa6784779c3560e73de88ebc5cca28a057825aff80c1",
+  "raw_trace_sha256": "7e6743ae7558aaf856b53183ca056609d641b08538bf6b09c8bbb33851921578"
+}

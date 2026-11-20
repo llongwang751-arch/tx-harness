@@ -1,0 +1,41 @@
+{
+  "schema": "tx-harness/codex-native-access/v1",
+  "started_at": "2026-11-20T16:46:38.775074+00:00",
+  "ended_at": "2026-11-20T16:46:43.808643+00:00",
+  "transport": "codex sandbox with task permissions and empty user config",
+  "exit_code": 0,
+  "executable_sha256": "49b0ad59a400c0812791d5f5518e9cddb2a32e21e918801800655dbab29382a1",
+  "config_sha256": "bf3dc3063d8dbbff8ca9d8eb859077bc3612b8e355f9309b83031634af624f8c",
+  "protected_files": {
+    "grader": {
+      "path": "evaluation_v3/grader.py",
+      "host_sha256": "60f88667e8ccc8a608231b796482ae4f22b7cc87cd615121ee51483042a1da8c"
+    },
+    "rubric": {
+      "path": "config/rubric.json",
+      "host_sha256": "8ce034208b1b56cc6f432bfd681d13edad0036c59ee01a83b4a5c40b3d9c62f0"
+    },
+    "oracle": {
+      "path": "cases/T03-M/oracle.json",
+      "host_sha256": "0b21763c18c603c62c538ebcd6348c4fae85691f5fb4820e5a7da241cc9fdfee"
+    },
+    "reference": {
+      "path": "cases/T03-M/expected/bundle/announcement.md",
+      "host_sha256": "e5073e4302b3086af9a98602a682cea61bdbab13d4a4f691c87a658bee938624"
+    }
+  },
+  "stdout_sha256": "8f1fd69a8c6b80f1dbfed63209b8ccab9a5c6f792ac02543eecd5ffa2aea3689",
+  "observation": {
+    "schema": "codex-access-check/v1",
+    "input_sha256": {
+      "inputs/transactions.csv": "2f4b0b7711058f0fe878c56e50b48b9d02b1d2d0d2211df640b37f9167db27c0",
+      "prompt.md": "f394a47fa23bda226e54b45a5b20bb8cff2872665082feacd6b4a36b7aa48e2a"
+    },
+    "protected_open": {
+      "reference": "denied:80070005",
+      "grader": "denied:80070005",
+      "oracle": "denied:80070005",
+      "rubric": "denied:80070005"
+    }
+  }
+}

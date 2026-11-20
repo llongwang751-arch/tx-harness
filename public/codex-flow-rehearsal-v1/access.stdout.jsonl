@@ -1,0 +1,1 @@
+{"schema":"codex-access-check/v1","input_sha256":{"inputs/transactions.csv":"2f4b0b7711058f0fe878c56e50b48b9d02b1d2d0d2211df640b37f9167db27c0","prompt.md":"f394a47fa23bda226e54b45a5b20bb8cff2872665082feacd6b4a36b7aa48e2a"},"protected_open":{"reference":"denied:80070005","grader":"denied:80070005","oracle":"denied:80070005","rubric":"denied:80070005"}}

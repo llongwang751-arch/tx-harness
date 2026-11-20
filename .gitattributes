@@ -10,3 +10,7 @@ public/supplements/controlled-adapter-v1/*/admission-error.txt whitespace=-blank
 # Preserve the original Windows sandbox receipt and its SHA-256.
 public/behavior-formal/*-sandbox.stdout.jsonl whitespace=cr-at-eol
 public/five-surface-20261119/transfer-20261119-codex-r1/receipt.json whitespace=cr-at-eol
+# Original Windows rehearsal artefacts carry CRLF for their recorded SHA-256.
+public/codex-flow-rehearsal-v1/access.json whitespace=cr-at-eol
+public/codex-flow-rehearsal-v1/access.stdout.jsonl whitespace=cr-at-eol
+public/codex-flow-rehearsal-v1/summary.json whitespace=cr-at-eol
