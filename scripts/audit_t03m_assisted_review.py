@@ -21,10 +21,10 @@ def read(path):
     return json.loads(path.read_text(encoding='utf-8-sig'))
 
 
-def snapshot(destination):
+def snapshot(destination, *, extra_paths=()):
     archive = subprocess.check_output([
         'git', 'archive', PIN, '--', 'evaluation_v3', 'harness_eval', 'cases/T03-M', 'config',
-        'supplements/grader-v3/rules.json', 'supplements/behavior-protocol-v1/protocol.json', OUTPUTS,
+        'supplements/grader-v3/rules.json', 'supplements/behavior-protocol-v1/protocol.json', OUTPUTS, *extra_paths,
     ], cwd=ROOT)
     with tarfile.open(fileobj=io.BytesIO(archive)) as bundle:
         bundle.extractall(destination, filter='data')

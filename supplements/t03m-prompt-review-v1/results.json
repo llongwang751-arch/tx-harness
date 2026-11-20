@@ -1,0 +1,56 @@
+{
+  "status": "draft_for_review",
+  "grader_commit": "a6bb1d21d3d93535b32636c04a6473631757f835",
+  "draft_prompt_sha256": "c04f8b7832caffa9b45c3b52ce0c86bd3d49e527a4e68b97d1a36c8931638dc8",
+  "examples_verified": 8,
+  "results": [
+    {
+      "id": "reference-pass",
+      "c01": true,
+      "c06": true,
+      "score": 60.0
+    },
+    {
+      "id": "json-format-pass",
+      "c01": true,
+      "c06": true,
+      "score": 60.0
+    },
+    {
+      "id": "status-prefix-fails",
+      "c01": false,
+      "c06": true,
+      "score": 51.0
+    },
+    {
+      "id": "explanatory-suffix-fails",
+      "c01": false,
+      "c06": true,
+      "score": 51.0
+    },
+    {
+      "id": "wrong-status-fails",
+      "c01": false,
+      "c06": true,
+      "score": 51.0
+    },
+    {
+      "id": "trailing-space-fails",
+      "c01": false,
+      "c06": true,
+      "score": 51.0
+    },
+    {
+      "id": "missing-reason-fails",
+      "c01": false,
+      "c06": true,
+      "score": 51.0
+    },
+    {
+      "id": "release-label-regression",
+      "c01": true,
+      "c06": false,
+      "score": 51.0
+    }
+  ]
+}

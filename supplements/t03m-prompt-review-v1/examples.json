@@ -1,0 +1,45 @@
+{
+  "schema": "tx-harness/t03m-prompt-review-examples/v1",
+  "examples": [
+    {
+      "id": "reference-pass",
+      "change": {"kind": "none"},
+      "expected": {"c01": true, "c06": true, "score": 60}
+    },
+    {
+      "id": "json-format-pass",
+      "change": {"kind": "reformat_step_json"},
+      "expected": {"c01": true, "c06": true, "score": 60}
+    },
+    {
+      "id": "status-prefix-fails",
+      "change": {"kind": "set_reason", "value": "status=draft_do_not_apply"},
+      "expected": {"c01": false, "c06": true, "score": 51}
+    },
+    {
+      "id": "explanatory-suffix-fails",
+      "change": {"kind": "set_reason", "value": "draft_do_not_apply（草稿）"},
+      "expected": {"c01": false, "c06": true, "score": 51}
+    },
+    {
+      "id": "wrong-status-fails",
+      "change": {"kind": "set_reason", "value": "apply"},
+      "expected": {"c01": false, "c06": true, "score": 51}
+    },
+    {
+      "id": "trailing-space-fails",
+      "change": {"kind": "set_reason", "value": "draft_do_not_apply "},
+      "expected": {"c01": false, "c06": true, "score": 51}
+    },
+    {
+      "id": "missing-reason-fails",
+      "change": {"kind": "remove_reason"},
+      "expected": {"c01": false, "c06": true, "score": 51}
+    },
+    {
+      "id": "release-label-regression",
+      "change": {"kind": "remove_publication_label"},
+      "expected": {"c01": true, "c06": false, "score": 51}
+    }
+  ]
+}

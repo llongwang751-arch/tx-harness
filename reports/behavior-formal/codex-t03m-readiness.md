@@ -17,6 +17,8 @@
 
 收到 Codex 辅助复核后，按提交复算确认 C01 的题面与精确字符串判定存在分歧。已准备题面补充候选，正式场暂缓，等待独立判卷及对候选口径的确认。[辅助复核记录](review/T03-M-assisted-2026-11-21.md) · [候选条款](../../supplements/t03m-prompt-review-v1/amendment.md)
 
+2026-11-21 已备齐新版题面和 8 个正反例，固定判卷器复算全部符合预期。新题面及样例等待复核确认，新版正式运行 ID 待登记。[新版审阅材料](../../supplements/t03m-prompt-review-v1/README.md)
+
 ## 第一场如何开跑
 
 [前瞻登记](../../supplements/behavior-protocol-v3/run-register.json)固定新 ID `product_default-codex-T03-M-r2`、题面、判卷配置、接入二进制摘要、单次尝试和 1200 秒预算。计划使用干净 CLI 的服务默认模型，后端身份没有独立确认。其他产品不在本次登记范围内。
