@@ -48,10 +48,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--registration-commit', required=True)
     parser.add_argument('--vault', type=Path, required=True)
-    parser.add_argument('--attempt', type=int, choices=(1, 2), default=1)
+    parser.add_argument('--attempt', type=int, choices=(1, 2, 3), default=1)
     args = parser.parse_args()
     plan = verified_plan(args.registration_commit)
-    names = ['codex-followup.md'] + (['codex-probe-retry.md'] if args.attempt == 2 else [])
+    names = ['codex-followup.md']
+    if args.attempt >= 2:
+        names.append('codex-probe-retry.md')
+    if args.attempt == 3:
+        names.append('codex-vault-retry.md')
+        if not args.vault.resolve().is_relative_to((ROOT / 'private').resolve()):
+            raise ValueError('Third attempt requires the explicitly denied evaluator tree.')
     for name in names:
         followup = f'{CASE}/{name}'
         registered = subprocess.check_output(['git', 'show', f'{args.registration_commit}:{followup}'], cwd=ROOT)
