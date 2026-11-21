@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 import tempfile
 
 from run_codex_pilot import ROOT, command, native_codex, now, safe_env
@@ -16,10 +17,10 @@ from run_transfer_cli import codex
 
 
 def authorize(workspace, vault, logs, plan):
-    paths = {path: vault / path for path in plan['asset_hashes']}
-    for name, path in paths.items():
-        if digest(path) != plan['asset_hashes'][name]:
-            raise ValueError(f'Invalid sealed asset: {name}')
+    paths = {Path(name).stem: vault / name for name in plan['asset_hashes']}
+    for path in paths.values():
+        if digest(path) != plan['asset_hashes'][path.name]:
+            raise ValueError(f'Invalid sealed asset: {path.name}')
     executable = native_codex()
     options = sandbox_config(command(executable, workspace, None))
     config = [part for option in options for part in ('-c', option)]
@@ -47,13 +48,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--registration-commit', required=True)
     parser.add_argument('--vault', type=Path, required=True)
+    parser.add_argument('--attempt', type=int, choices=(1, 2), default=1)
     args = parser.parse_args()
     plan = verified_plan(args.registration_commit)
-    followup = f'{CASE}/codex-followup.md'
-    registered = subprocess.check_output(['git', 'show', f'{args.registration_commit}:{followup}'], cwd=ROOT)
-    if registered != (ROOT / followup).read_bytes():
-        raise ValueError('Codex follow-up differs from its registration.')
-    run_id = 'codex-settlement-20261121-r1'
+    names = ['codex-followup.md'] + (['codex-probe-retry.md'] if args.attempt == 2 else [])
+    for name in names:
+        followup = f'{CASE}/{name}'
+        registered = subprocess.check_output(['git', 'show', f'{args.registration_commit}:{followup}'], cwd=ROOT)
+        if registered != (ROOT / followup).read_bytes():
+            raise ValueError('Codex follow-up differs from its registration.')
+    run_id = f'codex-settlement-20261121-r{args.attempt}'
     workspace = ROOT.parent / 'tx-harness-participants' / run_id
     logs = ROOT / 'private' / run_id
     if workspace.exists() or logs.exists():
@@ -93,5 +97,4 @@ def main():
 
 
 if __name__ == '__main__':
-    import sys
     raise SystemExit(main())
