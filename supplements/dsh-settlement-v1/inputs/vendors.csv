@@ -1,0 +1,5 @@
+vendor_id,status,fee_bps
+V-A,active,250
+V-B,active,175
+V-C,paused,300
+V-D,active,0

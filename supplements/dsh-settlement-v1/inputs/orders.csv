@@ -1,0 +1,12 @@
+order_id,vendor_id,gross_cents,refund_cents,currency,state
+O-701,V-A,12020,1000,CNY,settled
+O-702,V-C,4750,0,CNY,settled
+O-703,V-X,8100,0,USD,void
+O-704,V-D,9700,345,CNY,settled
+O-705,V-B,3800,4500,CNY,settled
+O-706,V-A,499,79,CNY,settled
+O-707,V-X,6000,0,CNY,settled
+O-708,V-B,21111,111,CNY,settled
+O-709,V-C,2500,0,CNY,pending
+O-710,V-B,1100,-5,CNY,settled
+O-711,V-A,1500,1500,CNY,settled

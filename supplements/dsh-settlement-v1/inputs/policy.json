@@ -1,0 +1,4 @@
+{
+  "currency": "CNY",
+  "rejection_priority": ["unsupported_currency", "not_settled", "unknown_vendor", "vendor_paused", "invalid_refund"]
+}
