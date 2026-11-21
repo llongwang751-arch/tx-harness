@@ -1,0 +1,38 @@
+{
+  "schema": "tx-harness/t03m-revised-formal-registration/v1",
+  "registration_kind": "prospective",
+  "registered_on": "2026-11-21",
+  "run_id": "product_default-codex-T03-M-r3",
+  "attempt": 1,
+  "product": "codex",
+  "task": "T03-M",
+  "track": "product_default",
+  "surface": "native Codex CLI, Windows named harness_pilot permission profile",
+  "model": "clean CLI service default; backend identity unverified",
+  "skill": "host skill discovery and plugins disabled; built-in service context not independently visible",
+  "cli_version": "codex-cli 0.171.0-alpha.13",
+  "cli_binary_sha256": "180cc98d8be7b3edc1d881875692444d8462cdc00a8209c6093bc499f0918d30",
+  "prompt_source_commit": "6dea9eb464c8b9ed86411554dfb85d6e23d3b848",
+  "grader_commit": "a6bb1d21d3d93535b32636c04a6473631757f835",
+  "review_sha256": {
+    "reports/behavior-formal/review/T03-M-old-blind-2026-11-21.json": "01f4c43315ff5284f94d56a2e1d78b114fbfc28563d12976bf9c4292d89e6d8a",
+    "reports/behavior-formal/review/T03-M-independent-rule-review-2026-11-21.md": "1963572bf648df9aeb2f1687e11424545cc4f29bd8901d4d726873723426acf2",
+    "supplements/t03m-prompt-review-v1/freeze.md": "fd00ff92c05aaf3e5412e236113faf71b941caa206a79a73c5cacf3a07153dab"
+  },
+  "participant_hashes": {
+    "prompt.md": "c04f8b7832caffa9b45c3b52ce0c86bd3d49e527a4e68b97d1a36c8931638dc8",
+    "inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+    "inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7",
+    "inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+    "inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "inputs/release_directive.json": "73455391cd99423eef4c027c96e972639ba43b509e1915ee43a46e8574c18ead"
+  },
+  "delivery_suffix": "Existing uniform output-directory instruction; approved business prompt unchanged.",
+  "task_budget_seconds": 1200,
+  "scope": "One native instance, one business submission, legacy 0-60 artifact score and v3 guard flags. No manual score or causal comparison.",
+  "stop_conditions": [
+    "Any input hash differs, the workspace already exists, or a real scoring target is not denied under the task profile.",
+    "Any missing independent review, binary mismatch, or stale frozen prerequisites.",
+    "Any business timeout, incomplete delivery or recording failure. Preserve this attempt."
+  ]
+}

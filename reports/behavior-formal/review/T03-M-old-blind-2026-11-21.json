@@ -1,0 +1,30 @@
+{
+  "schema": "tx-harness/t03m-legacy-blind-review/v1",
+  "recorded_on": "2026-11-21",
+  "source": "两阶段回执由项目负责人李明远转述",
+  "reviewer_label": "匿名同学",
+  "role": "旧版独立盲判与复算",
+  "reviewed_commit": "a6bb1d21d3d93535b32636c04a6473631757f835",
+  "participated_in_grader_implementation": false,
+  "saw_reference_or_machine_score_before_judgment": false,
+  "checks": {
+    "T03M-C01": {
+      "blind_passed": true,
+      "blind_basis": "解析文件将 P-A 列为应用项、将草稿 P-B 列为排除项，且目录中 P-A 的价格与解析出的新值 139900 分一致。",
+      "recomputed_passed": false,
+      "recomputed_agreement": false,
+      "reservation": "按旧题面应通过。"
+    },
+    "T03M-C06": {
+      "blind_passed": false,
+      "blind_basis": "公告写成了 $12026-10-24 09:30，丢失了题面要求保留的正式发布：前缀。",
+      "recomputed_passed": false,
+      "recomputed_agreement": true
+    }
+  },
+  "recomputed_artifact_score": 42,
+  "recomputed_artifact_max": 60,
+  "reviewer_environment": null,
+  "reviewer_exact_command": null,
+  "maintainer_reproduction_command": "python -B -X utf8 scripts/audit_t03m_assisted_review.py --check"
+}
