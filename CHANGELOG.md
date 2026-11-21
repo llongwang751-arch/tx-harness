@@ -13,6 +13,7 @@
 - 追加预登记的 11 笔结算对账。Codex 拒绝访问四份实际评分文件后交付三份原件，固定判卷 100/100。DSH 鉴权停止和 Codex 两次投递前拦截分别记录。[现场与判卷](reports/behavior-formal/settlement-sealed-run-2026-11-21.md)
 - 用现有账号和 Windows 文件共享锁完成 DSH 对账。1 次权限诊断读到输入、四份实际评分文件返回 `EBUSY`，随后 1 次同难度对账交齐三份原件并复算为 100/100。[DSH 实测和复算](reports/behavior-formal/dsh-locked-settlement-2026-11-21.md)
 - 第六期周报更新至 19:56（北京时间），补记已登录 DSH 的隔离回执、对账得分和运行统计，同步 Markdown 和邮件纯文本。[第六期周报](reports/weekly/2026-11-21.md)
+- 收到 T03-M 新版独立技术复核，冻结 C01、C06 的题面规则。旧版复算保留 C01 异议与标准答案事先可见的限制，盲判仍待完成。[冻结记录](supplements/t03m-prompt-review-v1/freeze.md)
 
 ## 2026-11-19 五款文件收发实测
 
