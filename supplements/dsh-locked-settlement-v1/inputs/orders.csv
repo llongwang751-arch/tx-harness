@@ -1,0 +1,12 @@
+order_id,vendor_id,gross_cents,refund_cents,currency,state
+S-811,V-F,12360,320,CNY,settled
+S-812,V-H,3960,0,CNY,settled
+S-813,V-Z,4200,0,EUR,pending
+S-814,V-J,8325,125,CNY,settled
+S-815,V-G,7200,7210,CNY,settled
+S-816,V-F,680,0,CNY,settled
+S-817,V-Z,5350,0,CNY,settled
+S-818,V-G,12900,380,CNY,settled
+S-819,V-H,5100,0,CNY,void
+S-820,V-G,980,-2,CNY,settled
+S-821,V-F,2070,2070,CNY,settled

@@ -1,0 +1,21 @@
+{
+  "run_id": "dsh-locked-settlement-20261121-r1",
+  "equivalent_task": "codex-settlement-20261121-r3",
+  "track": "engineering_evidence",
+  "asset_hashes": {
+    "grader.py": "6cd696c8e8ac6a32110b5d33de0464e3cdb34d3d325e9ab484a12de4de8beb9e",
+    "rubric.json": "cce7e1d7675bf5bb5c3dae27504abbe84d1e72e6b9c010d4fb95b98148d82428",
+    "oracle.json": "593dd782b24965413a4015f6bb0b8e319cc19fe8ce48829750a472173e59d4e7",
+    "reference.json": "be8d3eb7bfe5351d316414399f78be413df6712578e094d668c4f26b014b3da1"
+  },
+  "participant_hashes": {
+    "prompt.md": "c461b8238f463fb7867896e1b64e72c680524d221103fb150b64d4afa09531f7",
+    "inputs/orders.csv": "e2a4a9e49b28d11e4bef42c22aeaf586d741c13ae2ca3d63d50c91d9be333210",
+    "inputs/vendors.csv": "c4ec8e3119dadc04cbeb719ce6b6210d01078748e555c4ecdcaaecabeea930e3",
+    "inputs/policy.json": "bccad9a9e5c74902f84f1e6e0d1ba237ebf2fe4374857333c513a736c36c10f8"
+  },
+  "task_budget_seconds": 180,
+  "probe_budget_seconds": 120,
+  "sdk_provider_request": "deepseek-account",
+  "sdk_model_request": "deepseek-flash"
+}
