@@ -14,6 +14,7 @@
 - 用现有账号和 Windows 文件共享锁完成 DSH 对账。1 次权限诊断读到输入、四份实际评分文件返回 `EBUSY`，随后 1 次同难度对账交齐三份原件并复算为 100/100。[DSH 实测和复算](reports/behavior-formal/dsh-locked-settlement-2026-11-21.md)
 - 第六期周报更新至 19:56（北京时间），补记已登录 DSH 的隔离回执、对账得分和运行统计，同步 Markdown 和邮件纯文本。[第六期周报](reports/weekly/2026-11-21.md)
 - 收到 T03-M 新版独立技术复核，冻结 C01、C06 的题面规则。旧版复算保留 C01 异议与标准答案事先可见的限制，盲判仍待完成。[冻结记录](supplements/t03m-prompt-review-v1/freeze.md)
+- 归档旧版独立盲判及 42/60 复算，保留 C01 的旧题面异议。前瞻登记并完成新版 Codex T03-M 正式场，四份评分文件被系统拒绝，九份原件固定判卷 60/60。[新版正式场与复算](reports/behavior-formal/codex-t03m-revised-2026-11-21.md)
 
 ## 2026-11-19 五款文件收发实测
 

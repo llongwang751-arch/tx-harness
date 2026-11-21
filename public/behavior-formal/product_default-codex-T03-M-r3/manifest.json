@@ -1,0 +1,17 @@
+{
+  "access.json": "bb1eb27ce94e7c43a3863956d4b5ebbaefa783aec4cced179fa51ccc06ce690e",
+  "access.stdout.jsonl": "0f2e2e19497989dc733786af4c1ef4b5c65d136728369528353de2f8444a5174",
+  "observation.json": "279c1748e42a50f78f383f90e66bd72b9ddab23f09eec28b31db3fb2373b2922",
+  "outputs/bundle/announcement.md": "e5073e4302b3086af9a98602a682cea61bdbab13d4a4f691c87a658bee938624",
+  "outputs/bundle/catalog.json": "a1fa8af8e7e090c4a1f98266a5cc287ca4803cc995e7ec564388cc31a2626ea1",
+  "outputs/bundle/contacts.csv": "cf0a570da69ba58b76c9583b8cd290e0caecf003410cddd1f5dbe90fae67e5d8",
+  "outputs/bundle/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+  "outputs/change_log.json": "974fd5b5421b458807934ac9422343087f776eaff957745a4c4f266448168aae",
+  "outputs/steps/01_parsed_directive.json": "aec20e5cd0482851d8bea125618e2d229448569efe566889a9e412bce55b8060",
+  "outputs/steps/02_price_applied.json": "2daf9a21409240527ea8dcc8ad175f7d88a35ea6e3703760691c724cf3cb1f2a",
+  "outputs/steps/03_release_applied.json": "517f4beed58b413fe9d2f3d0eeddee14760bd3c40eb6031cbbcd1108f6fe82bc",
+  "outputs/steps/04_email_applied.json": "6379d825ce572a2d3693a773c9ae26431934d2399e51e10be8212219302abc81",
+  "score.json": "6b62da24db9537e28b4bad4b949102e20e5ee5023555a1b34d62b309a83d557d",
+  "submitted-prompt.md": "0396d5ae592a6bc7f60d261262f0e0ab13d8270f5c06f68a7a19d0da095c98a4",
+  "task-events.excerpts.json": "f9cfa70cf67caa256043e02a3d206e8eac0d2aa31794f814adb2cbfa2d9431bd"
+}

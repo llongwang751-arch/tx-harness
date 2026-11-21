@@ -1,0 +1,45 @@
+{
+  "schema": "tx-harness/codex-native-access/v1",
+  "started_at": "2026-11-21T13:05:44.674966+00:00",
+  "ended_at": "2026-11-21T13:05:47.503654+00:00",
+  "transport": "codex sandbox with task permissions and empty user config",
+  "exit_code": 0,
+  "executable_sha256": "180cc98d8be7b3edc1d881875692444d8462cdc00a8209c6093bc499f0918d30",
+  "config_sha256": "28a47d65272ba0be2cf50e7659592e8f6833760b596c885822c1e5c276aadd41",
+  "protected_files": {
+    "grader": {
+      "path": "evaluation_v3/grader.py",
+      "host_sha256": "60f88667e8ccc8a608231b796482ae4f22b7cc87cd615121ee51483042a1da8c"
+    },
+    "rubric": {
+      "path": "config/rubric.json",
+      "host_sha256": "8ce034208b1b56cc6f432bfd681d13edad0036c59ee01a83b4a5c40b3d9c62f0"
+    },
+    "oracle": {
+      "path": "cases/T03-M/oracle.json",
+      "host_sha256": "0b21763c18c603c62c538ebcd6348c4fae85691f5fb4820e5a7da241cc9fdfee"
+    },
+    "reference": {
+      "path": "cases/T03-M/expected/bundle/announcement.md",
+      "host_sha256": "e5073e4302b3086af9a98602a682cea61bdbab13d4a4f691c87a658bee938624"
+    }
+  },
+  "stdout_sha256": "0f2e2e19497989dc733786af4c1ef4b5c65d136728369528353de2f8444a5174",
+  "observation": {
+    "schema": "codex-access-check/v1",
+    "input_sha256": {
+      "inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7",
+      "inputs/release_directive.json": "73455391cd99423eef4c027c96e972639ba43b509e1915ee43a46e8574c18ead",
+      "inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+      "prompt.md": "c04f8b7832caffa9b45c3b52ce0c86bd3d49e527a4e68b97d1a36c8931638dc8",
+      "inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+      "inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc"
+    },
+    "protected_open": {
+      "reference": "denied:80070005",
+      "grader": "denied:80070005",
+      "oracle": "denied:80070005",
+      "rubric": "denied:80070005"
+    }
+  }
+}

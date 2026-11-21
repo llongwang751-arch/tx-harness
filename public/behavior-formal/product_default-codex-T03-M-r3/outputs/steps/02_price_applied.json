@@ -1,0 +1,6 @@
+{
+  "path": "catalog.json",
+  "field": "products[P-A].price_cents",
+  "old": 119900,
+  "new": 139900
+}

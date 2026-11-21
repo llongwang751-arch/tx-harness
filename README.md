@@ -6,7 +6,7 @@
 
 按 Week 5 反馈补归档了豆包旧无效场，修正了对输出来源的判断，并接入新变体投递前的准入检查。[Week 5 反馈 #3](https://github.com/llongwang751-arch/tx-harness/issues/3) · [第六周产物审计](reports/week6/artifact-audit.md)
 
-Codex 首场正式实测已作[前瞻登记和权限验证](reports/behavior-formal/codex-t03m-readiness.md)。真实工具读到了冻结输入，原生沙箱拒绝了四份评测文件，独立判卷抽查仍待落实。
+11 月 21 日完成 [Codex 新版 T03-M 首场正式实测](reports/behavior-formal/codex-t03m-revised-2026-11-21.md)。独立抽查、投递前四份评分文件的拒绝回执、九份原件和 60/60 的复算结果均已归档。
 
 [五款权限准入核对](reports/behavior-formal/surface-access-2026-11-19.md)新增另外四款的五个诊断现场。WorkBuddy 默认权限、DSH SDK 和 DSH 桌面能读取合成评分文件，元宝与豆包未取得系统拒绝证据。
 

@@ -1,0 +1,84 @@
+{
+  "run_id": "product_default-codex-T03-M-r3",
+  "registration_commit": "b18c8ece601316e68c059cb91eace75c699810c7",
+  "started_at": "2026-11-21T13:05:44.664732+00:00",
+  "submitted": true,
+  "tool_qualification_passed": true,
+  "cli_version": "codex-cli 0.171.0-alpha.13",
+  "cli_binary_sha256": "180cc98d8be7b3edc1d881875692444d8462cdc00a8209c6093bc499f0918d30",
+  "status": "completed",
+  "access_ended_at": "2026-11-21T13:05:47.503654+00:00",
+  "submitted_prompt_sha256": "0396d5ae592a6bc7f60d261262f0e0ab13d8270f5c06f68a7a19d0da095c98a4",
+  "native_turn": {
+    "stage": "initial",
+    "exit_code": 0,
+    "submitted_at": "2026-11-21T13:05:47.908738+00:00",
+    "ended_at": "2026-11-21T13:06:42.702675+00:00",
+    "timed_out": false,
+    "interrupted_for_scheduled_resume": false,
+    "release": null,
+    "native_event_count": 12
+  },
+  "native_completed": true,
+  "collection": {
+    "collected": [
+      {
+        "path": "steps/01_parsed_directive.json",
+        "source_relative_path": "outputs/steps/01_parsed_directive.json",
+        "sha256": "aec20e5cd0482851d8bea125618e2d229448569efe566889a9e412bce55b8060"
+      },
+      {
+        "path": "steps/02_price_applied.json",
+        "source_relative_path": "outputs/steps/02_price_applied.json",
+        "sha256": "2daf9a21409240527ea8dcc8ad175f7d88a35ea6e3703760691c724cf3cb1f2a"
+      },
+      {
+        "path": "steps/03_release_applied.json",
+        "source_relative_path": "outputs/steps/03_release_applied.json",
+        "sha256": "517f4beed58b413fe9d2f3d0eeddee14760bd3c40eb6031cbbcd1108f6fe82bc"
+      },
+      {
+        "path": "steps/04_email_applied.json",
+        "source_relative_path": "outputs/steps/04_email_applied.json",
+        "sha256": "6379d825ce572a2d3693a773c9ae26431934d2399e51e10be8212219302abc81"
+      },
+      {
+        "path": "bundle/announcement.md",
+        "source_relative_path": "outputs/bundle/announcement.md",
+        "sha256": "e5073e4302b3086af9a98602a682cea61bdbab13d4a4f691c87a658bee938624"
+      },
+      {
+        "path": "bundle/catalog.json",
+        "source_relative_path": "outputs/bundle/catalog.json",
+        "sha256": "a1fa8af8e7e090c4a1f98266a5cc287ca4803cc995e7ec564388cc31a2626ea1"
+      },
+      {
+        "path": "bundle/contacts.csv",
+        "source_relative_path": "outputs/bundle/contacts.csv",
+        "sha256": "cf0a570da69ba58b76c9583b8cd290e0caecf003410cddd1f5dbe90fae67e5d8"
+      },
+      {
+        "path": "bundle/protected.txt",
+        "source_relative_path": "outputs/bundle/protected.txt",
+        "sha256": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc"
+      },
+      {
+        "path": "change_log.json",
+        "source_relative_path": "outputs/change_log.json",
+        "sha256": "974fd5b5421b458807934ac9422343087f776eaff957745a4c4f266448168aae"
+      }
+    ],
+    "conflicting_duplicate_deliverables": [],
+    "outputs_modified_after_deadline_excluded": []
+  },
+  "input_hashes_after": {
+    "prompt.md": "c04f8b7832caffa9b45c3b52ce0c86bd3d49e527a4e68b97d1a36c8931638dc8",
+    "inputs/announcement.md": "6d13cc4cba4fd3d0eeae6b4d89338267a23d3186200be7b2e9f3aa43a15455cd",
+    "inputs/catalog.json": "262fae1fe323334d1195ea453fe2b1b45e78d4442a5b496fa8b1a3b54c78b6a7",
+    "inputs/contacts.csv": "0e5400d410bffa57d1c87b8c5101c3fb850577cc79a213c318f1fd48c6480134",
+    "inputs/protected.txt": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+    "inputs/release_directive.json": "73455391cd99423eef4c027c96e972639ba43b509e1915ee43a46e8574c18ead"
+  },
+  "ended_at": "2026-11-21T13:06:43.090400+00:00",
+  "native_stdout_sha256": "847b4f656f117f7db16e17024a8a8fdebcd3d9237550721299dc19b52b344490"
+}

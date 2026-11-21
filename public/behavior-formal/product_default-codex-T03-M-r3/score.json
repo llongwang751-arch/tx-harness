@@ -1,0 +1,149 @@
+{
+  "schema": "artifact-validity-rules/v3.0",
+  "case_id": "T03-M",
+  "rule_sha256": "62e6df2d57ba23bab045db79237dab41c8cf38900a7868917f8fc36899c1bc15",
+  "legacy_source_sha256": "f001f50f5c415b038d6854b70aa7aafe5c5d4b04007ed6ec2f4d83aef24dca20",
+  "disabled_rules": [],
+  "legacy_artifact_result": {
+    "case_id": "T03-M",
+    "checks": [
+      {
+        "id": "T03M-C01",
+        "title": "指令解析：应用与排除分流正确",
+        "weight": 15,
+        "path": "steps/01_parsed_directive.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "aec20e5cd0482851d8bea125618e2d229448569efe566889a9e412bce55b8060",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T03M-C02",
+        "title": "价格步骤：old 取自原目录，new 取自指令",
+        "weight": 5,
+        "path": "steps/02_price_applied.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "2daf9a21409240527ea8dcc8ad175f7d88a35ea6e3703760691c724cf3cb1f2a",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T03M-C03",
+        "title": "发布时间步骤：old/new 正确",
+        "weight": 5,
+        "path": "steps/03_release_applied.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "517f4beed58b413fe9d2f3d0eeddee14760bd3c40eb6031cbbcd1108f6fe82bc",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T03M-C04",
+        "title": "邮箱步骤：old/new 正确",
+        "weight": 5,
+        "path": "steps/04_email_applied.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "6379d825ce572a2d3693a773c9ae26431934d2399e51e10be8212219302abc81",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T03M-C05",
+        "title": "只修改指定产品价格（draft 条目未应用）",
+        "weight": 10,
+        "path": "bundle/catalog.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "a1fa8af8e7e090c4a1f98266a5cc287ca4803cc995e7ec564388cc31a2626ea1",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T03M-C06",
+        "title": "只改公告正式发布字段",
+        "weight": 15,
+        "path": "bundle/announcement.md",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "e5073e4302b3086af9a98602a682cea61bdbab13d4a4f691c87a658bee938624",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T03M-C07",
+        "title": "只修改support联系邮箱",
+        "weight": 10,
+        "path": "bundle/contacts.csv",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "cf0a570da69ba58b76c9583b8cd290e0caecf003410cddd1f5dbe90fae67e5d8",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T03M-C08",
+        "title": "受保护文件原字节保持",
+        "weight": 20,
+        "path": "bundle/protected.txt",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "73226f665ef18bfc79b4a755bb6fad9eea7d2e07e63e2cfe9ff281c09d07fbcc",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T03M-C09",
+        "title": "修改清单与实际文件一致",
+        "weight": 10,
+        "path": "change_log.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "974fd5b5421b458807934ac9422343087f776eaff957745a4c4f266448168aae",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      },
+      {
+        "id": "T03M-C10",
+        "title": "步骤索引完整且按序",
+        "weight": 5,
+        "path": "change_log.json",
+        "passed": true,
+        "reason": "满足预注册判定",
+        "sha256": "974fd5b5421b458807934ac9422343087f776eaff957745a4c4f266448168aae",
+        "confidence": "high",
+        "confidence_basis": "按冻结检查参数与标准答案确定性核验指定文件；置信只针对该文件/路径，不证明执行过程或Harness归因",
+        "attribution": "unresolved"
+      }
+    ],
+    "passed_weight": 100,
+    "all_weight": 100,
+    "objective_score": 60.0,
+    "all_required_outputs_present": true,
+    "all_checks_passed": true
+  },
+  "validity_guards": [
+    {
+      "rule_id": "CSV_STRICT",
+      "path": "bundle/contacts.csv",
+      "passed": true,
+      "artifact_sha256": "cf0a570da69ba58b76c9583b8cd290e0caecf003410cddd1f5dbe90fae67e5d8",
+      "reason": "Strict parser accepted; column/key/value checks remain legacy checks"
+    }
+  ],
+  "accepted": true,
+  "new_weighted_score": null,
+  "limits": "Artifact acceptance only. Not product-run evidence, budget success, or Harness causal responsibility."
+}
