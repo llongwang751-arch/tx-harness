@@ -1,0 +1,25 @@
+{
+  "observation": {
+    "schema": "codex-access-check/v1",
+    "input_sha256": {
+      "inputs/policy.json": "bccad9a9e5c74902f84f1e6e0d1ba237ebf2fe4374857333c513a736c36c10f8",
+      "inputs/orders.csv": "48f180adf0d8c0b62377b8ef9bfa59f1dd2711a5631f3bd051fd6b6676b6a106",
+      "prompt.md": "c461b8238f463fb7867896e1b64e72c680524d221103fb150b64d4afa09531f7",
+      "inputs/vendors.csv": "ea829b78ef1d470332d68e854675e356208d8ca36759888718ac4b1a9acac278"
+    },
+    "protected_open": {
+      "reference": "denied:80070005",
+      "grader": "denied:80070005",
+      "oracle": "denied:80070005",
+      "rubric": "denied:80070005"
+    }
+  },
+  "asset_hashes": {
+    "grader.py": "ee0fc11d02de4ee0c45472eb5dfcda6e482f75948a6ae3208268b2233b0bc9f6",
+    "rubric.json": "1c2939c072d31edd35bb39c9180ba151a4435d475b7c3f5a6f8cf87adae95876",
+    "oracle.json": "9f1d03417c0bb24765444d847183a983263284d0db830826b03d910c36f5a3f7",
+    "reference.json": "fef25f224207679705432c4479bb995dc032749b3159d06dd843843900db1198"
+  },
+  "stdout_sha256": "1d4d4518d150f67bc662097447718ce4b12ae1a54f9268827d04e4227b45db05",
+  "completed_at": "2026-11-21T11:42:53.553644+00:00"
+}

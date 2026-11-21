@@ -1,0 +1,50 @@
+{
+  "eligible": [
+    [
+      "O-701",
+      "V-A"
+    ],
+    [
+      "O-704",
+      "V-D"
+    ],
+    [
+      "O-706",
+      "V-A"
+    ],
+    [
+      "O-708",
+      "V-B"
+    ],
+    [
+      "O-711",
+      "V-A"
+    ]
+  ],
+  "rejections": [
+    {
+      "order_id": "O-702",
+      "reason": "vendor_paused"
+    },
+    {
+      "order_id": "O-703",
+      "reason": "unsupported_currency"
+    },
+    {
+      "order_id": "O-705",
+      "reason": "invalid_refund"
+    },
+    {
+      "order_id": "O-707",
+      "reason": "unknown_vendor"
+    },
+    {
+      "order_id": "O-709",
+      "reason": "not_settled"
+    },
+    {
+      "order_id": "O-710",
+      "reason": "invalid_refund"
+    }
+  ]
+}

@@ -41,6 +41,7 @@ jobs:
       - run: python scripts/audit_dsh_mic_isolation.py
       - run: python scripts/audit_t03m_assisted_review.py --check
       - run: python scripts/audit_t03m_prompt_review.py --check
+      - run: python scripts/audit_settlement_evidence.py
       - run: python scripts/audit_case_gates.py --check
       - run: python scripts/independent_check.py
       - run: python -m unittest discover -s tests -v

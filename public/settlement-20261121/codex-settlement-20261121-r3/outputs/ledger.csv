@@ -1,0 +1,6 @@
+order_id,vendor_id,gross_cents,refund_cents,fee_cents,payable_cents
+O-701,V-A,12020,1000,276,10744
+O-704,V-D,9700,345,0,9355
+O-706,V-A,499,79,11,409
+O-708,V-B,21111,111,368,20632
+O-711,V-A,1500,1500,0,0

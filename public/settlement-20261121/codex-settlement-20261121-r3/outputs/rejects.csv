@@ -1,0 +1,7 @@
+order_id,reason
+O-702,vendor_paused
+O-703,unsupported_currency
+O-705,invalid_refund
+O-707,unknown_vendor
+O-709,not_settled
+O-710,invalid_refund

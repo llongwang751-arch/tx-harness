@@ -1,0 +1,54 @@
+[
+  {
+    "source_stdout_line": 3,
+    "type": "turn.started"
+  },
+  {
+    "source_stdout_line": 6,
+    "type": "command_execution",
+    "status": "failed",
+    "exit_code": 1,
+    "visible_task_file_names": [
+      "orders.csv",
+      "vendors.csv",
+      "policy.json"
+    ]
+  },
+  {
+    "source_stdout_line": 8,
+    "type": "command_execution",
+    "status": "completed",
+    "exit_code": 0,
+    "visible_task_file_names": [
+      "orders.csv",
+      "vendors.csv",
+      "policy.json",
+      "ledger.csv",
+      "rejects.csv",
+      "summary.json"
+    ],
+    "public_output_lines": [
+      "order_id,vendor_id,gross_cents,refund_cents,fee_cents,payable_cents",
+      "O-701,V-A,12020,1000,276,10744",
+      "O-704,V-D,9700,345,0,9355",
+      "O-706,V-A,499,79,11,409",
+      "O-708,V-B,21111,111,368,20632",
+      "O-711,V-A,1500,1500,0,0",
+      "order_id,reason",
+      "O-702,vendor_paused",
+      "O-703,unsupported_currency",
+      "O-705,invalid_refund",
+      "O-707,unknown_vendor",
+      "O-709,not_settled",
+      "O-710,invalid_refund",
+      "  \"eligible_count\": 5,",
+      "  \"rejected_count\": 6,",
+      "  \"total_fee_cents\": 655,",
+      "  \"total_payable_cents\": 41140"
+    ]
+  },
+  {
+    "source_stdout_line": 10,
+    "type": "turn.completed"
+  }
+]

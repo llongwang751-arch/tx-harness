@@ -1,0 +1,54 @@
+{
+  "ledger_header": [
+    "order_id",
+    "vendor_id",
+    "gross_cents",
+    "refund_cents",
+    "fee_cents",
+    "payable_cents"
+  ],
+  "amount_fields": [
+    "gross_cents",
+    "refund_cents",
+    "fee_cents",
+    "payable_cents"
+  ],
+  "amounts": [
+    {
+      "gross_cents": 12020,
+      "refund_cents": 1000,
+      "fee_cents": 276,
+      "payable_cents": 10744
+    },
+    {
+      "gross_cents": 9700,
+      "refund_cents": 345,
+      "fee_cents": 0,
+      "payable_cents": 9355
+    },
+    {
+      "gross_cents": 499,
+      "refund_cents": 79,
+      "fee_cents": 11,
+      "payable_cents": 409
+    },
+    {
+      "gross_cents": 21111,
+      "refund_cents": 111,
+      "fee_cents": 368,
+      "payable_cents": 20632
+    },
+    {
+      "gross_cents": 1500,
+      "refund_cents": 1500,
+      "fee_cents": 0,
+      "payable_cents": 0
+    }
+  ],
+  "summary": {
+    "eligible_count": 5,
+    "rejected_count": 6,
+    "total_fee_cents": 655,
+    "total_payable_cents": 41140
+  }
+}

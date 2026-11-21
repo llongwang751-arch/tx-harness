@@ -1,0 +1,13 @@
+{
+  "run_id": "codex-settlement-20261121-r1",
+  "registration_commit": "915ea5e209b576a25a5fd3c48c6ea42b3f990678",
+  "started_at": "2026-11-21T11:41:22.904572+00:00",
+  "accepted": false,
+  "completed": false,
+  "isolated_preflight_pass": false,
+  "runtime_error_type": "ValueError",
+  "ended_at": "2026-11-21T11:41:25.283580+00:00",
+  "stop_basis": "Permission preflight failed to parse its PowerShell hash table before any task was sent.",
+  "parser_error_code": "MissingEqualsInHashLiteral",
+  "stderr_sha256": "7456512cd14099fd5b48e2cd0db9718acb4e35b13f329c06c6687c3e6fd8d807"
+}

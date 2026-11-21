@@ -1,0 +1,11 @@
+{
+  "received_at": "2026-11-21T11:39:17.525951+00:00",
+  "source_stdout_line": 20,
+  "reason": {
+    "kind": "error",
+    "error": {
+      "message": "Sign in to DeepSeek to use the account provider. The request destination must allow account authentication.",
+      "code": "ACCOUNT_SIGN_IN_REQUIRED"
+    }
+  }
+}

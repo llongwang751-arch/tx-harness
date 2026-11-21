@@ -10,6 +10,7 @@
 - 归档 T03-M 的 Codex 辅助复核，按固定提交复算 C01 和 C06 并验证单处修改的影响。补充 `reason` 取输入状态原值的题面候选，正式投递仍待独立意见。[辅助复核与条款](reports/behavior-formal/review/T03-M-assisted-2026-11-21.md)
 - 提供待确认的 T03-M 完整题面和 8 个判卷样例，覆盖原值、JSON 排版、近似错值、缺字段及公告标签。用固定提交的判卷器复算并加入 CI。[新版审阅材料](supplements/t03m-prompt-review-v1/README.md)
 - 归档新版 T03-M 的 Codex 辅助复核回执并核对新旧复算。回执建议采用新版，正式冻结仍待独立确认。[新版辅助复核](reports/behavior-formal/review/T03-M-draft-assisted-2026-11-21.md)
+- 追加预登记的 11 笔结算对账。Codex 拒绝访问四份实际评分文件后交付三份原件，固定判卷 100/100。DSH 鉴权停止和 Codex 两次投递前拦截分别记录。[现场与判卷](reports/behavior-formal/settlement-sealed-run-2026-11-21.md)
 
 ## 2026-11-19 五款文件收发实测
 

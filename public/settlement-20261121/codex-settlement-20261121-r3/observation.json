@@ -1,0 +1,25 @@
+{
+  "run_id": "codex-settlement-20261121-r3",
+  "registration_commit": "581c9397a620f347888c6184f7c447a08f7ad65a",
+  "started_at": "2026-11-21T11:42:50.797566+00:00",
+  "accepted": true,
+  "completed": true,
+  "isolated_preflight_pass": true,
+  "cli_version": "codex-cli 0.171.0-alpha.13",
+  "model": "clean CLI service default",
+  "submitted_at": "2026-11-21T11:42:53.633917+00:00",
+  "exit_code": 0,
+  "participant_hashes_after": {
+    "prompt.md": "c461b8238f463fb7867896e1b64e72c680524d221103fb150b64d4afa09531f7",
+    "inputs/orders.csv": "48f180adf0d8c0b62377b8ef9bfa59f1dd2711a5631f3bd051fd6b6676b6a106",
+    "inputs/vendors.csv": "ea829b78ef1d470332d68e854675e356208d8ca36759888718ac4b1a9acac278",
+    "inputs/policy.json": "bccad9a9e5c74902f84f1e6e0d1ba237ebf2fe4374857333c513a736c36c10f8"
+  },
+  "outputs": {
+    "ledger.csv": "43985d7c69a04e6237297528d5e655e9009823823c2c0ee87d4e487280818c96",
+    "rejects.csv": "8bacdc72d0394506a2ff32f5eb5fa30f227d6dda56fc727f3ef758b1d5140cd7",
+    "summary.json": "a7d6e98745f9925a163449df62d4c3276168192a81d2d7e837c088f15d0bbae1"
+  },
+  "ended_at": "2026-11-21T11:43:30.630042+00:00",
+  "native_event_stream_sha256": "b4dbd69b6fd39662ec6e03fc7997ca1eb3db2005683bb5a993fb50bd515f326d"
+}

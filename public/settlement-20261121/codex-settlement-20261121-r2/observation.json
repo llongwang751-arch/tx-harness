@@ -1,0 +1,11 @@
+{
+  "run_id": "codex-settlement-20261121-r2",
+  "registration_commit": "896ac41b279ddd675a5bf04349746d657545d10e",
+  "started_at": "2026-11-21T11:42:01.549877+00:00",
+  "accepted": false,
+  "completed": false,
+  "isolated_preflight_pass": false,
+  "runtime_error_type": "ValueError",
+  "ended_at": "2026-11-21T11:42:04.326574+00:00",
+  "stop_basis": "All four protected files were readable in the original temporary location."
+}

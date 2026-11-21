@@ -1,0 +1,11 @@
+{
+  "score": 100,
+  "max_score": 100,
+  "checks": {
+    "eligible_order_ids": true,
+    "ledger_amounts": true,
+    "rejections_and_priority": true,
+    "summary_exact": true,
+    "internal_reconciliation": true
+  }
+}
