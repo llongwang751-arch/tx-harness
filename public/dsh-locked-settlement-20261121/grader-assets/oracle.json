@@ -1,0 +1,50 @@
+{
+  "eligible": [
+    [
+      "S-811",
+      "V-F"
+    ],
+    [
+      "S-814",
+      "V-J"
+    ],
+    [
+      "S-816",
+      "V-F"
+    ],
+    [
+      "S-818",
+      "V-G"
+    ],
+    [
+      "S-821",
+      "V-F"
+    ]
+  ],
+  "rejections": [
+    {
+      "order_id": "S-812",
+      "reason": "vendor_paused"
+    },
+    {
+      "order_id": "S-813",
+      "reason": "unsupported_currency"
+    },
+    {
+      "order_id": "S-815",
+      "reason": "invalid_refund"
+    },
+    {
+      "order_id": "S-817",
+      "reason": "unknown_vendor"
+    },
+    {
+      "order_id": "S-819",
+      "reason": "not_settled"
+    },
+    {
+      "order_id": "S-820",
+      "reason": "invalid_refund"
+    }
+  ]
+}

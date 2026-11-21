@@ -1,0 +1,10 @@
+{
+  "case": "dsh-locked-settlement-v1",
+  "weights": {
+    "eligible_order_ids": 20,
+    "ledger_amounts": 25,
+    "rejections_and_priority": 20,
+    "summary_exact": 25,
+    "internal_reconciliation": 10
+  }
+}

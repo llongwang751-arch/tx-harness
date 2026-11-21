@@ -1,0 +1,6 @@
+order_id,vendor_id,gross_cents,refund_cents,fee_cents,payable_cents
+S-811,V-F,12360,320,151,11889
+S-814,V-J,8325,125,0,8200
+S-816,V-F,680,0,9,671
+S-818,V-G,12900,380,470,12050
+S-821,V-F,2070,2070,0,0

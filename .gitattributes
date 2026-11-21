@@ -18,3 +18,4 @@ public/dsh-os-isolation-v1/*/gate.stdout.jsonl whitespace=cr-at-eol
 public/dsh-mic-isolation-v1/*/gate.stdout.jsonl whitespace=cr-at-eol
 public/settlement-20261121/*/*.stdout.jsonl whitespace=cr-at-eol
 public/settlement-20261121/*/outputs/* whitespace=cr-at-eol
+public/dsh-locked-settlement-20261121/outputs/* whitespace=cr-at-eol

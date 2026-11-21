@@ -15,6 +15,8 @@ CASE = ROOT / 'supplements/dsh-settlement-v1'
 PUBLIC = ROOT / 'public/settlement-20261121'
 ASSETS = PUBLIC / 'grader-assets'
 SUCCESS = PUBLIC / 'codex-settlement-20261121-r3'
+LOCKED_CASE = ROOT / 'supplements/dsh-locked-settlement-v1'
+LOCKED_RUN = ROOT / 'public/dsh-locked-settlement-20261121'
 
 
 def read(path):
@@ -102,6 +104,59 @@ def check_near_misses():
                 and not wrong_type['checks']['internal_reconciliation'], 'Judge accepted a string total')
 
 
+def verify_locked_dsh():
+    plan = read(LOCKED_CASE / 'registration.json')
+    record = read(LOCKED_RUN / 'observation.json')
+    require(record['run_id'] == plan['run_id'] and record['track'] == plan['track'],
+            'DSH run identity differs from its registration')
+    for name in ('registration.json', 'protocol.md'):
+        registered = subprocess.check_output(['git', 'show',
+            f"{record['registration_commit']}:supplements/dsh-locked-settlement-v1/{name}"], cwd=ROOT)
+        require(registered == (LOCKED_CASE / name).read_bytes(), f'DSH registration changed: {name}')
+    require(record['assets_before_lock'] == record['assets_after_release'] == plan['asset_hashes']
+            == {name: digest(LOCKED_RUN / 'grader-assets' / name) for name in plan['asset_hashes']},
+            'DSH scoring-asset hashes differ from the sealed originals')
+    require(record['participant_hashes_before'] == record['participant_hashes_after'] == plan['participant_hashes']
+            == {name: digest(LOCKED_CASE / name) for name in plan['participant_hashes']},
+            'DSH inputs differ from the registered originals')
+    for checkpoint in ('access_before_sdk', 'access_before_task', 'access_after_sdk'):
+        require(record[checkpoint] == dict.fromkeys(plan['asset_hashes'], 32), f'Wrong Win32 status: {checkpoint}')
+
+    probe, task = record['probe'], record['task']
+    require(record['sdk']['initialized'] and record['sdk']['exit_code'] == 0
+            and probe['accepted'] and probe['qualified'] and task['accepted'],
+            'The signed-in DSH run did not qualify or exit cleanly')
+    probe_end, task_end = (entry['terminal'][-1] for entry in (probe, task))
+    require(probe_end['reason']['kind'] == task_end['reason']['kind'] == 'completed'
+            and datetime.fromisoformat(probe_end['received_at']) < datetime.fromisoformat(task['submitted_at']),
+            'DSH did not finish the native access probe before task submission')
+    probe_events = read(LOCKED_RUN / 'probe-events.json')
+    require(set(probe_events) == {'inputs/policy.json', *plan['asset_hashes']}
+            and len({entry['call_id'] for entry in probe_events.values()}) == len(probe_events),
+            'Expected five distinct native access attempts')
+    for name, entry in probe_events.items():
+        status, marker = ('completed', 'rejection_priority') if name == 'inputs/policy.json' else ('error', 'EBUSY')
+        require(entry['tool'] == 'read' and entry['status'] == status and marker in entry['result']
+                and entry['passed'] and entry['call_stdout_line'] < entry['result_stdout_line'] < probe_end['source_stdout_line'],
+                f'Invalid native access event: {name}')
+
+    expected = ('ledger.csv', 'rejects.csv', 'summary.json')
+    require(record['outputs'] == {name: digest(LOCKED_RUN / 'outputs' / name) for name in expected}
+            and set(record['output_inventory']) == set(expected), 'DSH archived outputs differ from collection')
+    events = read(LOCKED_RUN / 'task-events.excerpts.json')
+    require(events[0]['event']['phase'] == 'turn_start'
+            and events[-1]['event']['phase'] == 'turn_end'
+            and events[-1]['source_stdout_line'] == task_end['source_stdout_line'], 'Missing native DSH task lifecycle')
+    statuses = {row['event']['callId']: row['event']['status']
+                for row in events if row['event']['type'] == 'tool_result'}
+    written = {row['event'].get('target') for row in events if row['event'].get('tool') == 'write'
+               and statuses.get(row['event']['callId']) == 'completed'}
+    require(written == {f'outputs/{name}' for name in expected}, 'Missing successful writes in native DSH events')
+    recomputed = subprocess.check_output([sys.executable, '-B', str(LOCKED_RUN / 'grader-assets/grader.py'),
+        '--outputs', str(LOCKED_RUN / 'outputs'), '--check'])
+    print(f"Signed-in DSH settlement: {json.loads(recomputed)['score']}/100; four native EBUSY denials verified.")
+
+
 def main():
     plan = read(CASE / 'registration.json')
     for name, expected in plan['asset_hashes'].items():
@@ -114,6 +169,7 @@ def main():
             'Published settlement score differs from the sealed grader')
     check_near_misses()
     print('Settlement evidence: Codex 100/100, four post-fix denials, DSH authorization stop and judge controls verified.')
+    verify_locked_dsh()
 
 
 if __name__ == '__main__':

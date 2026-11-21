@@ -1,0 +1,7 @@
+order_id,reason
+S-812,vendor_paused
+S-813,unsupported_currency
+S-815,invalid_refund
+S-817,unknown_vendor
+S-819,not_settled
+S-820,invalid_refund

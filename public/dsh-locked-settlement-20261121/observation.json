@@ -1,0 +1,100 @@
+{
+  "run_id": "dsh-locked-settlement-20261121-r1",
+  "registration_commit": "a79762cad159d5daa8cdf4e80f6307183c4e0fd4",
+  "started_at": "2026-11-21T11:54:49.271846+00:00",
+  "track": "engineering_evidence",
+  "probe": {
+    "submitted_at": "2026-11-21T11:54:51.329213+00:00",
+    "accepted": true,
+    "terminal": [
+      {
+        "received_at": "2026-11-21T11:54:53.872418+00:00",
+        "source_stdout_line": 36,
+        "reason": {
+          "kind": "completed"
+        }
+      }
+    ],
+    "qualified": true
+  },
+  "task": {
+    "submitted_at": "2026-11-21T11:54:53.876952+00:00",
+    "accepted": true,
+    "terminal": [
+      {
+        "received_at": "2026-11-21T11:55:09.376677+00:00",
+        "source_stdout_line": 93,
+        "reason": {
+          "kind": "completed"
+        }
+      }
+    ]
+  },
+  "assets_before_lock": {
+    "grader.py": "6cd696c8e8ac6a32110b5d33de0464e3cdb34d3d325e9ab484a12de4de8beb9e",
+    "rubric.json": "cce7e1d7675bf5bb5c3dae27504abbe84d1e72e6b9c010d4fb95b98148d82428",
+    "oracle.json": "593dd782b24965413a4015f6bb0b8e319cc19fe8ce48829750a472173e59d4e7",
+    "reference.json": "be8d3eb7bfe5351d316414399f78be413df6712578e094d668c4f26b014b3da1"
+  },
+  "participant_hashes_before": {
+    "prompt.md": "c461b8238f463fb7867896e1b64e72c680524d221103fb150b64d4afa09531f7",
+    "inputs/orders.csv": "e2a4a9e49b28d11e4bef42c22aeaf586d741c13ae2ca3d63d50c91d9be333210",
+    "inputs/vendors.csv": "c4ec8e3119dadc04cbeb719ce6b6210d01078748e555c4ecdcaaecabeea930e3",
+    "inputs/policy.json": "bccad9a9e5c74902f84f1e6e0d1ba237ebf2fe4374857333c513a736c36c10f8"
+  },
+  "access_before_sdk": {
+    "grader.py": 32,
+    "rubric.json": 32,
+    "oracle.json": 32,
+    "reference.json": 32
+  },
+  "sdk": {
+    "profile": "sdk",
+    "provider_requested": "deepseek-account",
+    "model_requested": "deepseek-flash",
+    "reasoning_requested": "high",
+    "permission_mode_requested": "workspace-write",
+    "built_in_web_disabled": true,
+    "default_skill_roots_disabled": true,
+    "bundled_office_skills_available": true,
+    "executable_sha256": "fd7d298f4ba03ee9bab1719a892afeaef5c09bf50c574a592a64c85f64574c0c",
+    "patch_sha256": "739a0ec11c63e99b9da9964274ccd783e103fad7b9e483376cf27b4cd88e3133",
+    "initialized": true,
+    "exit_code": 0
+  },
+  "access_before_task": {
+    "grader.py": 32,
+    "rubric.json": 32,
+    "oracle.json": 32,
+    "reference.json": 32
+  },
+  "access_after_sdk": {
+    "grader.py": 32,
+    "rubric.json": 32,
+    "oracle.json": 32,
+    "reference.json": 32
+  },
+  "assets_after_release": {
+    "grader.py": "6cd696c8e8ac6a32110b5d33de0464e3cdb34d3d325e9ab484a12de4de8beb9e",
+    "rubric.json": "cce7e1d7675bf5bb5c3dae27504abbe84d1e72e6b9c010d4fb95b98148d82428",
+    "oracle.json": "593dd782b24965413a4015f6bb0b8e319cc19fe8ce48829750a472173e59d4e7",
+    "reference.json": "be8d3eb7bfe5351d316414399f78be413df6712578e094d668c4f26b014b3da1"
+  },
+  "participant_hashes_after": {
+    "prompt.md": "c461b8238f463fb7867896e1b64e72c680524d221103fb150b64d4afa09531f7",
+    "inputs/orders.csv": "e2a4a9e49b28d11e4bef42c22aeaf586d741c13ae2ca3d63d50c91d9be333210",
+    "inputs/vendors.csv": "c4ec8e3119dadc04cbeb719ce6b6210d01078748e555c4ecdcaaecabeea930e3",
+    "inputs/policy.json": "bccad9a9e5c74902f84f1e6e0d1ba237ebf2fe4374857333c513a736c36c10f8"
+  },
+  "outputs": {
+    "ledger.csv": "2c5f17af01d0214e281533d8ef3759cd22e98065569cc077301cc90d9cf0392d",
+    "rejects.csv": "8aade68e15cd4c74f542ea31f86d4113b1df927ba4ffc2857486f13b85de1c8b",
+    "summary.json": "8c3a5e6ebaff67ce3d2b12906bb6349d6e082e86cb234549edf338d095eca86c"
+  },
+  "output_inventory": [
+    "ledger.csv",
+    "rejects.csv",
+    "summary.json"
+  ],
+  "ended_at": "2026-11-21T11:55:09.481744+00:00"
+}

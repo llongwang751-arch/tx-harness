@@ -10,7 +10,7 @@ Codex 首场正式实测已作[前瞻登记和权限验证](reports/behavior-for
 
 [五款权限准入核对](reports/behavior-formal/surface-access-2026-11-19.md)新增另外四款的五个诊断现场。WorkBuddy 默认权限、DSH SDK 和 DSH 桌面能读取合成评分文件，元宝与豆包未取得系统拒绝证据。
 
-11 月 21 日补做[商户结算对账实测](reports/behavior-formal/settlement-sealed-run-2026-11-21.md)。Codex 投递前验证四份实际评分资产均被拒绝，交付三份原件并复算为 100/100。DSH 隔离预检通过后遇到账户鉴权问题，保留终态并单列。
+11 月 21 日补做商户结算对账。[Codex 场](reports/behavior-formal/settlement-sealed-run-2026-11-21.md)和[DSH 场](reports/behavior-formal/dsh-locked-settlement-2026-11-21.md)各交付三份原件、各复算 100/100。两个工作区都能读取输入，各自通过操作系统机制阻止读取四份实际评分文件。DSH 旧配置的鉴权停止也有归档。
 
 ## 30 秒看懂
 
